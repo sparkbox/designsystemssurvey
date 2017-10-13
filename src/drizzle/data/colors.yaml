@@ -1,0 +1,5 @@
+# NOTE: These reflect variables set in src/scss/_settings.colors.scss
+# DO NOT use the pound sign (#) when writing the hex value for `value`
+- name: Black
+  sassName: color(black)
+  value: "000000"

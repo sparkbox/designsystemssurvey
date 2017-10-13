@@ -1,0 +1,26 @@
+---
+title: Pattern Library
+layout: default
+---
+
+<h1 class="drizzle-pl-title">{{title}}</h1>
+
+<p>
+  This UI toolkit is a highly-modular design system for rapid web page
+  development. It contains different materials that can be assembled into more
+  complex page layouts. It includes working examples, code snippets and
+  documentation.
+</p>
+
+<h3>Documentation</h3>
+
+<dl>
+  {{#with (pages "docs/index")}}
+    <dt>
+      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
+    </dt>
+    <dd class="drizzle-u-padBottom">
+      {{{data.notes}}}
+    </dd>
+  {{/with}}
+</dl>

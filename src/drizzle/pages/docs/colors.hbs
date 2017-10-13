@@ -1,0 +1,23 @@
+<h1 class="drizzle-pl-title">Color Palette</h1>
+
+<ul class="drizzle-u-listInline">
+  {{#each (data "colors")}}
+    <li class="drizzle-u-marginBottom">
+      {{> drizzle.swatch color=value }}
+      <h3 class="drizzle-u-noMarginBottom">{{name}}</h3>
+      <ul class="drizzle-u-listUnstyled">
+        <li>
+          <strong>Usage in Sass:</strong>
+          <code class="drizzle-inline-code-snippet">{{sassName}}</code>
+        </li>
+        <li>
+          <strong>Hex value:</strong>
+          <code class="drizzle-inline-code-snippet">#{{value}}</code>
+        </li>
+        <li>
+          <a href="http://jxnblk.com/colorable/demos/text/?background=%23FFFFFF&foreground=%23{{value}}">Accessibility Score</a>
+        </li>
+      </ul>
+    </li>
+  {{/each}}
+</ul>

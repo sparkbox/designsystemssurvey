@@ -1,0 +1,20 @@
+<div class="drizzle-u-marginBottom-3x">
+  <a href="{{@root.baseurl}}/" class="drizzle-Button">← Back to documentation</a>
+</div>
+
+<h1>{{title}}</h1>
+
+{{{notes}}}
+
+<dl>
+  {{#each (pages directory ignore="index" sortby="order")}}
+    <dt>
+      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
+    </dt>
+    {{#if data.notes}}
+      <dd class="drizzle-u-padBottom">
+        {{{data.notes}}}
+      </dd>
+    {{/if}}
+  {{/each}}
+</dl>
