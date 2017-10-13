@@ -1,0 +1,45 @@
+<div class="drizzle-Layout-nav drizzle-Nav" id="nav">
+  <div class="drizzle-Nav-header">
+    <a href="{{@root.baseurl}}/">
+      Design Systems Survey
+    </a>
+    <a class="drizzle-Nav-header-toggle" href="#nav">
+      <svg viewBox="-1 -1 12 7" width="16" height="16">
+        <polyline fill="none" stroke="currentColor" stroke-width="2" points="0 0 5 5 10 0"/>
+      </svg>
+    </a>
+  </div>
+  <div class="drizzle-Nav-main" id="nav-menu">
+    <ul class="drizzle-Nav-menu">
+      <li>
+        <a class="drizzle-Nav-item" href="{{@root.baseurl}}/">
+          Pattern Library
+        </a>
+      </li>
+      <li>
+        <a class="drizzle-Nav-item" href="{{@root.baseurl}}/docs/colors.html">
+          Color Palettes
+        </a>
+      </li>
+    </ul>
+    <h5 class="drizzle-Nav-item">Pages</h5>
+    {{!-- Top-level pages --}}
+    <ul class="drizzle-Nav-menu">
+      {{#each (pages sortby="order" ignore="index")}}
+        <li>
+          {{> drizzle.nav-item label=data.name}}
+        </li>
+      {{/each}}
+    </ul>
+
+    <h5 class="drizzle-Nav-item">Patterns</h5>
+    {{!-- Patterns --}}
+    <ul class="drizzle-Nav-menu">
+      {{#each (collections sortby="order")}}
+        <li>
+          {{> drizzle.nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

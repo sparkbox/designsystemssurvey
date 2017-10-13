@@ -1,0 +1,8 @@
+{{#extend "default"}}
+  {{#content "main"}}
+    <h1 class="drizzle-pl-title">{{name}}</h1>
+    {{#each patterns}}
+      {{> drizzle.item}}
+    {{/each}}
+  {{/content}}
+{{/extend}}

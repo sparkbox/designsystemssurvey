@@ -1,0 +1,56 @@
+{
+  "name": "designsytemssurvey",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkbox/designsystemssurvey.git"
+  },
+  "author": "Sparkbox",
+  "license": "ISC",
+  "engines": {
+    "node": "6.10.3",
+    "npm": "5.6.0"
+  },
+  "scripts": {
+    "prestart": "npm run clean",
+    "start": "node tasks/start.js",
+    "clean": "rimraf dist/",
+    "server": "node tasks/server.js",
+    "watch": "parallelshell 'node tasks/watch.js' 'webpack --watch'",
+    "js": "webpack",
+    "patterns": "node tasks/patterns.js",
+    "copy": "node tasks/copy.js",
+    "sass": "node-sass src/scss/ -o dist/css/",
+    "postsass": "postcss --use autoprefixer css-mqpacker -c ./postcss.config.json --no-map --dir ./dist/css ./dist/css/*.css"
+  },
+  "dependencies": {
+    "@sparkbox/downpour": "0.0.9",
+    "autoprefixer": "^6.7.7",
+    "anchor-js": "^4.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.24.1",
+    "chartist": "^0.11.0",
+    "chokidar": "^2.0.0",
+    "colors": "^1.1.2",
+    "css-mqpacker": "^5.0.1",
+    "express": "^4.16.2",
+    "globby": "^8.0.1",
+    "http-auth": "^3.2.3",
+    "intersection-observer": "^0.4.3",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "parallelshell": "^3.0.1",
+    "postcss-cli": "^4.1.1",
+    "rimraf": "^2.6.2",
+    "sass-list-maps": "^1.0.0-b",
+    "shelljs": "^0.7.8",
+    "stylelint": "^7.10.1",
+    "stylelint-config-sparkbox": "^0.1.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-scss": "^1.4.4",
+    "supports-color": "^5.1.0",
+    "webpack": "^2.2.0"
+  }
+}

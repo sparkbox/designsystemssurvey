@@ -1,0 +1,29 @@
+// Style partials are organized according to the Inverted Triangle CSS methodology:
+// https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+// SETTINGS
+
+
+// TOOLS
+@import "tools.functions";
+@import "tools.mixins";
+
+
+// GENERIC
+@import "generic.normalize";
+
+
+// ELEMENTS
+
+
+// OBJECTS
+
+
+// COMPONENTS
+
+
+// VENDORS
+
+
+// TRUMPS
+@import "trumps.utilities";

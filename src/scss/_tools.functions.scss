@@ -1,0 +1,80 @@
+// Strip Unites
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Color Retriever
+@function color($color) {
+  // Give this function a color,
+  // and it'll spit out its value
+
+  $r: map-get($colors, $color);
+
+  @if ($r) {
+    @return $r;
+  } @else {
+    // allow arbitrary colors to be passed to this function
+    @return $color;
+  }
+}
+
+// Font Size Retriever
+@function font-size($font-size) {
+  $result: map-get($font-sizes, $font-size);
+
+  @return $result;
+}
+
+// Font Weight Retriever
+@function font-weight($font-weight) {
+  $result: map-get($font-weights, $font-weight);
+
+  @return $result;
+}
+
+// Print Font Size Retriever
+@function print-size($size) {
+  $result: map-get($print-sizes, $size);
+
+  @return $result;
+}
+
+// Spacing Value Retriever
+@function space($space-value) {
+  $result: map-get($spacing-values, $space-value);
+
+  @return $result;
+}
+
+// Line Height Retriever
+@function line-height($line-height) {
+  $result: map-get($line-heights, $line-height);
+
+  @return $result;
+}
+
+// Z-Index Retriever
+@function z-index($val) {
+  $n: map-get($z-index, $val);
+
+  @if ($n) {
+    @return $n;
+  } @else {
+    // allow arbitrary x-index values to be passed to this function
+    @return $val;
+  }
+}
+
+// Timing Duration Retriever
+@function timing($time) {
+  $result: map-get($timing-duration, $time);
+
+  @return $result;
+}
+
+// Timing Duration Retriever
+@function timing-function($value) {
+  $result: map-get($timing-function, $value);
+
+  @return $result;
+}

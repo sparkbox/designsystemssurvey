@@ -1,0 +1,101 @@
+// Mixins
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+
+@mixin print($type:null) {
+  @if $type == all {
+    @media print {
+      -webkit-print-color-adjust: exact !important; // Chrome, Safari
+      color-adjust: exact !important; // Firefox
+    }
+  }
+  @else if $type == none {
+    @media print {
+      display: none !important;
+    }
+  }
+  @else {
+    @media print {
+      @content;
+    }
+  }
+}
+
+@mixin unbuttonize {
+  // This removes styles added by default to button elements.
+  // For when something should semantically be a button,
+  // but isn't buttony in appearance.
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none; // Just in case we missed anything.
+}
+
+@mixin skip-trigger {
+  display: block;
+  bottom: 100%;
+  position: absolute;
+  height: 5em;
+  width: 100%;
+  padding: space(md) space(xs);
+  text-align: center;
+
+  @supports (display: flex) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:active,
+  &:focus {
+    background-color: gray(100);
+    color: gray(0);
+    top: 0;
+    bottom: auto;
+    z-index: z-index(8);
+    @include print(none);
+  }
+}
+
+@mixin visually-hidden($status:null) {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+
+  @if $status == 'disable' {
+    position: static !important;
+    clip: unset !important;
+    padding: 0 !important;
+    border: 0 !important;
+    height: auto !important;
+    width: auto !important;
+    overflow: visible;
+  }
+}
+
+@mixin delist {
+  // This removes default list styles
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin unlink {
+  text-decoration: none;
+  color: inherit;
+}
