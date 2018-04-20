@@ -1,0 +1,10 @@
+<table>
+  <th>Categories</th>
+  <th>Percentage of Replies</th>
+  {{#each data}}
+    <tr>
+      <td>{{ this.category }}</td>
+      <td>{{ this.value }}%</td>
+    </tr>
+  {{/each}}
+</table>
