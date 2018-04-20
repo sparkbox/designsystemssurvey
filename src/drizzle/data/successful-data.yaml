@@ -2,64 +2,55 @@
 
 # (Q15, successful segment) How are you maintaining your design system?
 maintenance:
-  labels:
-    - Partially dedicated team/committee
-    - Dedicated team
-    - Maintained via a design system/pattern library tool
-    - Other
   # data is reported here as percentages
   data:
-    - [
-      47.17,
-      32.08,
-      13.21,
-      7.55
-    ]
+    - category: Partially dedicated team/committee
+      value: 47.17
+    - category: Dedicated team
+      value: 32.08
+    - category: Maintained via a design system/pattern library tool
+      value: 13.21
+    - category: Other
+      value: 7.55
 
 # (Q10 successful segment). Who is primarily responsible for the design system?
 responsibility:
-  labels:
-    - Designers
-    - User Experience
-    - Developers
-    - Other
-    - Marketing
-    - Unsure
-    - Product/Project Managers
-    - Quality Assurance
-    - No one
   # data is reported here as percentages
   data:
-    - [
-      30.91,
-      23.64,
-      18.18,
-      16.36,
-      5.45,
-      3.64,
-      1.82,
-      0,
-      0
-    ]
+    - category: Designers
+      value: 30.91
+    - category: User Experience
+      value: 23.64
+    - category: Developers
+      value: 18.18
+    - category: Other
+      value: 16.36
+    - category: Marketing
+      value: 5.45
+    - category: Unsure
+      value: 3.64
+    - category: Product/Project Managers
+      value: 1.82
+    - category: Quality Assurance
+      value: 0
+    - category: No one
+      value: 0
 
 # (Q12 successful) Who are the primary users of the design system?
 users:
-  labels:
-    - Designers
-    - Developers
-    - User Experience
-    - Product/Project Managers
-    - Quality Assurance
-    - Marketing
-    - Other
   # data is reported here as percentages
   data:
-    - [
-      96.36,
-      92.73,
-      76.36,
-      16.36,
-      14.55,
-      9.09,
-      3.64
-    ]
+    - category: Designers
+      value: 96.36
+    - category: Developers
+      value: 92.73
+    - category: User Experience
+      value: 76.36
+    - category: Product/Project Managers
+      value: 16.36
+    - category: Quality Assurance
+      value: 14.55
+    - category: Marketing
+      value: 9.09
+    - category: Other
+      value: 3.64
