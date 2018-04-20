@@ -1,0 +1,75 @@
+# Section title: What Challenges Do Design Systems Face?
+
+# (Q11). Who values the design system most in your organization, if anyone?
+valuation:
+  labels:
+    - Designers
+    - User Experience
+    - Developers
+    - Quality Assurance
+    - Product/Project Managers
+    - Managers
+    - Executive Leadership
+    - Marketing
+  # data is reported here as percentages
+  # the pattern of responses is [N/A, 1-3, 4-5]
+  data: 
+    - [
+      [0, 4.76, 92.86],
+      [1.82, 7.06, 89.14],
+      [1.85, 17.86, 80.95],
+      [24.07, 37.04, 38.89],
+      [9.26, 36.9, 36.9],
+      [14.55, 52.94, 36.47],
+      [11.32, 57.83, 31.33],
+      [20.37, 63.10, 17.86]
+    ]
+
+# (Q9, unsuccessful) If you feel that your organization’s design system or library was not successful, what were the main reasons?
+unsuccessful:
+  labels:
+    - Lack of executive champion
+    - Adoption difficulties
+    - Staffing difficulties
+    - Funding difficulties
+    - Maintenance difficulties
+    - Other
+  # data is reported here as percentages
+  data:
+    - [
+      54.55,
+      50,
+      50,
+      31.82,
+      31.82,
+      13.64
+    ]
+
+#(Q19) What, if anything, would keep your organization from creating a design system or a pattern library?
+prevention:
+  labels:
+    - Talent/Resources
+    - Perceived as low value
+    - Cost
+    - Executive buy-in
+    - Size of web property/properties
+    - Maintenance
+    - Would want a new website design first
+    - IT department buy-in
+    - Was unaware
+    - Marketing department buy-in
+  # data is reported here as percentages
+  # the pattern of responses is [N/A, 1-3, 4-5]
+  data:
+    - [
+      [1.15, 42.53, 56.32],
+      [3.41, 50, 46.59],
+      [2.27, 52.27, 45.45],
+      [2.27, 52.27, 45.45],
+      [3.45, 56.32, 40.23],
+      [1.14, 60.23, 38.64],
+      [7.95, 60.23, 31.82],
+      [7.95, 61.36, 30.68],
+      [17.05, 57.95, 25],
+      [8.14, 69.77, 22.09]
+    ]
