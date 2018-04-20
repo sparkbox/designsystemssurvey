@@ -1,0 +1,42 @@
+---
+name: Chart
+title: Chart
+
+chartSize: 45
+chartData:
+  -
+    category: Designers
+    value: 30
+  -
+    category: Developers
+    value: 8
+  -
+    category: User Experience
+    value: 13
+  -
+    category: Marketing
+    value: 18
+  -
+    category: Product Managers
+    value: 20
+  -
+    category: Quality Assurance
+    value: 2
+  -
+    category: No one is responsible for it
+    value: 5
+  -
+    category: Other
+    value: 4
+---
+
+<div class="cmp-chart" data-size="{{chartSize}}">
+  {{#each chartData}}
+  <div class="cmp-chart__entry">
+    <div class="cmp-chart__category">{{category}}</div>
+    <div class="cmp-chart__bar" style="width: calc({{divide value ../chartSize}} * 100%);">
+      <div class="cmp-chart__value">{{value}}%</div>
+    </div>
+  </div>
+  {{/each}}
+</div>

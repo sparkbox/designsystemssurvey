@@ -17,7 +17,7 @@ html {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 // Sections
@@ -181,7 +181,7 @@ textarea {
 input {
   // We need to set the font-family on this element or the user
   // agent stylesheet will do its own thing
-  font-family: sans-serif;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 // Show the overflow in IE.

@@ -1,4 +1,20 @@
 const downpour = require('@sparkbox/downpour');
+const hbsHelpers = require('handlebars-helpers');
+
+const helpers = {
+  add: hbsHelpers().add,
+  subtract: hbsHelpers().subtract,
+  divide: hbsHelpers().divide,
+  eq: hbsHelpers().eq,
+  multiply: hbsHelpers().multiply,
+  floor: hbsHelpers().floor,
+  ceil: hbsHelpers().ceil,
+  round: hbsHelpers().round,
+  sum: hbsHelpers().sum,
+  avg: hbsHelpers().avg,
+  markdown: hbsHelpers().markdown,
+};
+
 const downpourOptions = {
   src: {
     data: {
@@ -34,5 +50,5 @@ const downpourOptions = {
   }
 };
 
-Object.assign(downpourOptions);
+Object.assign(downpourOptions, { helpers });
 downpour(downpourOptions);
