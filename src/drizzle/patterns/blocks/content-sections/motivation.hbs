@@ -1,0 +1,12 @@
+---
+order: 30
+---
+
+<h2>What Motivates Organizations to Build a Design System?</h2>
+
+<h3>(Q6) Which of the following, if any, motivated your organization to establish a design system or a pattern library?</h3>
+{{#with (data "motivation-data")}}
+    {{> patterns.blocks.data-types.stacked-bar-chart 
+        motivators
+    }}
+{{/with}}
