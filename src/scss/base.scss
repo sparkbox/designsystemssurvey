@@ -5,6 +5,7 @@
 
 
 // TOOLS
+@import "tools.colors";
 @import "tools.functions";
 @import "tools.mixins";
 
@@ -20,6 +21,10 @@
 
 
 // COMPONENTS
+@import "components.section.layout";
+@import "components.section.heading";
+@import "components.section.content";
+@import "components.section.chart";
 
 
 // VENDORS

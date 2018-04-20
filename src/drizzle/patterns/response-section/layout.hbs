@@ -1,0 +1,53 @@
+---
+name: Section
+title: Section
+hidden: true
+
+sectionHeading: <strong>Who is primarily responsible</strong> for the design system?
+metaItem:
+  - 625 Replies
+  - Select One
+
+sectionText: |
+
+  Maintaining a design system is a big responsibility. Nam eros enim, fermentum quis ex a, tristique volutpat purus. Nulla in faucibus dui, vel scelerisque. Curabitur at nunc malesuada libero eleifend placerat.
+
+  Sed eu dolor faucibus, blandit ipsum eget, tincidunt ligula. Donec eget mollis nunc. Pellentesque luctus in lorem interdum rhoncus. Vestibulum eu nunc nunc. Curabitur nisl nunc, congue a tortor vitae, tempor lobortis neque.
+
+chartSize: 40
+chartData:
+  -
+    category: Designers
+    value: 30
+  -
+    category: Developers
+    value: 8
+  -
+    category: User Experience
+    value: 13
+  -
+    category: Marketing
+    value: 18
+  -
+    category: Product Managers
+    value: 20
+  -
+    category: Quality Assurance
+    value: 2
+  -
+    category: No one is responsible for it
+    value: 5
+  -
+    category: Other
+    value: 4
+---
+
+<section class="cmp-section-layout">
+  <div class="cmp-section-layout__content">
+    {{> patterns.response-section.header}}
+    {{> patterns.response-section.content}}
+  </div>
+  <div class="cmp-section-layout__chart">
+    {{> patterns.response-section.chart}}
+  </div>
+</section>

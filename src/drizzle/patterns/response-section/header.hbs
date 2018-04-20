@@ -1,0 +1,22 @@
+---
+name: Heading
+title: Heading
+
+sectionHeading: <strong>Who is primarily responsible</strong> for the design system?
+metaItem:
+  - 625 Replies
+  - Select One
+---
+
+<header class="cmp-section-header">
+  <h2 class="cmp-section-header__title">
+    {{{sectionHeading}}}
+  </h2>
+  <ul class="cmp-section-header__meta">
+    {{#each metaItem}}
+      <li class="cmp-section-header__meta-item">
+        {{this}}
+      </li>
+    {{/each}}
+  </ul>
+</header>

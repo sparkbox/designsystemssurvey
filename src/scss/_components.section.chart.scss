@@ -1,0 +1,85 @@
+.cmp-chart {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 0.125rem 0 0;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+
+  @supports (display: grid) {
+    height: 50vh;
+    display: grid;
+    grid-auto-rows: 1fr;
+  }
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: -0.125rem;
+    bottom: -3.125rem;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+
+    @supports (display: grid) {
+      bottom: auto;
+      height: calc(50vh + 3.125rem);
+    }
+  }
+
+  &::before {
+    content: '0%';
+    left: 11rem;
+    border-left: 0.125rem solid currentColor;
+
+    @supports (display: flex) {
+      left: 9.625rem;
+    }
+  }
+
+  &::after {
+    content: attr(data-size)'%';
+    right: 0;
+    border-right: 0.125rem solid currentColor;
+  }
+
+  &__entry {
+    width: 100%;
+    display: flex;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 10rem auto;
+    }
+  }
+
+  &__category {
+    font-size: 0.875rem;
+    text-align: right;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    align-self: center;
+    flex-basis: 10rem;
+  }
+
+  &__bar {
+    position: relative;
+    background-color: currentColor;
+  }
+
+  &__value {
+    font-size: 0.875rem;
+    font-weight: bold;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+}

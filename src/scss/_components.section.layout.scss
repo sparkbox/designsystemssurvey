@@ -1,0 +1,13 @@
+.cmp-section-layout {
+  display: flexbox;
+
+  &__content {
+    flex-basis: 50%;
+    max-width: 35rem
+  }
+
+  &__chart {
+    flex-basis: 50%;
+    max-width: 50rem
+  }
+}
