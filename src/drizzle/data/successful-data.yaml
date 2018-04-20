@@ -1,0 +1,65 @@
+# Section title: What Made People Feel Their Design System Was Successful?
+
+# (Q15, successful segment) How are you maintaining your design system?
+maintenance:
+  labels:
+    - Partially dedicated team/committee
+    - Dedicated team
+    - Maintained via a design system/pattern library tool
+    - Other
+  # data is reported here as percentages
+  data:
+    - [
+      47.17,
+      32.08,
+      13.21,
+      7.55
+    ]
+
+# (Q10 successful segment). Who is primarily responsible for the design system?
+responsibility:
+  labels:
+    - Designers
+    - User Experience
+    - Developers
+    - Other
+    - Marketing
+    - Unsure
+    - Product/Project Managers
+    - Quality Assurance
+    - No one
+  # data is reported here as percentages
+  data:
+    - [
+      30.91,
+      23.64,
+      18.18,
+      16.36,
+      5.45,
+      3.64,
+      1.82,
+      0,
+      0
+    ]
+
+# (Q12 successful) Who are the primary users of the design system?
+users:
+  labels:
+    - Designers
+    - Developers
+    - User Experience
+    - Product/Project Managers
+    - Quality Assurance
+    - Marketing
+    - Other
+  # data is reported here as percentages
+  data:
+    - [
+      96.36,
+      92.73,
+      76.36,
+      16.36,
+      14.55,
+      9.09,
+      3.64
+    ]
