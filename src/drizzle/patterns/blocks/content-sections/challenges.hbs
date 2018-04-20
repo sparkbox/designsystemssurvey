@@ -1,0 +1,24 @@
+---
+order: 50
+---
+{{#with (data "challenges-data")}}
+  <h2>What Challenges Do Design Systems Face?</h2>
+
+  <h3>Not Everyone Equally Values Design Systems</h3>
+  <h4>(Q11). Who values the design system most in your organization, if anyone?</h4>
+  {{> patterns.blocks.data-types.stacked-bar-chart
+      valuation
+  }}
+
+  <h3>Design Systems Need Executive Advocates to Succeed</h3>
+  <h4>(Q9, unsuccessful) If you feel that your organization’s design system or library was not successful, what were the main reasons? </h4>
+  {{> patterns.blocks.data-types.bar-chart
+      unsuccessful
+  }}
+
+  <h3>Blocker Headline</h3>
+  {{> patterns.blocks.data-types.stacked-bar-chart
+      prevention
+  }}
+
+{{/with}}
