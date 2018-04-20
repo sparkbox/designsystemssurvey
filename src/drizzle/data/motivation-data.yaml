@@ -2,21 +2,33 @@
 
 # (Q6) Which of the following, if any, motivated your organization to establish a design system or a pattern library?
 motivators:
-  labels:
-    - UX/UI Consistency
-    - Code Reusability
-    - Increased Efficiency in Development
-    - Increased Efficiency in Design
-    - Maintaining Brand Standards
-    - Rapid Prototyping
+  x-labels:
+    - N/A
+    - Less Motivation
+    - More Motivation
   # data is reported here as percentages.
-  # the pattern of responses is [N/A, 1-3, 4-5]
   data:
-    - [
-      [0.71, 9.22, 90.07],
-      [0, 10.71, 89.29],
-      [0, 11.35, 88.65],
-      [1.41, 14.79, 83.8],
-      [1.42, 34.04, 64.54],
-      [1.42, 41.84, 56.74]
-    ]
+    - category: UX/UI Consistency
+      na: 0.71
+      1-3: 9.22
+      4-5: 90.07
+    - category: Code Reusability
+      na: 0
+      1-3: 10.71
+      4-5: 89.29
+    - category: Increased efficiency in development
+      na: 0
+      1-3: 11.35
+      4-5: 88.65
+    - category: Increased efficiency in design
+      na: 1.41
+      1-3: 14.79
+      4-5: 83.8
+    - category: Maintaining brand standards
+      na: 1.42
+      1-3: 34.04
+      4-5: 64.54
+    - category: Rapid prototyping
+      na: 1.42
+      1-3: 41.84
+      4-5: 56.74

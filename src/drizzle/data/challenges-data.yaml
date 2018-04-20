@@ -2,74 +2,108 @@
 
 # (Q11). Who values the design system most in your organization, if anyone?
 valuation:
-  labels:
-    - Designers
-    - User Experience
-    - Developers
-    - Quality Assurance
-    - Product/Project Managers
-    - Managers
-    - Executive Leadership
-    - Marketing
+  x-labels:
+    - N/A
+    - Values Less
+    - Values More
   # data is reported here as percentages
-  # the pattern of responses is [N/A, 1-3, 4-5]
   data: 
-    - [
-      [0, 4.76, 92.86],
-      [1.82, 7.06, 89.14],
-      [1.85, 17.86, 80.95],
-      [24.07, 37.04, 38.89],
-      [9.26, 36.9, 36.9],
-      [14.55, 52.94, 36.47],
-      [11.32, 57.83, 31.33],
-      [20.37, 63.10, 17.86]
-    ]
+    - category: Designers
+      na: 0
+      1-3: 4.76
+      4-5: 92.86
+    - category: User Experience
+      na: 1.82
+      1-3: 7.06
+      4-5: 89.14
+    - category: Developers
+      na: 1.85
+      1-3: 17.86
+      4-5: 80.95
+    - category: Quality Assurance
+      na: 24.07
+      1-3: 37.04
+      4-5: 38.89
+    - category: Product/Project Managers
+      na: 9.26
+      1-3: 36.9
+      4-5: 36.9
+    - category: Managers
+      na: 14.55
+      1-3: 52.94
+      4-5: 36.47
+    - category: Executive Leadership
+      na: 11.32
+      1-3: 57.83
+      4-5: 31.33
+    - category: Marketing
+      na: 20.37
+      1-3: 63.10
+      4-5: 17.86
 
 # (Q9, unsuccessful) If you feel that your organization’s design system or library was not successful, what were the main reasons?
 unsuccessful:
-  labels:
-    - Lack of executive champion
-    - Adoption difficulties
-    - Staffing difficulties
-    - Funding difficulties
-    - Maintenance difficulties
-    - Other
   # data is reported here as percentages
   data:
-    - [
-      54.55,
-      50,
-      50,
-      31.82,
-      31.82,
-      13.64
-    ]
+    - category: Lack of executive champion
+      value: 54.55
+    - category: Adoption difficulties
+      value: 50
+    - category: Staffing difficulties
+      value: 50
+    - category: Funding difficulties
+      value: 31.82
+    - category: Maintenance difficulties
+      value: 31.82
+    - category: Other
+      value: 13.64
 
 #(Q19) What, if anything, would keep your organization from creating a design system or a pattern library?
 prevention:
-  labels:
-    - Talent/Resources
-    - Perceived as low value
-    - Cost
-    - Executive buy-in
-    - Size of web property/properties
-    - Maintenance
-    - Would want a new website design first
-    - IT department buy-in
-    - Was unaware
-    - Marketing department buy-in
+  x-labels:
+    - N/A
+    - Less Influence
+    - More Influence
   # data is reported here as percentages
   # the pattern of responses is [N/A, 1-3, 4-5]
   data:
-    - [
-      [1.15, 42.53, 56.32],
-      [3.41, 50, 46.59],
-      [2.27, 52.27, 45.45],
-      [2.27, 52.27, 45.45],
-      [3.45, 56.32, 40.23],
-      [1.14, 60.23, 38.64],
-      [7.95, 60.23, 31.82],
-      [7.95, 61.36, 30.68],
-      [17.05, 57.95, 25],
-      [8.14, 69.77, 22.09]
-    ]
+    - category: Talent/Resources
+      na: 1.15
+      1-3: 42.53
+      4-5: 56.32
+    - category: Perceived as low value
+      na: 3.41
+      1-3: 50
+      4-5: 46.59
+    - category: Cost
+      na: 2.27
+      1-3: 52.27
+      4-5: 45.45
+    - category: Executive buy-in
+      na: 2.27
+      1-3: 52.27
+      4-5: 45.45
+    - category: Size of web property/properties
+      na: 3.45
+      1-3: 56.32
+      4-5: 40.23
+    - category: Maintenance
+      na: 1.14
+      1-3: 60.23
+      4-5: 38.64
+    - category: Would want a new website design first
+      na: 7.95
+      1-3: 60.23
+      4-5: 31.82
+    - category: IT department buy-in
+      na: 7.95
+      1-3: 61.36
+      4-5: 30.68
+    - category: Was unaware
+      na: 17.05
+      1-3: 57.95
+      4-5: 25
+    - category: Marketing department buy-in
+      na: 8.14
+      1-3: 69.77
+      4-5: 22.09
