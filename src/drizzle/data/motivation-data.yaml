@@ -7,7 +7,7 @@ motivators:
     - Less Motivation
     - More Motivation
   # data is reported here as percentages.
-  data:
+  chartData:
     - category: UX/UI Consistency
       na: 0.71
       1-3: 9.22

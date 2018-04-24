@@ -7,7 +7,7 @@ valuation:
     - Values Less
     - Values More
   # data is reported here as percentages
-  data: 
+  chartData: 
     - category: Designers
       na: 0
       1-3: 4.76
@@ -43,8 +43,9 @@ valuation:
 
 # (Q9, unsuccessful) If you feel that your organization’s design system or library was not successful, what were the main reasons?
 unsuccessful:
+  chartSize: 100
   # data is reported here as percentages
-  data:
+  chartData:
     - category: Lack of executive champion
       value: 54.55
     - category: Adoption difficulties
@@ -66,7 +67,7 @@ prevention:
     - More Influence
   # data is reported here as percentages
   # the pattern of responses is [N/A, 1-3, 4-5]
-  data:
+  chartData:
     - category: Talent/Resources
       na: 1.15
       1-3: 42.53
