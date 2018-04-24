@@ -32,12 +32,12 @@ const createBarChart = (tableData, chartSize) => {
 };
 
 const addBarCharts = (barChartElements) => {
-  barChartElements.forEach(barChartElement => {
-    const tableData = getBarChartTableData(barChartElement);
-    const chartSize = barChartElement.getAttribute('data-size');
+  barChartElements.forEach(chartElement => {
+    const tableData = getBarChartTableData(chartElement);
+    const chartSize = chartElement.getAttribute('data-size');
     const barChart = createBarChart(tableData, chartSize);
-    barChartElement.innerHTML += barChart;
-    barChartElement.getElementsByTagName('table')[0].style.display = 'none';
+    chartElement.innerHTML += barChart;
+    chartElement.getElementsByTagName('table')[0].style.display = 'none';
   });
 };
 
