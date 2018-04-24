@@ -1,6 +1,8 @@
 'use strict';
 
-const getBarChartTableData = table => {
+require('core-js/fn/array/from');
+
+const getBarChartTableData = (table) => {
   const tableRows = Array.from(table.querySelectorAll('tr'));
   const tableData = [];
   tableRows.forEach(row => {

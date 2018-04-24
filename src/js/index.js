@@ -1,5 +1,7 @@
 'use strict';
 
+require('core-js/fn/array/from');
+
 import addBarCharts from './barChart.js';
 import addStackedBarCharts from './stackedBarChart.js';
 

@@ -1,5 +1,7 @@
 'use strict';
 
+require('core-js/fn/array/from');
+
 const getStackedBarChartTableData = (table) => {
   const tableRows = Array.from(table.querySelectorAll('tr'));
   const tableData = [];
