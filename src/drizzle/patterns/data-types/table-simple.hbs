@@ -1,10 +1,10 @@
-<table>
+<table class="table table--type-simple">
   <th>Categories</th>
   <th>Percentage of Replies</th>
-  {{#each data}}
+  {{#each chartData}}
     <tr>
-      <td>{{ this.category }}</td>
-      <td>{{ this.value }}%</td>
+      <td class="table__category">{{ this.category }}</td>
+      <td><span class="table__value">{{ this.value }}</span><span>%</span></td>
     </tr>
   {{/each}}
 </table>
