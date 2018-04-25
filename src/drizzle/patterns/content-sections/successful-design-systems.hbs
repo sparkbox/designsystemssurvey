@@ -2,23 +2,49 @@
 order: 40
 ---
 {{#with (data "successful-data")}}
-  <h2>What Made People Feel Their Design System was Successful?</h2>
+  <h2>What Makes Design Systems Successful?</h2>
 
-  <h3>They have a lot of things in them</h3>
+  <strong>Successful design systems are robust</strong>
+  <table>
+      <tr>
+          <th>Level of Success</th>
+          <th>Median</th>
+          <th>Full Range Size</th>
+      </tr>
+      <tr>
+          <td>Very Successful or Successful</td>
+          <td>14 Elements</td>
+          <td>6 to 19 Elements</td>
+      </tr>
+      <tr>
+          <td>Average or Unsuccessful</td>
+          <td>11 Elements</td>
+          <td>2 to 18 Elements</td>
+      </tr>
+  </table>
 
-  <h3>They are maintained by teams</h3>
-  <h4>(Q15, successful segment) How are you maintaining your design system?</h4>
+  <p>What does your design system contain? Select all that apply.</p>
+  {{> patterns.data-types.bar-chart
+      design-system-contents
+  }}
+
+  <strong>Successful design systems are maintained by teams</strong>
+  <p>How are you maintaining your design system?</p>
   {{> patterns.data-types.bar-chart
       maintenance
   }}
 
-  <h3>Design systems involve the whole team</h3>
-  <h4>(Q10 successful segment). Who is primarily responsible for the design system?</h4>
+  <strong>Successful design systems bridge roles</strong>
+  <p>Who is primarily responsible for the design system?</p>
   {{> patterns.data-types.bar-chart
       responsibility
   }}
-  <h4>(Q12 successful) Who are the primary users of the design system?</h4>
+  <p>Who are the primary users of the design system?</p>
   {{> patterns.data-types.bar-chart
       users
+  }}
+  <p>Who values the design system most in your organization, if anyone?</p>
+  {{> patterns.data-types.stacked-bar-chart
+      valuation
   }}
 {{/with}}

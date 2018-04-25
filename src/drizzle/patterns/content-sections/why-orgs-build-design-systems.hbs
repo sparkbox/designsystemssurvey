@@ -1,0 +1,33 @@
+---
+order: 30
+---
+
+<h2>Why Organizations Build Design Systems</h2>
+
+<p>Which of the following, if any, motivated your organization to establish a design system or a pattern library?</p>
+{{#with (data "motivation-data")}}
+    {{> patterns.data-types.stacked-bar-chart
+        motivators
+    }}
+{{/with}}
+
+
+<p>Does your design system serve more than one web property?</p>
+<table "cmp-table">
+    <tr>
+        <th>Options</th>
+        <th>Responses</th>
+    </tr>
+    <tr>
+        <td>Yes</td>
+        <td>73.26%</td>
+    </tr>
+    <tr>
+        <td>No</td>
+        <td>25.58%</td>
+    </tr>
+    <tr>
+        <td>Unsure</td>
+        <td>1.16%</td>
+    </tr>
+</table>
