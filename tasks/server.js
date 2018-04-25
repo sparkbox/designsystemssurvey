@@ -1,7 +1,12 @@
 const express = require('express');
+const enforceSSL = require('express-enforces-ssl');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+if (process.env.ENFORCE_SSL) {
+  app.use(enforceSSL());
+}
 
 // Basic Auth
   if (process.env.NODE_ENV === 'production') {
