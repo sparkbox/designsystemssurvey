@@ -16,6 +16,7 @@ Options
 -------
 
 - `ENFORCE_SSL` can be set to any value to require SSL via redirect
+- `USER` and `PASS` can be used to enable [`marshmallows`](https://github.com/sparkbox/marshmallows) basic authentication
 
 Drizzle
 -------
