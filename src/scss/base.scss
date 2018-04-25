@@ -5,12 +5,16 @@
 
 
 // TOOLS
-@import "tools.colors";
+@import "tools.global-variables";
+@import "tools.spacing-variables";
+@import "tools.animation-variables";
+@import "tools.color-variables";
 @import "tools.functions";
 @import "tools.mixins";
 
 
 // GENERIC
+@import "generic.keyframes";
 @import "generic.normalize";
 
 
@@ -21,6 +25,7 @@
 
 
 // COMPONENTS
+@import "components.intro";
 @import "components.section.layout";
 @import "components.section.heading";
 @import "components.section.content";

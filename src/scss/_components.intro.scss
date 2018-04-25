@@ -1,0 +1,378 @@
+.cmp-intro {
+  $bp-grow-heading: 30em;
+  $bp-split-columns: 45em;
+  $bp-large-margins: 62em;
+  $bp-huge-heading: 80em;
+  $bp-adjust-blocks: 87em;
+  $bp-stop-overflowing-blocks: 118em;
+  
+  max-width: $page-max-width;
+  margin: 0 auto;
+  
+  &__inner {
+    padding: 0 $space-page-margin;
+
+    // Crop off excess blocks
+    overflow: hidden;
+    
+    @media (min-width: $bp-split-columns) {
+      display: flex;
+      
+      padding-top: 10rem;
+    }
+
+    @media (min-width: $bp-large-margins) {
+      padding-left: (2/16 * 100%);
+      padding-right: (2/16 * 100%);
+      
+      padding-top: 17rem;
+    }
+    
+    @media (min-width: $page-max-width) {
+      // Reveal excess blocks
+      overflow: visible;
+    }
+  }
+  
+  &__logo-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 5.75rem;
+    
+    margin-top: $space-page-margin / 2;
+    margin-bottom: $space-page-margin / 2;
+    
+    // This puts the element over on the left side
+    margin-left: auto;
+    
+    @media (min-width: $bp-split-columns) {
+      // Pull element out of flex context
+      position: absolute;
+      
+      margin-top: -6.5rem;
+      
+      width: 8rem;
+    }
+    @media (min-width: $bp-large-margins) {
+      width: 11rem;
+      margin-top: -4.3rem;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    height: 100%;
+  }
+  
+  &__heading-and-blocks {
+    display: flex;
+  }
+  
+  &__heading {
+    // Remove normalize styles
+    margin-top: 0;
+    
+    font-weight: 700;
+    
+    line-height: 0.9;
+    font-size: 2.02rem;
+    
+    width: 4.3em;
+    
+    margin-bottom: 1.75rem;
+    
+    @media (min-width: $bp-grow-heading) {
+      font-size: 3em / $bp-grow-heading * 100vw;
+    }
+    
+    @media (min-width: $bp-huge-heading) {
+      font-size: 8.0625rem;
+    }
+    
+    &__year {
+      display: block;
+      
+      font-size: 0.8125rem;
+      letter-spacing: 0.0625em;
+      
+      margin-bottom: $space-xs;
+    
+      @media (min-width: $bp-split-columns) {
+        position: absolute;
+        
+        font-size: 1rem;
+        
+        margin-top: -1em;
+      }
+      
+      @media (min-width: $bp-large-margins) {
+        font-size: 1.125rem;
+        
+        margin-top: 7vw;
+        
+        margin-left: -5.5rem;
+      }
+      
+      @media (min-width: $bp-huge-heading) {
+        font-size: 1.125rem;
+        margin-top: 5.7rem;
+      }
+    }
+    
+    &__title {
+      display: block;
+    }
+  }
+  
+  &__blocks-wrapper {
+    &--a {
+      // Take up remaining space left over from heading
+      flex: 1;
+
+      // Gap between heading and blocks
+      margin-left: 1.5rem;
+      
+      // Pulls blocks out of element and causes them to grow
+      // in width and height a bit
+      margin-right: -7rem;
+      
+      align-self: center;
+      
+      // Contain overlay
+      position: relative;
+    
+      @media (min-width: $bp-split-columns) {
+        // At this point, blocks are pulled out of the flow and
+        // positioned to frame content
+        
+        position: absolute;
+        
+        margin: 0;
+        
+        right: 0;
+        
+        // This pushes blocks up off the top of the page.
+        // This is done so that as blocks grow, they grow
+        // up, not down into content.
+        bottom: 100%;
+        
+        // This pulls the blocks back down into visible area
+        margin-bottom: calc(-9rem - 4vw);
+        
+        overflow: hidden;
+        
+        width: 80%;
+        box-sizing: border-box;
+      }
+      
+      @media (min-width: $bp-large-margins) {
+        width: 60%;
+        
+        margin-bottom: -17rem;
+        margin-bottom: calc(-15rem - 4vw);
+      }
+      
+      @media (min-width: $bp-adjust-blocks) {
+        width: 50%;
+        
+        margin-bottom: calc(-13rem - 4vw);
+      }
+      
+      @media (min-width: $bp-stop-overflowing-blocks) {
+        right: auto;
+        left: 50%;
+
+        width: 50rem;
+
+        margin-bottom: -18rem;
+
+        // Adding a bit of padding to make sure blocks don't get cropped off
+        padding: 0.5rem;
+      }
+    }
+
+    &--b {
+      width: calc(100% - 5rem);
+      margin-left: -10%;
+      
+      margin-top: 2rem;
+      
+      @media (min-width: $bp-grow-heading) {
+        width: 70%;
+      }
+
+      @media (min-width: $bp-split-columns) {
+        position: absolute;
+        
+        margin-left: 0;
+        
+        left: -30%;
+        
+        top: calc(10rem + 26vw);
+      }
+
+      @media (min-width: $bp-large-margins) {
+        top: calc(15rem + 26vw);
+      }
+      
+      @media (min-width: $bp-adjust-blocks) {
+        width: 60%;
+        left: -15%;
+        top: 39rem;
+      }
+      
+      @media (min-width: $bp-stop-overflowing-blocks) {
+        left: auto;
+        right: 50%;
+
+        width: 50rem;
+
+        // Adding a bit of padding to make sure blocks don't get cropped off
+        padding: 1rem;
+      }
+    }
+  }
+  
+  &__blocks {
+    g {
+      stroke-width: 10px;
+
+      @media (min-width: $bp-split-columns) {
+        stroke-width: 7px;
+      }
+
+      @media (min-width: $bp-adjust-blocks) {
+        stroke-width: 5px;
+      }
+
+      @media (min-width: $bp-stop-overflowing-blocks) {
+        stroke-width: 7px;
+      }
+    }
+    
+    .block {
+      animation-duration: 1200ms;
+      animation-timing-function: $timing-function-ease-out-expo;
+      
+      // This makes sure styles applied by the blocks'
+      // animations are applied both before and after the animation
+      animation-fill-mode: both;
+    }
+    
+    .block--1 { stroke: #DAD2FF; }
+    .block--2 { stroke: #B6E1C9; }
+    .block--3 { stroke: #F9E293; }
+    .block--4 { stroke: #A4D0D7; }
+    .block--5 { stroke: #FFC0C0; }
+    .block--6 { stroke: #FEBFEE; }
+
+    polygon, path {
+      stroke-width: inherit !important;
+    }
+    
+    &--a {
+      @media (min-width: $bp-split-columns) {
+        width: 100%;
+        
+        // This pushes the blocks outside of their wrapper
+        // to crop them
+        margin-left: 30%;
+      }
+      
+      @media (min-width: $bp-large-margins) {
+      }
+      
+      @media (min-width: $bp-adjust-blocks) {
+        margin-left: calc(20%);
+      }
+      
+      @media (min-width: $bp-stop-overflowing-blocks) {
+        margin-left: 0;
+      }
+
+      .block {
+        animation-name: block-drop;
+      }
+      
+      // This value is multiplied to add a
+      // staggered delay
+      $delay-unit: 200ms;
+      
+      .block--1 { animation-delay: $delay-unit * 1 }
+      .block--2 { animation-delay: $delay-unit * 2 }
+      .block--3 { animation-delay: $delay-unit * 3 }
+      .block--4 { animation-delay: $delay-unit * 4 }
+      .block--5 { animation-delay: $delay-unit * 5 }
+      .block--6 { animation-delay: $delay-unit * 6 }
+    }
+    
+    &--b {
+      // This value is added to all delays in order to add
+      // a minimum delay
+      $base-delay: 400ms;
+      
+      // This value is multiplied to add a
+      // staggered delay
+      $delay-unit: 200ms;
+      
+      .block {
+        animation-name: block-raise;
+      }
+      
+      .block--1 { animation-delay: $base-delay + $delay-unit * 6 }
+      .block--2 { animation-delay: $base-delay + $delay-unit * 5 }
+      .block--3 { animation-delay: $base-delay + $delay-unit * 4 }
+      .block--4 { animation-delay: $base-delay + $delay-unit * 3 }
+      .block--5 { animation-delay: $base-delay + $delay-unit * 2 }
+      .block--6 { animation-delay: $base-delay + $delay-unit * 1 }
+    }
+  }
+
+  &__svg {
+    height: auto;
+    width: 100%;
+
+    // This wrapper is needed to match the
+    // specificity of normalize
+    &:not(:root) {
+      overflow: visible;
+    }
+    
+    // This fixes a weird chrome bug where it's
+    // sometimes ignoring the `overflow: visible` rule
+    transform: translate3d(0,0,0)
+  }
+  
+  &__body {
+    @media (min-width: $bp-split-columns) {
+      flex: 1;
+      
+      padding-left: 2rem;
+      
+      // This is a magic number that roughly aligns to
+      // the top of the headline's x-height
+      margin-top: 2vw;
+      
+      @media (min-width: 86.625em) {
+        width: 25rem;
+      }
+
+      margin-left: auto;
+    }
+    @media (min-width: $bp-huge-heading) {
+      // This is a magic number that roughly aligns to
+      // the top of the headline's x-height
+      margin-top: 1.6rem;
+    }
+  }
+  
+  &__paragraph {
+    // Remove normalize styles
+    margin-top: 0;
+    
+    font-size: 1.2rem;
+    line-height: 1.75;
+    
+    margin-bottom: 1.75rem;
+  }
+}

@@ -50,6 +50,7 @@
     "node-sass": "^4.5.3",
     "parallelshell": "^3.0.1",
     "postcss-cli": "^4.1.1",
+    "rellax": "^1.6.2",
     "rimraf": "^2.6.2",
     "sass-list-maps": "^1.0.0-b",
     "shelljs": "^0.7.8",

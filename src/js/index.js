@@ -1,6 +1,7 @@
 'use strict';
 
 require('core-js/fn/array/from');
+require('./intro-parallax');
 
 import addBarCharts from './barChart.js';
 import addStackedBarCharts from './stackedBarChart.js';
@@ -21,5 +22,3 @@ const addCharts = () => {
   addBarCharts(barChartElements);
   addStackedBarCharts(stackedBarChartElements);
 }
-
-addCharts();
