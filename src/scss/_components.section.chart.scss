@@ -82,4 +82,43 @@
     align-items: center;
   }
 
+  &--set1 {
+    @include bar-chart-themer($set1, 9);
+  }
+
+  &--set2 {
+    @include bar-chart-themer($set2, 9);
+  }
+
+  &--set3 {
+    @include bar-chart-themer($set3, 9);
+  }
+
+  &--set4 {
+    @include bar-chart-themer($set4, 9);
+  }
+
+  &--set5 {
+    @include bar-chart-themer($set5, 9);
+  }
+
+  &--set6 {
+    @include bar-chart-themer($set6, 9);
+  }
+
+  &--set7 {
+    @include bar-chart-themer($set7, 9);
+  }
+
+  &--set8 {
+    @include bar-chart-themer($set8, 9);
+  }
+
+  &--set9 {
+    @include bar-chart-themer($set9, 9);
+  }
+
+  &--set10 {
+    @include bar-chart-themer($set10, 9);
+  }
 }

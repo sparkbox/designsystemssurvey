@@ -30,7 +30,7 @@ chartData:
     value: 4
 ---
 
-<div class="cmp-chart" data-size="{{chartSize}}">
+<div class="cmp-chart{{#if setTheme}} cmp-chart--{{setTheme}}{{/if}}" data-size="{{chartSize}}">
   {{#each chartData}}
   <div class="cmp-chart__entry">
     <div class="cmp-chart__category">{{category}}</div>
