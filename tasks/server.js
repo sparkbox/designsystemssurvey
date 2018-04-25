@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 if (process.env.ENFORCE_SSL) {
+  app.enable('trust proxy');
   app.use(enforceSSL());
 }
 
