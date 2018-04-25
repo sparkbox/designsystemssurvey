@@ -2,4 +2,55 @@
 order: 10
 ---
 
-<h2>Menu</h2>
+<header class="cmp-intro">
+  <div class="cmp-intro__inner">
+
+    <div class="cmp-intro__logo-wrapper">
+      <a href="https://seesparkbox.com">
+        <img class="cmp-intro__logo" src="/svg/sparkbox-logo.svg" alt="Sparkbox">
+      </a>
+    </div>
+
+    <div class="cmp-intro__heading-and-blocks">
+      <h1 class="cmp-intro__heading rellax" data-rellax-speed="-2">
+        <span class="cmp-intro__heading__year">2018</span>
+        <span>
+          Design
+          Systems
+          Survey
+        </span>
+      </h1>
+
+      <div class="cmp-intro__blocks-wrapper cmp-intro__blocks-wrapper--a">
+        <div class="cmp-intro__blocks cmp-intro__blocks--a">
+          {{> patterns.inline-svg.blocks }}
+        </div>
+      </div>
+    </div>
+
+    <div class="cmp-intro__body">
+      <p class="cmp-intro__paragraph">
+        Design systems are living codebases of frontend components that solve
+        real-life problems for enterprise organizations, agencies, and companies
+        of all sizes. Design systems—which address everything from color and
+        typography, to grids and navigation, to documentation and guiding
+        principles—promote the reuse of code and patterns, making the web more
+        consistent, efficient, accessible, and creative.
+      </p>
+
+      <p class="cmp-intro__paragraph">
+        Sparkbox, a studio that specializes in responsive design and custom
+        software, conducted a survey to better understand design systems. We
+        were looking to gain and share insights into how and why design systems
+        are used in our industry, along with the challenges of design systems,
+        and what makes this impactful, systemic work worth doing.
+      </p>
+    </div>
+  </div>
+
+  <div class="cmp-intro__blocks-wrapper cmp-intro__blocks-wrapper--b">
+    <div class="cmp-intro__blocks cmp-intro__blocks--b">
+      {{> patterns.inline-svg.blocks }}
+    </div>
+  </div>
+</header>
