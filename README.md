@@ -11,6 +11,12 @@ Setup
   - Start the server
   - Run watch tasks
 
+
+Options
+-------
+
+- `ENFORCE_SSL` can be set to any value to require SSL via redirect
+
 Drizzle
 -------
 
