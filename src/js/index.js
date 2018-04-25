@@ -10,7 +10,7 @@ const getTableElements = chartType => {
   if (chartType === 'barChart') {
     tableClass = '.cmp-chart--bar';
   } else if (chartType === 'stackedBarChart') {
-    tableClass = '.cmp-chart--stacked-bar';
+    tableClass = '.cmp-chart-block--stacked-bar';
   }
   return Array.from(document.querySelectorAll(tableClass));
 };
