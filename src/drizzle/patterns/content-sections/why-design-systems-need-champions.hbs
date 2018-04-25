@@ -1,0 +1,18 @@
+---
+order: 50
+---
+{{#with (data "challenges-data")}}
+  <h2>Why Design Systems Need Champions</h2>
+
+  <strong>Design systems benefit from executive advocates</strong>
+  <p>If you feel that your organization’s design system or library was not successful, what were the main reasons? </p>
+  {{> patterns.data-types.bar-chart
+      unsuccessful
+  }}
+
+  <strong>Design systems benefit from cross-departmental buy-in</strong>
+  {{> patterns.data-types.stacked-bar-chart
+      prevention
+  }}
+
+{{/with}}
