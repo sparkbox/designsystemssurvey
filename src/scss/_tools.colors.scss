@@ -1,1 +1,87 @@
 $c-black: #111;
+
+$set1: (
+  top: #e9ecc5,
+  middle: #51adbd,
+  bottom: #004a76
+);
+
+$set2: (
+  top: #d8f0e0,
+  middle: #48acbf,
+  bottom: #452098
+);
+
+$set3: (
+  top: #ffe5e5,
+  middle: #4a9dae,
+  bottom: #0a1582
+);
+
+$set4: (
+  top: #ffeacf,
+  middle: #3ea1b6,
+  bottom: #05197d
+);
+
+$set5: (
+  top: #fae1d3,
+  middle: #55a4c6,
+  bottom: #3128a0
+);
+
+$set6: (
+  top: #ffe6e6,
+  middle: #a370aa,
+  bottom: #0a1582
+);
+
+$set7: (
+  top: #f0e8c8,
+  middle: #d37563,
+  bottom: #531a92
+);
+
+$set8: (
+  top: #fbd9ff,
+  middle: #de6e6f,
+  bottom: #32374d
+);
+
+$set9: (
+  top: #d3eafe,
+  middle: #d57160,
+  bottom: #3c3600
+);
+
+$set10: (
+  top: #f7f08e,
+  middle: #da6995,
+  bottom: #32384e
+);
+
+@function get-set($set, $color) {
+  $result: map-get(#{$set}, $color);
+  @return $result;
+}
+
+@mixin bar-chart-themer($set, $count) {
+  $half: $count/2;
+  $top: map-get($set, top);
+  $middle: map-get($set, middle);
+  $bottom: map-get($set, bottom);
+  @for $i from 1 through $count {
+    @if $i >= 1 and $i < $half {
+      .cmp-chart__entry:nth-child(#{$i}) .cmp-chart__bar {
+        background-color: mix($middle, $top, (($i - 1) / $half) * 100%);
+      }
+    }
+
+    @if $i >= $half and $i <= $count {
+      .cmp-chart__entry:nth-child(#{$i}) .cmp-chart__bar {
+        background-color: mix($bottom, $middle, (($i - $half) / $half) * 100%);
+      }
+    }
+  }
+}
+
