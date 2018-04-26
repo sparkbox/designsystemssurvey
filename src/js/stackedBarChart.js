@@ -67,7 +67,6 @@ const createStackedBarChart = (chartElement) => {
 const addStackedBarCharts = (stackedBarChartElements) => {
   stackedBarChartElements.forEach(chartElement => {
     const stackedBarChart = createStackedBarChart(chartElement);
-    console.log(stackedBarChart);
     chartElement.innerHTML += stackedBarChart;
     chartElement.getElementsByTagName('table')[0].style.display = 'none';
   });
