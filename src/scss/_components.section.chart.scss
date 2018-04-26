@@ -103,24 +103,4 @@
   &--set5 {
     @include bar-chart-themer($set5, 9);
   }
-
-  &--set6 {
-    @include bar-chart-themer($set6, 9);
-  }
-
-  &--set7 {
-    @include bar-chart-themer($set7, 9);
-  }
-
-  &--set8 {
-    @include bar-chart-themer($set8, 9);
-  }
-
-  &--set9 {
-    @include bar-chart-themer($set9, 9);
-  }
-
-  &--set10 {
-    @include bar-chart-themer($set10, 9);
-  }
 }
