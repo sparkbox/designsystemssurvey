@@ -2,7 +2,7 @@
 name: Chart
 title: Chart
 
-chartSize: 45
+chartSize: 40
 chartData:
   -
     category: Designers
@@ -30,7 +30,11 @@ chartData:
     value: 4
 ---
 
-<div class="cmp-chart{{#if setTheme}} cmp-chart--{{setTheme}}{{/if}}" data-size="{{chartSize}}">
+<div class="cmp-chart{{#if setTheme}} cmp-chart--{{setTheme}}{{/if}}">
+  <div class="cmp-chart__range" aria-hidden="true">
+    <div class="cmp-chart__low">0%</div>
+    <div class="cmp-chart__high">{{chartSize}}%</div>
+  </div>
   {{#each chartData}}
   <div class="cmp-chart__entry">
     <div class="cmp-chart__category">{{category}}</div>

@@ -13,38 +13,38 @@
     grid-auto-rows: 1fr;
   }
 
-  &::before,
-  &::after {
-    box-sizing: border-box;
+  &__range {
+    position: absolute;
+    width: 100%;
+    top: -0.125rem;
+    bottom: -3rem;
+    font-weight: bold;
+    pointer-events: none;
+  }
+
+  &__low,
+  &__high {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     display: flex;
     align-items: flex-end;
-    position: absolute;
-    top: -0.125rem;
-    bottom: -3.125rem;
-    padding: 0 0.5rem;
-    font-size: 0.875rem;
-    font-weight: bold;
+    padding: 0 0.25rem;
+  }
+
+  &__low {
+    border-left: 0.125rem solid black;
+    left: 11rem;
 
     @supports (display: grid) {
-      bottom: auto;
-      height: calc(50vh + 3.125rem);
+      left: 9.75rem;  
     }
   }
 
-  &::before {
-    content: '0%';
-    left: 11rem;
-    border-left: 0.125rem solid currentColor;
-
-    @supports (display: flex) {
-      left: 9.625rem;
-    }
-  }
-
-  &::after {
-    content: attr(data-size)'%';
+  &__high {
+    border-right: 0.125rem solid black;
     right: 0;
-    border-right: 0.125rem solid currentColor;
+    text-align: right;
   }
 
   &__entry {
@@ -68,6 +68,8 @@
   &__bar {
     position: relative;
     background-color: currentColor;
+    display: flex;
+    align-items: center;
   }
 
   &__value {
@@ -75,11 +77,11 @@
     font-weight: bold;
     position: absolute;
     left: 100%;
-    top: 0;
-    bottom: 0;
-    padding: 1rem;
+    margin-left: 1rem;
+    padding: 0.125rem;
     display: flex;
     align-items: center;
+    background-color: white;
   }
 
   &--set1 {
