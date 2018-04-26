@@ -1,5 +1,6 @@
 const downpour = require('@sparkbox/downpour');
 const hbsHelpers = require('handlebars-helpers');
+const romanNumeral = require('roman-numeral');
 
 const helpers = {
   add: hbsHelpers().add,
@@ -13,6 +14,11 @@ const helpers = {
   sum: hbsHelpers().sum,
   avg: hbsHelpers().avg,
   markdown: hbsHelpers().markdown,
+  default: hbsHelpers().default,
+
+  numToRomanNumeral: (num) => {
+    return romanNumeral.convert(num);
+  },
 };
 
 const downpourOptions = {
@@ -41,12 +47,6 @@ const downpourOptions = {
     js: './dist/js',
   },
   helpers: {
-    default: function() {
-      for (var i = 0; i < arguments.length - 1; i++) {
-        if (typeof arguments[i] === 'string') return arguments[i];
-      }
-      return '';
-    }
   }
 };
 
