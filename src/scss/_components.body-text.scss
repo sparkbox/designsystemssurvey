@@ -93,4 +93,35 @@ $bp-text-size-bump-2: 70em;
       }
     }
   }
+
+  a {
+    // NOTE: this isn't a direct child selector.
+    // We might need to adjust how these styles
+    // are getting applied if this starts cascading
+    // in an unwanted way.
+
+
+    &:link {
+      font-weight: bold;
+
+      color: $c-link-blue;
+
+      text-decoration: none;
+
+      // This uses a combination of background color and box-shadow
+      // to draw an underline that can turn into a background. Note that
+      // this means this only works on a white background.
+      background-color: mix($c-link-blue, white, 20);
+      box-shadow: inset 0 1.1em white, inset 0 -0.05em white;
+
+      transition: all 250ms $timing-function-ease-out-expo;
+    }
+
+    &:hover,
+    &:focus {
+      color: darken($c-link-blue, 10);
+      background-color: mix($c-link-blue, white, 10);
+      box-shadow: inset 0 0em white, inset 0 0em white;
+    }
+  }
 }
