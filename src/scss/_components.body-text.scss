@@ -1,0 +1,96 @@
+$bp-text-size-bump-1: 40em;
+$bp-text-size-bump-2: 70em;
+
+.cmp-body-text {
+  > h3 {
+    margin-top: $space-xxl;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    @media (min-width: $bp-text-size-bump-1) {
+      font-size: 1.75rem;
+    }
+
+    @media (min-width: $bp-text-size-bump-2) {
+      font-size: 2.1rem;
+    }
+
+    > em {
+      font-style: normal;
+
+      // This applies an accent color custom property,
+      // defined in the `major-section` component, cascading
+      // down onto this element.
+      background-color: #ddd;
+      background-color: var(--accent-color-light);
+
+      padding: 0 0.25em;
+
+      // An inset box shadow is used to slightly
+      // trim down the background color
+      box-shadow: inset 0 -0.1em white;
+    }
+  }
+
+  > p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+
+    margin-bottom: $space-xl;
+
+    @media (min-width: $bp-text-size-bump-2) {
+      font-size: 1.25rem;
+    }
+  }
+
+  > ul {
+    @include delist;
+
+    font-size: 1.125rem;
+    line-height: 1.75;
+
+    margin: $space-xxl 0;
+
+    padding-left: $space-lg;
+
+    @media (min-width: $bp-text-size-bump-2) {
+      font-size: 1.25rem;
+    }
+
+    > li {
+
+      // Contain absolute bullets
+      position: relative;
+
+      &::before {
+        // Draw bullets
+
+        $bullet-size: 6px;
+
+        content: '';
+        position: absolute;
+
+        width: $bullet-size;
+        height: $bullet-size;
+
+        background-color: #aaa;
+        background-color: var(--accent-color-full);
+
+        // This attempts to center vertically with associated text
+        top: 0.7em;
+
+        // This pulls the bullet into the margin
+        left: -1.1rem
+      }
+
+      & + li {
+        margin-top: $space-xl;
+      }
+    }
+  }
+}
