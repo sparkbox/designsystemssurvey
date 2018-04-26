@@ -2,52 +2,54 @@
 order: 40
 ---
 
-{{> patterns.content-sections.section-intro-box
-  sectionTitle='What Makes Design Systems&nbsp;Successful?'}}
+<section>
+  {{> patterns.content-sections.section-intro-box
+    sectionTitle='What Makes Design Systems&nbsp;Successful?'}}
 
-{{#with (data "successful-data")}}
+  {{#with (data "successful-data")}}
 
-  <strong>Successful design systems are robust</strong>
-  <table>
-      <tr>
-          <th>Level of Success</th>
-          <th>Median</th>
-          <th>Full Range Size</th>
-      </tr>
-      <tr>
-          <td>Very Successful or Successful</td>
-          <td>14 Elements</td>
-          <td>6 to 19 Elements</td>
-      </tr>
-      <tr>
-          <td>Average or Unsuccessful</td>
-          <td>11 Elements</td>
-          <td>2 to 18 Elements</td>
-      </tr>
-  </table>
+    <strong>Successful design systems are robust</strong>
+    <table>
+        <tr>
+            <th>Level of Success</th>
+            <th>Median</th>
+            <th>Full Range Size</th>
+        </tr>
+        <tr>
+            <td>Very Successful or Successful</td>
+            <td>14 Elements</td>
+            <td>6 to 19 Elements</td>
+        </tr>
+        <tr>
+            <td>Average or Unsuccessful</td>
+            <td>11 Elements</td>
+            <td>2 to 18 Elements</td>
+        </tr>
+    </table>
 
-  <p>What does your design system contain? Select all that apply.</p>
-  {{> patterns.data-types.bar-chart
-      design-system-contents
-  }}
+    <p>What does your design system contain? Select all that apply.</p>
+    {{> patterns.data-types.bar-chart
+        design-system-contents
+    }}
 
-  <strong>Successful design systems are maintained by teams</strong>
-  <p>How are you maintaining your design system?</p>
-  {{> patterns.data-types.bar-chart
-      maintenance
-  }}
+    <strong>Successful design systems are maintained by teams</strong>
+    <p>How are you maintaining your design system?</p>
+    {{> patterns.data-types.bar-chart
+        maintenance
+    }}
 
-  <strong>Successful design systems bridge roles</strong>
-  <p>Who is primarily responsible for the design system?</p>
-  {{> patterns.data-types.bar-chart
-      responsibility
-  }}
-  <p>Who are the primary users of the design system?</p>
-  {{> patterns.data-types.bar-chart
-      users
-  }}
-  <p>Who values the design system most in your organization, if anyone?</p>
-  {{> patterns.data-types.stacked-bar-chart
-      valuation
-  }}
-{{/with}}
+    <strong>Successful design systems bridge roles</strong>
+    <p>Who is primarily responsible for the design system?</p>
+    {{> patterns.data-types.bar-chart
+        responsibility
+    }}
+    <p>Who are the primary users of the design system?</p>
+    {{> patterns.data-types.bar-chart
+        users
+    }}
+    <p>Who values the design system most in your organization, if anyone?</p>
+    {{> patterns.data-types.stacked-bar-chart
+        valuation
+    }}
+  {{/with}}
+</section>
