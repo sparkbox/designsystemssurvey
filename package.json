@@ -33,6 +33,7 @@
     "chartist": "^0.11.0",
     "chokidar": "^2.0.0",
     "colors": "^1.1.2",
+    "core-js": "^2.5.5",
     "css-mqpacker": "^5.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
