@@ -1,1 +1,5 @@
-$page-max-width: 87rem;
+// This is a magic number that happens to look good for
+// all our headlines and creates minimal awkward line breaks.
+// If you change this value, look over all the content
+// to make sure it still looks decent.
+$text-column-max-width: 49rem;

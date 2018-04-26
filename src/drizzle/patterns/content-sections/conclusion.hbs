@@ -1,10 +1,10 @@
 ---
-order: 30
+order: 60
 ---
 
 <section class="cmp-major-section cmp-major-section--section-{{sectionNumber}}">
   {{> patterns.content-sections.section-intro-box
-      sectionTitle='Why Organizations Build Design Systems'}}
+    sectionTitle='Just the Beginning'}}
 
   <div class="obj-limit-width cmp-body-text">
     <h3>This is <em>dummy content</em> to show some realistic-ish content in each section.</h3>
@@ -21,31 +21,4 @@ order: 30
     </ul>
   </div>
 
-  <p>Which of the following, if any, motivated your organization to establish a design system or a pattern library?</p>
-  {{#with (data "motivation-data")}}
-      {{> patterns.data-types.stacked-bar-chart
-          motivators
-      }}
-  {{/with}}
-
-
-  <p>Does your design system serve more than one web property?</p>
-  <table "cmp-table">
-      <tr>
-          <th>Options</th>
-          <th>Responses</th>
-      </tr>
-      <tr>
-          <td>Yes</td>
-          <td>73.26%</td>
-      </tr>
-      <tr>
-          <td>No</td>
-          <td>25.58%</td>
-      </tr>
-      <tr>
-          <td>Unsure</td>
-          <td>1.16%</td>
-      </tr>
-  </table>
 </section>

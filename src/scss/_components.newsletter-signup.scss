@@ -1,47 +1,49 @@
 .cmp-newsletter {
-  padding: 3em;
+  padding: $space-xxxl 0;
   background-color: #f3f3f3;
-  
-  &__text {
-    font-size: 1em;
-  }
 
-  &__form {
-    margin-top: $space-xxl;
-  }
+  margin-top: $space-xxxl;
 
   &__input-label {
+    display: block;
     font-size: 0.8em;
     font-weight: bold;
-    margin: 0;
+    margin-bottom: $space-sm;
+  }
+
+  &__input-and-button {
+    display: flex;
+
+    max-width: 28rem;
   }
 
   &__input {
+    flex: 1;
+
     box-sizing: border-box;
-    margin-top: $space-sm;
     border: solid black 2px;
-    height: 2.5em;
     width: 100%;
+
     font-size: 1em;
 
+    padding: 0.75rem 1rem;
+
     @media (min-width: 45em) {
-      max-width: 45%;
-      float: left;
     }
   }
 
   &__button {
+    @include disable-subpixel-font-rendering;
+
     background-color: black;
     color: white;
     border: solid black 2px;
-    height: 2.5em;
-    width: 100%;
-    font-size: 1em;
 
-    @media (min-width: 45em) {
-      display: inline-block;
-      width: 8em;
-      margin-top: $space-sm;
-    }
+    font-size: 1em;
+    font-weight: bold;
+
+    display: inline-block;
+
+    padding: 0.75rem 1rem;
   }
 }

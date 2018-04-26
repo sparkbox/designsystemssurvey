@@ -5,8 +5,10 @@
   $bp-huge-heading: 80em;
   $bp-adjust-blocks: 87em;
   $bp-stop-overflowing-blocks: 118em;
+
+  $intro-max-width: 87rem;
   
-  max-width: $page-max-width;
+  max-width: $intro-max-width;
   margin: 0 auto;
   
   &__inner {
@@ -28,7 +30,7 @@
       padding-top: 17rem;
     }
     
-    @media (min-width: $page-max-width) {
+    @media (min-width: $intro-max-width) {
       // Reveal excess blocks
       overflow: visible;
     }
@@ -235,7 +237,7 @@
   
   &__blocks {
     g {
-      stroke-width: 10px;
+      stroke-width: 11px;
 
       @media (min-width: $bp-split-columns) {
         stroke-width: 7px;

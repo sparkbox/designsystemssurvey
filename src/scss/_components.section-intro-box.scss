@@ -24,17 +24,13 @@
   margin-left: auto;
   margin-right: auto;
 
-  // This is a magic number that happens to look good for
-  // all our headlines and creates minimal awkward line breaks.
-  // If you change this value, look over all the content
-  // to make sure it still looks decent.
-  max-width: 35.8rem;
+  max-width: $text-column-max-width;
 
-  margin-top: 30vh;
-  margin-bottom: 30vh;
+  margin-top: calc(#{$space-xxxl} + 10vh);
+  margin-bottom: $space-xxxl;
 
   box-sizing: border-box;
-  padding: 2.2rem 2.7rem;
+  padding: 2.4rem 2.7rem;
 
   text-align: center;
 
@@ -101,10 +97,10 @@
   }
 
   &__text {
-    font-size: 6vw;
+    font-size: 8vw;
 
     @media (min-width: 44em) {
-      font-size: 44rem * 0.06;
+      font-size: 44rem * 0.08;
     }
   }
 }
