@@ -1,0 +1,81 @@
+.cmp-toc {
+  text-align: center;
+  margin: auto;
+  max-width: 33rem;
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border-bottom: 0.125rem solid;
+    display: inline-block;
+    letter-spacing: 0.0625em;
+    padding-bottom: 0.125rem;
+  }
+
+  &__list {
+    @include delist;
+    text-align: left;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    transition: background-color 150ms ease-in-out;
+
+    &:hover {
+      background-color: white;
+    }
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      &::after {
+        opacity: 0;
+        content: '';
+        display: block;
+        grid-column: 6;
+        background: svg('<svg xmlns="http://www.w3.org/2000/svg" width="21" height="25" viewBox="0 0 21 25"><path fill="#{$c-link}" d="M11.8 19.7l6.2-5.8a1.5 1.5 0 1 1 2 2.2l-8.5 8c-.5.5-1.5.5-2 0L1 16a1.5 1.5 0 1 1 2-2.2l5.8 5.5V2a1.5 1.5 0 1 1 3 0v17.7z"/></svg>') center center no-repeat;
+        transition: opacity 150ms ease-in-out;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      display: block;
+      content: attr(data-count) '.';
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-align: right;
+      padding: 1rem 0.5rem 1rem 0;
+      line-height: 2.375;
+      flex-basis: 2rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 1rem 2rem 1rem 0;
+
+    @supports (display: grid) {
+      grid-column: 2 / span 4;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}
