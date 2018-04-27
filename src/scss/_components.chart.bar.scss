@@ -1,0 +1,175 @@
+// @supports (display: flex) is used in this file to prevent 
+// some styles from reaching IE11
+.cmp-chart {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 0.125rem 0 0;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $bp-chart-header-pop) {
+    @supports (display: grid) {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-row-gap: 0.125rem;
+    }
+  }
+
+  @media (min-width: $bp-chart-header-pop) {
+    @supports (dispaly: flex) {
+      margin-left: -$chart-header-width;
+      width: calc(100% + #{$chart-header-width});
+    }
+  }
+
+  &__range {
+    position: absolute;
+    width: 100%;
+    top: -0.125rem;
+    bottom: -3rem;
+    font-weight: bold;
+    pointer-events: none;
+  }
+
+  &__low,
+  &__high {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0.25rem;
+  }
+
+  &__low {
+    border-left: 0.125rem solid $c-gray;
+    left: -0.25rem;
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (display: grid) {
+        left: $chart-header-width - 0.25;  
+      }
+    }
+  }
+
+  &__high {
+    border-right: 0.125rem solid $c-gray;
+    right: -0.25rem;
+    text-align: right;
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        right: 0;
+      }
+    }
+  }
+
+  &__entry {
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        width: 100%;
+        display: flex;
+        height: 3rem;
+        margin-bottom: 0.125rem;
+      }
+
+      @supports (display: grid) {
+        margin-bottom: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: $chart-header-width auto;
+      }
+
+    }
+  }
+
+  &__category {
+    font-size: 0.875rem;
+    padding: 0.75rem 0 0.25rem;
+    align-self: center;
+    flex-basis: 10rem;
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        text-align: right;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        text-align: right;
+      }
+    }
+  }
+
+  &__bar {
+    background-color: currentColor;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    min-width: 1px; // When the value is 0% this allows the space to be visible
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        position: relative;
+        height: auto;
+      }
+    }
+  }
+
+  &__value {
+    font-size: 0.875rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0.25rem;
+    margin-left: 1rem;
+    padding: 0.125rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        right: auto;
+        left: 100%;
+      }
+    }
+  }
+
+  &--set1 {
+    @include bar-chart-themer($set1, 9);
+  }
+
+  &--set2 {
+    @include bar-chart-themer($set2, 9);
+  }
+
+  // Set Three Charts
+  &--maintenance {
+    @include bar-chart-themer($set3, 4);
+  }
+
+  &--contents {
+    @include bar-chart-themer($set3, 19);
+  }
+
+  &--responsibility {
+    @include bar-chart-themer($set3, 9);
+  }
+
+  &--users {
+    @include bar-chart-themer($set3, 7);
+  }
+
+  &--contents {
+    @include bar-chart-themer($set3, 19);
+  }
+
+  // Theme 4 Charts
+  &--unsuccessful {
+    @include bar-chart-themer($set4, 6);
+  }
+
+  &--set5 {
+    @include bar-chart-themer($set5, 9);
+  }
+}
