@@ -1,35 +1,17 @@
 ---
 name: Table of Contents
 title: Table of Contents
-
-toc:
-  -
-    section: Who We Heard From
-    link: "#"
-  -
-    section: What Design Systems Include
-    link: "#"
-  -
-    section: Who Creates Design Systems
-    link: "#"
-  -
-    section: What Makes Design Systems Feel Successful
-    link: "#"
-  -
-    section: What Feels Challenging About Design Systems
-    link: "#"
-  -
-    section: Are You Ready To Build a Design System?
-    link: "#"
 ---
 
 <nav class="cmp-toc">
-  <h3 class="cmp-toc__heading">Contents</h3>
-  <ol class="cmp-toc__list">
-    {{#each toc}}
-    <li class="cmp-toc__item" data-count="{{ numToRomanNumeral (add 1 @index) }}" aria-label="Section {{add 1 @index}}">
-      <a class="cmp-toc__link" href="{{link}}">{{section}}</a>
-    </li>
-    {{/each}}
-  </ol>
+  <div class="cmp-toc__inner">
+    <h3 class="cmp-toc__heading">Contents</h3>
+    <ol class="cmp-toc__list">
+      {{#each (data 'sections.sections')}}
+        <li class="cmp-toc__item" data-count="{{ numToRomanNumeral (add 1 @index) }}" aria-label="Section {{add 1 @index}}">
+          <a class="cmp-toc__link" href="#{{id}}">{{name}}</a>
+        </li>
+      {{/each}}
+    </ol>
+  </div>
 </nav>

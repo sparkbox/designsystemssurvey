@@ -1,0 +1,32 @@
+# name: The title of the section
+
+# sectionTitleHtml : Like `name`, but include &nbsp; characters to prevent
+#                    awkward line breaks. Used for section-intro-boxes.
+#                    If not defined, `name` will be used.
+
+# id: Used as an id attribute so we can link to
+#     fragments on the page. This should match up
+#     with the name of the "content-sections" partial
+#     to include for this section.
+
+sections:
+  -
+    name: Who We Heard From
+    sectionTitleHtml: Who We Heard&nbsp;From
+    id: who-we-heard-from
+
+  -
+    name: Why Organizations Build Design Systems
+    id: why-orgs-build-design-systems
+    
+  -
+    name: What Makes Design Systems Feel Successful
+    id: successful-design-systems
+    
+  -
+    name: Why Design Systems Need Champions
+    id: why-design-systems-need-champions
+    
+  -
+    name: Next Steps
+    id: next-steps

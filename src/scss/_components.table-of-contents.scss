@@ -1,7 +1,18 @@
 .cmp-toc {
+  $bg-color: #f9f9f9;
+
   text-align: center;
-  margin: auto;
-  max-width: 33rem;
+
+  background-color: $bg-color;
+
+  margin: 15vh 0;
+
+  &__inner {
+    margin: auto;
+    max-width: 27rem;
+
+    padding: 15vh 0;
+  }
 
   &__heading {
     text-transform: uppercase;
@@ -60,6 +71,7 @@
   &__link {
     font-size: 1.25rem;
     font-weight: bold;
+    line-height: 1.4;
     text-decoration: none;
     display: block;
     padding: 1rem 2rem 1rem 0;

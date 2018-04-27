@@ -13,6 +13,9 @@
 .cmp-major-section {
   --accent-color: #ddd;
 
+  padding-top: calc(#{$space-xxxl/2} + 5vh);
+  margin-top: calc(#{$space-xxxl/2} + 5vh);
+
   &--section-1 {
     @include apply-major-section-custom-props($set1);
   }
