@@ -7,43 +7,41 @@
   }
 
   &__form {
-    margin-top: 3em;
+    margin-top: $space-xxl;
+  }
 
-    &-title {
-      font-size: 0.8em;
-      font-weight: bold;
-      margin: 0;
-    }
+  &__input-label {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0;
+  }
 
-    &-input {
-      box-sizing: border-box;
-      margin-top: $space-sm;
-      border: solid black 2px;
-      height: 2.5em;
-      width: 100%;
-      font-size: 1em;
-    }
-
-    &-button {
-      background-color: black;
-      color: white;
-      border: solid black 2px;
-      height: 2.5em;
-      width: 100%;
-      font-size: 1em;
-    }
+  &__input {
+    box-sizing: border-box;
+    margin-top: $space-sm;
+    border: solid black 2px;
+    height: 2.5em;
+    width: 100%;
+    font-size: 1em;
 
     @media (min-width: 45em) {
-      &-input {
-        max-width: 45%;
-        float: left;
-      }
+      max-width: 45%;
+      float: left;
+    }
+  }
 
-      &-button {
-        display: inline-block;
-        width: 8em;
-        margin-top: $space-sm;
-      }
+  &__button {
+    background-color: black;
+    color: white;
+    border: solid black 2px;
+    height: 2.5em;
+    width: 100%;
+    font-size: 1em;
+
+    @media (min-width: 45em) {
+      display: inline-block;
+      width: 8em;
+      margin-top: $space-sm;
     }
   }
 }
