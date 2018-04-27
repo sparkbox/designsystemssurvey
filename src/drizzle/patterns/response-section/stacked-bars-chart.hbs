@@ -49,7 +49,7 @@ chartData:
     </ul>
   </div>
   {{#each chartData}}
-  <div class="cmp-stacked-chart__entry">
+  <div class="cmp-stacked-chart__entry cmp-stacked-chart__entry--{{add 1 @index}}">
     <div class="cmp-stacked-chart__category">{{category}}</div>
     <div class="cmp-stacked-chart__group">
       <div class="cmp-stacked-chart__bar cmp-stacked-chart__bar--na" aria-label="Percent who were not applicable: {{na}}" style="width: {{na}}%;"></div>

@@ -55,3 +55,27 @@ $set5: (
   }
 }
 
+@mixin stacked-bar-chart-themer($set, $count) {
+  $top: map-get($set, top);
+  $middle: map-get($set, middle);
+  $bottom: map-get($set, bottom);
+
+  .cmp-stacked-chart__key--1-3::before {
+    background: linear-gradient(to bottom, $middle, $top);
+  }
+
+  .cmp-stacked-chart__key--4-5::before {
+    background: linear-gradient(to bottom, $bottom, $middle);
+  }
+
+  @for $i from 1 through $count {
+    .cmp-stacked-chart__entry--#{$i} .cmp-stacked-chart__bar--1-3 {
+      background-color: mix($top, $middle, (($i - 1) / $count) * 100%);
+    }
+
+    .cmp-stacked-chart__entry--#{$i} .cmp-stacked-chart__bar--4-5 {
+      background-color: mix($middle, $bottom, (($i - 1) / $count) * 100%);
+    }
+  }
+}
+
