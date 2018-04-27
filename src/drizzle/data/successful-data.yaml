@@ -2,7 +2,8 @@
 
 # (Q15, successful segment) How are you maintaining your design system?
 maintenance:
-  chartSize: 100
+  chartSize: 60
+  chartTheme: maintenance
   # data is reported here as percentages
   chartData:
     - category: Partially dedicated team/committee
@@ -16,7 +17,8 @@ maintenance:
 
 # (Q10 successful segment). Who is primarily responsible for the design system?
 responsibility:
-  chartSize: 100
+  chartSize: 40
+  chartTheme: responsibility
   # data is reported here as percentages
   chartData:
     - category: Designers
@@ -41,6 +43,7 @@ responsibility:
 # (Q12 successful) Who are the primary users of the design system?
 users:
   chartSize: 100
+  chartTheme: users
   # data is reported here as percentages
   chartData:
     - category: Designers
@@ -61,6 +64,7 @@ users:
 # Q2 What does your design system contain? Select all that apply. 
 design-system-contents:
   chartSize: 100
+  chartTheme: contents
   # data is reported here as percentages
   chartData:
     -
@@ -133,6 +137,7 @@ valuation:
     - 
       value: 4-5
       label: Values More
+  chartTheme: valuation
   # data is reported here as percentages
   chartData: 
     - category: Designers

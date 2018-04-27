@@ -27,12 +27,11 @@
 
 // COMPONENTS
 @import "components.intro";
-@import "components.section.layout";
 @import "components.section.heading";
 @import "components.section.content";
-@import "components.section.chart";
-@import "components.section.stacked-chart";
 @import "components.section-intro-box";
+@import "components.chart.bar";
+@import "components.chart.column";
 @import "components.newsletter-signup";
 @import "components.table-of-contents";
 @import "components.major-section";

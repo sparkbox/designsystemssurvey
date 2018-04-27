@@ -58,14 +58,19 @@ const createChartLegend = (chartElement) => {
   return legend += '</ul></div>';
 };
 
-const createStackedBarChart = (chartElement) => {
+const createStackedBarChart = (chartElement, chartTheme) => {
   const tableData = getStackedBarChartTableData(chartElement);
   const legend = createChartLegend(chartElement);
-  const chartDiv = '<div class="cmp-chart cmp-chart--stacked-bar">'
+  const chartDiv = `<div class="cmp-stacked-chart cmp-stacked-chart--${chartTheme}">
+    <div class="cmp-stacked-chart__range" aria-hidden="true">
+      <div class="cmp-stacked-chart__low">0%</div>
+      <div class="cmp-stacked-chart__high">100%</div>
+    </div>`
   let chart = '';
-  tableData.forEach(dataObject => {
+  for (let i = 0; i < tableData.length; i++ ) {
+    const dataObject = tableData[i];
     chart += `
-    <div class="cmp-stacked-chart__entry">
+    <div class="cmp-stacked-chart__entry cmp-stacked-chart__entry--${i + 1}">
       <div class="cmp-stacked-chart__category">${dataObject.label}</div>
       <div class="cmp-stacked-chart__group">
         <div class="cmp-stacked-chart__bar cmp-stacked-chart__bar--na" aria-label="Percent who were not applicable: ${dataObject.na}" style="width: ${dataObject.na}%;"></div>
@@ -74,15 +79,17 @@ const createStackedBarChart = (chartElement) => {
       </div>
     </div>
     `
-  });
+  }
   return `${chartDiv} ${legend} ${chart} </div>`;
 };
 
 const addStackedBarCharts = (stackedBarChartElements) => {
   stackedBarChartElements.forEach(chartElement => {
-    const stackedBarChart = createStackedBarChart(chartElement);
-    chartElement.innerHTML += stackedBarChart;
-    chartElement.getElementsByTagName('table')[0].style.display = 'none';
+    const tableParent = chartElement.parentNode;
+    const chartTheme = chartElement.getAttribute('data-theme');
+    const stackedBarChart = createStackedBarChart(chartElement, chartTheme);
+    tableParent.innerHTML += stackedBarChart;
+    tableParent.getElementsByTagName('table')[0].style.display = 'none';
   });
 };
 

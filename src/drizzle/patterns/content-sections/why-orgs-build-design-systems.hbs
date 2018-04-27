@@ -1,7 +1,6 @@
 ---
 order: 30
 ---
-
 <section class="cmp-major-section cmp-major-section--section-{{sectionNumber}}" id="{{id}}">
   {{> patterns.content-sections.section-intro-box}}
 
@@ -20,6 +19,7 @@ order: 30
     </ul>
   </div>
 
+  <div class="obj-limit-width">
   <p>Which of the following, if any, motivated your organization to establish a design system or a pattern library?</p>
   {{#with (data "motivation-data")}}
       {{> patterns.data-types.stacked-bar-chart
@@ -55,5 +55,5 @@ order: 30
     </tbody>
 
   </table>
-
+  </div>
 </section>

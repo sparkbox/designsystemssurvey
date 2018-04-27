@@ -6,15 +6,15 @@ require('./intro-parallax');
 import addBarCharts from './barChart.js';
 import addStackedBarCharts from './stackedBarChart.js';
 
-const getTableElements = chartType => {
-  let tableClass = '';
+const getTableElements = (chartType)=> {
+  let tableType = '';
   if (chartType === 'barChart') {
-    tableClass = '.cmp-chart';
+    tableType = '[data-simple]';
   } else if (chartType === 'stackedBarChart') {
-    tableClass = '.cmp-stacked-chart';
+    tableType = '[data-column]';
   }
-  return Array.from(document.querySelectorAll(tableClass));
-};
+  return Array.from(document.querySelectorAll(tableType));
+}
 
 const addCharts = () => {
   const barChartElements = getTableElements('barChart');

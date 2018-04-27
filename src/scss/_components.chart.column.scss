@@ -1,3 +1,5 @@
+// @supports (display: flex) is used in this file to prevent 
+// some styles from reaching IE11
 .cmp-stacked-chart {
   $flex-direction-row: 46rem;
 
@@ -9,10 +11,19 @@
   display: flex;
   flex-direction: column;
 
-  @supports (display: grid) {
-    height: 60vh;
-    display: grid;
-    grid-auto-rows: 1fr;
+  @media (min-width: $bp-chart-header-pop) {
+    @supports (display: grid) {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-row-gap: 0.125rem;
+    }
+  }
+
+  @media (min-width: $bp-chart-header-pop) {
+    @supports (dispaly: flex) {
+      margin-left: -$chart-header-width;
+      width: calc(100% + #{$chart-header-width});
+    }
   }
 
   &__range {
@@ -34,7 +45,13 @@
   }
 
   &__low {
-    left: 9.75rem;
+    left: 0;
+    
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        left: $chart-header-width - 0.25;
+      }
+    }
   }
 
   &__high {
@@ -45,10 +62,20 @@
   &__entry {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: 10rem auto;
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        height: 3rem;
+        margin-bottom: 0.125rem;
+      }
+
+      @supports (display: grid) {
+        margin-bottom: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: $chart-header-width auto;
+      }
     }
   }
 
@@ -81,7 +108,7 @@
       margin-top: 1rem;
 
       @media (min-width: $flex-direction-row) {
-        margin-top: auto;
+        margin-top: 0;
         margin-left: 1rem;
       }
     }
@@ -110,10 +137,17 @@
 
   &__category {
     font-size: 0.875rem;
-    text-align: right;
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
-    align-self: center;
-    flex-basis: 10rem;
+    padding: 0.5rem 0 0.125rem;
+    flex-basis: 100%;
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (dispaly: flex) {
+        align-self: center;
+        flex-basis: 10rem;
+        text-align: right;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+      }
+    }
   }
 
   &__group {
@@ -121,6 +155,13 @@
     width: 100%;
     height: 100%;
     align-items: stretch;
+    height: 3rem;
+
+    @media (min-width: $bp-chart-header-pop) {
+      @supports (display: grid) {
+        height: auto;
+      }
+    }
   }
 
   &__bar {
@@ -155,16 +196,19 @@
     @include stacked-bar-chart-themer($set1, 8);
   }
 
-  &--set2 {
-    @include stacked-bar-chart-themer($set2, 8);
+  // Theme 2 Charts
+  &--motivation {
+    @include stacked-bar-chart-themer($set2, 6);
   }
 
-  &--set3 {
+  // Theme 3 Charts
+  &--valuation {
     @include stacked-bar-chart-themer($set3, 8);
   }
 
-  &--set4 {
-    @include stacked-bar-chart-themer($set4, 8);
+  // Theme 4 Charts
+  &--prevention {
+    @include stacked-bar-chart-themer($set4, 10);
   }
 
   &--set5 {
