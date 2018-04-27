@@ -1,26 +1,15 @@
 ---
-title: Pattern Library
-layout: default
+title: 2018 Design Systems Survey
+name: 2018 Design Systems Survey
+layout: template
 ---
 
-<h1 class="drizzle-pl-title">{{title}}</h1>
+{{> patterns.content-sections.intro }}
 
-<p>
-  This UI toolkit is a highly-modular design system for rapid web page
-  development. It contains different materials that can be assembled into more
-  complex page layouts. It includes working examples, code snippets and
-  documentation.
-</p>
+{{> patterns.table-of-contents.list }}
 
-<h3>Documentation</h3>
 
-<dl>
-  {{#with (pages "docs/index")}}
-    <dt>
-      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
-    </dt>
-    <dd class="drizzle-u-padBottom">
-      {{{data.notes}}}
-    </dd>
-  {{/with}}
-</dl>
+{{!-- This loops through each section and includes the partial for that section --}}
+{{#each (data 'sections.sections')}}
+  {{> (add 'patterns.content-sections.' id) sectionNumber=(add @index 1)}}
+{{/each}}
