@@ -1,3 +1,7 @@
-<div class="cmp-chart cmp-chart--bar" data-size="{{ chartSize }}">
+<div class="cmp-chart cmp-chart--bar {{#if setTheme}}cmp-chart--{{setTheme}}{{/if}}" data-size="{{ chartSize }}">
+    <div class="cmp-chart__range" aria-hidden="true">
+      <div class="cmp-chart__low">0%</div>
+      <div class="cmp-chart__high">{{chartSize}}%</div>
+  </div>
   {{> patterns.data-types.table-simple this}}
 </div>
