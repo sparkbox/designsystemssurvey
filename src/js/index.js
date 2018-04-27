@@ -9,9 +9,9 @@ import addStackedBarCharts from './stackedBarChart.js';
 const getTableElements = chartType => {
   let tableClass = '';
   if (chartType === 'barChart') {
-    tableClass = '.cmp-chart--bar';
+    tableClass = '.cmp-chart';
   } else if (chartType === 'stackedBarChart') {
-    tableClass = '.cmp-chart-block--stacked-bar';
+    tableClass = '.cmp-stacked-chart';
   }
   return Array.from(document.querySelectorAll(tableClass));
 };
@@ -22,3 +22,5 @@ const addCharts = () => {
   addBarCharts(barChartElements);
   addStackedBarCharts(stackedBarChartElements);
 }
+
+addCharts();

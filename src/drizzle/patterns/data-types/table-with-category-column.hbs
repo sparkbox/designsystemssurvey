@@ -1,7 +1,7 @@
 <table class="table table--category-column">
   <th>Categories</th>
   {{#each x-labels }}
-    <th>{{ this }}</th>
+    <th data-value="{{ this.value }}">{{ this.label }}</th>
   {{/each}}
   {{#each chartData }}
     <tr>

@@ -1,3 +1,7 @@
-<div class="cmp-chart-block cmp-chart-block--stacked-bar">
+<div class="cmp-stacked-chart {{#if setTheme}}cmp-stacked-chart--{{setTheme}}{{/if}}">
+  <div class="cmp-stacked-chart__range" aria-hidden="true">
+    <div class="cmp-stacked-chart__low">0%</div>
+    <div class="cmp-stacked-chart__high">100%</div>
+  </div>
   {{> patterns.data-types.table-with-category-column this}}
 </div>
