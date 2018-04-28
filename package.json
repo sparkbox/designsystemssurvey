@@ -8,7 +8,7 @@
   "author": "Sparkbox",
   "license": "ISC",
   "engines": {
-    "node": "6.10.3",
+    "node": "8.9.1",
     "npm": "5.6.0"
   },
   "scripts": {
@@ -21,9 +21,22 @@
     "patterns": "node tasks/patterns.js",
     "copy": "node tasks/copy.js",
     "sass": "node-sass src/scss/ -o dist/css/ --output-style compressed",
-    "postsass": "postcss --use autoprefixer css-mqpacker -c ./postcss.config.json --no-map --dir ./dist/css ./dist/css/*.css"
+    "postsass": "postcss --use autoprefixer css-mqpacker -c ./postcss.config.json --no-map --dir ./dist/css ./dist/css/*.css",
+    "cachebust": "node ./node_modules/@sparkbox/cachebust/index.js",
+    "cachebust:restore": "node ./node_modules/@sparkbox/cachebust/index.js --restore",
+    "cachebust:build": "npm run sass && npm run js && npm run cachebust"
+  },
+  "cachebust": {
+    "source": [
+          "dist/css/base.css",
+          "dist/js/main.js"
+      ],
+      "target": [
+          "dist/index.html"
+      ]
   },
   "dependencies": {
+    "@sparkbox/cachebust": "^0.1.1",
     "@sparkbox/downpour": "0.0.9",
     "anchor-js": "^4.1.0",
     "autoprefixer": "^6.7.7",
