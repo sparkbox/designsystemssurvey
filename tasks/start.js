@@ -4,7 +4,9 @@ const map = require('lodash/map');
 console.log(`Starting site for ${process.env.NODE_ENV || 'development'}`);
 
 const tasks = {
-  production: ['copy', 'patterns', 'sass', 'js', 'server'],
+  // The JS and SASS tasks are omitted here because they are covered by
+  // the `cachebust:build` task
+  production: ['copy', 'patterns', 'cachebust:build', 'server'],
 
   // The JS task is omitted here, because JS is built out initially by the
   // `watch` task
