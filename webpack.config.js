@@ -1,5 +1,6 @@
 const globby = require('globby');
 const path = require('path');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 const jsPath = path.resolve('./src/js');
 
 module.exports = {
@@ -18,5 +19,8 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  plugins: [
+    new MinifyPlugin()
+  ]
 };
