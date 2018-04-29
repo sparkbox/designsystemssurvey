@@ -5,55 +5,58 @@ order: 30
   {{> patterns.content-sections.section-intro-box}}
 
   <div class="obj-limit-width cmp-body-text">
-    <h3>This is <em>dummy content</em> to show some realistic-ish content in each section.</h3>
+    {{#markdown}}
 
-    <p>This is a dummy paragraph to show realistic-ish content. Morbi ullamcorper molestie nisl a vestibulum. Maecenas enim massa, sagittis sed nulla eu, rutrum blandit leo. Nunc pulvinar dapibus tortor, id fringilla lacus molestie blandit. Curabitur sagittis massa ut elit imperdiet, vel dignissim libero convallis. <a href="#">Here is an example of a link.</a> Proin sapien nisi, condimentum nec maximus ut, finibus ac libero.</p>
+### Design systems are thought to _increase consistency and efficiency,_ and lead to _gains in accessibility and team onboarding._
 
-    <p>Phasellus maximus, eros ac mollis scelerisque, velit urna vehicula massa, nec tempus nibh elit non eros. Duis accumsan justo vel nulla efficitur tincidunt in ac lacus. Sed tempus urna sit amet ipsum vestibulum fermentum. Suspendisse molestie ex at pretium ullamcorper.</p>
+For our respondents, strong motivations to build a design system included the desire to increase user experience (UX) and user interface (UI) consistency, design and development efficiency, and code reusability. Another somewhat motivating factor was brand consistency.
 
-    <ul>
-      <li><strong>Item one</strong> of the list, tempus urna sit amet ipsum vestibulum fermentum</li>
-      <li><strong>Item two</strong> of the list, maximus, eros ac mollis scelerisque</li>
-      <li><strong>Item three</strong> of the list, sagittis massa ut elit</li>
-      <li><strong>Item four</strong> of the list, enim massa, sagittis sed nulla eu</li>
-    </ul>
-  </div>
+When asked if there were other reasons for pursuing a design system, three mentioned web accessibility, and two noted that design systems reduce dependence on tribal knowledge, making it easier to onboard and educate new team members and vendors.
 
-  <div class="obj-limit-width">
-  <p>Which of the following, if any, motivated your organization to establish a design system or a pattern library?</p>
-  {{#with (data "motivation-data")}}
-      {{> patterns.data-types.stacked-bar-chart
-          motivators
-      }}
-  {{/with}}
+    {{/markdown}}
+
+    <p>Which of the following, if any, motivated your organization to establish a design system or a pattern library?</p>
+    {{#with (data "motivation-data")}}
+        {{> patterns.data-types.stacked-bar-chart
+            motivators
+        }}
+    {{/with}}
 
 
-  <p>Does your design system serve more than one web property?</p>
+    {{#markdown}}
 
-  <table class="cmp-basic-table cmp-basic-table--center-align cmp-basic-table--small-content">
+### Design systems are often used to _manage multiple web properties._
 
-    <thead>
-      <tr>
-        <th>Options</th>
-        <th>Responses</th>
-      </tr>
-    </thead>
+73% of respondents’ organizations use their design system to manage more than one website or application.
 
-    <tbody>
-      <tr>
-        <td>Yes</td>
-        <td>73.26%</td>
-      </tr>
-      <tr>
-        <td>No</td>
-        <td>25.58%</td>
-      </tr>
-      <tr>
-        <td>Unsure</td>
-        <td>1.16%</td>
-      </tr>
-    </tbody>
+    {{/markdown}}
 
-  </table>
+    <p>Does your design system serve more than one web property?</p>
+
+    <table class="cmp-basic-table cmp-basic-table--center-align cmp-basic-table--small-content">
+
+      <thead>
+        <tr>
+          <th>Options</th>
+          <th>Responses</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Yes</td>
+          <td>73.26%</td>
+        </tr>
+        <tr>
+          <td>No</td>
+          <td>25.58%</td>
+        </tr>
+        <tr>
+          <td>Unsure</td>
+          <td>1.16%</td>
+        </tr>
+      </tbody>
+
+    </table>
   </div>
 </section>
