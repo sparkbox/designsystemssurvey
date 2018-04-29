@@ -5,67 +5,77 @@ order: 40
 <section class="cmp-major-section cmp-major-section--section-{{sectionNumber}}" id="{{id}}">
   {{> patterns.content-sections.section-intro-box}}
 
-  <div class="obj-limit-width cmp-body-text">
-    <h3>This is <em>dummy content</em> to show some realistic-ish content in each section.</h3>
-
-    <p>This is a dummy paragraph to show realistic-ish content. Morbi ullamcorper molestie nisl a vestibulum. Maecenas enim massa, sagittis sed nulla eu, rutrum blandit leo. Nunc pulvinar dapibus tortor, id fringilla lacus molestie blandit. Curabitur sagittis massa ut elit imperdiet, vel dignissim libero convallis. Proin sapien nisi, condimentum nec maximus ut, finibus ac libero.</p>
-
-    <p>Phasellus maximus, eros ac mollis scelerisque, velit urna vehicula massa, nec tempus nibh elit non eros. Duis accumsan justo vel nulla efficitur tincidunt in ac lacus. Sed tempus urna sit amet ipsum vestibulum fermentum. Suspendisse molestie ex at pretium ullamcorper.</p>
-
-    <ul>
-      <li><strong>Item one</strong> of the list, tempus urna sit amet ipsum vestibulum fermentum</li>
-      <li><strong>Item two</strong> of the list, maximus, eros ac mollis scelerisque</li>
-      <li><strong>Item three</strong> of the list, sagittis massa ut elit</li>
-      <li><strong>Item four</strong> of the list, enim massa, sagittis sed nulla eu</li>
-    </ul>
-  </div>
-
-  <div class="obj-limit-width">
   {{#with (data "successful-data")}}
-    <strong>Successful design systems are robust</strong>
-      <table class="cmp-basic-table cmp-basic-table--center-align">
+    <div class="obj-limit-width cmp-body-text">
+      {{#markdown}}
 
-        <tr>
-            <th>Level of Success</th>
-            <th>Median</th>
-            <th>Full Range Size</th>
-        </tr>
-        <tr>
-            <td>Very Successful or Successful</td>
-            <td>14 Elements</td>
-            <td>6 to 19 Elements</td>
-        </tr>
-        <tr>
-            <td>Average or Unsuccessful</td>
-            <td>11 Elements</td>
-            <td>2 to 18 Elements</td>
-        </tr>
-    </table>
+### More than _60% of respondents_ classified their design system as successful.
 
-    <p>What does your design system contain? Select all that apply.</p>
-    {{> patterns.data-types.bar-chart
-        design-system-contents
-    }}
+Of the 86 respondents with a design system at their organization, about 64% said their design system was either “successful” or “very successful”; 29% felt their design system was either “average” or “not very successful”; and 7% preferred not to say.
 
-    <strong>Successful design systems are maintained by teams</strong>
-    <p>How are you maintaining your design system?</p>
-    {{> patterns.data-types.bar-chart
-        maintenance
-    }}
+### Successful design systems are _robust._
 
-    <strong>Successful design systems bridge roles</strong>
-    <p>Who is primarily responsible for the design system?</p>
-    {{> patterns.data-types.bar-chart
-        responsibility
-    }}
-    <p>Who are the primary users of the design system?</p>
-    {{> patterns.data-types.bar-chart
-        users
-    }}
-    <p>Who values the design system most in your organization, if anyone?</p>
-    {{> patterns.data-types.stacked-bar-chart
-        valuation
-    }}
+Design systems that were categorized as “successful” or “very successful” tended to include more elements—e.g. color systems, HTML code, typography, and voice and tone guidelines—than those that were categorized as less successful. “Successful” or “very successful” design systems had between six and 19 elements, with a median of 14 elements, while “average” or “unsuccessful” design systems were reported to have between two and 18 elements, with a median of 11.
+
+**More than half** our respondents said their design systems include:
+
+- Color and typography
+- Form components
+- Navigation 
+- Grids, spacing, and layout systems 
+- HTML, CSS, and JavaScript code
+- Guidelines for usage, accessibility, and brand
+- Design files
+- Content blocks and example page templates
+
+**Less than half** our respondents said their design systems include:
+
+- Voice and tone guidelines
+- Animation systems
+
+### Successful design systems are _maintained through teamwork._
+
+Almost 80% of respondents who said their design system was successful also reported that their design system was maintained by a partially or fully dedicated team, rather than by a tool. Two respondents who selected “Other” clarified that they use a combination of partially and fully dedicated team members, while another said they use “All of the above.”
+
+      {{/markdown}}
+
+      <p>How are you maintaining your design system?</p>
+      {{> patterns.data-types.bar-chart
+          maintenance
+      }}
+
+      {{#markdown}}
+
+### Successful design systems _bridge roles._
+
+Successful design systems were most often used by designers, developers, and UX professionals, with these same roles also handling maintenance. This finding demonstrates that responsibility for successful design systems is often split among people who code, people who design, and people who communicate.
+
+      {{/markdown}}
+
+      <p>Who is primarily responsible for the design system?</p>
+      {{> patterns.data-types.bar-chart
+          responsibility
+      }}
+
+      <p>Who are the primary users of the design system?</p>
+      {{> patterns.data-types.bar-chart
+          users
+      }}
+
+      {{#markdown}}
+
+### Successful design systems are _valued by those who create and use them._
+
+The practitioners who build, maintain, and use design systems are also the ones who value them the most, with survey respondents reporting that designers, developers, and UX professionals value design systems more than marketing departments, managers, and executive leadership.
+
+      {{/markdown}}
+
+      <p>Who values the design system most in your organization, if anyone?</p>
+      {{> patterns.data-types.stacked-bar-chart
+          valuation
+      }}
+
+    </div>
+
   {{/with}}
-  </div>
 </section>

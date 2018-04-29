@@ -1,8 +1,4 @@
 .cmp-newsletter {
-  padding: $space-xxxl 0;
-  background-color: #f3f3f3;
-
-  margin-top: $space-xxxl;
 
   &__input-label {
     display: block;
@@ -15,6 +11,8 @@
     display: flex;
 
     max-width: 28rem;
+
+    margin-bottom: $space-xxxl;
   }
 
   &__input {
