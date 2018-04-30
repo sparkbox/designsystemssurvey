@@ -20,6 +20,7 @@
 
     box-sizing: border-box;
     border: solid black 2px;
+    border-radius: 0; // Removes defaul iOS rounded corners
     width: 100%;
 
     font-size: 1em;
@@ -36,6 +37,7 @@
     background-color: black;
     color: white;
     border: solid black 2px;
+    border-radius: 0; // Removes defaul iOS rounded corners
 
     font-size: 1em;
     font-weight: bold;
