@@ -1,4 +1,4 @@
-// @supports (display: flex) is used in this file to prevent 
+// @supports (display: flex) is used in this file to prevent
 // some styles from reaching IE11
 .cmp-chart {
   box-sizing: border-box;
@@ -18,9 +18,16 @@
   }
 
   @media (min-width: $bp-chart-header-pop) {
-    @supports (dispaly: flex) {
+    @supports (display: flex) {
       margin-left: -$chart-header-width;
       width: calc(100% + #{$chart-header-width});
+    }
+  }
+
+  @media (min-width: $bp-chart-header-large) {
+    @supports (display: flex) {
+      margin-left: -$chart-header-large;
+      width: calc(100% + #{$chart-header-large});
     }
   }
 
@@ -49,7 +56,13 @@
 
     @media (min-width: $bp-chart-header-pop) {
       @supports (display: grid) {
-        left: $chart-header-width - 0.25;  
+        left: $chart-header-width - 0.25;
+      }
+    }
+
+    @media (min-width: $bp-chart-header-large) {
+      @supports (display: grid) {
+        left: $chart-header-large - 0.25;
       }
     }
   }
@@ -60,7 +73,7 @@
     text-align: right;
 
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         right: 0;
       }
     }
@@ -69,7 +82,7 @@
   &__entry {
 
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         width: 100%;
         display: flex;
         height: 3rem;
@@ -77,12 +90,17 @@
       }
 
       @supports (display: grid) {
-        margin-bottom: auto;
+        margin-bottom: 0;
         height: auto;
         display: grid;
         grid-template-columns: $chart-header-width auto;
       }
+    }
 
+    @media (min-width: $bp-chart-header-large) {
+      @supports (display: grid) {
+        grid-template-columns: $chart-header-large auto;
+      }
     }
   }
 
@@ -93,7 +111,7 @@
     flex-basis: 10rem;
 
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         text-align: right;
         padding: 0.5rem 1rem 0.5rem 0.5rem;
         text-align: right;
@@ -105,13 +123,12 @@
     background-color: currentColor;
     display: flex;
     align-items: center;
-    height: 3rem;
+    min-height: 3rem;
     min-width: 1px; // When the value is 0% this allows the space to be visible
 
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         position: relative;
-        height: auto;
       }
     }
   }
@@ -128,7 +145,7 @@
     background-color: white;
 
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         right: auto;
         left: 100%;
       }

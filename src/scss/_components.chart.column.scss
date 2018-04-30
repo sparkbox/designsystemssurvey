@@ -1,4 +1,4 @@
-// @supports (display: flex) is used in this file to prevent 
+// @supports (display: flex) is used in this file to prevent
 // some styles from reaching IE11
 .cmp-stacked-chart {
   $flex-direction-row: 46rem;
@@ -20,9 +20,16 @@
   }
 
   @media (min-width: $bp-chart-header-pop) {
-    @supports (dispaly: flex) {
+    @supports (display: flex) {
       margin-left: -$chart-header-width;
       width: calc(100% + #{$chart-header-width});
+    }
+  }
+
+  @media (min-width: $bp-chart-header-large) {
+    @supports (display: flex) {
+      margin-left: -$chart-header-large;
+      width: calc(100% + #{$chart-header-large});
     }
   }
 
@@ -46,10 +53,16 @@
 
   &__low {
     left: 0;
-    
+
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         left: $chart-header-width - 0.25;
+      }
+    }
+
+    @media (min-width: $bp-chart-header-large) {
+      @supports (display: flex) {
+        left: $chart-header-large - 0.25;
       }
     }
   }
@@ -65,16 +78,22 @@
     flex-wrap: wrap;
 
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         height: 3rem;
         margin-bottom: 0.125rem;
       }
 
       @supports (display: grid) {
-        margin-bottom: auto;
+        margin-bottom: 0;
         height: auto;
         display: grid;
         grid-template-columns: $chart-header-width auto;
+      }
+    }
+
+    @media (min-width: $bp-chart-header-large) {
+      @supports (display: grid) {
+        grid-template-columns: $chart-header-large auto;
       }
     }
   }
@@ -86,15 +105,17 @@
     width: 100%;
     margin-bottom: 2rem;
     flex-direction: column;
-    
+
     @media (min-width: $flex-direction-row) {
       flex-direction: row;
     }
 
     @supports (display: grid) {
       grid-column: 1 / span 2;
+    }
 
-      @media (min-width: 38rem) {
+    @media (min-width: 38rem) {
+      @supports (display: grid) {
         grid-column: 2;
       }
     }
@@ -141,11 +162,17 @@
     flex-basis: 100%;
 
     @media (min-width: $bp-chart-header-pop) {
-      @supports (dispaly: flex) {
+      @supports (display: flex) {
         align-self: center;
-        flex-basis: 10rem;
+        flex-basis: $chart-header-width;
         text-align: right;
         padding: 0.5rem 1rem 0.5rem 0.5rem;
+      }
+    }
+
+    @media (min-width: $bp-chart-header-large) {
+      @supports (display: flex) {
+        flex-basis: $chart-header-large;
       }
     }
   }
@@ -153,15 +180,8 @@
   &__group {
     display: flex;
     width: 100%;
-    height: 100%;
     align-items: stretch;
-    height: 3rem;
-
-    @media (min-width: $bp-chart-header-pop) {
-      @supports (display: grid) {
-        height: auto;
-      }
-    }
+    min-height: 3rem;
   }
 
   &__bar {
