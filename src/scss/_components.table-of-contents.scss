@@ -29,6 +29,7 @@
   }
 
   &__item {
+    width: 100%;
     display: flex;
     position: relative;
     justify-content: center;
@@ -41,19 +42,6 @@
     @supports (display: grid) {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-
-      &::after {
-        opacity: 0;
-        content: '';
-        display: block;
-        grid-column: 6;
-        background: svg('<svg xmlns="http://www.w3.org/2000/svg" width="21" height="25" viewBox="0 0 21 25"><path fill="#{$c-link-blue}" d="M11.8 19.7l6.2-5.8a1.5 1.5 0 1 1 2 2.2l-8.5 8c-.5.5-1.5.5-2 0L1 16a1.5 1.5 0 1 1 2-2.2l5.8 5.5V2a1.5 1.5 0 1 1 3 0v17.7z"/></svg>') center center no-repeat;
-        transition: opacity 150ms ease-in-out;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
     }
 
     &::before {
@@ -66,6 +54,29 @@
       line-height: 2.375;
       flex-basis: 2rem;
     }
+
+    &::after {
+      opacity: 0;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 2rem;
+      background: svg('<svg xmlns="http://www.w3.org/2000/svg" width="21" height="25" viewBox="0 0 21 25"><path fill="#{$c-link-blue}" d="M11.8 19.7l6.2-5.8a1.5 1.5 0 1 1 2 2.2l-8.5 8c-.5.5-1.5.5-2 0L1 16a1.5 1.5 0 1 1 2-2.2l5.8 5.5V2a1.5 1.5 0 1 1 3 0v17.7z"/></svg>') center center no-repeat;
+      transition: opacity 150ms ease-in-out;
+
+      @supports (display: grid) {
+        position: static;
+        grid-column: 6;
+        width: auto;
+      }
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
   }
 
   &__link {
@@ -74,6 +85,7 @@
     line-height: 1.4;
     text-decoration: none;
     display: block;
+    flex-basis: 100%;
     padding: 1rem 2rem 1rem 0;
 
     @supports (display: grid) {
