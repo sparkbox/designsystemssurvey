@@ -5,9 +5,8 @@ order: 40
 <section class="cmp-major-section cmp-major-section--section-{{sectionNumber}}" id="{{id}}">
   {{> patterns.content-sections.section-intro-box}}
 
-  {{#with (data "successful-data")}}
-    <div class="obj-limit-width cmp-body-text">
-      {{#markdown}}
+  <div class="obj-limit-width cmp-body-text">
+    {{#markdown}}
 
 ### More than _60% of respondents_ classified their design system as successful.
 
@@ -37,45 +36,61 @@ Design systems that were categorized as “successful” or “very successful�
 
 Almost 80% of respondents who said their design system was successful also reported that their design system was maintained by a partially or fully dedicated team, rather than by a tool. Two respondents who selected “Other” clarified that they use a combination of partially and fully dedicated team members, while another said they use “All of the above.”
 
-      {{/markdown}}
+    {{/markdown}}
 
-      <p>How are you maintaining your design system?</p>
-      {{> patterns.data-types.bar-chart
-          maintenance
-      }}
+    <div class="obj-data-wrapper">
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question (data "successful-data.maintenance.question")}}
+      </div>
+      <div class="obj-data-wrapper__data">
+        {{> patterns.data-types.bar-chart (data "successful-data.maintenance") }}
+      </div>
+    </div>
 
-      {{#markdown}}
+    {{#markdown}}
 
 ### Successful design systems _bridge roles._
 
 Successful design systems were most often used by designers, developers, and UX professionals, with these same roles also handling maintenance. This finding demonstrates that responsibility for successful design systems is often split among people who code, people who design, and people who communicate.
 
-      {{/markdown}}
+    {{/markdown}}
 
-      <p>Who is primarily responsible for the design system?</p>
-      {{> patterns.data-types.bar-chart
-          responsibility
-      }}
+    <div class="obj-data-wrapper">
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question (data "successful-data.responsibility.question")}}
+      </div>
+      <div class="obj-data-wrapper__data">
+        {{> patterns.data-types.bar-chart (data "successful-data.responsibility") }}
+      </div>
+    </div>
 
-      <p>Who are the primary users of the design system?</p>
-      {{> patterns.data-types.bar-chart
-          users
-      }}
 
-      {{#markdown}}
+    <div class="obj-data-wrapper">
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question (data "successful-data.users.question")}}
+      </div>
+      <div class="obj-data-wrapper__data">
+        {{> patterns.data-types.bar-chart (data "successful-data.users") }}
+      </div>
+    </div>
+
+    {{#markdown}}
 
 ### Successful design systems are _valued by those who create and use them._
 
 The practitioners who build, maintain, and use design systems are also the ones who value them the most, with survey respondents reporting that designers, developers, and UX professionals value design systems more than marketing departments, managers, and executive leadership.
 
-      {{/markdown}}
+    {{/markdown}}
 
-      <p>Who values the design system most in your organization, if anyone?</p>
-      {{> patterns.data-types.stacked-bar-chart
-          valuation
-      }}
-
+    <div class="obj-data-wrapper">
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question (data "successful-data.valuation.question")}}
+      </div>
+      <div class="obj-data-wrapper__data">
+        {{> patterns.data-types.stacked-bar-chart (data "successful-data.valuation")}}
+      </div>
     </div>
 
-  {{/with}}
+  </div>
+
 </section>

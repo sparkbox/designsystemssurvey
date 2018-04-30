@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   padding: 0.125rem 0 0;
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
 
@@ -35,7 +35,7 @@
     position: absolute;
     width: 100%;
     top: -0.125rem;
-    bottom: -3rem;
+    bottom: 1.5rem;
     font-weight: bold;
     pointer-events: none;
   }
@@ -123,7 +123,7 @@
     background-color: currentColor;
     display: flex;
     align-items: center;
-    min-height: 3rem;
+    min-height: 4.5rem;
     min-width: 1px; // When the value is 0% this allows the space to be visible
 
     @media (min-width: $bp-chart-header-pop) {

@@ -1,7 +1,10 @@
 # Section title: What Challenges Do Design Systems Face?
 
-# (Q9, unsuccessful) If you feel that your organization’s design system or library was not successful, what were the main reasons?
 unsuccessful:
+  question:
+    text: If you feel that your organization’s design system or library was not successful, what were the main reasons?
+    numResponses: 22
+    type: Select one
   chartTheme: unsuccessful
   # data is reported here as percentages
   chartData:
@@ -18,8 +21,12 @@ unsuccessful:
     - category: Other
       value: 13.64
 
-#(Q19) What, if anything, would keep your organization from creating a design system or a pattern library?
 prevention:
+  question:
+    text: What, if anything, would keep your organization from creating a design system or a pattern library? 
+    numResponses: 88
+    type: Rate 1 to 5
+
   x-labels:
     - 
       value: na
