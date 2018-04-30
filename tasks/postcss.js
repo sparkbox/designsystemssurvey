@@ -4,8 +4,7 @@ const PRODUCTION = process.env.NODE_ENV === 'production';
 
 module.exports = {
   plugins: [
-    require('autoprefixer'),
-    require('css-mqpacker')
+    require('autoprefixer')
   ],
   input: ['./dist/css/*.css'],
   replace: true,
@@ -19,8 +18,5 @@ module.exports = {
       'Firefox ESR',
       'Opera 12.1',
     ],
-  },
-  'css-mqpacker': {
-    sort: true,
-  },
+  }
 };

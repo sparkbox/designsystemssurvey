@@ -21,7 +21,7 @@
     "patterns": "node tasks/patterns.js",
     "copy": "node tasks/copy.js",
     "sass": "node-sass src/scss/ -o dist/css/ --output-style compressed",
-    "postsass": "postcss --use autoprefixer css-mqpacker -c ./postcss.config.json --no-map --dir ./dist/css ./dist/css/*.css",
+    "postsass": "postcss --use autoprefixer -c ./postcss.config.json --no-map --dir ./dist/css ./dist/css/*.css",
     "cachebust": "node ./node_modules/@sparkbox/cachebust/index.js",
     "cachebust:restore": "node ./node_modules/@sparkbox/cachebust/index.js --restore",
     "cachebust:build": "npm run sass && npm run js && npm run cachebust"
@@ -49,7 +49,6 @@
     "colors": "^1.1.2",
     "compression": "^1.7.2",
     "core-js": "^2.5.5",
-    "css-mqpacker": "^5.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
