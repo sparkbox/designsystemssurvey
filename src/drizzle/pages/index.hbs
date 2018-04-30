@@ -13,3 +13,5 @@ layout: template
 {{#each (data 'sections.sections')}}
   {{> (add 'patterns.content-sections.' id) sectionNumber=(add @index 1)}}
 {{/each}}
+
+{{> patterns.footer.footer }}
