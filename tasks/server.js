@@ -1,7 +1,6 @@
 const express = require('express');
 const enforceSSL = require('express-enforces-ssl');
 const compression = require('compression');
-const path = require('path');
 const mime = require('mime');
 
 const app = express();
