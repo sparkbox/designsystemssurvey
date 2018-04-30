@@ -1,7 +1,6 @@
 const express = require('express');
 const enforceSSL = require('express-enforces-ssl');
 const compression = require('compression');
-const auth = require('marshmallows');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,8 +12,7 @@ if (process.env.ENFORCE_SSL) {
 
 app.use(compression()); //gzip
 
-// Basic Auth
-app.use('/', auth, express.static('dist'));
+app.use('/', express.static('dist'));
 
 //404 redirects to home page
 app.use(function (req, res, next) {
