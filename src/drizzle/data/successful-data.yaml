@@ -1,7 +1,10 @@
 # Section title: What Made People Feel Their Design System Was Successful?
 
-# (Q15, successful segment) How are you maintaining your design system?
 maintenance:
+  question:
+    text: How are you maintaining your design system?
+    numResponses: 53
+    type: Select one
   chartTheme: maintenance
   # data is reported here as percentages
   chartData:
@@ -14,8 +17,11 @@ maintenance:
     - category: Other
       value: 7.55
 
-# (Q10 successful segment). Who is primarily responsible for the design system?
 responsibility:
+  question:
+    text: Who is primarily responsible for the design system?
+    numResponses: 55
+    type: Select one
   chartTheme: responsibility
   # data is reported here as percentages
   chartData:
@@ -38,8 +44,11 @@ responsibility:
     - category: No one
       value: 0
 
-# (Q12 successful) Who are the primary users of the design system?
 users:
+  question:
+    text: Who are the main users of the design system?
+    numResponses: 55
+    type: Select all that apply
   chartTheme: users
   # data is reported here as percentages
   chartData:
@@ -58,8 +67,9 @@ users:
     - category: Other
       value: 3.64
 
-# Q2 What does your design system contain? Select all that apply. 
 design-system-contents:
+  question:
+    text: What does your design system contain?
   chartTheme: contents
   # data is reported here as percentages
   chartData:
@@ -121,8 +131,11 @@ design-system-contents:
       category: other
       value: 1.82
 
-# (Q11). Who values the design system most in your organization, if anyone?
 valuation:
+  question:
+    text: Who values the design system most in your organization, if anyone?
+    numResponses: 142
+    type: Rate 1 to 5
   x-labels:
     - 
       value: na

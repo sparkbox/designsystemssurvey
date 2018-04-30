@@ -15,12 +15,17 @@ When asked if there were other reasons for pursuing a design system, three menti
 
     {{/markdown}}
 
-    <p>Which of the following, if any, motivated your organization to establish a design system or a pattern library?</p>
-    {{#with (data "motivation-data")}}
-        {{> patterns.data-types.stacked-bar-chart
-            motivators
-        }}
-    {{/with}}
+    <div class="obj-data-wrapper">
+
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question (data "motivation-data.motivators.question")}}
+      </div>
+
+      <div class="obj-data-wrapper__data">
+        {{> patterns.data-types.stacked-bar-chart (data "motivation-data.motivators") }}
+      </div>
+
+    </div>
 
 
     {{#markdown}}
@@ -31,32 +36,45 @@ When asked if there were other reasons for pursuing a design system, three menti
 
     {{/markdown}}
 
-    <p>Does your design system serve more than one web property?</p>
+    <div class="obj-data-wrapper">
 
-    <table class="cmp-basic-table cmp-basic-table--center-align cmp-basic-table--small-content">
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question
+            text="Does your design system serve more than one web property?"
+            numResponses=86
+            type="Select one"
+        }}
+      </div>
 
-      <thead>
-        <tr>
-          <th>Options</th>
-          <th>Responses</th>
-        </tr>
-      </thead>
+      <div class="obj-data-wrapper__data">
+        <table class="cmp-basic-table cmp-basic-table--center-align">
 
-      <tbody>
-        <tr>
-          <td>Yes</td>
-          <td>73.26%</td>
-        </tr>
-        <tr>
-          <td>No</td>
-          <td>25.58%</td>
-        </tr>
-        <tr>
-          <td>Unsure</td>
-          <td>1.16%</td>
-        </tr>
-      </tbody>
+          <thead>
+            <tr>
+              <th>Options</th>
+              <th>Responses</th>
+            </tr>
+          </thead>
 
-    </table>
+          <tbody>
+            <tr>
+              <td>Yes</td>
+              <td>73.26%</td>
+            </tr>
+            <tr>
+              <td>No</td>
+              <td>25.58%</td>
+            </tr>
+            <tr>
+              <td>Unsure</td>
+              <td>1.16%</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+
   </div>
 </section>

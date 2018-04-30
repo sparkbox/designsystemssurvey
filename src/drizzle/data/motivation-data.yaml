@@ -1,7 +1,10 @@
 # Section title: What Motivates Organizations to Build a Design System?
 
-# (Q6) Which of the following, if any, motivated your organization to establish a design system or a pattern library?
 motivators:
+  question:
+    text: Which of the following, if any, motivated your organization to establish a design system or a pattern library?
+    numResponses: 86
+    type: Rate 1 to 5
   x-labels:
     - 
       value: na

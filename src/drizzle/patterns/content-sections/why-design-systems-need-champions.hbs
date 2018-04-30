@@ -13,25 +13,31 @@ Of the 86 survey respondents from organizations with design systems, just over 2
 
     {{/markdown}}
 
+    <div class="obj-data-wrapper">
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question (data "challenges-data.unsuccessful.question")}}
+      </div>
+      <div class="obj-data-wrapper__data">
+        {{> patterns.data-types.bar-chart (data "challenges-data.unsuccessful") }}
+      </div>
+    </div>
 
-    {{#with (data "challenges-data")}}
+    {{#markdown}}
 
-      <p>If you feel that your organization’s design system or library was not successful, what were the main reasons? </p>
-      {{> patterns.data-types.bar-chart
-          unsuccessful
-      }}
-
-{{#markdown}}
 ### Design systems benefit from _cross-departmental buy-in._
 
 88 of our survey respondents work at organizations that do not yet have design systems in place. When asked what is blocking them from taking on this work, responses included not having the right talent in place, as well as combating perceptions of low value and lacking executive buy-in. Having a champion could help these organizations address and overcome these challenges.
-{{/markdown}}
 
-      <p>What, if anything, would keep your organization from creating a design system or a pattern library?</p>
-      {{> patterns.data-types.stacked-bar-chart
-          prevention
-      }}
+    {{/markdown}}
 
-    {{/with}}
+    <div class="obj-data-wrapper">
+      <div class="obj-data-wrapper__question">
+        {{> patterns.partials.survey-question (data "challenges-data.prevention.question")}}
+      </div>
+      <div class="obj-data-wrapper__data">
+        {{> patterns.data-types.stacked-bar-chart (data "challenges-data.prevention") }}
+      </div>
+    </div>
+
   </div>
 </section>
