@@ -28,12 +28,12 @@
   },
   "cachebust": {
     "source": [
-          "dist/css/base.css",
-          "dist/js/main.js"
-      ],
-      "target": [
-          "dist/index.html"
-      ]
+      "dist/css/base.css",
+      "dist/js/main.js"
+    ],
+    "target": [
+      "dist/index.html"
+    ]
   },
   "dependencies": {
     "@sparkbox/cachebust": "^0.1.1",
