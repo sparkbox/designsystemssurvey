@@ -19,18 +19,6 @@
 
     > em {
       font-style: normal;
-
-      // This applies an accent color custom property,
-      // defined in the `major-section` component, cascading
-      // down onto this element.
-      background-color: #ddd;
-      background-color: var(--accent-color-light);
-
-      padding: 0 0.25em;
-
-      // An inset box shadow is used to slightly
-      // trim down the background color
-      box-shadow: inset 0 -0.1em white;
     }
   }
 
