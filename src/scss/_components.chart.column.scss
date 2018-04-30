@@ -212,26 +212,19 @@
     align-items: center;
   }
 
-  &--set1 {
-    @include stacked-bar-chart-themer($set1, 8);
-  }
-
   // Theme 2 Charts
   &--motivation {
-    @include stacked-bar-chart-themer($set2, 6);
+    @include stacked-bar-chart-themer($set2-a, $set2-b, 6);
   }
 
   // Theme 3 Charts
   &--valuation {
-    @include stacked-bar-chart-themer($set3, 8);
+    @include stacked-bar-chart-themer($set3-a, $set3-b, 8);
   }
 
   // Theme 4 Charts
   &--prevention {
-    @include stacked-bar-chart-themer($set4, 10);
+    @include stacked-bar-chart-themer($set4-a, $set4-b, 10);
   }
 
-  &--set5 {
-    @include stacked-bar-chart-themer($set5, 8);
-  }
 }
