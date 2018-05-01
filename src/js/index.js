@@ -5,6 +5,7 @@ require('./intro-parallax');
 
 import addBarCharts from './barChart.js';
 import addStackedBarCharts from './stackedBarChart.js';
+import smoothScroll from './smoothScroll';
 
 const getTableElements = (chartType)=> {
   let tableType = '';
@@ -24,3 +25,19 @@ const addCharts = () => {
 }
 
 addCharts();
+
+const jumpLinks = document.querySelectorAll('.js-smooth-jump-link');
+Array.from(jumpLinks).forEach((el) => {
+  el.addEventListener('click', (e) => {
+    const pageFragmentToScrollTo = e.target.getAttribute('href');
+    const elementToScrollTo = document.querySelector(pageFragmentToScrollTo);
+    const absoluteDistanceToScroll = Math.abs(elementToScrollTo.offsetTop - window.pageYOffset);
+
+    smoothScroll(
+      elementToScrollTo,
+      700,
+      'easeOutQuint',
+    );
+
+  });
+});
