@@ -131,7 +131,7 @@
       // via the table of contents. Otherwise, the links are visible
       // all the time.
 
-      animation: reveal-back-to-top 1.5s linear 1s;
+      animation: reveal-back-to-top 1s linear 1s;
 
       // This makes the link invisible to start with,
       // then stops applying keyframe styles so that our hovers can take effect
@@ -153,7 +153,7 @@
       display: inline-block;
       width: 1em;
       height: 1.1em;
-      vertical-align: middle;
+      vertical-align: baseline;
 
       background: svg('<svg width="10" height="12" viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"><path d="M4.333 2.41L1.264 5.302A.75.75 0 1 1 .236 4.21L4.486.204a.75.75 0 0 1 1.028 0l4.25 4.005a.751.751 0 0 1-1.028 1.093L5.833 2.567v8.682a.75.75 0 1 1-1.5 0V2.41z" fill="#111" fill-rule="nonzero"/></svg>') center no-repeat;
     }
