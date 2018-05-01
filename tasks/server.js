@@ -32,7 +32,7 @@ function setHeaders(req, res, next) {
     'text/html': 0 //never
   }
 
-  var mimeType = mime.getType(req.path);
+  var mimeType = mime.lookup(req.path);
 
   var milliseconds = cacheControl[mimeType] || 0;
   var header = 'public, max-age=' + milliseconds.toString();
