@@ -14,6 +14,8 @@
 }
 
 .cmp-section-intro-box {
+  $border-width: 0.25rem;
+
   background-color: white;
 
   // Contain absolute border
@@ -26,7 +28,9 @@
 
   max-width: $text-column-max-width;
 
-  margin-bottom: $space-xxxl;
+  // This adds space between the intro box and following content
+  // while also carving out space for the jump link
+  margin-bottom: $space-xxxl + 2rem;
 
   box-sizing: border-box;
   padding: 2.4rem 2.7rem;
@@ -35,8 +39,6 @@
 
   &::before {
     // Draw border
-
-    $border-width: 4px;
     
     content: '';
     position: absolute;
@@ -100,6 +102,60 @@
 
     @media (min-width: 44em) {
       font-size: 44rem * 0.08;
+    }
+  }
+
+  &__jump-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.0625em;
+
+    text-transform: uppercase;
+
+    color: $c-black;
+    text-decoration: none;
+    background-color: #eee;
+
+    position: absolute;
+    right: -$border-width;
+    top: calc(100% + #{$border-width * 2});
+
+    // Padding is used to add some clickable space
+    padding: 0.8rem 0.6rem;
+
+    opacity: 0.7;
+
+    transition: opacity 200ms $timing-function-ease-out-expo;
+
+    :target & {
+      // This plays a reveal animation when a section is jumped to
+      // via the table of contents. Otherwise, the links are visible
+      // all the time.
+
+      animation: reveal-back-to-top 1.5s linear 1s;
+
+      // This makes the link invisible to start with,
+      // then stops applying keyframe styles so that our hovers can take effect
+      animation-fill-mode: backwards;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &::after {
+      // Draw the arrow
+
+      content: '';
+
+      margin-left: 0.5rem;
+
+      display: inline-block;
+      width: 1em;
+      height: 1.1em;
+      vertical-align: middle;
+
+      background: svg('<svg width="10" height="12" viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"><path d="M4.333 2.41L1.264 5.302A.75.75 0 1 1 .236 4.21L4.486.204a.75.75 0 0 1 1.028 0l4.25 4.005a.751.751 0 0 1-1.028 1.093L5.833 2.567v8.682a.75.75 0 1 1-1.5 0V2.41z" fill="#111" fill-rule="nonzero"/></svg>') center no-repeat;
     }
   }
 }
