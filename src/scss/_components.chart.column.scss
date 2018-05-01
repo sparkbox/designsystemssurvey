@@ -3,6 +3,11 @@
 .cmp-stacked-chart {
   $flex-direction-row: 46rem;
 
+  // This number represents how many loop iterations should happen for staggering
+  // delays. Shouldn't be too low, or some items won't animate. Shouldn't be too
+  // high, or we'll be outputting uneccessary CSS.
+  $max-num-children: 12;
+
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -206,6 +211,28 @@
     width: 100%;
     align-items: stretch;
     min-height: 4.5rem;
+
+    .obj-unveiler--will-unveil & {
+      transform-origin: 0 50%;
+      opacity: 0;
+      transform: scaleX(0);
+
+      transition: all 1100ms $timing-function-ease-out-expo;
+    }
+
+    .obj-unveiler--is-unveiled & {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    @for $i from 1 through $max-num-children {
+      $delay-gap: 80ms;
+      $base-delay: 100ms;
+
+      .obj-unveiler--is-unveiled .cmp-stacked-chart__entry:nth-child(#{$i}) & {
+        transition-delay: $base-delay + $delay-gap * ($i - 1);
+      }
+    }
   }
 
   &__bar {

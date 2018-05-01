@@ -332,24 +332,26 @@
     }
     
     &--b {
-      // This value is added to all delays in order to add
-      // a minimum delay
-      $base-delay: 400ms;
-      
       // This value is multiplied to add a
       // staggered delay
       $delay-unit: 200ms;
       
       .block {
-        animation-name: block-raise;
+
+        .obj-unveiler--will-unveil & {
+          opacity: 0;
+        }
+        .obj-unveiler--is-unveiled & {
+          animation-name: block-raise;
+        }
       }
       
-      .block--1 { animation-delay: $base-delay + $delay-unit * 6 }
-      .block--2 { animation-delay: $base-delay + $delay-unit * 5 }
-      .block--3 { animation-delay: $base-delay + $delay-unit * 4 }
-      .block--4 { animation-delay: $base-delay + $delay-unit * 3 }
-      .block--5 { animation-delay: $base-delay + $delay-unit * 2 }
-      .block--6 { animation-delay: $base-delay + $delay-unit * 1 }
+      .block--1 { animation-delay: $delay-unit * 6 }
+      .block--2 { animation-delay: $delay-unit * 5 }
+      .block--3 { animation-delay: $delay-unit * 4 }
+      .block--4 { animation-delay: $delay-unit * 3 }
+      .block--5 { animation-delay: $delay-unit * 2 }
+      .block--6 { animation-delay: $delay-unit * 1 }
     }
   }
 

@@ -1,0 +1,26 @@
+// This class is used as a handle to trigger animations when
+// they are scrolled into view. The `obj-unveiler__is-unveiled` class can
+// be used within components as a styling hook.
+//
+// No styles are applied by the objects themselves. This file is only here
+// for the sake of documentation.
+
+.obj-unveiler {
+
+  &--will-unveil {
+    // This class gets applied to the `.obj-unviler` element
+    // as soon as unveiler is initialized. This can be used
+    // to scope elements to apply animations in a safe way.
+    // If this class is applied, you know the JS can run
+    // to unveil it. Without it, you might end up with invisible
+    // content if something goes wrong with the JS.
+    //
+    // This wrapper isn't as important to use if an element
+    // isn't invisible to begin with.
+  }
+
+  &--is-unveiled {
+    // This class gets applied to the `.obj-unveiler` element
+    // when it is scrolled into view.
+  }
+}

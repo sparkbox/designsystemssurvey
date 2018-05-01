@@ -57,6 +57,7 @@
     "globby": "^8.0.1",
     "handlebars-helpers": "^0.10.0",
     "intersection-observer": "^0.4.3",
+    "intersection-observer-polyfill": "^0.1.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "marshmallows": "^0.1.1",

@@ -7,7 +7,7 @@ order: 50
   <div class="obj-limit-width cmp-body-text">
     {{#markdown}}
 
-### Design systems benefit from _executive advocates._
+<h3 class="obj-unveiler">Design systems benefit from _executive advocates._</h3>
 
 Of the 86 survey respondents from organizations with design systems, just over 25% reported that their systems were either “average” or “unsuccessful.” Reasons for this perceived lack of success included the absence of an executive champion, as well as adoption and staffing difficulties, which may be tied to not having a leadership-level advocate.
 
@@ -17,14 +17,14 @@ Of the 86 survey respondents from organizations with design systems, just over 2
       <div class="obj-data-wrapper__question">
         {{> patterns.partials.survey-question (data "challenges-data.unsuccessful.question")}}
       </div>
-      <div class="obj-data-wrapper__data">
+      <div class="obj-data-wrapper__data obj-unveiler">
         {{> patterns.data-types.bar-chart (data "challenges-data.unsuccessful") }}
       </div>
     </div>
 
     {{#markdown}}
 
-### Design systems benefit from _cross-departmental buy-in._
+<h3 class="obj-unveiler">Design systems benefit from _cross-departmental buy-in._</h3>
 
 88 of our survey respondents work at organizations that do not yet have design systems in place. When asked what is blocking them from taking on this work, responses included not having the right talent in place, as well as combating perceptions of low value and lacking executive buy-in. Having a champion could help these organizations address and overcome these challenges.
 
@@ -34,7 +34,7 @@ Of the 86 survey respondents from organizations with design systems, just over 2
       <div class="obj-data-wrapper__question">
         {{> patterns.partials.survey-question (data "challenges-data.prevention.question")}}
       </div>
-      <div class="obj-data-wrapper__data">
+      <div class="obj-data-wrapper__data obj-unveiler">
         {{> patterns.data-types.stacked-bar-chart (data "challenges-data.prevention") }}
       </div>
     </div>

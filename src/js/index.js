@@ -2,6 +2,7 @@
 
 require('core-js/fn/array/from');
 require('./intro-parallax');
+require('./unveiler');
 
 import addBarCharts from './barChart.js';
 import addStackedBarCharts from './stackedBarChart.js';

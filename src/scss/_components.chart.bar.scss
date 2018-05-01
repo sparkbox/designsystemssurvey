@@ -1,6 +1,11 @@
 // @supports (display: flex) is used in this file to prevent
 // some styles from reaching IE11
 .cmp-chart {
+  // This number represents how many loop iterations should happen for staggering
+  // delays. Shouldn't be too low, or some items won't animate. Shouldn't be too
+  // high, or we'll be outputting uneccessary CSS.
+  $max-num-children: 12;
+
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -89,7 +94,6 @@
   }
 
   &__entry {
-
     @media (min-width: $bp-chart-header-pop) {
       @supports (display: flex) {
         width: 100%;
@@ -134,6 +138,37 @@
     align-items: center;
     min-height: 4.5rem;
     min-width: 1px; // When the value is 0% this allows the space to be visible
+
+    .obj-unveiler--will-unveil & {
+      transform-origin: 0 50%;
+      opacity: 0;
+
+      transition: all 1100ms $timing-function-ease-out-expo;
+
+      @media (min-width: $bp-chart-header-pop) {
+        // A transform isn't applied until the pop takes place, since
+        // applying a transform disallows us from absolutely positioning
+        // &__value elements onto the right edge of the chart
+        transform: scaleX(0);
+      }
+    }
+
+    .obj-unveiler--is-unveiled & {
+      opacity: 1;
+
+      @media (min-width: $bp-chart-header-pop) {
+        transform: scaleX(1);
+      }
+    }
+
+    @for $i from 1 through $max-num-children {
+      $delay-gap: 80ms;
+      $base-delay: 100ms;
+
+      .obj-unveiler--is-unveiled .cmp-chart__entry:nth-child(#{$i}) & {
+        transition-delay: $base-delay + $delay-gap * ($i - 1);
+      }
+    }
 
     @media (min-width: $bp-chart-header-pop) {
       @supports (display: flex) {
