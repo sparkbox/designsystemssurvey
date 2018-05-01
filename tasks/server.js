@@ -22,22 +22,25 @@ app.use(function (req, res, next) {
 
 // Expires Headers
 function setHeaders(req, res, next) {
-  const cacheControl = {
-    'image/png': 24*60*60, //24 hours
-    'image/svg+xml': 24*60*60, //24 hours
-    'image/jpg': 24*60*60, //24 hours
-    'image/jpeg': 24*60*60, //24 hours
-    'text/css': 24*60*60, //24 hours
-    'application/javascript': 24*60*60, //24 hours
-    'text/html': 0 //never
+  if (process.env.NODE_ENV === 'production') {
+    const cacheControl = {
+      'image/png': 24*60*60, //24 hours
+      'image/svg+xml': 24*60*60, //24 hours
+      'image/jpg': 24*60*60, //24 hours
+      'image/jpeg': 24*60*60, //24 hours
+      'text/css': 24*60*60, //24 hours
+      'application/javascript': 24*60*60, //24 hours
+      'text/html': 0 //never
+    }
+
+    var mimeType = mime.getType(req.path);
+
+    var milliseconds = cacheControl[mimeType] || 0;
+    var header = 'public, max-age=' + milliseconds.toString();
+
+    res.setHeader('Cache-Control', header);
   }
 
-  var mimeType = mime.lookup(req.path);
-
-  var milliseconds = cacheControl[mimeType] || 0;
-  var header = 'public, max-age=' + milliseconds.toString();
-
-  res.setHeader('Cache-Control', header);
   next();
 }
 
