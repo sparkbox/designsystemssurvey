@@ -2,4 +2,10 @@
   font-size: 1.125rem;
   color: $c-black;
   line-height: 1.75;
+
+  @media only print {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: black !important;
+  }
 }

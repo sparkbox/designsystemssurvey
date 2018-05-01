@@ -7,6 +7,8 @@
 
   margin: 15vh 0;
 
+  @include print(none);
+
   &__inner {
     margin: auto;
     max-width: 27rem;

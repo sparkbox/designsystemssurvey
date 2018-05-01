@@ -79,6 +79,11 @@ a {
   -webkit-text-decoration-skip: objects; // 2
 }
 
+@media print{
+  a[href]::after {
+    content: ' (' attr(href) ') ';
+  }
+}
 // 1. Remove the bottom border in Chrome 57- and Firefox 39-.
 abbr[title] {
   border-bottom: none; // 1

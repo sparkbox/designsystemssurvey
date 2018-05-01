@@ -9,6 +9,8 @@
   width: calc(100% - 3.5rem);
   max-width: 84rem;
 
+  @include print(none);
+
   @media (min-width: $bp-footer-sm) {
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +80,7 @@
 
     &--social {
       margin-top: 5vh;
+
       @media (min-width: $bp-footer-sm) {
         @supports (display: flex) {
           margin-top: 0;

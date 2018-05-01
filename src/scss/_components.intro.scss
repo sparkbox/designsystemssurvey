@@ -36,6 +36,11 @@
       // Reveal excess blocks
       overflow: visible;
     }
+
+    @media only print {
+      display: block !important;
+      padding: 0 !important;
+    }
   }
   
   &__logo-wrapper {
@@ -60,6 +65,12 @@
     @media (min-width: $bp-large-margins) {
       width: 11rem;
       margin-top: -4.3rem;
+    }
+
+    @media only print {
+      display: block !important;
+      margin: 0 !important;
+      position: static !important;
     }
   }
 
@@ -102,43 +113,54 @@
     @media (min-width: $bp-huge-heading) {
       font-size: 8.0625rem;
     }
-    
-    &__year {
-      display: block;
-      
-      font-size: 0.8125rem;
-      letter-spacing: 0.0625em;
-      
-      margin-bottom: $space-xs;
-    
-      @media (min-width: $bp-split-columns) {
-        position: absolute;
-        
-        font-size: 1rem;
-        
-        margin-top: -1em;
-      }
-      
-      @media (min-width: $bp-large-margins) {
-        font-size: 1.125rem;
-        
-        margin-top: 7vw;
-        
-        margin-left: -5.5rem;
-      }
-      
-      @media (min-width: $bp-huge-heading) {
-        font-size: 1.125rem;
-        margin-top: 5.7rem;
-      }
-    }
-    
-    &__title {
-      display: block;
+
+    @media only print {
+      font-size: 30pt !important;
+      line-height: 1 !important;
+      margin: 12pt 0 !important;
+      width: auto !important;
     }
   }
+    
+  &__year {
+    display: block;
+    
+    font-size: 0.8125rem;
+    letter-spacing: 0.0625em;
+    
+    margin-bottom: $space-xs;
   
+    @media (min-width: $bp-split-columns) {
+      position: absolute;
+      
+      font-size: 1rem;
+      
+      margin-top: -1em;
+    }
+    
+    @media (min-width: $bp-large-margins) {
+      font-size: 1.125rem;
+      
+      margin-top: 7vw;
+      
+      margin-left: -5.5rem;
+    }
+    
+    @media (min-width: $bp-huge-heading) {
+      font-size: 1.125rem;
+      margin-top: 5.7rem;
+    }
+
+    @media print {
+      display: inline !important;
+      position: static !important;
+      margin: auto !important;
+    }
+  }
+
   &__blocks-wrapper {
+    @include print(none);
+
     &--a {
       display: inline-block;
       width: 75%;
@@ -395,6 +417,12 @@
       // This is a magic number that roughly aligns to
       // the top of the headline's x-height
       margin-top: 1.6rem;
+    }
+
+    @media only print {
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
     }
   }
   

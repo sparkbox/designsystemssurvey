@@ -16,6 +16,11 @@
   padding-top: calc(#{$space-xxxl/2} + 5vh);
   margin-top: calc(#{$space-xxxl/2} + 5vh);
 
+  @media only print {
+    padding-top: 0 !important;
+    margin-top: 30pt !important;
+  }
+
   &--section-1 {
     @include apply-major-section-custom-props($set1);
   }
