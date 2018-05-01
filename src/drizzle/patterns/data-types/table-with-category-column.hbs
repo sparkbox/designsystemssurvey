@@ -1,8 +1,10 @@
 <table class="cmp-basic-table" data-column data-theme="{{ chartTheme }}">
-  <th>Categories</th>
-  {{#each x-labels }}
-    <th data-value="{{ this.value }}">{{ this.label }}</th>
-  {{/each}}
+  <tr>
+    <th>Categories</th>
+    {{#each x-labels }}
+      <th data-value="{{ this.value }}">{{ this.label }}</th>
+    {{/each}}
+  </tr>
   {{#each chartData }}
     <tr>
       <td class="table__category">{{ this.category }}</td>
