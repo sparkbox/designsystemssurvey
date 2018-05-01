@@ -9,7 +9,7 @@ title: Table of Contents
     <ol class="cmp-toc__list">
       {{#each (data 'sections.sections')}}
         <li class="cmp-toc__item" data-count="{{ numToRomanNumeral (add 1 @index) }}" aria-label="Section {{add 1 @index}}">
-          <a class="cmp-toc__link" href="#{{id}}">{{name}}</a>
+          <a class="cmp-toc__link js-smooth-jump-link" href="#{{id}}">{{name}}</a>
         </li>
       {{/each}}
     </ol>
