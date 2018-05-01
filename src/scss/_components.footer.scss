@@ -25,6 +25,8 @@
     font-weight: normal;
     padding: 0.75rem 0 0.75rem 4rem;
     line-height: 1.25;
+
+    margin: $space-sm 0 0;
   }
 
   &__link {
@@ -206,7 +208,7 @@
 
   &__social-link {
     color: $c-black;
-    transition: color ease-in-out 150ms;
+    transition: color 350ms $timing-function-ease-out-expo;
 
     &:hover {
       color: $c-link-blue;
