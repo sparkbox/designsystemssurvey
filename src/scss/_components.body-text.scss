@@ -17,6 +17,10 @@
       font-size: 2.1rem;
     }
 
+    @media only print {
+      font-size: 18pt !important;
+    }
+
     > em {
       font-style: normal;
     }
@@ -53,6 +57,11 @@
     @media (min-width: $bp-text-size-bump-2) {
       font-size: 1.25rem;
     }
+
+    @media only print {
+      font-size: 12pt !important;
+      line-height: 1.5 !important;
+    }
   }
 
   > ul {
@@ -67,6 +76,11 @@
 
     @media (min-width: $bp-text-size-bump-2) {
       font-size: 1.25rem;
+    }
+
+    @media only print {
+      font-size: 12pt !important;
+      line-height: 1.5 !important;
     }
 
     > li {

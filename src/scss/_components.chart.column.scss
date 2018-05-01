@@ -19,6 +19,8 @@
     flex-direction: column;
   }
 
+  @include print(none);
+
   @media (min-width: $bp-chart-header-pop) {
     @supports (display: grid) {
       display: grid;

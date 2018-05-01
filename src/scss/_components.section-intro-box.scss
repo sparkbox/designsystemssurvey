@@ -37,6 +37,12 @@
 
   text-align: center;
 
+  @media print {
+    page-break-inside: avoid;
+    padding: 12pt !important;
+    margin: 0 auto 30pt !important;
+  }
+
   &::before {
     // Draw border
     
@@ -95,6 +101,10 @@
     // its width
     left: 50%;
     transform: translateX(-50%);
+
+    @media only print {
+      font-size: 10pt !important;
+    }
   }
 
   &__text {
@@ -102,6 +112,10 @@
 
     @media (min-width: 44em) {
       font-size: 44rem * 0.08;
+    }
+
+    @media only print {
+      font-size: 24pt !important;
     }
   }
 
@@ -125,6 +139,8 @@
     opacity: 0.7;
 
     transition: opacity 200ms $timing-function-ease-out-expo;
+
+    @include print(none);
 
     :target & {
       // This plays a reveal animation when a section is jumped to

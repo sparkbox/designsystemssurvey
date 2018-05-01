@@ -1,4 +1,5 @@
 .cmp-newsletter {
+  @include print(none);
 
   &__input-label {
     display: block;

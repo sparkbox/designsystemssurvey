@@ -8,6 +8,12 @@
   @media (min-width: $bp-text-size-bump-1) {
     font-size: 1.25rem;
   }
+
+  @media print {
+    display: block !important;
+    page-break-inside: avoid;
+    font-size: 12pt !important;
+  }
   
   width: 100%;
 
