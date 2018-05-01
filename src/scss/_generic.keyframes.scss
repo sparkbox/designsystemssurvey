@@ -19,3 +19,12 @@
     transform: translateY(0px);
   }
 }
+
+@keyframes reveal-back-to-top {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
