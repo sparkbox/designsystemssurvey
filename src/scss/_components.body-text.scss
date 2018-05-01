@@ -20,6 +20,28 @@
     > em {
       font-style: normal;
     }
+
+    &.obj-unveiler--is-unveiled > em {
+      // This applies an accent color custom property,
+      // defined in the `major-section` component, cascading
+      // down onto this element.
+      background-color: #ddd;
+      background-color: var(--accent-color-light);
+
+      // An inset box shadow is used to slightly
+      // trim down the background color
+      box-shadow: inset 0 -0.1em white;
+
+      transition: all 1.6s linear 0.5s;
+
+      &:nth-child(2) {
+        transition-delay: 2s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 3s;
+      }
+    }
   }
 
   > p {
