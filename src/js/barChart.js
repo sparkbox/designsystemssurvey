@@ -42,11 +42,11 @@ const createBarChart = (tableData, chartTheme) => {
   return chart;
 };
 
-const addBarCharts = (barChartElements) => {
-  barChartElements.forEach(chartElement => {
-    const tableParent = chartElement.parentNode;
-    const tableData = getBarChartTableData(chartElement);
-    const chartTheme = chartElement.getAttribute('data-theme');
+const addBarCharts = (barChartTable) => {
+  barChartTable.forEach(table => {
+    const tableParent = table.parentNode;
+    const tableData = getBarChartTableData(table);
+    const chartTheme = table.getAttribute('data-theme');
     const barChart = createBarChart(tableData, chartTheme);
     tableParent.innerHTML += barChart;
     tableParent.getElementsByTagName('table')[0].style.display = 'none';

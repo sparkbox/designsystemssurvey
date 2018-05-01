@@ -2,15 +2,11 @@
 
 require('core-js/fn/array/from');
 
-const getStackedBarChartTableData = (chartElement) => {
-  console.log('getStackedBarChartTableData');
-  const tableRows = Array.from(chartElement.querySelectorAll('tr'));
+const getStackedBarChartTableData = (table) => {
+  const tableRows = Array.from(table.querySelectorAll('tr'));
   const tableData = [];
-  console.log(tableRows);
   tableRows.forEach(row => {
-    console.log(row);
     if (row.querySelector('td')) {
-      console.log(row.querySelector('.table__category').innerHTML);
       const dataObject = {
         label: row.querySelector('.table__category').innerHTML,
         na: parseFloat(row.querySelector('.table__value--na').innerHTML),
@@ -23,9 +19,8 @@ const getStackedBarChartTableData = (chartElement) => {
   return tableData;
 };
 
-const getLegendLabels = (chartElement) => {
-  console.log(getLegendLabels);
-  const tableRows = Array.from(chartElement.querySelectorAll('tr'));
+const getLegendLabels = (table) => {
+  const tableRows = Array.from(table.querySelectorAll('tr'));
   const tableHeaders = Array.from(tableRows[0].querySelectorAll('th'));
   let legendLabels = [];
   for (let i = 0; i < tableHeaders.length; i++) {
@@ -40,9 +35,8 @@ const getLegendLabels = (chartElement) => {
   return legendLabels;
 };
 
-const createChartLegend = (chartElement) => {
-  console.log(createChartLegend);
-  const legendLabels = getLegendLabels(chartElement);
+const createChartLegend = (table) => {
+  const legendLabels = getLegendLabels(table);
   let legend = `
     <div class="cmp-stacked-chart__entry">
       <ul class="cmp-stacked-chart__legend" aria-hidden="true">
@@ -58,9 +52,9 @@ const createChartLegend = (chartElement) => {
   return legend += '</ul></div>';
 };
 
-const createStackedBarChart = (chartElement, chartTheme) => {
-  const tableData = getStackedBarChartTableData(chartElement);
-  const legend = createChartLegend(chartElement);
+const createStackedBarChart = (table, chartTheme) => {
+  const tableData = getStackedBarChartTableData(table);
+  const legend = createChartLegend(table);
   const chartDiv = `<div class="cmp-stacked-chart cmp-stacked-chart--${chartTheme}">
     <div class="cmp-stacked-chart__range" aria-hidden="true">
       <div class="cmp-stacked-chart__low">0%</div>
@@ -83,11 +77,11 @@ const createStackedBarChart = (chartElement, chartTheme) => {
   return `${chartDiv} ${legend} ${chart} </div>`;
 };
 
-const addStackedBarCharts = (stackedBarChartElements) => {
-  stackedBarChartElements.forEach(chartElement => {
-    const tableParent = chartElement.parentNode;
-    const chartTheme = chartElement.getAttribute('data-theme');
-    const stackedBarChart = createStackedBarChart(chartElement, chartTheme);
+const addStackedBarCharts = (stackedBarChartTable) => {
+  stackedBarChartTable.forEach(table => {
+    const tableParent = table.parentNode;
+    const chartTheme = table.getAttribute('data-theme');
+    const stackedBarChart = createStackedBarChart(table, chartTheme);
     tableParent.innerHTML += stackedBarChart;
     tableParent.getElementsByTagName('table')[0].style.display = 'none';
   });

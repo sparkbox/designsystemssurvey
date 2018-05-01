@@ -17,10 +17,10 @@ const getTableElements = (chartType)=> {
 }
 
 const addCharts = () => {
-  const barChartElements = getTableElements('barChart');
-  const stackedBarChartElements = getTableElements('stackedBarChart');
-  addBarCharts(barChartElements);
-  addStackedBarCharts(stackedBarChartElements);
+  const barChartTable = getTableElements('barChart');
+  const stackedBarChartTable = getTableElements('stackedBarChart');
+  addBarCharts(barChartTable);
+  addStackedBarCharts(stackedBarChartTable);
 }
 
 addCharts();
