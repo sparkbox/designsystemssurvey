@@ -115,13 +115,13 @@
     width: 100%;
     margin-bottom: 2rem;
     flex-direction: column;
-    height: 2em;
 
     @supports (display: flex) {
       height: auto;
     }
 
     @media (min-width: $flex-direction-row) {
+      height: 2em;
       flex-direction: row;
     }
 
@@ -137,12 +137,15 @@
   }
 
   &__key {
-    display: inline-block;
-    float: left;
     display: flex;
     align-items: center;
 
     font-size: 0.8rem;
+
+    @media (min-width: $flex-direction-row) {
+      display: inline-block;
+      float: left;
+    }
 
     & + & {
       margin-top: 1rem;
