@@ -85,8 +85,18 @@
     
     margin-bottom: 1.75rem;
     
+    display: inline-block;
+    float: left;
+
     @media (min-width: $bp-grow-heading) {
       font-size: 3em / $bp-grow-heading * 100vw;
+      display: block;
+      float: none;
+      margin-top: 4rem;
+
+      @supports (display: flex) {
+        margin-top: 0;
+      }
     }
     
     @media (min-width: $bp-huge-heading) {
@@ -130,6 +140,9 @@
   
   &__blocks-wrapper {
     &--a {
+      display: inline-block;
+      width: 75%;
+      margin-bottom: 3em;
 
       @supports (display: flex) {
         // Take up remaining space left over from heading
@@ -183,6 +196,7 @@
         width: 50%;
         
         margin-bottom: calc(-13rem - 4vw);
+
       }
       
       @media (min-width: $bp-stop-overflowing-blocks) {
@@ -214,8 +228,12 @@
         margin-left: 0;
         
         left: -30%;
-        
-        top: calc(10rem + 26vw);
+
+        bottom: 4.5em;
+
+        @supports (display: flex) {
+          top: calc(10rem + 26vw);
+        }
       }
 
       @media (min-width: $bp-large-margins) {
@@ -336,7 +354,12 @@
   }
 
   &__svg {
-    height: auto;
+    height: 100%;
+
+    @supports (display: flex) {
+      height: auto;
+    }
+
     width: 100%;
 
     // This wrapper is needed to match the
