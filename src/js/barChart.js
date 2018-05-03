@@ -21,8 +21,8 @@ const createBarChart = (tableData, chartTheme) => {
   let chart = 
   `<div class="cmp-chart cmp-chart--${chartTheme}">
     <div class="cmp-chart__range" aria-hidden="true">
-      <div class="cmp-chart__low">0%</div>
-      <div class="cmp-chart__high">100%</div>
+      <div class="cmp-chart__low"><div class="cmp-chart__range-value">0%</div></div>
+      <div class="cmp-chart__high"><div class="cmp-chart__range-value">100%</div></div>
     </div>`
   ;
 

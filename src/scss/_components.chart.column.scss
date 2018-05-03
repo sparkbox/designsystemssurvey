@@ -8,8 +8,11 @@
   width: 100%;
   padding: 0.125rem 0 0;
   padding-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
+
+  @supports (display: flex) {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media (min-width: $bp-chart-header-pop) {
     @supports (display: grid) {
@@ -49,6 +52,12 @@
     bottom: 0;
     display: flex;
     align-items: flex-end;
+    height: 100%;
+  }
+
+  &__range-value {
+    position: absolute;
+    bottom: 0;
   }
 
   &__low {
@@ -70,6 +79,7 @@
   &__high {
     right: 0;
     text-align: right;
+    padding-right: 2em;
   }
 
   &__entry {
@@ -105,6 +115,11 @@
     width: 100%;
     margin-bottom: 2rem;
     flex-direction: column;
+    height: 2em;
+
+    @supports (display: flex) {
+      height: auto;
+    }
 
     @media (min-width: $flex-direction-row) {
       flex-direction: row;
@@ -122,6 +137,8 @@
   }
 
   &__key {
+    display: inline-block;
+    float: left;
     display: flex;
     align-items: center;
 
@@ -187,6 +204,9 @@
   }
 
   &__bar {
+    display: inline-block;
+    height: 4.5rem;
+    float: left;
     flex: 1 1 auto;
 
     &--na {
