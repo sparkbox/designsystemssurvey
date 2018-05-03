@@ -57,8 +57,8 @@ const createStackedBarChart = (table, chartTheme) => {
   const legend = createChartLegend(table);
   const chartDiv = `<div class="cmp-stacked-chart cmp-stacked-chart--${chartTheme}">
     <div class="cmp-stacked-chart__range" aria-hidden="true">
-      <div class="cmp-stacked-chart__low">0%</div>
-      <div class="cmp-stacked-chart__high">100%</div>
+      <div class="cmp-stacked-chart__low"><div class="cmp-chart__range-value">0%</div></div>
+      <div class="cmp-stacked-chart__high"><div class="cmp-chart__range-value">100%</div></div>
     </div>`
   let chart = '';
   for (let i = 0; i < tableData.length; i++ ) {

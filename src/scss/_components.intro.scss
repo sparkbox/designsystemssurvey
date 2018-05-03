@@ -17,10 +17,12 @@
     // Crop off excess blocks
     overflow: hidden;
     
-    @media (min-width: $bp-split-columns) {
-      display: flex;
+    @supports (display: flex) {
+      @media (min-width: $bp-split-columns) {
+        display: flex;
       
-      padding-top: 10rem;
+        padding-top: 10rem;
+      }
     }
 
     @media (min-width: $bp-large-margins) {
@@ -128,8 +130,11 @@
   
   &__blocks-wrapper {
     &--a {
-      // Take up remaining space left over from heading
-      flex: 1;
+
+      @supports (display: flex) {
+        // Take up remaining space left over from heading
+        flex: 1;
+      }
 
       // Gap between heading and blocks
       margin-left: 1.5rem;

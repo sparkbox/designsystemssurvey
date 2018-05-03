@@ -50,9 +50,14 @@
       font-size: 0.75rem;
       font-weight: bold;
       text-align: right;
-      padding: 1rem 0.5rem 1rem 0;
+      padding: 1rem 0;
       line-height: 2.375;
       flex-basis: 2rem;
+      position: absolute;
+
+      @supports (display: grid) {
+        padding-right: 0.5rem;
+      }
     }
 
     &::after {
@@ -86,10 +91,11 @@
     text-decoration: none;
     display: block;
     flex-basis: 100%;
-    padding: 1rem 2rem 1rem 0;
+    padding: 1rem 2rem;
 
     @supports (display: grid) {
       grid-column: 2 / span 4;
+      padding: 1rem 2rem 1rem 0;
 
       &::before {
         content: '';
