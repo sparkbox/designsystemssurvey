@@ -137,15 +137,18 @@
   }
 
   &__key {
-    display: flex;
-    align-items: center;
-
-    font-size: 0.8rem;
-
     @media (min-width: $flex-direction-row) {
       display: inline-block;
       float: left;
     }
+
+    @supports (display: flex) {
+      display: flex;
+      align-items: center;
+    }
+
+
+    font-size: 0.8rem;
 
     & + & {
       margin-top: 1rem;
