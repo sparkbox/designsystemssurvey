@@ -7,14 +7,16 @@ motivators:
     type: Rate 1 to 5
   x-labels:
     - 
-      value: na
-      label: N/A
+      value: 4-5
+      label: More Motivation
+      sublabel: Rated 5-4
     - 
       value: 1-3
       label: Less Motivation
+      sublabel: Rated 3-1
     - 
-      value: 4-5
-      label: More Motivation
+      value: na
+      label: N/A
   chartTheme: motivation
   # data is reported here as percentages.
   chartData:

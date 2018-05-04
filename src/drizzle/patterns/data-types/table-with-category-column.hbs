@@ -2,7 +2,7 @@
   <tr>
     <th>Categories</th>
     {{#each x-labels }}
-      <th data-value="{{ this.value }}">{{ this.label }}</th>
+      <th data-value="{{ this.value }}" data-sublabel="{{this.sublabel}}">{{ this.label }}</th>
     {{/each}}
   </tr>
   {{#each chartData }}

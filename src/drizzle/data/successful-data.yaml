@@ -138,14 +138,16 @@ valuation:
     type: Rate 1 to 5
   x-labels:
     - 
-      value: na
-      label: N/A
+      value: 4-5
+      label: Values More
+      sublabel: Rated 5-4
     - 
       value: 1-3
       label: Values Less
+      sublabel: Rated 3-1
     - 
-      value: 4-5
-      label: Values More
+      value: na
+      label: N/A
   chartTheme: valuation
   # data is reported here as percentages
   chartData: 

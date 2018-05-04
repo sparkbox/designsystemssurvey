@@ -27,7 +27,8 @@ const getLegendLabels = (table) => {
     if (i > 0) {
       const dataObject ={
         value: tableHeaders[i].getAttribute('data-value'),
-        label: tableHeaders[i].innerHTML
+        label: tableHeaders[i].innerHTML,
+        sublabel: tableHeaders[i].getAttribute('data-sublabel'),
       }
       legendLabels.push(dataObject);
     }
@@ -44,10 +45,24 @@ const createChartLegend = (table) => {
   legendLabels.forEach(labelObject => {
     legend += `
       <li class="cmp-stacked-chart__key cmp-stacked-chart__key--${labelObject.value}">
-        <span class="cmp-chart__legend-label-color"></span>
-        <span class="cmp-chart__legend-label-name">${labelObject.label}</span>
+        <span class="cmp-stacked-chart__legend__label">
+          ${labelObject.label}
+        </span>`
+
+    if (labelObject.sublabel) {
+      legend += `
+        <span class="cmp-stacked-chart__legend__sublabel">
+          ${labelObject.sublabel}
+        </span>`
+    }
+
+    legend += `
       </li>
     `
+
+    if (labelObject.sublabel) {
+    }
+
   });
   return legend += '</ul></div>';
 };
@@ -67,9 +82,9 @@ const createStackedBarChart = (table, chartTheme) => {
     <div class="cmp-stacked-chart__entry cmp-stacked-chart__entry--${i + 1}">
       <div class="cmp-stacked-chart__category">${dataObject.label}</div>
       <div class="cmp-stacked-chart__group">
-        <div class="cmp-stacked-chart__bar cmp-stacked-chart__bar--na" aria-label="Percent who were not applicable: ${dataObject.na}" style="width: ${dataObject.na}%;"></div>
-        <div class="cmp-stacked-chart__bar cmp-stacked-chart__bar--1-3" aria-label="Percent who rated one through three: ${dataObject['1-3']}" style="width: ${dataObject['1-3']}%;"></div>
         <div class="cmp-stacked-chart__bar cmp-stacked-chart__bar--4-5" aria-label="Percent who rated four through five: ${dataObject['4-5']}" style="width: ${dataObject['4-5']}%;"></div>
+        <div class="cmp-stacked-chart__bar cmp-stacked-chart__bar--1-3" aria-label="Percent who rated one through three: ${dataObject['1-3']}" style="width: ${dataObject['1-3']}%;"></div>
+        <div class="cmp-stacked-chart__bar cmp-stacked-chart__bar--na" aria-label="Percent who were not applicable: ${dataObject.na}" style="width: ${dataObject.na}%;"></div>
       </div>
     </div>
     `

@@ -140,21 +140,39 @@
         grid-column: 2;
       }
     }
+
+    &__label {
+      display: block;
+
+      font-weight: bold;
+    }
+
+    &__sublabel {
+      display: block;
+
+      font-size: 0.75rem;
+
+      color: #666;
+    }
   }
 
   &__key {
-    @media (min-width: $flex-direction-row) {
-      display: inline-block;
-      float: left;
-    }
+    $swatch-size: 2rem;
+    $swatch-margin: 0.5rem;
 
-    @supports (display: flex) {
-      display: flex;
-      align-items: center;
-    }
+    // Contain absolute swatch
+    position: relative;
 
+    // Make space for absolute swatch
+    padding-left: $swatch-size + $swatch-margin;
 
-    font-size: 0.8rem;
+    min-height: $swatch-size;
+
+    // Flexbox is used here,
+    // but only for vertical centering
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     & + & {
       margin-top: 1rem;
@@ -166,12 +184,19 @@
     }
 
     &::before {
+      // Draw color swatch
+
       content: '';
       display: inline-block;
-      height: 2rem;
-      width: 2rem;
-      margin-right: 0.5rem;
-      flex-basis: 2rem;
+      height: $swatch-size;
+      width: $swatch-size;
+
+      top: 50%;
+      margin-top: $swatch-size / 2 * -1;
+
+      left: 0rem;
+
+      position: absolute;
     }
 
     &--na::before {
