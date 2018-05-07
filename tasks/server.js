@@ -13,7 +13,7 @@ if (process.env.ENFORCE_SSL) {
 
 app.use(compression()); //gzip
 
-app.use('/', setHeaders, express.static('dist'));
+app.use('/', setHeaders, redirectToPlural, express.static('dist'));
 
 //404 redirects to home page
 app.use(function (req, res, next) {
@@ -21,14 +21,13 @@ app.use(function (req, res, next) {
 });
 
 // designsystemsurvey (singular) redirects to designsystemssurvey (plural)
-app.use((req, res, next) => {
-  
-  var host = req.get('Host');
-  if (host === 'https://designsystemsurvey.seesparkbox.com/') {
+function redirectToPlural(req, res, next) {
+  const host = req.get('host');
+  if (host === 'designsystemsurvey.seesparkbox.com') {
     return res.redirect(301, 'https://designsystemssurvey.seesparkbox.com/');
   }
   return next();
-});
+}
 
 // Expires Headers
 function setHeaders(req, res, next) {
