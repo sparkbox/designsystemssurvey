@@ -143,7 +143,7 @@
       transform-origin: 0 50%;
       opacity: 0;
 
-      transition: all 1100ms $timing-function-ease-out-expo;
+      transition: all 1600ms $timing-function-ease-out-expo;
 
       @media (min-width: $bp-chart-header-pop) {
         // A transform isn't applied until the pop takes place, since
