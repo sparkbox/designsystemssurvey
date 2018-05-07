@@ -20,6 +20,16 @@ app.use(function (req, res, next) {
   res.status(404).redirect('/');
 });
 
+// designsystemsurvey (singular) redirects to designsystemssurvey (plural)
+app.use((req, res, next) => {
+  
+  var host = req.get('Host');
+  if (host === 'https://designsystemsurvey.seesparkbox.com/') {
+    return res.redirect(301, 'https://designsystemssurvey.seesparkbox.com/');
+  }
+  return next();
+});
+
 // Expires Headers
 function setHeaders(req, res, next) {
   if (process.env.NODE_ENV === 'production') {
