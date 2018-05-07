@@ -11,8 +11,10 @@ layout: template
 
 
 {{!-- This loops through each section and includes the partial for that section --}}
-{{#each (data 'sections.sections')}}
-  {{> (add 'patterns.content-sections.' id) sectionNumber=(add @index 1)}}
-{{/each}}
+<div role="main">
+  {{#each (data 'sections.sections')}}
+    {{> (add 'patterns.content-sections.' id) sectionNumber=(add @index 1)}}
+  {{/each}}
+</div>
 
 {{> patterns.footer.footer }}
