@@ -2,6 +2,8 @@
 
 require('core-js/fn/array/from');
 
+import { createToggleTableButton } from './toggleTableButton';
+
 const getBarChartTableData = (table) => {
   const tableRows = Array.from(table.querySelectorAll('tr'));
   const tableData = [];
@@ -18,8 +20,9 @@ const getBarChartTableData = (table) => {
 };
 
 const createBarChart = (tableData, chartTheme) => {
+  const toggleTableButton = createToggleTableButton(chartTheme);
   let chart = 
-  `<div class="cmp-chart cmp-chart--${chartTheme}">
+  `<div class="cmp-chart cmp-chart--${chartTheme}" id="${chartTheme}-chart">
     <div class="cmp-chart__range" aria-hidden="true">
       <div class="cmp-chart__low"><div class="cmp-chart__range-value">0%</div></div>
       <div class="cmp-chart__high"><div class="cmp-chart__range-value">100%</div></div>
@@ -38,8 +41,7 @@ const createBarChart = (tableData, chartTheme) => {
       </div>
     `
   }
-  chart += `</div>`;
-  return chart;
+  return `${chart} </div> ${toggleTableButton}`;
 };
 
 const addBarCharts = (barChartTable) => {

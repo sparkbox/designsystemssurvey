@@ -2,6 +2,8 @@
 
 require('core-js/fn/array/from');
 
+import { createToggleTableButton } from './toggleTableButton';
+
 const getStackedBarChartTableData = (table) => {
   const tableRows = Array.from(table.querySelectorAll('tr'));
   const tableData = [];
@@ -70,7 +72,8 @@ const createChartLegend = (table) => {
 const createStackedBarChart = (table, chartTheme) => {
   const tableData = getStackedBarChartTableData(table);
   const legend = createChartLegend(table);
-  const chartDiv = `<div class="cmp-stacked-chart cmp-stacked-chart--${chartTheme}">
+  const toggleTableButton = createToggleTableButton(chartTheme);
+  const chartDiv = `<div class="cmp-stacked-chart cmp-stacked-chart--${chartTheme}" id="${chartTheme}-chart">
     <div class="cmp-stacked-chart__range" aria-hidden="true">
       <div class="cmp-stacked-chart__low"><div class="cmp-chart__range-value">0%</div></div>
       <div class="cmp-stacked-chart__high"><div class="cmp-chart__range-value">100%</div></div>
@@ -89,7 +92,7 @@ const createStackedBarChart = (table, chartTheme) => {
     </div>
     `
   }
-  return `${chartDiv} ${legend} ${chart} </div>`;
+  return `${chartDiv} ${legend} ${chart}</div> ${toggleTableButton}`;
 };
 
 const addStackedBarCharts = (stackedBarChartTable) => {
