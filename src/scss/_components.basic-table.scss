@@ -1,4 +1,17 @@
 .cmp-basic-table {
+
+  &[aria-hidden="true"] {
+    // aria-hidden is used to hide tables
+    // after JS turns them into bar charts.
+    // They can be revealed by user interaction.
+    display: none;
+  }
+
+  // This animation is played when tables are revealed
+  // via user interaction.
+  animation: reveal-table 900ms $timing-function-ease-out-expo both;
+  transform-origin: 50% 0;
+
   font-size: 0.85rem;
 
   @media (min-width: 30em) {
@@ -27,7 +40,7 @@
 
   border-collapse: collapse;
 
-  padding-bottom: $space-xxl;
+  margin-bottom: $space-xxl;
 
   box-sizing: border-box;
 

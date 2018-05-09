@@ -10,4 +10,12 @@
 
   &__data {
   }
+
+  &__toggle {
+    text-align: right;
+    margin-bottom: $space-md;
+
+    // Magic number to line up with visual edge of table
+    padding-right: 2px;
+  }
 }

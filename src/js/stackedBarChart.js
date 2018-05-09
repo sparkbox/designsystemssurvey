@@ -100,8 +100,8 @@ const addStackedBarCharts = (stackedBarChartTable) => {
     const tableParent = table.parentNode;
     const chartTheme = table.getAttribute('data-theme');
     const stackedBarChart = createStackedBarChart(table, chartTheme);
-    tableParent.innerHTML += stackedBarChart;
-    tableParent.getElementsByTagName('table')[0].style.display = 'none';
+    tableParent.innerHTML = stackedBarChart + tableParent.innerHTML;
+    tableParent.getElementsByTagName('table')[0].setAttribute('aria-hidden', true);
   });
 };
 

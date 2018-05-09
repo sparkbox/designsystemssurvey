@@ -28,3 +28,14 @@
     opacity: 0.7;
   }
 }
+
+@keyframes reveal-table {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scaleY(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scaleY(1);
+  }
+}

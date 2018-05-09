@@ -50,8 +50,8 @@ const addBarCharts = (barChartTable) => {
     const tableData = getBarChartTableData(table);
     const chartTheme = table.getAttribute('data-theme');
     const barChart = createBarChart(tableData, chartTheme);
-    tableParent.innerHTML += barChart;
-    tableParent.getElementsByTagName('table')[0].style.display = 'none';
+    tableParent.innerHTML = barChart + tableParent.innerHTML;
+    tableParent.getElementsByTagName('table')[0].setAttribute('aria-hidden', true);
   });
 };
 

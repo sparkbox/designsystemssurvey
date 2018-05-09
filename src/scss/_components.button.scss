@@ -12,6 +12,8 @@
   text-decoration: none;
   background-color: #eee;
 
+  border: 0;
+
   // Padding is used to add some clickable space
   padding: 0.8rem 0.6rem;
 
@@ -36,9 +38,27 @@
     opacity: 1;
   }
 
-  &--toggle {
-    border: none;
-    position: absolute;
-    right: 0;
+  &__chevron-icon {
+    // Using the presence of aria-expanded as a styling hook
+    // to draw a chevron indicating expand state.
+
+    display: inline-block;
+
+    border-width: 0.125rem;
+    border-style: none none solid solid;
+
+    width: 0.4rem;
+    height: 0.4rem;
+
+    margin-left: 0.5rem;
+    margin-right: 0.25rem;
+
+    transition: transform 550ms $timing-function-ease-out-expo;
+
+    transform: translateY(-0.125rem) rotate(-45deg);
+
+    [aria-expanded=true] & {
+      transform: rotateX(180deg) translateY(-0.125rem) rotate(-45deg);
+    }
   }
 }

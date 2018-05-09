@@ -7,7 +7,7 @@ require('./unveiler');
 import addBarCharts from './barChart.js';
 import addStackedBarCharts from './stackedBarChart.js';
 import smoothScroll from './smoothScroll';
-import { toggleTable } from './toggleTableButton';
+import { initToggleButtons } from './toggleTableButton';
 
 const getTableElements = (chartType)=> {
   let tableType = '';
@@ -27,7 +27,7 @@ const addCharts = () => {
 }
 
 addCharts();
-toggleTable();
+initToggleButtons();
 
 const jumpLinks = document.querySelectorAll('.js-smooth-jump-link');
 Array.from(jumpLinks).forEach((el) => {
