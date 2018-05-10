@@ -72,9 +72,4 @@
   &:not(.cmp-basic-table--center-align) td:first-child {
     text-align: left;
   }
-
-  &:not(.cmp-basic-table--center-align) th:last-child,
-  &:not(.cmp-basic-table--center-align) td:last-child {
-    text-align: right;
-  }
 }
