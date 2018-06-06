@@ -115,7 +115,7 @@
     }
   }
 
-  a {
+  a:not([class]) {
     // NOTE: this isn't a direct child selector.
     // We might need to adjust how these styles
     // are getting applied if this starts cascading
