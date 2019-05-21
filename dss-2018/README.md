@@ -1,4 +1,4 @@
-Sparkbox Design Systems Survey Microsite 2018
+Sparkbox Design Systems Survey Microsite
 ======================
 
 Setup
