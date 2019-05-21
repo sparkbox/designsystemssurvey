@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: 'The 2019 Design Systems Survey - Sparkbox',
+    name: '2019 Design Systems Survey',
+    author: `@hearsparkbox`,
+    description: 'How are design systems for websites and apps changing the way the industry works? Sparkbox conducted a survey and is excited to share findings on the benefits and challenges of this impactful, systemic work.'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
