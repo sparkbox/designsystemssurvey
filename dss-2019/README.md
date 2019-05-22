@@ -7,7 +7,7 @@ Setup
 
 2. Install the ([Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start#install-the-gatsby-cli)) globally `npm install -g gatsby-cli`
 
-2. Run `gatsby develop`. This will start a hot-reloading development environment at `localhost:8000`.
+3. Run `gatsby develop`. This will start a hot-reloading development environment at `localhost:8000`.
 
 Gatsby
 -------
