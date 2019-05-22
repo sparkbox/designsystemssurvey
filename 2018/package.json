@@ -24,7 +24,8 @@
     "postsass": "postcss --use autoprefixer -c ./postcss.config.json --no-map --dir ./dist/css ./dist/css/*.css",
     "cachebust": "node ./node_modules/@sparkbox/cachebust/index.js",
     "cachebust:restore": "node ./node_modules/@sparkbox/cachebust/index.js --restore",
-    "cachebust:build": "npm run sass && npm run js && npm run cachebust"
+    "cachebust:build": "npm run sass && npm run js && npm run cachebust",
+    "build": "npm run copy && npm run patterns && npm run sass && npm run cachebust:build"
   },
   "cachebust": {
     "source": [
