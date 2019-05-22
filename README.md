@@ -9,6 +9,21 @@ Setup
 
 3. Run `gatsby develop`. This will start a hot-reloading development environment at `localhost:8000`.
 
+Run 2018 site locally
+-----------------------------
+1. Run `npm run build2018`. This will:
+   1. Remove any current `2018` folder in the `static` directory
+   2. Go into /2018
+   3. Install dependencies
+   4. Build the 2018 survey site
+   5. Copy that build into `static` directory
+
+2. Run `gatsby build` to build the 2019 site.
+
+3. Run a local server. Options for this include:
+   1. Python server, run `python -m SimpleHTTPServer 8000`
+   2. npm server, run `npm i -g http-server`
+
 Gatsby
 -------
 The site will be powered by [Gatsby](https://www.gatsbyjs.org) and will be organized by:
