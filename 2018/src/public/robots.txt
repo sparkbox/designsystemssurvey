@@ -1,0 +1,6 @@
+# www.robotstxt.org/
+# http://code.google.com/web/controlcrawlindex/
+
+Sitemap: https://designsystemssurvey.seesparkbox.com/sitemap_xml
+
+User-agent: *
