@@ -1,0 +1,11 @@
+$bp-sm: 30rem;
+$bp-md: 50rem;
+$bp-lg: 60rem;
+$bp-xl: 80rem;
+
+$breakpoints: (
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg,
+  xl: $bp-xl
+);
