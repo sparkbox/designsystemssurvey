@@ -1,0 +1,109 @@
+@mixin headline-1 {
+  font-family: 'Whitney SSm A';
+  text-align: center;
+  margin: 0;
+  font-size: 10vw;
+
+  [data-text] {
+    font-family: inherit;
+    color: #F448AF;
+
+    @supports (background-clip: text) {
+      position: relative;
+      text-transform: uppercase;
+      display: inline-block;
+      -webkit-text-stroke: 1px #EEABEF;
+      filter: drop-shadow(0 0.0625em 0 #8D0429);
+
+      &::before {
+        position: absolute;
+        content: attr(data-text);
+        color: rgba(0,0,0,0);
+        display: block;
+        top: 0;
+        background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, #11161C 43%, #D2F0FD 45%, #146C8C 63%, #082534 77%);
+        background-clip: text;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.headline-1 {
+  @include headline-1;
+}
+
+.headline-1--small {
+  @include headline-1;
+  font-size: 8vw;
+}
+
+// For "Survey," numbered list numbers, etc.
+@mixin accent-font {
+  font-family: 'Yellowtail';
+  text-align: center;
+  font-size: 25vmin;
+  color: $blue;
+  transform: rotate(-10deg);
+  text-shadow:
+    0 0 0.075em rgba($blue, 0.6),
+    0 0.02em 0 darken($blue, 32%),
+    -0.0075em 0.005em 0 $white,
+    0.01em 0.005em 0 $white,
+    0 0 0.01em black
+    ;
+}
+
+.accent-font {
+  @include accent-font;
+}
+
+@mixin headline-2 {
+  font-family: 'Whitney SSm A';
+  color: $white;
+  font-size: 5rem;
+  line-height: 4.5rem;
+  text-shadow: 0 2px 64px #11161C, 0 2px 4px #11161C, 0 2px 30px #11161C;
+}
+
+.headline-2 {
+  @include headline-2;
+}
+
+// For callouts
+@mixin headline-3 {}
+
+// Table of contents
+@mixin headline-4 {
+  font-family: 'Whitney SSm A';
+  color: $white;
+  font-size: 1.875rem;
+}
+
+.headline-4 {
+  @include headline-4;
+}
+
+@mixin headline-5 {
+  font-family: 'Whitney SSm A';
+  color: $white;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 2.375rem;
+}
+
+.headline-5 {
+  @include headline-5;
+}
+
+@mixin body-copy($color: inherit) {
+  color: $color;
+  font-family: 'Whitney SSm A';
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.body-copy {
+  @include body-copy;
+}
