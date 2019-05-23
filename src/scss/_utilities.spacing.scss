@@ -1,0 +1,204 @@
+// Key
+// all = All. top, right, bottom, left will have the same value.
+// top = Top. Just the value of will be applied to the top
+// rgt = Right. Just the value of will be applied to the right
+// btm = Bottom. Just the value of will be applied to the bottom
+// lft = Left. Just the value of will be applied to the left
+// vrt = Vertical. top and bottom will have the same value.
+// hrz = Horizontal. right and left will have the same value.
+
+$limit: 4;
+
+@for $i from 0 through $limit {
+  $val: $i + rem;
+
+  .util-pad {
+    &-all#{$i} {
+      @include loop-mq {
+        padding: $val;
+      }
+    }
+
+    &-top#{$i} {
+      @include loop-mq {
+        padding-top: $val;
+      }
+    }
+
+    &-lft#{$i} {
+      @include loop-mq {
+        padding-left: $val;
+      }
+    }
+
+    &-rgt#{$i} {
+      @include loop-mq {
+        padding-right: $val;
+      }
+    }
+
+    &-btm#{$i} {
+      @include loop-mq {
+        padding-bottom: $val;
+      }
+    }
+
+    &-vrt#{$i} {
+      @include loop-mq {
+        padding-top: $val;
+        padding-bottom: $val;
+      }
+    }
+
+    &-hrz#{$i} {
+      @include loop-mq {
+        padding-left: $val;
+        padding-right: $val;
+      }
+    }
+  }
+
+  .util-margin {
+    &-all#{$i} {
+      @include loop-mq {
+        margin: $val;
+      }
+    }
+
+    &-top#{$i} {
+      @include loop-mq {
+        margin-top: $val;
+      }
+    }
+
+    &-lft#{$i} {
+      @include loop-mq {
+        margin-left: $val;
+      }
+    }
+
+    &-rgt#{$i} {
+      @include loop-mq {
+        margin-right: $val;
+      }
+    }
+
+    &-btm#{$i} {
+      @include loop-mq {
+        margin-bottom: $val;
+      }
+    }
+
+    &-vrt#{$i} {
+      @include loop-mq {
+        margin-top: $val;
+        margin-bottom: $val;
+      }
+    }
+
+    &-hrz#{$i} {
+      @include loop-mq {
+        margin-left: $val;
+        margin-right: $val;
+      }
+    }
+  }
+}
+
+$smallSpaces: ('025', '050', '075');
+
+@each $space in $smallSpaces {
+  $val: number($space) / 100 + em;
+
+  .util-pad {
+    &-all#{$space} {
+      @include loop-mq {
+        padding: $val;
+      }
+    }
+
+    &-top#{$space} {
+      @include loop-mq {
+        padding-top: $val;
+      }
+    }
+
+    &-lft#{$space} {
+      @include loop-mq {
+        padding-left: $val;
+      }
+    }
+
+    &-rgt#{$space} {
+      @include loop-mq {
+        padding-right: $val;
+      }
+    }
+
+    &-btm#{$space} {
+      @include loop-mq {
+        padding-bottom: $val;
+      }
+    }
+
+    &-vrt#{$space} {
+      @include loop-mq {
+        padding-top: $val;
+        padding-bottom: $val;
+      }
+    }
+
+    &-hrz#{$space} {
+      @include loop-mq {
+        padding-left: $val;
+        padding-right: $val;
+      }
+    }
+  }
+
+  .util-margin {
+    &-all#{$space} {
+      @include loop-mq {
+        margin: $val;
+      }
+    }
+
+    &-top#{$space} {
+      @include loop-mq {
+        margin-top: $val;
+      }
+    }
+
+    &-lft#{$space} {
+      @include loop-mq {
+        margin-left: $val;
+      }
+    }
+
+    &-rgt#{$space} {
+      @include loop-mq {
+        margin-right: $val;
+      }
+    }
+
+    &-btm#{$space} {
+      @include loop-mq {
+        margin-bottom: $val;
+      }
+    }
+
+    &-vrt#{$space} {
+      @include loop-mq {
+        margin-top: $val;
+        margin-bottom: $val;
+      }
+    }
+
+    &-hrz#{$space} {
+      @include loop-mq {
+        margin-left: $val;
+        margin-right: $val;
+      }
+    }
+  }
+}
