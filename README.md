@@ -18,11 +18,15 @@ Run 2018 site locally
    4. Build the 2018 survey site
    5. Copy that build into `static` directory
 
-2. Run `gatsby build` to build the 2019 site.
+2. Run `gatsby build`. This will:
+   1. Build the 2019 site in the root
+   2. Build the 2018 site at `/2018` from the static folder
 
-3. Run a local server. Options for this include:
-   1. Python server, run `python -m SimpleHTTPServer 8000`
-   2. npm server, run `npm i -g http-server`
+3. Run a local server.
+   1. Install npm http-server `npm i -g http-server`
+   2. Start the server from the public folder (this is the compiled site that will be live) `http-server ./public`
+
+4. You can find the 2019 site at the root `localhost:8080` and the 2018 site at `localhost:8080/2018`
 
 Gatsby
 -------
