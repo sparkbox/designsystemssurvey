@@ -1,0 +1,15 @@
+a[href]:not([class]) {
+  color: $blue;
+  border-bottom: 1px solid $blue;
+  text-decoration: none;
+  transition: all ease 150ms;
+
+  &:hover {
+    border-bottom: transparent;
+  }
+
+  &:visited {
+    color: $orange;
+    border-bottom: 1px solid $orange;
+  }
+}
