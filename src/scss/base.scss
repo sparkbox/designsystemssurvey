@@ -29,6 +29,7 @@
 //    custom properties should be described in this section.
 
 @import "settings.variables.breakpoints";
+@import "settings.variables.colors";
 
 // =====================================================================
 // 2. Tools
@@ -49,6 +50,8 @@
 // 4. Elements
 //    Styling for bare HTML elements (like H1, A, etc.). These come with
 //    default styling from the browser so we can redefine them here.
+
+@import "elements.lists.scss";
 
 // =====================================================================
 // 5. Objects
