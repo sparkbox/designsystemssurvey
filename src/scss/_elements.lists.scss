@@ -1,0 +1,46 @@
+
+ol:not([class]),
+ul:not([class]) {
+  margin: 1.5rem 0;
+}
+
+li:not([class]) {
+  margin-bottom: 0.75rem;
+}
+
+ol:not([class]) {
+  counter-reset: count;
+  list-style: none;
+
+  li:not([class]) {
+    counter-increment: count;
+    position: relative;
+
+    &::before {
+      content: counter(count)".";
+      color: $hotpink;
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      right: calc(100% + 1rem);
+      bottom: 0.075rem;
+    }
+  }
+}
+
+ul:not([class]) {
+  list-style: none;
+
+  li:not([class]) {
+    position: relative;
+
+    &::before {
+      content: '•';
+      color: $hotpink;
+      display: inline-block;
+
+      position: absolute;
+      right: calc(100% + 1rem);
+    }
+  }
+}
