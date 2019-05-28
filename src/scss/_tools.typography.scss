@@ -1,10 +1,11 @@
+// Two tone gradient headers, hero section, TOC
 @mixin headline-1 {
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
   font-style: normal;
   font-weight: 800;
   text-align: center;
   margin: 0;
-  font-size: 10vw;
+  font-size: 8.75rem;
 
   [data-text] {
     font-family: inherit;
@@ -37,7 +38,7 @@
 
 .headline-1--small {
   @include headline-1;
-  font-size: 8vw;
+  font-size: 6.25rem;
 }
 
 // For "Survey," numbered list numbers, etc.
@@ -60,11 +61,13 @@
   @include accent-font;
 }
 
+// Section headers
 @mixin headline-2 {
   font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   color: $white;
   font-size: 5rem;
   line-height: 4.5rem;
+  text-transform: uppercase;
   text-shadow: 0 2px 64px #11161C, 0 2px 4px #11161C, 0 2px 30px #11161C;
 }
 
@@ -72,10 +75,10 @@
   @include headline-2;
 }
 
-// For callouts
+// For callout quotes
 @mixin headline-3 {}
 
-// Table of contents
+// Table of contents items
 @mixin headline-4 {
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
   font-style: normal;
@@ -88,6 +91,7 @@
   @include headline-4;
 }
 
+// Intro text
 @mixin headline-5 {
   font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   color: $white;
@@ -100,8 +104,8 @@
   @include headline-5;
 }
 
-@mixin body-copy($color: inherit) {
-  color: $color;
+@mixin body-copy {
+  color: $white;
   font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
