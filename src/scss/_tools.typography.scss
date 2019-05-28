@@ -1,5 +1,7 @@
 @mixin headline-1 {
-  font-family: 'Whitney SSm A';
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-weight: 800;
   text-align: center;
   margin: 0;
   font-size: 10vw;
@@ -40,7 +42,7 @@
 
 // For "Survey," numbered list numbers, etc.
 @mixin accent-font {
-  font-family: 'Yellowtail';
+  font-family: 'Yellowtail', sans-serif;
   text-align: center;
   font-size: 25vmin;
   color: $blue;
@@ -59,7 +61,7 @@
 }
 
 @mixin headline-2 {
-  font-family: 'Whitney SSm A';
+  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   color: $white;
   font-size: 5rem;
   line-height: 4.5rem;
@@ -75,7 +77,9 @@
 
 // Table of contents
 @mixin headline-4 {
-  font-family: 'Whitney SSm A';
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-weight: 800;
   color: $white;
   font-size: 1.875rem;
 }
@@ -85,7 +89,7 @@
 }
 
 @mixin headline-5 {
-  font-family: 'Whitney SSm A';
+  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   color: $white;
   font-size: 1.75rem;
   font-weight: 300;
@@ -98,7 +102,7 @@
 
 @mixin body-copy($color: inherit) {
   color: $color;
-  font-family: 'Whitney SSm A';
+  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 2rem;
