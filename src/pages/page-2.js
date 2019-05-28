@@ -16,6 +16,8 @@ const SecondPage = () => (
     <p class="headline-4">The Respondents</p>
     <h3 class="headline-2">The Respondents</h3>
     <h4 class="headline-3"><span data-text="The 2019 Design Systems Survey received 148 responses from in-house teams who use a design system for their organizations.">The 2019 Design Systems Survey received 148 responses from in-house teams who use a design system for their organizations.</span></h4>
+    <p class="diagram-headline util-margin-btm0">In-House Respondents Breakdown</p>
+    <p class="diagram-copy util-margin-top0">Respondents could select multiple from 19 options and fill out a response to “other”, 163 in-house and agency respondents</p>
     <p class="body-copy">This survey had 256 responses comprised of two respondent types:</p>
 
     <h2 className="headline-4">List Elements</h2>

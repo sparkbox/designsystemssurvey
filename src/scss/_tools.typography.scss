@@ -87,7 +87,7 @@
 
   [data-text] {
     font-family: inherit;
-    color: #DF138C;
+    color: $hotpink;
 
     @supports (background-clip: text) {
       position: relative;
@@ -99,7 +99,7 @@
         color: rgba(0,0,0,0);
         display: block;
         top: 0;
-        background-image: linear-gradient(180deg, #DF138C 0%, #F3C448 100%);
+        background-image: linear-gradient(180deg, $hotpink 0%, #F3C448 100%);
         background-clip: text;
         z-index: 2;
       }
@@ -147,4 +147,46 @@
 
 .body-copy {
   @include body-copy;
+}
+
+@mixin diagram-headline {
+  color: $white;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 3.5rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 0.125rem;
+    position: absolute;
+    top: calc(100% - 2.25rem);
+    left: calc(50% - 7.5rem);
+    background-color: $hotpink;
+    box-shadow: 0 0.25rem mix($hotpink,$orange,50%), 0 0.5rem $orange;
+  }
+}
+
+.diagram-headline {
+  @include diagram-headline;
+}
+
+@mixin diagram-copy {
+  color: $white;
+  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.diagram-copy {
+  @include diagram-copy;
 }
