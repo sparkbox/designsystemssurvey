@@ -17,7 +17,7 @@
       text-transform: uppercase;
       display: inline-block;
       -webkit-text-stroke: 1px #EEABEF;
-      filter: drop-shadow(0 0.0625em 0 #8D0429);
+      filter: drop-shadow(0 0.0325em 0 #8D0429);
 
       &::before {
         position: absolute;
@@ -25,7 +25,7 @@
         color: rgba(0,0,0,0);
         display: block;
         top: 0;
-        background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, #11161C 43%, #D2F0FD 45%, #146C8C 63%, #082534 77%);
+        background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, #11161C 47%, #D2F0FD 48%, #146C8C 63%, #082534 77%);
         background-clip: text;
         z-index: 2;
       }
