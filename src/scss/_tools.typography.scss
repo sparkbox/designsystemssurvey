@@ -5,7 +5,8 @@
   font-weight: 800;
   text-align: center;
   margin: 0;
-  font-size: 8.75rem;
+  font-size: 9vw;
+  white-space: nowrap;
 
   [data-text] {
     font-family: inherit;
@@ -38,7 +39,7 @@
 
 .headline-1--small {
   @include headline-1;
-  font-size: 6.25rem;
+  font-size: 6vw;
 }
 
 // For "Survey," numbered list numbers, etc.
