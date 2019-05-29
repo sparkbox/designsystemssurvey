@@ -5,7 +5,9 @@ ul:not([class]) {
 }
 
 li:not([class]) {
-  margin-bottom: 0.75rem;
+  @include  body-copy;
+  color: $white;
+  margin-bottom: 0.25rem;
 }
 
 ol:not([class]) {

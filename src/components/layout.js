@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
           <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/655912/7241412/css/fonts.css" />
           <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <div
           style={{
             margin: `0 auto`,
