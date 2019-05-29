@@ -1,0 +1,7 @@
+.cmp-intro {
+  @include body-copy;
+
+  @media (min-width: $bp-md) {
+    @include headline-5;
+  }
+}
