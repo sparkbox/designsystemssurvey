@@ -29,9 +29,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
      // This must be last in the array
-     `gatsby-plugin-netlify-headers`,
     {
       resolve: `gatsby-plugin-netlify-headers`,
       options: {
