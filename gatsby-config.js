@@ -31,7 +31,7 @@ module.exports = {
     `gatsby-plugin-sass`,
      // This must be last in the array
     {
-      resolve: `gatsby-plugin-netlify-headers`,
+      resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
           "/*": [
@@ -39,6 +39,6 @@ module.exports = {
           ],
         },
       }
-    }
+    },
   ],
 }
