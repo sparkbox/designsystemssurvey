@@ -30,8 +30,17 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+     // This must be last in the array
+     `gatsby-plugin-netlify-headers`,
+    {
+      resolve: `gatsby-plugin-netlify-headers`,
+      options: {
+        headers: {
+          "/*": [
+            "Basic-Auth: sparkbox:dss2019$",
+          ],
+        },
+      }
+    }
   ],
 }
