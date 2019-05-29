@@ -38,10 +38,9 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <footer style={{ color: "white"}}>
+            <p>© {new Date().getFullYear()} Sparkbox.</p>
+            <p>All rights reserved.</p>
           </footer>
         </div>
       </>
