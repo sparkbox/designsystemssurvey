@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'The 2019 Design Systems Survey - Sparkbox',
+    title: 'The 2019 Design Systems Survey by Sparkbox',
     name: '2019 Design Systems Survey',
     author: `@hearsparkbox`,
     description: 'How are design systems for websites and apps changing the way the industry works? Sparkbox conducted a survey and is excited to share findings on the benefits and challenges of this impactful, systemic work.'
@@ -28,6 +28,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-mdx`,
     `gatsby-plugin-sass`,
      // This must be last in the array
     {
