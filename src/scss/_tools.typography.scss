@@ -217,9 +217,13 @@
   @include body-copy;
 }
 
-// Intro text
-.body-copy--large {
+@mixin body-copy--large {
   @include body-copy;
   font-size: 1.75rem;
   line-height: 2.375rem;
+}
+
+// Intro text
+.body-copy--large {
+  @include body-copy--large;
 }
