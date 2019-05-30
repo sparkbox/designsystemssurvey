@@ -1,5 +1,6 @@
 // Two tone gradient headers, hero section, TOC
-@mixin chrome {
+// previously headline-1
+.chrome {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
@@ -15,23 +16,17 @@
     text-transform: uppercase;
     filter: drop-shadow(0 0.0325em 0 #8D0429);
     background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, $black 43%, #D2F0FD 45%, #146C8C 63%, #082534 77%);
-    background-clip: text;;
+    background-clip: text;
     -webkit-text-stroke: 1px #EEABEF;
+  }
+
+  &--small {
+    font-size: 6vw;
   }
 }
 
-// previously headline-1
-.chrome {
-  @include chrome;
-}
-
-.chrome--small {
-  @include chrome;
-  font-size: 6vw;
-}
-
 // For "Survey," TOC numbers, etc.
-@mixin accent-font {
+.accent-font {
   font-family: $font-script;
   text-align: center;
   font-size: 25vmin;
@@ -46,33 +41,25 @@
     ;
 }
 
-.accent-font {
-  @include accent-font;
-}
-
 // Section headers
 // previously headline-2
-@mixin section-heading {
+.section-heading {
   font-family: $font-heading;
   color: $white;
   font-size: 5rem;
-  line-height: 4.5rem;
+  line-height: 1;
   text-transform: uppercase;
   text-shadow: 0 2px 64px $black, 0 2px 4px $black, 0 2px 30px $black;
 }
 
-.section-heading {
-  @include section-heading;
-}
-
 // For callout quotes, pink to orange gradient
 // previously headline-3
-@mixin primary-content-heading {
+.primary-content-heading {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   font-size: 2.75rem;
-  line-height: 3rem;
+  line-height: 1.2;
   text-shadow: 0 0 6px 0 rgba(243,196,72,0.2);
   color: $hotpink;
 
@@ -87,18 +74,14 @@
   }
 }
 
-.primary-content-heading {
-  @include primary-content-heading;
-}
-
 // yellow to orange gradient
-@mixin secondary-heading {
+.secondary-heading {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   color: $hotpink;
   font-size: 2rem;
-  line-height: 2.5rem;
+  line-height: 1.5;
   text-shadow: 0 0 6px 0 rgba(243,196,72,0.2);
 
   @supports (background-clip: text) {
@@ -112,18 +95,14 @@
   }
 }
 
-.secondary-heading {
-  @include secondary-heading;
-}
-
 // triple border bottom heading
-@mixin diagram-heading {
+.diagram-heading {
   color: $white;
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   font-size: 2rem;
-  line-height: 2.25rem;
+  line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -143,29 +122,21 @@
   }
 }
 
-.diagram-heading {
-  @include diagram-heading;
-}
-
 // small copy underneath diagram-heading
-@mixin diagram-copy {
+.diagram-copy {
   color: $white;
   font-family: $font-body;
   font-size: 1.25rem;
   font-weight: 300;
-  line-height: 1.5rem;
+  line-height: 1.5;
   text-align: center;
   max-width: 40rem;
   margin: 0 auto;
 }
 
-.diagram-copy {
-  @include diagram-copy;
-}
-
 // Table of contents items
 // previously headline-4
-@mixin label-heading {
+.label-heading {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
@@ -173,29 +144,9 @@
   font-size: 1.875rem;
 }
 
-.label-heading {
-  @include label-heading;
-}
-
-@mixin body-copy {
-  color: $white;
-  font-family: $font-body;
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 2rem;
-}
-
-.body-copy {
-  @include body-copy;
-}
-
-@mixin body-copy--large {
-  @include body-copy;
-  font-size: 1.75rem;
-  line-height: 2.375rem;
-}
-
 // Intro text
 .body-copy--large {
-  @include body-copy--large;
+  @include body-copy;
+  font-size: 1.75rem;
+  line-height: 1.5;
 }
