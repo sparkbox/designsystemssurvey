@@ -2,6 +2,7 @@
   @include body-copy;
 
   @media (min-width: $bp-md) {
-    @include body-copy--large;
+    font-size: 1.75rem;
+    line-height: 1.5;
   }
 }
