@@ -1,6 +1,6 @@
 // Two tone gradient headers, hero section, TOC
 @mixin chrome {
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   text-align: center;
@@ -36,7 +36,7 @@
 
 // For "Survey," TOC numbers, etc.
 @mixin accent-font {
-  font-family: 'Yellowtail', sans-serif;
+  font-family: $font-script;
   text-align: center;
   font-size: 25vmin;
   color: $blue;
@@ -57,7 +57,7 @@
 // Section headers
 // previously headline-2
 @mixin section-heading {
-  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
+  font-family: $font-heading;
   color: $white;
   font-size: 5rem;
   line-height: 4.5rem;
@@ -72,7 +72,7 @@
 // For callout quotes, pink to orange gradient
 // previously headline-3
 @mixin primary-content-heading {
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   font-size: 2.75rem;
@@ -97,7 +97,7 @@
 
 // yellow to orange gradient
 @mixin secondary-heading {
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   color: $hotpink;
@@ -123,7 +123,7 @@
 // triple border bottom heading
 @mixin diagram-heading {
   color: $white;
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   font-size: 2rem;
@@ -153,7 +153,7 @@
 // small copy underneath diagram-heading
 @mixin diagram-copy {
   color: $white;
-  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
+  font-family: $font-body;
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.5rem;
@@ -167,7 +167,7 @@
 // Table of contents items
 // previously headline-4
 @mixin label-heading {
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   color: $white;
@@ -180,7 +180,7 @@
 
 @mixin body-copy {
   color: $white;
-  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
+  font-family: $font-body;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 2rem;
