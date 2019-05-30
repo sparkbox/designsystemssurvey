@@ -10,25 +10,16 @@
 
   [data-text] {
     font-family: inherit;
-    color: #F448AF;
+    color: $hotpink;
 
     @supports (background-clip: text) {
+      color: transparent;
       position: relative;
       text-transform: uppercase;
-      display: inline-block;
-      -webkit-text-stroke: 1px #EEABEF;
       filter: drop-shadow(0 0.0325em 0 #8D0429);
-
-      &::before {
-        position: absolute;
-        content: attr(data-text);
-        color: rgba(0,0,0,0);
-        display: block;
-        top: 0;
-        background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, #11161C 47%, #D2F0FD 48%, #146C8C 63%, #082534 77%);
-        background-clip: text;
-        z-index: 2;
-      }
+      background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, $black 43%, #D2F0FD 45%, #146C8C 63%, #082534 77%);
+      background-clip: text;;
+      -webkit-text-stroke: 1px #EEABEF;
     }
   }
 }
@@ -55,7 +46,7 @@
     0 0.02em 0 darken($blue, 32%),
     -0.0075em 0.005em 0 $white,
     0.01em 0.005em 0 $white,
-    0 0 0.01em black
+    0 0 0.01em $black
     ;
 }
 
@@ -71,7 +62,7 @@
   font-size: 5rem;
   line-height: 4.5rem;
   text-transform: uppercase;
-  text-shadow: 0 2px 64px #11161C, 0 2px 4px #11161C, 0 2px 30px #11161C;
+  text-shadow: 0 2px 64px $black, 0 2px 4px $black, 0 2px 30px $black;
 }
 
 .section-heading {
@@ -87,26 +78,16 @@
   font-size: 2.75rem;
   line-height: 3rem;
   text-shadow: 0 0 6px 0 rgba(243,196,72,0.2);
+  color: $hotpink;
 
-  [data-text] {
-    font-family: inherit;
-    color: $hotpink;
-
-    @supports (background-clip: text) {
-      position: relative;
-      display: inline-block;
-
-      &::before {
-        position: absolute;
-        content: attr(data-text);
-        color: rgba(0,0,0,0);
-        display: block;
-        top: 0;
-        background-image: linear-gradient(180deg, $hotpink 0%, #F3C448 100%);
-        background-clip: text;
-        z-index: 2;
-      }
-    }
+  @supports (background-clip: text) {
+    position: relative;
+    content: attr(data-text);
+    color: transparent;
+    top: 0;
+    background-image: linear-gradient(180deg, $hotpink 0%, $yellow 100%);
+    background-clip: text;
+    z-index: 2;
   }
 }
 
@@ -124,22 +105,14 @@
   line-height: 2.5rem;
   text-shadow: 0 0 6px 0 rgba(243,196,72,0.2);
 
-  [data-text] {
-    @supports (background-clip: text) {
-      position: relative;
-      display: inline-block;
-
-      &::before {
-        position: absolute;
-        content: attr(data-text);
-        color: rgba(0,0,0,0);
-        display: block;
-        top: 0;
-        background-image: linear-gradient(90deg, $yellow 20%, $orange 100%);
-        background-clip: text;
-        z-index: 2;
-      }
-    }
+  @supports (background-clip: text) {
+    position: relative;
+    content: attr(data-text);
+    color: transparent;
+    top: 0;
+    background-image: linear-gradient(90deg, $yellow 0%, $orange 100%);
+    background-clip: text;
+    z-index: 2;
   }
 }
 
@@ -169,7 +142,7 @@
     top: calc(100% - 2.25rem);
     left: calc(50% - 7.5rem);
     background-color: $hotpink;
-    box-shadow: 0 0.25rem mix($hotpink,$orange,50%), 0 0.5rem $orange;
+    box-shadow: 0 0.25rem mix($hotpink, $orange, 50%), 0 0.5rem $orange;
   }
 }
 
