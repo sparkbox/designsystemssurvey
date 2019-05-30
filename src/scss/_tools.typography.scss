@@ -7,20 +7,16 @@
   margin: 0;
   font-size: 9vw;
   white-space: nowrap;
+  color: $hotpink;
 
-  [data-text] {
-    font-family: inherit;
-    color: $hotpink;
-
-    @supports (background-clip: text) {
-      color: transparent;
-      position: relative;
-      text-transform: uppercase;
-      filter: drop-shadow(0 0.0325em 0 #8D0429);
-      background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, $black 43%, #D2F0FD 45%, #146C8C 63%, #082534 77%);
-      background-clip: text;;
-      -webkit-text-stroke: 1px #EEABEF;
-    }
+  @supports (background-clip: text) {
+    color: transparent;
+    position: relative;
+    text-transform: uppercase;
+    filter: drop-shadow(0 0.0325em 0 #8D0429);
+    background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, $black 43%, #D2F0FD 45%, #146C8C 63%, #082534 77%);
+    background-clip: text;;
+    -webkit-text-stroke: 1px #EEABEF;
   }
 }
 

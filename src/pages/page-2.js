@@ -10,13 +10,13 @@ const SecondPage = () => (
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
 
-    <h1 class="chrome"><span data-text="design systems">Design systems</span></h1>
+    <h1 class="chrome">Design systems</h1>
     <p class="accent-font">Survey</p>
-    <h2 class="chrome--small"><span data-text="Table of Contents">Table of Contents</span></h2>
+    <h2 class="chrome--small">Table of Contents</h2>
     <p class="label-heading">The Respondents</p>
     <h3 class="section-heading">The Respondents</h3>
     <h4 class="primary-content-heading">The 2019 Design Systems Survey received 148 responses from in-house teams who use a design system for their organizations.</h4>
-    <h4 class="secondary-heading"><span data-text="Have a dedicated team to maintain the design system.">Have a dedicated team to maintain the design system.</span></h4>
+    <h4 class="secondary-heading">Have a dedicated team to maintain the design system.</h4>
     <p class="diagram-heading util-margin-btm0">In-House Respondents Breakdown</p>
     <p class="diagram-copy">Respondents could select multiple from 19 options and fill out a response to “other”, 163 in-house and agency respondents</p>
     <p class="body-copy">This survey had 256 responses comprised of two respondent types:</p>
