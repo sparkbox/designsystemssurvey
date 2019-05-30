@@ -1,5 +1,5 @@
 // Two tone gradient headers, hero section, TOC
-@mixin headline-1 {
+@mixin chrome {
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -33,12 +33,13 @@
   }
 }
 
-.headline-1 {
-  @include headline-1;
+// previously headline-1
+.chrome {
+  @include chrome;
 }
 
-.headline-1--small {
-  @include headline-1;
+.chrome--small {
+  @include chrome;
   font-size: 6vw;
 }
 
@@ -63,7 +64,8 @@
 }
 
 // Section headers
-@mixin headline-2 {
+// previously headline-2
+@mixin section-heading {
   font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   color: $white;
   font-size: 5rem;
@@ -72,12 +74,13 @@
   text-shadow: 0 2px 64px #11161C, 0 2px 4px #11161C, 0 2px 30px #11161C;
 }
 
-.headline-2 {
-  @include headline-2;
+.section-heading {
+  @include section-heading;
 }
 
 // For callout quotes
-@mixin headline-3 {
+// previously headline-3
+@mixin primary-content-heading {
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -107,49 +110,11 @@
   }
 }
 
-.headline-3 {
-  @include headline-3;
+.primary-content-heading {
+  @include primary-content-heading;
 }
 
-// Table of contents items
-@mixin headline-4 {
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  color: $white;
-  font-size: 1.875rem;
-}
-
-.headline-4 {
-  @include headline-4;
-}
-
-// Intro text
-@mixin headline-5 {
-  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
-  color: $white;
-  font-size: 1.75rem;
-  font-weight: 300;
-  line-height: 2.375rem;
-}
-
-.headline-5 {
-  @include headline-5;
-}
-
-@mixin body-copy {
-  color: $white;
-  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 2rem;
-}
-
-.body-copy {
-  @include body-copy;
-}
-
-@mixin diagram-headline {
+@mixin diagram-heading {
   color: $white;
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
   font-style: normal;
@@ -174,8 +139,8 @@
   }
 }
 
-.diagram-headline {
-  @include diagram-headline;
+.diagram-heading {
+  @include diagram-heading;
 }
 
 @mixin diagram-copy {
@@ -189,4 +154,37 @@
 
 .diagram-copy {
   @include diagram-copy;
+}
+
+// Table of contents items
+// previously headline-4
+@mixin label-heading {
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  color: $white;
+  font-size: 1.875rem;
+}
+
+.label-heading {
+  @include label-heading;
+}
+
+@mixin body-copy {
+  color: $white;
+  font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.body-copy {
+  @include body-copy;
+}
+
+//previously headline-5
+.body-copy--large {
+  @include body-copy;
+  font-size: 1.75rem;
+  line-height: 2.375rem;
 }
