@@ -43,7 +43,7 @@
   font-size: 6vw;
 }
 
-// For "Survey," numbered list numbers, etc.
+// For "Survey," TOC numbers, etc.
 @mixin accent-font {
   font-family: 'Yellowtail', sans-serif;
   text-align: center;
@@ -78,7 +78,7 @@
   @include section-heading;
 }
 
-// For callout quotes
+// For callout quotes, pink to orange gradient
 // previously headline-3
 @mixin primary-content-heading {
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
@@ -114,6 +114,7 @@
   @include primary-content-heading;
 }
 
+// yellow to orange gradient
 @mixin secondary-heading {
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
   font-style: normal;
@@ -146,6 +147,7 @@
   @include secondary-heading;
 }
 
+// triple border bottom heading
 @mixin diagram-heading {
   color: $white;
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
@@ -175,6 +177,7 @@
   @include diagram-heading;
 }
 
+// small copy underneath diagram-heading
 @mixin diagram-copy {
   color: $white;
   font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
@@ -214,6 +217,7 @@
   @include body-copy;
 }
 
+// Intro text
 .body-copy--large {
   @include body-copy;
   font-size: 1.75rem;
