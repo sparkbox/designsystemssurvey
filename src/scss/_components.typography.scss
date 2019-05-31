@@ -97,6 +97,11 @@
 
 // triple border bottom heading
 .diagram-heading {
+  $size: 4rem;
+
+  margin: 0;
+  padding-bottom: $size;
+  position: relative;
   color: $white;
   font-family: $font-heading;
   font-style: normal;
@@ -105,20 +110,17 @@
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
-  position: relative;
-  padding-bottom: 3.5rem;
-  margin-bottom: 0;
 
-  &::after {
+  &::before {
     content: '';
     display: block;
     width: 15rem;
     height: 0.125rem;
     position: absolute;
-    top: calc(100% - 2.25rem);
+    top: calc(100% - #{$size / 2} - 0.0625rem);
     left: calc(50% - 7.5rem);
-    background-color: $hotpink;
-    box-shadow: 0 0.25rem mix($hotpink, $orange, 50%), 0 0.5rem $orange;
+    background-color: mix($hotpink, $orange, 50%);
+    box-shadow: 0 -0.25rem $hotpink, 0 0.25rem $orange;
   }
 }
 
