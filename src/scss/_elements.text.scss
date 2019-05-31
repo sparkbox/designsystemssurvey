@@ -17,3 +17,8 @@ a[href]:not([class]) {
     border-bottom: 1px solid $orange;
   }
 }
+
+mark {
+  background: none;
+  color: $yellow;
+}

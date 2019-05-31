@@ -25,18 +25,18 @@ const SecondPage = () => (
     <p className="font-body-copy">Unordered List</p>
     <ul>
       <li>One</li>
-      <li>Two</li>
+      <li>Two <mark class="util-italic">tie</mark></li>
       <li>Three</li>
-      <li>Four</li>
+      <li>Four <mark class="util-italic">tie</mark></li>
       <li>Five</li>
     </ul>
     <p className="font-body-copy">Ordered List</p>
     <ol>
       <li>One</li>
       <li>Two</li>
-      <li>Three</li>
-      <li>Four</li>
-      <li>Five</li>
+      <li>Three <mark class="util-bold">tie</mark></li>
+      <li>Four <mark>tie</mark></li>
+      <li>Five <mark class="util-bold util-italic">tie</mark></li>
     </ol>
 
     <Link to="/">Go back to the homepage</Link>
