@@ -1,0 +1,17 @@
+.cmp-percentage-list {
+  @include body-copy;
+  list-style-type: none;
+  margin: 2rem auto;
+  padding: 0;
+  max-width: $bp-lg;
+
+  @media (min-width: $bp-md) {
+    columns: 2;
+    margin: 7.5rem auto;
+  }
+
+  &__item {
+    max-width: 28rem;
+    margin: 0 auto;
+  }
+}
