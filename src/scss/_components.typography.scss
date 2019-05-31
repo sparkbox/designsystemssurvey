@@ -54,18 +54,17 @@
 
 // For callout quotes, pink to orange gradient
 // previously headline-3
-.font-primary-content-heading {
+.font-primary-heading {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  text-shadow: 0 0 6px 0 rgba(243,196,72,0.2);
+  text-shadow: 0 0 0.375rem 0 rgba($yellow, 0.2);
   color: $hotpink;
 
   @supports (background-clip: text) {
     position: relative;
-    content: attr(data-text);
     color: transparent;
     top: 0;
     background-image: linear-gradient(180deg, $hotpink 0%, $yellow 100%);
@@ -82,11 +81,10 @@
   color: $hotpink;
   font-size: 2rem;
   line-height: 1.5;
-  text-shadow: 0 0 6px 0 rgba(243,196,72,0.2);
+  text-shadow: 0 0 6px 0 rgba($yellow, 0.2);
 
   @supports (background-clip: text) {
     position: relative;
-    content: attr(data-text);
     color: transparent;
     top: 0;
     background-image: linear-gradient(90deg, $yellow 0%, $orange 100%);
@@ -138,7 +136,7 @@
 
 // Table of contents items
 // previously headline-4
-.font-label-heading {
+.font-label {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
@@ -147,8 +145,10 @@
 }
 
 // Intro text
-.font-body-copy--large {
-  @include body-copy;
+.font-prominent {
+  color: $white;
+  font-family: $font-body;
   font-size: 1.75rem;
+  font-weight: 300;
   line-height: 1.5;
 }
