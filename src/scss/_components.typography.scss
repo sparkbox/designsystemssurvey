@@ -1,6 +1,6 @@
 // Two tone gradient headers, hero section, TOC
 // previously headline-1
-.chrome {
+.font-chrome {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
@@ -26,7 +26,7 @@
 }
 
 // For "Survey," TOC numbers, etc.
-.accent-font {
+.font-accent {
   font-family: $font-script;
   text-align: center;
   font-size: 25vmin;
@@ -43,7 +43,7 @@
 
 // Section headers
 // previously headline-2
-.section-heading {
+.font-section-heading {
   font-family: $font-heading;
   color: $white;
   font-size: 5rem;
@@ -54,7 +54,7 @@
 
 // For callout quotes, pink to orange gradient
 // previously headline-3
-.primary-content-heading {
+.font-primary-content-heading {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
@@ -75,7 +75,7 @@
 }
 
 // yellow to orange gradient
-.secondary-heading {
+.font-secondary-heading {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
@@ -96,7 +96,7 @@
 }
 
 // triple border bottom heading
-.diagram-heading {
+.font-diagram-heading {
   $size: 4rem;
 
   margin: 0;
@@ -125,7 +125,7 @@
 }
 
 // small copy underneath diagram-heading
-.diagram-copy {
+.font-diagram-copy {
   color: $white;
   font-family: $font-body;
   font-size: 1.25rem;
@@ -138,7 +138,7 @@
 
 // Table of contents items
 // previously headline-4
-.label-heading {
+.font-label-heading {
   font-family: $font-heading;
   font-style: normal;
   font-weight: 800;
@@ -147,7 +147,7 @@
 }
 
 // Intro text
-.body-copy--large {
+.font-body-copy--large {
   @include body-copy;
   font-size: 1.75rem;
   line-height: 1.5;
