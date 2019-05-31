@@ -1,8 +1,0 @@
-.cmp-intro {
-  @include body-copy;
-
-  @media (min-width: $bp-md) {
-    font-size: 1.75rem;
-    line-height: 1.5;
-  }
-}

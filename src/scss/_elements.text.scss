@@ -1,4 +1,4 @@
-p {
+p:not([class]) {
   @include body-copy;
 }
 
@@ -6,7 +6,7 @@ a[href]:not([class]) {
   color: $blue;
   border-bottom: 1px solid $blue;
   text-decoration: none;
-  transition: all ease 150ms;
+  transition: border-bottom ease 150ms;
 
   &:hover {
     border-bottom: transparent;
