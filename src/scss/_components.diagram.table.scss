@@ -1,0 +1,10 @@
+.cmp-diagram-table {
+  @media (min-width: $bp-md) {
+    display: none;
+  }
+
+  // Wrap this around tables to make them scrollable
+  &__scrollable {
+    overflow: auto;
+  }
+}
