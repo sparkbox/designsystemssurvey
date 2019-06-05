@@ -1,37 +1,70 @@
-.cmp-percentage-card {
-  margin: 2rem;
-  text-align: center;
+.cmp-percentage-highlight {
+  counter-reset: count;
+  list-style: none;
+  padding: 0;
 
-  &__container {
+  @media (min-width: $bp-md) {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 
-    @media (min-width: $bp-md) {
-      flex-wrap: nowrap;
-    }
+  &__item {
+    margin: 0 1rem;
+    text-align: center;
   }
 
   &__icon {
-    height: 35vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     max-height: 16.25rem;
-    max-width: 16.25rem;
+    height: 35vw;
+    margin-bottom: 1.5rem;
 
     @media (min-width: $bp-md) {
       height: 20vw;
-      align-self: start;
+    }
+
+    &--palette {
+      background-image: svg($icon-palette);
+    }
+
+    &--typography {
+      background-image: svg($icon-typography);
+    }
+
+    &--form {
+      background-image: svg($icon-form);
     }
   }
 
   &__label {
-    margin: 1.5rem 0 0.5rem;
-    align-self: start;
+    margin: 0 1rem 0;
+    display: block;
   }
 
-  &__percentage {
+  &__first-word {
+    position: relative;
+    counter-increment: count;
+
+    &::before {
+      content: counter(count)".";
+      color: mix($white, $black, 50%);
+      font-size: 1.875rem;
+      font-weight: bold;
+      position: absolute;
+      right: calc(100% + 0.5rem);
+    }
+  }
+
+  &__value {
     font-family: $font-heading;
     font-style: normal;
     font-weight: 800;
     font-size: 2.875rem;
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
   }
 }
