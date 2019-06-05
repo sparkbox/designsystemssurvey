@@ -32,6 +32,7 @@
 @import "settings.variables.colors";
 @import "settings.variables.fonts";
 @import "settings.variables.icons";
+@import "settings.variables.max-width";
 
 // =====================================================================
 // 2. Tools
@@ -63,6 +64,8 @@
 // 5. Objects
 //    Class-based selectors which define undecorated design patterns,
 //    for example media object known from OOCSS.
+
+@import "objects.layout.max-width.scss";
 
 // =====================================================================
 // 6. Components
