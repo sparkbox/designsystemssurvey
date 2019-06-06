@@ -41,58 +41,6 @@
     ;
 }
 
-// Section headers
-// previously headline-2
-.font-section-heading {
-  font-family: $font-heading;
-  color: $white;
-  font-size: 5rem;
-  line-height: 1;
-  text-transform: uppercase;
-  text-shadow: 0 2px 64px $black, 0 2px 4px $black, 0 2px 30px $black;
-}
-
-// For callout quotes, pink to orange gradient
-// previously headline-3
-.font-primary-heading {
-  font-family: $font-heading;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 2.75rem;
-  line-height: 1.2;
-  text-shadow: 0 0 0.375rem 0 rgba($yellow, 0.2);
-  color: $hotpink;
-
-  @supports (background-clip: text) {
-    position: relative;
-    color: transparent;
-    top: 0;
-    background-image: linear-gradient(180deg, $hotpink 0%, $yellow 100%);
-    background-clip: text;
-    z-index: 2;
-  }
-}
-
-// yellow to orange gradient
-.font-secondary-heading {
-  font-family: $font-heading;
-  font-style: normal;
-  font-weight: 800;
-  color: $hotpink;
-  font-size: 2rem;
-  line-height: 1.5;
-  text-shadow: 0 0 6px 0 rgba($yellow, 0.2);
-
-  @supports (background-clip: text) {
-    position: relative;
-    color: transparent;
-    top: 0;
-    background-image: linear-gradient(90deg, $yellow 0%, $orange 100%);
-    background-clip: text;
-    z-index: 2;
-  }
-}
-
 // triple border bottom heading
 .font-diagram-heading {
   $size: 4rem;
