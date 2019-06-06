@@ -12,7 +12,6 @@ import Section4 from "../sections/section-4"
 import Section5 from "../sections/section-5"
 import ContentBlock from "../components/content-block"
 
-
 const IndexPage = () => (
   <Layout>
     <ContentBlock>

@@ -1,0 +1,107 @@
+.svg-diamond {
+  display: none;
+
+  @supports(transform-style: preserve-3d) {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    &__path {
+      fill: mix($green, $black, 20%);
+      stroke: $green;
+      stroke-width: 2px;
+      vector-effect: non-scaling-stroke;
+    }
+  }
+}
+
+.cmp-diamond {
+  @supports(transform-style: preserve-3d) {
+    --height: var(--size);
+    --width: calc(var(--size) * 1.16);
+
+    --rotate: 70deg;
+    --offset: calc(var(--size) * -0.5);
+
+    height: calc(var(--height) * 1.625);
+    width: var(--width);
+    margin: 0 calc(var(--size) * 0.1);
+
+    background: none;
+    position: relative;
+    filter: drop-shadow(0 0 0.25rem rgba($green, 0.5));
+    animation: diamond-pulse 1s 250ms ease-in-out alternate infinite;
+
+    &__shape {
+      height: var(--height);
+      width: var(--width);
+      position: relative;
+      top: var(--offset);
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+      transform-origin: 50% 50%;
+      transform:
+        rotateX(var(--shape-angle))
+        rotateZ(var(--rotate));
+      perspective-origin: center;
+      animation: diamond-spin var(--shape-animation-duration) linear infinite;
+    }
+
+    &__half {
+      transform-style: preserve-3d;
+
+      &--top {
+        transform: translateZ(calc(var(--height) * 0));
+      }
+
+      &--bottom {
+        transform: translateZ(calc(var(--height) * -1.885));
+      }
+    }
+
+    &__side {
+      height: var(--height);
+      width: var(--width);
+      position: absolute;
+      transform-origin: top center;
+      background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 75"><path fill="#{mix($green, $black, 20%)}" stroke="#{$green}" stroke-width="0.5" vector-effect="non-scaling" d="M43.5 0L0 75h87L43.5 0z"/></svg>') no-repeat center / contain;
+    }
+
+    &__side--1 {
+      transform: translateY(calc(var(--height) * 0.5)) rotateX(-70.5deg);
+    }
+
+    &__side--2 {
+      transform: rotateX(180deg) translateY(calc(var(--height) * -0.5)) rotateZ(-60deg) rotateX(70.5deg);
+    }
+
+    &__side--3 {
+      transform: rotateZ(90deg) translateX(calc(var(--height) * 0.5)) rotateZ(30deg) rotateX(-70.5deg);
+    }
+
+    &__side--4 {
+      transform: translateY(calc(var(--height) * 0.5)) rotateX(70.5deg);
+    }
+
+    &__side--5 {
+      transform: rotateX(180deg) translateY(calc(var(--height) * -0.5)) rotateZ(-60deg) rotateX(-70.5deg);
+    }
+
+    &__side--6 {
+      transform: rotateZ(90deg) translateX(calc(var(--height) * 0.5)) rotateZ(30deg) rotateX(70.5deg);
+    }
+  }
+}
+
+@keyframes diamond-spin {
+  to {
+    transform: rotateX(var(--shape-angle)) rotateZ(calc(var(--rotate) + 360deg));
+  }
+}
+
+@keyframes diamond-pulse {
+  to {
+    filter: drop-shadow(0 0 0.5rem rgba($green, 0.75));
+  }
+}

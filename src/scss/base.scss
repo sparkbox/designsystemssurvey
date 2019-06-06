@@ -78,6 +78,7 @@
 
 @import "components.404";
 @import "components.diagram";
+@import "components.diagram.table";
 @import "components.diagram.chart";
 @import "components.form";
 @import "components.diagram.key";
@@ -87,6 +88,12 @@
 @import "components.skip-link";
 @import "components.table-of-contents";
 @import "components.chart.row-chart";
+@import "components.respondents";
+
+@import "components.shape.pyramid";
+@import "components.shape.cube";
+@import "components.shape.diamond";
+@import "components.shape.dodecahedron";
 
 // =====================================================================
 // 7. Utilities

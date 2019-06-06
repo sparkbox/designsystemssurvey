@@ -2,4 +2,9 @@
   @each $key, $val in $colors {
     --color-#{$key}: #{$val};
   }
+
+  --shape-angle: 60deg;
+  --shape-animation-duration: 4s;
+  
+  --size: 10rem;
 }

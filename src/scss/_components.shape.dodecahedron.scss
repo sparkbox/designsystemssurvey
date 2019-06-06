@@ -1,0 +1,137 @@
+.svg-dodecahedron {
+  display: none;
+
+  @supports(transform-style: preserve-3d) {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    &__path {
+      fill: mix($orange, $black, 20%);
+      stroke: $orange;
+      stroke-width: 1.5px;
+      vector-effect: non-scaling-stroke;
+    }
+  }
+}
+
+.cmp-dodecahedron {
+  @supports(transform-style: preserve-3d) {
+    --height: var(--size);
+    --width: calc(var(--size) * 1.16);
+
+    --z: 40deg;
+    --move: cacl(var(--size) * -0.5);
+
+    --angle: 116deg;
+    --moveX: calc(var(--height) * 0.5);
+    --moveY: calc(var(--width) * 0.575);
+
+    height: var(--height);
+    width: var(--width);
+    margin: 0 calc(calc(var(--size) * 0.2));
+    filter: drop-shadow(0 0 0.25rem rgba($orange, 0.5));
+    animation: dodecahedron-pulse 1s 750ms ease-in-out alternate infinite;
+
+    &__shape {
+      height: var(--height);
+      width: var(--width);
+      position: relative;
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+      transform-origin: 50% 50%;
+      perspective-origin: center;
+      transform:
+        rotateX(var(--shape-angle))
+        rotateY(var(--z))
+      ;
+      animation: dodecahedron-spin var(--shape-animation-duration) linear infinite;
+    }
+
+    &__top {
+      transform-style: preserve-3d;
+      transform: translateZ(calc(var(--height) * -0.875));
+    }
+
+    &__bottom {
+      transform-style: preserve-3d;
+      transform-origin: center;
+      transform:
+        rotateY(180deg)
+        rotateZ(36deg)
+        translateZ(calc(var(--height) * -0.675))
+        translatex(calc(var(--height) * 0.3))
+        translatey(calc(var(--height) * -0.1));
+    }
+
+    &__side {
+      height: var(--height);
+      width: var(--width);
+      position: absolute;
+      transform-origin: center;
+
+      &--1 {
+        transform:
+          translateY(calc(var(--height) * -0.05))
+          translateZ(calc(var(--height) * 0.05));
+      }
+
+      &--2 {
+        transform:
+          translatez(var(--moveX))
+          translatey(var(--moveY))
+          rotateX(calc(var(--angle) * -1));
+      }
+
+      &--3 {
+        transform:
+        rotatez(-72deg)
+        translatez(var(--moveX))
+        translatey(var(--moveY))
+        rotateX(calc(var(--angle) * -1));
+      }
+
+      &--4 {
+        transform:
+        rotateZ(-144deg)
+        translatez(var(--moveX))
+        translatey(var(--moveY))
+        rotateX(calc(var(--angle) * -1));
+      }
+
+      &--5 {
+        transform:
+        rotateZ(-216deg)
+        translatez(var(--moveX))
+        translatey(var(--moveY))
+        rotateX(calc(var(--angle) * -1));
+      }
+
+      &--6 {
+        transform:
+        rotateZ(-288deg)
+        translatez(var(--moveX))
+        translatey(var(--moveY))
+        rotateX(calc(var(--angle) * -1));
+      }
+    }
+  }
+}
+
+@keyframes dodecahedron-spin {
+  to {
+    transform:
+      rotateX(var(--shape-angle))
+      rotateY(calc(var(--z) - 360deg))
+    ;
+  }
+}
+
+@keyframes dodecahedron-pulse {
+  to {
+    filter: drop-shadow(0 0 0.5rem rgba($orange, 0.75));
+  }
+}
+
+
