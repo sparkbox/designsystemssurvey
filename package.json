@@ -45,5 +45,10 @@
   },
   "keywords": [
     "gatsby"
+  ],
+  "browserslist": [
+    "ie 11",
+    "> 5%",
+    "last 5 versions"
   ]
 }

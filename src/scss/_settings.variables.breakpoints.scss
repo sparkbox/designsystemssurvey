@@ -5,9 +5,16 @@ $bp-lg: 60rem;
 $bp-xl: 80rem;
 
 $breakpoints: (
-  xs: $bp-sm,
+  xs: $bp-xs,
   sm: $bp-sm,
   md: $bp-md,
   lg: $bp-lg,
   xl: $bp-xl
 );
+
+// Breakpoints for Respondents Diagram
+$bp-respond-start-grid: $bp-sm;
+$bp-respond-stop-overlap: $bp-md;
+$bp-respond-medium-layout: $bp-lg;
+$bp-respond-size-bump-medium: 68.25rem;
+$bp-respond-size-bump-large: $bp-xl;

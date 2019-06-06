@@ -1,0 +1,101 @@
+.svg-pyramid {
+  display: none;
+
+  @supports(transform-style: preserve-3d) {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    &__path {
+      fill: mix($hotpink, $black, 20%);
+      stroke: $hotpink;
+      stroke-width: 2px;
+      vector-effect: non-scaling-stroke;
+    }
+  }
+}
+
+.cmp-pyramid {
+  @supports(transform-style: preserve-3d) {
+    --height: var(--size);
+    --width: calc(var(--size) * 1.16);
+
+    --rotate: 30deg;
+    --offset: calc(var(--size) * -0.5);
+
+    height: var(--height);
+    width: var(--width);
+    margin: 0 calc(var(--size) * 0.1);
+    position: relative;
+    filter: drop-shadow(0 0 0.25rem rgba($hotpink, 0.5));
+    pointer-events: none;
+
+    animation: pyramid-pulse 1s 500ms ease-in-out alternate infinite;
+
+    &__shape {
+      height: var(--height);
+      width: var(--width);
+      position: relative;
+      top: var(--offset);
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+      transform-origin: 50% 50%;
+      transform:
+        rotateX(var(--shape-angle))
+        rotateZ(var(--rotate));
+      perspective-origin: center;
+
+      animation: pyramid-spin var(--shape-animation-duration) linear infinite;
+    }
+
+    &__side {
+      height: var(--height);
+      width: var(--width);
+      position: absolute;
+      transform-origin: top center;
+      // background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 75"><path fill="#{mix($hotpink, $black, 20%)}" stroke="#{$hotpink}" stroke-width="0.5" vector-effect="non-scaling" d="M43.5 0L0 75h87L43.5 0z"/></svg>') no-repeat center / contain;
+    }
+
+    &__side--1 {
+      transform:
+        translateY(calc(var(--height) * 0.5))
+        rotateX(-70.5deg);
+    }
+
+    &__side--2 {
+      transform:
+        rotateX(180deg)
+        translateY(calc(var(--height) * -0.5))
+        rotateZ(-60deg)
+        rotateX(70.5deg);
+    }
+
+    &__side--3 {
+      transform:
+        rotateZ(90deg)
+        translateX(calc(var(--height) * 0.5))
+        rotateZ(30deg)
+        rotateX(-70.5deg);
+    }
+
+    &__side--4 {
+      transform:
+        translateY(calc(-0.16667 * var(--height)))
+        translateZ(calc(-0.938 * var(--height)));
+    }
+  }
+}
+
+@keyframes pyramid-spin {
+  to {
+    transform:
+      rotateX(var(--shape-angle))
+      rotateZ(calc(var(--rotate) + 360deg));
+  }
+}
+@keyframes pyramid-pulse {
+  to {
+    filter: drop-shadow(0 0 0.5rem rgba($hotpink, 0.75));
+  }
+}

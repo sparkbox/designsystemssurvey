@@ -1,0 +1,364 @@
+.cmp-respondents {
+  width: calc(100% - 2rem);
+  max-width: 74rem;
+  margin: 4rem auto 6rem;
+
+  @media (min-width: $bp-respond-medium-layout) {
+    margin: 6rem auto 8rem;
+  }
+
+  &__list {
+    @include delist;
+    margin-top: 4rem;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-row-gap: 6rem;
+    }
+
+    @media (min-width: $bp-respond-start-grid) {
+      display: flex;
+      flex-wrap: wrap;
+
+      @supports (display: grid) {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-column-gap: 2rem;
+        grid-row-gap: 4rem;
+      }
+    }
+
+    @media (min-width: $bp-respond-medium-layout) {
+      margin-top: 6rem;
+
+      @supports (display: grid) {
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+
+    margin-bottom: 2rem;
+
+    @supports (display: grid) {
+      margin-bottom: auto;
+    }
+
+    @media (min-width: $bp-respond-stop-overlap) {
+      align-items: stretch;
+      justify-content: flex-end;
+
+      width: calc(50% - 4rem);
+      margin: 0 2rem 2rem;
+
+      @supports (display: grid) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    @supports (display: grid) {
+      &--designers {
+        @media (min-width: $bp-respond-medium-layout) {
+          grid-row: span 3;
+          grid-column: span 2;
+        }
+      }
+
+      &--developers {
+        @media (min-width: $bp-respond-medium-layout) {
+          grid-row: span 2;
+          grid-column: span 2;
+        }
+      }
+
+      &--managers {
+        @media (min-width: $bp-respond-medium-layout) {
+          grid-column: 3;
+        }
+      }
+
+      &--other {
+        @media (min-width: $bp-respond-medium-layout) {
+          grid-column: 4;
+        }
+      }
+    }
+  }
+
+  &__shape {
+    @supports (display: grid) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: $bp-respond-stop-overlap) {
+        right: auto;
+        bottom: auto;
+      }
+
+      &--designers {
+        top: -2rem;
+
+        @media (min-width: $bp-respond-stop-overlap) {
+          left: calc(100% - 23rem);
+        }
+
+        @media (min-width: $bp-respond-medium-layout) {
+          top: 0;
+          left: 0;
+        }
+
+        @media (min-width: $bp-respond-size-bump-large) {
+          left: -4rem;
+        }
+
+        .cmp-pyramid {
+          --size: 10rem;
+
+          @media (min-width: $bp-respond-medium-layout) {
+            --size: 20rem;
+          }
+
+          @media (min-width: $bp-respond-size-bump-medium) {
+            --size: 23rem;
+          }
+
+          @media (min-width: $bp-respond-size-bump-large) {
+            --size: 28rem;
+          }
+        }
+      }
+
+      &--developers {
+        top: 1rem;
+
+        @media (min-width: $bp-respond-stop-overlap) {
+          top: 0.5rem;
+          left: calc(100% - 20rem);
+        }
+
+        @media (min-width: $bp-respond-medium-layout) {
+          top: 2rem;
+          left: calc(100% - 27rem);
+        }
+
+        @media (min-width: $bp-respond-size-bump-medium) {
+          left: calc(100% - 29rem);
+        }
+
+        @media (min-width: $bp-respond-size-bump-large) {
+          top: 4rem;
+          left: calc(100% - 33rem);
+        }
+
+        .cmp-cube{
+          --size: 8rem;
+
+          @media (min-width: $bp-respond-medium-layout) {
+            --size: 12rem;
+          }
+
+          @media (min-width: $bp-respond-size-bump-medium) {
+            --size: 14rem;
+          }
+      
+          @media (min-width: $bp-respond-size-bump-large) {
+            --size: 16rem;
+          }
+        }
+      }
+
+      &--managers {
+        top: 1rem;
+
+        @media (min-width: $bp-respond-stop-overlap) {
+          top: -1rem;
+          left: calc(100% - 18rem);
+        }
+
+        @media (min-width: $bp-respond-medium-layout) {
+          top: 0.125rem;
+          left: calc(100% - 13rem);
+        }
+
+        @media (min-width: $bp-respond-size-bump-medium) {
+          top: -0.5rem;
+          left: calc(100% - 14.5rem);
+        }
+
+        @media (min-width: $bp-respond-size-bump-large) {
+          left: calc(100% - 19rem);
+        }
+
+        .cmp-diamond{
+          --size: 7rem;
+
+          @media (min-width: $bp-respond-stop-overlap) {
+            --size: 6rem;
+          }
+
+          @media (min-width: $bp-respond-medium-layout) {
+            --size: 3.5rem;
+          }
+
+          @media (min-width: $bp-respond-size-bump-medium) {
+            --size: 5rem;
+          }
+
+          @media (min-width: $bp-respond-size-bump-large) {
+            --size: 7rem;
+          }
+        }
+      }
+
+      &--other {
+        @media (min-width: $bp-respond-stop-overlap) {
+          top: 1rem;
+          left: calc(100% - 15rem);
+        }
+
+        @media (min-width: $bp-respond-medium-layout) {
+          top: 1.5rem;
+          left: calc(100% - 9rem);
+        }
+
+        @media (min-width: $bp-respond-size-bump-medium) {
+          top: 2rem;
+          left: calc(100% - 10.5rem);
+        }
+
+        @media (min-width: $bp-respond-size-bump-large) {
+          left: calc(100% - 14.5rem);
+        }
+
+        .cmp-dodecahedron{
+          --size: 5rem;
+
+          @media (min-width: $bp-respond-medium-layout) {
+            --size: 2.25rem;
+          }
+
+          @media (min-width: $bp-respond-size-bump-medium) {
+            --size: 2.75rem;
+          }
+
+          @media (min-width: $bp-respond-size-bump-large) {
+            --size: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    text-shadow: 0 0 1rem $black, 0 0 2rem $black, 0 0 1rem $black, 0 0 4rem $black;
+
+    @media (min-width: $bp-respond-stop-overlap) {
+      text-align: right;
+      justify-content: flex-end;
+    }
+  }
+
+  &__group {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+
+    @media (min-width: $bp-respond-size-bump-large) {
+      font-size: 1.875rem;
+    }
+
+    &--designers {
+      color: $hotpink;
+
+      @supports (display: grid) {
+        color: mix($white, $hotpink, 80%);
+
+        @media (min-width: $bp-respond-stop-overlap) {
+          color: $hotpink;
+        }
+      }
+    }
+
+    &--developers {
+      color: $yellow;
+
+      @supports (display: grid) {
+        color: mix($white, $yellow, 80%);
+
+        @media (min-width: $bp-respond-stop-overlap) {
+          color: $yellow;
+        }
+      }
+    }
+
+    &--managers {
+      color: $green;
+
+      @supports (display: grid) {
+        color: mix($white, $green, 80%);
+
+        @media (min-width: $bp-respond-stop-overlap) {
+          color: $green;
+        }
+      }
+    }
+
+    &--other {
+      color: $orange;
+
+      @supports (display: grid) {
+        color: mix($white, $orange, 80%);
+
+        @media (min-width: $bp-respond-stop-overlap) {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  &__number {
+    background: transparent;
+    font-weight: 800;
+    font-family: $font-heading;
+    font-size: 4rem;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media (min-width: $bp-respond-stop-overlap) {
+      justify-content: flex-end;
+    }
+
+    @media (min-width: $bp-respond-size-bump-medium) {
+      font-size: 5rem;
+    }
+
+    @media (min-width: $bp-respond-size-bump-large) {
+      font-size: 6.25rem;
+    }
+  }
+
+  &__percent {
+    font-size: 0.25em;
+    margin-top: 0.375em;
+  }
+}
