@@ -72,13 +72,13 @@ h4:not([class]),
 h5:not([class]),
 h6:not([class]) {
   max-width: $max-width-headers;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 p:not([class]) {
   @include body-copy;
   max-width: $max-width-content;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 a[href]:not([class]) {

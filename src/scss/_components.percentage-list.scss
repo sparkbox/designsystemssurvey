@@ -1,10 +1,9 @@
 .cmp-percentage-list {
   @include delist;
   margin: 2rem auto;
-  max-width: $bp-lg;
   counter-reset: count 3;
 
-  @media (min-width: $bp-md) {
+  @media (min-width: $bp-sm) {
     columns: 2;
     column-gap: 1rem;
     margin: 4rem auto;

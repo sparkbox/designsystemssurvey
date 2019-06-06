@@ -31,7 +31,7 @@ import React from "react"
         </p>
       </li>
     </ol>
-    <ol className="cmp-percentage-list">
+    <ol className="cmp-percentage-list obj-layout-content-max-width">
       <li className="cmp-percentage-list__item"><span>Navigation components&nbsp;<mark className="util-bold">79%</mark></span></li>
       <li className="cmp-percentage-list__item"><span>CSS code&nbsp;<mark className="util-bold">70%</mark></span></li>
       <li className="cmp-percentage-list__item"><span>HTML code&nbsp;<mark className="util-bold">69%</mark></span></li>
