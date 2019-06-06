@@ -20,48 +20,48 @@ const Table4a = () => (
         <tbody>
           <tr>
             <th className="util-align-left">Very Unsuccessful</th>
-            <td>0%</td>
-            <td>0%</td>
-            <td>100%</td>
-            <td>0%</td>
-            <td>0%</td>
-            <td>0%</td>
+            <td className="util-align-center">0%</td>
+            <td className="util-align-center">0%</td>
+            <td className="util-align-center">100%</td>
+            <td className="util-align-center">0%</td>
+            <td className="util-align-center">0%</td>
+            <td className="util-align-center">0%</td>
           </tr>
           <tr>
             <th className="util-align-left">Unsuccessful</th>
-            <td>62%</td>
-            <td>0%</td>
-            <td>15%</td>
-            <td>15%</td>
-            <td>8%</td>
-            <td>0%</td>
+            <td className="util-align-center">62%</td>
+            <td className="util-align-center">0%</td>
+            <td className="util-align-center">15%</td>
+            <td className="util-align-center">15%</td>
+            <td className="util-align-center">8%</td>
+            <td className="util-align-center">0%</td>
           </tr>
           <tr>
             <th className="util-align-left">Average</th>
-            <td>27%</td>
-            <td>17%</td>
-            <td>24%</td>
-            <td>17%</td>
-            <td>10%</td>
-            <td>5%</td>
+            <td className="util-align-center">27%</td>
+            <td className="util-align-center">17%</td>
+            <td className="util-align-center">24%</td>
+            <td className="util-align-center">17%</td>
+            <td className="util-align-center">10%</td>
+            <td className="util-align-center">5%</td>
           </tr>
           <tr>
             <th className="util-align-left">Successful</th>
-            <td>16%</td>
-            <td>14%</td>
-            <td>43%</td>
-            <td>19%</td>
-            <td>3%</td>
-            <td>5%</td>
+            <td className="util-align-center">16%</td>
+            <td className="util-align-center">14%</td>
+            <td className="util-align-center">43%</td>
+            <td className="util-align-center">19%</td>
+            <td className="util-align-center">3%</td>
+            <td className="util-align-center">5%</td>
           </tr>
           <tr>
             <th className="util-align-left">Very Successful</th>
-            <td>6%</td>
-            <td>19%</td>
-            <td>63%</td>
-            <td>6%</td>
-            <td>6%</td>
-            <td>0%</td>
+            <td className="util-align-center">6%</td>
+            <td className="util-align-center">19%</td>
+            <td className="util-align-center">63%</td>
+            <td className="util-align-center">6%</td>
+            <td className="util-align-center">6%</td>
+            <td className="util-align-center">0%</td>
           </tr>
         </tbody>
       </table>
