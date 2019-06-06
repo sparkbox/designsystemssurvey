@@ -5,7 +5,7 @@ const Table3c = () => (
     <p id="table3c" className="font-diagram-heading">Q: If you feel that your organization’s design system was not successful, what were the primary reasons?</p>
     <p className="font-diagram-copy">71 In-House Responses | Select all that apply</p>
     <div className="cmp-diagram-table__scrollable">
-      <table>
+      <table aria-labelledby="table3c">
       <tbody>
           <tr>
             <th className="util-align-left">Adoption difficulties</th>

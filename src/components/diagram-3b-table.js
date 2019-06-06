@@ -5,7 +5,7 @@ const Table3b = () => (
     <p id="table3b" className="font-diagram-heading">Q: What about a client engagement leads you to suggest or not suggest a design system?</p>
     <p className="font-diagram-copy">79 Agency Responses | Select all that apply</p>
     <div className="cmp-diagram-table__scrollable">
-      <table>
+      <table aria-labelledby="table3b">
       <tbody>
           <tr>
             <th className="util-align-left">The client struggles with consistency across web properties</th>

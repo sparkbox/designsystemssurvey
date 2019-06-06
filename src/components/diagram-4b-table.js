@@ -5,7 +5,7 @@ const Table4b = () => (
     <p id="table4b" className="font-diagram-heading">Q: How much of your website(s) or application(s) is sourced from your design system?</p>
     <p className="font-diagram-copy">108 In-House Responses | Select One</p>
     <div className="cmp-diagram-table__scrollable">
-      <table>
+      <table aria-labelledby="table4b">
         <thead>
           <tr>
             <th>&nbsp;</th>
