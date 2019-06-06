@@ -19,59 +19,59 @@ const Table3a = () => (
         <tbody>
           <tr>
             <th className="util-align-left">Code reusability</th>
-            <td>5%</td>
-            <td>3%</td>
-            <td>9%</td>
-            <td>16%</td>
-            <td>67%</td>
+            <td className="util-align-center">5%</td>
+            <td className="util-align-center">3%</td>
+            <td className="util-align-center">9%</td>
+            <td className="util-align-center">16%</td>
+            <td className="util-align-center">67%</td>
           </tr>
           <tr>
             <th className="util-align-left">Increased efficiency in design</th>
-            <td>1%</td>
-            <td>3%</td>
-            <td>13%</td>
-            <td>21%</td>
-            <td>63%</td>
+            <td className="util-align-center">1%</td>
+            <td className="util-align-center">3%</td>
+            <td className="util-align-center">13%</td>
+            <td className="util-align-center">21%</td>
+            <td className="util-align-center">63%</td>
           </tr>
           <tr>
             <th className="util-align-left">Increased efficiency in development</th>
-            <td>2%</td>
-            <td>2%</td>
-            <td>10%</td>
-            <td>25%</td>
-            <td>61%</td>
+            <td className="util-align-center">2%</td>
+            <td className="util-align-center">2%</td>
+            <td className="util-align-center">10%</td>
+            <td className="util-align-center">25%</td>
+            <td className="util-align-center">61%</td>
           </tr>
           <tr>
             <th className="util-align-left">UX/UI consistency</th>
-            <td>0%</td>
-            <td>3%</td>
-            <td>8%</td>
-            <td>28%</td>
-            <td>61%</td>
+            <td className="util-align-center">0%</td>
+            <td className="util-align-center">3%</td>
+            <td className="util-align-center">8%</td>
+            <td className="util-align-center">28%</td>
+            <td className="util-align-center">61%</td>
           </tr>
           <tr>
             <th className="util-align-left">Maintaining brand standards</th>
-            <td>8%</td>
-            <td>6%</td>
-            <td>24%</td>
-            <td>24%</td>
-            <td>38%</td>
+            <td className="util-align-center">8%</td>
+            <td className="util-align-center">6%</td>
+            <td className="util-align-center">24%</td>
+            <td className="util-align-center">24%</td>
+            <td className="util-align-center">38%</td>
           </tr>
           <tr>
             <th className="util-align-left">Accessibility compliance</th>
-            <td>16%</td>
-            <td>13%</td>
-            <td>23%</td>
-            <td>22%</td>
-            <td>25%</td>
+            <td className="util-align-center">16%</td>
+            <td className="util-align-center">13%</td>
+            <td className="util-align-center">23%</td>
+            <td className="util-align-center">22%</td>
+            <td className="util-align-center">25%</td>
           </tr>
           <tr>
             <th className="util-align-left">Rapid prototyping</th>
-            <td>13%</td>
-            <td>15%</td>
-            <td>24%</td>
-            <td>31%</td>
-            <td>16%</td>
+            <td className="util-align-center">13%</td>
+            <td className="util-align-center">15%</td>
+            <td className="util-align-center">24%</td>
+            <td className="util-align-center">31%</td>
+            <td className="util-align-center">16%</td>
           </tr>
         </tbody>
       </table>
