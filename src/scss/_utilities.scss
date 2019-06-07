@@ -1,0 +1,41 @@
+
+/* Prefix all utility classes with "util-" */
+
+// Visually hide an element, but still screen readable
+.util-visually-hidden {
+  @include visually-hidden;
+}
+
+.util-full-width {
+  width: 100%;
+}
+
+// Text Alignments for left, center, and right
+.util-left {
+  text-align: left;
+}
+
+.util-center {
+  text-align: center;
+}
+
+.util-right {
+  text-align: right;
+}
+
+// Removes default button styles
+.util-unbuttonize {
+  @include unbuttonize;
+}
+
+.util-relative {
+  position: relative;
+}
+
+.util-inline-block {
+  display: inline-block;
+}
+
+.util-zindex-100 {
+  z-index: 100;
+}
