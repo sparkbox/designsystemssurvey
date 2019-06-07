@@ -10,16 +10,58 @@ import Section2 from "../sections/section-2"
 import Section3 from "../sections/section-3"
 import Section4 from "../sections/section-4"
 import Section5 from "../sections/section-5"
+import ContentBlock from "../components/content-block"
+
 
 const IndexPage = () => (
   <Layout>
-    <IntroSection />
-    <TableOfContents />
-    <Section1 />
-    <Section2 />
-    <Section3 />
-    <Section4 />
-    <Section5 />
+    <ContentBlock>
+      <IntroSection />
+    </ContentBlock>
+
+    <div>
+      <TableOfContents />
+    </div>
+
+    <section id="section-1">
+      <header>
+        <h2>The Respondents</h2>
+      </header>
+
+      <Section1 />
+    </section>
+
+    <section id="section-2">
+      <header>
+        <h2>Design System Contents and Functionality</h2>
+      </header>
+
+      <Section2 />
+    </section>
+
+    <section id="section-3">
+      <header>
+        <h2>Values and Challenges of Design Systems</h2>
+      </header>
+
+      <Section3 />
+    </section>
+
+    <section id="section-4">
+      <header>
+        <h2>Creating a Successful Design System</h2>
+      </header>
+
+      <Section4 />
+    </section>
+
+    <section id="section-5">
+      <header>
+        <h2>Learn More about Design Systems</h2>
+      </header>
+
+      <Section5 />
+    </section>
   </Layout>
 )
 

@@ -64,5 +64,9 @@
 
   &__link {
     margin-left: 2rem;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
