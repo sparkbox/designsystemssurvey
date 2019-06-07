@@ -1,0 +1,123 @@
+$circle-height: 28px;
+
+.cmp-diagram-chart {
+  --height: 400px;
+  --percent: 1;
+  --scale: 1;
+  --width: 5rem;
+
+  max-width: 70rem;
+  margin: 0 auto;
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-column-gap: 1rem;
+  text-align: center;
+  grid-template-columns: repeat(var(--count), 1fr);
+  grid-template-rows: calc(var(--height) + #{2*$circle-height}) auto;
+  position: relative;
+  perspective: 800px;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 4rem;
+    width: 100%;
+    position: absolute;
+    top: calc(var(--height) + #{2*$circle-height} - 2.5rem);
+    z-index: 0;
+    transform-origin: center;
+    transform: rotateX(60deg);
+    background: linear-gradient(to bottom, mix($white, $black, 30%), mix($white, $black, 10%));
+    box-shadow: 0 1px mix($white, $black, 30%), 0 -1px mix($white, $black, 40%), inset 0 0 2rem rgba($black, 0.3);
+  }
+
+  &__value {
+    font-family: $font-body;
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0 2px 10px $black;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    bottom: calc(var(--percent) * var(--scale) + 0.5rem);
+  }
+
+  &__superscript {
+    position: absolute;
+    font-size: 0.5em;
+    top: 0.25em;
+    left: 100%;
+  }
+
+  &__rectangle {
+    position: absolute;
+    left: calc(50% - (var(--width) * 0.5));
+    bottom: $circle-height * 0.5;
+    background: linear-gradient(to bottom, var(--color), $black);
+    border-left: solid 2px var(--color);
+    border-right: solid 2px var(--color);
+    width: var(--width);
+    box-sizing: border-box;
+    height: calc(var(--percent) * var(--scale));
+
+    animation: grow 1600ms ease both;
+
+    &::before,
+    &::after {
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      width: var(--width);
+      height: $circle-height;
+      border-radius: 50%;
+      left: -2px;
+      border: solid 2px var(--color);
+    }
+
+    &::before {
+      top: -$circle-height / 2;
+    }
+
+    @each $key, $val in $colors {
+      [style*="--color-#{$key}"] &::before {
+        background: linear-gradient(to bottom, var(--color), mix($val, $black, 80%));
+      }
+    }
+
+    &::after {
+      background: $black;
+      bottom: -$circle-height / 2;
+      z-index: -1;
+      box-shadow: 0 0.125rem 1rem var(--color);
+    }
+  }
+
+  &__label {
+    font-family: $font-body;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.1875;
+    text-align: center;
+    grid-row: 2;
+    margin: 0;
+  }
+}
+
+@for $i from 1 through 8  {
+  .cmp-diagram-chart__container:nth-child(#{$i}) .cmp-diagram-chart__rectangle {
+    $delay: $i * 100;
+    animation-delay: 1400ms + $delay;
+  }
+}
+
+@keyframes grow {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: calc(var(--percent) * var(--scale)); // Change this to make things ✨
+  }
+}

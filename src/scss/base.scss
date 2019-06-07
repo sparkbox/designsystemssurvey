@@ -56,6 +56,7 @@
 //    Styling for bare HTML elements (like H1, A, etc.). These come with
 //    default styling from the browser so we can redefine them here.
 
+@import "elements.root";
 @import "elements.layout";
 @import "elements.lists";
 @import "elements.table";
@@ -74,6 +75,7 @@
 //    and our UI components are often composed of Objects and Components
 
 @import "components.diagram.table";
+@import "components.diagram.chart";
 @import "components.typography";
 @import "components.percentage-card";
 @import "components.percentage-list";
@@ -84,5 +86,7 @@
 //    Utilities and helper classes with ability to override anything
 //    which goes before in the triangle, eg. hide helper class
 
+@import "utilities";
 @import "utilities.spacing";
 @import "utilities.text";
+
