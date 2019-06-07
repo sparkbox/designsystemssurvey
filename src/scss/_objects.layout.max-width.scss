@@ -1,14 +1,17 @@
 .obj-layout-max-width {
+  width: calc(100% - 2rem);
   max-width: $max-width;
   margin: 0 auto;
 }
 
 .obj-layout-header-max-width {
+  width: calc(100% - 2rem);
   max-width: $max-width-headers;
   margin: 0 auto;
 }
 
 .obj-layout-content-max-width {
+  width: calc(100% - 2rem);
   max-width: $max-width-content;
   margin: 0 auto;
 }
