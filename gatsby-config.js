@@ -32,6 +32,16 @@ module.exports = {
     },
     `gatsby-mdx`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: "GTM-WHPGCMR",
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+      },
+    },
      // This must be last in the array
     {
       resolve: `gatsby-plugin-netlify`,
