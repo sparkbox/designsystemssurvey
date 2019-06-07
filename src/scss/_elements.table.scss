@@ -2,21 +2,27 @@ $table-padding: 0.25rem 0.5rem;
 
 table {
   @include body-copy;
-  border: 1px solid $gray;
+  border: 1px solid $table-border;
   border-spacing: unset;
   border-collapse: collapse;
-  margin: 2rem auto;
-  width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lighten($black, 10%);
+}
+
+tbody tr:nth-child(even) {
+  background-color: lighten($black, 20%);
 }
 
 th {
   width: 75%;
-  border: 1px solid $gray;
+  border: 1px solid $table-border;
   padding: $table-padding;
 }
 
 td {
   color: $yellow;
-  border: 1px solid $gray;
+  border: 1px solid $table-border;
   padding: $table-padding;
 }

@@ -5,6 +5,7 @@ h2:not([class]) {
   line-height: 1;
   text-transform: uppercase;
   text-shadow: 0 2px 64px $black, 0 2px 4px $black, 0 2px 30px $black;
+  hyphens: auto;
 }
 
 h3:not([class]) {

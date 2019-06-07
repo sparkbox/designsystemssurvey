@@ -1,4 +1,7 @@
 .cmp-diagram-table {
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+
   @media (min-width: $bp-md) {
     display: none;
   }
