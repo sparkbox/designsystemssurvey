@@ -11,7 +11,8 @@ import { StaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet";
 
 // import Header from "./header"
-import "../js/safe-focus.js"
+import "../js/chart-animation"
+import "../js/safe-focus"
 import "../scss/base.scss"
 
 const Layout = ({ children }) => (
