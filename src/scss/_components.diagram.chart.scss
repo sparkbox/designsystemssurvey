@@ -60,9 +60,6 @@ $circle-height: 28px;
     border-right: solid 2px var(--color);
     width: var(--width);
     box-sizing: border-box;
-    height: calc(var(--percent) * var(--scale));
-
-    animation: grow 1600ms ease both;
 
     &::before,
     &::after {
@@ -105,10 +102,14 @@ $circle-height: 28px;
   }
 }
 
-@for $i from 1 through 8  {
+.animate {
+  animation: grow 500ms 50ms ease both;
+}
+
+@for $i from 3 through 16  {
   .cmp-diagram-chart__container:nth-child(#{$i}) .cmp-diagram-chart__rectangle {
-    $delay: $i * 100;
-    animation-delay: 1400ms + $delay;
+    $delay: $i * 50;
+    animation-delay: 100ms + $delay;
   }
 }
 
