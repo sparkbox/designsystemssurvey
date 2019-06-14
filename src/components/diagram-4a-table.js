@@ -1,7 +1,7 @@
-import React, { Fragment } from "react"
+import React from "react"
 
 const Table4a = () => (
-  <section class="cmp-diagram-table">
+  <section className="cmp-diagram-table">
     <p id="table4a" className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
     <p className="font-diagram-copy">108 In-House Responses | Select one</p>
     <div className="cmp-diagram-table__scrollable">
