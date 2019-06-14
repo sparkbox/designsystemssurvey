@@ -1,0 +1,28 @@
+.cmp-skip-link {
+  @include body-copy;
+  font-weight: 700;
+  display: block;
+  left: 0;
+  bottom: 100%;
+  position: absolute;
+  height: 3em;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: $white;
+  color: $black;
+
+  @supports (display: flex) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:active,
+  &:focus,
+  &:visited {
+    top: 0;
+    bottom: auto;
+    z-index: 800;
+  }
+}

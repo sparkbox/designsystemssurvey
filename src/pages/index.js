@@ -16,6 +16,7 @@ import ContentBlock from "../components/content-block"
 const IndexPage = () => (
   <Layout>
     <ContentBlock>
+      <a href="#table-of-contents" className="cmp-skip-link">Skip to table of contents</a>
       <IntroSection />
     </ContentBlock>
 
