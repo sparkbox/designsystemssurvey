@@ -6,29 +6,43 @@ $circle-height: 28px;
   --scale: 1;
   --width: 5rem;
 
-  max-width: 70rem;
-  margin: 0 auto;
-  display: grid;
-  grid-row-gap: 2rem;
-  grid-column-gap: 1rem;
-  text-align: center;
-  grid-template-columns: repeat(var(--count), 1fr);
-  grid-template-rows: calc(var(--height) + #{2*$circle-height}) auto;
-  position: relative;
-  perspective: 800px;
+  display: none;
 
-  &::before {
-    content: '';
-    display: block;
-    height: 4rem;
-    width: 100%;
-    position: absolute;
-    top: calc(var(--height) + #{2*$circle-height} - 2.5rem);
-    z-index: 0;
-    transform-origin: center;
-    transform: rotateX(60deg);
-    background: linear-gradient(to bottom, mix($white, $black, 30%), mix($white, $black, 10%));
-    box-shadow: 0 1px mix($white, $black, 30%), 0 -1px mix($white, $black, 40%), inset 0 0 2rem rgba($black, 0.3);
+  @media (min-width: $bp-md) {
+    display: inherit;
+  }
+
+  &__list {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-column-gap: 0.5rem;
+    text-align: center;
+    grid-template-columns: repeat(var(--count), 1fr);
+    grid-template-rows: calc(var(--height) + #{2*$circle-height}) auto;
+    position: relative;
+    perspective: 800px;
+    overflow: hidden;
+
+    @media (min-width: $bp-lg) {
+      grid-column-gap: 1rem;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 4rem;
+      width: calc(100% - 3rem);
+      position: absolute;
+      top: calc(var(--height) + #{2*$circle-height} - 2.5rem);
+      left: 1.5rem;
+      z-index: 0;
+      transform-origin: center;
+      transform: rotateX(60deg);
+      background: linear-gradient(to bottom, mix($white, $black, 30%), mix($white, $black, 10%));
+      box-shadow: 0 1px mix($white, $black, 30%), 0 -1px mix($white, $black, 40%), inset 0 0 2rem rgba($black, 0.3);
+    }
   }
 
   &__value {
@@ -52,6 +66,8 @@ $circle-height: 28px;
   }
 
   &__rectangle {
+    --width: 4rem;
+
     position: absolute;
     left: calc(50% - (var(--width) * 0.5));
     bottom: $circle-height * 0.5;
@@ -60,6 +76,10 @@ $circle-height: 28px;
     border-right: solid 2px var(--color);
     width: var(--width);
     box-sizing: border-box;
+
+    @media (min-width: $bp-lg) {
+      --width: inherit;
+    }
 
     &::before,
     &::after {
