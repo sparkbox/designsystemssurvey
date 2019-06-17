@@ -4,18 +4,15 @@
   // Still need to move this animation into a class in SASS
 
 
-export default function observe(container, containerChildren, animateClass) {
-  const elements = container.current.querySelectorAll(containerChildren);
+export default function observe(platform, animateClass) {
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.intersectionRatio > 0) {
-        entry.target.classList.add(animateClass);
+        platform.current.parentElement.classList.add(animateClass);
       }
     });
   });
 
-  elements.forEach(elem => {
-    observer.observe(elem);
-  });
+  observer.observe(platform.current);
 }
