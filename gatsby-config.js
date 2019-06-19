@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'The 2019 Design Systems Survey by Sparkbox',
@@ -36,7 +38,7 @@ module.exports = {
       options: {
         headers: {
           "/*": [
-            "Basic-Auth: Sparkbox:DSs19!",
+            `Basic-Auth: ${process.env.basic_auth_user}:${process.env.basic_auth_pass}`,
           ],
         },
       }
