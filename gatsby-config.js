@@ -36,7 +36,7 @@ module.exports = {
       options: {
         headers: {
           "/*": [
-            "Basic-Auth: sparkbox:dss2019$",
+            "Basic-Auth: Sparkbox:DSs19!",
           ],
         },
       }
