@@ -69,3 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 static/2018
+.env
