@@ -111,6 +111,7 @@
   display: inline-block;
   margin: 0.75em 0;
   position: relative;
+  text-decoration: none;
 
   @supports (background-clip: text) {
     color: transparent;
