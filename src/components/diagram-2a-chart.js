@@ -18,7 +18,7 @@ class Chart2a extends Component {
       <section className="cmp-diagram-chart">
         <p className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
         <p className="font-diagram-copy">108 In-House Responses | Select one</p>
-        <dl className="cmp-diagram-chart__list" style={{["--height"]: 30 + "rem", ["--scale"]: 2, ["--count"]: 6}}>
+        <dl className="cmp-diagram-chart__list">
           <Chart2aCard percent="36" color="hotpink" label="In an external codebase and consumed via package manager"/>
           <Chart2aCard percent="24" color="blue" label="On a standalone documentation site where users primarily copy + paste, or download files"/>
           <Chart2aCard percent="16" color="orange" label="Included in the main codebase"/>
