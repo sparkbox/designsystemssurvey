@@ -1,7 +1,7 @@
 import React from "react"
 
  const TopFeatures = () => (
-  <section>
+  <section className="obj-layout-max-width">
     <ol className="cmp-percentage-highlight">
       <li className="cmp-percentage-highlight__item">
         <div className="cmp-percentage-highlight__icon cmp-percentage-highlight__icon--palette"></div>
