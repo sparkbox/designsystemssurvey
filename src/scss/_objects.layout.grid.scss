@@ -1,0 +1,12 @@
+@mixin grid-column($columns) {
+  @supports (display: grid) {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}
+
+
+@for $i from 1 through 12 {
+  .obj-layout-grid-column-#{$i} {
+    @include grid-column($i);
+  }
+}

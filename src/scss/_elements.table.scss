@@ -5,6 +5,7 @@ table {
   border: 1px solid $table-border;
   border-spacing: unset;
   border-collapse: collapse;
+  width: 100%;
 }
 
 tbody tr:nth-child(odd) {

@@ -19,7 +19,6 @@ $circle-height: 28px;
       display: grid;
       grid-row-gap: 2rem;
       grid-column-gap: 0.5rem;
-      grid-template-columns: repeat(6, 1fr);
       align-items: flex-start;
 
       @media (min-width: $bp-lg) {
@@ -50,9 +49,9 @@ $circle-height: 28px;
     perspective: 800px;
     position: absolute;
     top: 22.875rem;
-    left: 1.5rem;
+    left: 1%;
     height: 4.5rem;
-    width: calc(100% - 3rem);
+    width: 98%;
     z-index: 0;
 
     @supports (display: grid) {
@@ -87,7 +86,7 @@ $circle-height: 28px;
 
   &__value {
     font-family: $font-body;
-    font-size: 3.75rem;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 1.2;
     text-align: center;
@@ -96,11 +95,18 @@ $circle-height: 28px;
     position: absolute;
     width: 100%;
     z-index: 2;
-    top: -4.75rem;
+    top: -3.75rem;
+    margin-top: 1rem;
 
     @supports (display: grid) {
       opacity: 0;
       top: 0;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 3.75rem;
+      top: -4.75rem;
+      margin-top: 0;
     }
   }
 
@@ -293,6 +299,16 @@ $circle-height: 28px;
   }
 }
 
+.obj-layout-grid-column-8 .cmp-diagram-chart__rectangle {
+  width: 3.5rem;
+  left: calc(50% - 1.75rem);
+
+  &::before,
+  &::after {
+    width: 3.5rem;
+  }
+}
+
 @for $i from 1 through 20  {
   .cmp-diagram-chart__item:nth-of-type(#{$i}) .cmp-diagram-chart__rectangle {
     $delay: $i * 100;
@@ -304,7 +320,6 @@ $circle-height: 28px;
     animation-delay: 200ms + $delay;
   }
 }
-
 
 @keyframes vertical-chart-grow {
   0% {
