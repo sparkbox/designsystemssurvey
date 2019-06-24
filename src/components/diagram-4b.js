@@ -1,70 +1,69 @@
-import React, { Component, createRef } from "react"
+import React from "react"
 import TableKey from "./diagram-table-key"
 import TableBlock from "./diagram-table-block"
 import TableColumn from "./diagram-table-column"
 
-const Table4a = () => (
+const Diagram4b = () => (
   <section className="cmp-diagram">
-    <p id="table4a" className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
-    <p className="font-diagram-copy">108 In-House Responses | Select one</p>
-
+    <p id="table4b" className="font-diagram-heading">Q: How much of your website(s) or application(s) is sourced from your design system?</p>
+    <p className="font-diagram-copy">108 In-House Responses | Select One</p>
     <div className="cmp-diagram__table" tabIndex="0">
-      <table aria-labelledby="table4a">
+      <table aria-labelledby="table4b">
         <thead>
           <tr>
             <th>&nbsp;</th>
-            <th>On a standalone documentation site where users primarily copy and paste</th>
-            <th>In an external codebase and consumed by the main codebase's build pipeline</th>
-            <th>In an external codebase and consumed via package</th>
-            <th>Included in the main codebase</th>
+            <th>Less than 50% is for the design system</th>
+            <th>50% to 74% is from the design system</th>
+            <th>More than 75% is from the design system</th>
+            <th>Everything is from the design system</th>
             <th>I am not sure</th>
-            <th>Other</th>
+            <th>I prefer not to say</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th className="util-align-left">Very Unsuccessful</th>
-            <td className="util-align-center">0%</td>
-            <td className="util-align-center">0%</td>
             <td className="util-align-center">100%</td>
+            <td className="util-align-center">0%</td>
+            <td className="util-align-center">0%</td>
             <td className="util-align-center">0%</td>
             <td className="util-align-center">0%</td>
             <td className="util-align-center">0%</td>
           </tr>
           <tr>
             <th className="util-align-left">Unsuccessful</th>
-            <td className="util-align-center">62%</td>
+            <td className="util-align-center">85%</td>
             <td className="util-align-center">0%</td>
-            <td className="util-align-center">15%</td>
-            <td className="util-align-center">15%</td>
             <td className="util-align-center">8%</td>
+            <td className="util-align-center">8%</td>
+            <td className="util-align-center">0%</td>
             <td className="util-align-center">0%</td>
           </tr>
           <tr>
             <th className="util-align-left">Average</th>
-            <td className="util-align-center">27%</td>
-            <td className="util-align-center">17%</td>
-            <td className="util-align-center">24%</td>
+            <td className="util-align-center">51%</td>
             <td className="util-align-center">17%</td>
             <td className="util-align-center">10%</td>
-            <td className="util-align-center">5%</td>
+            <td className="util-align-center">7%</td>
+            <td className="util-align-center">15%</td>
+            <td className="util-align-center">0%</td>
           </tr>
           <tr>
             <th className="util-align-left">Successful</th>
-            <td className="util-align-center">16%</td>
-            <td className="util-align-center">14%</td>
-            <td className="util-align-center">43%</td>
-            <td className="util-align-center">19%</td>
-            <td className="util-align-center">3%</td>
+            <td className="util-align-center">30%</td>
+            <td className="util-align-center">27%</td>
+            <td className="util-align-center">24%</td>
+            <td className="util-align-center">8%</td>
+            <td className="util-align-center">5%</td>
             <td className="util-align-center">5%</td>
           </tr>
           <tr>
             <th className="util-align-left">Very Successful</th>
-            <td className="util-align-center">6%</td>
             <td className="util-align-center">19%</td>
-            <td className="util-align-center">63%</td>
             <td className="util-align-center">6%</td>
-            <td className="util-align-center">6%</td>
+            <td className="util-align-center">50%</td>
+            <td className="util-align-center">13%</td>
+            <td className="util-align-center">13%</td>
             <td className="util-align-center">0%</td>
           </tr>
         </tbody>
@@ -75,12 +74,12 @@ const Table4a = () => (
       <div className="cmp-row-chart__secondary">
         <h5 className="util-visually-hidden">Chart Key</h5>
         <ul className="cmp-key">
-          <TableKey color="hotpink" text="On a standalone documentation  site where users primarily  copy + paste" />
-          <TableKey color="yellow" text="In a external codebase and consumed by the main  codebase’s build pipeline" />
-          <TableKey color="blue" text="In an external codebase and  consumed via package" />
-          <TableKey color="green" text="Included in the main codebase" />
+          <TableKey color="hotpink" text="Less than 50% is for the design system" />
+          <TableKey color="yellow" text="50% to 74% is from the design system" />
+          <TableKey color="blue" text="More than 75% is from the design system" />
+          <TableKey color="green" text="Everything is from the design system" />
           <TableKey color="orange" text="I am not sure" />
-          <TableKey color="white" text="Other" />
+          <TableKey color="white" text="I prefer not to say" />
         </ul>
       </div>
 
@@ -88,16 +87,16 @@ const Table4a = () => (
         <div className="cmp-row-chart__row-container">
           <p className="cmp-row-chart__label">Very Unsuccessful</p>
           <ul className="cmp-row-chart__row">
-            <TableBlock percent="100" color="blue"/>
+            <TableBlock percent="100" color="hotpink"/>
           </ul>
         </div>
 
         <div className="cmp-row-chart__row-container">
           <p className="cmp-row-chart__label">Unsuccessful</p>
           <ul className="cmp-row-chart__row">
-            <TableBlock percent="62" color="hotpink"/>
-            <TableBlock percent="15" color="blue"/>
-            <TableBlock percent="15" color="green"/>
+            <TableBlock percent="85" color="hotpink"/>
+            <TableBlock percent="8" color="blue"/>
+            <TableBlock percent="8" color="green"/>
             <TableBlock percent="8" color="orange"/>
           </ul>
         </div>
@@ -105,23 +104,22 @@ const Table4a = () => (
         <div className="cmp-row-chart__row-container">
           <p className="cmp-row-chart__label">Average</p>
           <ul className="cmp-row-chart__row">
-            <TableBlock percent="27" color="hotpink"/>
+            <TableBlock percent="51" color="hotpink"/>
             <TableBlock percent="17" color="yellow"/>
-            <TableBlock percent="24" color="blue"/>
-            <TableBlock percent="17" color="green"/>
-            <TableBlock percent="10" color="orange"/>
-            <TableBlock percent="5" color="white"/>
+            <TableBlock percent="10" color="blue"/>
+            <TableBlock percent="7" color="green"/>
+            <TableBlock percent="15" color="orange"/>
           </ul>
         </div>
 
         <div className="cmp-row-chart__row-container">
           <p className="cmp-row-chart__label">Successful</p>
           <ul className="cmp-row-chart__row">
-            <TableBlock percent="16" color="hotpink"/>
-            <TableBlock percent="14" color="yellow"/>
-            <TableBlock percent="43" color="blue"/>
-            <TableBlock percent="19" color="green"/>
-            <TableBlock percent="3" color="orange"/>
+            <TableBlock percent="30" color="hotpink"/>
+            <TableBlock percent="27" color="yellow"/>
+            <TableBlock percent="24" color="blue"/>
+            <TableBlock percent="8" color="green"/>
+            <TableBlock percent="5" color="orange"/>
             <TableBlock percent="5" color="white"/>
           </ul>
         </div>
@@ -129,11 +127,11 @@ const Table4a = () => (
         <div className="cmp-row-chart__row-container">
           <p className="cmp-row-chart__label">Very Successful</p>
           <ul className="cmp-row-chart__row">
-            <TableBlock percent="6" color="hotpink"/>
-            <TableBlock percent="19" color="yellow"/>
-            <TableBlock percent="63" color="blue"/>
-            <TableBlock percent="6" color="green"/>
-            <TableBlock percent="6" color="orange"/>
+            <TableBlock percent="19" color="hotpink"/>
+            <TableBlock percent="6" color="yellow"/>
+            <TableBlock percent="50" color="blue"/>
+            <TableBlock percent="13" color="green"/>
+            <TableBlock percent="13" color="orange"/>
           </ul>
         </div>
 
@@ -149,4 +147,4 @@ const Table4a = () => (
   </section>
 )
 
-export default Table4a
+export default Diagram4b

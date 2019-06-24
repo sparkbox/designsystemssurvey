@@ -1,8 +1,8 @@
 import React from "react"
 
-const Chart2aCard = (props) => (
+const ChartCard = (props) => (
   <div className="cmp-diagram-chart__item">
-    <dt className="cmp-diagram-chart__value-container" style={{"height": props.percent * 2 + "%"}}>
+    <dt className="cmp-diagram-chart__value-container" style={{"height": props.percent * props.scale + "%"}}>
       <div className="cmp-diagram-chart__value">
         <div className="util-relative util-inline-block">
           {props.percent}<sup className="cmp-diagram-chart__superscript">%</sup>
@@ -14,4 +14,4 @@ const Chart2aCard = (props) => (
   </div>
 )
 
-export default Chart2aCard
+export default ChartCard

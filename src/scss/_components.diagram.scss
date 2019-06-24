@@ -21,12 +21,40 @@
     }
   }
 
-  &__chart {
-    display: none;
+  &__table-vertical {
+    max-width: $max-width;
+    margin: 2rem auto;
+    overflow: auto;
 
+    @media (min-width: $bp-md) {
+      // Hide the table when flexbox is supported
+      @supports(display: flex) {
+        @include visually-hidden;
+      }
+    }
+
+    &:focus {
+      position: inherit !important;
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+
+  &__chart {
     // Show the chart when flexbox is supported
     @supports(display: flex) {
       display: block;
+    }
+  }
+
+  &__chart-vertical {
+    display: none;
+
+    @media (min-width: $bp-md) {
+      // Show the chart when flexbox is supported
+      @supports(display: flex) {
+        display: block;
+      }
     }
   }
 }
