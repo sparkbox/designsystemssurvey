@@ -1,9 +1,6 @@
 $circle-height: 28px;
 
 .cmp-diagram-chart {
-  --percent: 1;
-  --scale: 1;
-
   display: none;
 
   @media (min-width: $bp-md) {
@@ -102,8 +99,7 @@ $circle-height: 28px;
 
     @supports (display: grid) {
       opacity: 0;
-      top: unset;
-      bottom: calc(var(--percent) * var(--scale) + 0.5rem);
+      top: 0;
     }
   }
 
@@ -319,12 +315,12 @@ $circle-height: 28px;
 @keyframes vertical-chart-fade {
   0% {
     opacity: 0;
-    bottom: 0.5rem;
+    top: 90%;
     transform: scale(0.7);
   }
   100% {
     opacity: 1;
-    bottom: calc(49% * 2 + 0.5rem);
+    top: -4.75rem;
     transform: scale(1);
   }
 }
