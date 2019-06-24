@@ -1,10 +1,10 @@
 import React from "react"
 
 const Table3c = () => (
-  <section className="cmp-diagram-table">
+  <section className="cmp-diagram">
     <p id="table3c" className="font-diagram-heading">Q: If you feel that your organization’s design system was not successful, what were the primary reasons?</p>
     <p className="font-diagram-copy">71 In-House Responses | Select all that apply</p>
-    <div className="cmp-diagram-table__scrollable">
+    <div className="cmp-diagram__table">
       <table aria-labelledby="table3c">
       <tbody>
           <tr>

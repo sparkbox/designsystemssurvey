@@ -1,13 +1,32 @@
-.cmp-diagram-table {
+.cmp-diagram {
   width: calc(100% - 2rem);
   margin: 0 auto;
 
-  @media (min-width: $bp-md) {
-    display: none;
+  // Hide the table unless it has keyboard focus since it
+  // is an accessible version of the chart
+  &__table {
+    max-width: $max-width;
+    margin: 2rem auto;
+    overflow: auto;
+
+    // Hide the table when flexbox is supported
+    @supports(display: flex) {
+      @include visually-hidden;
+    }
+
+    &:focus {
+      position: inherit !important;
+      width: auto !important;
+      height: auto !important;
+    }
   }
 
-  // Wrap this around tables to make them scrollable
-  &__scrollable {
-    overflow: auto;
+  &__chart {
+    display: none;
+
+    // Show the chart when flexbox is supported
+    @supports(display: flex) {
+      display: block;
+    }
   }
 }

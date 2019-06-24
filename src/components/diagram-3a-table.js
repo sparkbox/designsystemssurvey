@@ -1,10 +1,10 @@
 import React from "react"
 
 const Table3a = () => (
-  <section className="cmp-diagram-table">
+  <section className="cmp-diagram">
     <p id="table3a" className="font-diagram-heading">Q: How strongly did each of the following factors motivate your organization to establish a design system?</p>
     <p className="font-diagram-copy">108 In-House Responses | Rate 1 to 5 where 1 = Not a motivator and 5 = A strong motivator</p>
-    <div className="cmp-diagram-table__scrollable">
+    <div className="cmp-diagram__table">
       <table aria-labelledby="table3a">
         <thead>
           <tr>

@@ -76,11 +76,13 @@
 
 @import "components.diagram.table";
 @import "components.diagram.chart";
+@import "components.diagram.key";
 @import "components.typography";
 @import "components.percentage-card";
 @import "components.percentage-list";
 @import "components.skip-link";
 @import "components.table-of-contents";
+@import "components.chart.row-chart";
 
 // =====================================================================
 // 7. Utilities
@@ -90,4 +92,3 @@
 @import "utilities";
 @import "utilities.spacing";
 @import "utilities.text";
-
