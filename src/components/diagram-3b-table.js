@@ -1,10 +1,10 @@
 import React from "react"
 
 const Table3b = () => (
-  <section className="cmp-diagram-table">
+  <section className="cmp-diagram">
     <p id="table3b" className="font-diagram-heading">Q: What about a client engagement leads you to suggest or not suggest a design system?</p>
     <p className="font-diagram-copy">79 Agency Responses | Select all that apply</p>
-    <div className="cmp-diagram-table__scrollable">
+    <div className="cmp-diagram__table">
       <table aria-labelledby="table3b">
       <tbody>
           <tr>

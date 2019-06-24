@@ -13,7 +13,7 @@ $circle-height: 28px;
   }
 
   &__list {
-    max-width: 70rem;
+    max-width: $max-width;
     margin: 0 auto;
     display: grid;
     grid-row-gap: 2rem;
