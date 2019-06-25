@@ -50,7 +50,7 @@ export default class Form extends Component {
     }
     return (
       <form className="cmp-form" onSubmit={this._handleSubmit}>
-        <label className="cmp-form__label" htmlFor="email">Sign up for Sparkbox Newsletters to receive more information on design systems and other web design and development content right in your inbox.</label>
+        <label className="cmp-form__label util-visually-hidden" htmlFor="email">Sign up for Sparkbox Newsletters</label>
         <div className="cmp-form__flex">
           <div className="cmp-form__border">
             <input

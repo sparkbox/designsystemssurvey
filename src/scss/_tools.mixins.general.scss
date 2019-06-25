@@ -90,14 +90,14 @@
   // Disable native outline since we're drawing our own via box-shadow
   outline: none;
 
-   html.safe-focus & {
+   .safe-focus & {
     // This draws a doubled-up border, which is white and black. This is to ensure
     // it's visible on all backgrounds. It's marked as !important so this focus
     // state takes effect even when used on elements with higher-specificity
     // box-shadows applied to them. And because focus states are important. :)
     box-shadow:
       0 0 0 2px $white,
-      0 0 0 4px $black !important;
+      0 0 0 4px $black;
   }
 }
 
