@@ -1,5 +1,5 @@
 .cmp-form {
-  margin: 0 0 2rem;
+  margin: 0 0 4rem;
 
   &__label {
     font-family: $font-heading;
@@ -49,6 +49,10 @@
     @media (min-width: $bp-md) {
       width: 80%;
     }
+
+    &:focus-within {
+      border: 3px solid $white !important;
+    }
   }
 
   &__input {
@@ -66,11 +70,16 @@
     &::placeholder {
       color: $yellow;
     }
+
+    &:focus {
+      box-shadow: unset;
+    }
   }
 
   &__button {
     @include unbuttonize;
     color: $black;
+    position: relative;
     font-family: $font-heading;
     font-size: 1.5rem;
     line-height: 1.1;
@@ -79,9 +88,19 @@
     border-radius: 0.375rem;
     width: 100%;
     text-align: center;
+    margin-top: 1.5rem;
+    transform: scale(1);
+    transition: transform 150ms ease;
 
     @media (min-width: $bp-sm) {
       width: auto;
+      margin-top: 0;
+    }
+
+    &:hover {
+      // animation: moving-gradient 1000ms linear alternate infinite;
+      transform: scale(1.05);
+      background-size: 200%;
     }
   }
 
@@ -90,5 +109,14 @@
     font-size: 32px;
     color: #F3C448;
     letter-spacing: 0;
+  }
+}
+
+@keyframes moving-gradient {
+	0% {
+    background-position: 0% 0%;
+  }
+	100% {
+    background-position: 100% 100%;
   }
 }
