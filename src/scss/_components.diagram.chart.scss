@@ -49,7 +49,7 @@ $circle-height: 28px;
   &__platform {
     perspective: 800px;
     position: absolute;
-    top: calc(25rem + 10px - 2.75rem);
+    top: 22.875rem;
     left: 1.5rem;
     height: 4.5rem;
     width: calc(100% - 3rem);
@@ -112,17 +112,20 @@ $circle-height: 28px;
   }
 
   &__rectangle {
+    $width: 4rem;
+    $width-lg: 5rem;
+
     position: absolute;
-    left: calc(50% - 4rem * 0.5);
+    left: calc(50% - #{$width} * 0.5);
     bottom: $circle-height * 0.5;
-    width: 4rem;
+    width: $width;
     height: 100%;
     box-sizing: border-box;
 
     @media (min-width: $bp-lg) {
-      width: 5rem;
+      width: $width-lg;
       height: unset;
-      left: calc(50% - 5rem * 0.5);
+      left: calc(50% - #{$width-lg} * 0.5);
     }
 
     &::before,
@@ -130,13 +133,13 @@ $circle-height: 28px;
       box-sizing: border-box;
       content: '';
       position: absolute;
-      width: 4rem;
+      width: $width;
       height: $circle-height;
       border-radius: 50%;
       left: -2px;
 
       @media (min-width: $bp-lg) {
-        width: 5rem;
+        width: $width-lg;
       }
     }
 
