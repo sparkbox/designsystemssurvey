@@ -37,6 +37,18 @@
     &--form {
       background-image: svg($icon-form);
     }
+
+    &--storybook {
+      background-image: svg($icon-storybook);
+    }
+
+    &--invision {
+      background-image: svg($icon-invision);
+    }
+
+    &--pattern-lab {
+      background-image: svg($icon-pattern-lab);
+    }
   }
 
   &__label {
