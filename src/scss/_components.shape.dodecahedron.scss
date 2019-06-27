@@ -1,22 +1,7 @@
-.svg-dodecahedron {
-  display: none;
-
-  @supports(transform-style: preserve-3d) {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-
-    &__path {
-      fill: mix($orange, $black, 20%);
-      stroke: $orange;
-      stroke-width: 1.5px;
-      vector-effect: non-scaling-stroke;
-    }
-  }
-}
-
 .cmp-dodecahedron {
+  height: 100%;
+  width: 100%;
+  background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.11 90.45"><polygon fill="#{mix($orange, $black, 20%)}" stroke="#{$orange}" stroke-width="1.5" vector-effect="non-scaling-stroke" points="47.55 0 0 34.55 18.16 90.45 76.94 90.45 95.11 34.55 47.55 0"/></svg>') no-repeat left center / contain;
   @supports(transform-style: preserve-3d) {
     --height: var(--size);
     --width: calc(var(--size) * 1.16);
@@ -28,6 +13,7 @@
     --moveX: calc(var(--height) * 0.5);
     --moveY: calc(var(--width) * 0.575);
 
+    background: none;
     height: var(--height);
     width: var(--width);
     margin: 0 calc(calc(var(--size) * 0.2));
@@ -66,6 +52,7 @@
     }
 
     &__side {
+      background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.11 90.45"><polygon fill="#{mix($orange, $black, 20%)}" stroke="#{$orange}" stroke-width="1.5" vector-effect="non-scaling-stroke" points="47.55 0 0 34.55 18.16 90.45 76.94 90.45 95.11 34.55 47.55 0"/></svg>') no-repeat center / contain;
       height: var(--height);
       width: var(--width);
       position: absolute;

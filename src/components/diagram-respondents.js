@@ -15,7 +15,7 @@ const Respondents = () => (
           <ShapePyramid />
         </span>
         <span className="cmp-respondents__stat">
-          <span className="cmp-respondents__group cmp-respondents__group--designers">Designers <span className="util-block">and&nbsp;<abbr title="User Experience">UX</abbr></span></span> <mark className="cmp-respondents__number">49<span className="cmp-respondents__percent">%</span></mark>
+          <span className="cmp-respondents__group cmp-respondents__group--designers">Designers<br />and&nbsp;<abbr title="User Experience">UX</abbr></span> <mark className="cmp-respondents__number">49<span className="cmp-respondents__percent">%</span></mark>
         </span>
       </li>
 

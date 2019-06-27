@@ -1,6 +1,6 @@
 .cmp-respondents {
   width: calc(100% - 2rem);
-  max-width: 74rem;
+  max-width: $max-width;
   margin: 4rem auto 6rem;
 
   @media (min-width: $bp-respond-medium-layout) {
@@ -13,18 +13,19 @@
 
     @supports (display: grid) {
       display: grid;
-      grid-row-gap: 6rem;
+      grid-row-gap: 8rem;
     }
 
     @media (min-width: $bp-respond-start-grid) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
 
       @supports (display: grid) {
         display: grid;
         grid-template: 1fr 1fr / 1fr 1fr;
         grid-column-gap: 2rem;
-        grid-row-gap: 4rem;
+        grid-row-gap: 6rem;
       }
     }
 
@@ -33,11 +34,13 @@
 
       @supports (display: grid) {
         grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+        grid-row-gap: 4rem;
       }
     }
   }
 
   &__item {
+    display: inline-block;
     display: flex;
     justify-content: center;
     line-height: 1;
@@ -51,12 +54,13 @@
 
     @media (min-width: $bp-respond-stop-overlap) {
       align-items: stretch;
-      justify-content: flex-end;
+      justify-content: space-around;
 
       width: calc(50% - 4rem);
       margin: 0 2rem 2rem;
 
       @supports (display: grid) {
+        justify-content: flex-end;
         width: 100%;
         margin: 0;
       }
@@ -92,7 +96,15 @@
   }
 
   &__shape {
+    height: 6rem;
+    width: 6rem;
+    padding: 1rem;
+    float: left;
+
     @supports (display: grid) {
+      float: none;
+      height: auto;
+      width: auto;
       position: absolute;
       top: 0;
       left: 0;
@@ -101,6 +113,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0;
 
       @media (min-width: $bp-respond-stop-overlap) {
         right: auto;
@@ -262,6 +275,8 @@
   }
 
   &__stat {
+    float: left;
+    display: block;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -289,7 +304,7 @@
       color: $hotpink;
 
       @supports (display: grid) {
-        color: mix($white, $hotpink, 80%);
+        color: $white;
 
         @media (min-width: $bp-respond-stop-overlap) {
           color: $hotpink;
@@ -301,7 +316,7 @@
       color: $yellow;
 
       @supports (display: grid) {
-        color: mix($white, $yellow, 80%);
+        color: $white;
 
         @media (min-width: $bp-respond-stop-overlap) {
           color: $yellow;
@@ -313,7 +328,7 @@
       color: $green;
 
       @supports (display: grid) {
-        color: mix($white, $green, 80%);
+        color: $white;
 
         @media (min-width: $bp-respond-stop-overlap) {
           color: $green;
@@ -325,7 +340,7 @@
       color: $orange;
 
       @supports (display: grid) {
-        color: mix($white, $orange, 80%);
+        color: $white;
 
         @media (min-width: $bp-respond-stop-overlap) {
           color: $orange;
@@ -340,6 +355,7 @@
     font-family: $font-heading;
     font-size: 4rem;
     color: inherit;
+    display: block;
     display: flex;
     justify-content: center;
     align-items: flex-start;
