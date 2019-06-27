@@ -1,0 +1,52 @@
+.cmp-feature-list {
+  @include delist;
+  counter-reset: count;
+  list-style: none;
+
+  &__flex {
+    margin: 2rem auto;
+    counter-reset: count 3;
+
+    @media (min-width: $bp-sm) {
+      display: flex;
+      justify-content: space-between;
+      margin: 4rem auto;
+    }
+
+  }
+
+  &__container {
+    @media (min-width: $bp-sm) {
+      & + & {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-body;
+    font-size: 2.25rem;
+    color: $white;
+    letter-spacing: 0;
+    line-height: 1.1;
+    margin: 2rem 1rem;
+  }
+
+  &__item {
+    @include body-copy;
+    line-height: 1.65;
+    margin: 0 auto;
+    counter-increment: count;
+    display: flex;
+
+    &::before {
+      content: counter(count)".";
+      color: $hotpink;
+      font-weight: bold;
+      display: inline-block;
+      min-width: 2.125rem;
+      text-align: right;
+      margin-right: 0.5rem;
+    }
+  }
+}
