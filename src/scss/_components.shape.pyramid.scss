@@ -1,22 +1,7 @@
-.svg-pyramid {
-  display: none;
-
-  @supports(transform-style: preserve-3d) {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-
-    &__path {
-      fill: mix($hotpink, $black, 20%);
-      stroke: $hotpink;
-      stroke-width: 2px;
-      vector-effect: non-scaling-stroke;
-    }
-  }
-}
-
 .cmp-pyramid {
+  height: 100%;
+  width: 100%;
+  background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 75"><path fill="#{mix($hotpink, $black, 20%)}" stroke="#{$hotpink}" stroke-width="2" vector-effect="non-scaling-stroke" d="M43.5 0L0 75h87L43.5 0z"/></svg>') no-repeat left center / contain;
   @supports(transform-style: preserve-3d) {
     --height: var(--size);
     --width: calc(var(--size) * 1.16);
@@ -24,6 +9,7 @@
     --rotate: 30deg;
     --offset: calc(var(--size) * -0.5);
 
+    background: none;
     height: var(--height);
     width: var(--width);
     margin: 0 calc(var(--size) * 0.1);
@@ -54,7 +40,7 @@
       width: var(--width);
       position: absolute;
       transform-origin: top center;
-      // background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 75"><path fill="#{mix($hotpink, $black, 20%)}" stroke="#{$hotpink}" stroke-width="0.5" vector-effect="non-scaling" d="M43.5 0L0 75h87L43.5 0z"/></svg>') no-repeat center / contain;
+      background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 75"><path fill="#{mix($hotpink, $black, 20%)}" stroke="#{$hotpink}" stroke-width="2" vector-effect="non-scaling-stroke" d="M43.5 0L0 75h87L43.5 0z"/></svg>') no-repeat center / contain;
     }
 
     &__side--1 {

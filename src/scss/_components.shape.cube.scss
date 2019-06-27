@@ -1,7 +1,7 @@
 .cmp-cube {
-  height: 6rem;
-  width: 6rem;
-  background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84" ><rect fill="#{mix($yellow, $black, 20%)}" stroke="#{$yellow}" stroke-width="3px" vector-effect="non-scaling-stroke" x="0" y="0" height="84" width="84" /></svg>') no-repeat center / contain;
+  height: 100%;
+  width: 100%;
+  background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84" ><rect fill="#{mix($yellow, $black, 20%)}" stroke="#{$yellow}" stroke-width="3px" vector-effect="non-scaling-stroke" x="0" y="0" height="84" width="84" /></svg>') no-repeat left center / contain;
 
   @supports(transform-style: preserve-3d) {
     --rotate: 45deg;
