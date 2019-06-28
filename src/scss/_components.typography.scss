@@ -45,7 +45,8 @@
 .font-diagram-heading {
   $size: 4rem;
 
-  margin: 0;
+  margin: 4rem auto 0;
+  max-width: $max-width-headers;
   padding-bottom: $size;
   position: relative;
   color: $white;
