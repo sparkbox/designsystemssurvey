@@ -17,7 +17,7 @@ class Diagram2a extends Component {
       <section className="cmp-diagram">
         <p id="table2a" className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
         <p className="font-diagram-copy">108 In-House Responses | Select one</p>
-        <div className="cmp-diagram__table-vertical" tabIndex="0">
+        <div className="cmp-diagram__table cmp-diagram__table--vertical" tabIndex="0">
           <table aria-labelledby="table2a">
             <tbody>
               <tr>
@@ -48,7 +48,7 @@ class Diagram2a extends Component {
           </table>
         </div>
 
-        <div className="cmp-diagram__chart-vertical cmp-diagram-chart">
+        <div className="cmp-diagram__chart cmp-diagram__chart--vertical cmp-diagram-chart">
           <dl className="obj-layout-grid-column-6 cmp-diagram-chart__list">
             <ChartCard percent="36" color="hotpink" scale="2" label="In an external codebase and consumed via package manager"/>
             <ChartCard percent="24" color="blue" scale="2" label="On a standalone documentation site where users primarily copy + paste, or download files"/>

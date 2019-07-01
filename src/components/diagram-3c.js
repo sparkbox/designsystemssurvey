@@ -17,8 +17,7 @@ class Diagram3c extends Component {
       <section className="cmp-diagram">
         <p id="table3c" className="font-diagram-heading">Q: If you feel that your organization’s design system was not successful, what were the primary reasons?</p>
         <p className="font-diagram-copy">71 In-House Responses | Select all that apply</p>
-
-        <div className="cmp-diagram__table-vertical" tabIndex="0">
+        <div className="cmp-diagram__table cmp-diagram__table--vertical" tabIndex="0">
           <table aria-labelledby="table3c">
           <tbody>
               <tr>
@@ -49,7 +48,7 @@ class Diagram3c extends Component {
           </table>
         </div>
 
-        <div className="cmp-diagram__chart-vertical cmp-diagram-chart" aria-hidden="true">
+        <div className="cmp-diagram__chart cmp-diagram__chart--vertical cmp-diagram-chart" aria-hidden="true">
           <dl className="obj-layout-grid-column-6 cmp-diagram-chart__list">
             <ChartCard percent="52" color="hotpink" scale="1.25" label="Adoption difficulties"/>
             <ChartCard percent="42" color="blue" scale="1.25" label="Maintenance difficulties"/>
