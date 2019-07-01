@@ -17,7 +17,7 @@ class Diagram3b extends Component {
       <section className="cmp-diagram">
         <p id="table3b" className="font-diagram-heading">Q: What about a client engagement leads you to suggest or not suggest a design system?</p>
         <p className="font-diagram-copy">79 Agency Responses | Select all that apply</p>
-        <div className="cmp-diagram__table-vertical" tabIndex="0">
+        <div className="cmp-diagram__table cmp-diagram__table--vertical" tabIndex="0">
           <table aria-labelledby="table3b">
           <tbody>
               <tr>
@@ -56,7 +56,7 @@ class Diagram3b extends Component {
           </table>
         </div>
 
-        <div className="cmp-diagram__chart-vertical cmp-diagram-chart">
+        <div className="cmp-diagram__chart cmp-diagram__chart--vertical cmp-diagram-chart">
           <dl className="obj-layout-grid-column-8 cmp-diagram-chart__list">
             <ChartCard percent="58" color="hotpink" scale="1.25" label="The client struggles with consistency across web properties"/>
             <ChartCard percent="57" color="blue" scale="1.25" label="The client has many web properties that could all benefit from a unified system"/>
