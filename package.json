@@ -8,13 +8,14 @@
   "author": "Sparkbox",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && node tasks/comments.js",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "build2018": "rm -rf ./static/2018 && cd 2018 && npm install && npm run build && cp -r dist ../static/2018"
+    "build2018": "rm -rf ./static/2018 && cd 2018 && npm install && npm run build && cp -r dist ../static/2018",
+    "comments": "node tasks/comments.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.0.20",
