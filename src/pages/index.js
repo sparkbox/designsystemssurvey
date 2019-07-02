@@ -10,6 +10,7 @@ import Section2 from "../sections/section-2"
 import Section3 from "../sections/section-3"
 import Section4 from "../sections/section-4"
 import Section5 from "../sections/section-5"
+import Footer from "../components/footer"
 import ContentBlock from "../components/content-block"
 
 const IndexPage = () => (
@@ -62,6 +63,8 @@ const IndexPage = () => (
 
       <Section5 />
     </section>
+
+    <Footer />
   </Layout>
 )
 
