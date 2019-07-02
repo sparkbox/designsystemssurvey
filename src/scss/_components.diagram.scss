@@ -8,12 +8,7 @@
     max-width: $max-width;
     margin: 2rem auto;
     overflow: auto;
-    display: block;
-
-    // Hide the table when flexbox is supported
-    @supports(display: flex) {
-      display: none;
-    }
+    display: none;
 
     &:focus {
       position: inherit !important;
@@ -25,28 +20,21 @@
       display: block;
 
       @media (min-width: $bp-md) {
-        // Hide the table when flexbox is supported
-        @supports(display: flex) {
-          display: none;
-        }
+        display: none;
       }
+    }
+
+    .lt-ie10 & {
+      display: block;
     }
   }
 
   &__chart {
-    display: none;
-
-    // Show the chart when flexbox is supported
-    @supports(display: flex) {
-      display: block;
-    }
+    display: block;
 
     &--vertical {
       @media (min-width: $bp-md) {
-        // Show the chart when flexbox is supported
-        @supports(display: flex) {
-          display: block;
-        }
+        display: block;
       }
     }
 
