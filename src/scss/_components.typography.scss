@@ -69,6 +69,28 @@
     background-color: mix($hotpink, $orange, 50%);
     box-shadow: 0 -0.25rem $hotpink, 0 0.25rem $orange;
   }
+
+  &--footer {
+    margin: 2rem auto 0;
+    text-align: left;
+
+    @media (min-width: $bp-footer-md) {
+      margin: 4rem auto 0;
+    }
+
+    &::before {
+      left: 0;
+      width: 15rem;
+
+      @media (min-width: $bp-footer-sm) {
+        width: 12rem;
+      }
+
+      @media (min-width: $bp-footer-md) {
+        width: 15rem;
+      }
+    }
+  }
 }
 
 // small copy underneath diagram-heading
