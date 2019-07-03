@@ -130,37 +130,42 @@
   font-size: 2.125rem;
   line-height: 1.2;
   color: $blue;
-  border-bottom: 2px solid $blue;
   display: inline-block;
   margin: 0.75em 0;
   position: relative;
-  text-decoration: none;
 
   @supports (background-clip: text) {
     color: transparent;
-    border-bottom: none;
     background-image: linear-gradient(90deg, $blue 0%, $green 50%, $blue 100%);
     background-clip: text;
     background-size: 250% 100%;
   }
 
-  &::after {
-    content: '';
-    background: linear-gradient(to right, $blue, $green);
-    position: absolute;
-    top: calc(100% + 0.025rem);
-    left: 0;
-    right: 0;
-    height: 2px;
-    transition: opacity 150ms;
+  &-text {
+    border-bottom: 2px solid $blue;
+    transition: border-bottom ease 150ms;
+
+    @supports (background-clip: text) {
+      border-bottom: none;
+      background-image: linear-gradient(90deg, $blue 0%, $green 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.125em;
+      background-position: 0 106%;
+      animation: background-fade-in 150ms ease forwards;
+    }
   }
 
   &:hover {
-    animation: animated-gradient 1000ms linear alternate infinite;
+    & .font-link-text {
+      border-bottom: transparent;
+    }
 
-    &::after {
-      opacity: 0;
-      transition: opacity 150ms;
+    @supports (background-clip: text) {
+      animation: animated-gradient 1000ms linear alternate infinite;
+
+      & .font-link-text {
+        animation: background-fade-out 150ms ease forwards;
+      }
     }
   }
 }
@@ -168,4 +173,14 @@
 @keyframes animated-gradient {
 	0% {background-position: 0% 0%;}
 	100% {background-position: 100% 100%;}
+}
+
+@keyframes background-fade-out {
+  0% {background-position: 0 106%;}
+  100% { background-position: 114% 114%;}
+}
+
+@keyframes background-fade-in {
+  0% { background-position: 114% 114%;}
+  100% {background-position: 0 106%;}
 }
