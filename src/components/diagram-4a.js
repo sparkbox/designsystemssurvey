@@ -75,9 +75,9 @@ const Diagram4a = () => (
       <div className="cmp-row-chart__secondary">
         <h5 className="util-visually-hidden">Chart Key</h5>
         <ul className="cmp-key">
-          <TableKey color="hotpink" text="On a standalone documentation  site where users primarily  copy + paste" />
-          <TableKey color="yellow" text="In a external codebase and consumed by the main  codebase’s build pipeline" />
-          <TableKey color="blue" text="In an external codebase and  consumed via package" />
+          <TableKey color="hotpink" text="On a standalone documentation site where users primarily copy + paste" />
+          <TableKey color="yellow" text="In a external codebase and consumed by the main codebase’s build pipeline" />
+          <TableKey color="blue" text="In an external codebase and consumed via package" />
           <TableKey color="green" text="Included in the main codebase" />
           <TableKey color="orange" text="I am not sure" />
           <TableKey color="white" text="Other" />
