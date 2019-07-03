@@ -1,0 +1,21 @@
+.cmp-latest-link {
+  display: block;
+  width: 100%;
+  background-color: black;
+  font-size: 1.125rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  z-index: 1200;
+
+  &__styled {
+    text-decoration: underline;
+    transition: color 150ms ease-in-out;
+  }
+
+  &:hover &__styled {
+    color: gold;
+  }
+}
