@@ -41,6 +41,7 @@
 //    partials in this section.
 
 @import "tools.mixins.general";
+@import "tools.mixins.numbers";
 
 // =====================================================================
 // 3. Generic
@@ -61,6 +62,7 @@
 @import "elements.lists";
 @import "elements.table";
 @import "elements.text";
+@import "elements.data-number";
 
 // =====================================================================
 // 5. Objects

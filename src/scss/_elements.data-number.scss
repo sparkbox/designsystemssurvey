@@ -1,0 +1,23 @@
+[data-number] {
+  display: flex;
+
+  @media (min-width: 63.5rem) {
+    display: block;
+    position: relative;
+  }
+
+  &::before {
+    @include number;
+    content: attr(data-number);
+    display: block;
+    padding-top: 1rem;
+    width: 7rem;
+
+    @media (min-width: 63.5rem) {
+      position: absolute;
+      right: 100%;
+      top: -1.5rem;
+      padding-top: 0;
+    }
+  }
+}
