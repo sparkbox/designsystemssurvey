@@ -47,18 +47,7 @@
     }
 
     &::before {
-      font-family: $font-script;
-      text-align: center;
-      font-size: 6.25rem;
-      color: $blue;
-      transform: rotate(-10deg);
-      text-shadow:
-        0 0 0.075em rgba($blue, 0.6),
-        0 0.02em 0 darken($blue, 32%),
-        -0.0075em 0.005em 0 $white,
-        0.01em 0.005em 0 $white,
-        0 0 0.01em $black
-        ;
+      @include number;
       content: counter(count);
     }
   }
