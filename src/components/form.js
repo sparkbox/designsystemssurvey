@@ -85,8 +85,8 @@ export default class Form extends Component {
       return null;
     }
     return (
-      <div className="cmp-form cmp-form-already-subscribed">
-        <h4>You're already on our list. Thanks for subscribing!</h4>
+      <div className="cmp-form">
+        <h4 className="cmp-form__message cmp-form__message--subscribed">You’re on our list. Thanks for subscribing!</h4>
         <button className="cmp-form__button" onClick={this.newForm}>Sign up with another email address</button>
       </div>
     )
@@ -99,7 +99,7 @@ export default class Form extends Component {
     }
     return (
       <div className="cmp-form cmp-form-invalid">
-        <h4>The email you entered is invalid.</h4>
+        <h4 className="cmp-form__message cmp-form__message--invalid">The email you entered is invalid.</h4>
         <button className="cmp-form__button" onClick={this.newForm}>Sign up with a valid email address</button>
       </div>
     )

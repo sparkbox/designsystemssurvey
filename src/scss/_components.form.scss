@@ -110,6 +110,37 @@
     color: #F3C448;
     letter-spacing: 0;
   }
+
+  &__message {
+    font-size: 2rem;
+    color: $white;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 4rem;
+      width: 4rem;
+      margin-right: 1rem;
+    }
+
+    &--subscribed {
+      &::before {
+        background: svg('<svg width="99" height="94" viewBox="0 0 99 94"><defs><linearGradient id="a" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#42E915"/><stop offset="100%" stop-color="#39971F"/></linearGradient></defs><path fill="url(#a)" fill-rule="evenodd" d="M97 6.7a4 4 0 0 1 1.5 5.5l-46 79.6a4 4 0 0 1-5.5 1.5l-45-26a4 4 0 0 1-1.5-5.5l6-10.4A4 4 0 0 1 12 50l31.2 18 38-65.8A4 4 0 0 1 86.6.7l10.4 6z"/></svg>') no-repeat center / contain;
+        filter: drop-shadow(0 0 0.125rem rgba($green, 0.25));
+        animation: subscribed-glow 1500ms ease-in-out alternate infinite;
+      }
+    }
+
+    &--invalid {
+      &::before {
+        background: svg('<svg width="97" height="96" viewBox="0 0 97 96"><defs><linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#9A266B"/><stop offset="100%" stop-color="#DF138C"/></linearGradient></defs><path fill="url(#a)" fill-rule="evenodd" d="M62.5 47.8L95 15.3a4 4 0 0 0 0-5.6l-8.5-8.5a4 4 0 0 0-5.6 0L48.4 33.7 15.8 1.2a4 4 0 0 0-5.6 0L1.7 9.7a4 4 0 0 0 0 5.6l32.5 32.5L1.7 80.4a4 4 0 0 0 0 5.6l8.5 8.5a4 4 0 0 0 5.6 0L48.4 62l32.5 32.5a4 4 0 0 0 5.6 0L95 86a4 4 0 0 0 0-5.6L62.5 47.8z"/></svg>') no-repeat center / contain;
+        filter: drop-shadow(0 0 0.125rem rgba($hotpink, 0.25));
+        animation: invalid-glow 1500ms ease-in-out alternate infinite;
+      }
+    }
+  }
 }
 
 @keyframes moving-gradient {
@@ -118,5 +149,17 @@
   }
 	100% {
     background-position: 100% 100%;
+  }
+}
+
+@keyframes subscribed-glow {
+  to {
+    filter: drop-shadow(0 0 0.5rem rgba($green, 0.75));
+  }
+}
+
+@keyframes invalid-glow {
+  to {
+    filter: drop-shadow(0 0 0.5rem rgba($hotpink, 0.75));
   }
 }
