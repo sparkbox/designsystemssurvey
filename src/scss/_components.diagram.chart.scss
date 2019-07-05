@@ -1,5 +1,24 @@
 $circle-height: 28px;
 
+@mixin chart-bar($color) {
+    background: linear-gradient(to bottom, $color, $black);
+    border-left: solid 2px $color;
+    border-right: solid 2px $color;
+
+    &::before,
+    &::after {
+      border: solid 2px $color;
+    }
+
+    &::after {
+      box-shadow: 0 0.125rem 1rem $color;
+    }
+
+    &::before {
+      background: linear-gradient(to bottom, $color, mix($color, $black, 80%));
+    }
+}
+
 .cmp-diagram-chart {
   display: none;
 
@@ -165,117 +184,35 @@ $circle-height: 28px;
     }
 
     &--hotpink {
-      background: linear-gradient(to bottom, $hotpink, $black);
-      border-left: solid 2px $hotpink;
-      border-right: solid 2px $hotpink;
-
-      &::before,
-      &::after {
-        border: solid 2px $hotpink;
-      }
-
-      &::after {
-        box-shadow: 0 0.125rem 1rem $hotpink;
-      }
-
-      &::before {
-        background: linear-gradient(to bottom, $hotpink, mix($hotpink, $black, 80%));
-      }
+      @include chart-bar($hotpink);
     }
 
     &--blue {
-      background: linear-gradient(to bottom, $blue, $black);
-      border-left: solid 2px $blue;
-      border-right: solid 2px $blue;
-
-      &::before,
-      &::after {
-        border: solid 2px $blue;
-      }
-
-      &::after {
-        box-shadow: 0 0.125rem 1rem $blue;
-      }
-
-      &::before {
-        background: linear-gradient(to bottom, $blue, mix($blue, $black, 80%));
-      }
+      @include chart-bar($blue);
     }
 
     &--orange {
-      background: linear-gradient(to bottom, $orange, $black);
-      border-left: solid 2px $orange;
-      border-right: solid 2px $orange;
-
-      &::before,
-      &::after {
-        border: solid 2px $orange;
-      }
-
-      &::after {
-        box-shadow: 0 0.125rem 1rem $orange;
-      }
-
-      &::before {
-        background: linear-gradient(to bottom, $orange, mix($orange, $black, 80%));
-      }
+      @include chart-bar($orange);
     }
 
     &--green {
-      background: linear-gradient(to bottom, $green, $black);
-      border-left: solid 2px $green;
-      border-right: solid 2px $green;
-
-      &::before,
-      &::after {
-        border: solid 2px $green;
-      }
-
-      &::after {
-        box-shadow: 0 0.125rem 1rem $green;
-      }
-
-      &::before {
-        background: linear-gradient(to bottom, $green, mix($green, $black, 80%));
-      }
+      @include chart-bar($green);
     }
 
     &--yellow {
-      background: linear-gradient(to bottom, $yellow, $black);
-      border-left: solid 2px $yellow;
-      border-right: solid 2px $yellow;
-
-      &::before,
-      &::after {
-        border: solid 2px $yellow;
-      }
-
-      &::after {
-        box-shadow: 0 0.125rem 1rem $yellow;
-      }
-
-      &::before {
-        background: linear-gradient(to bottom, $yellow, mix($yellow, $black, 80%));
-      }
+      @include chart-bar($yellow);
     }
 
     &--white {
-      background: linear-gradient(to bottom, $white, $black);
-      border-left: solid 2px $white;
-      border-right: solid 2px $white;
+      @include chart-bar($white);
+    }
 
-      &::before,
-      &::after {
-        border: solid 2px $white;
-      }
+    &--bluegreen {
+      @include chart-bar(mix($blue, $green, 50%));
+    }
 
-      &::after {
-        box-shadow: 0 0.125rem 1rem $white;
-      }
-
-      &::before {
-        background: linear-gradient(to bottom, $white, mix($white, $black, 80%));
-      }
+    &--yellowpink {
+      @include chart-bar(mix($yellow, $hotpink, 50%));
     }
   }
 
