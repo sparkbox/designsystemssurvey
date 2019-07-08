@@ -62,7 +62,7 @@ export default class Form extends Component {
               id="email"
               />
           </div>
-          <input className="cmp-form__button" type="submit" />
+          <input className="cmp-form__button" type="submit" value="Submit" />
         </div>
       </form>
     )
