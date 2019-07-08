@@ -74,6 +74,11 @@
     &:focus {
       box-shadow: unset;
     }
+
+    .lt-ie10 & {
+      border: 2px solid $yellow;
+      border-radius: 4px;
+    }
   }
 
   &__button {
@@ -101,6 +106,10 @@
       // animation: moving-gradient 1000ms linear alternate infinite;
       transform: scale(1.05);
       background-size: 200%;
+    }
+
+    .lt-ie10 & {
+      background: $yellow;
     }
   }
 
