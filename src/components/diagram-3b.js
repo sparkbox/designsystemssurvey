@@ -16,7 +16,7 @@ class Diagram3b extends Component {
     return (
       <section className="cmp-diagram">
         <p id="table3b" className="font-diagram-heading">Q: What about a client engagement leads you to suggest or not suggest a design system?</p>
-        <p className="font-diagram-copy">79 Agency Responses | Select all that apply</p>
+        <p className="font-diagram-copy">79 Agency Responses | Respondents were asked to select all that&nbsp;apply</p>
         <div className="cmp-diagram__table cmp-diagram__table--vertical" tabIndex="0">
           <table aria-labelledby="table3b">
           <tbody>
