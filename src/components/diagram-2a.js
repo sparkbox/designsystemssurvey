@@ -16,7 +16,7 @@ class Diagram2a extends Component {
     return (
       <section className="cmp-diagram">
         <p id="table2a" className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
-        <p className="font-diagram-copy">108 In-House Responses | Select one</p>
+        <p className="font-diagram-copy">108 In-House Responses | Respondents were asked to select one&nbsp;answer</p>
         <div className="cmp-diagram__table cmp-diagram__table--vertical" tabIndex="0">
           <table aria-labelledby="table2a">
             <tbody>
