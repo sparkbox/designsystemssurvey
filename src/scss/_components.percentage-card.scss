@@ -49,6 +49,8 @@
     &--pattern-lab {
       background-image: svg($icon-pattern-lab);
     }
+
+    @include print(hide);
   }
 
   &__label {

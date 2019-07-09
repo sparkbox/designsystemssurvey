@@ -27,7 +27,7 @@
       color-adjust: exact !important; // Firefox
     }
   }
-  @else if $type == none {
+  @else if $type == hide {
     @media print {
       display: none !important;
     }
@@ -107,6 +107,10 @@
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.5;
+
+  @include print {
+    color: $print-black;
+  }
 }
 
 // Helper function to replace characters in a string

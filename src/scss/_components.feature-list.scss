@@ -13,7 +13,6 @@
       justify-content: space-between;
       margin: 4rem auto;
     }
-
   }
 
   &__container {
@@ -31,6 +30,10 @@
     letter-spacing: 0;
     line-height: 1.1;
     margin: 1rem;
+
+    @include print {
+      color: $print-black;
+    }
   }
 
   &__description {
@@ -40,6 +43,10 @@
     font-weight: 300;
     line-height: 1.5;
     margin: 0 1rem 2rem;
+
+    @include print {
+      color: $print-black;
+    }
   }
 
   &__item {

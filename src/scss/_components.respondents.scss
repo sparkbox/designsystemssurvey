@@ -185,7 +185,7 @@
           @media (min-width: $bp-respond-size-bump-medium) {
             --size: 14rem;
           }
-      
+
           @media (min-width: $bp-respond-size-bump-large) {
             --size: 16rem;
           }
@@ -272,6 +272,8 @@
         }
       }
     }
+
+    @include print(hide);
   }
 
   &__stat {
@@ -288,6 +290,10 @@
     @media (min-width: $bp-respond-stop-overlap) {
       text-align: right;
       justify-content: flex-end;
+    }
+
+    @include print {
+      text-shadow: none;
     }
   }
 
@@ -310,6 +316,10 @@
           color: $hotpink;
         }
       }
+
+      @include print {
+        color: $hotpink;
+      }
     }
 
     &--developers {
@@ -321,6 +331,10 @@
         @media (min-width: $bp-respond-stop-overlap) {
           color: $yellow;
         }
+      }
+
+      @include print {
+        color: $yellow;
       }
     }
 
@@ -334,6 +348,10 @@
           color: $green;
         }
       }
+
+      @include print {
+        color: $green;
+      }
     }
 
     &--other {
@@ -345,6 +363,10 @@
         @media (min-width: $bp-respond-stop-overlap) {
           color: $orange;
         }
+      }
+
+      @include print {
+        color: $orange;
       }
     }
   }
@@ -370,6 +392,10 @@
 
     @media (min-width: $bp-respond-size-bump-large) {
       font-size: 6.25rem;
+    }
+
+    @include print {
+      color: $print-black;
     }
   }
 

@@ -71,6 +71,11 @@
     &:hover {
       animation: logo-pulse 1s ease-in-out alternate infinite;
     }
+
+    @include print {
+      fill: $print-black;
+      filter: none;
+    }
   }
 
   &__order-sm-1 {

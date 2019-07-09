@@ -8,6 +8,10 @@ li:not([class]) {
   @include body-copy;
   color: $white;
   margin-bottom: 0.25rem;
+
+  @include print {
+    color: $print-black;
+  }
 }
 
 ol:not([class]) {
