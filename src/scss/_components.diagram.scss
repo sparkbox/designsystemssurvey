@@ -27,6 +27,11 @@
     .lt-ie10 & {
       display: block;
     }
+
+    @include print {
+      display: block;
+      overflow: visible;
+    }
   }
 
   &__chart {
@@ -41,5 +46,7 @@
     .lt-ie10 & {
       display: none;
     }
+
+    @include print(hide);
   }
 }

@@ -6,6 +6,11 @@ h2:not([class]) {
   text-transform: uppercase;
   text-shadow: 0 2px 64px $black, 0 2px 4px $black, 0 2px 30px $black;
   hyphens: auto;
+
+  @include print {
+    color: $print-black;
+    text-shadow: none;
+  }
 }
 
 h3:not([class]) {
@@ -24,6 +29,11 @@ h3:not([class]) {
     background-image: linear-gradient(180deg, $hotpink 0%, $yellow 100%);
     background-clip: text;
     z-index: 2;
+  }
+
+  @include print {
+    color: $hotpink;
+    text-shadow: none;
   }
 }
 
@@ -44,6 +54,11 @@ h4:not([class]) {
     background-clip: text;
     z-index: 2;
   }
+
+  @include print {
+    color: $hotpink;
+    text-shadow: none;
+  }
 }
 
 p:not([class]) {
@@ -63,6 +78,14 @@ a[href]:not([class]) {
   &:visited {
     color: $orange;
     border-bottom: 1px solid $orange;
+  }
+
+  @include print {
+    &,
+    &:visited {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+    }
   }
 }
 

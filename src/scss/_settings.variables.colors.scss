@@ -7,6 +7,7 @@ $green: #42E915;
 $white: #FFFFFF;
 $gray: mix($white, $black, 50%);
 $table-border: lighten($black, 40%);
+$print-black: black;
 
 $colors: (
   "blue": $blue,

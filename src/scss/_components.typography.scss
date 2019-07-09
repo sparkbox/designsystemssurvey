@@ -23,6 +23,10 @@
   &--small {
     font-size: 6vw;
   }
+
+  @include print {
+    color: $hotpink;
+  }
 }
 
 // For "Survey," TOC numbers, etc.
@@ -91,6 +95,10 @@
       }
     }
   }
+
+  @include print {
+    color: $print-black;
+  }
 }
 
 // small copy underneath diagram-heading
@@ -103,6 +111,10 @@
   text-align: center;
   max-width: 40rem;
   margin: 0 auto;
+
+  @include print {
+    color: $print-black;
+  }
 }
 
 // Table of contents items
@@ -113,6 +125,10 @@
   font-weight: 700;
   color: $white;
   font-size: 1.875rem;
+
+  @include print {
+    color: $print-black;
+  }
 }
 
 // Intro text
@@ -122,6 +138,10 @@
   font-size: 1.75rem;
   font-weight: 300;
   line-height: 1.5;
+
+  @include print {
+    color: $print-black;
+  }
 }
 
 .font-link {
@@ -167,6 +187,10 @@
         animation: background-fade-out 150ms ease forwards;
       }
     }
+  }
+
+  @include print {
+    color: $blue;
   }
 }
 

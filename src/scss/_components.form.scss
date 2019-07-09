@@ -53,6 +53,11 @@
     &:focus-within {
       border: 3px solid $white !important;
     }
+
+    @include print {
+      background-image: none;
+      border: 2px solid $print-black;
+    }
   }
 
   &__input {
@@ -78,6 +83,11 @@
     .lt-ie10 & {
       border: 2px solid $yellow;
       border-radius: 4px;
+    }
+
+    @include print {
+      color: $print-black;
+      background-color: $print-black;
     }
   }
 
@@ -110,6 +120,12 @@
 
     .lt-ie10 & {
       background: $yellow;
+    }
+
+    @include print {
+      color: $print-black;
+      border: 2px solid $yellow;
+      background-color: $yellow;
     }
   }
 

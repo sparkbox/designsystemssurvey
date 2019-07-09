@@ -3,4 +3,8 @@ body {
   background-color: $black;
   color: $white;
   font-family: $font-body;
+
+  @include print {
+    color: $print-black;
+  }
 }
