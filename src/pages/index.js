@@ -1,4 +1,5 @@
 import React from "react"
+import Page2019 from './2019'
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -87,4 +88,8 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+const Index = () => (
+  <Page2019 />
+)
+
+export default Index
