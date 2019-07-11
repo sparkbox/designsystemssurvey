@@ -21,7 +21,15 @@
   }
 
   &--small {
-    font-size: 6vw;
+    font-size: 1.5rem;
+
+    @media (min-width: $bp-xs) {
+      font-size: 8vw;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 5rem;
+    }
   }
 
   @include print {
@@ -57,10 +65,18 @@
   font-family: $font-heading;
   font-style: normal;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $bp-sm) {
+    font-size: 4vw;
+  }
+
+  @media (min-width: $bp-md) {
+    font-size: 2rem;
+  }
 
   &::before {
     content: '';
