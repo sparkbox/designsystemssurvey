@@ -1,8 +1,6 @@
 import React from "react"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
 import IntroSection from "../sections/intro"
 import Section1 from "../sections/section-1"
 import Section2 from "../sections/section-2"
@@ -12,7 +10,7 @@ import Section5 from "../sections/section-5"
 import Footer from "../components/footer"
 import TableOfContents from "../components/table-of-contents"
 import ContentBlock from "../components/content-block"
-import SectionHeading from "../components/section-heading"
+import SectionHeader from "../components/section-header"
 
 const Page2019 = () => (
   <Layout>
@@ -34,52 +32,37 @@ const Page2019 = () => (
     </div>
 
     <section id="section-1">
-      <header>
-        <SectionHeading sectionNumber="1">
+        <SectionHeader sectionNumber="1">
           The Respondents
-        </ SectionHeading>
-      </header>
-
+        </ SectionHeader>
       <Section1 />
     </section>
 
     <section id="section-2">
-      <header>
-        <SectionHeading sectionNumber="2">
+        <SectionHeader sectionNumber="2">
           Design&nbsp;System Contents and Functionality
-        </ SectionHeading>
-      </header>
-
+        </ SectionHeader>
       <Section2 />
     </section>
 
     <section id="section-3">
-      <header>
-        <SectionHeading sectionNumber="3">
+        <SectionHeader sectionNumber="3">
           Values and Challenges of&nbsp;Design&nbsp;Systems
-        </ SectionHeading>
-      </header>
-
+        </ SectionHeader>
       <Section3 />
     </section>
 
     <section id="section-4">
-      <header>
-        <SectionHeading sectionNumber="4">
+        <SectionHeader sectionNumber="4">
           Creating a Successful Design&nbsp;System
-        </ SectionHeading>
-      </header>
-
+        </ SectionHeader>
       <Section4 />
     </section>
 
     <section id="section-5">
-      <header>
-        <SectionHeading sectionNumber="5">
+        <SectionHeader sectionNumber="5">
           Learn More about Design&nbsp;Systems
-        </ SectionHeading>
-      </header>
-
+        </ SectionHeader>
       <Section5 />
     </section>
 

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const SectionHeading = ({ sectionNumber, children }) => (
+const SectionHeader = ({ sectionNumber, children }) => (
   <header className={"cmp-section-header cmp-section-header--" + sectionNumber}>
     <div className="cmp-section-header__number-box" aria-label={"Section " + sectionNumber}>
       <svg width="800" height="900" viewBox="0 0 800 900" class="cmp-section-header__svg">
@@ -14,9 +14,9 @@ const SectionHeading = ({ sectionNumber, children }) => (
   </header>
 )
 
-SectionHeading.propTypes = {
+SectionHeader.propTypes = {
   sectionNumber: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 
-export default SectionHeading
+export default SectionHeader
