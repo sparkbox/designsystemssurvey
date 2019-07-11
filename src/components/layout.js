@@ -32,6 +32,9 @@ const Layout = ({ children }) => (
           <title>{data.site.siteMetadata.title}</title>
           <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/655912/7241412/css/fonts.css" />
           <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet" />
+
+          {/* This will change based on the current year */}
+          <link rel="canonical" href="https://designsystemssurvey.seesparkbox.com/2019" />
         </Helmet>
         {children}
       </>
