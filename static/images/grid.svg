@@ -1,0 +1,13 @@
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="grid" x="0" y="0" width="75" height="75"></rect>
+    <filter x="-4.0%" y="-4.0%" width="108.0%" height="108.0%" filterUnits="objectBoundingBox" id="glow">
+      <feGaussianBlur stdDeviation="3" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+      <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+      <feColorMatrix values="0 0 0 0 0.505882353   0 0 0 0 0.0823529412   0 0 0 0 0.690196078  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+    </filter>
+  </defs>
+  <use fill="#11161C" fill-rule="evenodd" xlink:href="#grid" />
+  <use fill="black" fill-opacity="0.5" filter="url(#glow)" xlink:href="#grid" />
+</svg>
