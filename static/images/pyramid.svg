@@ -1,0 +1,17 @@
+
+<svg width="182px" height="186px" viewBox="0 0 182 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient cx="59.7224998%" cy="38.4026718%" fx="59.7224998%" fy="38.4026718%" r="60.18004%" gradientTransform="translate(0.597225,0.384027),scale(1.000000,0.977533),rotate(90.000000),translate(-0.597225,-0.384027)" id="radialGradient-1">
+            <stop stop-color="#F076AD" stop-opacity="0.547475962" offset="0%"></stop>
+            <stop stop-color="#F076AD" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-12">
+            <polygon id="Fill-1" fill="#4D1B51" points="47.0831 -0.0003 87.3551 107.3837 0.0001 185.7817"></polygon>
+            <polygon id="Fill-2" fill="#682F6D" points="181.6085 140.0885 47.0835 -0.0005 87.3555 107.3835"></polygon>
+            <polygon id="Fill-3" fill="#0A1F35" points="0.0001 185.7819 181.6081 140.0889 87.3551 107.3839"></polygon>
+            <polygon id="Fill-4" fill="url(#radialGradient-1)" points="47.0831 -0.0003 0.0001 185.7817 181.6081 140.0887"></polygon>
+        </g>
+    </g>
+</svg>

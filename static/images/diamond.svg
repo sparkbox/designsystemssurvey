@@ -1,0 +1,18 @@
+
+<svg width="124px" height="178px" viewBox="0 0 124 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient cx="79.4087168%" cy="27.5921119%" fx="79.4087168%" fy="27.5921119%" r="102.205702%" gradientTransform="translate(0.794087,0.275921),scale(1.000000,0.697961),rotate(91.444029),translate(-0.794087,-0.275921)" id="radialGradient-1">
+            <stop stop-color="#E2FFD5" stop-opacity="0.169771635" offset="0%"></stop>
+            <stop stop-color="#E2FFD5" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-15" transform="translate(62.000000, 89.000000) scale(-1, 1) translate(-62.000000, -89.000000) ">
+            <polygon id="Fill-1" fill="#84C341" points="55.329 0.0006 43.248 123.7056 123.946 75.8656"></polygon>
+            <polygon id="Fill-2" fill="#467321" points="-0.0001 64.9941 43.2489 123.7061 55.3289 0.0011"></polygon>
+            <polygon id="Fill-3" fill="#00351C" points="55.3292 177.5841 43.2482 123.7051 0.0002 64.9941"></polygon>
+            <polygon id="Fill-4" fill="#41723F" points="43.2485 123.7056 55.3295 177.5846 123.9465 75.8666"></polygon>
+            <polygon id="Fill-14" fill="url(#radialGradient-1)" points="-0.0001 64.9941 55.3289 177.5841 123.9459 75.8661 55.3289 0.0011"></polygon>
+        </g>
+    </g>
+</svg>

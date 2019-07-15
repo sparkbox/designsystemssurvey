@@ -1,0 +1,17 @@
+
+<svg width="173px" height="158px" viewBox="0 0 173 158" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient cx="15.0438563%" cy="37.5764607%" fx="15.0438563%" fy="37.5764607%" r="29.3166674%" gradientTransform="translate(0.150439,0.375765),scale(0.914905,1.000000),rotate(35.497213),translate(-0.150439,-0.375765)" id="radialGradient-1">
+            <stop stop-color="#FFFBD7" stop-opacity="0.547694493" offset="0%"></stop>
+            <stop stop-color="#FFFBD7" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-12" transform="translate(0.000000, -1.000000)">
+            <polygon id="Fill-1" fill="#7A3E18" points="95.7098 158.908 26.8348 144.287 101.5888 95.892 172.5948 114.257"></polygon>
+            <polygon id="Fill-2" fill="#DD9A15" points="101.5887 95.8924 74.0107 0.9994 145.2197 20.0594 172.5947 114.2564"></polygon>
+            <polygon id="Fill-3" fill="#FFF04C" points="-0.0001 51.9467 26.8349 144.2867 101.5879 95.8927 74.0119 0.9997"></polygon>
+            <polygon id="Fill-4" fill="url(#radialGradient-1)" points="-0.0001 51.9467 26.8349 144.2867 95.7099 158.9077 172.5949 114.2567 145.2189 20.0597 74.0119 0.9997"></polygon>
+        </g>
+    </g>
+</svg>
