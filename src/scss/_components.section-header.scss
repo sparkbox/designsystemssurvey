@@ -12,6 +12,11 @@
     margin: 10rem 0 6rem;
   }
 
+  .lt-ie10 & {
+    height: 50vh;
+    min-height: 30rem;
+  }
+
   &::before {
     content: '';
     display: block;
@@ -25,6 +30,10 @@
     background-position: center;
     background-size: cover;
     filter: drop-shadow(0 0 10px $white) drop-shadow(0 0 24px $white);
+
+    .lt-ie10 & {
+      background-size: 0%;
+    }
   }
 
   &--1::before {
@@ -54,6 +63,11 @@
     @media (min-width: $bp-md) {
       height: 55rem;
     }
+
+    .lt-ie10 & {
+      width: 100vw;
+      height: 25rem;
+    }
   }
 
   &__title {
@@ -77,6 +91,10 @@
 
     @media (min-width: $bp-md) {
       font-size: 5rem;
+    }
+
+    .lt-ie10 & {
+      padding-top: 7rem;
     }
   }
 
