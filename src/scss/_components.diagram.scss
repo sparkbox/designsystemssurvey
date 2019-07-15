@@ -8,19 +8,29 @@
     max-width: $max-width;
     margin: 2rem auto;
     overflow: auto;
-    display: none;
+    @include visually-hidden;
 
     &:focus {
       position: inherit !important;
       width: auto !important;
       height: auto !important;
+
+      + .cmp-row-chart,
+      + .cmp-diagram__chart {
+        display: none !important; // When the table receives focus, hide the chart.
+      }
+    }
+
+    @media (min-width: $bp-md) {
+      @include visually-hidden;
     }
 
     &--vertical {
+      @include visually-hidden(disable);
       display: block;
 
       @media (min-width: $bp-md) {
-        display: none;
+        @include visually-hidden;
       }
     }
 
