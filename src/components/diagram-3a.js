@@ -12,11 +12,11 @@ const Diagram3a = () => (
         <thead>
           <tr>
             <th>&nbsp;</th>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-            <th>4</th>
-            <th>5</th>
+            <th aria-label="not a motivator">1</th>
+            <th aria-label="a low motivator">2</th>
+            <th aria-label="neutral">3</th>
+            <th aria-label="a moderate motivator">4</th>
+            <th aria-label="a strong motivator">5</th>
           </tr>
         </thead>
         <tbody>
