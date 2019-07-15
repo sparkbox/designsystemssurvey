@@ -4,12 +4,18 @@ $size: $bgsize $bgsize;
 $lines: rgba($glow, 0) 0, rgba($glow, 0) 32px, rgba($glow, 0.35) 39px, $glow 40px, $glow 42px, rgba($glow, 0.35) 43px, rgba($glow, 0) 50px, rgba($glow, 0) 80px;
 // $lines: rgba($glow, 0) 0, rgba($glow, 0) 39px, $glow 40px, $glow 42px, rgba($glow, 0) 43px, rgba($glow, 0) 80px;
 
+$basetime: 1s;
+
 // z-index order
 $z-sky: 97;
 $z-lightning: 98;
 $z-mountains: 99;
 $z-ground: 100;
 
+$z-shade-cube: 297;
+$z-shade-diamond: 298;
+$z-shade-pyramid: 299;
+$z-shade-dodecahedron: 300;
 
 .cmp-hero {
   height: 100vh;
@@ -18,11 +24,8 @@ $z-ground: 100;
 
   &__noise {
     position: absolute;
-    z-index: 101;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
+    z-index: 400;
+    @include positions(0);
     background: url("/images/noise.png") repeat center scroll / 150px 150px;
     mix-blend-mode: overlay;
     opacity: 0.3;
@@ -31,23 +34,17 @@ $z-ground: 100;
   &__flood {
     position: absolute;
     z-index: 102;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #733caa;
-    opacity: 0.18;
-    mix-blend-mode: screen;
+    @include positions(0);
+    // background-color: #733caa;
+    // opacity: 0.18;
+    // mix-blend-mode: screen;
 
     &::before {
       content: '';
       display: block;
       position: absolute;
       z-index:103;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      @include positions(0);
       opacity: 0;
       animation: flash 150ms 5s ease-out;
       background-color: $white;
@@ -60,9 +57,9 @@ $z-ground: 100;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 75%;
     background: url("/images/sky.jpg") no-repeat top center scroll / cover;
-    animation: sky 5s ease-out forwards;
+    // animation: sky 5s ease-out forwards;
   }
 
   &__mountains {
@@ -71,23 +68,27 @@ $z-ground: 100;
     bottom: 25vh;
     left: 0;
     width: 100%;
-    height: 75vh;
+    height: 75%;
     background: url("/images/mountains.png") no-repeat bottom center scroll / contain;
-    animation: mountains 5s ease-out forwards;
+    // animation: mountains 5s ease-out forwards;
   }
 
-  &__ligntning-left {
+  &__ligntning {
     z-index: $z-lightning;
+    mix-blend-mode: screen;
     background:
-      url("/images/lightning-bright.png") no-repeat top left scroll / contain,
-      url("/images/lightning-dim.png") no-repeat top right scroll / contain;
+      url("/images/lightning-bright.jpg") no-repeat top left scroll / auto 100%,
+      url("/images/lightning-dim.jpg") no-repeat top right scroll / auto 100%;
+    // background:
+    //   url("/images/lightning-bright.jpg") no-repeat top left scroll / contain,
+    //   url("/images/lightning-dim.png") no-repeat top right scroll / contain;
     position: absolute;
-    height: 75vh;
-    width: 100vw;
+    height: 75%;
+    width: 100%;
     top: 0;
     left: 0;
     opacity: 0;
-    filter: drop-shadow(0 0 2px $white) drop-shadow(0 0 40px $white);
+    // filter: drop-shadow(0 0 2px #da2870) drop-shadow(0 0 40px #da2870) drop-shadow(0 0 10px #da2870);
     animation: lightning linear 50ms 5100ms forwards;
   }
 
@@ -95,10 +96,10 @@ $z-ground: 100;
     z-index: $z-ground;
     position: absolute;
     perspective: 1000px;
-    top: 75vh;
+    top: 75%;
     left: 0;
-    height: 25vh;
-    width: 100vw;
+    height: 25%;
+    width: 100%;
     overflow: hidden;
     background-color: $black;
     border-top: 1px solid $blue;
@@ -108,9 +109,9 @@ $z-ground: 100;
     position: absolute;
     z-index: 100;
     top: 0;
-    left: -50vw;
-    height: 100vh;
-    width: 200vw;
+    left: -50%;
+    height: 400%;
+    width: 200%;
     backface-visibility: visible;
     transform-style: preserve-3d;
     transform-origin: 0 0;
@@ -120,10 +121,10 @@ $z-ground: 100;
   &__ground-shadow {
     position: absolute;
     z-index: 200;
-    top: calc(75vh + 1px);
+    top: calc(75% + 1px);
     left: 0;
-    height: calc(25vh - 1px);
-    width: 100vw;
+    height: calc(25% - 1px);
+    width: 100%;
     background:
       linear-gradient(-45deg, $black 0%, rgba($black, 0) 40%),
       linear-gradient(120deg, $black 0%, rgba($black, 0) 40%);
@@ -140,8 +141,9 @@ $z-ground: 100;
     background:
       linear-gradient(to left, $lines ) repeat top $bgsize*0.5 center scroll / $size,
       linear-gradient(to bottom, $lines ) repeat top $bgsize*0.5 center scroll / $size;
-    animation: fly 5s ease-out forwards;
-    transform: translateY(#{$height * -0.5});
+    // animation: fly 5s ease-out forwards;
+    // transform: translateY(#{$height * -0.5});
+    transform: translateY(0);
   }
 
   &__people {
@@ -153,9 +155,10 @@ $z-ground: 100;
     position: absolute;
     left: calc(50% - #{$bgsize * 2});
     top: calc(50% - #{$img-size * 0.5});
-    opacity: 0;
-    transform: rotateX(-75deg) translateY(-12.5vh) translateX(#{$bgsize}) scale(0.1);
-    animation: people 4.7s ease-out forwards;
+    transform: rotateX(-75deg) translateY(0) translateX(0) scale(1);
+    // opacity: 0;
+    // transform: rotateX(-75deg) translateY(-12.5vh) translateX(#{$bgsize}) scale(0.1);
+    // animation: people 4.7s ease-out forwards;
   }
 
   &__ground-glow {
@@ -166,13 +169,101 @@ $z-ground: 100;
     height: 25vh;
     width: 100%;
     background: 
-      radial-gradient(ellipse at top, rgba($glow, 0.6), rgba($glow, 0) 40%);
+      radial-gradient(ellipse at top, rgba($glow, 0.3), rgba($glow, 0) 20%);
+  }
+
+  &__shape-group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    transform-origin: 50% 50%;
+    transform: scale(0.2);
+    opacity: 0;
+    animation: shapes ease-out 250ms 5s forwards;
+  }
+
+  @keyframes shapes {
+    from {
+      opacity: 1;
+      transform: scale(0.2);
+      filter: blur(5px) brightness(10);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0) brightness(1);
+    }
   }
 
   &__shape {
     background: no-repeat center center scroll / contain;
     position: absolute;
     z-index: 200;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    &::before {
+      @include positions(0);
+      background: no-repeat center center scroll / contain;
+      z-index: 201;
+    }
+
+    &::after {
+      z-index: 202;
+      mix-blend-mode: screen;
+      background: url("/images/flare.png") no-repeat center center scroll / contain;
+    }
+
+    &--dodecahedron {
+      $size: 45vmin;
+      $ratio: 806 / 813;
+      $width: $size * $ratio;
+      height: $size;
+      width: $width;
+      top: calc(50% - #{$width * 0.5});
+      left: calc(50% - #{$width * 0.5});
+      z-index: $z-shade-dodecahedron;
+      transform: translate(0, -5vh);
+      background-image: url("/images/dodecahedron.svg");
+      filter: drop-shadow(0 0 0.5rem rgba(#ffeeba, 0.5)) saturate(120%);
+      animation:
+        // dodecahedron-glow ease-in-out 2s alternate infinite,
+        dodecahedron-float ease-in-out 4s alternate infinite;
+
+      &::before {
+        background-image: url("/images/dodecahedron-outline.svg");
+        filter: drop-shadow(0 0 1px #ffeeba) drop-shadow(0 0 4px #ffeeba);
+        // filter: drop-shadow(0 0 8px #ffeeba);
+      }
+    }
+
+    @keyframes dodecahedron-glow {
+      0% {
+        filter: drop-shadow(0 0 0.5rem #ffeeba);
+        // filter: drop-shadow(0 0 0.5rem #ffeeba) saturate(90%);
+      }
+      100% {
+        filter: drop-shadow(0 0 1rem #ffeeba);
+        // filter: drop-shadow(0 0 1rem #ffeeba) saturate(120%);
+      }
+    }
+
+    @keyframes dodecahedron-float {
+      from {
+        transform: translate(0, -5vh) rotate(-2deg);
+      }
+      to {
+        transform: translate(0, -3vh) rotate(3deg);
+      }
+    }
 
     &--pyramid {
       $size: 25vmin;
@@ -182,29 +273,120 @@ $z-ground: 100;
       width: $width;
       top: calc(50% - #{$width * 0.5});
       left: calc(50% - #{$width * 0.5});
-      
-      background-image: url("/images/pyramid.png");
+      z-index: $z-shade-pyramid;
+      filter: drop-shadow(0 0 0.5rem rgba(#fd5aff, 0.5)) saturate(120%);
+      background-image: url("/images/pyramid.svg");
+      // background-image: url("/images/pyramid.png");
       animation:
-        pyramid-glow ease-in-out  4s 0.25s alternate infinite,
+        // pyramid-glow ease-in-out  4s 0.25s alternate infinite,
         pyramid-float ease-in-out 6s alternate infinite;
 
-    @keyframes pyramid-glow {
-      from {
-        filter: drop-shadow(0 0 0.25rem #fd5aff) drop-shadow(0 0 1rem #fd5aff) saturate(100%);
+      &::before {
+        background-image: url("/images/pyramid-outline.svg");
+        filter: drop-shadow(0 0 2px #fd5aff) drop-shadow(0 0 2px #fd5aff);
       }
-      to {
-        filter: drop-shadow(0 0 0.25rem #fd5aff) drop-shadow(0 0 1.5rem #fd5aff) saturate(140%);
+
+      &::after {
+        $size: 100%;
+        height: $size;
+        width: $size;
+        left: 4%;
+        top: -20%;
+        filter: brightness(1.2);
+        animation: pyramid-flare ease-in-out 6s alternate infinite;;
+      }
+
+      @keyframes pyramid-glow {
+        from {
+          filter: drop-shadow(0 0 0.5rem rgba(#fd5aff, 0.5));
+          // filter: drop-shadow(0 0 0.25rem #fd5aff) drop-shadow(0 0 1rem #fd5aff) saturate(100%);
+        }
+        to {
+          filter: drop-shadow(0 0 1rem rgba(#fd5aff, 0.5));
+          // filter: drop-shadow(0 0 0.25rem #fd5aff) drop-shadow(0 0 1.5rem #fd5aff) saturate(140%);
+        }
+      }
+
+      @keyframes pyramid-float {
+        from {
+          transform: translate(-25vw, -10vh) rotate(0deg);
+        }
+        to {
+          transform: translate(-25vw, -9vh) rotate(6deg);
+        }
+      }
+
+      @keyframes pyramid-flare {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-6deg);
+        }
       }
     }
 
-    @keyframes pyramid-float {
-      from {
-        transform: translate(-25vw, -10vh) rotate(0deg);
+    &--diamond {
+      $size: 23vmin;
+      $ratio: 694 / 500;
+      $width: $size * $ratio;
+      height: $size;
+      width: $width;
+      top: calc(50% - #{$width * 0.5});
+      left: calc(50% - #{$width * 0.5});
+      z-index: $z-shade-diamond;
+      filter: drop-shadow(0 0 0.5rem #98ff5a) saturate(140%);
+      transform: translate(22vw, 12vh);
+      // background-image: url("/images/diamond.png");
+      background-image: url("/images/diamond.svg");
+      animation:
+        // diamond-glow ease-in-out 2s alternate infinite,
+        diamond-float ease-in-out 5s alternate infinite;
+
+      &::before {
+        background-image: url("/images/diamond-outline.svg");
+        filter: drop-shadow(0 0 1px rgba(#98ff5a, 0.5)) drop-shadow(0 0 3px rgba(#98ff5a, 0.5));
+        // filter: drop-shadow(0 0 8px #ffeeba);
       }
-      to {
-        transform: translate(-25vw, -9vh) rotate(6deg);
+
+      &::after {
+        $size: 150%;
+        height: $size;
+        width: $size;
+        left: -31%;
+        top: -55%;
+        filter: brightness(1.5) hue-rotate(164deg);
+        animation: diamond-flare ease-in-out 5s alternate infinite;;
       }
     }
+
+    @keyframes diamond-glow {
+      from {
+        filter: drop-shadow(0 0 0.5rem #98ff5a);
+        // filter: drop-shadow(0 0 0.25rem #98ff5a) drop-shadow(0 0 1rem #98ff5a) saturate(100%);
+      }
+      to {
+        filter: drop-shadow(0 0 1rem #98ff5a);
+        // filter: drop-shadow(0 0 0.25rem #98ff5a) drop-shadow(0 0 1.5rem #98ff5a) saturate(140%);
+      }
+    }
+
+    @keyframes diamond-float {
+      from {
+        transform: translate(22vw, 12vh) rotate(24deg);
+      }
+      to {
+        transform: translate(22vw, 13vh) rotate(18deg);
+      }
+    }
+
+    @keyframes diamond-flare {
+      from {
+        transform: rotate(-24deg);
+      }
+      to {
+        transform: rotate(-18deg);
+      }
     }
 
     &--cube {
@@ -215,19 +397,29 @@ $z-ground: 100;
       width: $width;
       top: calc(50% - #{$width * 0.5});
       left: calc(50% - #{$width * 0.5});
+      z-index: $z-shade-cube;
       transform: translate(20vw, -25vh);
-      background-image: url("/images/cube.png");
+      filter: drop-shadow(0 0 0.5rem rgba(#ffe25a, 0.5)) saturate(140%);
+      background-image: url("/images/cube.svg");
       animation:
-        cube-glow ease-in-out 2.5s 0.5s alternate infinite,
+        // cube-glow ease-in-out 2.5s 0.5s alternate infinite,
         cube-float ease-in-out 10s alternate infinite;
+
+      &::before {
+        background-image: url("/images/cube-outline.svg");
+        filter: drop-shadow(0 0 1px rgba(#ffe25a, 0.5)) drop-shadow(0 0 3px #ffe25a);
+        // filter: drop-shadow(0 0 8px #fffbd7);
+      }
     }
 
     @keyframes cube-glow {
       from {
-        filter: drop-shadow(0 0 0.25rem #ffe25a) drop-shadow(0 0 1rem #ffe25a) saturate(100%);
+        filter: drop-shadow(0 0 0.5rem rgba(#ffe25a, 0.5));
+        // filter: drop-shadow(0 0 0.25rem #ffe25a) drop-shadow(0 0 1rem #ffe25a) saturate(100%);
       }
       to {
-        filter: drop-shadow(0 0 0.25rem #ffe25a) drop-shadow(0 0 1.5rem #ffe25a) saturate(140%);
+        filter: drop-shadow(0 0 1rem rgba(#ffe25a, 0.5));
+        // filter: drop-shadow(0 0 0.25rem #ffe25a) drop-shadow(0 0 1.5rem #ffe25a) saturate(140%);
       }
     }
 
@@ -240,71 +432,6 @@ $z-ground: 100;
       }
     }
 
-    &--diamond {
-      $size: 23vmin;
-      $ratio: 694 / 500;
-      $width: $size * $ratio;
-      height: $size;
-      width: $width;
-      top: calc(50% - #{$width * 0.5});
-      left: calc(50% - #{$width * 0.5});
-      transform: translate(22vw, 12vh);
-      background-image: url("/images/diamond.png");
-      animation:
-        diamond-glow ease-in-out 2s alternate infinite,
-        diamond-float ease-in-out 5s alternate infinite;
-    }
-
-    @keyframes diamond-glow {
-      from {
-        filter: drop-shadow(0 0 0.25rem #98ff5a) drop-shadow(0 0 1rem #98ff5a) saturate(100%);
-      }
-      to {
-        filter: drop-shadow(0 0 0.25rem #98ff5a) drop-shadow(0 0 1.5rem #98ff5a) saturate(140%);
-      }
-    }
-
-    @keyframes diamond-float {
-      from {
-        transform: translate(22vw, 12vh) rotateX(0);
-      }
-      to {
-        transform: translate(22vw, 13vh) rotateX(-6deg);
-      }
-    }
-
-    &--dodecahedron {
-      $size: 45vmin;
-      $ratio: 806 / 813;
-      $width: $size * $ratio;
-      height: $size;
-      width: $width;
-      top: calc(50% - #{$width * 0.5});
-      left: calc(50% - #{$width * 0.5});
-      transform: translate(0, -5vh);
-      background-image: url("/images/dodecahedron.png");
-      animation:
-        dodecahedron-glow ease-in-out 3s alternate infinite,
-        dodecahedron-float ease-in-out 4s alternate infinite;
-    }
-
-    @keyframes dodecahedron-glow {
-      from {
-        filter: drop-shadow(0 0 0.25rem #ffeeba) drop-shadow(0 0 1rem #ffeeba) saturate(90%);
-      }
-      to {
-        filter: drop-shadow(0 0 0.25rem #ffeeba) drop-shadow(0 0 1.5rem #ffeeba) saturate(120%);
-      }
-    }
-
-    @keyframes dodecahedron-float {
-      from {
-        transform: translate(0, -5vh) rotateX(0);
-      }
-      to {
-        transform: translate(-0.5vw, -3vh) rotateX(3deg);
-      }
-    }
   }
 }
 

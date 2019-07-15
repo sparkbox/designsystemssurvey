@@ -1,0 +1,17 @@
+<svg width="194" height="185" viewBox="0 0 194 185" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="dodecahedron-gradient" cx="80.8%" cy="23.7%" r="100%" fx="80.8%" fy="23.7%" gradientTransform="matrix(0 1 -.94895 0 1 -.6)">
+      <stop offset="0%" stop-color="#FFE35A" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#CB7A59" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#F06022" d="M.7 80.8L39.1 128 97 91.3V22l-60.6-7.6z"/>
+    <path fill="#F9A11B" d="M97 22v69.3l57.9 36.7 38.3-47.2-35.6-66.4z"/>
+    <path fill="#D94220" d="M39.1 128l23.7 55.4h68.4l23.7-55.4L97 91.3z"/>
+    <path fill="#66001A" d="M.7 106l38.4 64 23.7 13.4L39.1 128 .7 80.8z"/>
+    <path fill="#F37721" d="M154.9 128l-23.7 55.4 23.7-13.4 38.3-64V80.8z"/>
+    <path fill="#F4821F" d="M134.4.7H59.6L36.4 14.4 97 22l60.6-7.6z"/>
+    <path fill="url(#dodecahedron-gradient)" d="M97 .7H59.6L36.4 14.4.7 80.8V106l38.4 64 23.7 13.4h68.4l23.7-13.4 38.3-64V80.8l-35.6-66.4L134.4.7z"/>
+  </g>
+</svg>
