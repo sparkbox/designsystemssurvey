@@ -12,11 +12,15 @@
       display: flex;
       justify-content: space-between;
       margin: 4rem auto;
+      width: $max-width;
+      max-width: calc(100% - 2rem);
     }
   }
 
   &__container {
     @media (min-width: $bp-sm) {
+      max-width: 50%;
+
       & + & {
         margin-left: 2rem;
       }

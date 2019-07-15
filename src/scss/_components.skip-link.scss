@@ -6,7 +6,7 @@
   bottom: 100%;
   position: absolute;
   height: 3em;
-  width: 100%;
+  width: calc(100% - 2rem);
   padding: 1rem;
   text-align: center;
   background-color: $white;
