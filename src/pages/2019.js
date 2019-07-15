@@ -1,6 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import Hero from "../components/hero"
 import IntroSection from "../sections/intro"
 import Section1 from "../sections/section-1"
 import Section2 from "../sections/section-2"
@@ -33,6 +34,7 @@ const Page2019 = () => (
         </linearGradient>
       </defs>
     </svg>
+    <Hero />
     <ContentBlock>
       <a href="#table-of-contents" className="cmp-skip-link">Skip to table of contents</a>
       <IntroSection />

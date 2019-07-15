@@ -1,8 +1,8 @@
-$glow: #8115b0;
-$bgsize: 80px;
-$size: $bgsize $bgsize;
-$lines: rgba($glow, 0) 0, rgba($glow, 0) 32px, rgba($glow, 0.35) 39px, $glow 40px, $glow 42px, rgba($glow, 0.35) 43px, rgba($glow, 0) 50px, rgba($glow, 0) 80px;
-// $lines: rgba($glow, 0) 0, rgba($glow, 0) 39px, $glow 40px, $glow 42px, rgba($glow, 0) 43px, rgba($glow, 0) 80px;
+$glow: $black;
+$glowbg: #8115b0;
+$bgsize: 4vmin;
+$size: $bgsize;
+$lines: rgba($glow, 1) 0, rgba($glow, 1) 40%, rgba($glow, 0.65) 48.75%, rgba($glow, 0) 50%, rgba($glow, 0) 52.5%, rgba($glow, 0.65) 53.75%, rgba($glow, 1) 62.5%, rgba($glow, 1) 100%;
 
 $basetime: 1s;
 
@@ -35,9 +35,9 @@ $z-shade-dodecahedron: 300;
     position: absolute;
     z-index: 102;
     @include positions(0);
-    // background-color: #733caa;
-    // opacity: 0.18;
-    // mix-blend-mode: screen;
+    background-color: #733caa;
+    opacity: 0.18;
+    mix-blend-mode: screen;
 
     &::before {
       content: '';
@@ -58,8 +58,7 @@ $z-shade-dodecahedron: 300;
     left: 0;
     width: 100%;
     height: 75%;
-    background: url("/images/sky.jpg") no-repeat top center scroll / cover;
-    // animation: sky 5s ease-out forwards;
+    background: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 20%), url("/images/sky.jpg") no-repeat top center scroll / cover;
   }
 
   &__mountains {
@@ -70,26 +69,35 @@ $z-shade-dodecahedron: 300;
     width: 100%;
     height: 75%;
     background: url("/images/mountains.png") no-repeat bottom center scroll / contain;
-    // animation: mountains 5s ease-out forwards;
   }
 
   &__ligntning {
     z-index: $z-lightning;
-    mix-blend-mode: screen;
-    background:
-      url("/images/lightning-bright.jpg") no-repeat top left scroll / auto 100%,
-      url("/images/lightning-dim.jpg") no-repeat top right scroll / auto 100%;
-    // background:
-    //   url("/images/lightning-bright.jpg") no-repeat top left scroll / contain,
-    //   url("/images/lightning-dim.png") no-repeat top right scroll / contain;
     position: absolute;
+    mix-blend-mode: screen;
     height: 75%;
     width: 100%;
     top: 0;
     left: 0;
     opacity: 0;
-    // filter: drop-shadow(0 0 2px #da2870) drop-shadow(0 0 40px #da2870) drop-shadow(0 0 10px #da2870);
     animation: lightning linear 50ms 5100ms forwards;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      @include positions(0);
+      mix-blend-mode: screen;
+    }
+
+    &::before {
+      background: url("/images/lightning-dim.jpg") no-repeat top right scroll / auto 100%;
+    }
+
+    &::after {
+      background: url("/images/lightning-bright.jpg") no-repeat top left scroll / auto 100%;
+    }
   }
 
   &__ground {
@@ -101,8 +109,55 @@ $z-shade-dodecahedron: 300;
     height: 25%;
     width: 100%;
     overflow: hidden;
-    background-color: $black;
+    background-color: $glowbg;
     border-top: 1px solid $blue;
+
+    // Orange Glow
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 10%;
+      left: 40%;
+      height: 20%;
+      width: 20%;
+      z-index: 100;
+      background-color: $orange;
+      border-radius: 50%;
+      filter: blur(20px);
+      opacity: 0;
+      animation: reflection ease-out 250ms 5s forwards;
+    }
+
+    // Green Glow
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 6%;
+      right: 15%;
+      height: 10%;
+      width: 15%;
+      z-index: 100;
+      background-color: $green;
+      border-radius: 50%;
+      filter: blur(15px);
+      opacity: 0;
+      animation: reflection ease-out 250ms 5s forwards;
+    }
+  }
+
+  @keyframes reflection {
+    from {
+      opacity: 0;
+      transform: scale(0.2);
+      filter: blur(30px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(15px);
+    }
   }
 
   &__ground-tilt {
@@ -138,38 +193,28 @@ $z-shade-dodecahedron: 300;
     $height: 200vh;
     width: 100%;
     height: $height;
-    background:
-      linear-gradient(to left, $lines ) repeat top $bgsize*0.5 center scroll / $size,
-      linear-gradient(to bottom, $lines ) repeat top $bgsize*0.5 center scroll / $size;
-    // animation: fly 5s ease-out forwards;
-    // transform: translateY(#{$height * -0.5});
+    background: url("/images/grid.svg") repeat top $bgsize*0.5 center scroll / $size;
     transform: translateY(0);
   }
 
   &__people {
-    $img-size: 4rem;
+    $img-size: 7rem;
     z-index: 101;
-    background: url("/images/people.png") no-repeat center center scroll / contain;
-    height: $img-size;
-    width: $img-size;
+    background: url("/images/people.png") no-repeat bottom 10% left 40% scroll / auto $img-size;
     position: absolute;
-    left: calc(50% - #{$bgsize * 2});
-    top: calc(50% - #{$img-size * 0.5});
-    transform: rotateX(-75deg) translateY(0) translateX(0) scale(1);
-    // opacity: 0;
-    // transform: rotateX(-75deg) translateY(-12.5vh) translateX(#{$bgsize}) scale(0.1);
-    // animation: people 4.7s ease-out forwards;
+    @include positions(0);
+    @include image-rendering;
   }
 
   &__ground-glow {
     position: absolute;
-    top: 0;
+    top: 75%;
     left: 0;
-    z-index: 100;
-    height: 25vh;
+    z-index: 200;
+    height: 25%;
     width: 100%;
     background: 
-      radial-gradient(ellipse at top, rgba($glow, 0.3), rgba($glow, 0) 20%);
+      radial-gradient(ellipse at top, rgba($glowbg, 0.3), rgba($glowbg, 0) 20%);
   }
 
   &__shape-group {
@@ -199,239 +244,33 @@ $z-shade-dodecahedron: 300;
   }
 
   &__shape {
-    background: no-repeat center center scroll / contain;
     position: absolute;
     z-index: 200;
-
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-    }
-
-    &::before {
-      @include positions(0);
-      background: no-repeat center center scroll / contain;
-      z-index: 201;
-    }
-
-    &::after {
-      z-index: 202;
-      mix-blend-mode: screen;
-      background: url("/images/flare.png") no-repeat center center scroll / contain;
-    }
+    @include positions(0);
 
     &--dodecahedron {
-      $size: 45vmin;
-      $ratio: 806 / 813;
-      $width: $size * $ratio;
-      height: $size;
-      width: $width;
-      top: calc(50% - #{$width * 0.5});
-      left: calc(50% - #{$width * 0.5});
+      @include positions(0);
       z-index: $z-shade-dodecahedron;
-      transform: translate(0, -5vh);
-      background-image: url("/images/dodecahedron.svg");
-      filter: drop-shadow(0 0 0.5rem rgba(#ffeeba, 0.5)) saturate(120%);
-      animation:
-        // dodecahedron-glow ease-in-out 2s alternate infinite,
-        dodecahedron-float ease-in-out 4s alternate infinite;
-
-      &::before {
-        background-image: url("/images/dodecahedron-outline.svg");
-        filter: drop-shadow(0 0 1px #ffeeba) drop-shadow(0 0 4px #ffeeba);
-        // filter: drop-shadow(0 0 8px #ffeeba);
-      }
-    }
-
-    @keyframes dodecahedron-glow {
-      0% {
-        filter: drop-shadow(0 0 0.5rem #ffeeba);
-        // filter: drop-shadow(0 0 0.5rem #ffeeba) saturate(90%);
-      }
-      100% {
-        filter: drop-shadow(0 0 1rem #ffeeba);
-        // filter: drop-shadow(0 0 1rem #ffeeba) saturate(120%);
-      }
-    }
-
-    @keyframes dodecahedron-float {
-      from {
-        transform: translate(0, -5vh) rotate(-2deg);
-      }
-      to {
-        transform: translate(0, -3vh) rotate(3deg);
-      }
+      background: url("/images/dodecahedron.svg") no-repeat top 25% center scroll / 32% auto
     }
 
     &--pyramid {
-      $size: 25vmin;
-      $ratio: 638 / 687;
-      $width: $size * $ratio;
-      height: $size;
-      width: $width;
-      top: calc(50% - #{$width * 0.5});
-      left: calc(50% - #{$width * 0.5});
+      @include positions(0);
       z-index: $z-shade-pyramid;
-      filter: drop-shadow(0 0 0.5rem rgba(#fd5aff, 0.5)) saturate(120%);
-      background-image: url("/images/pyramid.svg");
-      // background-image: url("/images/pyramid.png");
-      animation:
-        // pyramid-glow ease-in-out  4s 0.25s alternate infinite,
-        pyramid-float ease-in-out 6s alternate infinite;
-
-      &::before {
-        background-image: url("/images/pyramid-outline.svg");
-        filter: drop-shadow(0 0 2px #fd5aff) drop-shadow(0 0 2px #fd5aff);
-      }
-
-      &::after {
-        $size: 100%;
-        height: $size;
-        width: $size;
-        left: 4%;
-        top: -20%;
-        filter: brightness(1.2);
-        animation: pyramid-flare ease-in-out 6s alternate infinite;;
-      }
-
-      @keyframes pyramid-glow {
-        from {
-          filter: drop-shadow(0 0 0.5rem rgba(#fd5aff, 0.5));
-          // filter: drop-shadow(0 0 0.25rem #fd5aff) drop-shadow(0 0 1rem #fd5aff) saturate(100%);
-        }
-        to {
-          filter: drop-shadow(0 0 1rem rgba(#fd5aff, 0.5));
-          // filter: drop-shadow(0 0 0.25rem #fd5aff) drop-shadow(0 0 1.5rem #fd5aff) saturate(140%);
-        }
-      }
-
-      @keyframes pyramid-float {
-        from {
-          transform: translate(-25vw, -10vh) rotate(0deg);
-        }
-        to {
-          transform: translate(-25vw, -9vh) rotate(6deg);
-        }
-      }
-
-      @keyframes pyramid-flare {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(-6deg);
-        }
-      }
+      background: url("/images/pyramid.svg") no-repeat top 55% left 20% scroll / 12% auto
     }
 
     &--diamond {
-      $size: 23vmin;
-      $ratio: 694 / 500;
-      $width: $size * $ratio;
-      height: $size;
-      width: $width;
-      top: calc(50% - #{$width * 0.5});
-      left: calc(50% - #{$width * 0.5});
+      @include positions(0);
       z-index: $z-shade-diamond;
-      filter: drop-shadow(0 0 0.5rem #98ff5a) saturate(140%);
-      transform: translate(22vw, 12vh);
-      // background-image: url("/images/diamond.png");
-      background-image: url("/images/diamond.svg");
-      animation:
-        // diamond-glow ease-in-out 2s alternate infinite,
-        diamond-float ease-in-out 5s alternate infinite;
-
-      &::before {
-        background-image: url("/images/diamond-outline.svg");
-        filter: drop-shadow(0 0 1px rgba(#98ff5a, 0.5)) drop-shadow(0 0 3px rgba(#98ff5a, 0.5));
-        // filter: drop-shadow(0 0 8px #ffeeba);
-      }
-
-      &::after {
-        $size: 150%;
-        height: $size;
-        width: $size;
-        left: -31%;
-        top: -55%;
-        filter: brightness(1.5) hue-rotate(164deg);
-        animation: diamond-flare ease-in-out 5s alternate infinite;;
-      }
-    }
-
-    @keyframes diamond-glow {
-      from {
-        filter: drop-shadow(0 0 0.5rem #98ff5a);
-        // filter: drop-shadow(0 0 0.25rem #98ff5a) drop-shadow(0 0 1rem #98ff5a) saturate(100%);
-      }
-      to {
-        filter: drop-shadow(0 0 1rem #98ff5a);
-        // filter: drop-shadow(0 0 0.25rem #98ff5a) drop-shadow(0 0 1.5rem #98ff5a) saturate(140%);
-      }
-    }
-
-    @keyframes diamond-float {
-      from {
-        transform: translate(22vw, 12vh) rotate(24deg);
-      }
-      to {
-        transform: translate(22vw, 13vh) rotate(18deg);
-      }
-    }
-
-    @keyframes diamond-flare {
-      from {
-        transform: rotate(-24deg);
-      }
-      to {
-        transform: rotate(-18deg);
-      }
+      background: url("/images/diamond.svg") no-repeat top 55% right 20% scroll / 12% auto
     }
 
     &--cube {
-      $size: 20vmin;
-      $ratio: 545 / 595;
-      $width: $size * $ratio;
-      height: $size;
-      width: $width;
-      top: calc(50% - #{$width * 0.5});
-      left: calc(50% - #{$width * 0.5});
+      @include positions(0);
       z-index: $z-shade-cube;
-      transform: translate(20vw, -25vh);
-      filter: drop-shadow(0 0 0.5rem rgba(#ffe25a, 0.5)) saturate(140%);
-      background-image: url("/images/cube.svg");
-      animation:
-        // cube-glow ease-in-out 2.5s 0.5s alternate infinite,
-        cube-float ease-in-out 10s alternate infinite;
-
-      &::before {
-        background-image: url("/images/cube-outline.svg");
-        filter: drop-shadow(0 0 1px rgba(#ffe25a, 0.5)) drop-shadow(0 0 3px #ffe25a);
-        // filter: drop-shadow(0 0 8px #fffbd7);
-      }
+      background: url("/images/cube.svg") no-repeat top 15% right 20% scroll / 12% auto
     }
-
-    @keyframes cube-glow {
-      from {
-        filter: drop-shadow(0 0 0.5rem rgba(#ffe25a, 0.5));
-        // filter: drop-shadow(0 0 0.25rem #ffe25a) drop-shadow(0 0 1rem #ffe25a) saturate(100%);
-      }
-      to {
-        filter: drop-shadow(0 0 1rem rgba(#ffe25a, 0.5));
-        // filter: drop-shadow(0 0 0.25rem #ffe25a) drop-shadow(0 0 1.5rem #ffe25a) saturate(140%);
-      }
-    }
-
-    @keyframes cube-float {
-      from {
-        transform: translate(20vw, -25vh) rotate(0);
-      }
-      to {
-        transform: translate(20.5vw, -24.5vh) rotate(3deg);
-      }
-    }
-
   }
 }
 
