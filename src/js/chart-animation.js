@@ -1,3 +1,5 @@
+require('intersection-observer');
+
 export default function observe(platform, animateClass) {
 
   if ('IntersectionObserver' in window) {
