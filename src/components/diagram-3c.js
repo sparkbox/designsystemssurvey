@@ -16,7 +16,7 @@ class Diagram3c extends Component {
     return (
       <section className="cmp-diagram">
         <p id="table3c" className="font-diagram-heading">Q: If you feel that your organization’s design system was not successful, what were the primary reasons?</p>
-        <p className="font-diagram-copy">71 In-House Responses | Respondents were asked to select all that&nbsp;apply</p>
+        <p className="font-diagram-copy">71 In-House Responses <span aria-hidden="true">|</span> Respondents were asked to select all that&nbsp;apply</p>
         <div className="cmp-diagram__table cmp-diagram__table--vertical" tabIndex="0">
           <table aria-labelledby="table3c">
           <tbody>

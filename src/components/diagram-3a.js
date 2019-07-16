@@ -6,7 +6,7 @@ import TableColumn from "./diagram-table-column"
 const Diagram3a = () => (
   <section className="cmp-diagram">
     <p id="table3a" className="font-diagram-heading">Q: How strongly did each of the following factors motivate your organization to establish a design system?</p>
-    <p className="font-diagram-copy">108 In-House Responses | Respondents were asked to rate on a 1 to 5 scale where 1= Not a motivator and 5= A strong&nbsp;motivator</p>
+    <p className="font-diagram-copy">108 In-House Responses <span aria-hidden="true">|</span> Respondents were asked to rate on a 1 to 5 scale where 1= Not a motivator and 5= A strong&nbsp;motivator</p>
     <div className="cmp-diagram__table" tabIndex="0">
       <table aria-labelledby="table3a">
         <thead>
