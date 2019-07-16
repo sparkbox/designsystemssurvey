@@ -82,7 +82,7 @@ $z-shade-dodecahedron: 300;
     left: 0;
     width: 100%;
     height: 75%;
-    background: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 20%), url("/images/sky.jpg") no-repeat top center scroll / cover;
+    background: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 20%), url("/images/sky.jpg") no-repeat top center fixed / cover;
   }
 
   &__mountains {
@@ -92,7 +92,7 @@ $z-shade-dodecahedron: 300;
     left: 0;
     width: 100%;
     height: 75%;
-    background: url("/images/mountains.png") no-repeat bottom center scroll / contain;
+    background: url("/images/mountains.svg") no-repeat bottom -1px center scroll / contain;
   }
 
   &__ligntning {
@@ -134,7 +134,6 @@ $z-shade-dodecahedron: 300;
     width: 100%;
     overflow: hidden;
     background-color: $glowbg;
-    border-top: 1px solid $blue;
 
     // Orange Glow
     &::before {
@@ -200,9 +199,9 @@ $z-shade-dodecahedron: 300;
   &__ground-shadow {
     position: absolute;
     z-index: 200;
-    top: calc(75% + 1px);
+    top: 75%;
     left: 0;
-    height: calc(25% - 1px);
+    height: 25%;
     width: 100%;
     background:
       linear-gradient(-45deg, $black 0%, rgba($black, 0) 40%),
