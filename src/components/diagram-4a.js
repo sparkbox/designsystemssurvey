@@ -6,7 +6,7 @@ import TableColumn from "./diagram-table-column"
 const Diagram4a = () => (
   <section className="cmp-diagram">
     <p id="table4a" className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
-    <p className="font-diagram-copy">108 In-House Responses | Respondents were asked to select one&nbsp;answer</p>
+    <p className="font-diagram-copy">108 In-House Responses <span aria-hidden="true">|</span> Respondents were asked to select one&nbsp;answer</p>
 
     <div className="cmp-diagram__table" tabIndex="0">
       <table aria-labelledby="table4a">
