@@ -1,15 +1,15 @@
 .cmp-section-header {
   position: relative;
   height: 60vh;
+  min-height: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
   scroll-snap-type: y proximity;
-  margin: 6rem 0;
 
   @media (min-width: $bp-md) {
     height: 100vh;
-    margin: 10rem 0 6rem;
+    padding: 15vh 0 25vh;
   }
 
   .lt-ie10 & {
@@ -59,6 +59,7 @@
   &__svg {
     width: 50rem;
     height: 35rem;
+    max-width: 100%;
 
     @media (min-width: $bp-md) {
       height: 55rem;

@@ -31,35 +31,35 @@ const Page2019 = () => (
       <TableOfContents />
     </div>
 
-    <section id="section-1">
+    <section id="section-1" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="1">
           The Respondents
         </ SectionHeader>
       <Section1 />
     </section>
 
-    <section id="section-2">
+    <section id="section-2" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="2">
           Design&nbsp;System Contents and Functionality
         </ SectionHeader>
       <Section2 />
     </section>
 
-    <section id="section-3">
+    <section id="section-3" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="3">
           Values and Challenges of&nbsp;Design&nbsp;Systems
         </ SectionHeader>
       <Section3 />
     </section>
 
-    <section id="section-4">
+    <section id="section-4" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="4">
           Creating a Successful Design&nbsp;System
         </ SectionHeader>
       <Section4 />
     </section>
 
-    <section id="section-5">
+    <section id="section-5" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="5">
           Learn More about Design&nbsp;Systems
         </ SectionHeader>
