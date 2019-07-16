@@ -58,7 +58,8 @@
     line-height: 1.65;
     margin: 0 auto;
     counter-increment: count;
-    display: flex;
+    position: relative;
+    margin-left: 3.25rem;
 
     &::before {
       content: counter(count)".";
@@ -67,7 +68,8 @@
       display: inline-block;
       min-width: 2.125rem;
       text-align: right;
-      margin-right: 0.5rem;
+      position: absolute;
+      left: -2.75rem;
     }
   }
 }
