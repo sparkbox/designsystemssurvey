@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   scroll-snap-type: y proximity;
+  max-width: 100%;
 
   @media (min-width: $bp-md) {
     height: 100vh;
@@ -60,6 +61,7 @@
     width: 50rem;
     height: 35rem;
     max-width: 100%;
+    overflow-x: hidden; // Prevent IE11 horizontal scroll
 
     @media (min-width: $bp-md) {
       height: 55rem;
@@ -76,7 +78,7 @@
     z-index: 100;
     font-family: $font-heading;
     color: $white;
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1;
     text-transform: uppercase;
     text-shadow: 0 0.125rem 1rem $black, 0 0.125rem 0.25rem $black, 0 0.125rem 1.875rem $black;
