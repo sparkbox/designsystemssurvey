@@ -2,23 +2,20 @@ $glow: $black;
 $glowbg: #8115b0;
 $bgsize: 4vmin;
 $size: $bgsize;
-$lines: rgba($glow, 1) 0, rgba($glow, 1) 40%, rgba($glow, 0.65) 48.75%, rgba($glow, 0) 50%, rgba($glow, 0) 52.5%, rgba($glow, 0.65) 53.75%, rgba($glow, 1) 62.5%, rgba($glow, 1) 100%;
 
-$basetime: 3000ms;
+$basetime: 3000ms; // 2 seconds
 
 // z-index order
 $z-sky: 97;
 $z-lightning: 98;
 $z-mountains: 99;
 $z-ground: 100;
-
-$z-shade-cube: 297;
-$z-shade-diamond: 298;
-$z-shade-pyramid: 299;
-$z-shade-dodecahedron: 300;
+$z-shape: 300;
+$z-noise: 400;
+$z-heading: 600;
 
 @mixin mq-large-ratio {
-  @media (min-width: 50rem) and (min-height: 60rem) {
+  @media (min-width: 50rem) and (min-height: 50rem) {
     @content;
   }
 }
@@ -36,65 +33,86 @@ $z-shade-dodecahedron: 300;
   &__heading {
     position: absolute;
     margin: 0;
-    bottom: 1rem;
-    right: 1rem;
-    height: calc(100% - 2rem);
+    @include positions(0);
     pointer-events: all;
-    z-index: 600;
-    font-family: $font-heading;
-    text-transform: uppercase;
+    z-index: $z-heading;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    @include mq-large-ratio {
-      width: auto;
-    }
+    justify-content: flex-start;
+    align-items: center;
   }
 
   &__logo {
-    align-self: flex-start;
+    display: block;
+    text-decoration: none;
+    border: 0;
+    order: 2;
+    transition: transform 250ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__title {
     display: block;
-    font-size: 1.25rem;
+    font-size: 10.75vw;
     text-align: right;
     line-height: 1;
-
-    @media (min-width: 25rem) {
-      font-size: 5vw;
-    }
-
-    @media (min-width: 100rem) {
-      font-size: 5rem;
-    }
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: $font-heading;
+    font-weight: 800;
+    transform: translate(0, -2vw);
+    text-shadow: 0 0 2vw $black, 0 0 4vw $black;
+    order: 1;
+    flex-grow: 2;
   }
 
   &__survey {
-    @include mq-large-ratio {
-      display: block;
-    }
+    display: block;
+    position: absolute;
+    top: -0.5vw;
+    right: 5vw;
+    font-family: $font-script;
+    font-size: 12vw;
+    font-weight: normal;
+    color: $hotpink;
+    transform-origin: 50% 50%;
+    transform: rotate(-10deg);
+    text-shadow:
+      0 0 0.075em rgba($hotpink, 0.6),
+      0 0.02em 0 darken($hotpink, 32%),
+      -0.0075em 0.005em 0 $white,
+      0.01em 0.005em 0 $white,
+      0 0 0.01em $black,
+      0 0 2em $black
+      ;
   }
 
   &__year {
     display: block;
     font-size: 0.875rem;
+    font-family: $font-heading;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    order: 3;
+    margin: 1em auto 2em;
 
     @media (min-width: 43.75rem) {
       font-size: 2vw;
     }
 
-    @media (min-width: 75rem) {
-      font-size: 1.5rem;
+    @media (min-width: 56.25rem) {
+      font-size: 1.125rem;
     }
 
   }
 
   &__noise {
     position: absolute;
-    z-index: 400;
+    z-index: $z-noise;
     @include positions(0);
     background: url("/images/noise.png") repeat center scroll / 150px 150px;
     mix-blend-mode: overlay;
@@ -103,7 +121,7 @@ $z-shade-dodecahedron: 300;
 
   &__flood {
     position: absolute;
-    z-index: 102;
+    z-index: $z-noise - 1;
     @include positions(0);
     background-color: #733caa;
     opacity: 0.18;
@@ -113,7 +131,7 @@ $z-shade-dodecahedron: 300;
       content: '';
       display: block;
       position: absolute;
-      z-index:103;
+      z-index: $z-noise + 1;
       @include positions(0);
       opacity: 0;
       animation: flash 150ms $basetime ease-out;
@@ -125,6 +143,7 @@ $z-shade-dodecahedron: 300;
     position: absolute;
     z-index: $z-sky;
     @include positions(0);
+    height: 75%;
     background: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 20%), url("/images/sky.jpg") no-repeat top center fixed / cover;
 
     @media (orientation:portrait) {
@@ -142,7 +161,7 @@ $z-shade-dodecahedron: 300;
     background: url("/images/mountains.svg") no-repeat bottom -1px center scroll / 102vw;
   }
 
-  &__ligntning {
+  &__lightning {
     z-index: $z-lightning;
     position: absolute;
     mix-blend-mode: screen;
@@ -193,7 +212,7 @@ $z-shade-dodecahedron: 300;
       left: 40%;
       height: 20%;
       width: 20%;
-      z-index: 99;
+      z-index: $z-ground - 1;
       background-color: $orange;
       border-radius: 50%;
       filter: blur(20px);
@@ -210,7 +229,7 @@ $z-shade-dodecahedron: 300;
       right: 15%;
       height: 10%;
       width: 15%;
-      z-index: 99;
+      z-index: $z-ground - 1;
       background-color: $green;
       border-radius: 50%;
       filter: blur(15px);
@@ -234,7 +253,7 @@ $z-shade-dodecahedron: 300;
 
   &__ground-tilt {
     position: absolute;
-    z-index: 100;
+    z-index: $z-ground;
     top: 0;
     left: -50%;
     height: 400%;
@@ -248,7 +267,7 @@ $z-shade-dodecahedron: 300;
 
   &__ground-shadow {
     position: absolute;
-    z-index: 200;
+    z-index: $z-ground + 4;
     top: 75%;
     left: 0;
     height: 25%;
@@ -262,7 +281,7 @@ $z-shade-dodecahedron: 300;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: $z-ground;
     $height: 200vh;
     width: 100%;
     height: $height;
@@ -272,7 +291,7 @@ $z-shade-dodecahedron: 300;
 
   &__people {
     $img-size: 7rem;
-    z-index: 101;
+    z-index: $z-ground + 5;
     background: url("/images/people.png") no-repeat bottom left scroll / auto $img-size;
     position: absolute;
     @include positions(0);
@@ -290,7 +309,7 @@ $z-shade-dodecahedron: 300;
     position: absolute;
     top: 75%;
     left: 0;
-    z-index: 200;
+    z-index: $z-ground + 5;
     height: 25%;
     width: 100%;
     background: 
@@ -303,7 +322,7 @@ $z-shade-dodecahedron: 300;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 200;
+    z-index: $z-shape;
     transform-origin: 50% 50%;
     transform: scale(0.2);
     opacity: 0;
@@ -325,50 +344,32 @@ $z-shade-dodecahedron: 300;
 
   &__shape {
     position: absolute;
-    z-index: 200;
+    z-index: $z-shape;
     @include positions(0);
 
     &--dodecahedron {
       @include positions(0);
-      z-index: $z-shade-dodecahedron;
+      z-index: $z-shape + 4;
       background: url("/images/dodecahedron.svg") no-repeat top 25% center scroll / 32% auto
     }
 
     &--pyramid {
       @include positions(0);
-      z-index: $z-shade-pyramid;
+      z-index: $z-shape + 3;
       background: url("/images/pyramid.svg") no-repeat top 55% left 20% scroll / 12% auto
     }
 
     &--diamond {
       @include positions(0);
-      z-index: $z-shade-diamond;
+      z-index: $z-shape + 2;
       background: url("/images/diamond.svg") no-repeat top 55% right 20% scroll / 12% auto
     }
 
     &--cube {
       @include positions(0);
-      z-index: $z-shade-cube;
-      background: url("/images/cube.svg") no-repeat top 15% right 20% scroll / 12% auto
+      z-index: $z-shape + 1;
+      background: url("/images/cube.svg") no-repeat top 35% right 5% scroll / 12% auto
     }
-  }
-}
-
-@keyframes sky {
-  from {
-    transform: translateY(#{-($bgsize * 2) + 30});
-  }
-  to {
-    transform: translateY(#{-$bgsize * 2});
-  }
-}
-
-@keyframes mountains {
-  from {
-    transform: translateY(#{$bgsize * 0.5});
-  }
-  to {
-    transform: translateY(0);
   }
 }
 
@@ -387,17 +388,6 @@ $z-shade-dodecahedron: 300;
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes people {
-  from {
-    opacity: 0;
-    transform: rotateX(-75deg) translateY(calc(-12.5vh - 2rem) ) translateX(#{$bgsize}) scale(0.1);
-  }
-  to {
-    opacity: 1;
-    transform: rotateX(-75deg) translateY(0) translateX(0) scale(1);
   }
 }
 
