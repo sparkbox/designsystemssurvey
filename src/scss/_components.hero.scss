@@ -4,7 +4,7 @@ $bgsize: 4vmin;
 $size: $bgsize;
 $lines: rgba($glow, 1) 0, rgba($glow, 1) 40%, rgba($glow, 0.65) 48.75%, rgba($glow, 0) 50%, rgba($glow, 0) 52.5%, rgba($glow, 0.65) 53.75%, rgba($glow, 1) 62.5%, rgba($glow, 1) 100%;
 
-$basetime: 1s;
+$basetime: 3000ms;
 
 // z-index order
 $z-sky: 97;
@@ -23,9 +23,14 @@ $z-shade-dodecahedron: 300;
   overflow: hidden;
   pointer-events: none;
 
+  @media (orientation:portrait) {
+    height: 60vh;
+  }
+
   &__heading {
     position: absolute;
-    @include positions(0);
+    margin: 0;
+    @include positions(1rem);
     pointer-events: all;
     z-index: 600;
     font-family: $font-heading;
@@ -37,13 +42,17 @@ $z-shade-dodecahedron: 300;
   }
 
   &__title {
-    font-size: 5vw;
-    padding: 0 1rem;
+    font-size: 1.25rem;
+    text-align: right;
+
+    @media (min-width: 25rem) {
+      font-size: 5vw;
+      max-width: 100rem;
+    }
   }
 
   &__year {
     font-size: 2vw;
-    padding: 0 1rem;
   }
 
   &__noise {
@@ -70,7 +79,7 @@ $z-shade-dodecahedron: 300;
       z-index:103;
       @include positions(0);
       opacity: 0;
-      animation: flash 150ms 5s ease-out;
+      animation: flash 150ms $basetime ease-out;
       background-color: $white;
     }
   }
@@ -78,21 +87,22 @@ $z-shade-dodecahedron: 300;
   &__sky {
     position: absolute;
     z-index: $z-sky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
+    @include positions(0);
     background: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 20%), url("/images/sky.jpg") no-repeat top center fixed / cover;
+
+    @media (orientation:portrait) {
+      background-size: #{70vh * 1.777777778};
+    }
   }
 
   &__mountains {
     position: absolute;
     z-index: $z-mountains;
-    bottom: 25vh;
+    bottom: 25%;
     left: 0;
     width: 100%;
     height: 75%;
-    background: url("/images/mountains.svg") no-repeat bottom -1px center scroll / contain;
+    background: url("/images/mountains.svg") no-repeat bottom -1px center scroll / 102vw;
   }
 
   &__ligntning {
@@ -104,23 +114,25 @@ $z-shade-dodecahedron: 300;
     top: 0;
     left: 0;
     opacity: 0;
-    animation: lightning linear 50ms 5100ms forwards;
+    animation: appear linear 50ms #{$basetime + 100} forwards;
 
-    &::before,
-    &::after {
+    &::before {
       content: '';
       display: block;
       position: absolute;
       @include positions(0);
-      mix-blend-mode: screen;
+      background: url("/images/lightning-dim.png") no-repeat top right scroll / auto 100%;
     }
 
-    &::before {
-      background: url("/images/lightning-dim.jpg") no-repeat top right scroll / auto 100%;
-    }
-
-    &::after {
-      background: url("/images/lightning-bright.jpg") no-repeat top left scroll / auto 100%;
+    @supports (mix-blend-mode: screen){
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        @include positions(0);
+        mix-blend-mode: screen;
+        background: url("/images/lightning-bright.jpg") no-repeat top left scroll / auto 100%;
+      }
     }
   }
 
@@ -149,7 +161,7 @@ $z-shade-dodecahedron: 300;
       border-radius: 50%;
       filter: blur(20px);
       opacity: 0;
-      animation: reflection ease-out 250ms 5s forwards;
+      animation: reflection ease-out 250ms $basetime forwards;
     }
 
     // Green Glow
@@ -166,7 +178,7 @@ $z-shade-dodecahedron: 300;
       border-radius: 50%;
       filter: blur(15px);
       opacity: 0;
-      animation: reflection ease-out 250ms 5s forwards;
+      animation: reflection ease-out 250ms $basetime forwards;
     }
   }
 
@@ -194,6 +206,7 @@ $z-shade-dodecahedron: 300;
     transform-style: preserve-3d;
     transform-origin: 0 0;
     transform: rotateX(75deg);
+    animation: fly #{$basetime - 1000} ease-in-out;
   }
 
   &__ground-shadow {
@@ -227,6 +240,13 @@ $z-shade-dodecahedron: 300;
     position: absolute;
     @include positions(0);
     @include image-rendering;
+
+    opacity: 0;
+    animation: appear linear 50ms #{$basetime + 100} forwards;
+
+    @media (orientation:portrait) {
+      background-position: bottom left
+    }
   }
 
   &__ground-glow {
@@ -250,7 +270,7 @@ $z-shade-dodecahedron: 300;
     transform-origin: 50% 50%;
     transform: scale(0.2);
     opacity: 0;
-    animation: shapes ease-out 250ms 5s forwards;
+    animation: shapes ease-out 250ms $basetime forwards;
   }
 
   @keyframes shapes {
@@ -316,12 +336,15 @@ $z-shade-dodecahedron: 300;
 }
 
 @keyframes fly {
+  from {
+    transform: rotateX(75deg) translateY(-50%);
+  }
   to {
-    transform: translateY(0);
+    transform: rotateX(75deg) translateY(0);
   }
 }
 
-@keyframes lightning {
+@keyframes appear {
   from {
     opacity: 0;
   }
