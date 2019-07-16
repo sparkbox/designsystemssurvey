@@ -21,6 +21,30 @@ $z-shade-dodecahedron: 300;
   height: 100vh;
   position: relative;
   overflow: hidden;
+  pointer-events: none;
+
+  &__heading {
+    position: absolute;
+    @include positions(0);
+    pointer-events: all;
+    z-index: 600;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__title {
+    font-size: 5vw;
+    padding: 0 1rem;
+  }
+
+  &__year {
+    font-size: 2vw;
+    padding: 0 1rem;
+  }
 
   &__noise {
     position: absolute;
@@ -121,7 +145,7 @@ $z-shade-dodecahedron: 300;
       left: 40%;
       height: 20%;
       width: 20%;
-      z-index: 100;
+      z-index: 99;
       background-color: $orange;
       border-radius: 50%;
       filter: blur(20px);
@@ -138,7 +162,7 @@ $z-shade-dodecahedron: 300;
       right: 15%;
       height: 10%;
       width: 15%;
-      z-index: 100;
+      z-index: 99;
       background-color: $green;
       border-radius: 50%;
       filter: blur(15px);
