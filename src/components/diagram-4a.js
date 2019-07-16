@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react"
+import React from "react"
 import TableKey from "./diagram-table-key"
 import TableBlock from "./diagram-table-block"
 import TableColumn from "./diagram-table-column"
