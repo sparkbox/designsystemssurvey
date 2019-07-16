@@ -17,6 +17,12 @@ $z-shade-diamond: 298;
 $z-shade-pyramid: 299;
 $z-shade-dodecahedron: 300;
 
+@mixin mq-large-ratio {
+  @media (min-width: 50rem) and (min-height: 60rem) {
+    @content;
+  }
+}
+
 .cmp-hero {
   height: 100vh;
   position: relative;
@@ -30,7 +36,9 @@ $z-shade-dodecahedron: 300;
   &__heading {
     position: absolute;
     margin: 0;
-    @include positions(1rem);
+    bottom: 1rem;
+    right: 1rem;
+    height: calc(100% - 2rem);
     pointer-events: all;
     z-index: 600;
     font-family: $font-heading;
@@ -39,20 +47,49 @@ $z-shade-dodecahedron: 300;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+
+    @include mq-large-ratio {
+      width: auto;
+    }
+  }
+
+  &__logo {
+    align-self: flex-start;
   }
 
   &__title {
+    display: block;
     font-size: 1.25rem;
     text-align: right;
+    line-height: 1;
 
     @media (min-width: 25rem) {
       font-size: 5vw;
-      max-width: 100rem;
+    }
+
+    @media (min-width: 100rem) {
+      font-size: 5rem;
+    }
+  }
+
+  &__survey {
+    @include mq-large-ratio {
+      display: block;
     }
   }
 
   &__year {
-    font-size: 2vw;
+    display: block;
+    font-size: 0.875rem;
+
+    @media (min-width: 43.75rem) {
+      font-size: 2vw;
+    }
+
+    @media (min-width: 75rem) {
+      font-size: 1.5rem;
+    }
+
   }
 
   &__noise {
@@ -236,7 +273,7 @@ $z-shade-dodecahedron: 300;
   &__people {
     $img-size: 7rem;
     z-index: 101;
-    background: url("/images/people.png") no-repeat bottom 10% left 40% scroll / auto $img-size;
+    background: url("/images/people.png") no-repeat bottom left scroll / auto $img-size;
     position: absolute;
     @include positions(0);
     @include image-rendering;
@@ -244,8 +281,8 @@ $z-shade-dodecahedron: 300;
     opacity: 0;
     animation: appear linear 50ms #{$basetime + 100} forwards;
 
-    @media (orientation:portrait) {
-      background-position: bottom left
+    @include mq-large-ratio {
+      background-position: bottom 10% left 40%;
     }
   }
 
