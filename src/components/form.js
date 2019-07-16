@@ -50,17 +50,19 @@ export default class Form extends Component {
     }
     return (
       <form className="cmp-form" onSubmit={this._handleSubmit}>
-        <label className="cmp-form__label util-visually-hidden" htmlFor="email">Sign up for Sparkbox Newsletters</label>
         <div className="cmp-form__flex">
           <div className="cmp-form__border">
-            <input
-              className="cmp-form__input"
-              type="email"
-              onChange={this._handleChange}
-              placeholder="email@example.com"
-              name="email"
-              id="email"
-              />
+            <label className="cmp-form__label" htmlFor="email">
+              <span className="util-visually-hidden">Sign up for Sparkbox Newsletters with your email address</span>
+              <input
+                className="cmp-form__input"
+                type="email"
+                onChange={this._handleChange}
+                placeholder="email@example.com"
+                name="email"
+                id="email"
+                />
+            </label>
           </div>
           <button className="cmp-form__button" type="submit">Submit</button>
         </div>
