@@ -40,28 +40,28 @@ const Page2019 = () => (
 
     <section id="section-2" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="2">
-          Design&nbsp;System Contents and Functionality
+          Design System Contents and Functionality
         </ SectionHeader>
       <Section2 />
     </section>
 
     <section id="section-3" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="3">
-          Values and Challenges of&nbsp;Design&nbsp;Systems
+          Values and Challenges of Design Systems
         </ SectionHeader>
       <Section3 />
     </section>
 
     <section id="section-4" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="4">
-          Creating a Successful Design&nbsp;System
+          Creating a Successful Design System
         </ SectionHeader>
       <Section4 />
     </section>
 
     <section id="section-5" className="util-margin-vrt-4">
         <SectionHeader sectionNumber="5">
-          Learn More about Design&nbsp;Systems
+          Learn More about Design Systems
         </ SectionHeader>
       <Section5 />
     </section>
