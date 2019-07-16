@@ -1,26 +1,6 @@
 .cmp-form {
   margin: 0 0 4rem;
 
-  &__label {
-    font-family: $font-heading;
-    font-style: normal;
-    font-weight: 700;
-    color: $hotpink;
-    font-size: 2rem;
-    line-height: 1.25;
-    text-shadow: 0 0 6px 0 rgba($yellow, 0.2);
-    margin-bottom: 1.5rem;
-
-    @supports (background-clip: text) {
-      position: relative;
-      color: transparent;
-      top: 0;
-      background-image: linear-gradient(90deg, $yellow 0%, $orange 100%);
-      background-clip: text;
-      z-index: 2;
-    }
-  }
-
   &__flex {
     display: flex;
     justify-content: center;
