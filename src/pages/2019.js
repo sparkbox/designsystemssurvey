@@ -11,9 +11,20 @@ import Footer from "../components/footer"
 import TableOfContents from "../components/table-of-contents"
 import ContentBlock from "../components/content-block"
 import SectionHeader from "../components/section-header"
+import { Helmet } from "react-helmet";
 
 const Page2019 = () => (
   <Layout>
+    <Helmet>
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="/images/ogimage-2019.jpg" />
+      <meta property="og:locale" content="en_US" />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@hearsparkbox" />
+
+      <meta name="author" content="Sparkbox" />
+    </Helmet>
     <svg width="0" height="0" className="util-visually-hidden">
       <defs>
         <linearGradient id="pinkyellow" x1="50%" x2="50%" y1="0%" y2="100%">
