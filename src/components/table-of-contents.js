@@ -2,7 +2,7 @@ import React from "react"
 
 const TableOfContents = () => (
   <div className="cmp-table-of-contents" id="table-of-contents">
-    <h2 className="font-chrome font-chrome--small">Table of Contents</h2>
+    <h2 className="cmp-table-of-contents__title">Table of Contents</h2>
     <div className="cmp-table-of-contents__items">
       <ol className="cmp-table-of-contents__list">
         <li className="cmp-table-of-contents__item"><a href="#section-1" className="font-label cmp-table-of-contents__link">The Respondents</a></li>
