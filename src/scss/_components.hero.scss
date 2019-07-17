@@ -30,6 +30,17 @@ $z-heading: 600;
     height: 60vh;
   }
 
+  @media print {
+    height: auto;
+    overflow: scroll;
+  }
+
+  &__image {
+    @media print {
+      display: none;
+    }
+  }
+
   &__heading {
     position: absolute;
     margin: 0;
@@ -40,6 +51,11 @@ $z-heading: 600;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    @media print {
+      position: static;
+      display: block;
+    }
   }
 
   &__logo {
@@ -52,12 +68,17 @@ $z-heading: 600;
     &:hover {
       transform: scale(1.2);
     }
+
+    @media print {
+      transform: none;
+      filter: invert(1);
+    }
   }
 
   &__title {
     display: block;
     font-size: 10.75vw;
-    text-align: right;
+    text-align: center;
     line-height: 1;
     white-space: nowrap;
     text-transform: uppercase;
@@ -67,6 +88,14 @@ $z-heading: 600;
     text-shadow: 0 0 2vw $black, 0 0 4vw $black;
     order: 1;
     flex-grow: 2;
+
+    @media print {
+      display: inline-block;
+      font-size: 2rem;
+      text-shadow: none;
+      color: black;
+      transform: none;
+    }
   }
 
   &__survey {
@@ -88,6 +117,16 @@ $z-heading: 600;
       0 0 0.01em $black,
       0 0 2em $black
       ;
+
+    @media print {
+      display: inline-block;
+      font-size: 2.5rem;
+      text-shadow: none;
+      position: static;
+      display: inline;
+      color: black;
+      transform: none;
+    }
   }
 
   &__year {
@@ -106,6 +145,12 @@ $z-heading: 600;
 
     @media (min-width: 56.25rem) {
       font-size: 1.125rem;
+    } 
+
+    @media print {
+      font-size: 1rem;
+      text-shadow: none;
+      color: black;
     }
 
   }
