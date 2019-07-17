@@ -18,7 +18,10 @@
     width: var(--width);
     margin: 0 calc(calc(var(--size) * 0.2));
     filter: drop-shadow(0 0 0.25rem rgba($orange, 0.5));
-    animation: dodecahedron-pulse 1s 750ms ease-in-out alternate infinite;
+
+    .cmp-respondents--animated & {
+      animation: dodecahedron-pulse 1s 750ms ease-in-out alternate infinite;
+    }
 
     &__shape {
       height: var(--height);
@@ -32,7 +35,10 @@
         rotateX(var(--shape-angle))
         rotateY(var(--z))
       ;
-      animation: dodecahedron-spin var(--shape-animation-duration) linear infinite;
+
+      .cmp-respondents--animated & {
+        animation: dodecahedron-spin var(--shape-animation-duration) linear infinite;
+      }
     }
 
     &__top {

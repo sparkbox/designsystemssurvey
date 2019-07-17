@@ -17,7 +17,10 @@
     background: none;
     position: relative;
     filter: drop-shadow(0 0 0.25rem rgba($green, 0.5));
-    animation: diamond-pulse 1s 250ms ease-in-out alternate infinite;
+
+    .cmp-respondents--animated & {
+      animation: diamond-pulse 1s 250ms ease-in-out alternate infinite;
+    }
 
     &__shape {
       height: var(--height);
@@ -31,7 +34,10 @@
         rotateX(var(--shape-angle))
         rotateZ(var(--rotate));
       perspective-origin: center;
-      animation: diamond-spin var(--shape-animation-duration) linear infinite;
+
+      .cmp-respondents--animated & {
+        animation: diamond-spin var(--shape-animation-duration) linear infinite;
+      }
     }
 
     &__half {
