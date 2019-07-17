@@ -35,8 +35,18 @@ $z-heading: 600;
     overflow: scroll;
   }
 
+  .lt-ie10 & {
+    min-height: 40rem;
+    background: url("/images/fallbackground.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
   &__image {
     @media print {
+      display: none;
+    }
+
+    .lt-ie10 & {
       display: none;
     }
   }
@@ -61,7 +71,7 @@ $z-heading: 600;
   &__logo {
     display: block;
     text-decoration: none;
-    border: 0;
+    border: 0 none;
     order: 2;
     transition: transform 250ms ease-in-out;
 
@@ -72,6 +82,15 @@ $z-heading: 600;
     @media print {
       transform: none;
       filter: invert(1);
+    }
+
+    .lt-ie10 & {
+      position: absolute;
+      bottom: 6rem;
+      left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
     }
   }
 
@@ -96,11 +115,19 @@ $z-heading: 600;
       color: black;
       transform: none;
     }
+
+    .lt-ie10 & {
+      transform: none;
+      position: absolute;
+      left: -2vw;
+      top: -1.5vw;
+    }
   }
 
   &__survey {
     display: block;
     position: absolute;
+    z-index: $z-heading + 2;
     top: -0.5vw;
     right: 5vw;
     font-family: $font-script;
@@ -153,15 +180,26 @@ $z-heading: 600;
       color: black;
     }
 
+    .lt-ie10 & {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
 
-  &__noise {
-    position: absolute;
-    z-index: $z-noise;
-    @include positions(0);
-    background: url("/images/noise.png") repeat center scroll / 150px 150px;
-    mix-blend-mode: overlay;
-    opacity: 0.3;
+  @supports (mix-blend-mode: overlay){
+    &__noise {
+      position: absolute;
+      z-index: $z-noise;
+      @include positions(0);
+      background: url("/images/noise.png") repeat center;
+      background-size: 150px 150px;
+      mix-blend-mode: overlay;
+      opacity: 0.3;
+    }
   }
 
   &__flood {
@@ -189,7 +227,8 @@ $z-heading: 600;
     z-index: $z-sky;
     @include positions(0);
     height: 75%;
-    background: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 20%), url("/images/sky.jpg") no-repeat top center fixed / cover;
+    background: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 20%), url("/images/sky.jpg") no-repeat top center fixed;
+    background-size: auto, cover;
 
     @media (orientation:portrait) {
       background-size: #{70vh * 1.777777778};
@@ -203,7 +242,8 @@ $z-heading: 600;
     left: 0;
     width: 100%;
     height: 75%;
-    background: url("/images/mountains.svg") no-repeat bottom -1px center scroll / 102vw;
+    background: url("/images/mountains.svg") no-repeat bottom -1px center;
+    background-size: 102vw
   }
 
   &__lightning {
@@ -222,7 +262,8 @@ $z-heading: 600;
       display: block;
       position: absolute;
       @include positions(0);
-      background: url("/images/lightning-dim.png") no-repeat top right scroll / auto 100%;
+      background: url("/images/lightning-dim.png") no-repeat top right;
+      background-size: auto 100%;
     }
 
     @supports (mix-blend-mode: screen){
@@ -232,7 +273,8 @@ $z-heading: 600;
         position: absolute;
         @include positions(0);
         mix-blend-mode: screen;
-        background: url("/images/lightning-bright.jpg") no-repeat top left scroll / auto 100%;
+        background: url("/images/lightning-bright.jpg") no-repeat top left;
+        background-size: auto 100%;
       }
     }
   }
@@ -330,14 +372,16 @@ $z-heading: 600;
     $height: 200vh;
     width: 100%;
     height: $height;
-    background: url("/images/grid.svg") repeat top $bgsize*0.5 center scroll / $size;
+    background: url("/images/grid.svg") repeat top $bgsize*0.5 center ;
+    background-size: $size;
     transform: translateY(0);
   }
 
   &__people {
     $img-size: 7rem;
     z-index: $z-ground + 5;
-    background: url("/images/people.png") no-repeat bottom left scroll / auto $img-size;
+    background: url("/images/people.png") no-repeat bottom left;
+    background-size: auto $img-size;
     position: absolute;
     @include positions(0);
     @include image-rendering;
@@ -395,25 +439,29 @@ $z-heading: 600;
     &--dodecahedron {
       @include positions(0);
       z-index: $z-shape + 4;
-      background: url("/images/dodecahedron.svg") no-repeat top 25% center scroll / 32% auto
+      background: url("/images/dodecahedron.svg") no-repeat top 25% center;
+      background-size: 32% auto
     }
 
     &--pyramid {
       @include positions(0);
       z-index: $z-shape + 3;
-      background: url("/images/pyramid.svg") no-repeat top 55% left 20% scroll / 12% auto
+      background: url("/images/pyramid.svg") no-repeat top 55% left 20%;
+      background-size: 12% auto
     }
 
     &--diamond {
       @include positions(0);
       z-index: $z-shape + 2;
-      background: url("/images/diamond.svg") no-repeat top 55% right 20% scroll / 12% auto
+      background: url("/images/diamond.svg") no-repeat top 55% right 20%;
+      background-size: 12% auto
     }
 
     &--cube {
       @include positions(0);
       z-index: $z-shape + 1;
-      background: url("/images/cube.svg") no-repeat top 35% right 5% scroll / 12% auto
+      background: url("/images/cube.svg") no-repeat top 35% right 5% ;
+      background-size: 12% auto
     }
   }
 }
