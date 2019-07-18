@@ -15,6 +15,8 @@ app.use(compression()); //gzip
 
 app.use('/', setHeaders, redirectToPlural, express.static('dist'));
 
+app.use('/2018', setHeaders, redirectToPlural, express.static('dist'));
+
 //404 redirects to home page
 app.use(function (req, res, next) {
   res.status(404).redirect('/');
@@ -23,6 +25,9 @@ app.use(function (req, res, next) {
 // designsystemsurvey (singular) redirects to designsystemssurvey (plural)
 function redirectToPlural(req, res, next) {
   const host = req.get('host');
+  if (host === 'designsystemsurvey.seesparkbox.com' && req.path === '/2018/') {
+    return res.redirect(301, 'https://designsystemssurvey.seesparkbox.com/2018');
+  }
   if (host === 'designsystemsurvey.seesparkbox.com') {
     return res.redirect(301, 'https://designsystemssurvey.seesparkbox.com/');
   }
