@@ -3,8 +3,7 @@
   width: 100%;
   background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84" ><rect fill="#{mix($yellow, $black, 20%)}" stroke="#{$yellow}" stroke-width="3px" vector-effect="non-scaling-stroke" x="0" y="0" height="84" width="84" /></svg>') no-repeat left center / contain;
 
-  @supports(transform-style: preserve-3d) {
-    --rotate: 45deg;
+  @supports (transform-style: preserve-3d) {
 
     height: var(--size);
     width: var(--size);
@@ -29,8 +28,7 @@
       transform-origin: center;
       transform:
         rotateX(var(--shape-angle))
-        rotateZ(var(--rotate))
-      ;
+        rotateZ(45deg);
       perspective-origin: center;
 
       .cmp-respondents--animated & {
@@ -69,7 +67,7 @@
       }
 
       &--6 {
-        transform: translateZ(calc(var(--size) * -1));
+        transform: translateZ(var(--z-axis));
         transform-origin: center center;
       }
     }
@@ -81,7 +79,7 @@
   to {
     transform:
       rotateX(var(--shape-angle))
-      rotateZ(calc(var(--rotate) + 360deg));
+      rotateZ(405deg);
   }
 }
 

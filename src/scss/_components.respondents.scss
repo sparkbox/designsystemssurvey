@@ -183,17 +183,21 @@
 
         .cmp-cube {
           --size: 8rem;
+          --z-axis: -8rem; // calc(var(--size) * -1);
 
           @media (min-width: $bp-respond-medium-layout) {
             --size: 12rem;
+            --z-axis: -12rem;
           }
 
           @media (min-width: $bp-respond-size-bump-medium) {
             --size: 14rem;
+            --z-axis: -14rem;
           }
 
           @media (min-width: $bp-respond-size-bump-large) {
             --size: 16rem;
+            --z-axis: -16rem;
           }
         }
       }
