@@ -2,15 +2,12 @@
   height: 100%;
   width: 100%;
   background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.11 90.45"><polygon fill="#{mix($orange, $black, 20%)}" stroke="#{$orange}" stroke-width="1.5" vector-effect="non-scaling-stroke" points="47.55 0 0 34.55 18.16 90.45 76.94 90.45 95.11 34.55 47.55 0"/></svg>') no-repeat left center / contain;
-  @supports(transform-style: preserve-3d) {
+  @supports (transform-style: preserve-3d) {
     --height: var(--size);
     --width: calc(var(--size) * 1.16);
 
-    --z: 40deg;
     --move: cacl(var(--size) * -0.5);
 
-    --angle: 116deg;
-    --moveX: calc(var(--height) * 0.5);
     --moveY: calc(var(--width) * 0.575);
 
     background: none;
@@ -33,8 +30,7 @@
       perspective-origin: center;
       transform:
         rotateX(var(--shape-angle))
-        rotateY(var(--z))
-      ;
+        rotateY(40deg);
 
       .cmp-respondents--animated & {
         animation: dodecahedron-spin var(--shape-animation-duration) linear infinite;
@@ -43,7 +39,7 @@
 
     &__top {
       transform-style: preserve-3d;
-      transform: translateZ(calc(var(--height) * -0.875));
+      transform: translateZ(var(--top-z-axis));
     }
 
     &__bottom {
@@ -52,9 +48,9 @@
       transform:
         rotateY(180deg)
         rotateZ(36deg)
-        translateZ(calc(var(--height) * -0.675))
-        translatex(calc(var(--height) * 0.3))
-        translatey(calc(var(--height) * -0.1));
+        translateZ(var(--bottom-z-axis))
+        translateX(calc(var(--height) * 0.3))
+        translateY(calc(var(--height) * -0.1));
     }
 
     &__side {
@@ -67,46 +63,46 @@
       &--1 {
         transform:
           translateY(calc(var(--height) * -0.05))
-          translateZ(calc(var(--height) * 0.05));
+          translateZ(var(--side-z-axis));
       }
 
       &--2 {
         transform:
-          translatez(var(--moveX))
-          translatey(var(--moveY))
-          rotateX(calc(var(--angle) * -1));
+          translateZ(var(--moveX))
+          translateY(var(--moveY))
+          rotateX(-116deg);
       }
 
       &--3 {
         transform:
-        rotatez(-72deg)
-        translatez(var(--moveX))
-        translatey(var(--moveY))
-        rotateX(calc(var(--angle) * -1));
+        rotateZ(-72deg)
+        translateZ(var(--moveX))
+        translateY(var(--moveY))
+        rotateX(-116deg);
       }
 
       &--4 {
         transform:
         rotateZ(-144deg)
-        translatez(var(--moveX))
-        translatey(var(--moveY))
-        rotateX(calc(var(--angle) * -1));
+        translateZ(var(--moveX))
+        translateY(var(--moveY))
+        rotateX(-116deg);
       }
 
       &--5 {
         transform:
         rotateZ(-216deg)
-        translatez(var(--moveX))
-        translatey(var(--moveY))
-        rotateX(calc(var(--angle) * -1));
+        translateZ(var(--moveX))
+        translateY(var(--moveY))
+        rotateX(-116deg);
       }
 
       &--6 {
         transform:
         rotateZ(-288deg)
-        translatez(var(--moveX))
-        translatey(var(--moveY))
-        rotateX(calc(var(--angle) * -1));
+        translateZ(var(--moveX))
+        translateY(var(--moveY))
+        rotateX(-116deg);
       }
     }
   }
@@ -116,8 +112,7 @@
   to {
     transform:
       rotateX(var(--shape-angle))
-      rotateY(calc(var(--z) - 360deg))
-    ;
+      rotateY(-320deg);
   }
 }
 

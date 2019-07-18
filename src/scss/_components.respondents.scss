@@ -272,17 +272,33 @@
 
         .cmp-dodecahedron {
           --size: 5rem;
+          --top-z-axis: -4.375rem; // calc(var(--size) * -0.875);
+          --bottom-z-axis: -3.375rem; // calc(var(--size) * -0.675);
+          --side-z-axis: 0.25rem; // calc(var(--size) * 0.05);
+          --moveX: 2.5rem; // calc(var(--size) * 0.5);
 
           @media (min-width: $bp-respond-medium-layout) {
             --size: 2.25rem;
+            --top-z-axis: -1.96875rem;
+            --bottom-z-axis: -1.51875rem;
+            --side-z-axis: 0.1125rem;
+            --moveX: 1.125rem;
           }
 
           @media (min-width: $bp-respond-size-bump-medium) {
             --size: 2.75rem;
+            --top-z-axis: -2.40625rem;
+            --bottom-z-axis: -1.85625rem;
+            --side-z-axis: 0.1375rem;
+            --moveX: 1.375rem;
           }
 
           @media (min-width: $bp-respond-size-bump-large) {
             --size: 4rem;
+            --top-z-axis: -3.5rem;
+            --bottom-z-axis: -2.7rem;
+            --side-z-axis: 0.2rem;
+            --moveX: 2rem;
           }
         }
       }

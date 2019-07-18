@@ -3,7 +3,7 @@
   width: 100%;
   background: svg('<svg width="87" height="150" viewBox="0 0 87 150"><path fill="#{mix($green, $black, 20%)}" stroke="#{$green}" stroke-width="1.5" vector-effect="non-scaling-stroke" d="M87 75l-43.5 75L0 75 43.5 0z"/></svg>') no-repeat left center / contain;
 
-  @supports(transform-style: preserve-3d) {
+  @supports (transform-style: preserve-3d) {
     --height: var(--size);
     --width: calc(var(--size) * 1.16);
 
