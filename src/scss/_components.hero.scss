@@ -440,29 +440,34 @@ $z-heading: 600;
       @include positions(0);
       z-index: $z-shape + 4;
       background: url("/images/dodecahedron.svg") no-repeat top 25% center;
-      background-size: 32% auto
+      background-size: 32% auto;
+      transform-origin: 50% 50%;
     }
 
     &--pyramid {
       @include positions(0);
       z-index: $z-shape + 3;
       background: url("/images/pyramid.svg") no-repeat top 55% left 20%;
-      background-size: 12% auto
+      background-size: 12% auto;
     }
+
 
     &--diamond {
       @include positions(0);
       z-index: $z-shape + 2;
       background: url("/images/diamond.svg") no-repeat top 55% right 20%;
-      background-size: 12% auto
+      background-size: 12% auto;
     }
+
+
 
     &--cube {
       @include positions(0);
       z-index: $z-shape + 1;
       background: url("/images/cube.svg") no-repeat top 35% right 5% ;
-      background-size: 12% auto
+      background-size: 12% auto;
     }
+
   }
 }
 
