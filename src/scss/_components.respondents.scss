@@ -222,21 +222,26 @@
 
         .cmp-diamond {
           --size: 7rem;
+          --bottom-z-axis: -13.195rem; // calc(var(--size) * -1.885);
 
           @media (min-width: $bp-respond-stop-overlap) {
             --size: 6rem;
+            --bottom-z-axis: -11.31rem;
           }
 
           @media (min-width: $bp-respond-medium-layout) {
             --size: 3.5rem;
+            --bottom-z-axis: -6.5975rem;
           }
 
           @media (min-width: $bp-respond-size-bump-medium) {
             --size: 5rem;
+            --bottom-z-axis: -9.425rem;
           }
 
           @media (min-width: $bp-respond-size-bump-large) {
             --size: 7rem;
+            --bottom-z-axis: -13.195rem;
           }
         }
       }

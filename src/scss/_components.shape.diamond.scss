@@ -7,7 +7,6 @@
     --height: var(--size);
     --width: calc(var(--size) * 1.16);
 
-    --rotate: 70deg;
     --offset: calc(var(--size) * -0.5);
 
     height: calc(var(--height) * 1.625);
@@ -32,7 +31,7 @@
       transform-origin: 50% 50%;
       transform:
         rotateX(var(--shape-angle))
-        rotateZ(var(--rotate));
+        rotateZ(70deg);
       perspective-origin: center;
 
       .cmp-respondents--animated & {
@@ -44,11 +43,11 @@
       transform-style: preserve-3d;
 
       &--top {
-        transform: translateZ(calc(var(--height) * 0));
+        transform: translateZ(0);
       }
 
       &--bottom {
-        transform: translateZ(calc(var(--height) * -1.885));
+        transform: translateZ(var(--bottom-z-axis)); // Explicitly declared in components.shape.diamond
       }
     }
 
@@ -88,7 +87,7 @@
 
 @keyframes diamond-spin {
   to {
-    transform: rotateX(var(--shape-angle)) rotateZ(calc(var(--rotate) + 360deg));
+    transform: rotateX(var(--shape-angle)) rotateZ(430deg);
   }
 }
 
