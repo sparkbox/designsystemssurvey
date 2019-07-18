@@ -35,7 +35,7 @@
     }
 
     .lt-ie10 & {
-      display: block;
+      @include visually-hidden(disable);
     }
 
     @include print {
@@ -54,7 +54,7 @@
     }
 
     .lt-ie10 & {
-      display: none;
+      @include visually-hidden;
     }
 
     @include print(hide);
