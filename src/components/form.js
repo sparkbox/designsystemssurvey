@@ -5,7 +5,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: null,
+      email: false,
       subscribed: false,
       alreadySubscribed: false,
       invalidEmail: false,
@@ -25,6 +25,8 @@ export default class Form extends Component {
       .then(({result, msg}) => {
         if (result !== 'success') {
           if (msg.includes('invalid')) {
+            this.setState({invalidEmail: true});
+          } else if (!this.state.email) {
             this.setState({invalidEmail: true});
           } else {
             this.setState({alreadySubscribed: true});
