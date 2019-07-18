@@ -138,17 +138,23 @@
 
         .cmp-pyramid {
           --size: 10rem;
+          // Explicitly set values to be used in the pyramid's transform along the z-axis to ensure correct rendering in Edge
+          --z-axis: -9.38rem; // calc(-0.938 * var(--size))
+
 
           @media (min-width: $bp-respond-medium-layout) {
             --size: 20rem;
+            --z-axis: -18.76rem;
           }
 
           @media (min-width: $bp-respond-size-bump-medium) {
             --size: 23rem;
+            --z-axis: -21.574rem;
           }
 
           @media (min-width: $bp-respond-size-bump-large) {
             --size: 28rem;
+            --z-axis: -26.264rem;
           }
         }
       }
@@ -175,7 +181,7 @@
           left: calc(100% - 33rem);
         }
 
-        .cmp-cube{
+        .cmp-cube {
           --size: 8rem;
 
           @media (min-width: $bp-respond-medium-layout) {
@@ -214,7 +220,7 @@
           left: calc(100% - 19rem);
         }
 
-        .cmp-diamond{
+        .cmp-diamond {
           --size: 7rem;
 
           @media (min-width: $bp-respond-stop-overlap) {
@@ -255,7 +261,7 @@
           left: calc(100% - 14.5rem);
         }
 
-        .cmp-dodecahedron{
+        .cmp-dodecahedron {
           --size: 5rem;
 
           @media (min-width: $bp-respond-medium-layout) {

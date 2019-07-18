@@ -6,7 +6,6 @@
     --height: var(--size);
     --width: calc(var(--size) * 1.16);
 
-    --rotate: 30deg;
     --offset: calc(var(--size) * -0.5);
 
     background: none;
@@ -31,7 +30,7 @@
       transform-origin: 50% 50%;
       transform:
         rotateX(var(--shape-angle))
-        rotateZ(var(--rotate));
+        rotateZ(30deg);
       perspective-origin: center;
 
       .cmp-respondents--animated & {
@@ -72,7 +71,7 @@
     &__side--4 {
       transform:
         translateY(calc(-0.16667 * var(--height)))
-        translateZ(calc(-0.938 * var(--height)));
+        translateZ(var(--z-axis)); // Explicitly declared in components.respondents
     }
   }
 }
@@ -81,7 +80,7 @@
   to {
     transform:
       rotateX(var(--shape-angle))
-      rotateZ(calc(var(--rotate) + 360deg));
+      rotateZ(390deg);
   }
 }
 @keyframes pyramid-pulse {
