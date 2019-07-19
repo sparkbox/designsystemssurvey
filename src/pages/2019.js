@@ -34,50 +34,56 @@ const Page2019 = () => (
         </linearGradient>
       </defs>
     </svg>
-    <Hero />
-    <ContentBlock>
-      <a href="#table-of-contents" className="cmp-skip-link">Skip to table of contents</a>
-      <IntroSection />
-    </ContentBlock>
+    <header>
+      <Hero />
+    </header>
+    <main>
+      <section>
+        <ContentBlock>
+          <a href="#table-of-contents" className="cmp-skip-link">Skip to table of contents</a>
+          <IntroSection />
+        </ContentBlock>
 
-    <div>
-      <TableOfContents />
-    </div>
+        <div>
+          <TableOfContents />
+        </div>
 
-    <section id="section-1" className="util-margin-vrt-4">
-        <SectionHeader sectionNumber="1">
-          The Respondents
-        </ SectionHeader>
-      <Section1 />
-    </section>
+        <article id="section-1" className="util-margin-vrt-4">
+            <SectionHeader sectionNumber="1">
+              The Respondents
+            </ SectionHeader>
+          <Section1 />
+        </article>
 
-    <section id="section-2" className="util-margin-vrt-4">
-        <SectionHeader sectionNumber="2">
-          Design System Contents and Functionality
-        </ SectionHeader>
-      <Section2 />
-    </section>
+        <article id="section-2" className="util-margin-vrt-4">
+            <SectionHeader sectionNumber="2">
+              Design System Contents and Functionality
+            </ SectionHeader>
+          <Section2 />
+        </article>
 
-    <section id="section-3" className="util-margin-vrt-4">
-        <SectionHeader sectionNumber="3">
-          Values and Challenges of Design Systems
-        </ SectionHeader>
-      <Section3 />
-    </section>
+        <article id="section-3" className="util-margin-vrt-4">
+            <SectionHeader sectionNumber="3">
+              Values and Challenges of Design Systems
+            </ SectionHeader>
+          <Section3 />
+        </article>
 
-    <section id="section-4" className="util-margin-vrt-4">
-        <SectionHeader sectionNumber="4">
-          Creating a Successful Design System
-        </ SectionHeader>
-      <Section4 />
-    </section>
+        <article id="section-4" className="util-margin-vrt-4">
+            <SectionHeader sectionNumber="4">
+              Creating a Successful Design System
+            </ SectionHeader>
+          <Section4 />
+        </article>
 
-    <section id="section-5" className="util-margin-vrt-4">
-        <SectionHeader sectionNumber="5">
-          Learn More about Design Systems
-        </ SectionHeader>
-      <Section5 />
-    </section>
+        <article id="section-5" className="util-margin-vrt-4">
+            <SectionHeader sectionNumber="5">
+              Learn More about Design Systems
+            </ SectionHeader>
+          <Section5 />
+        </article>
+      </section>
+    </main>
 
     <Footer />
   </Layout>

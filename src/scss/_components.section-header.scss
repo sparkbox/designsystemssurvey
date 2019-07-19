@@ -1,16 +1,16 @@
 .cmp-section-header {
   position: relative;
-  height: 60vh;
   min-height: 50rem;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   scroll-snap-type: y proximity;
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (min-width: $bp-md) {
-    height: 100vh;
-    padding: 15vh 0 25vh;
+    margin: 15vh 0 25vh;
   }
 
   .lt-ie10 & {
