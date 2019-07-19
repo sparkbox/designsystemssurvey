@@ -1,4 +1,4 @@
-$black: #11161C;
+$black: #2a2540;
 $blue: #15CBF4;
 $hotpink: #DF138C;
 $orange: #FF8A00;
@@ -6,8 +6,9 @@ $yellow: #F3C448;
 $green: #42E915;
 $white: #FFFFFF;
 $gray: mix($white, $black, 50%);
-$table-border: lighten($black, 40%);
+
 $print-black: black;
+$print-blue: blue;
 
 $colors: (
   "blue": $blue,

@@ -1,42 +1,3 @@
-// Two tone gradient headers, hero section, TOC
-// previously headline-1
-.font-chrome {
-  font-family: $font-heading;
-  font-style: normal;
-  font-weight: 800;
-  text-align: center;
-  margin: 0;
-  font-size: 9vw;
-  white-space: nowrap;
-  color: $hotpink;
-
-  @supports (background-clip: text) {
-    color: transparent;
-    position: relative;
-    text-transform: uppercase;
-    filter: drop-shadow(0 0.0325em 0 #8D0429);
-    background: linear-gradient(0deg, #F448AF 21%, #4A062F 42%, $black 43%, #D2F0FD 45%, #146C8C 63%, #082534 77%);
-    background-clip: text;
-    -webkit-text-stroke: 1px #EEABEF;
-  }
-
-  &--small {
-    font-size: 2rem;
-
-    @media (min-width: $bp-xs) {
-      font-size: 6.5vw;
-    }
-
-    @media (min-width: $bp-lg) {
-      font-size: 5rem;
-    }
-  }
-
-  @include print {
-    color: $hotpink;
-  }
-}
-
 // For "Survey," TOC numbers, etc.
 .font-accent {
   font-family: $font-script;
@@ -66,7 +27,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
 

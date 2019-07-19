@@ -3,13 +3,16 @@ import TopFeatureCard from "./top-feature-card"
 import TopFeatureListItem from "./top-feature-list-item"
 
  const TopFeaturesElements = () => (
-  <section className="obj-layout-max-width util-margin-top4">
-    <ol className="cmp-percentage-highlight">
+  <div className="obj-layout-max-width util-margin-top4">
+    <p id="table2a" className="font-diagram-heading" aria-label="Top Design System Features">
+      Top Design System Features
+    </p>
+    <ol className="cmp-percentage-highlight util-margin-top2">
       <TopFeatureCard icon="palette" firstWord="Color" secondWord="System" percentage="92" />
       <TopFeatureCard icon="typography" firstWord="Typography" secondWord="System" percentage="89" />
       <TopFeatureCard icon="form" firstWord="Form" secondWord="Components" percentage="88" />
     </ol>
-    <ol className="cmp-percentage-list">
+    <ol className="cmp-percentage-list" start="4">
       <TopFeatureListItem item="Navigation components" percentage="79" />
       <TopFeatureListItem item="CSS code" percentage="70" />
       <TopFeatureListItem item="HTML code" percentage="69" />
@@ -24,7 +27,7 @@ import TopFeatureListItem from "./top-feature-list-item"
       <TopFeatureListItem item="Accessibility guidelines" percentage="55" />
       <TopFeatureListItem item="Framework-specific components" percentage="53" />
     </ol>
-  </section>
+  </div>
 )
 
 export default TopFeaturesElements

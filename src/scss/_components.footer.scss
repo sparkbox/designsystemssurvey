@@ -1,5 +1,6 @@
 .cmp-footer {
   margin: 4rem auto;
+  position: relative;
 
   @media (min-width: $bp-lg) {
     margin: 6rem auto;
@@ -60,6 +61,12 @@
         width: calc(33.33% - 2rem);
       }
     }
+  }
+
+  &__details-text {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
   }
 
   &__logo {
