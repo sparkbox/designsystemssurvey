@@ -39,50 +39,55 @@ const Page2019 = () => (
         <Hero />
       </header>
       <a href="#table-of-contents" className="cmp-skip-link">Skip to table of contents</a>
-      <ContentBlock>
-        <IntroSection />
-      </ContentBlock>
+      <div className="obj-section obj-intro">
+        <ContentBlock>
+          <IntroSection />
+        </ContentBlock>
+      </div>
 
-      <div>
+      <div className="obj-section">
         <TableOfContents />
       </div>
 
-      <section id="section-1" className="util-margin-vrt-4">
+      <section id="section-1" className="obj-section">
         <SectionHeader sectionNumber="1">
           The Respondents
         </ SectionHeader>
         <Section1 />
       </section>
 
-      <section id="section-2" className="util-margin-vrt-4">
+      <section id="section-2" className="obj-section">
         <SectionHeader sectionNumber="2">
           Design System Contents and Functionality
         </ SectionHeader>
         <Section2 />
       </section>
 
-      <section id="section-3" className="util-margin-vrt-4">
+      <section id="section-3" className="obj-section">
         <SectionHeader sectionNumber="3">
           Values and Challenges of Design Systems
         </ SectionHeader>
         <Section3 />
       </section>
 
-      <section id="section-4" className="util-margin-vrt-4">
+      <section id="section-4" className="obj-section">
         <SectionHeader sectionNumber="4">
           Creating a Successful Design System
         </ SectionHeader>
         <Section4 />
       </section>
 
-      <section id="section-5" className="util-margin-vrt-4">
+      <section id="section-5" className="obj-section">
         <SectionHeader sectionNumber="5">
           Learn More about Design Systems
         </ SectionHeader>
         <Section5 />
       </section>
     </article>
-    <Footer />
+
+    <div className="obj-section">
+      <Footer />
+    </div>
   </Layout>
 )
 

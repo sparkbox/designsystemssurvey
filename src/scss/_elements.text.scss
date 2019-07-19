@@ -21,6 +21,7 @@ h3:not([class]) {
   line-height: 1.2;
   text-shadow: 0 0 0.375rem 0 rgba($yellow, 0.2);
   color: $hotpink;
+  margin: 1.5em auto;
 
   @media (min-width: $bp-sm) {
     font-size: 5vw;
@@ -40,7 +41,7 @@ h3:not([class]) {
   }
 
   @include print {
-    color: $hotpink;
+    color: $print-black;
     text-shadow: none;
   }
 }
@@ -64,7 +65,7 @@ h4:not([class]) {
   }
 
   @include print {
-    color: $hotpink;
+    color: $print-black;
     text-shadow: none;
   }
 }
@@ -75,24 +76,19 @@ p:not([class]) {
 
 a[href]:not([class]) {
   color: $blue;
-  border-bottom: 1px solid $blue;
-  text-decoration: none;
-  transition: border-bottom ease 150ms;
 
   &:hover {
-    border-bottom: transparent;
+    text-decoration: none;
   }
 
   &:visited {
     color: $orange;
-    border-bottom: 1px solid $orange;
   }
 
   @include print {
     &,
     &:visited {
-      color: $blue;
-      border-bottom: 1px solid $blue;
+      color: $print-blue;
     }
   }
 }

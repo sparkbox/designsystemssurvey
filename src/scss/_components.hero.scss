@@ -26,6 +26,30 @@ $z-heading: 600;
   overflow: hidden;
   pointer-events: none;
 
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::before {
+    height: 4rem;
+    z-index: 499;
+    background: linear-gradient(to top, $black, rgba($black, 0));
+  }
+
+  &::after {
+    height: 25%;
+    z-index: 500;
+    background: url("/images/noise-white.png") repeat center;
+    background-size: 150px 150px;
+    opacity: 0.05;
+  }
+
   @media (orientation:portrait) {
     height: 60vh;
   }
@@ -194,7 +218,10 @@ $z-heading: 600;
     &__noise {
       position: absolute;
       z-index: $z-noise;
-      @include positions(0);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75%;
       background: url("/images/noise.png") repeat center;
       background-size: 150px 150px;
       mix-blend-mode: overlay;

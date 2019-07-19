@@ -3,8 +3,12 @@ import TopFeatureCard from "./top-feature-card"
 import TopFeatureListItem from "./top-feature-list-item"
 
  const TopFeaturesTools = () => (
-  <section className="obj-layout-max-width util-margin-top4">
-    <ol className="cmp-percentage-highlight">
+  <div className="obj-layout-max-width util-margin-top4">
+    <p id="table2a" className="font-diagram-heading" aria-label="Top Design System Tools">
+      Top Design System Tools
+    </p>
+    <p className="font-diagram-copy">108 In-House Responses <br /> <em>Respondents were asked to select one&nbsp;answer</em></p>
+    <ol className="cmp-percentage-highlight util-margin-top4">
       <TopFeatureCard icon="storybook" firstWord="Storybook" percentage="34" />
       <TopFeatureCard icon="invision" firstWord="InVision" secondWord="Design System Manager" percentage="32" />
       <TopFeatureCard icon="pattern-lab" firstWord="Pattern" secondWord="Lab" percentage="23" />
@@ -20,7 +24,7 @@ import TopFeatureListItem from "./top-feature-list-item"
       <TopFeatureListItem item="Abstract" percentage="4" />
       <TopFeatureListItem item="Figma" percentage="4" />
     </ol>
-  </section>
+  </div>
 )
 
 export default TopFeaturesTools

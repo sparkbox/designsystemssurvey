@@ -14,9 +14,9 @@ class Diagram2a extends Component {
 
   render() {
     return (
-      <section className="cmp-diagram">
+      <div className="cmp-diagram">
         <p id="table2a" className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
-        <p className="font-diagram-copy">108 In-House Responses <span aria-hidden="true">|</span> Respondents were asked to select one&nbsp;answer</p>
+        <p className="font-diagram-copy">108 In-House Responses <br /> <em>Respondents were asked to select one&nbsp;answer</em></p>
         <div className="cmp-diagram__table cmp-diagram__table--vertical" tabIndex="0">
           <table aria-labelledby="table2a">
             <tbody>
@@ -59,7 +59,7 @@ class Diagram2a extends Component {
           </dl>
           <div ref={this.platform} className="cmp-diagram-chart__platform" />
         </div>
-      </section>
+      </div>
     )
   }
 }

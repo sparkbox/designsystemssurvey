@@ -1,0 +1,20 @@
+.obj-section {
+  padding: 1em 0;
+  position: relative;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 101;
+    @include positions(0);
+    background: url("/images/noise-white.png") repeat center center;
+    background-size: 150px 150px;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+}
+
+.obj-intro {
+  padding: 10vh 0;
+}

@@ -1,4 +1,5 @@
 $table-padding: 0.25rem 0.5rem;
+$table-border: mix($yellow, $black, 50%);
 
 table {
   @include body-copy;
@@ -9,11 +10,11 @@ table {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: lighten($black, 10%);
+  background-color: mix($white, $black, 4%);
 }
 
 tbody tr:nth-child(even) {
-  background-color: lighten($black, 20%);
+  background-color: mix($white, $black, 10%);
 }
 
 th {
