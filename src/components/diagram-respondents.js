@@ -23,36 +23,36 @@ class Respondents extends Component {
         </h3>
         <ul className="cmp-respondents__list">
           <li className="cmp-respondents__item cmp-respondents__item--designers">
-            <span className="cmp-respondents__shape cmp-respondents__shape--designers">
+            <div className="cmp-respondents__shape cmp-respondents__shape--designers">
               <ShapePyramid />
-            </span>
+            </div>
             <span className="cmp-respondents__stat">
               <span className="cmp-respondents__group cmp-respondents__group--designers">Designers<br />and&nbsp;<abbr title="User Experience">UX</abbr></span> <mark className="cmp-respondents__number">49<span className="cmp-respondents__percent">%</span></mark>
             </span>
           </li>
 
           <li className="cmp-respondents__item cmp-respondents__item--developers">
-            <span className="cmp-respondents__shape cmp-respondents__shape--developers">
+            <div className="cmp-respondents__shape cmp-respondents__shape--developers">
               <ShapeCube />
-            </span>
+            </div>
             <span className="cmp-respondents__stat">
               <span className="cmp-respondents__group cmp-respondents__group--developers">Developers</span> <mark className="cmp-respondents__number">39<span className="cmp-respondents__percent">%</span></mark>
             </span>
           </li>
 
           <li className="cmp-respondents__item cmp-respondents__item--managers">
-            <span className="cmp-respondents__shape cmp-respondents__shape--managers">
+            <div className="cmp-respondents__shape cmp-respondents__shape--managers">
               <ShapeDiamond />
-            </span>
+            </div>
             <span className="cmp-respondents__stat">
               <span className="cmp-respondents__group cmp-respondents__group--managers">Managers</span> <mark className="cmp-respondents__number">8<span className="cmp-respondents__percent">%</span></mark>
             </span>
           </li>
 
           <li className="cmp-respondents__item cmp-respondents__item--other">
-            <span className="cmp-respondents__shape cmp-respondents__shape--other">
+            <div className="cmp-respondents__shape cmp-respondents__shape--other">
               <ShapeDodecahedron />
-            </span>
+            </div>
             <span className="cmp-respondents__stat">
               <span className="cmp-respondents__group cmp-respondents__group--other">Other</span> <mark className="cmp-respondents__number">4<span className="cmp-respondents__percent">%</span></mark>
             </span>
