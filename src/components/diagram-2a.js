@@ -56,8 +56,8 @@ class Diagram2a extends Component {
             <ChartCard percent="14" color="green" scale="2" label="In an external codebase and consumed by the main codebase's build pipeline"/>
             <ChartCard percent="6" color="yellow" scale="2" label="I am not sure"/>
             <ChartCard percent="4" color="white" scale="2" label="Other"/>
-            <div ref={this.platform} className="cmp-diagram-chart__platform" />
           </dl>
+          <div ref={this.platform} className="cmp-diagram-chart__platform" />
         </div>
       </section>
     )
