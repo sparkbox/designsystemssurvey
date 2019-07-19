@@ -1,16 +1,17 @@
 .cmp-form {
-  margin: 0 0 4rem;
+  margin: 4rem 0;
 
   &__flex {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 2rem 0;
+    margin: 0;
 
     @media (min-width: $bp-sm) {
+      justify-content: flex-start;
+      align-items: stretch;
       flex-wrap: nowrap;
-      justify-content: space-between;
     }
   }
 
@@ -21,13 +22,12 @@
     background-origin: border-box;
     background-clip: content-box, border-box;
     width: 100%;
+    transition: border 150ms ease-in-out;
 
     @media (min-width: $bp-sm) {
-      width: 76%;
-    }
-
-    @media (min-width: $bp-md) {
-      width: 80%;
+      flex-grow: 2;
+      margin-top: 0;
+      margin-right: 1rem;
     }
 
     &:focus-within {
@@ -37,6 +37,28 @@
     @include print {
       background-image: none;
       border: 2px solid $print-black;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    color: $white;
+    font-family: $font-heading;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    @media (min-width: $bp-sm) {
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: $bp-md) {
+      font-size: 1.5rem;
+    }
+
+    @include print {
+      color: $print-black;
     }
   }
 
@@ -85,7 +107,7 @@
     text-align: center;
     margin-top: 1.5rem;
     transform: scale(1);
-    transition: transform 150ms ease;
+    transition: transform 150ms ease-in-out, background 150ms ease-in-out;
 
     @media (min-width: $bp-sm) {
       width: auto;
