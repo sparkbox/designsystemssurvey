@@ -66,8 +66,8 @@ class Diagram3b extends Component {
             <ChartCard percent="30" color="white" scale="1.25" label="We always suggest a design system"/>
             <ChartCard percent="8" color="bluegreen" scale="1.25" label="We never suggest a design system"/>
             <ChartCard percent="8" color="yellowpink" scale="1.25" label="Other (please specify)"/>
-            <div ref={this.platform} className="cmp-diagram-chart__platform" />
           </dl>
+          <div ref={this.platform} className="cmp-diagram-chart__platform" />
         </div>
       </section>
     )

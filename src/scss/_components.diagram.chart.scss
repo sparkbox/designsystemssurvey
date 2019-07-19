@@ -21,6 +21,9 @@ $circle-height: 28px;
 
 .cmp-diagram-chart {
   display: none;
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
 
   @media (min-width: $bp-md) {
     display: inherit;
@@ -70,9 +73,8 @@ $circle-height: 28px;
     perspective: 800px;
     position: absolute;
     top: 22.875rem;
-    left: 1%;
     height: 4.5rem;
-    width: 98%;
+    width: 100%;
     z-index: 0;
 
     @supports (display: grid) {
