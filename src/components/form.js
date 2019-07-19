@@ -52,11 +52,12 @@ export default class Form extends Component {
     }
     return (
       <form className="cmp-form" onSubmit={this._handleSubmit}>
+        <label className="cmp-form__label" htmlFor="email">
+          Sign up for Sparkbox Newsletters <span className="util-visually-hidden">with your email address</span>
+        </label>
         <div className="cmp-form__flex">
           <div className="cmp-form__border">
-            <label className="cmp-form__label" htmlFor="email">
-              <span className="util-visually-hidden">Sign up for Sparkbox Newsletters with your email address</span>
-              <input
+            <input
                 className="cmp-form__input"
                 type="email"
                 onChange={this._handleChange}
@@ -64,7 +65,6 @@ export default class Form extends Component {
                 name="email"
                 id="email"
                 />
-            </label>
           </div>
           <button className="cmp-form__button" type="submit">Submit</button>
         </div>
