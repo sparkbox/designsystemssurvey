@@ -5,7 +5,7 @@ const SectionHeader = ({ sectionNumber, children }) => (
   <header className={"cmp-section-header cmp-section-header--" + sectionNumber}>
     <div className="cmp-section-header__number-box" aria-label={"Section " + sectionNumber}>
       <svg viewBox="0 0 800 900" className="cmp-section-header__svg">
-        <text className="cmp-section-header__number" stroke="url(#pinkyellow)" fontSize="1140">
+        <text className="cmp-section-header__number" stroke="url(#pinkyellow)" fontSize="1000">
           <tspan x="400" y="850">{sectionNumber}</tspan>
         </text>
       </svg>
