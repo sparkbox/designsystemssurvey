@@ -413,6 +413,7 @@ $z-heading: 600;
     transform-style: preserve-3d;
     transform-origin: 0 0;
     transform: rotateX(75deg);
+    will-change: transform;
     animation: fly #{$basetime - 1000} ease-in-out;
   }
 
@@ -449,7 +450,6 @@ $z-heading: 600;
     position: absolute;
     @include positions(0);
     @include image-rendering;
-
     opacity: 0;
     animation: appear linear 50ms #{$basetime + 100} forwards;
 

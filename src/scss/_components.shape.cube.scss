@@ -32,6 +32,7 @@
       perspective-origin: center;
 
       .cmp-respondents--animated & {
+        will-change: transform;
         animation: cube-spin var(--shape-animation-duration) linear infinite;
       }
     }

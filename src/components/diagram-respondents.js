@@ -12,7 +12,11 @@ class Respondents extends Component {
   }
 
   componentDidMount() {
-    observe(this.respondents, 'cmp-respondents--animated');
+    const respondentsObserver = () => {
+      observe(this.respondents, 'cmp-respondents--animated');
+    }
+
+    requestAnimationFrame(respondentsObserver);
   }
 
   render() {
