@@ -65,6 +65,43 @@ $z-heading: 600;
     background-size: cover;
   }
 
+  &__info {
+    display: none;
+
+    @media (min-width: $bp-md) {
+      text-decoration: none;
+      pointer-events: all;
+      display: block;
+      z-index: 700;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 50%;
+      max-width: 13rem;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      padding: 0.5rem 0.75rem;
+      background-color: $black;
+      color: $white;
+      opacity: 0.5;
+      border-radius: 0.5rem;
+      transition: opacity 250ms ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__info-link {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  &__info:visited &__info-link {
+    color: $orange;
+  }
+
   &__image {
     @media print {
       display: none;
