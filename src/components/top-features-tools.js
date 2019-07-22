@@ -17,7 +17,7 @@ import TopFeatureListItem from "./top-feature-list-item"
       <TopFeatureListItem item="UXPin" percentage="16" />
       <TopFeatureListItem item="Fractal" percentage="10" />
       <TopFeatureListItem item="KSS" percentage="8" />
-      <TopFeatureListItem item="A homegrown solution" percentage="7" />
+      <TopFeatureListItem item="A Homegrown Solution" percentage="7" />
       <TopFeatureListItem item="zeroheight" percentage="6" />
       <TopFeatureListItem item="Sketch" percentage="5" />
       <TopFeatureListItem item="Vue" percentage="4" />

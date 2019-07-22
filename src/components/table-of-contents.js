@@ -10,7 +10,7 @@ const TableOfContents = () => (
         <li className="cmp-table-of-contents__item"><a href="#section-3" className="font-label cmp-table-of-contents__link">Values and Challenges of Design Systems</a></li>
       </ol>
       <ol className="cmp-table-of-contents__list cmp-table-of-contents__list--start4">
-        <li className="cmp-table-of-contents__item"><a href="#section-4" className="font-label cmp-table-of-contents__link">Creating A Successful Design System</a></li>
+        <li className="cmp-table-of-contents__item"><a href="#section-4" className="font-label cmp-table-of-contents__link">Creating a Successful Design System</a></li>
         <li className="cmp-table-of-contents__item"><a href="#section-5" className="font-label cmp-table-of-contents__link">Learn More about Design Systems</a></li>
       </ol>
     </div>
