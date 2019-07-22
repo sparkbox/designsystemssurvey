@@ -58,7 +58,7 @@ $table-width: 75%;
   }
 
   &__label {
-    margin: 0.5rem 0 0.5rem 0.25rem;
+    margin: 0.75rem 0 0.75rem 0.25rem;
     font-weight: bold;
 
     @media (min-width: $bp-md) {
@@ -70,7 +70,6 @@ $table-width: 75%;
 
   &__block {
     flex: 1 1 auto;
-    min-width: 1.5rem; // To ensure that the element is large enough to hover
     height: 3.375rem;
     margin-left: 0;
     box-sizing: border-box;
@@ -137,7 +136,7 @@ $table-width: 75%;
     // Percent value of the chart row block. Hidden until hovered
     // or in focus.
     position: absolute;
-    top: -1rem; // Aligns the text to display halfway "outside" the block
+    top: -0.875rem;
     text-align: center;
     width: 100%;
     z-index: 1;
@@ -152,6 +151,10 @@ $table-width: 75%;
 
     transition: all 200ms 50ms ease;
     transform-origin: center bottom;
+
+    @media (min-width: $bp-md) {
+      top: -1rem; // Aligns the text to display halfway "outside" the block
+    }
   }
 
   &__column-container {
