@@ -25,9 +25,14 @@
     transition: border 150ms ease-in-out;
 
     @media (min-width: $bp-sm) {
-      flex-grow: 2;
       margin-top: 0;
       margin-right: 1rem;
+      width: auto;
+      flex-basis: 60%;
+    }
+
+    @media (min-width: $bp-md) {
+      flex-basis: 80%;
     }
 
     &:focus-within {
@@ -111,7 +116,12 @@
 
     @media (min-width: $bp-sm) {
       width: auto;
+      flex-basis: 40%;
       margin-top: 0;
+    }
+
+    @media (min-width: $bp-md) {
+      flex-basis: 20%;
     }
 
     &:hover {
