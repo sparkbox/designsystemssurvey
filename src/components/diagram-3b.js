@@ -9,7 +9,11 @@ class Diagram3b extends Component {
   }
 
   componentDidMount() {
-    observe(this.platform, 'cmp-diagram-chart__list--animated');
+    const diagramObserver = () => {
+      observe(this.platform, 'cmp-diagram-chart__list--animated');
+    }
+
+    requestAnimationFrame(diagramObserver);
   }
 
   render() {

@@ -34,6 +34,7 @@
       perspective-origin: center;
 
       .cmp-respondents--animated & {
+        will-change: transform;
         animation: pyramid-spin var(--shape-animation-duration) linear infinite;
       }
     }

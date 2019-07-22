@@ -35,6 +35,7 @@
       perspective-origin: center;
 
       .cmp-respondents--animated & {
+        will-change: transform;
         animation: diamond-spin var(--shape-animation-duration) linear infinite;
       }
     }

@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   background: svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.11 90.45"><polygon fill="#{mix($orange, $black, 20%)}" stroke="#{$orange}" stroke-width="1.5" vector-effect="non-scaling-stroke" points="47.55 0 0 34.55 18.16 90.45 76.94 90.45 95.11 34.55 47.55 0"/></svg>') no-repeat left center / contain;
+
   @supports (transform-style: preserve-3d) {
     --height: var(--size);
     --width: calc(var(--size) * 1.16);
@@ -33,6 +34,7 @@
         rotateY(40deg);
 
       .cmp-respondents--animated & {
+        will-change: transform;
         animation: dodecahedron-spin var(--shape-animation-duration) linear infinite;
       }
     }
