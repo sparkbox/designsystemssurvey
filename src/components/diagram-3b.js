@@ -49,7 +49,7 @@ class Diagram3b extends Component {
                 <td className="util-align-right">8%</td>
               </tr>
               <tr>
-                <th className="util-align-left">Other (please specify)</th>
+                <th className="util-align-left">Other</th>
                 <td className="util-align-right">8%</td>
               </tr>
             </tbody>
@@ -65,7 +65,7 @@ class Diagram3b extends Component {
             <ChartCard percent="33" color="yellow" scale="1.25" label="The client needs “out of the box” solutions to fill UX/UI developer gaps"/>
             <ChartCard percent="30" color="white" scale="1.25" label="We always suggest a design system"/>
             <ChartCard percent="8" color="bluegreen" scale="1.25" label="We never suggest a design system"/>
-            <ChartCard percent="8" color="yellowpink" scale="1.25" label="Other (please specify)"/>
+            <ChartCard percent="8" color="yellowpink" scale="1.25" label="Other"/>
           </dl>
           <div ref={this.platform} className="cmp-diagram-chart__platform" />
         </div>
