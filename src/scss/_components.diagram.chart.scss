@@ -73,8 +73,9 @@ $circle-height: 28px;
     perspective: 800px;
     position: absolute;
     top: 22.875rem;
+    left: 1%;
     height: 4.5rem;
-    width: 100%;
+    width: 98%;
     z-index: 0;
 
     @supports (display: grid) {
