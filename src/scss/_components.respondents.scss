@@ -2,6 +2,7 @@
   width: calc(100% - 2rem);
   max-width: $max-width;
   margin: 4rem auto 6rem;
+  overflow: hidden;
 
   @media (min-width: $bp-respond-medium-layout) {
     margin: 6rem auto 8rem;
