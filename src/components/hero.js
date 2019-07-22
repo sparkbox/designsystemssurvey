@@ -35,6 +35,10 @@ const Hero = () => (
       </div>
       </div>
     </div>
+
+    <a href="https://signalnoise.com" className="cmp-hero__info">
+      The header artwork was created in collaboration with <span className="cmp-hero__info-link">Signalnoise</span>.
+    </a>
   </div>
 )
 
