@@ -46,17 +46,6 @@ module.exports = {
       options: {
         endpoint: 'https://seesparkbox.us1.list-manage.com/subscribe/post?u=c2fcafb7ccc2db34e99075bb1&amp;id=2835f91fa5',
       },
-    },
-     // This must be last in the array
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/*": [
-            `Basic-Auth: ${process.env.basic_auth_user}:${process.env.basic_auth_pass}`,
-          ],
-        },
-      }
-    },
+    }
   ],
 }
