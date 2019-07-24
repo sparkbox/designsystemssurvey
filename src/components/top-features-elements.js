@@ -4,7 +4,7 @@ import TopFeatureListItem from "./top-feature-list-item"
 
  const TopFeaturesElements = () => (
   <div className="obj-layout-max-width util-margin-top4">
-    <p id="table2a" className="font-diagram-heading" aria-label="Top Design System Features">
+    <p className="font-diagram-heading" aria-label="Top Design System Features">
       Top Design System Features
     </p>
     <p className="font-diagram-copy">163 In-House and Agency Responses <br /> <em>Respondents could select multiple from 19 options and fill out a response to&nbsp;"other"</em></p>
