@@ -459,7 +459,7 @@ $z-heading: 600;
     &--cube {
       @include positions(0);
       z-index: $z-shape + 1;
-      background: url("/images/cube.svg") no-repeat top 35% right 5% ;
+      background: url("/images/cube.svg") no-repeat top 10% right 22% ;
       background-size: 12% auto;
     }
 

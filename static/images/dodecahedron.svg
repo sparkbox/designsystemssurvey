@@ -21,7 +21,7 @@
       </g>
     </symbol>
   </defs>
-  <g transform="translate(20, 30)">
+  <g transform="translate(20, 50) rotate(-5)">
     <path fill="#F06022" d="M.7 80.8L39.1 128 97 91.3V22l-60.6-7.6z"/>
     <path fill="#F9A11B" d="M97 22v69.3l57.9 36.7 38.3-47.2-35.6-66.4z"/>
     <path fill="#D94220" d="M39.1 128l23.7 55.4h68.4l23.7-55.4L97 91.3z"/>
