@@ -14,17 +14,26 @@ $z-shape: 300;
 $z-noise: 400;
 $z-heading: 600;
 
-@mixin mq-large-ratio {
-  @media (min-width: 50rem) and (min-height: 50rem) {
+@mixin mq-large-ratio($width: 50rem, $height: 40rem, $orientation: landscape) {
+  @media (min-width: $width) and (min-height: $height) and (orientation: $orientation) {
     @content;
   }
 }
 
 .cmp-hero {
-  height: 100vh;
+  height: 60vh;
   position: relative;
   overflow: hidden;
   pointer-events: none;
+
+  @include mq-large-ratio {
+    height: 100vh;
+  }
+
+  @media print {
+    height: auto;
+    overflow: scroll;
+  }
 
   &::before,
   &::after {
@@ -50,56 +59,10 @@ $z-heading: 600;
     opacity: 0.05;
   }
 
-  @media (orientation:portrait) {
-    height: 60vh;
-  }
-
-  @media print {
-    height: auto;
-    overflow: scroll;
-  }
-
   .lt-ie10 & {
     min-height: 40rem;
     background: url("/images/fallbackground.jpg") no-repeat center center;
     background-size: cover;
-  }
-
-  &__info {
-    display: none;
-
-    @media (min-width: $bp-md) {
-      text-decoration: none;
-      pointer-events: all;
-      display: block;
-      z-index: 700;
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      width: 50%;
-      max-width: 13rem;
-      font-size: 0.75rem;
-      line-height: 1.4;
-      padding: 0.5rem 0.75rem;
-      background-color: $black;
-      color: $white;
-      opacity: 0.5;
-      border-radius: 0.5rem;
-      transition: opacity 250ms ease-in-out;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
-
-  &__info-link {
-    color: $blue;
-    text-decoration: underline;
-  }
-
-  &__info:visited &__info-link {
-    color: $orange;
   }
 
   &__image {
@@ -122,6 +85,7 @@ $z-heading: 600;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    font-weight: normal;
 
     @media print {
       position: static;
@@ -130,73 +94,69 @@ $z-heading: 600;
   }
 
   &__logo {
-    display: block;
-    text-decoration: none;
-    border: 0 none;
-    order: 2;
-    transition: transform 250ms ease-in-out;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-
-    @media print {
-      transform: none;
-      filter: invert(1);
-    }
-
-    .lt-ie10 & {
-      position: absolute;
-      bottom: 6rem;
-      left: 0;
-      right: 0;
-      width: 100%;
-      text-align: center;
-    }
+    margin-top: 3vh;
+    filter: drop-shadow(0 0 0.125rem $black) drop-shadow(0 0 0.125rem $black) drop-shadow(0 0 0.5rem $black);
   }
 
   &__title {
     display: block;
-    font-size: 10.75vw;
-    text-align: center;
-    line-height: 1;
-    white-space: nowrap;
-    text-transform: uppercase;
+    display: absolute;
     font-family: $font-heading;
-    font-weight: 800;
-    transform: translate(0, -2vw);
-    text-shadow: 0 0 2vw $black, 0 0 4vw $black;
-    order: 1;
-    flex-grow: 2;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    font-size: 10vw;
+    transform: translateX(100vw);
+    animation: move-in-text 250ms $basetime ease-in-out forwards;
+    filter: drop-shadow(0 0 0.125rem rgba($black, 0.5)) drop-shadow(0 0 0.125rem rgba($black, 0.5)) drop-shadow(0 0 0.5rem rgba($black, 0.75));
 
-    @media print {
-      display: inline-block;
-      font-size: 2rem;
-      text-shadow: none;
-      color: black;
-      transform: none;
+    @media (min-width: 25rem) {
+      font-size: 2.5rem;
     }
 
-    .lt-ie10 & {
-      transform: none;
-      position: absolute;
-      left: -2vw;
-      top: -1.5vw;
+    @media (min-width: 25rem) and (min-height: 50rem) and (orientation: portrait) {
+      font-size: 4rem;
+    }
+
+    @include mq-large-ratio {
+      font-size: 10vh;
+      right: 5vw;
+      bottom: 5vh;
+    }
+
+    @keyframes move-in-text {
+      to {
+        transform: translateX(0);
+      }
     }
   }
 
-  &__survey {
+  &__year {
+    font-weight: 700;
+    position: absolute;
+    top: 0.75em;
+    right: calc(100% + 0.375em);
+    font-size: 0.25em;
+  }
+
+  &__design {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  &__systems {
     display: block;
     position: absolute;
+    top: 0.4em;
+    right: 0;
     z-index: $z-heading + 2;
-    top: -0.5vw;
-    right: 5vw;
     font-family: $font-script;
-    font-size: 12vw;
+    font-size: 1.125em;
     font-weight: normal;
     color: $hotpink;
     transform-origin: 50% 50%;
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
     text-shadow:
       0 0 0.075em rgba($hotpink, 0.6),
       0 0.02em 0 darken($hotpink, 32%),
@@ -205,50 +165,15 @@ $z-heading: 600;
       0 0 0.01em $black,
       0 0 2em $black
       ;
-
-    @media print {
-      display: inline-block;
-      font-size: 2.5rem;
-      text-shadow: none;
-      position: static;
-      display: inline;
-      color: black;
-      transform: none;
-    }
   }
 
-  &__year {
+  &__survey {
     display: block;
-    font-size: 0.875rem;
-    font-family: $font-heading;
-    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
-    order: 3;
-    margin: 1em auto 2em;
-
-    @media (min-width: 43.75rem) {
-      font-size: 2vw;
-    }
-
-    @media (min-width: 56.25rem) {
-      font-size: 1.125rem;
-    } 
-
-    @media print {
-      font-size: 1rem;
-      text-shadow: none;
-      color: black;
-    }
-
-    .lt-ie10 & {
-      position: absolute;
-      bottom: 1rem;
-      left: 0;
-      right: 0;
-      width: 100%;
-      text-align: center;
-    }
+    font-weight: 800;
+    font-size: 0.42em;
+    text-align: right;
+    margin-top: 0.75em;
   }
 
   @supports (mix-blend-mode: overlay){
@@ -454,8 +379,17 @@ $z-heading: 600;
     animation: appear linear 50ms #{$basetime + 100} forwards;
 
     @include mq-large-ratio {
+      background-position: bottom 10% left 20%;
+    }
+
+    @include mq-large-ratio($width: 60rem) {
+      background-position: bottom 10% left 30%;
+    }
+
+    @include mq-large-ratio($width: 70rem) {
       background-position: bottom 10% left 40%;
     }
+
   }
 
   &__ground-glow {
@@ -515,15 +449,12 @@ $z-heading: 600;
       background-size: 12% auto;
     }
 
-
     &--diamond {
       @include positions(0);
       z-index: $z-shape + 2;
       background: url("/images/diamond.svg") no-repeat top 55% right 20%;
       background-size: 12% auto;
     }
-
-
 
     &--cube {
       @include positions(0);

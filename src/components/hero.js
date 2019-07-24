@@ -6,9 +6,12 @@ const Hero = () => (
       <a className="cmp-hero__logo" href="https://seesparkbox.com">
         <img src="/images/logo.svg" alt="Sparkbox" />
       </a>
-      <span className="cmp-hero__title">Design Systems</span>
-      <span className="cmp-hero__survey">Survey</span>
-      <span className="cmp-hero__year">2019 Edition</span>
+      <span className="cmp-hero__title">
+        <span className="cmp-hero__year">2019</span>
+        <span className="cmp-hero__design">Design</span>
+        <span className="cmp-hero__systems">Systems</span>
+        <span className="cmp-hero__survey">Survey</span>
+      </span>
     </h1>
 
     <div className="cmp-hero__image" role="img" aria-label="A futuristic landscape with four mysterious and shining shapes floating above the scene.">
@@ -35,10 +38,6 @@ const Hero = () => (
       </div>
       </div>
     </div>
-
-    <a href="https://signalnoise.com" className="cmp-hero__info">
-      The header artwork was created in collaboration with <span className="cmp-hero__info-link">Signalnoise</span>.
-    </a>
   </div>
 )
 
