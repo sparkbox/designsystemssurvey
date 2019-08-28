@@ -124,13 +124,19 @@
 .font-link {
   font-family: $font-body;
   font-weight: 700;
-  font-size: 2.125rem;
-  line-height: 1.2;
+  font-size: 1.25rem;
+  line-height: 1.4;
   color: $blue;
   display: inline-block;
-  margin: 0.75em 0;
-  position: relative;
   text-decoration: none;
+
+  @media (min-width: $bp-sm) {
+    font-size: 4vw;
+  }
+
+  @media (min-width: $bp-lg) {
+    font-size: 2.125rem;
+  }
 
   @supports (background-clip: text) {
     color: transparent;
@@ -140,36 +146,42 @@
     text-decoration: underline;
   }
 
-  &-text {
-    border-bottom: 2px solid $blue;
-    transition: border-bottom ease 150ms;
-
-    @supports (background-clip: text) {
-      border-bottom: none;
-      background-image: linear-gradient(90deg, $blue 0%, $green 100%);
-      background-repeat: no-repeat;
-      background-size: 100% 0.125em;
-      background-position: 0 106%;
-      animation: background-fade-in 150ms ease forwards;
-    }
-  }
-
   &:hover {
-    & .font-link-text {
-      border-bottom: transparent;
-    }
-
     @supports (background-clip: text) {
       animation: animated-gradient 1000ms linear alternate infinite;
-
-      & .font-link-text {
-        animation: background-fade-out 150ms ease forwards;
-      }
     }
   }
 
   @include print {
     color: $blue;
+  }
+}
+
+.font-link-text {
+  padding: 0.125rem 0;
+  border-bottom: 1px solid $blue;
+  transition: border-bottom ease 150ms;
+
+  @media (min-width: $bp-md) {
+    padding: 0.25rem 0;
+    border-bottom: 2px solid $blue;
+
+    @supports (background-clip: text) {
+      border-bottom: none;
+      background-image: linear-gradient(90deg, $blue 0%, $green 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.25rem;
+      background-position: left top 0.25rem;
+      animation: background-fade-in 150ms ease forwards;
+    }
+  }
+
+  .font-link:hover & {
+    border-bottom: transparent;
+
+    @supports (background-clip: text) {
+      animation: background-fade-out 150ms ease forwards;
+    }
   }
 }
 

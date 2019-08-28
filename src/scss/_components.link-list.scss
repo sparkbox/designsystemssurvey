@@ -1,0 +1,46 @@
+.cmp-link-list {
+  @include delist;
+
+  &__item {
+    margin: 3em 0;
+  }
+
+  &__article {
+    font-family: $font-body;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+
+    @media (min-width: $bp-md) {
+      font-size: 1.75rem;
+    } 
+  }
+
+  &__author {
+    font-family: $font-heading;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1em;
+
+    @media (min-width: $bp-sm) {
+      font-size: 2vw;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__author-link {
+    color: $blue;
+
+    &:hover {
+      text-decoration: none
+    }
+
+    &:visited {
+      color: $orange;
+    }
+  }
+}
