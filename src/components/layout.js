@@ -41,6 +41,7 @@ const Layout = ({ children }) => (
           <meta property="og:type" content="website" />
           <meta property="og:image" content="/images/ogimage-2019.jpg" />
           <meta property="og:locale" content="en_US" />
+          <meta property="og:title" content={data.site.siteMetadata.title} />
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@hearsparkbox" />
