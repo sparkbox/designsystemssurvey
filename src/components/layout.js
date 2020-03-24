@@ -39,9 +39,10 @@ const Layout = ({ children }) => (
           <meta name="description" content={data.site.siteMetadata.description} />
 
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="/images/ogimage-2019.jpg" />
+          <meta property="og:image" content="https://designsystemssurvey.seesparkbox.com/images/ogimage-2019.jpg" />
           <meta property="og:locale" content="en_US" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
+          <meta property="og:description" content={data.site.siteMetadata.description} />
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@hearsparkbox" />
