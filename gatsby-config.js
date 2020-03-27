@@ -2,9 +2,11 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: 'The 2019 Design Systems Survey by Sparkbox',
+    title: '',
+    titleTemplate: 'Design Systems Survey by Sparkbox',
     name: '2019 Design Systems Survey',
-    author: `@hearsparkbox`,
+    baseUrl: 'http://designsystemsurvey.seesparkbox.com',
+    author: '@hearsparkbox',
     description: 'How are design systems for websites and apps changing the way the industry works? Sparkbox conducted a survey and is excited to share findings on the benefits and challenges of this impactful, systemic work.'
   },
   plugins: [
