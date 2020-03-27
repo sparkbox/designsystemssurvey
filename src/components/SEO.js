@@ -36,7 +36,7 @@ const SEO = ({ description, image, locale, styleSheet, title }) => {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:locale" content={locale} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={`${title} ${site.siteMetadata.titleTemplate}`} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
 
