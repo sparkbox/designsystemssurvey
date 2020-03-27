@@ -12,14 +12,20 @@ import Footer from "../components/footer"
 import TableOfContents from "../components/table-of-contents"
 import ContentBlock from "../components/content-block"
 import SectionHeader from "../components/section-header"
+import SEO from '../components/SEO'
 
 const Page2019 = () => (
   <Layout>
+    <SEO
+      image="ogimage-2019.jpg" 
+      styleSheet="https://cloud.typography.com/655912/7241412/css/fonts.css"
+      title="2019"
+    />
     <svg width="0" height="0" className="util-visually-hidden">
       <defs>
         <linearGradient id="pinkyellow" x1="50%" x2="50%" y1="0%" y2="100%">
-          <stop offset="0%" stop-color="#DF138C"/>
-          <stop offset="100%" stop-color="#F3C448"/>
+          <stop offset="0%" stopColor="#DF138C"/>
+          <stop offset="100%" stopColor="#F3C448"/>
         </linearGradient>
       </defs>
     </svg>
