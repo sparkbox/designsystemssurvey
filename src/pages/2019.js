@@ -19,7 +19,7 @@ const Page2019 = () => (
     <SEO
       image="ogimage-2019.jpg" 
       styleSheet="https://cloud.typography.com/655912/7241412/css/fonts.css"
-      title="2019"
+      year="2019"
     />
     <svg width="0" height="0" className="util-visually-hidden">
       <defs>

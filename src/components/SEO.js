@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, image, locale, styleSheet, title }) => {
+const SEO = ({ pageDescription, image, locale, styleSheet, year }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -12,7 +12,6 @@ const SEO = ({ description, image, locale, styleSheet, title }) => {
             author
             baseUrl
             description
-            title
             titleTemplate
           }
         }
@@ -20,15 +19,16 @@ const SEO = ({ description, image, locale, styleSheet, title }) => {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description;
-  const metaImage = `${site.siteMetadata.baseUrl}/images/${image}`;
-  const metaTitle = `The ${title} ${site.siteMetadata.titleTemplate}`;
-  const metaUrl = `${site.siteMetadata.baseUrl}/${title}`;
+  const { author, baseUrl, description, titleTemplate } = site.siteMetadata;
+  const metaDescription = pageDescription || description;
+  const metaImage = `${baseUrl}/images/${image}`;
+  const metaTitle = `The ${year} ${titleTemplate}`;
+  const metaUrl = `${baseUrl}/${year}`;
 
   return (
     <Helmet title={metaTitle}>
-      <meta name="application-name" content={`${title} Design Systems Survey`} />
-      <meta name="author" content={site.siteMetadata.author} />
+      <meta name="application-name" content={`${year} Design Systems Survey`} />
+      <meta name="author" content={author} />
       <meta name="description" content={metaDescription} />
 
       <meta property="og:description" content={metaDescription} />
@@ -39,7 +39,7 @@ const SEO = ({ description, image, locale, styleSheet, title }) => {
       <meta property="og:url" content={metaUrl} />
 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content={site.siteMetadata.author} />
+      <meta name="twitter:site" content={author} />
 
       <link rel="canonical" href={metaUrl} />
       {styleSheet && <link rel="stylesheet" type="text/css" href={styleSheet} />}
@@ -48,19 +48,19 @@ const SEO = ({ description, image, locale, styleSheet, title }) => {
 }
 
 SEO.defaultProps = {
-  description: null,
+  pageDescription: null,
   image: null,
   locale: 'en_US',
   styleSheet: null, 
-  title: null
+  year: null
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
+  pageDescription: PropTypes.string,
   lang: PropTypes.string,
   locale: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  styleSheet: PropTypes.string
+  styleSheet: PropTypes.string,
+  year: PropTypes.string.isRequired
 }
 
 export default SEO
