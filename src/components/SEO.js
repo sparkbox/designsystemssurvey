@@ -22,13 +22,11 @@ const SEO = ({ description, image, locale, styleSheet, title }) => {
 
   const metaDescription = description || site.siteMetadata.description;
   const metaImage = `${site.siteMetadata.baseUrl}/images/${image}`;
-  const url = `${site.siteMetadata.baseUrl}/${title}`;
+  const metaTitle = `The ${title} ${site.siteMetadata.titleTemplate}`;
+  const metaUrl = `${site.siteMetadata.baseUrl}/${title}`;
 
   return (
-    <Helmet
-      title={title}
-      titleTemplate={`The %s ${site.siteMetadata.titleTemplate}`}
-    >
+    <Helmet title={metaTitle}>
       <meta name="application-name" content={`${title} Design Systems Survey`} />
       <meta name="author" content={site.siteMetadata.author} />
       <meta name="description" content={metaDescription} />
@@ -36,14 +34,14 @@ const SEO = ({ description, image, locale, styleSheet, title }) => {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:locale" content={locale} />
-      <meta property="og:title" content={`${title} ${site.siteMetadata.titleTemplate}`} />
+      <meta property="og:title" content={metaTitle} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={metaUrl} />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={site.siteMetadata.author} />
 
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={metaUrl} />
       {styleSheet && <link rel="stylesheet" type="text/css" href={styleSheet} />}
     </Helmet>
   )
