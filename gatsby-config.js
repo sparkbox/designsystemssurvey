@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: 'https://seesparkbox.us1.list-manage.com/subscribe/post?u=c2fcafb7ccc2db34e99075bb1&amp;id=2835f91fa5',
+        endpoint: 'https://seesparkbox.us1.list-manage.com/subscribe/post?u=c2fcafb7ccc2db34e99075bb1&amp;id=afd992cd7c',
       },
     }
   ],
