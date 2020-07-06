@@ -1,0 +1,12 @@
+// This object provides layout/spacing for questions
+// and the data they're related to
+
+.obj-data-wrapper {
+  margin: ($space-xxxl * 1.2) 0;
+
+  &__question {
+  }
+
+  &__data {
+  }
+}

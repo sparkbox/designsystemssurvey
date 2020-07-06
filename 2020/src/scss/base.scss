@@ -1,0 +1,51 @@
+// Style partials are organized according to the Inverted Triangle CSS methodology:
+// https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+// SETTINGS
+
+
+// TOOLS
+@import "tools.global-variables";
+@import "tools.spacing-variables";
+@import "tools.animation-variables";
+@import "tools.color-variables";
+@import "tools.functions";
+@import "tools.mixins";
+
+
+// GENERIC
+@import "generic.keyframes";
+@import "generic.normalize";
+
+
+// ELEMENTS
+
+
+// OBJECTS
+@import "objects.limit-width";
+@import "objects.data-wrapper";
+@import "objects.unveiler";
+
+
+// COMPONENTS
+@import "components.intro";
+@import "components.section.heading";
+@import "components.section.content";
+@import "components.section-intro-box";
+@import "components.survey-question";
+@import "components.chart.bar";
+@import "components.chart.column";
+@import "components.newsletter-signup";
+@import "components.table-of-contents";
+@import "components.major-section";
+@import "components.body-text";
+@import "components.basic-table";
+@import "components.footer";
+@import "components.latest-link";
+
+
+// VENDORS
+
+
+// TRUMPS
+@import "trumps.utilities";

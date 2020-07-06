@@ -1,60 +1,26 @@
 {
-  "name": "designsystemsurvey2019",
+  "name": "design-systems-survey-sites",
   "version": "1.0.0",
+  "description": "Design Systems Survey Sites",
+  "main": "index.js",
+  "scripts": {
+    "build2020": "rm -rf public && cd 2020 && npm install && gatsby clean && gatsby build  && cp -rf public ..",
+    "build2019intopublic": "cd 2019 && npm install && gatsby clean && gatsby build  && cp -rf public ../public/2019",
+    "build2018intopublic": "cd 2018 && npm install && rm -rf dist  && npm run build && cp -rf dist ../public/2018",
+    "build": "npm run build2020 && npm run build2019intopublic && npm run build2018intopublic",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sparkbox/designsystemssurvey.git"
   },
-  "author": "Sparkbox",
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build && node tasks/comments.js",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "build2018": "rm -rf ./static/2018 && cd 2018 && npm install && npm run build && cp -r dist ../static/2018",
-    "comments": "node tasks/comments.js"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sparkbox/designsystemssurvey/issues"
   },
+  "homepage": "https://github.com/sparkbox/designsystemssurvey#readme",
   "dependencies": {
-    "@mdx-js/mdx": "^1.0.20",
-    "@mdx-js/react": "^1.0.20",
-    "@mdx-js/tag": "^0.20.3",
-    "dotenv": "^8.0.0",
-    "gatsby": "^2.5.7",
-    "gatsby-cli": "^2.7.7",
-    "gatsby-image": "^2.1.0",
-    "gatsby-mdx": "^0.6.3",
-    "gatsby-plugin-google-tagmanager": "^2.0.15",
-    "gatsby-plugin-mailchimp": "^5.1.0",
-    "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-netlify": "^2.0.17",
-    "gatsby-plugin-offline": "^2.1.1",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.37",
-    "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-transformer-sharp": "^2.1.19",
-    "intersection-observer": "^0.7.0",
-    "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
-  },
-  "devDependencies": {
-    "prettier": "^1.17.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "browserslist": [
-    "ie 11",
-    "> 5%",
-    "Firefox > 20",
-    "ie > 10",
-    "iOS > 7",
-    "last 5 versions"
-  ]
+    "gatsby-cli": "^2.12.58"
+  }
 }

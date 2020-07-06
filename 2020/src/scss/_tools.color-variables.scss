@@ -41,11 +41,52 @@ $set3-b: (
   bottom: #582593
 );
 
+$set4: (
+  top: #ffe6e6,
+  middle: #a370aa,
+  bottom: #0a1582
+);
+
+$set4-a: (
+  top: #DEBBD0,
+  bottom: #C096BD
+);
+
+$set4-b: (
+  top: #70529D,
+  bottom: #0B1582
+);
+
+$set5: (
+  top: #fbd9ff,
+  middle: #de6e6f,
+  bottom: #32374d
+);
+
 @function get-set($set, $color) {
   $result: map-get(#{$set}, $color);
   @return $result;
 }
 
+@mixin bar-chart-themer($set, $count) {
+  $half: $count/2;
+  $top: map-get($set, top);
+  $middle: map-get($set, middle);
+  $bottom: map-get($set, bottom);
+  @for $i from 1 through $count {
+    @if $i >= 1 and $i < $half {
+      .cmp-chart__entry--#{$i} .cmp-chart__bar {
+        background-color: mix($middle, $top, (($i - 1) / $half) * 100%);
+      }
+    }
+
+    @if $i >= $half and $i <= $count {
+      .cmp-chart__entry--#{$i} .cmp-chart__bar {
+        background-color: mix($bottom, $middle, (($i - $half) / $half) * 100%);
+      }
+    }
+  }
+}
 
 @mixin stacked-bar-chart-themer($set-a, $set-b, $count) {
   $top-a: map-get($set-a, top);

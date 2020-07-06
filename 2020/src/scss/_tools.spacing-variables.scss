@@ -1,0 +1,15 @@
+// These are general spacing values. These values are mostly meant for vertical spacing,
+// but can be used for horizontal spacing if it feels appropriate.
+
+$space-xs:   0.25rem;
+$space-sm:   0.50rem;
+$space-md:   0.75rem;
+$space-lg:   1.25rem;
+$space-xl:   2.00rem;
+$space-xxl:  3.25rem;
+$space-xxxl: 5.25rem;
+
+// This is the value we use to add space between the viewport and content. We might not
+// use this value in cases where space is really tight, such as when we're displaying
+// charts. But this value should be used unless you have a reason not to.
+$space-page-margin: 1.75rem;

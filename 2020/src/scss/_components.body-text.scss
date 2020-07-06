@@ -1,0 +1,201 @@
+.cmp-body-text {
+  > h3 {
+    margin-top: $space-xxl;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    font-size: 1.4rem;
+    line-height: 1.35;
+
+    @media (min-width: $bp-text-size-bump-1) {
+      font-size: 1.75rem;
+    }
+
+    @media (min-width: $bp-text-size-bump-2) {
+      font-size: 2.1rem;
+    }
+
+    @media only print {
+      font-size: 18pt !important;
+    }
+
+    > em {
+      font-style: normal;
+    }
+
+    &.obj-unveiler--is-unveiled > em {
+      // This applies an accent color custom property,
+      // defined in the `major-section` component, cascading
+      // down onto this element.
+      background-color: #ddd;
+      background-color: var(--accent-color-light);
+
+      // An inset box shadow is used to slightly
+      // trim down the background color
+      box-shadow: inset 0 -0.1em white;
+
+      transition: all 1.6s linear 0.5s;
+
+      &:nth-child(2) {
+        transition-delay: 2s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 3s;
+      }
+    }
+  }
+
+  > p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+
+    margin-bottom: $space-xl;
+
+    @media (min-width: $bp-text-size-bump-2) {
+      font-size: 1.25rem;
+    }
+
+    @media only print {
+      font-size: 12pt !important;
+      line-height: 1.5 !important;
+    }
+
+    &:last-child {
+      margin-bottom: $space-xxl * 4;
+    }
+  }
+
+  > ul {
+    @include delist;
+
+    font-size: 1.125rem;
+    line-height: 1.75;
+
+    margin: $space-xl 0;
+
+    padding-left: $space-lg;
+
+    @media (min-width: $bp-text-size-bump-2) {
+      font-size: 1.25rem;
+    }
+
+    @media only print {
+      font-size: 12pt !important;
+      line-height: 1.5 !important;
+    }
+
+    > li {
+
+      // Contain absolute bullets
+      position: relative;
+
+      &::before {
+        // Draw bullets
+
+        $bullet-size: 6px;
+
+        content: '';
+        position: absolute;
+
+        width: $bullet-size;
+        height: $bullet-size;
+
+        background-color: #aaa;
+        background-color: var(--accent-color-full);
+
+        // This attempts to center vertically with associated text
+        top: 0.7em;
+
+        // This pulls the bullet into the margin
+        left: -1.1rem
+      }
+
+      & + li {
+        margin-top: $space-lg;
+      }
+    }
+  }
+
+  > ol {
+    font-size: 1.125rem;
+    line-height: 1.75;
+
+    margin: $space-xl 0;
+
+    padding-left: $space-lg;
+
+    @media (min-width: $bp-text-size-bump-2) {
+      font-size: 1.25rem;
+    }
+
+    @media only print {
+      font-size: 12pt !important;
+      line-height: 1.5 !important;
+    }
+
+    > li {
+
+      // Contain absolute bullets
+      position: relative;
+
+      &::before {
+        // Draw bullets
+
+        $bullet-size: 6px;
+
+        content: '';
+        position: absolute;
+
+        width: $bullet-size;
+        height: $bullet-size;
+
+        background-color: #aaa;
+        background-color: var(--accent-color-full);
+
+        // This attempts to center vertically with associated text
+        top: 0.7em;
+
+        // This pulls the bullet into the margin
+        left: -1.1rem
+      }
+
+      & + li {
+        margin-top: $space-lg;
+      }
+    }
+  }
+
+  a {
+    // NOTE: this isn't a direct child selector.
+    // We might need to adjust how these styles
+    // are getting applied if this starts cascading
+    // in an unwanted way.
+
+
+    &:link {
+      font-weight: bold;
+
+      color: $c-link-blue;
+
+      text-decoration: none;
+
+      // This uses a combination of background color and box-shadow
+      // to draw an underline that can turn into a background. Note that
+      // this means this only works on a white background.
+      background-color: mix($c-link-blue, white, 20);
+      box-shadow: inset 0 1.1em white, inset 0 -0.05em white;
+
+      transition: all 250ms $timing-function-ease-out-expo;
+    }
+
+    &:hover,
+    &:focus {
+      color: darken($c-link-blue, 10);
+      background-color: mix($c-link-blue, white, 10);
+      box-shadow: inset 0 0em white, inset 0 0em white;
+    }
+  }
+}

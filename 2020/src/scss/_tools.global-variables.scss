@@ -1,0 +1,19 @@
+// This is a magic number that happens to look good for
+// all our headlines and creates minimal awkward line breaks.
+// If you change this value, look over all the content
+// to make sure it still looks decent.
+$text-column-max-width: 49rem;
+
+$bp-text-size-bump-1: 40em;
+$bp-text-size-bump-2: 70em;
+
+
+// Chart header container width
+$chart-header-width: 10rem;
+$chart-header-large: 20rem;
+
+// This Break point occurs when the space on either 
+// side of the section max-width has is large enough
+// to hold the chart header
+$bp-chart-header-pop: $text-column-max-width + (2 * $chart-header-width);
+$bp-chart-header-large: $text-column-max-width + (2 * $chart-header-large);

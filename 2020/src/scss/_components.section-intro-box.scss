@@ -1,0 +1,169 @@
+@mixin apply-section-intro-box-set-gradient($set) {
+  $top: map-get($set, top);
+  $middle: map-get($set, middle);
+  $bottom: map-get($set, bottom);
+
+  background-image: linear-gradient(150deg, $top, $middle, $bottom);
+
+  // This stretches out the background gradient a bit
+  // so that the middle part is visible. This prevents
+  // colors from being too light or too dark around
+  // the edges.
+  background-size: 110%;
+  background-position: 50%;
+}
+
+.cmp-section-intro-box {
+  $border-width: 0.25rem;
+
+  background-color: white;
+
+  // Contain absolute border
+  position: relative;
+
+  // This makes the element full-width, minus page margin
+  width: calc(100% - #{$space-page-margin * 2});
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: $text-column-max-width;
+
+  // This adds space between the intro box and following content
+  // while also carving out space for the jump link
+  margin-bottom: $space-xxxl + 2rem;
+
+  box-sizing: border-box;
+  padding: 2.4rem 2.7rem;
+
+  text-align: center;
+
+  @media print {
+    page-break-inside: avoid;
+    padding: 12pt !important;
+    margin: 0 auto 30pt !important;
+  }
+
+  &::before {
+    // Draw border
+    
+    content: '';
+    position: absolute;
+
+    left: -$border-width;
+    right: -$border-width;
+    top: -$border-width;
+    bottom: -$border-width;
+
+    // This is the default border color. If for some
+    // reason a modifier class doesn't get applied,
+    // this is what's shown.
+    background-color: #aaa;
+    
+    // Pull down below containing element
+    z-index: -1;
+
+  }
+
+  &--set-1::before {
+    @include apply-section-intro-box-set-gradient($set1);
+  }
+
+  &--set-2::before {
+    @include apply-section-intro-box-set-gradient($set2);
+  }
+
+  &--set-3::before {
+    @include apply-section-intro-box-set-gradient($set3);
+  }
+
+  &__roman-numeral {
+    position: absolute;
+
+    // This pulls the numeral up into the border
+    top: -0.7em;
+
+    padding: 0 0.5rem;
+
+    font-size: 0.875rem;
+    letter-spacing: 0.03em;
+
+    background-color: white;
+
+    // This centers the element without needing to know
+    // its width
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only print {
+      font-size: 10pt !important;
+    }
+  }
+
+  &__text {
+    font-size: 8vw;
+
+    @media (min-width: 44em) {
+      font-size: 44rem * 0.08;
+    }
+
+    @media only print {
+      font-size: 24pt !important;
+    }
+  }
+
+  &__jump-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.0625em;
+
+    text-transform: uppercase;
+
+    color: $c-black;
+    text-decoration: none;
+    background-color: #eee;
+
+    position: absolute;
+    right: -$border-width;
+    top: calc(100% + #{$border-width * 2});
+
+    // Padding is used to add some clickable space
+    padding: 0.8rem 0.6rem;
+
+    opacity: 0.7;
+
+    transition: opacity 200ms $timing-function-ease-out-expo;
+
+    @include print(none);
+
+    :target & {
+      // This plays a reveal animation when a section is jumped to
+      // via the table of contents. Otherwise, the links are visible
+      // all the time.
+
+      animation: reveal-back-to-top 1s linear 1s;
+
+      // This makes the link invisible to start with,
+      // then stops applying keyframe styles so that our hovers can take effect
+      animation-fill-mode: backwards;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &::after {
+      // Draw the arrow
+
+      content: '';
+
+      margin-left: 0.5rem;
+
+      display: inline-block;
+      width: 1em;
+      height: 1.1em;
+      vertical-align: baseline;
+
+      background: svg('<svg width="10" height="12" viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"><path d="M4.333 2.41L1.264 5.302A.75.75 0 1 1 .236 4.21L4.486.204a.75.75 0 0 1 1.028 0l4.25 4.005a.751.751 0 0 1-1.028 1.093L5.833 2.567v8.682a.75.75 0 1 1-1.5 0V2.41z" fill="#111" fill-rule="nonzero"/></svg>') center no-repeat;
+    }
+  }
+}

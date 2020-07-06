@@ -1,3 +1,17 @@
+# Design Systems Survey Sites
+
+This repo contains multiple sites. They each use their own build system.
+
+## For Development
+
+If you are developing one of the sites:
+
+1. `cd` into the year you are developing
+2. `npm install`
+3. `npm start`
+
+---
+
 Sparkbox Design Systems Survey Microsite 2019
 ======================
 
