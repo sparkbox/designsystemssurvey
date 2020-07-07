@@ -15,6 +15,7 @@ const Page2020 = () => (
     <Helmet>
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap" rel="stylesheet" /> 
     </Helmet>
+
     <Intro />
 
     <SectionIntroBox heading="First Section" modifier="cmp-section-intro-box--set-1" numeral="I" />

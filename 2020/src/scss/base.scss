@@ -14,7 +14,6 @@
 
 
 // GENERIC
-@import "generic.keyframes";
 @import "generic.normalize";
 
 
@@ -23,25 +22,12 @@
 
 // OBJECTS
 @import "objects.limit-width";
-@import "objects.data-wrapper";
-@import "objects.unveiler";
 
 
 // COMPONENTS
 @import "components.intro";
-@import "components.section.heading";
-@import "components.section.content";
 @import "components.section-intro-box";
-@import "components.survey-question";
-@import "components.chart.bar";
-@import "components.chart.column";
-@import "components.newsletter-signup";
-@import "components.table-of-contents";
-@import "components.major-section";
 @import "components.body-text";
-@import "components.basic-table";
-@import "components.footer";
-@import "components.latest-link";
 
 
 // VENDORS
