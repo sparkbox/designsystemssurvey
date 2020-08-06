@@ -7,7 +7,8 @@ module.exports = {
     name: '2019 Design Systems Survey',
     baseUrl: 'https://designsystemsurvey.seesparkbox.com',
     author: '@hearsparkbox',
-    description: 'How are design systems for websites and apps changing the way the industry works? Sparkbox conducted a survey and is excited to share findings on the benefits and challenges of this impactful, systemic work.'
+    description:
+      'How are design systems for websites and apps changing the way the industry works? Sparkbox conducted a survey and is excited to share findings on the benefits and challenges of this impactful, systemic work.',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,20 +35,17 @@ module.exports = {
     `gatsby-mdx`,
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        id: "GTM-WHPGCMR",
-
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
+        trackingIds: ['GTM-WHPGCMR', 'AW-611206884'],
       },
     },
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: 'https://seesparkbox.us1.list-manage.com/subscribe/post?u=c2fcafb7ccc2db34e99075bb1&amp;id=afd992cd7c',
+        endpoint:
+          'https://seesparkbox.us1.list-manage.com/subscribe/post?u=c2fcafb7ccc2db34e99075bb1&amp;id=afd992cd7c',
       },
-    }
+    },
   ],
 }

@@ -26,6 +26,7 @@
     "gatsby-cli": "^2.7.7",
     "gatsby-image": "^2.1.0",
     "gatsby-mdx": "^0.6.3",
+    "gatsby-plugin-google-gtag": "^2.1.10",
     "gatsby-plugin-google-tagmanager": "^2.0.15",
     "gatsby-plugin-mailchimp": "^5.1.0",
     "gatsby-plugin-manifest": "^2.1.1",
