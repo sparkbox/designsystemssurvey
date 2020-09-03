@@ -31,12 +31,16 @@ const Footer = () => (
     </div>
     <div className="cmp-footer__flex cmp-footer__contact">
       <div className="cmp-footer__item">
-        <h4 className="font-diagram-heading font-diagram-heading--footer">Contact</h4>
+        <h4 className="font-diagram-heading font-diagram-heading--footer">Email</h4>
         <div className="cmp-footer__contact-link-container">
           <a className="cmp-footer__contact-link" href="https://seesparkbox.com/work-with-us">/work-with-us</a>
         </div>
+      </div>
+      <div className="cmp-footer__flex cmp-footer__contact">
+      <div className="cmp-footer__item">
+        <h4 className="font-diagram-heading font-diagram-heading--footer">Call Us</h4>
         <div className="cmp-footer__contact-link-container">
-          <a className="cmp-footer__contact-link" href="tel:19374010915" aria-label="Call us 937-401-0915">937 401 0915</a>
+          <a className="cmp-footer__contact-link" href="tel:19374010915" aria-label="937-401-0915">937 401 0915</a>
         </div>
       </div>
       <div className="cmp-footer__item">
@@ -47,16 +51,6 @@ const Footer = () => (
           <span className="cmp-footer__address">Dayton</span>,
           <abbr className="cmp-footer__address util-margin-lft025" title="Ohio">OH</abbr>
           <span className="cmp-footer__address util-margin-lft025">45402</span>
-        </div>
-      </div>
-      <div className="cmp-footer__item">
-        <h4 className="font-diagram-heading font-diagram-heading--footer">Steel City</h4>
-        <p className="cmp-footer__address">One PPG Place</p>
-        <p className="cmp-footer__address">Floor 31</p>
-        <div className="cmp-footer__address">
-          <span className="cmp-footer__address">Pittsburgh</span>,
-          <abbr className="cmp-footer__address util-margin-lft025" title="Pennsylvania">PA</abbr>
-          <span className="cmp-footer__address util-margin-lft025">15222</span>
         </div>
       </div>
     </div>
