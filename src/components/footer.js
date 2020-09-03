@@ -36,7 +36,6 @@ const Footer = () => (
           <a className="cmp-footer__contact-link" href="https://seesparkbox.com/work-with-us">/work-with-us</a>
         </div>
       </div>
-      <div className="cmp-footer__flex cmp-footer__contact">
       <div className="cmp-footer__item">
         <h4 className="font-diagram-heading font-diagram-heading--footer">Call Us</h4>
         <div className="cmp-footer__contact-link-container">
