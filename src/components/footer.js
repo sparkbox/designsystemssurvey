@@ -37,13 +37,13 @@ const Footer = () => (
         </div>
       </div>
       <div className="cmp-footer__item">
-        <h4 className="font-diagram-heading font-diagram-heading--footer">Call Us</h4>
+        <h4 className="font-diagram-heading font-diagram-heading--footer">Phone</h4>
         <div className="cmp-footer__contact-link-container">
           <a className="cmp-footer__contact-link" href="tel:19374010915" aria-label="937-401-0915">937 401 0915</a>
         </div>
       </div>
       <div className="cmp-footer__item">
-        <h4 className="font-diagram-heading font-diagram-heading--footer">Gem City</h4>
+        <h4 className="font-diagram-heading font-diagram-heading--footer">Address</h4>
         <p className="cmp-footer__address">123 Webster St.</p>
         <p className="cmp-footer__address">Studio 2</p>
         <div className="cmp-footer__address">
