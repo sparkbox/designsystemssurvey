@@ -1,18 +1,18 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import Hero from "../components/hero"
-import IntroSection from "../sections/intro"
-import Section1 from "../sections/section-1"
-import Section2 from "../sections/section-2"
-import Section3 from "../sections/section-3"
-import Section4 from "../sections/section-4"
-import Section5 from "../sections/section-5"
-import Footer from "../components/footer"
-import TableOfContents from "../components/table-of-contents"
-import ContentBlock from "../components/content-block"
-import SectionHeader from "../components/section-header"
-import SEO from '../components/SEO'
+import Layout from "../components/2019/layout"
+import Hero from "../components/2019/hero"
+import IntroSection from "../sections/2019/intro"
+import Section1 from "../sections/2019/section-1"
+import Section2 from "../sections/2019/section-2"
+import Section3 from "../sections/2019/section-3"
+import Section4 from "../sections/2019/section-4"
+import Section5 from "../sections/2019/section-5"
+import Footer from "../components/2019/footer"
+import TableOfContents from "../components/2019/table-of-contents"
+import ContentBlock from "../components/2019/content-block"
+import SectionHeader from "../components/2019/section-header"
+import SEO from '../components/2019/SEO'
 
 const Page2019 = () => (
   <Layout>
