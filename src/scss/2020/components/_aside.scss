@@ -28,7 +28,6 @@
   &__heading {
     @include h4;
     margin: 0;
-    line-height: $line-height-normal;
   }
 
   &__text {
@@ -37,6 +36,11 @@
     
     &--large {
       @include p-big;
+    }
+    
+    &--callout {
+      font-weight: 700;
+      line-height: $line-height-tight;
     }
   }
   
