@@ -86,7 +86,7 @@
     // state takes effect even when used on elements with higher-specificity
     // box-shadows applied to them. And because focus states are important. :)
     box-shadow:
-      0 0 0 2px $color-safe-focus,
+      0 0 0 2px color(blue),
       0 0 0 4px white !important;
   }
 }
