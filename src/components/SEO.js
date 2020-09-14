@@ -1,59 +1,69 @@
-import React from "react"
+import React, { Component } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
-const SEO = ({ pageDescription, image, locale, fontCSS, year }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            author
-            baseUrl
-            description
-            titleTemplate
-          }
-        }
-      }
-    `
-  )
 
-  const { author, baseUrl, description, titleTemplate } = site.siteMetadata;
-  const metaDescription = pageDescription || description;
-  const metaImage = `${baseUrl}/images/${image}`;
-  const metaTitle = `The ${year} ${titleTemplate}`;
-  const metaUrl = `${baseUrl}/${year}`;
+class SEO extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { jsEnabled: false };
+  }
+  
+  componentDidMount() {
+    this.setState({ jsEnabled : true })
+  }
 
-  return (
-    <Helmet title={metaTitle}>
-      <html className="js safe-focus" />
-      <meta name="application-name" content={`${year} Design Systems Survey`} />
-      <meta name="author" content={author} />
-      <meta name="description" content={metaDescription} />
-
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content={metaImage} />
-      <meta property="og:locale" content={locale} />
-      <meta property="og:title" content={metaTitle} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={metaUrl} />
-
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content={author} />
-
-      <link rel="canonical" href={metaUrl} />
-      {fontCSS && <link rel="stylesheet" type="text/css" href={fontCSS} />}
-      <link rel="stylesheet" type="text/css" href={`/css/${year}.css`} />
-    </Helmet>
-  )
+  render () {
+    const htmlClass = this.state.jsEnabled ? 'safe-focus js' :  'safe-focus no-js';
+  
+    return (
+      <StaticQuery
+        query = {
+          graphql`
+            query {
+              site {
+                siteMetadata {
+                  author
+                  baseUrl
+                  description
+                  titleTemplate
+                }
+              }
+            }
+          `}
+        render = { data => (
+          <Helmet title={`The ${this.props.year} ${data.site.siteMetadata.titleTemplate}`}>
+            <html className={htmlClass} />
+            <meta name="application-name" content={`${this.props.year} Design Systems Survey`} />
+            <meta name="author" content={data.site.siteMetadata.author} />
+            <meta name="description" content={ this.props.pageDescription || data.site.siteMetadata.description } />
+      
+            <meta property="og:description" content={ this.props.pageDescription || data.site.siteMetadata.description } />
+            <meta property="og:image" content={`${data.site.siteMetadata.baseUrl}/images/${this.props.image}`} />
+            <meta property="og:locale" content={this.props.locale} />
+            <meta property="og:title" content={`The ${this.props.year} ${data.site.siteMetadata.titleTemplate}`} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={`${data.site.siteMetadata.baseUrl}/${this.props.year}`} />
+      
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content={data.site.siteMetadata.author} />
+      
+            <link rel="canonical" href={`${data.site.siteMetadata.baseUrl}/${this.props.year}`} />
+            {this.props.fontCSS && <link rel="stylesheet" type="text/css" href={this.props.fontCSS} />}
+            <link rel="stylesheet" type="text/css" href={`/css/${this.props.year}.css`} />
+          </Helmet>
+        )}
+      />
+    )
+  }
 }
 
 SEO.defaultProps = {
   pageDescription: null,
   image: null,
   locale: 'en_US',
-  styleSheet: null, 
+  fontCSS: null, 
   year: null
 }
 
@@ -61,7 +71,7 @@ SEO.propTypes = {
   pageDescription: PropTypes.string,
   lang: PropTypes.string,
   locale: PropTypes.string,
-  styleSheet: PropTypes.string,
+  fontCSS: PropTypes.string,
   year: PropTypes.string.isRequired
 }
 
