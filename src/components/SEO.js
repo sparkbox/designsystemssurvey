@@ -27,6 +27,7 @@ const SEO = ({ pageDescription, image, locale, fontCSS, year }) => {
 
   return (
     <Helmet title={metaTitle}>
+      <html className="js safe-focus" />
       <meta name="application-name" content={`${year} Design Systems Survey`} />
       <meta name="author" content={author} />
       <meta name="description" content={metaDescription} />

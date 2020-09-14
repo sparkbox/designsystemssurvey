@@ -307,6 +307,17 @@ template {
     -webkit-filter: drop-shadow(0 0 5px rgba(67, 232, 255, 0.6));
             filter: drop-shadow(0 0 5px rgba(67, 232, 255, 0.6)); } }
 
+*:focus {
+  outline: none; }
+  html.safe-focus *:focus {
+    -webkit-box-shadow: 0 0 0 2px #43E8FF, 0 0 0 4px white !important;
+            box-shadow: 0 0 0 2px #43E8FF, 0 0 0 4px white !important; }
+
+button:-moz-focusring {
+  outline: none; }
+  html.safe-focus button:-moz-focusring {
+    box-shadow: 0 0 0 2px #43E8FF, 0 0 0 4px white !important; }
+
 :root {
   --font-size: 1.25rem;
   --secondary: #00bfbe;
