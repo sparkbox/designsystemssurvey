@@ -2,24 +2,29 @@
   display: none;
 }
 
-@keyframes chart-slide {
-  from {
-    width: 0;
-    padding: 0;
-  }
-  to {
-    width: calc((var(--val) / var(--range) * 100%));
-    padding: inherit;
-  }
+@keyframes chart-slide-width {
+  from { width: 0; }
+  to { width: calc((var(--val) / var(--range) * 100%)); }
+}
+
+@keyframes chart-slide-md {
+  from { padding: 0; }
+  to { padding: space(sm) space(sm) space(sm) space(xs); }
+}
+
+@keyframes chart-slide-lg {
+  from { padding: 0; }
+  to { padding: 1.25rem 1.25rem 1.25rem space(xs); }
+}
+
+@keyframes chart-slide-x2 {
+  from { padding: 0; }
+  to { padding: 1.5rem 1.5rem 1.5rem space(xs); }
 }
 
 @keyframes chart-data-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @supports (color: red) {
@@ -71,7 +76,6 @@
     &__data {
       position: relative;
       width: calc((var(--val) / var(--range) * 100%));
-      // flex: calc((var(--val) / var(--range) * 100%));
       flex-shrink: 0;
       flex-grow: 0;
       display: flex;
@@ -132,7 +136,15 @@
     }
 
     .js .cmp-chart-section--is-animating &__data {
-      animation: chart-slide ease-in-out 1s forwards;
+      @media (min-width: $bp-md) {
+        animation: chart-slide-width ease-in-out 1s forwards, chart-slide-md ease-in-out 1s forwards;
+      }
+      @media (min-width: $bp-lg) {
+        animation: chart-slide-width ease-in-out 1s forwards, chart-slide-lg ease-in-out 1s forwards;
+      }
+      @media (min-width: $bp-x2) {
+        animation: chart-slide-width ease-in-out 1s forwards, chart-slide-xs ease-in-out 1s forwards;
+      }
     }
     
     &__data-text {
