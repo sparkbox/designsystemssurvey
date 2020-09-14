@@ -5,13 +5,13 @@
   text-align: left;
   line-height: $line-height-tight;
   
-    @media(min-width: $bp-md) {
-      font-size: size(x2);
-    }
-  
-    @media(min-width: $bp-lg) {
-      font-size: size(x3);
-    }
+  @media(min-width: $bp-md) {
+    font-size: size(x2);
+  }
+
+  @media(min-width: $bp-lg) {
+    font-size: size(x3);
+  }
 }
 
 @mixin h2 {
@@ -21,9 +21,9 @@
   text-align: left;
   line-height: $line-height-tight;
 
-    @media(min-width: $bp-md) {
-      font-size: size(x2);
-    }
+  @media(min-width: $bp-md) {
+    font-size: size(x2);
+  }
 }
 
 @mixin h3 {
