@@ -1,13 +1,13 @@
-@keyframes spin-color {
+@keyframes move-color {
   from {
-    transform: rotate(0);
+    background-position-x: 0;
   }
   to {
-    transform: rotate(360deg);
+    background-position-x: 400%;
   }
 }
 
-@supports (color: red) {
+@supports (mask-size: cover) {
   .cmp-icon {
     height: 2rem;
     width: 2rem;
@@ -23,13 +23,13 @@
         content: '';
         display: block;
         position: absolute;
-        border-radius: 50%;
-        $size: -3rem;
+        $size: 0;
         top: $size;
         right: $size;
         bottom: $size;
         left: $size;
-        animation: spin-color 3s linear infinite;
+        background-size: 400%;
+        animation: move-color 5s linear infinite;
       }
   
       @media (min-width: $bp-sm) {
@@ -82,14 +82,14 @@
         content: '';
         display: block;
         position: absolute;
-        border-radius: 50%;
-        $size: -6rem;
+        $size: 0;
         top: $size;
         right: $size;
         bottom: $size;
         left: $size;
-        animation: spin-color 3s linear infinite;
-        background-image: linear-gradient(to right, color(blue), color(green));
+        animation: move-color 5s linear infinite;
+        background-size: 400%;
+        background-image: linear-gradient(to right, color(blue), color(green), color(blue));
       }
     }
   
@@ -98,7 +98,7 @@
     }
     &--respondents#{&}--header {
       &::before {
-        background-image: linear-gradient(to right, color(blue), color(violet));
+        background-image: linear-gradient(to right, color(blue), color(violet), color(blue));
       }
     }
   
@@ -107,7 +107,7 @@
     }
     &--in-house#{&}--header {
       &::before {
-        background-image: linear-gradient(to right, color(violet), color(pink));
+        background-image: linear-gradient(to right, color(violet), color(pink), color(violet));
       }
     }
   
@@ -116,7 +116,7 @@
     }
     &--challenges#{&}--header {
       &::before {
-        background-image: linear-gradient(to right, color(pink), color(orange));
+        background-image: linear-gradient(to right, color(pink), color(orange), color(pink));
       }
     }
   
@@ -125,7 +125,7 @@
     }
     &--maturity#{&}--header {
       &::before {
-        background-image: linear-gradient(to right, color(orange), color(yellow));
+        background-image: linear-gradient(to right, color(orange), color(yellow), color(orange));
       }
     }
   
@@ -134,7 +134,7 @@
     }
     &--culture#{&}--header {
       &::before {
-        background-image: linear-gradient(to right, color(yellow), color(green));
+        background-image: linear-gradient(to right, color(yellow), color(green), color(yellow));
       }
     }
   
@@ -143,7 +143,7 @@
     }
     &--conclusion#{&}--header {
       &::before {
-        background-image: linear-gradient(to right, color(green), color(blue));
+        background-image: linear-gradient(to right, color(green), color(blue), color(green));
       }
     }
   }
