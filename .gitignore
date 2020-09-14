@@ -70,3 +70,4 @@ yarn-error.log
 
 static/2018
 .env
+src/styles
