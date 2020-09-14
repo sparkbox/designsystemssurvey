@@ -2,12 +2,12 @@
   .cmp-chart-key {
     @media (min-width: $bp-md) {
       display: flex;
+      align-items: center;
       background-color: color(gray);
-      border-bottom: 1px solid color(primary);
       position: sticky;
       top: 0;
       z-index: 300;
-      margin-bottom: space(sm);
+      height: 1.75rem;
     }
     
     @media (min-width: $bp-lg) {
@@ -15,6 +15,7 @@
       border: none;
       background-color: transparent;
       margin-bottom: space(md);
+      height: auto;
     }
 
     &__item {

@@ -7,6 +7,10 @@
       position: sticky;
       top: 0;
       z-index: 300;
+      
+      .cmp-chart-key + & {
+        top: 1.75rem;
+      }
     }
     
     @media (min-width: $bp-lg) {
