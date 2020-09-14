@@ -1,23 +1,20 @@
-import React from "react"
-import Layout from "../components/2020/layout"
+import React from 'react'
+import Layout from '../components/2020/layout'
 import SEO from '../components/2020/SEO'
 import SiteFooter from '../components/2020/footer'
-import IntroSection from "../sections/2020/intro"
-import TableOfContents from "../sections/2020/table-of-contents"
-import RespondentsSection from "../sections/2020/respondents"
-import InHouseSection from "../sections/2020/in-house"
-import ChallengesSection from "../sections/2020/challenges"
-import MaturitySection from "../sections/2020/maturity"
-import CultureSection from "../sections/2020/culture"
-import ConclusionSection from "../sections/2020/conclusion"
-import NewsletterSection from "../sections/2020/newsletter"
+import IntroSection from '../sections/2020/intro'
+import TableOfContents from '../sections/2020/table-of-contents'
+import RespondentsSection from '../sections/2020/respondents'
+import InHouseSection from '../sections/2020/in-house'
+import ChallengesSection from '../sections/2020/challenges'
+import MaturitySection from '../sections/2020/maturity'
+import CultureSection from '../sections/2020/culture'
+import ConclusionSection from '../sections/2020/conclusion'
+import NewsletterSection from '../sections/2020/newsletter'
 
 const Page2020 = () => (
   <Layout>
-    <SEO
-      image="ogimage-2020.jpg" 
-      year="2020"
-    />
+    <SEO image="ogimage-2020.jpg" year="2020" />
     <IntroSection />
     <main>
       <TableOfContents />
