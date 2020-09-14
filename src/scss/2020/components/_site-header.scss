@@ -2,27 +2,53 @@
   background-color: color(primary);
   color: color(white);
   overflow: hidden;
+  
+  &__container {
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-auto-rows: auto;
+      
+      @media (min-width: $bp-lg) {
+        display: block;
+      }
+    }
+  }
 
   &__icon {
     margin-bottom: space(md);
+    margin-left: space(md);
+    grid-column: 2;
+    grid-row: 1;
 
-    @media (min-width: $bp-md) {
-      float: right;
-      margin-left: space(md);
-    }
     @media (min-width: $bp-lg) {
+      float: right;
       margin-left: space(lg);
       margin-bottom: space(lg);
     }
     
     @media (min-width: $bp-xl) {
-      margin-right: negative(space(w1));
+      margin-right: negative(space(w2));
     }
   }
 
   &__title {
-    @include h1;
-    margin: 0;
+    font-family: $font-secondary;
+    font-weight: 700;
+    line-height: $line-height-tight;
+    font-size: 10vw;
+    grid-column: 1;
+    grid-row: 1;
+
+    @media(min-width: $bp-lg) {
+      font-size: size(x4);
+      width: 60%;
+    }
+  }
+  
+  &__content {
+    grid-column: 1 / span 2;
+    grid-row: 2;
   }
 
   &__sbx {

@@ -54,19 +54,14 @@
     }
     
     &--hero {
-      @media (min-width: $bp-sm) {
-        height: 7rem;
-        width: 7rem;
-      }
-  
-      @media (min-width: $bp-md) {
-        height: 14rem;
-        width: 14rem;
-      }
+      width: 100%;
+      height: auto;
+      padding-top: 100%;
       
       @media (min-width: $bp-lg) {
-        height: 18rem;
-        width: 18rem;
+        height: 16rem;
+        width: 16rem;
+        padding: 0;
       }
       
       @media (min-width: $bp-xl) {

@@ -15,6 +15,7 @@ $font-sizes: map-merge(
     x1: $font-size * 2.5,   // 40px
     x2: $font-size * 3.25,  // 52px
     x3: $font-size * 4,     // 64px
+    x4: $font-size * 6,     // 96px
   ),
     $font-sizes
   );
