@@ -1,0 +1,17 @@
+.util- {
+  @each $key, $val in $colors {
+    &color-#{$key},
+    &color-#{$key}\:hover:hover,
+    &color-#{$key}\:active:active,
+    &color-#{$key}\:focus:focus {
+      color: $val;
+    }
+
+    &background-color-#{$key},
+    &background-color-#{$key}\:hover:hover,
+    &background-color-#{$key}\:active:active,
+    &background-color-#{$key}\:focus:focus {
+      background-color: $val;
+    }
+  }
+}

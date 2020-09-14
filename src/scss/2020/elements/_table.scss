@@ -1,0 +1,39 @@
+table:not([class]) {
+  border-collapse: collapse;
+  min-width: 100%;
+  border: 1px solid color(primary);
+}
+
+caption:not([class]) {
+  @include h3;
+  margin-bottom: space(sm);
+}
+
+thead:not([class]) tr:not([class]) {
+  background-color: color(primary);
+  color: color(white);
+}
+
+tbody:not([class]) tr:not([class]):nth-child(odd) {
+  background-color: color(white);
+
+  th:not([class]) {
+    color: color(white);
+    background-color: lighten(color(primary), 4%);
+  }
+}
+
+tbody:not([class]) tr:not([class]):nth-child(even) {
+  background-color: color(aqua);
+
+    th:not([class]) {
+      color: color(white);
+      background-color: color(primary);
+    }
+}
+
+th:not([class]),
+td:not([class]) {
+  padding: space(xs);
+  text-align: left;
+}

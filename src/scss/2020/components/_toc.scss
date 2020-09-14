@@ -1,0 +1,13 @@
+.cmp-toc {
+  background-color: darken(color(primary), 2%);
+  color: color(white);
+  padding: space(lg) 0;
+
+  @media (min-width: $bp-md) {
+    padding: space(h1) 0;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: space(h2) 0;
+  }
+}

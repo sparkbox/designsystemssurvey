@@ -1,0 +1,57 @@
+.cmp-nav {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 60rem;
+
+  @media (min-width: $bp-md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: color('white');
+    padding: space(sm);
+    text-decoration: none;
+    font-size: size(sm);
+    font-weight: 700;
+    line-height: $line-height-tight;
+    box-sizing: border-box;
+    transition: background-color 250ms ease-in-out;
+
+    @media (min-width: $bp-md) {
+      display: block;
+      padding: space(md);
+      border-radius: 1rem;
+      text-align: center;
+      flex-basis: calc(50% - #{space(xs) * 2});
+    }
+    
+    @media (min-width: $bp-lg) {
+      font-size: size(md);
+      margin: space(xs);
+    }
+
+    &:hover {
+      background-color: lighten(color(primary), 2%);
+    }
+
+    @supports (color: red) {
+      .cmp-icon {
+        margin-right: space(sm);
+  
+        @media (min-width: $bp-md) {
+          height: 6rem;
+          width: 6rem;
+          margin: 0 auto space(sm)
+        }
+  
+        @media (min-width: $bp-lg) {
+          height: 8rem;
+          width: 8rem;
+        }
+      }
+    }
+  }
+}

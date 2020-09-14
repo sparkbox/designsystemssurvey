@@ -1,10 +1,10 @@
 import React from "react"
 
-import Layout from "../components/2019/layout"
+import Layout2019 from "../components/2019/layout"
 import ContentBlock from "../components/2019/content-block"
 
 const NotFoundPage = () => (
-  <Layout>
+  <Layout2019>
     <ContentBlock isFlexbox="true">
       <section className="cmp-404">
         <h1 className="cmp-404__title">404 Error</h1>
@@ -12,7 +12,7 @@ const NotFoundPage = () => (
         <p>Were you looking for this year's <a href="https://designsystemssurvey.seesparkbox.com/">Design System Survey results</a>?</p>
       </section>
     </ContentBlock>
-  </Layout>
+  </Layout2019>
 )
 
 export default NotFoundPage

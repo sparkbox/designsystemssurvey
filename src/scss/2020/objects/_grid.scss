@@ -1,0 +1,192 @@
+$grid-count: 12;
+
+@mixin column-span($span) {
+  float: left;
+  width: ($span / $grid-count) * 100%;
+
+  @supports (display: grid) {
+    width: auto;
+    grid-column: span $span;
+  }
+}
+
+/* stylelint-disable*/
+// This is our grid maker, it defines classes for each breakdown
+// of the grid and gives human readable versions when it can.
+@mixin grid-maker($bp:'') {
+  @for $i from 1 through $grid-count {
+    $val: '';
+
+    @if $i == ceil($grid-count * 0.25) {
+      $val: ".obj-grid__quarter#{$bp},";
+    }
+
+    @else if $i == ceil($grid-count * 0.3333) {
+      $val: ".obj-grid__third#{$bp},";
+    }
+
+    @else if $i == ceil($grid-count * 0.5) {
+      $val: ".obj-grid__half#{$bp},";
+    }
+
+    @else if $i == ceil($grid-count * 0.6666) {
+      $val: ".obj-grid__two-third#{$bp}, .obj-grid__two-thirds#{$bp},";
+    }
+
+    @else if $i == ceil($grid-count * 0.75) {
+      $val: ".obj-grid__three-quarter#{$bp}, .obj-grid__three-quarters#{$bp},";
+    }
+
+    @else if $i == $grid-count {
+      $val: ".obj-grid__full#{$bp},";
+    }
+
+    @else {
+      $val: $val;
+    }
+
+    #{$val} .obj-grid__#{$i}-#{$grid-count}#{$bp} {
+      @include column-span($i);
+    }
+  }
+}
+/* stylelint-enable */
+
+.obj-grid {
+  @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    // Removes `clearfix` psuedo element from the grid
+    &::after {
+      content: none;
+      display: none;
+    }
+  }
+
+  @include grid-maker;
+
+  @each $key, $val in $grid-breakpoints {
+    @if $key != print {
+      @media (min-width: #{$val}) {
+        @include grid-maker(\@#{$key});
+      }
+    }
+    @else {
+      @media print {
+        @include grid-maker(\@#{$key});
+      }
+    }
+  }
+}
+
+[class*="obj-grid__"] {
+  box-sizing: border-box;
+}
+
+.obj-grid--gap {
+  @each $key, $value in $spacers {
+    &-#{$key} {
+      @include loop-mq {
+        grid-gap: space($key);
+
+        [class*="obj-grid__"] {
+          padding: #{space($key) / 2};
+
+          /* stylelint-disable-next-line max-nesting-depth */
+          @supports (grid-gap: 1em) {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.obj-grid--column-gap {
+  @each $key, $value in $spacers {
+    &-#{$key} {
+      @include loop-mq {
+        grid-column-gap: space($key);
+
+        [class*="obj-grid__"] {
+          padding-left: #{space($key) / 2};
+          padding-right: #{space($key) / 2};
+
+          /* stylelint-disable-next-line max-nesting-depth */
+          @supports (grid-gap: 1em) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.obj-grid--row-gap {
+  @each $key, $value in $spacers {
+    &-#{$key} {
+      @include loop-mq {
+        grid-row-gap: space($key);
+
+        [class*="obj-grid__"] {
+          padding-top: #{space($key) / 2};
+          padding-bottom: #{space($key) / 2};
+
+          /* stylelint-disable-next-line max-nesting-depth */
+          @supports (grid-gap: 1em) {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+$grid-positions: center, start, end, stretch;
+
+.obj-grid--align-items {
+  @each $position in $grid-positions {
+    &-#{$position} {
+      @include loop-mq {
+        align-items: $position;
+      }
+    }
+  }
+}
+
+.obj-grid--align-self {
+  @each $position in $grid-positions {
+    &-#{$position} {
+      @include loop-mq {
+        align-self: $position;
+      }
+    }
+  }
+}
+
+.obj-grid--justify-content {
+  @each $position in $grid-positions {
+    &-#{$position} {
+      @include loop-mq {
+        justify-content: $position;
+      }
+    }
+  }
+}
+
+.obj-grid--justify-self {
+  @each $position in $grid-positions {
+    &-#{$position} {
+      @include loop-mq {
+        justify-self: $position;
+      }
+    }
+  }
+}

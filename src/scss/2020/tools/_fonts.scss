@@ -1,0 +1,101 @@
+@mixin h1 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: size(x1);
+  text-align: left;
+  line-height: $line-height-tight;
+  
+    @media(min-width: $bp-md) {
+      font-size: size(x2);
+    }
+  
+    @media(min-width: $bp-lg) {
+      font-size: size(x3);
+    }
+}
+
+@mixin h2 {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: size(x1);
+  text-align: left;
+  line-height: $line-height-tight;
+
+    @media(min-width: $bp-md) {
+      font-size: size(x2);
+    }
+}
+
+@mixin h3 {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: size(lg);
+  text-align: left;
+  line-height: $line-height-tight;
+  
+  @media(min-width: $bp-md) {
+    font-size: size(x1);
+  }
+}
+
+@mixin h4 {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: size(md);
+  text-align: left;
+  line-height: $line-height-tight;
+
+  @media(min-width: $bp-md) {
+    font-size: size(lg);
+  }
+}
+
+@mixin h5 {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: size(sm);
+  text-align: left;
+  line-height: $line-height-tight;
+}
+
+@mixin h6 {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: size(xs);
+  text-align: left;
+  line-height: $line-height-tight;
+}
+
+@mixin p {
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: size(sm);
+  text-align: left;
+
+  @media(min-width: $bp-md) {
+    font-size: size(md);
+  }
+}
+
+@mixin p-big {
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: size(md);
+  text-align: left;
+
+  @media(min-width: $bp-md) {
+    font-size: size(lg);
+  }
+}
+
+@mixin default-link {
+  color: color(link);
+  color: var(--link);
+  transition: color 250ms ease-in-out;
+
+  &:hover {
+    color: color(link-hover);
+    color: var(--link-hover);
+    text-decoration: none;
+  }
+}

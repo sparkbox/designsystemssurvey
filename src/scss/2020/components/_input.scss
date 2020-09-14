@@ -1,0 +1,18 @@
+.cmp-input {
+  @include p-big;
+  display: block;
+  margin: space(lg) auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: space(md) space(lg);
+  text-align: center;
+  border: 2px solid color(primary);
+  background-color: color(white);
+  color: color(primary);
+  
+  &:focus,
+  .safe-focus &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem color(gray), 0 0 0 calc(0.25rem + 2px) color(primary);
+  }
+}

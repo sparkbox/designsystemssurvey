@@ -1,0 +1,47 @@
+.cmp-aside {
+  background-color: color(white);
+  border: 0.125rem solid color(teal);
+  padding: space(md);
+  margin: space(lg) auto;
+
+  @media (min-width: $bp-lg) {
+    margin: space(x2) 0;
+    padding: space(x1);
+  }
+
+  &--float {
+    @media (min-width: $bp-lg) {
+      float: right;
+      padding: space(sm);
+      margin: 0 0 space(md) space(md);
+      max-width: 20rem;
+      box-sizing: border-box;
+    }
+    
+    @media (min-width: $bp-xl) {
+      padding: space(lg);
+      margin: 0 negative(space(w2)) space(md) space(md);
+      max-width: 34rem;
+    }
+  }
+
+  &__heading {
+    @include h4;
+    margin: 0;
+    line-height: $line-height-normal;
+  }
+
+  &__text {
+    @include p;
+    margin: 0;
+    
+    &--large {
+      @include p-big;
+    }
+  }
+  
+  &__heading + &__text:not(&__text--no-margin),
+  &__text + &__text:not(&__text--no-margin) {
+    margin-top: 1em;
+  }
+}

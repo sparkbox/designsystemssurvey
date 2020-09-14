@@ -1,0 +1,8 @@
+.obj-section-header {
+  @include clearfix;
+  @media (min-width: $bp-md) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}

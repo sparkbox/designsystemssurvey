@@ -1,0 +1,7 @@
+p:not([class]) {
+  @include p;
+}
+
+strong:not([class]) {
+  font-weight: 700;
+}

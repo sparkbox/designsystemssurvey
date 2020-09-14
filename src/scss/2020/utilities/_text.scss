@@ -1,0 +1,35 @@
+$util-text-values: (
+  left,
+  right,
+  center
+);
+
+@each $value in $util-text-values {
+  .util-text-#{$value} {
+    @include loop-mq {
+      text-align: $value;
+    }
+  }
+}
+
+$util-font-weights: (
+   'normal',
+   'bold',
+   'lighter',
+   'bolder',
+   100,
+   200,
+   300,
+   400,
+   500,
+   600,
+   700,
+   800,
+   900
+);
+
+@each $value in $util-font-weights {
+  .util-weight-#{stringify($value)} {
+    font-weight: $value;
+  }
+}

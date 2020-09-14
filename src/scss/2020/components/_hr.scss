@@ -1,0 +1,11 @@
+.cmp-hr- {
+  @each $key, $val in $colors {
+    &#{$key} {
+      border: 0;
+      height: 0.125rem;
+      background-color: $val;
+      width: 90%;
+      margin: auto;
+    }
+  }
+}

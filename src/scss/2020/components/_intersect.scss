@@ -1,0 +1,66 @@
+@keyframes intersect-fade-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes intersect-fade-left {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes intersect-fade-right {
+  from {
+      transform: translateX(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes intersect-fade-up {
+  from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.js .cmp-fade-in,
+.js .cmp-fade-left,
+.js .cmp-fade-right,
+.js .cmp-fade-up {
+  opacity: 0;
+}
+
+.cmp-fade-in--animate {
+  animation: intersect-fade-in 1s ease-in-out forwards;
+}
+
+.cmp-fade-left--animate {
+  animation: intersect-fade-left 1s ease-in-out forwards;
+}
+
+.cmp-fade-right--animate {
+  animation: intersect-fade-right 1s ease-in-out forwards;
+}
+
+.cmp-fade-up--animate {
+  animation: intersect-fade-up 1s ease-in-out forwards;
+}
