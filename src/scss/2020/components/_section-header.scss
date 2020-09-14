@@ -1,0 +1,72 @@
+.cmp-section-header {
+  background-color: color(primary);
+  color: color(white);
+  overflow: hidden;
+  
+  @media (min-width: $bp-md) {
+    display: flex;
+  }
+  
+  &--respondents {
+    --link: #{color(blue)};
+    --link-hover: #{lighten(color(blue), 5%)};
+  }
+  &--in-house {
+    --link: #{color(violet)};
+    --link-hover: #{lighten(color(violet), 5%)};
+  }
+  &--challenges {
+    --link: #{color(pink)};
+    --link-hover: #{lighten(color(pink), 5%)};
+  }
+  &--maturity {
+    --link: #{color(orange)};
+    --link-hover: #{lighten(color(orange), 5%)};
+  }
+  &--culture {
+    --link: #{color(yellow)};
+    --link-hover: #{lighten(color(yellow), 5%)};
+  }
+  &--conclusion {
+    --link: #{color(green)};
+    --link-hover: #{lighten(color(green), 5%)};
+  }
+
+  &__content {
+    @media (min-width: $bp-md) {
+      margin-right: space(lg);
+    }
+  }
+
+  &__title {
+    @include h1;
+    
+    @media (min-width: $bp-md) {
+      margin: 0;
+    }
+  }
+  
+  &__icon#{&}__icon--respondent {
+    animation: pulse-respondent 1s ease-in-out infinite alternate;
+  }
+
+  &__icon#{&}__icon--in-house {
+    animation: pulse-in-house 1s ease-in-out infinite alternate;
+  }
+
+  &__icon#{&}__icon--challenges {
+    animation: pulse-challenges 1s ease-in-out infinite alternate;
+  }
+
+  &__icon#{&}__icon--maturity {
+    animation: pulse-maturity 1s ease-in-out infinite alternate;
+  }
+
+  &__icon#{&}__icon--culture {
+    animation: pulse-culture 1s ease-in-out infinite alternate;
+  }
+
+  &__icon#{&}__icon--conclusion {
+    animation: pulse-conclusion 1s ease-in-out infinite alternate;
+  }
+}

@@ -1,0 +1,11 @@
+hr:not([class]) {
+  border: 0;
+  height: 0.125rem;
+  background-color: mix(color(white), color(primary), 70%);
+  width: 80%;
+  margin: space(x1) auto;
+
+  @media (min-width: $bp-lg) {
+    margin: space(h2) auto;
+  }
+}

@@ -1,0 +1,8 @@
+blockquote:not([class]) {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote:not([class]) p:not([class]) {
+  font-weight: 700;
+}

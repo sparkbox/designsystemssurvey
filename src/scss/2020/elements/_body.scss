@@ -1,0 +1,19 @@
+:root {
+  --font-size: #{size(sm)};
+  --secondary: #{color(teal)};
+  --link: #{color(link)};
+  --link-hover: #{color(link-hover)};
+
+  @media(min-width: $bp-md) {
+    --font-size: #{size(md)};
+  }
+}
+
+body {
+  font-family: $font-primary;
+  line-height: $line-height-normal;
+  color: color(primary);
+  -webkit-text-size-adjust: none;
+  font-smoothing: antialiased;
+  background-color: color(gray);
+}

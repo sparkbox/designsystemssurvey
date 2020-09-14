@@ -9,6 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 // import Header from "./header"
+import "../../js/safe-focus"
+import "../../js/2020/smooth-scroll"
+import "../../js/2020/intersect"
 import "../../scss/2020.scss"
 
 // siteMetadata comes from gatsby-config.js

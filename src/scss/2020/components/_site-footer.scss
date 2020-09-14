@@ -1,0 +1,71 @@
+.cmp-footer {
+  background-color: color(primary);
+  color: color(white);
+  --link: #{color(blue)};
+  --link-hover: #{color(white)};
+
+  &__logo {
+    margin: 0 auto;
+    --size: 4rem;
+    height: var(--size);
+    width: calc((13/14) * var(--size));
+    background: svg('<svg viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9.1v2h.6l1.1-2H3zm6.4-4a1 1 0 100-2h-.2l-1.1 2h1.3zM3 3v2.2L6.2 3H3zm6.5 6h-.3l-2.8 2h3c.6 0 1-.5 1-1 0-.6-.4-1-1-1zm3-2.3l-2.4 1.6c.7.3 1.1 1 1.1 1.7 0 1-.8 1.7-1.7 1.7H5.2l-3 2-.1-.1 1-1.9h-.8V8.4v-.1H6v.1l-1.7 3 5.9-4H0 0v-.1l2.2-1.5V2.4H7.4L9.6.7l1.2-.8.2.1-1.3 2.2c.8.1 1.5.9 1.5 1.8 0 1-.8 1.7-1.7 1.7H6.7v-.1l1.9-3.3-6.3 4.3h10.2l-.1.1z" fill="#{color(blue)}"/></svg>') no-repeat center / contain transparent;
+
+    @media (min-width: $bp-md) {
+      --size: 5rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      --size: 6rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      --size: 8rem;
+    }
+  }
+  
+  &__social-icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__social-icon {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: color(blue);
+    border-radius: 50%;
+    transition: background-color 250ms ease-in-out;
+
+    &:hover {
+      background-color: color(white);
+    }
+
+    &--twitter {
+      background-image: svg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 12a8 8 0 01-2.4.7c1-.6 1.6-1.4 1.8-2.4a8 8 0 01-2.6 1 4 4 0 00-3-1.3c-2.2 0-4 2-4 4.3v1c-3.4-.2-6.4-2-8.4-4.5a4.4 4.4 0 001.3 5.7 4 4 0 01-1.9-.5c0 2.1 1.4 3.8 3.3 4.2a4 4 0 01-1.9.1c.6 1.7 2 3 3.9 3A8 8 0 019 25c1.9 1.2 4 1.9 6.3 1.9C22.8 27 27 20.5 27 14.8v-.6c.8-.6 1.5-1.3 2-2.2z" fill="#{color(primary)}"/></svg>')
+    }
+
+    &--github {
+      background-image: svg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 19.2c0 1 0 1.7.3 2.5.1.7.4 1.3.7 1.8.3.6.7 1 1.1 1.4.5.5 1 .8 1.5 1l2 .7a15.9 15.9 0 004.5.4 28 28 0 004.6-.4l1.8-.7c.6-.2 1.1-.6 1.6-1 .4-.4.8-.8 1.1-1.4a7 7 0 00.8-1.8l.2-2.5c0-1.6-.5-3-1.6-4a4.4 4.4 0 00.3-1.4v-1.3l-.5-1.5h-.1a2 2 0 00-.6 0 6.1 6.1 0 00-2 .7l-1.6 1a16 16 0 00-4-.5c-1.7 0-3 .2-4 .4a13.7 13.7 0 00-2.8-1.4A4.8 4.8 0 0010 11h-.2l-.4 1.5a4.6 4.6 0 000 2l.2.6A5.8 5.8 0 008 19.2zm2.5 2.5c0-1 .4-1.8 1.3-2.6.2-.2.5-.4.9-.5a4 4 0 011.1-.2h1.3a152 152 0 014.4 0 132.5 132.5 0 012.7 0c.5 0 .9 0 1.2.2l1 .5c.8.8 1.2 1.6 1.2 2.6 0 .5 0 1-.2 1.4-.1.4-.3.8-.6 1.1-.2.3-.5.5-.9.7a6.5 6.5 0 01-2.6.8 20.3 20.3 0 01-3.3 0 59.6 59.6 0 01-4.7-.3l-1.1-.5-1-.7-.5-1c-.2-.5-.2-1-.2-1.5zm10.1-.2c0-1 .6-1.9 1.3-1.9.7 0 1.3.8 1.3 1.9 0 1-.6 1.8-1.3 1.8-.7 0-1.3-.8-1.3-1.8zm-7.5 0c0-1 .5-1.9 1.2-1.9s1.3.8 1.3 1.9c0 1-.6 1.8-1.3 1.8-.7 0-1.2-.8-1.2-1.8z" fill="#{color(primary)}"/></svg>');
+    }
+
+    &--codepen {
+      background-image: svg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.3 17.8L19 15v-4.5l7.6 5-3.3 2.3zM25 19l2.4-1.6v3.2L25 19zm-6 3.9l4.2-2.8 3.4 2.3-7.6 5v-4.5zm-6.1-2.8l4.2 2.8v4.5l-7.6-5 3.4-2.3zM11.1 19l-2.4 1.6v-3.3l2.4 1.7zm6-4l-4.2 2.8-3.5-2.3 7.6-5V15h.1zm1 6.2l-3.5-2.3 3.5-2.3 3.5 2.3-3.5 2.3zm11.3-5.8c0-.1 0-.1 0 0v-.5h-.1l-10.7-7a1 1 0 00-1.1 0L7.1 14.7H7v8h.1l10.4 6.8.5.2.5-.2L29 23.2h.1v-7.7l.3-.1z" fill="#{color(primary)}"/></svg>');
+    }
+
+    &--dribbble {
+      background-image: svg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 28a10 10 0 110-20 10 10 0 010 20zm8.4-8.6c-.3-.1-2.6-.8-5.3-.4 1.1 3 1.6 5.6 1.7 6a8.5 8.5 0 003.6-5.6zm-5 6.5c-.2-.8-.7-3.4-1.9-6.5-4.9 1.7-6.6 5-6.7 5.4a8.5 8.5 0 008.5 1zm-9.7-2.2c.2-.3 2.5-4.2 6.9-5.6l.3-.1-.7-1.5a31.4 31.4 0 01-8.7 1.2v.3c0 2.2.8 4.2 2.2 5.7zm-2-7.4c.3 0 3.8 0 7.8-1l-3.1-5a8.6 8.6 0 00-4.8 6zM16 9.7c1.2 1.6 2.2 3.3 3.2 5 3-1.1 4.3-2.9 4.5-3a8.5 8.5 0 00-7.7-2zm8.6 3c-.2.2-1.6 2-4.8 3.3.3.5.6 1 .8 1.7 2.8-.4 5.7.2 6 .2 0-2-.8-3.8-2-5.3z" fill="#{color(primary)}"/></svg>');
+    }
+
+    &--facebook {
+      background-image: svg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 10H13a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V13a3 3 0 00-3-3zm.3 9h-2.7v7.9h-3.2V19h-1.5v-2.6h1.5v-1.6c0-2.3 1-3.7 3.4-3.7h3V14h-2.4c-.7 0-.8.4-.8 1.1v1.4h3.1l-.4 2.6z" fill="#{color(primary)}"/></svg>');
+    }
+
+    &--youtube {
+      background-image: svg('<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.6 13.2c-.3-.8-.4-1-1.2-1.5-1-.7-5.1-.7-8.4-.7-3.3 0-7.4 0-8.4.7-.8.5-.9.7-1.2 1.5-.4 1.1-.4 4-.4 4.8 0 .8 0 3.7.4 4.8.3.8.4 1 1.2 1.5 1 .7 5.2.7 8.4.7s7.4 0 8.4-.7c.8-.5.9-.7 1.2-1.5.4-1.1.4-4 .4-4.8 0-.8 0-3.7-.4-4.8zM16 21v-6l5 3-5 3z" fill="#{color(primary)}"/></svg>');
+    }
+  }
+}

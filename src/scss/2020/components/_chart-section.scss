@@ -1,0 +1,14 @@
+.cmp-chart-section {
+  display: none;
+  @supports (color: red) {
+    @media (min-width: $bp-md) {
+      display: block;
+    }
+
+    @media (min-width: $bp-lg) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

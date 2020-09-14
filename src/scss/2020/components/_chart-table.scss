@@ -1,0 +1,15 @@
+@supports (color: red) {
+  .cmp-chart-table {
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+
+    table:not([class]) {
+      width: 100%;
+    }
+  
+    @media (min-width: $bp-md) {    
+      @include visually-hidden;
+    }
+  }
+}

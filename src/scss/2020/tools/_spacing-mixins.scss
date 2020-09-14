@@ -1,0 +1,33 @@
+@mixin margin-spacing ($side, $spacer-key) {
+  @if $side == "all" {
+    margin: space($spacer-key);
+  }
+  @else if $side == "vertical" {
+    margin-top: space($spacer-key);
+    margin-bottom: space($spacer-key);
+  }
+  @else if $side == "horizontal" {
+    margin-right: space($spacer-key);
+    margin-left: space($spacer-key);
+  }
+  @else {
+    margin-#{$side}: space($spacer-key);
+  }
+}
+
+@mixin padding-spacing ($side, $spacer-key) {
+  @if $side == "all" {
+    padding: space($spacer-key);
+  }
+  @else if $side == "vertical" {
+    padding-top: space($spacer-key);
+    padding-bottom: space($spacer-key);
+  }
+  @else if $side == "horizontal" {
+    padding-right: space($spacer-key);
+    padding-left: space($spacer-key);
+  }
+  @else {
+    padding-#{$side}: space($spacer-key);
+  }
+}

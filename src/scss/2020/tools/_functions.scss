@@ -1,0 +1,30 @@
+// Remove units
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Convert value to string
+@function stringify($val) {
+  @return $val + '';
+}
+
+// Get Color
+@function color($name) {
+  $name: stringify($name);
+  @return map-get($colors, $name);
+}
+
+// Get Font Size
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}
+
+// Get Spacing Value
+@function space($key) {
+  @return map-get($spacers, $key);
+}
+
+// Convert value to a negative number
+@function negative($value) {
+  @return 0 - $value;
+}

@@ -1,0 +1,157 @@
+.cmp-chart {
+  display: none;
+}
+
+@keyframes chart-slide {
+  from {
+    width: 0;
+    padding: 0;
+  }
+  to {
+    width: calc((var(--val) / var(--range) * 100%));
+    padding: inherit;
+  }
+}
+
+@keyframes chart-data-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@supports (color: red) {
+  .cmp-chart {
+    @media (min-width: $bp-md) {
+      display: block;
+    }
+    
+    &__group {
+      position: relative;
+      & + & {
+        margin-top: space(sm);
+        
+        @media (min-width: $bp-x2) {
+          margin-top: 0.125rem;
+        }
+      }
+    }
+
+    &__title {
+      @include h5;
+      
+      @media (min-width: $bp-x2) {
+        font-weight: 400;
+        position: absolute;
+        right: 100%;
+        padding: space(sm);
+        box-sizing: border-box;
+        height: 100%;
+        text-align: right;
+        width: calc((100vw - #{$max-width}) / 2);
+        max-width: 30rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  
+    &__range {
+      margin: 0;
+      background-color: color(aqua);
+      display: flex;
+      
+      &--no-bg {
+        background-color: transparent;
+      }
+    }
+
+    &__data {
+      position: relative;
+      width: calc((var(--val) / var(--range) * 100%));
+      // flex: calc((var(--val) / var(--range) * 100%));
+      flex-shrink: 0;
+      flex-grow: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: space(sm) space(sm) space(sm) space(xs);
+      color: color(white);
+      background-color: color(primary);
+      text-align: right;
+      font-weight: 700;
+      box-sizing: border-box;
+      border-right: 2px solid color(gray);
+      line-height: $line-height-tight;
+
+      @media (min-width: $bp-md) {
+        font-size: 1.125rem;
+        height: 3.75rem;
+      }
+      
+      @media (min-width: $bp-lg) {
+        height: 4.75rem;
+        padding: 1.25rem 1.25rem 1.25rem space(xs);
+      }
+      
+      @media (min-width: $bp-x2) {
+        padding: 1.5rem 1.5rem 1.5rem space(xs);
+      }
+
+      &:nth-child(2) {
+        color: color(primary);
+        background-color: color(aqua)
+      }
+
+      &:nth-child(3) {
+        background-color: color(teal)
+      }
+      
+      &--small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.875rem;
+        padding: space(sm) space(xs);
+
+        @media (min-width: $bp-lg) {
+          padding: 1.25rem space(xs);
+        }
+        
+        @media (min-width: $bp-x2) {
+          font-size: 1rem;
+          padding: 1.5rem space(xs);
+        }
+      }
+    }
+    
+    .js .cmp-chart-section--is-animated &__data {
+      width: 0;
+    }
+
+    .js .cmp-chart-section--is-animating &__data {
+      animation: chart-slide ease-in-out 1s forwards;
+    }
+    
+    &__data-text {
+      &--outside {
+        position: absolute;
+        left: 100%;
+        display: block;
+        text-align: left;
+        color: color(primary);
+        margin-left: space(sm);
+      }
+    }
+
+    .js .cmp-chart-section--is-animated &__data-text {
+      opacity: 0;
+    }
+
+    .js .cmp-chart-section--is-animating &__data-text {
+      animation: chart-data-fade ease-in-out 1s forwards;
+    }
+  }
+}

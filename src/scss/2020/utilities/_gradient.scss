@@ -1,0 +1,20 @@
+$gradients: (
+  'blue',
+  'violet',
+  'pink',
+  'orange',
+  'yellow',
+  'green',
+);
+
+.util-gradient {
+  @each $color1 in $gradients {
+    @each $color2 in $gradients {
+      @if $color1 != $color2 {
+        &-#{$color1}-to-#{$color2} {
+          background-image: linear-gradient(to right, #{color($color1)}, #{color($color2)})
+        }
+      }
+    }
+  }
+}

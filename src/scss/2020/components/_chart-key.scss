@@ -1,0 +1,58 @@
+@supports (color: red) {
+  .cmp-chart-key {
+    @media (min-width: $bp-md) {
+      display: flex;
+      background-color: color(gray);
+      border-bottom: 1px solid color(primary);
+      position: sticky;
+      top: 0;
+      z-index: 300;
+      margin-bottom: space(sm);
+    }
+    
+    @media (min-width: $bp-lg) {
+      position: static;
+      border: none;
+      background-color: transparent;
+      margin-bottom: space(md);
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: space(xs) 0;
+      font-weight: 700;
+      line-height: $line-height-tight;
+      
+      & + & {
+        margin-left: space(sm);
+
+        @media (min-width: $bp-lg) {
+          margin-left: space(md);
+        }
+      }
+      
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        margin-right: space(xs);
+        background-color: color(primary);
+        
+        @media (min-width: $bp-lg) {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      &:nth-child(2)::before {
+        background-color: color(aqua)
+      }
+
+      &:nth-child(3)::before {
+        background-color: color(teal)
+      }
+    }
+  }
+}

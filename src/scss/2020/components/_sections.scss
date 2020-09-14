@@ -1,0 +1,23 @@
+.cmp-respondents {
+  --secondary: #{color(teal)};
+}
+
+.cmp-in-house {
+  --secondary: #{darken(color(violet), 5%)};
+}
+
+.cmp-challenges {
+  --secondary: #{darken(color(pink), 5%)};
+}
+
+.cmp-maturity {
+  --secondary: #{darken(color(orange), 5%)};
+}
+
+.cmp-culture {
+  --secondary: #{darken(color(green), 10%)};
+}
+
+.cmp-conclusion {
+  --secondary: #{color(teal)};
+}

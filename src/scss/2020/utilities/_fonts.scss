@@ -1,0 +1,47 @@
+.util-font-h1 {
+  @include h1;
+}
+
+.util-font-h2 {
+  @include h2;
+}
+
+.util-font-h3 {
+  @include h3;
+}
+
+.util-font-h4 {
+  @include h4;
+}
+
+.util-font-h5 {
+  @include h5;
+}
+
+.util-font-h6 {
+  @include h6;
+}
+
+.util-font-p {
+  @include p;
+}
+
+.util-font-p-big {
+  @include p-big;
+}
+
+.util-link {
+  @include default-link;
+}
+
+.util-font-size {
+  @each $key, $val in $font-sizes {
+    &-#{$key} {
+      @include loop-mq {
+        --font-size: #{$val};
+        font-size: $val;
+        font-size: var(--font-size);
+      }
+    }
+  }
+}

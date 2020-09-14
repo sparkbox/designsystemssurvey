@@ -1,0 +1,27 @@
+.obj-max-width {
+  margin: 0 auto;
+  width: calc(100% - 2.5rem);
+  max-width: $max-width;
+}
+
+.obj-content-width {
+  margin: 0 auto;
+  width: calc(100% - 2.5rem);
+  max-width: 40rem;
+}
+
+.obj-footer {
+  margin: 0 auto;
+  padding: space(lg) 0;
+  width: calc(100% - 2.5rem);
+  max-width: 80rem;
+  
+  @media (min-width: $bp-md) {
+    padding: space(h1) 0;
+  }
+}
+
+
+.obj-has-float {
+  @include clearfix;
+}

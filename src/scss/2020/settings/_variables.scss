@@ -1,0 +1,45 @@
+//Max Content Width
+$max-width: 60rem;
+
+//
+// BREAKPOINTS
+//
+$bp-sm:  30rem;
+$bp-md:  50rem;
+$bp-lg:  60rem;
+$bp-xl:  80rem;
+$bp-x2: 100rem;
+
+$grid-breakpoints: (
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg,
+  xl: $bp-xl,
+  x2: $bp-x2,
+  print: print
+);
+
+//
+// SPACING
+//
+$spacer: 1rem;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    none: 0,
+    xs: $spacer * 0.5,  // 8px
+    sm: $spacer,        // 16px
+    md: $spacer * 1.25, // 24px
+    lg: $spacer * 2.5,  // 40px
+    x1: $spacer * 4,    // 64px
+    x2: $spacer * 5,    // 80px
+    x3: $spacer * 6,    // 96px
+    w1: 5vw,
+    w2: 10vw,
+    w3: 15vw,
+    h1: 5vh,
+    h2: 10vh,
+    h3: 15vh
+  ),
+    $spacers
+  );

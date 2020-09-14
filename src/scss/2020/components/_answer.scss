@@ -1,0 +1,35 @@
+.cmp-answer {
+  $radius: 0.5rem;
+  text-align: center;
+  margin-bottom: space(x1);
+  
+  @media (min-width: $bp-lg) {
+    margin-bottom: space(h1);
+  }
+
+  &__badge {
+    display: inline-flex;
+  }
+  
+  &__meta {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 30rem;
+    font-size: size(sm);
+  }
+  
+  &__label {
+    font-size: size(md);
+    font-weight: 700;
+    dipsplay: block;
+    padding: space(xs) space(sm);
+    background-color: mix(color(white), color(primary), 80%);
+  }
+  
+  &__count {
+    font-size: size(md);
+    dipsplay: block;
+    padding: space(xs) space(sm);
+    background-color: mix(color(white), color(primary), 90%);
+  }
+}

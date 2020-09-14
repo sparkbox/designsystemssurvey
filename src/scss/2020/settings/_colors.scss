@@ -1,0 +1,33 @@
+$primary-blue: #00233d;
+$primary-white: white;
+$secondary-aqua: #00ffd1;
+$secondary-teal: #00bfbe;
+
+$section-blue: #43E8FF;
+$section-violet: #8000FF;
+$section-pink: #F90279;
+$section-orange: #FC874D;
+$section-yellow: #FBFF35;
+$section-green: #01F5AC;
+
+$gray: #f9f9f9;
+
+$link-color: lighten($primary-blue, 20%);
+$link-hover: darken($link-color, 10%);
+
+// Map for ease of use
+$colors: (
+  'primary': $primary-blue,
+  'white': $primary-white,
+  'aqua': $secondary-aqua,
+  'teal': $secondary-teal,
+  'blue': $section-blue,
+  'violet': $section-violet,
+  'pink': $section-pink,
+  'orange': $section-orange,
+  'yellow': $section-yellow,
+  'green': $section-green,
+  'link': $link-color,
+  'link-hover': $link-hover,
+  'gray': $gray
+);

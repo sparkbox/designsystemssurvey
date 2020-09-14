@@ -1,0 +1,31 @@
+@supports (color: red) {
+  .cmp-chart-range {
+    @media (min-width: $bp-md) {
+      display: flex;
+      background-color: color(gray);
+      border-bottom: 1px solid color(primary);
+      position: sticky;
+      top: 0;
+      z-index: 300;
+    }
+    
+    @media (min-width: $bp-lg) {
+      position: static;
+      order: 2;
+      border-bottom: none;
+      background-color: transparent;
+      border-top: 1px solid color(primary);
+    }
+  
+    &__value {
+      flex-basis: 100%;
+      padding: space(xs) 0;
+      font-weight: 700;
+  
+      &:last-child {
+        flex-basis: auto;
+        flex-shrink: 2;
+      }
+    }
+  }
+}
