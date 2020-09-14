@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/2020/layout'
-import SEO from '../components/2020/SEO'
+import SEO from '../components/SEO'
 import SiteFooter from '../components/2020/footer'
 import IntroSection from '../sections/2020/intro'
 import TableOfContents from '../sections/2020/table-of-contents'

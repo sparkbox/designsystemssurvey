@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Layout2019 from '../components/2019/layout'
+import SEO from '../components/SEO'
 import Hero from '../components/2019/hero'
 import IntroSection from '../sections/2019/intro'
 import Section1 from '../sections/2019/section-1'
@@ -12,13 +13,12 @@ import Footer from '../components/2019/footer'
 import TableOfContents from '../components/2019/table-of-contents'
 import ContentBlock from '../components/2019/content-block'
 import SectionHeader from '../components/2019/section-header'
-import SEO from '../components/2019/SEO'
 
 const Page2019 = () => (
   <Layout2019>
     <SEO
       image="ogimage-2019.jpg"
-      styleSheet="https:cloud.typography.com/655912/7241412/css/fonts.css"
+      fontCSS="https:cloud.typography.com/655912/7241412/css/fonts.css"
       year="2019"
     />
     <svg width="0" height="0" className="util-visually-hidden">
