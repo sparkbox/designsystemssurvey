@@ -5350,21 +5350,53 @@ blockquote:not([class]) p:not([class]) {
 .cmp-chart {
   display: none; }
 
-@-webkit-keyframes chart-slide {
+@-webkit-keyframes chart-slide-width {
   from {
-    width: 0;
-    padding: 0; }
+    width: 0; }
   to {
-    width: calc((var(--val) / var(--range) * 100%));
-    padding: inherit; } }
+    width: calc((var(--val) / var(--range) * 100%)); } }
 
-@keyframes chart-slide {
+@keyframes chart-slide-width {
   from {
-    width: 0;
+    width: 0; }
+  to {
+    width: calc((var(--val) / var(--range) * 100%)); } }
+
+@-webkit-keyframes chart-slide-md {
+  from {
     padding: 0; }
   to {
-    width: calc((var(--val) / var(--range) * 100%));
-    padding: inherit; } }
+    padding: 1rem 1rem 1rem 0.5rem; } }
+
+@keyframes chart-slide-md {
+  from {
+    padding: 0; }
+  to {
+    padding: 1rem 1rem 1rem 0.5rem; } }
+
+@-webkit-keyframes chart-slide-lg {
+  from {
+    padding: 0; }
+  to {
+    padding: 1.25rem 1.25rem 1.25rem 0.5rem; } }
+
+@keyframes chart-slide-lg {
+  from {
+    padding: 0; }
+  to {
+    padding: 1.25rem 1.25rem 1.25rem 0.5rem; } }
+
+@-webkit-keyframes chart-slide-x2 {
+  from {
+    padding: 0; }
+  to {
+    padding: 1.5rem 1.5rem 1.5rem 0.5rem; } }
+
+@keyframes chart-slide-x2 {
+  from {
+    padding: 0; }
+  to {
+    padding: 1.5rem 1.5rem 1.5rem 0.5rem; } }
 
 @-webkit-keyframes chart-data-fade {
   from {
@@ -5512,9 +5544,18 @@ blockquote:not([class]) p:not([class]) {
           padding: 1.5rem 0.5rem; } }
   .js .cmp-chart-section--is-animated .cmp-chart__data {
     width: 0; }
-  .js .cmp-chart-section--is-animating .cmp-chart__data {
-    -webkit-animation: chart-slide ease-in-out 1s forwards;
-            animation: chart-slide ease-in-out 1s forwards; }
+  @media (min-width: 50rem) {
+    .js .cmp-chart-section--is-animating .cmp-chart__data {
+      -webkit-animation: chart-slide-width ease-in-out 1s forwards, chart-slide-md ease-in-out 1s forwards;
+              animation: chart-slide-width ease-in-out 1s forwards, chart-slide-md ease-in-out 1s forwards; } }
+  @media (min-width: 60rem) {
+    .js .cmp-chart-section--is-animating .cmp-chart__data {
+      -webkit-animation: chart-slide-width ease-in-out 1s forwards, chart-slide-lg ease-in-out 1s forwards;
+              animation: chart-slide-width ease-in-out 1s forwards, chart-slide-lg ease-in-out 1s forwards; } }
+  @media (min-width: 100rem) {
+    .js .cmp-chart-section--is-animating .cmp-chart__data {
+      -webkit-animation: chart-slide-width ease-in-out 1s forwards, chart-slide-xs ease-in-out 1s forwards;
+              animation: chart-slide-width ease-in-out 1s forwards, chart-slide-xs ease-in-out 1s forwards; } }
   .cmp-chart__data-text--outside {
     position: absolute;
     left: 100%;
