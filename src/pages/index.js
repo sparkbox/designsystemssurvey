@@ -1,8 +1,8 @@
 import React from "react"
-import Page2019 from './2019'
+import Page2020 from './2020'
 
 const Index = () => (
-  <Page2019 />
+  <Page2020 />
 )
 
 export default Index

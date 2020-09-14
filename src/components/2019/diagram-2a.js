@@ -1,6 +1,6 @@
 import React, { Component, createRef } from "react"
 import ChartCard from "./diagram-chart-card"
-import observe from "../js/chart-animation"
+import observe from "../../js/chart-animation"
 
 class Diagram2a extends Component {
   constructor(props) {

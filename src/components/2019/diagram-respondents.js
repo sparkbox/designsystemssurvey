@@ -3,7 +3,7 @@ import ShapePyramid from "./shape-pyramid"
 import ShapeCube from "./shape-cube"
 import ShapeDiamond from "./shape-diamond"
 import ShapeDodecahedron from "./shape-dodecahedron"
-import observe from "../js/toggle-animation"
+import observe from "../../js/toggle-animation"
 
 class Respondents extends Component {
   constructor(props) {
