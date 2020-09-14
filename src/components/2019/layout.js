@@ -11,7 +11,6 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 import "../../js/2019/chart-animation"
 import "../../js/safe-focus"
-import "../../scss/2019/base.scss"
 
 // siteMetadata comes from gatsby-config.js
 const Layout2019 = ({ children }) => {

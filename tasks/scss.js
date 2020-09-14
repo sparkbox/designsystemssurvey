@@ -14,7 +14,7 @@ years.forEach((year) => {
       file: base,
     },
     (err, result) => {
-      const location = path.resolve(`./src/styles/${year}.css`)
+      const location = path.resolve(`./static/css/${year}.css`)
       postcss([autoprefixer])
         .process(result.css.toString())
         .then((x) => {

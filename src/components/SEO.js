@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ pageDescription, image, locale, styleSheet, year }) => {
+const SEO = ({ pageDescription, image, locale, fontCSS, year }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -42,7 +42,8 @@ const SEO = ({ pageDescription, image, locale, styleSheet, year }) => {
       <meta name="twitter:site" content={author} />
 
       <link rel="canonical" href={metaUrl} />
-      {styleSheet && <link rel="stylesheet" type="text/css" href={styleSheet} />}
+      {fontCSS && <link rel="stylesheet" type="text/css" href={fontCSS} />}
+      <link rel="stylesheet" type="text/css" href={`/css/${year}.css`} />
     </Helmet>
   )
 }
