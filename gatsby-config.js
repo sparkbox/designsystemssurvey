@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: '',
     titleTemplate: 'Design Systems Survey by Sparkbox',
-    name: '2020 Design Systems Survey',
+    name: 'Design Systems Survey',
     baseUrl: 'https://designsystemsurvey.seesparkbox.com',
     author: '@hearsparkbox',
     description:
