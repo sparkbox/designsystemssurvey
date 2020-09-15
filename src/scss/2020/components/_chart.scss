@@ -27,7 +27,7 @@
   to { opacity: 1; }
 }
 
-@supports (color: red) {
+@supports (mask-type: initial) {
   .cmp-chart {
     @media (min-width: $bp-md) {
       display: block;

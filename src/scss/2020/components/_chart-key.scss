@@ -1,4 +1,4 @@
-@supports (color: red) {
+@supports (mask-type: initial) {
   .cmp-chart-key {
     @media (min-width: $bp-md) {
       display: flex;

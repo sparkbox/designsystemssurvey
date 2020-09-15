@@ -1,13 +1,17 @@
-@supports (color: red) {
-  .cmp-chart-table {
-    overflow-y: scroll; /* has to be scroll, not auto */
-    -webkit-overflow-scrolling: touch;
-    display: flex;
+.cmp-chart-table {
+  overflow: auto;
+  display: flex;
 
-    table:not([class]) {
-      width: 100%;
-    }
-  
+  @supports (-webkit-overflow-scrolling: touch) {
+    overflow-x: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table:not([class]) {
+    width: 100%;
+  }
+
+  @supports (mask-type: initial) {
     @media (min-width: $bp-md) {    
       @include visually-hidden;
     }
