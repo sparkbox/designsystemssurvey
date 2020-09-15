@@ -58,6 +58,9 @@ typings/
 .cache/
 /public
 
+# Compiled CSS
+/static/css/*.css
+
 # Mac files
 .DS_Store
 
