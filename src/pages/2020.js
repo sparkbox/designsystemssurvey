@@ -19,8 +19,12 @@ class Page2020 extends Component {
   }
   render () {
     return (
-      <Layout>
-        <SEO image="ogimage-2020.jpg" year="2020" />
+      <Layout>  
+        <SEO
+          pageDescription="These survey results explore the challenges of a design system, from planning and managing changes to organizational adoption. They examine what makes a mature design system that positively impacts the team."
+          image="ogimage-2020.jpg"
+          year="2020"
+        />
         <IntroSection />
         <main>
           <TableOfContents />
