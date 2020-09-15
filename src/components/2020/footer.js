@@ -1,4 +1,5 @@
 import React from "react"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const SiteFooter = () => (
   <footer className="cmp-footer vcard">
@@ -59,7 +60,7 @@ const SiteFooter = () => (
 
       <p className="util-font-p util-weight-700 util-margin-vertical-x1">&copy;2020 Sparkbox. All rights reserved.</p>
       <hr className="cmp-hr-blue util-margin-vertical-lg util-width-full" />
-      <p className="util-font-p util-text-center"><a href="#top">Back to the Top</a></p>
+      <p className="util-font-p util-text-center"><AnchorLink href="#top">Back to the Top</AnchorLink></p>
     </div>
   </footer>
 )
