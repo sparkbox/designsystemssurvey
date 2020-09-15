@@ -1,6 +1,6 @@
 .cmp-chart-section {
   display: none;
-  @supports (color: red) {
+  @supports (mask-type: initial) {
     @media (min-width: $bp-md) {
       display: block;
     }

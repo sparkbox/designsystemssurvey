@@ -1,4 +1,4 @@
-@supports (color: red) {
+@supports (mask-type: initial) {
   .cmp-chart-range {
     @media (min-width: $bp-md) {
       display: flex;
