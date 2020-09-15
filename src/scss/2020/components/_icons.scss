@@ -29,7 +29,7 @@
         bottom: $size;
         left: $size;
         background-size: 400%;
-        animation: move-color 5s linear infinite;
+        animation: move-color 7s linear infinite;
       }
   
       @media (min-width: $bp-sm) {
@@ -82,7 +82,7 @@
         right: $size;
         bottom: $size;
         left: $size;
-        animation: move-color 5s linear infinite;
+        animation: move-color 7s linear infinite;
         background-size: 400%;
         background-image: linear-gradient(to right, color(blue), color(green), color(blue));
       }
