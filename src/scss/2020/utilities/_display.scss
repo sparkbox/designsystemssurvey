@@ -25,3 +25,30 @@ $util-display-values: (
 .util-width-full {
   width: 100%;
 }
+
+.util-min-height-full {
+  min-height: 100vh;
+}
+
+$util-flex-values: (
+  flex-start,
+  flex-end,
+  stretch,
+  center,
+  space-between,
+  space-around
+);
+
+@each $value in $util-flex-values {
+  .util-align-#{$value} {
+    @include loop-mq {
+      align-items: $value;
+    }
+  }
+
+  .util-justify-#{$value} {
+    @include loop-mq {
+      justify-content: $value;
+    }
+  }
+}

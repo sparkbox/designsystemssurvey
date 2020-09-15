@@ -1,9 +1,9 @@
 import React from "react"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const SiteFooter = () => (
+const SiteFooter = ({animate}) => (
   <footer className="cmp-footer vcard">
-    <div className="obj-footer cmp-fade-up js-watch" data-animate="cmp-fade-up--animate">
+    <div className={animate ? 'obj-footer cmp-fade-up js-watch' : 'obj-footer'} data-animate="cmp-fade-up--animate">
       <div className="util-text-center">
         <div aria-hidden="true" className="cmp-footer__logo org"><span className="util-visually-hidden">Sparkbox</span></div>
         <p className="util-font-p util-text-center">Assembled by your friends at <a href="https://seesparkbox.com/" className="util-link url">Sparkbox</a>.</p>
