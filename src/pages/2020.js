@@ -53,7 +53,7 @@ class Page2020 extends Component {
             <NewsletterSection />
           </section>
         </main>
-        <SiteFooter />
+        <SiteFooter animate={true} />
       </Layout>
     )
   }

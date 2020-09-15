@@ -32,6 +32,18 @@
 
 .util-link {
   @include default-link;
+
+  @each $key, $val in $colors {
+    &-color-#{$key},
+    &-color-#{$key}:hover,
+    &-color-#{$key}\:active:active,
+    &-color-#{$key}\:focus:focus {
+      @include default-link;
+      --link: #{$val};
+      --link-hover: #{$val};
+      color: $val;
+    }
+  }
 }
 
 .util-font-size {
