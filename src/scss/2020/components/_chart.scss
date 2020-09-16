@@ -144,11 +144,11 @@
       }
     }
     
-    .js .cmp-chart-section--is-animated &__data {
+    .has-io .cmp-chart-section--is-animated &__data {
       width: 0;
     }
 
-    .js .cmp-chart-section--is-animating &__data {
+    .has-io .cmp-chart-section--is-animating &__data {
       @media (min-width: $bp-md) {
         animation: chart-slide-width ease-in-out 1s forwards, chart-slide-md ease-in-out 1s forwards;
       }
@@ -171,11 +171,11 @@
       }
     }
 
-    .js .cmp-chart-section--is-animated &__data-text {
+    .has-io .cmp-chart-section--is-animated &__data-text {
       opacity: 0;
     }
 
-    .js .cmp-chart-section--is-animating &__data-text {
+    .has-io .cmp-chart-section--is-animating &__data-text {
       animation: chart-data-fade ease-in-out 1s forwards;
     }
   }
