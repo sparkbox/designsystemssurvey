@@ -1,4 +1,5 @@
 @mixin h1 {
+  --font-size: #{size(x1)};
   font-family: $font-secondary;
   font-weight: 700;
   font-size: size(x1);
@@ -6,15 +7,18 @@
   line-height: $line-height-tight;
   
   @media(min-width: $bp-md) {
+    --font-size: #{size(x2)};
     font-size: size(x2);
   }
 
   @media(min-width: $bp-lg) {
+    --font-size: #{size(x3)};
     font-size: size(x3);
   }
 }
 
 @mixin h2 {
+  --font-size: #{size(x1)};
   font-family: $font-primary;
   font-weight: 700;
   font-size: size(x1);
@@ -22,11 +26,13 @@
   line-height: $line-height-tight;
 
   @media(min-width: $bp-md) {
+    --font-size: #{size(x2)};
     font-size: size(x2);
   }
 }
 
 @mixin h3 {
+  --font-size: #{size(lg)};
   font-family: $font-primary;
   font-weight: 700;
   font-size: size(lg);
@@ -34,11 +40,13 @@
   line-height: $line-height-tight;
   
   @media(min-width: $bp-md) {
+    --font-size: #{size(x1)};
     font-size: size(x1);
   }
 }
 
 @mixin h4 {
+  --font-size: #{size(md)};
   font-family: $font-primary;
   font-weight: 700;
   font-size: size(md);
@@ -46,11 +54,13 @@
   line-height: $line-height-tight;
 
   @media(min-width: $bp-md) {
+    --font-size: #{size(lg)};
     font-size: size(lg);
   }
 }
 
 @mixin h5 {
+  --font-size: #{size(sm)};
   font-family: $font-primary;
   font-weight: 700;
   font-size: size(sm);
@@ -59,6 +69,7 @@
 }
 
 @mixin h6 {
+  --font-size: #{size(xs)};
   font-family: $font-primary;
   font-weight: 700;
   font-size: size(xs);
@@ -67,23 +78,27 @@
 }
 
 @mixin p {
+  --font-size: #{size(sm)};
   font-family: $font-primary;
   font-weight: 300;
   font-size: size(sm);
   text-align: left;
 
   @media(min-width: $bp-md) {
+    --font-size: #{size(md)};
     font-size: size(md);
   }
 }
 
 @mixin p-big {
+  --font-size: #{size(md)};
   font-family: $font-primary;
   font-weight: 300;
   font-size: size(md);
   text-align: left;
 
   @media(min-width: $bp-md) {
+    --font-size: #{size(lg)};
     font-size: size(lg);
   }
 }
