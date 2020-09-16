@@ -22,14 +22,12 @@ ul:not([class]) li:not([class])::before {
 
 ol:not([class]) {
   counter-reset: li;
-  
-  &[start="4"] {
-    counter-reset: li 3;
-  }
-  
-  &[start="9"] {
-    counter-reset: li 8;
-  }
+ 
+ @for $interval from 2 through 20 {
+    &[start="#{$interval}"] {
+      counter-reset: li #{$interval - 1};
+    }
+ }
 
   li:not([class]) {
     counter-increment: li;

@@ -7,6 +7,7 @@
       padding: 0;
       
       li:not([class]) {
+        margin: space(xs) 0;
         padding-left: 2.5rem;
         display: inline-block;
         width: 100%;
