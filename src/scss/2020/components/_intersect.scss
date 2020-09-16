@@ -42,11 +42,18 @@
     }
 }
 
-.js .cmp-fade-in,
-.js .cmp-fade-left,
-.js .cmp-fade-right,
-.js .cmp-fade-up {
+.has-io .cmp-fade-in,
+.has-io .cmp-fade-left,
+.has-io .cmp-fade-right,
+.has-io .cmp-fade-up {
   opacity: 0;
+}
+
+.no-js .cmp-fade-in,
+.no-js .cmp-fade-left,
+.no-js .cmp-fade-right,
+.no-js .cmp-fade-up {
+  animation: intersect-fade-in 1s ease-in-out forwards;
 }
 
 .cmp-fade-in--animate {

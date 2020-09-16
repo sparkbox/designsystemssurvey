@@ -7,16 +7,28 @@ import { StaticQuery, graphql } from "gatsby"
 class SEO extends Component {
   constructor(props) {
     super(props);
-    this.state = { jsEnabled: false };
+    this.state = {
+      jsEnabled: false,
+      htmlClass: 'no-js'
+    };
+    this.htmlClassCheck = this.htmlClassCheck.bind(this);
   }
   
   componentDidMount() {
-    this.setState({ jsEnabled : true })
+    this.setState({ htmlClass : this.htmlClassCheck() })
   }
-
-  render () {
-    const htmlClass = this.state.jsEnabled ? 'safe-focus js' :  'safe-focus no-js';
   
+  htmlClassCheck() {
+    let htmlClass = 'safe-focus js';
+    if ('IntersectionObserver' in window) {
+      htmlClass = `${htmlClass} has-io`;
+    } else {
+      htmlClass = `${htmlClass} no-io`;
+    }
+    return htmlClass;
+  }
+ 
+  render () {
     return (
       <StaticQuery
         query = {
@@ -34,7 +46,7 @@ class SEO extends Component {
           `}
         render = { data => (
           <Helmet title={`The ${this.props.year} ${data.site.siteMetadata.titleTemplate}`}>
-            <html className={htmlClass} />
+            <html className={this.state.htmlClass} />
             <meta name="application-name" content={`${this.props.year} Design Systems Survey`} />
             <meta name="author" content={data.site.siteMetadata.author} />
             <meta name="description" content={ this.props.pageDescription || data.site.siteMetadata.description } />
