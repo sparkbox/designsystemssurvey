@@ -1,0 +1,21 @@
+.cmp-list-split {
+  @media (min-width: $bp-md) {
+    ol:not([class]),
+    ul:not([class]) {
+      columns: 2;
+      column-gap: space(sm);
+      padding: 0;
+      
+      li:not([class]) {
+        padding-left: 2.5rem;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      li:not([class])::before {
+        right: calc(100% - 2rem);
+      }
+    }
+  }
+}
