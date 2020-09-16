@@ -26,6 +26,10 @@ ol:not([class]) {
   &[start="4"] {
     counter-reset: li 3;
   }
+  
+  &[start="9"] {
+    counter-reset: li 8;
+  }
 
   li:not([class]) {
     counter-increment: li;
@@ -50,6 +54,6 @@ li:not([class]) {
   }
 
   & + & {
-    margin-top: 1em;
+    margin-top: space(sm);
   }
 }
