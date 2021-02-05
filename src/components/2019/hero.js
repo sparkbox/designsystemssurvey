@@ -3,7 +3,7 @@ import React from "react"
 const Hero = () => (
   <div className="cmp-hero">
     <h1 className="cmp-hero__heading">
-      <a className="cmp-hero__logo" href="https://seesparkbox.com">
+      <a className="cmp-hero__logo" href="https://sparkbox.com">
         <img src="/images/logo.svg" alt="Sparkbox" />
       </a>
       <span className="cmp-hero__title">

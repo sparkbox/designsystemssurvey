@@ -6,35 +6,23 @@ const SiteFooter = ({animate}) => (
     <div className={animate ? 'obj-footer cmp-fade-up js-watch' : 'obj-footer'} data-animate="cmp-fade-up--animate">
       <div className="util-text-center">
         <div aria-hidden="true" className="cmp-footer__logo org"><span className="util-visually-hidden">Sparkbox</span></div>
-        <p className="util-font-p util-text-center">Assembled by your friends at <a href="https://seesparkbox.com/" className="util-link url">Sparkbox</a>.</p>
+        <p className="util-font-p util-text-center">Assembled by your friends at <a href="https://sparkbox.com/" className="util-link url">Sparkbox</a>.</p>
       </div>
       <hr className="cmp-hr-blue util-margin-vertical-lg util-width-full" />
       <div className="obj-grid">
-        <div className="obj-grid__full obj-grid__half@md obj-grid__quarter@lg">
+        <div className="obj-grid__full obj-grid__half@md obj-grid__third@lg">
           <h3 className="util-font-h4">Email</h3>
           <p className="util-font-p util-weight-700">
-            <a href="https://seesparkbox.com/work-with-us" className="util-link url">/work-with-us﻿</a>
+            <a href="https://sparkbox.com/contact" className="util-link url">/contact</a>
           </p>
         </div>
-        <div className="obj-grid__full obj-grid__half@md obj-grid__quarter@lg">
+        <div className="obj-grid__full obj-grid__half@md obj-grid__third@lg">
           <h3 className="util-font-h4">Phone</h3>
           <p className="util-font-p util-weight-700">
             <a href="tel:+19374010915﻿" className="util-link tel">937 401 0915﻿</a>
           </p>
         </div>
-        <div className="obj-grid__full obj-grid__half@md obj-grid__quarter@lg">
-          <h3 className="util-font-h4">Mail</h3>
-          <div className="util-font-p adr">
-            <div className="street-address">
-              <div>123 Webster St.</div>
-              <div>Studio 2</div>
-            </div>
-            <div>
-              <span className="locality">Dayton</span>, <span className="region">OH</span> <span className="postal-code">45402</span>
-            </div>
-          </div>
-        </div>
-        <div className="obj-grid__full obj-grid__half@md obj-grid__quarter@lg">
+        <div className="obj-grid__full obj-grid__half@md obj-grid__third@lg">
           <div className="cmp-footer__social-icons">
             <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-icon cmp-footer__social-icon--twitter url">
               <span className="util-visually-hidden">Twitter</span>
