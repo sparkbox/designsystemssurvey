@@ -23,7 +23,7 @@
       --size: 8rem;
     }
   }
-  
+
   &__social-icons {
     display: flex;
     flex-wrap: wrap;
@@ -34,10 +34,6 @@
       grid-template-columns: 3rem 3rem 3rem;
       grid-auto-rows: auto;
       margin-top: space(sm);
-
-      @media (min-width: $bp-lg) {
-        margin-top: 6rem;
-      }
     }
   }
 
@@ -51,7 +47,7 @@
     background-color: color(blue);
     border-radius: 50%;
     transition: background-color 250ms ease-in-out;
-    
+
     @supports (display: grid) {
       margin: 0;
     }

@@ -13,11 +13,11 @@ class SEO extends Component {
     };
     this.htmlClassCheck = this.htmlClassCheck.bind(this);
   }
-  
+
   componentDidMount() {
     this.setState({ htmlClass : this.htmlClassCheck() })
   }
-  
+
   htmlClassCheck() {
     let htmlClass = 'safe-focus js';
     if ('IntersectionObserver' in window) {
@@ -27,7 +27,7 @@ class SEO extends Component {
     }
     return htmlClass;
   }
- 
+
   render () {
     return (
       <StaticQuery
@@ -46,21 +46,21 @@ class SEO extends Component {
           `}
         render = { data => (
           <Helmet title={`The ${this.props.year} ${data.site.siteMetadata.titleTemplate}`}>
-            <html className={this.state.htmlClass} />
+            <html className={this.state.htmlClass} lang="en"/>
             <meta name="application-name" content={`${this.props.year} Design Systems Survey`} />
             <meta name="author" content={data.site.siteMetadata.author} />
             <meta name="description" content={ this.props.pageDescription || data.site.siteMetadata.description } />
-      
+
             <meta property="og:description" content={ this.props.pageDescription || data.site.siteMetadata.description } />
             <meta property="og:image" content={`${data.site.siteMetadata.baseUrl}/images/${this.props.image}`} />
             <meta property="og:locale" content={this.props.locale} />
             <meta property="og:title" content={`The ${this.props.year} ${data.site.siteMetadata.titleTemplate}`} />
             <meta property="og:type" content="website" />
             <meta property="og:url" content={`${data.site.siteMetadata.baseUrl}/${this.props.year}`} />
-      
+
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content={data.site.siteMetadata.author} />
-      
+
             <link rel="canonical" href={`${data.site.siteMetadata.baseUrl}/${this.props.year}`} />
             {this.props.fontCSS && <link rel="stylesheet" type="text/css" href={this.props.fontCSS} />}
             <link rel="stylesheet" type="text/css" href={`/css/${this.props.year}.css`} />
@@ -75,7 +75,7 @@ SEO.defaultProps = {
   pageDescription: null,
   image: null,
   locale: 'en_US',
-  fontCSS: null, 
+  fontCSS: null,
   year: null
 }
 
