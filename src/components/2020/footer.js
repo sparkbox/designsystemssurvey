@@ -22,7 +22,7 @@ const SiteFooter = ({animate}) => (
             <a href="tel:+19374010915﻿" className="util-link tel">937 401 0915﻿</a>
           </p>
         </div>
-        <div className="obj-grid__full obj-grid__half@md obj-grid__third@lg">
+        <div className="obj-grid__full obj-grid__half@md obj-grid__third@lg util-justify-end">
           <div className="cmp-footer__social-icons">
             <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-icon cmp-footer__social-icon--twitter url">
               <span className="util-visually-hidden">Twitter</span>
