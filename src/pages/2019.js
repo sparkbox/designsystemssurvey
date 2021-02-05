@@ -19,7 +19,7 @@ const Page2019 = () => (
     <SEO
       pageDescription="How are design systems for websites and apps changing the way the industry works? Sparkbox conducted a survey and is excited to share findings on the benefits and challenges of this impactful, systemic work."
       image="ogimage-2019.jpg"
-      fontCSS="https:cloud.typography.com/655912/7241412/css/fonts.css"
+      fontCSS="https://cloud.typography.com/655912/7241412/css/fonts.css"
       year="2019"
     />
     <svg width="0" height="0" className="util-visually-hidden">
