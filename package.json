@@ -58,8 +58,7 @@
     "ie 11",
     "> 5%",
     "Firefox > 20",
-    "ie > 10",
-    "iOS > 7",
+    "iOS > 9",
     "last 5 versions"
   ]
 }

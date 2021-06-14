@@ -7,7 +7,7 @@ const Diagram4b = () => (
   <div className="cmp-diagram">
     <p id="table4b" className="font-diagram-heading">Q: How much of your website(s) or application(s) is sourced from your design system?</p>
     <p className="font-diagram-copy">108 In-House Responses <br /> <em>Respondents were asked to select one&nbsp;answer</em></p>
-    <div className="cmp-diagram__table" tabIndex="0">
+    <div className="cmp-diagram__table">
       <table aria-labelledby="table4b">
         <thead>
           <tr>

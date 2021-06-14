@@ -8,7 +8,7 @@ const Diagram4a = () => (
     <p id="table4a" className="font-diagram-heading">Q: How is your design system delivered to the consumers of the design system?</p>
     <p className="font-diagram-copy">108 In-House Responses <br /> <em>Respondents were asked to select one&nbsp;answer</em></p>
 
-    <div className="cmp-diagram__table" tabIndex="0">
+    <div className="cmp-diagram__table">
       <table aria-labelledby="table4a">
         <thead>
           <tr>

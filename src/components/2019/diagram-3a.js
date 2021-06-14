@@ -7,7 +7,7 @@ const Diagram3a = () => (
   <div className="cmp-diagram">
     <p id="table3a" className="font-diagram-heading">Q: How strongly did each of the following factors motivate your organization to establish a design system?</p>
     <p className="font-diagram-copy">108 In-House Responses <br /> <em>Respondents were asked to rate on a 1&nbsp;to&nbsp;5 scale where 1&nbsp;=&nbsp;Not a motivator and 5&nbsp;=&nbsp;A strong&nbsp;motivator</em></p>
-    <div className="cmp-diagram__table" tabIndex="0">
+    <div className="cmp-diagram__table">
       <table aria-labelledby="table3a">
         <thead>
           <tr>
