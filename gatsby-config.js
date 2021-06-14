@@ -33,7 +33,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
