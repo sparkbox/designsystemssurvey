@@ -1,5 +1,5 @@
 {
-  "name": "designsystemsurvey2019",
+  "name": "designsystemsurvey",
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "sass": "node tasks/scss.js",
+    "prestart": "npm run sass",
     "start": "run-p develop watch",
     "serve": "gatsby serve",
     "watch": "node tasks/watch.js",
@@ -24,6 +25,7 @@
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "@mdx-js/tag": "^0.20.3",
+    "@sparkbox/sparkle": "git+https://github.com/sparkbox/sparkle.git#7e46efc",
     "autoprefixer": "^9.8.6",
     "chokidar": "^3.5.1",
     "dotenv": "^8.2.0",

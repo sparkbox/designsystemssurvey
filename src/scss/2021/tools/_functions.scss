@@ -1,0 +1,4 @@
+@function stretch($key) {
+  @return map-get($font-stretch, stringify($key));
+}
+

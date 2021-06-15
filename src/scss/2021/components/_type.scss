@@ -1,0 +1,32 @@
+.cmp-type-hero {
+	@include type-hero;
+}
+
+.cmp-type-section {
+	@include type-section;
+}
+
+.cmp-type-h2 {
+	@include type-h2;
+}
+
+.cmp-type-h3 {
+	@include type-h3;
+}
+
+.cmp-type-body-large {
+	@include type-body-large;
+}
+
+.cmp-type-body {
+	@include type-body;
+}
+
+.cmp-type-sans-micro {
+	@include type-sans-micro;
+}
+
+.cmp-type-mono-micro {
+	@include type-mono-micro;
+}
+
