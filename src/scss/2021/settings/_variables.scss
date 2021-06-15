@@ -1,0 +1,102 @@
+// Media Queries
+$media-queries: (
+  'sm': 36rem,
+  'md': 50rem,
+  'lg': 60rem,
+  'xl': 80rem
+);
+
+$bp-font-size-shift: 50rem;
+
+// Colors
+$colors: (
+  'rust':  hsl(12, 67%, 52%),
+  'neutral-1': hsl(44, 100%, 99%),
+  'neutral-2': hsl(47, 62%, 96%),
+  'neutral-3': hsl(47, 13%, 11%),
+  'white': 'white',
+);
+
+// Font Family
+$font-families: (
+  'mono': ("Inconsolata", Monaco, monospace),
+  'sans': ("Sole Sans", sans-serif)
+);
+
+// Font Weight
+$font-weight: (
+  'thin': 100,
+  'exlight': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'exbold': 800,
+  'heavy': 900
+);
+
+$font-stretch: (
+  'normal': 90%,
+  'extended': 130%
+);
+
+// Font Size
+$font-size: (
+  'sans-micro': 0.75rem,
+  'mono-micro': 0.875rem,
+  'body-sm': 0.9375rem,
+  'body-lg': 1.0625rem,
+  'h3': 1.375rem,
+  'h2': 1.875rem,
+  'section': 2.5rem,
+  'hero': 5.5rem
+);
+
+$font-size-shift: (
+  'h3': 1.625rem,
+  'h2': 2.25rem,
+  'section': 3rem,
+  'hero': 9rem
+);
+
+// Spacing System
+$spacer: (
+  'none': 0,
+  '2xs': 0.125rem,
+  '1xs': 0.25rem,
+  'sm': 0.5rem,
+  'md': 1rem,
+  'lg': 2rem,
+  '1xl': 4rem,
+  '2xl': 6rem,
+  '3xl': 8rem,
+  '10vh': 10vh,
+  '20vh': 20vh
+);
+
+// Sides
+$sides: (
+  'bottom': 'bottom',
+  'top': 'top',
+  'left': 'left',
+  'right': 'right',
+  'all': 'all',
+  'y-axis': 'horizontal',
+  'x-axis': 'vertical'
+);
+
+// Z Index
+$z-index: (
+  1: 100,
+  2: 200,
+  3: 300,
+  4: 400,
+  5: 500,
+  6: 600,
+  7: 700,
+  8: 800,
+  9: 900,
+  10: 1000
+);
+

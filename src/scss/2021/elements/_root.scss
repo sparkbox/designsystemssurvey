@@ -1,0 +1,19 @@
+:root {
+	@each $key, $value in $colors {
+		--color-#{$key}: #{$value};
+	}
+
+	@each $key, $value in $font-families {
+		--font-#{$key}: #{$value};
+	}
+
+	@each $key, $value in $font-size {
+		--type-size-#{$key}: #{$value};
+	}
+
+	@media (min-width: $bp-font-size-shift) {
+		@each $key, $value in $font-size-shift {
+			--type-size-#{$key}: #{$value};
+		}
+	}
+}
