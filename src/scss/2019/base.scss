@@ -28,6 +28,8 @@
 // //    If using features such as custom properties, those that are global
 // //    custom properties should be described in this section.
 //
+@use "sass:math";
+
 @import "settings.fonts";
 @import "settings.variables.breakpoints";
 @import "settings.variables.colors";
