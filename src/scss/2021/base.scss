@@ -72,8 +72,9 @@
 // 5. Objects
 //    Class-based selectors which define undercoated design patterns,
 //    for example media object known from OOCSS.
-
-
+@import "objects/layout";
+@import "objects/grid";
+@import "objects/lines";
 
 // =====================================================================
 // 6. Components
