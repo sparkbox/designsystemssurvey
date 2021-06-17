@@ -177,12 +177,12 @@ $circle-height: 28px;
     }
 
     &::before {
-      top: -$circle-height / 2;
+      top: math.div(-$circle-height, 2);
     }
 
     &::after {
       background: $black;
-      bottom: -$circle-height / 2;
+      bottom: math.div(-$circle-height, 2);
       z-index: -1;
     }
 

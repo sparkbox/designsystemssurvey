@@ -2,7 +2,7 @@ $grid-count: 12;
 
 @mixin column-span($span) {
   float: left;
-  width: ($span / $grid-count) * 100%;
+  width: math.div($span, $grid-count) * 100%;
 
   @supports (display: grid) {
     width: auto;
@@ -17,23 +17,23 @@ $grid-count: 12;
   @for $i from 1 through $grid-count {
     $val: '';
 
-    @if $i == ceil($grid-count * 0.25) {
+    @if $i == math.ceil($grid-count * 0.25) {
       $val: ".obj-grid__quarter#{$bp},";
     }
 
-    @else if $i == ceil($grid-count * 0.3333) {
+    @else if $i == math.ceil($grid-count * 0.3333) {
       $val: ".obj-grid__third#{$bp},";
     }
 
-    @else if $i == ceil($grid-count * 0.5) {
+    @else if $i == math.ceil($grid-count * 0.5) {
       $val: ".obj-grid__half#{$bp},";
     }
 
-    @else if $i == ceil($grid-count * 0.6666) {
+    @else if $i == math.ceil($grid-count * 0.6666) {
       $val: ".obj-grid__two-third#{$bp}, .obj-grid__two-thirds#{$bp},";
     }
 
-    @else if $i == ceil($grid-count * 0.75) {
+    @else if $i == math.ceil($grid-count * 0.75) {
       $val: ".obj-grid__three-quarter#{$bp}, .obj-grid__three-quarters#{$bp},";
     }
 
@@ -95,7 +95,7 @@ $grid-count: 12;
         grid-gap: space($key);
 
         [class*="obj-grid__"] {
-          padding: #{space($key) / 2};
+          padding: #{math.div(space($key), 2)};
 
           /* stylelint-disable-next-line max-nesting-depth */
           @supports (grid-gap: 1em) {
@@ -114,8 +114,8 @@ $grid-count: 12;
         grid-column-gap: space($key);
 
         [class*="obj-grid__"] {
-          padding-left: #{space($key) / 2};
-          padding-right: #{space($key) / 2};
+          padding-left: #{math.div(space($key), 2)};
+          padding-right: #{math.div(space($key), 2)};
 
           /* stylelint-disable-next-line max-nesting-depth */
           @supports (grid-gap: 1em) {
@@ -135,8 +135,8 @@ $grid-count: 12;
         grid-row-gap: space($key);
 
         [class*="obj-grid__"] {
-          padding-top: #{space($key) / 2};
-          padding-bottom: #{space($key) / 2};
+          padding-top: #{math.div(space($key), 2)};
+          padding-bottom: #{math.div(space($key), 2)};
 
           /* stylelint-disable-next-line max-nesting-depth */
           @supports (grid-gap: 1em) {

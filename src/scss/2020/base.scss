@@ -27,6 +27,8 @@
 //    to write comments describing the colors and font stacks as a guide.
 //    If using features such as custom properties, those that are global
 //    custom properties should be described in this section.
+@use "sass:math";
+
 @import "settings/colors";
 @import "settings/fonts";
 @import "settings/variables";

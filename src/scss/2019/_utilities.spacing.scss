@@ -32,7 +32,7 @@
       $result: $result * 10 + map-get($numbers, $character);
     } @else {
       $digits: $digits * 10;
-      $result: $result + map-get($numbers, $character) / $digits;
+      $result: $result + math.div(map-get($numbers, $character), $digits);
     }
   }
 
@@ -141,7 +141,7 @@ $limit: 4;
 $smallSpaces: ('025', '050', '075');
 
 @each $space in $smallSpaces {
-  $val: number($space) / 100 + em;
+  $val: math.div(number($space), 100) * 1em;
 
   .util-pad {
     &-all#{$space} {
