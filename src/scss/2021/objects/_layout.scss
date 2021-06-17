@@ -1,0 +1,9 @@
+.obj-max-width {
+  width: calc(100% - 1.5rem);
+  max-width: 90rem;
+  margin: 0 auto;
+  
+  @media (min-width: mq(lg)) {
+    width: calc(100% - 4rem);
+  }
+}
