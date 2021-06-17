@@ -1,4 +1,22 @@
 .obj-grid {
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+  @media (min-width: mq(md)) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  
+  @media (min-width: mq(xl)) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @for $start from 1 through 12 {
+    @for $span from 1 through 12 {
+      &__col-#{$start}-#{$span} {
+        @include loop-mq {
+          grid-column: #{$start} / span #{$span};
+        }
+      }
+    }
+  }
 }

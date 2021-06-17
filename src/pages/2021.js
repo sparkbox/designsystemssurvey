@@ -13,16 +13,23 @@ class Page2021 extends Component {
           year="2021"
         />
         <div className="obj-lines obj-max-width">
-          <main>
-            <h1 className="cmp-type-hero">Design Systems Survey</h1>
-            <h2 className="cmp-type-section">Section Title</h2>
-            <h2>Heading Level Two</h2>
-            <h3>Heading Level Three</h3>
-            <p clasName="cmp-type-large">Large Body Type. Lorem ipsum dolor sit amet consectetur adipiscing elit porttitor nam, maecenas nullam posuere ornare leo lacinia fermentum tempor habitasse donec, eget aliquet volutpat felis hac nec proin torquent. Ornare varius primis neque id fringilla felis penatibus nullam eget, facilisis aliquam condimentum sociosqu volutpat molestie maecenas. Ligula condimentum nam ac lacinia sociosqu ornare elementum odio, nec mollis luctus parturient enim senectus quam, et vitae orci torquent litora dui turpis. Eros praesent euismod sed etiam non bibendum imperdiet nulla, conubia risus proin lobortis faucibus ut phasellus suspendisse ornare, quam at lectus taciti nostra fusce vehicula.</p>
-            <p>Default Body Type. Lorem ipsum dolor sit amet consectetur adipiscing elit curae dapibus, maecenas pretium quis eu leo magnis nunc consequat, tempor etiam mollis penatibus feugiat volutpat arcu porttitor. Class venenatis purus orci volutpat facilisi primis vitae leo, dui sociosqu pharetra dictumst ipsum molestie taciti, nec mollis condimentum nascetur ante turpis felis. Accumsan in cubilia ornare pulvinar imperdiet litora, neque luctus cras laoreet convallis non arcu, sagittis sapien conubia lobortis commodo. Convallis rutrum accumsan eu varius taciti porta in, per donec metus facilisi libero dictumst dignissim, posuere dapibus auctor nostra mauris augue. Habitasse ornare at est placerat mattis phasellus proin, id felis justo taciti hendrerit ac malesuada tortor, nascetur turpis dignissim suspendisse consectetur hac. A gravida congue mus integer suscipit, ullamcorper sociis porta ridiculus.</p>
-            <p className="cmp-type-sans-micro">Lorem ipsum dolor sit amet</p>
-            <p className="cmp-type-mono-micro">Feugiat volutpat arcu porttitor</p>
-          </main>
+          <div className="obj-grid">
+            <div className="obj-grid__col-1-4 util-align-self-center">
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit fames porta egestas interdum, volutpat tempus mus nascetur cum eget viverra accumsan sodales. Augue molestie lobortis vel tincidunt litora semper fringilla suspendisse nisi, varius dignissim fusce quis cubilia auctor duis magnis, luctus tempor sapien aliquet tellus mattis felis curae. Dignissim est nostra convallis laoreet eget ante mollis integer leo, aptent proin sodales phasellus interdum vehicula condimentum praesent turpis placerat, tincidunt ridiculus felis morbi auctor ipsum etiam torquent. Mi in nisi lectus tellus metus fusce tempus litora, orci duis ac vivamus sit venenatis. Nostra porttitor nam penatibus congue per tellus duis, aliquet accumsan habitasse bibendum malesuada consectetur ante, auctor risus mattis sollicitudin luctus lorem. Venenatis etiam fermentum elementum habitant magnis vulputate gravida, egestas adipiscing quam at orci parturient condimentum mollis, rhoncus semper imperdiet felis curae turpis. Odio imperdiet sociosqu urna iaculis dictumst id maecenas tempus massa dolor sit, purus ante aliquam quam parturient donec class mus auctor. Sed curabitur dis quam phasellus id tellus fermentum ut, dolor per dui natoque condimentum ultrices justo dapibus inceptos, penatibus fringilla dictumst dictum conubia morbi vivamus.</p>
+            </div>
+
+            <div className="obj-grid__col-9-4 util-align-self-end">
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, est semper justo tincidunt eleifend imperdiet suspendisse, varius erat platea condimentum turpis lobortis. Justo suspendisse condimentum magna inceptos purus quam magnis amet, tincidunt tempus cras posuere ipsum duis a diam porttitor, aenean dictumst platea morbi nisi auctor ad. Non hendrerit fusce posuere senectus auctor pellentesque commodo rhoncus cubilia, odio diam fringilla amet primis duis purus imperdiet, neque euismod id tincidunt ut lacinia sollicitudin facilisis.</p>
+            </div>
+            
+            <div className="col-1-2 util-align-self-center util-margin-top-neg-3xl">
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dui, non vehicula quam viverra lacinia aliquam sem aliquet, interdum pulvinar aptent quis scelerisque ut integer.</p>
+            </div>
+            <div className="obj-grid__col-5-3">
+              <p>Nostra consequat nibh ornare conubia ut varius purus, vivamus arcu hendrerit mus magnis nullam mollis egestas, adipiscing augue taciti tempus consectetur proin. Habitant nullam sagittis libero fusce commodo vitae ornare dui scelerisque dolor a quis, ut fames consectetur elit vel porta tempor nec pellentesque conubia tortor.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit duis placerat, ligula vel condimentum iaculis lacinia quam rutrum diam, mi sem leo urna mauris ridiculus id nulla. Praesent lorem sociis libero vestibulum sociosqu maecenas natoque a nec, tellus pretium quisque montes interdum cum magnis sollicitudin primis torquent, morbi volutpat dignissim vivamus sodales malesuada donec nascetur.</p>
+            </div>
+          </div>
         </div>
       </Layout>
     )
