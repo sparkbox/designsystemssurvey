@@ -2,3 +2,14 @@
   @return map-get($font-stretch, stringify($key));
 }
 
+@function outline($color, $thickness:1) {
+  $outline: drop-shadow(0 0 0.5px #{$color}) drop-shadow(0 0 0.5px #{$color}) drop-shadow(0 0 0.5px #{color($color)}) drop-shadow(0 0 0.5px #{$color}) drop-shadow(0 0 0.5px #{$color}) drop-shadow(0 0 0.5px #{$color}) drop-shadow(0 0 0.5px #{$color}) drop-shadow(0 0 0.5px #{$color});
+
+  @return $outline;
+}
+
+@function stroke($color, $thickness:1) {
+  $outline: 1px 0 $color, 0 1px $color, 1px 1px $color,-1px 0 $color, 0 -1px $color, -1px -1px $color, -1px 1px $color, 1px -1px $color;
+
+  @return $outline;
+}

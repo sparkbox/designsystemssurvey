@@ -1,7 +1,8 @@
 :root {
 	@each $key, $value in $colors {
 		--color-#{$key}: #{$value};
-	}
+	}	
+	--color-line: hsla(47, 13%, 11%, 0.05);
 
 	@each $key, $value in $font-families {
 		--font-#{$key}: #{$value};
