@@ -14,13 +14,22 @@ class Page2021 extends Component {
           image="ogimage-2021.png"
           year="2021"
         />
-        <div className="obj-lines obj-max-width">
+        <div className="obj-lines obj-max-width" htmlStyle="padding: 10vh 0;">
           <Grid>
-            <GridCell startLG="1" spanLG="6">
+            <GridCell>
+              <h1 className="cmp-type-hero">
+                Design Systems <span>Survey</span>
+              </h1>
+            </GridCell>
+
+            <GridCell>
+              <h2 className="cmp-type-section">
+                Section One Title
+              </h2>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit fames porta egestas interdum, volutpat tempus mus nascetur cum eget viverra accumsan sodales. Augue molestie lobortis vel tincidunt litora semper fringilla suspendisse nisi, varius dignissim fusce quis cubilia auctor duis magnis, luctus tempor sapien aliquet tellus mattis felis curae. Dignissim est nostra convallis laoreet eget ante mollis integer leo, aptent proin sodales phasellus interdum vehicula condimentum praesent turpis placerat, tincidunt ridiculus felis morbi auctor ipsum etiam torquent. Mi in nisi lectus tellus metus fusce tempus litora, orci duis ac vivamus sit venenatis. Nostra porttitor nam penatibus congue per tellus duis, aliquet accumsan habitasse bibendum malesuada consectetur ante, auctor risus mattis sollicitudin luctus lorem. Venenatis etiam fermentum elementum habitant magnis vulputate gravida, egestas adipiscing quam at orci parturient condimentum mollis, rhoncus semper imperdiet felis curae turpis. Odio imperdiet sociosqu urna iaculis dictumst id maecenas tempus massa dolor sit, purus ante aliquam quam parturient donec class mus auctor. Sed curabitur dis quam phasellus id tellus fermentum ut, dolor per dui natoque condimentum ultrices justo dapibus inceptos, penatibus fringilla dictumst dictum conubia morbi vivamus.</p>
             </GridCell>
 
-            <GridCell startLG="9" spanLG="4" alignLG="center"  rowSpan="2">
+            <GridCell startLG="8" spanLG="4" alignLG="center"  rowSpan="2">
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, est semper justo tincidunt eleifend imperdiet suspendisse, varius erat platea condimentum turpis lobortis. Justo suspendisse condimentum magna inceptos purus quam magnis amet, tincidunt tempus cras posuere ipsum duis a diam porttitor, aenean dictumst platea morbi nisi auctor ad. Non hendrerit fusce posuere senectus auctor pellentesque commodo rhoncus cubilia, odio diam fringilla amet primis duis purus imperdiet, neque euismod id tincidunt ut lacinia sollicitudin facilisis.</p>
               <p>Venenatis etiam fermentum elementum habitant magnis vulputate gravida, egestas adipiscing quam at orci parturient condimentum mollis, rhoncus semper imperdiet felis curae turpis. Odio imperdiet sociosqu urna iaculis dictumst id maecenas tempus massa dolor sit, purus ante aliquam quam parturient donec class mus auctor.</p>
             </GridCell>

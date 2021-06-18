@@ -1,61 +1,65 @@
 .obj-lines {
-  --color: #{rgba(color(neutral-3), 0.05)};
-  --columns: 2;
-  --size: calc(100% / var(--columns));
-  --step-1: calc(var(--size) * 1);
-  --step-2: calc(var(--size) * 2);
-  --step-3: calc(var(--size) * 3);
-  --step-4: calc(var(--size) * 4);
-  --step-5: calc(var(--size) * 5);
-  padding: 0;
+  position: relative;
 
-  background-image: linear-gradient(90deg,
-    var(--color) 1px,
+  background: linear-gradient(90deg,
+    var(--color-line) 1px,
+
     transparent 2px,
+    transparent 50%,
 
-    transparent calc(var(--step-1) - 1px),
-    var(--color) var(--step-1),
-    transparent calc(var(--step-1) + 1px),
+    var(--color-line) calc(50% + 1px),
 
+    transparent calc(50% + 2px),
     transparent calc(100% - 2px),
-    var(--color) 100%
+
+    var(--color-line) calc(100% - 1px)
   );
-
+  
   @media (min-width: mq(md)) {
-    --columns: 4;
-    background-image: linear-gradient(90deg,
-      var(--color) 1px,
+    background: linear-gradient(90deg,
+      var(--color-line) 1px,
       transparent 2px,
-      transparent calc(25% - 1px), var(--color) 25%, transparent calc(25% + 1px), transparent calc(50% - 1px), var(--color) 50%, transparent calc(50% + 1px), transparent calc(75% - 1px), var(--color) 75%,transparent calc(75% + 1px), transparent calc(100% - 2px), var(--color) 100%);
-  }
-
-  @media (min-width: mq(xl)) {
-    --columns: 6;
-    background-image: linear-gradient(90deg,
-      var(--color) 1px,
-      transparent 2px,
-      transparent calc(var(--step-1) - 1px),
-      var(--color) var(--step-1),
-      transparent calc(var(--step-1) + 1px),
-
-      transparent calc(var(--step-2) - 1px),
-      var(--color) var(--step-2),
-      transparent calc(var(--step-2) + 1px),
-
-      transparent calc(var(--step-3) - 1px),
-      var(--color) var(--step-3),
-      transparent calc(var(--step-3) + 1px),
-
-      transparent calc(var(--step-4) - 1px),
-      var(--color) var(--step-4),
-      transparent calc(var(--step-4) + 1px),
-
-      transparent calc(var(--step-5) - 1px),
-      var(--color) var(--step-5),
-      transparent calc(var(--step-5) + 1px),
-
+      transparent 50%,
+      var(--color-line) calc(50% + 1px),
+      transparent calc(50% + 2px),
       transparent calc(100% - 2px),
-      var(--color) 100%
+      var(--color-line) calc(100% - 1px)
+    ),
+    linear-gradient(90deg,
+      transparent 25%,
+      var(--color-line) calc(25% + 1px),
+      transparent calc(25% + 2px),
+      transparent 75%,
+      var(--color-line) calc(75% + 1px),
+      transparent calc(75% + 2px)
+    );
+  }
+  
+  @media (min-width: mq(xl)) {
+    background: linear-gradient(90deg,
+      var(--color-line) 1px,
+      transparent 2px,
+      transparent 50%,
+      var(--color-line) calc(50% + 1px),
+      transparent calc(50% + 2px),
+      transparent calc(100% - 2px),
+      var(--color-line) calc(100% - 1px)
+    ),
+    linear-gradient(90deg,
+      transparent 16.667%,
+      var(--color-line) calc(16.667% + 1px),
+      transparent calc(16.667% + 2px),
+      transparent 33.334%,
+      var(--color-line) calc(33.334% + 1px),
+      transparent calc(33.334% + 2px)
+    ),
+    linear-gradient(90deg,
+      transparent 66.667%,
+      var(--color-line) calc(66.667% + 1px),
+      transparent calc(66.667% + 2px),
+      transparent 83.334%,
+      var(--color-line) calc(83.334% + 1px),
+      transparent calc(83.334% + 2px)
     );
   }
 }
