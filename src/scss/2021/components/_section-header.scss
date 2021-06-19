@@ -1,0 +1,54 @@
+.cmp-section-header {
+  border-top: 0.5rem solid var(--color-neutral-3);
+  line-height: 0.75;
+  position: relative;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: "0" attr(data-number);
+    font-family: var(--font-mono);
+    color: var(--color-neutral-1);
+    font-size: 15rem;
+    text-shadow: stroke(var(--color-rust));
+  }
+  
+  &__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.4;
+    margin: 0 0 -0.25em;
+    text-shadow: stroke(var(--color-neutral-1));
+    @include type-section;
+  }
+  
+  &__marker {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding-top: 0.5rem;
+    top: 0;
+    right: 0;
+    border-top: 0.5rem solid var(--color-neutral-3);
+  }
+  
+  &__mark {
+    stroke-width: 1px;
+    stroke: var(--color-neutral-3);
+    fill: var(--color-neutral-1);
+    
+    &--1-1,
+    &--2-2,
+    &--3-3,
+    &--4-4,
+    &--5-5,
+    &--6-6 {
+      fill: var(--color-neutral-3);
+    }
+  }
+  
+  &__progress {
+    @include type-mono-micro;
+    margin-left: 1rem;
+  }
+}
