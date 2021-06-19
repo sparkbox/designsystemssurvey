@@ -23,9 +23,10 @@
 @mixin type-h3 {
 	font-family: var(--font-mono);
 	font-size: var(--type-size-h3);
-	font-weight: weight(semibold);
+	font-weight: weight(medium);
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
+	line-height: 1.2;
 }
 
 @mixin type-body-large {

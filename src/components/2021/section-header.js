@@ -1,15 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-// <path d="M1 23 L23 1 V23 H1 Z" className="cmp-section-header__mark" />
-
-// <path d="M1 23 L23 1 V23 H1 Z" fill="#211F19" stroke="#211F19"/>
-// <path d="M17 23 L39 1 V23 H17 Z" fill="#FFFEFA" stroke="#211F19"/>
-// <path d="M33 23 L55 1 V23 H33 Z" fill="#FFFEFA" stroke="#211F19"/>
-// <path d="M49 23 L71 1 V23 H49 Z" fill="#FFFEFA" stroke="#211F19"/>
-// <path d="M65 23 L87 1 V23 H65 Z" fill="#FFFEFA" stroke="#211F19"/>
-// <path d="M81 23 L103 1 V23 H81 Z" fill="#FFFEFA" stroke="#211F19"/>
-
 const SectionHeader = ({title, number, total}) => {
   let progress = `0${number}/0${total}`;
   let markers = [];

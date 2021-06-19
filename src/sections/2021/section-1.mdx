@@ -1,5 +1,21 @@
 import SectionHeader from '../../components/2021/section-header'
 import Grid from '../../components/2021/grid'
 import GridCell from '../../components/2021/grid-cell'
+import PieChart from '../../components/2021/pie-chart'
 
 <SectionHeader title="The Respondents" number="1" total="6" />
+
+<Grid>
+  <GridCell start="1" spanMD="8" spanLG="6">
+    <PieChart
+      title={<>In your opinion, <strong>how successful</strong> is your organization’s design system?</>}
+      dataPoints={[
+        ['Question Number One', 25],
+        ['Question 2', 24],
+        ['Lorem ipsum dolor', 20],
+        ['Design Systems', 17],
+        ['Maturity Model', 14]
+      ]}
+    />
+  </GridCell>
+</Grid>
