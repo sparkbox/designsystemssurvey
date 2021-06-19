@@ -8,8 +8,10 @@
   @return $outline;
 }
 
-@function stroke($color, $thickness:1) {
-  $outline: 1px 0 $color, 0 1px $color, 1px 1px $color,-1px 0 $color, 0 -1px $color, -1px -1px $color, -1px 1px $color, 1px -1px $color;
+@function stroke($color, $thickness:1px) {
+  $pos: $thickness;
+  $neg: $thickness * -1;
+  $outline: $pos 0 $color, 0 $pos $color, $pos $pos $color,$neg 0 $color, 0 $neg $color, $neg $neg $color, $neg $pos $color, $pos $neg $color;
 
   @return $outline;
 }
