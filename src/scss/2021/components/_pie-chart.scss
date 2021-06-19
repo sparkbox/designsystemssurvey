@@ -1,0 +1,192 @@
+.cmp-pie-chart {
+  &__keys-container {
+    background-color: var(--color-neutral-1);
+    box-shadow: 0 0 0 1rem var(--color-neutral-1);
+    width: 66.667%;
+    margin-left: 33.333%;
+    position: relative;
+    z-index: z-index(2);
+  }
+  &__keys {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  &__title {
+    @include type-h3;
+    text-align: left;
+    border-top: 1px solid var(--color-neutral-3);
+    padding: 1.5em 0;
+
+    strong {
+      font-weight: inherit;
+      color: var(--color-rust);
+    }
+  }
+  &__key {
+    vertical-align: middles;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  &__key-name {
+    padding: 0.5rem 0;
+    text-align: left;
+    @include type-mono-micro;
+
+    &--object-1 {
+      /* */
+    }
+    &--object-2 {
+      /* */
+    }
+    &--object-3 {
+      /* */
+    }
+    &--object-4 {
+      /* */
+    }
+    &--object-5 {
+      /* */
+    }
+  }
+  &__key-value {
+    @include type-mono-micro;
+    text-align: right;
+  }
+
+  &__diagram-container {
+    width: 50%;
+    margin-top: -15%;
+    position: relative;
+    z-index: z-index(1);
+  }
+
+  &__diagram {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--color-neutral-3);
+    box-shadow: 0 0 0 1px var(--color-neutral-1);
+    
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  &__slice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 0px;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 50%;
+      left: calc(50% - 1px);
+      border: 1px solid var(--color-neutral-3);
+      transform-origin: bottom center;
+      box-shadow: 0 0 0 0.5px var(--color-neutral-3);
+    }
+
+    &--object-1 {
+      background-color: var(--color-neutral-3);
+      mask-image: conic-gradient(
+        black 0deg,
+        black var(--turn-1),
+        transparent var(--turn-1)
+      );
+
+      &::before {
+        transform: rotate(var(--turn-1));
+      }
+
+      &::after {
+        transform: rotate(var(--turn-2));
+      }
+    }
+
+    &--object-2 {
+      background: center / 4px 4px repeat url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="black" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E'), var(--color-neutral-1);
+      mask-image: conic-gradient(
+        transparent 0deg,
+        transparent var(--turn-1),
+        black var(--turn-1),
+        black var(--turn-2),
+        transparent var(--turn-2)
+      );
+
+      &::before {
+        transform: rotate(var(--turn-2));
+      }
+
+      &::after {
+        transform: rotate(var(--turn-3));
+      }
+    }
+
+    &--object-3 {
+      background-color: var(--color-neutral-1);
+      mask-image: conic-gradient(
+        transparent 0deg,
+        transparent var(--turn-2),
+        black var(--turn-2),
+        black var(--turn-3),
+        transparent var(--turn-3)
+      );
+
+      &::before {
+        transform: rotate(var(--turn-3));
+      }
+
+      &::after {
+        transform: rotate(var(--turn-4));
+      }
+    }
+
+    &--object-4 {
+      background: center / 5px 5px url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"%3E%3Cg fill="black" %3E%3Cpath fill-rule="evenodd" d="M0 0h4v4H0V0zm4 4h4v4H4V4z"/%3E%3C/g%3E%3C/svg%3E'), var(--color-neutral-1);
+      mask-image: conic-gradient(
+        transparent 0deg,
+        transparent var(--turn-3),
+        black var(--turn-3),
+        black var(--turn-4),
+        transparent var(--turn-4)
+      );
+
+      &::before {
+        transform: rotate(var(--turn-4));
+      }
+
+      &::after {
+        transform: rotate(var(--turn-5));
+      }
+    }
+
+    &--object-5 {
+      background: center / 50px 50px url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="black" %3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'), white;
+      mask-image: conic-gradient(
+        transparent 0deg,
+        transparent var(--turn-4),
+        black var(--turn-4),
+        black 100%,
+        transparent 100%
+      );
+
+      &::before {
+        transform: rotate(var(--turn-5));
+      }
+
+      &::after {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
