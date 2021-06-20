@@ -36,7 +36,6 @@
 @import "settings/variables";
 
 
-
 // =====================================================================
 // 2. Tools
 //    This section is specifically for preprocessor global mixins and
@@ -46,6 +45,7 @@
 @import "tools/mixins";
 @import "tools/functions";
 @import "tools/type";
+@import "tools/svg";
 
 
 // =====================================================================
@@ -70,6 +70,7 @@
 @import "elements/h3";
 @import "elements/p";
 
+
 // =====================================================================
 // 5. Objects
 //    Class-based selectors which define undercoated design patterns,
@@ -78,6 +79,7 @@
 @import "objects/grid";
 @import "objects/lines";
 
+
 // =====================================================================
 // 6. Components
 //    Specific UI components. This is where majority of our work takes place
@@ -85,6 +87,7 @@
 @import "components/type";
 @import "components/section-header";
 @import "components/pie-chart";
+
 
 // =====================================================================
 // 7. Vendors
@@ -99,5 +102,6 @@
 //    Utilities and helper classes with ability to override anything
 //    which goes before in the triangle, eg. hide helper class
 @import "utilities/colors";
+@import "utilities/fills";
 @import "sparkle/utilities";
 
