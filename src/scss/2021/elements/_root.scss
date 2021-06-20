@@ -17,4 +17,12 @@
 			--type-size-#{$key}: #{$value};
 		}
 	}
+
+	// Just an idea to provide a dark mode style	
+	// @media (prefers-color-scheme: dark) {
+	// 	--color-rust: hsl(12, 72%, 57%);
+	// 	--color-neutral-1: hsl(47, 13%, 6%);
+	// 	--color-neutral-3: hsl(44, 100%, 99%);
+	// 	--color-line: hsla(44, 100%, 99%, 0.05);
+	// }
 }

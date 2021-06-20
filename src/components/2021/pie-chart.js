@@ -5,17 +5,22 @@ const PieChart = (props) => {
   let cssProperties = {}
   let key = []
   let slices = []
+  let fill
 
   for (let i = 0; i < props.dataPoints.length; i++) {
     cssProperties[`--object-${i + 1}`] = props.dataPoints[i][1];
+
     key.push(
       <tr className="cmp-pie-chart__key">
-        <th className={`cmp-pie-chart__key-name cmp-pie-chart__key-name--object-${i + 1}`}>{props.dataPoints[i][0]}</th>
+        <th className="cmp-pie-chart__key-name">
+          <span className={`cmp-pie-chart__key-marker util-fill-style-${i + 1}`} />
+          {props.dataPoints[i][0]}
+        </th>
         <td className="cmp-pie-chart__key-value">{props.dataPoints[i][1]}%</td>
       </tr>
     );
     slices.push(
-      <div className={`cmp-pie-chart__slice cmp-pie-chart__slice--object-${i + 1}`} />
+      <div className={`cmp-pie-chart__slice cmp-pie-chart__slice--object-${i + 1} util-fill-style-${i + 1}`} />
     );
   }
   
