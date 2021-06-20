@@ -23,6 +23,7 @@
   }
   
   &__marker {
+    pointer-events: none;
     display: flex;
     align-items: center;
     position: absolute;
@@ -48,6 +49,7 @@
   }
   
   &__progress {
+    pointer-events: none;
     @include type-mono-micro;
     margin-left: 1rem;
   }
