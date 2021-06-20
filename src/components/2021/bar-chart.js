@@ -6,6 +6,7 @@ const BarChart = (props) => {
   let keysMap = []
   let style
   
+  // Chart Key
   for (let i = 0; i < props.keyMap.length; i++) {
     style = (i == 0) ? 6 : i
     keysMap.push(
@@ -18,6 +19,7 @@ const BarChart = (props) => {
     );
   }
   
+  // Single Bar
   let barIterator = (...value) => {
     let results = []
     let style
