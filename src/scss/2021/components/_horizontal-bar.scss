@@ -1,0 +1,53 @@
+.cmp-bar-chart { 
+ border-top: 1px solid var(--color-neutral-3);
+  
+  &__keys {
+    margin: 2rem 0;
+  }
+
+  &__key-name {
+    @include type-mono-micro;
+  }
+
+  &__key-marker {
+    margin-right: 1em;
+    vertical-align: middle;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    border: 1px solid var(--border);
+  }
+  
+  &__diagram {
+    padding: 1rem 0 2rem 1rem;
+    border-left: 1px solid var(--color-rust);
+  }
+  
+  &__set {
+    & + & {
+      margin-top: 1rem;
+    } 
+  }
+  
+  &__set-name {
+    @include type-sans-micro();
+    margin-bottom: 0.5em;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    width: var(--width);
+    color: var(--color);
+    display: flex;
+  }
+  
+  &__value {
+    display: inline;
+    @include type-mono-micro();
+    line-height: 1;
+    padding: 0.125rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--bgcolor);
+  }
+}
