@@ -1,0 +1,19 @@
+.cmp-figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  
+  &__caption {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+    color: color.mix(color(neutral-3), color(neutral-1), 50%);
+    @include type-mono-micro;
+  }
+  
+  &__count {
+    margin-left: 2rem;
+    display: inline-block;
+    color: var(--color-neutral-3);
+  }
+}

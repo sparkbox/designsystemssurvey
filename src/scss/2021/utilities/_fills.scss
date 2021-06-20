@@ -13,8 +13,8 @@
   --border: var(--color-neutral-3);
   background-color: var(--color-neutral-1);
   background-image: svg(
-    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(neutral-3)}" stroke-widht="1" vector-effect="non-scaling-stroke">' +
-      '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" />' +
+    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(neutral-3)}" stroke-width="1">' +
+      '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" vector-effect="non-scaling-stroke" />' +
     '</svg>'
   );
   background-size: #{$size + 0px} #{$size + 0px};
@@ -47,8 +47,8 @@
   --border: var(--color-neutral-3);
   background-color: var(--color-neutral-1);
   background-image: svg(
-    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(neutral-3)}" stroke-widht="1" vector-effect="non-scaling-stroke">' +
-      '<path d="M0,0 #{$size},#{$size} M0,#{$size} #{$size},0" />' +
+    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(neutral-3)}" stroke-width="1">' +
+      '<path d="M0,0 #{$size},#{$size} M0,#{$size} #{$size},0" vector-effect="non-scaling-stroke" />' +
     '</svg>'
   );
   background-size: #{$size + 0px} #{$size + 0px};
@@ -61,8 +61,8 @@
   --border: var(--color-neutral-3);
   background-color: var(--color-neutral-1);
   background-image: svg(
-    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(rust)}" stroke-widht="1" vector-effect="non-scaling-stroke">' +
-      '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" />' +
+    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(rust)}" stroke-width="1">' +
+      '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" vector-effect="non-scaling-stroke" />' +
     '</svg>'
   );
   background-size: #{$size + 0px} #{$size + 0px};
