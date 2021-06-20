@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Figure from "./figure"
 
 const PieChart = (props) => {
   let cssProperties = {}
@@ -32,21 +31,19 @@ const PieChart = (props) => {
   cssProperties['--turn-5'] = 'calc(((var(--object-5) / var(--total)) * 360deg) + var(--turn-4))'
 
   return (
-    <Figure count={props.count} caption={props.caption}>
-      <div className="cmp-pie-chart">
-        <div className="cmp-pie-chart__keys-container">
-          <table className="cmp-pie-chart__keys">
-            <caption className="cmp-pie-chart__title">{props.title}</caption>
-            {key}
-          </table>
-        </div>
-        <div className="cmp-pie-chart__diagram-container">
-          <div className="cmp-pie-chart__diagram" aria-hidden="true" style={cssProperties}>
-            {slices}
-          </div>
+    <div className="cmp-pie-chart">
+      <div className="cmp-pie-chart__keys-container">
+        <table className="cmp-pie-chart__keys">
+          <caption className="cmp-pie-chart__title">{props.title}</caption>
+          {key}
+        </table>
+      </div>
+      <div className="cmp-pie-chart__diagram-container">
+        <div className="cmp-pie-chart__diagram" aria-hidden="true" style={cssProperties}>
+          {slices}
         </div>
       </div>
-    </Figure>
+    </div>
   );
 }
 

@@ -19,18 +19,18 @@
   
   &__col {
     grid-column: var(--start) / span var(--span);
-    grid-row: span var(--row-span);
+    grid-row: var(--row-start) / span var(--row-span);
     align-self: var(--align);
     
     @media (min-width: mq(md)) {
       grid-column: var(--start-md) / span var(--span-md);
-      grid-row: span var(--row-span-md);
+      grid-row: var(--row-span-md) / span var(--row-span-md);
       align-self: var(--align-md);
     }
     
     @media (min-width: mq(xl)) {
       grid-column: var(--start-lg) / span var(--span-lg);
-      grid-row: span var(--row-span-lg);
+      grid-row: var(--row-start-lg) / span var(--row-span-lg);
       align-self: var(--align-lg);
     }
   }

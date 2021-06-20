@@ -14,53 +14,57 @@ import Figure from "../../components/2021/figure"
   <GridCell spanLG="6">
     <p class="cmp-type-body-large">In-house and agency respondents were asked a different set of questions with overlapping topics. In-house respondents offered insight based on their direct perspectives with design systems at their organizations while agency respondents offered insight into their client’s experiences.</p>
   </GridCell>
+
+  <GridCell start="1" spanMD="6">
+    <Figure count="1.1" caption="217 Responses">
+      <PieChart
+        title={<>What most closely describes your role? <strong>(In-House)</strong></>}
+        dataPoints={[
+          ['Individual contributor (developer, designer, etc.)', 64],
+          ['Manager', 24],
+          ['Executive', 4],
+          ['Owner', 4],
+          ['Freelancer or independent consultant', 4]
+        ]}
+      />
+    </Figure>
+  </GridCell>
   
-  <GridCell start="1" startMD="5" startLG="9" rowSpanMD="2" alignMD="center">
-    <StackedChart
-      title="How much of your website(s) or application(s) is sourced from your design system?"
-      keyMap={[
-        'Less than 25% is from the design system',
-        '25% to 49% is from the design system',
-        '50% to 74% is from the design system',
-        'More than 75% is from the design system',
-        'I am not sure'
-      ]}
-      dataPoints={[
-        ['Not successful', [33, 33, 17, 0, 17]],
-        ['Slightly successful', [58, 32, 10, 0, 0]],
-        ['Moderately successful', [17, 30, 22, 20, 12]],
-        ['Successful', [10, 24, 36, 28, 2]],
-        ['Very successful', [8, 8, 25, 50, 8]]
-      ]}
-    />
+  <GridCell start="1" startMD="5" startLG="9" rowSpanMD="2" rowStartMD="2" alignMD="center">
+    <Figure count="1.2" caption="159 Responses">
+      <StackedChart
+        title="How much of your website(s) or application(s) is sourced from your design system?"
+        keyMap={[
+          'Less than 25% is from the design system',
+          '25% to 49% is from the design system',
+          '50% to 74% is from the design system',
+          'More than 75% is from the design system',
+          'I am not sure'
+        ]}
+        dataPoints={[
+          ['Not successful', [33, 33, 17, 0, 17]],
+          ['Slightly successful', [58, 32, 10, 0, 0]],
+          ['Moderately successful', [17, 30, 22, 20, 12]],
+          ['Successful', [10, 24, 36, 28, 2]],
+          ['Very successful', [8, 8, 25, 50, 8]]
+        ]}
+      />
+    </Figure>
   </GridCell>
 
   <GridCell start="1" spanMD="6">
-    <PieChart
-      title={<>What most closely describes your role? <strong>(In-House)</strong></>}
-      dataPoints={[
-        ['Individual contributor (developer, designer, etc.)', 64],
-        ['Manager', 24],
-        ['Executive', 4],
-        ['Owner', 4],
-        ['Freelancer or independent consultant', 4]
-      ]}
-      count="1.1" caption="217 Responses"
-    />
-  </GridCell>
-
-  <GridCell start="1" spanMD="6">
-    <PieChart
-      title={<>What most closely describes your role? <strong>(Agency)</strong></>}
-      dataPoints={[
-        ['Individual contributor (developer, designer, etc.)', 56],
-        ['Manager', 16],
-        ['Executive', 6],
-        ['Owner', 8],
-        ['Freelancer or independent consultant', 14]
-      ]}
-      count="1.2" caption="159 Responses"
-    />
+    <Figure count="1.3" caption="159 Responses">
+      <PieChart
+        title={<>What most closely describes your role? <strong>(Agency)</strong></>}
+        dataPoints={[
+          ['Individual contributor (developer, designer, etc.)', 56],
+          ['Manager', 16],
+          ['Executive', 6],
+          ['Owner', 8],
+          ['Freelancer or independent consultant', 14]
+        ]}
+      />
+    </Figure>
   </GridCell>
   
   <GridCell start="1" startMD="5" startLG="9" rowSpanMD="2" alignMD="center">
