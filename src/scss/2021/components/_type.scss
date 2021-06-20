@@ -1,32 +1,72 @@
 .cmp-type-hero {
 	@include type-hero;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .cmp-type-section {
 	@include type-section;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .cmp-type-h2 {
 	@include type-h2;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .cmp-type-h3 {
 	@include type-h3;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .cmp-type-body-large {
 	@include type-body-large;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .cmp-type-body {
 	@include type-body;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .cmp-type-sans-micro {
 	@include type-sans-micro;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .cmp-type-mono-micro {
 	@include type-mono-micro;
+	margin: 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
