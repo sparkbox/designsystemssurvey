@@ -1,17 +1,21 @@
 [class*="util-fill-style-"] {
+  --color: var(--color-neutral-3);
+  --bgcolor: var(--color-neutral-1);
   background-repeat: repeat;
   background-position: center;
 }
 
 .util-fill-style-1 {
+  --color: var(--color-neutral-1);
+  --bgcolor: transparent;
   --border: var(--color-neutral-3);
   background: var(--color-neutral-3);
 }
 
 .util-fill-style-2 {
-  $size: 6;
   --border: var(--color-neutral-3);
   background-color: var(--color-neutral-1);
+  $size: 6; // Sizes the SVG Background Image
   background-image: svg(
     '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(neutral-3)}" stroke-width="1">' +
       '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" vector-effect="non-scaling-stroke" />' +
@@ -28,8 +32,8 @@
 .util-fill-style-4 {
   --border: var(--color-neutral-3);
   background-color: var(--color-neutral-1);
-  $size: 8;
-  $dot: 1;
+  $size: 8; // Sizes the SVG Background Image
+  $dot: 1; // Sets the SVG Dot Size
   background-image: svg(
     '<svg fill="#{color(neutral-3)}" viewBox="0 0 #{$size} #{$size}">' +
       '<circle cy="0" cx="0" r="#{$dot}" />' +
@@ -43,9 +47,9 @@
 }
 
 .util-fill-style-5 {
-  $size: 8;
   --border: var(--color-neutral-3);
   background-color: var(--color-neutral-1);
+  $size: 8; // Sizes the SVG Background Image
   background-image: svg(
     '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(neutral-3)}" stroke-width="1">' +
       '<path d="M0,0 #{$size},#{$size} M0,#{$size} #{$size},0" vector-effect="non-scaling-stroke" />' +
@@ -57,9 +61,7 @@
 .util-fill-style-6 {
   --border: var(--color-rust);
   background-color: var(--color-neutral-1);
-  $size: 6;
-  --border: var(--color-neutral-3);
-  background-color: var(--color-neutral-1);
+  $size: 6; // Sizes the SVG Background Image
   background-image: svg(
     '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{color(rust)}" stroke-width="1">' +
       '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" vector-effect="non-scaling-stroke" />' +
