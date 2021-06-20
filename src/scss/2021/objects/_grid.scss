@@ -24,7 +24,7 @@
     
     @media (min-width: mq(md)) {
       grid-column: var(--start-md) / span var(--span-md);
-      grid-row: var(--row-span-md) / span var(--row-span-md);
+      grid-row: var(--row-start-md) / span var(--row-span-md);
       align-self: var(--align-md);
     }
     

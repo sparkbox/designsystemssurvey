@@ -8,7 +8,7 @@ const BarChart = (props) => {
   
   // Chart Key
   for (let i = 0; i < props.keyMap.length; i++) {
-    style = (i == 0) ? 6 : i
+    style = (i === 0) ? 6 : i
     keysMap.push(
       <div className="cmp-bar-chart__key">
         <span className={`cmp-bar-chart__key-marker util-fill-style-${style}`} />
@@ -25,7 +25,7 @@ const BarChart = (props) => {
     let style
 
     for (let i = 0; i < (value.length + 1); i++) {
-      style = (i == 0) ? 6 : i
+      style = (i === 0) ? 6 : i
       let result = value[0][i]
       let cssProperties = {}
       cssProperties['--width'] = `${result}%`
