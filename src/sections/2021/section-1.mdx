@@ -3,19 +3,26 @@ import Grid from '../../components/2021/grid'
 import GridCell from '../../components/2021/grid-cell'
 import PieChart from '../../components/2021/pie-chart'
 
-<SectionHeader title="The Respondents" number="1" total="6" />
-
 <Grid>
+  <GridCell spanMD="8" spanLG="12">
+    <SectionHeader title="The Respondents" number="1" total="6" />
+  </GridCell>
+  
+  <GridCell spanLG="6">
+    <p class="cmp-type-body-large">In-house and agency respondents were asked a different set of questions with overlapping topics. In-house respondents offered insight based on their direct perspectives with design systems at their organizations while agency respondents offered insight into their client’s experiences.</p>
+  </GridCell>
+
   <GridCell start="1" spanMD="6">
     <PieChart
-      title={<>In your opinion, <strong>how successful</strong> is your organization’s design system?</>}
+      title={<>What most closely describes your role? <strong>(In-House)</strong></>}
       dataPoints={[
-        ['Question Number One', 25],
-        ['Question 2', 24],
-        ['Lorem ipsum dolor', 20],
-        ['Design Systems', 17],
-        ['Maturity Model', 14]
+        ['Individual contributor (developer, designer, etc.)', 64],
+        ['Manager', 24],
+        ['Executive', 4],
+        ['Owner', 4],
+        ['Freelancer or independent consultant', 4]
       ]}
+      count="1.1" caption="217 Responses"
     />
   </GridCell>
 </Grid>

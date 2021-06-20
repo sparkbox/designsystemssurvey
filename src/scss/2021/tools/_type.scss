@@ -30,9 +30,10 @@
 }
 
 @mixin type-body-large {
-	font-family: var(--font-sans);
+	font-family: var(--font-mono);
 	font-size: var(--type-size-body-lg);
-	font-stretch: stretch(extended);
+	font-weight: weight(light);
+	line-height: 1.4;
 }
 
 @mixin type-body {

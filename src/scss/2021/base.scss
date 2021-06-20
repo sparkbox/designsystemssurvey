@@ -30,6 +30,7 @@
 //    If using features such as custom properties, those that are global
 //    custom properties should be described in this section.
 @use "sass:math";
+@use "sass:color";
 
 @import "sparkle/settings";
 @import "settings/sparkle";
@@ -69,6 +70,7 @@
 @import "elements/h2";
 @import "elements/h3";
 @import "elements/p";
+@import "elements/abbr";
 
 
 // =====================================================================
@@ -87,6 +89,7 @@
 @import "components/type";
 @import "components/section-header";
 @import "components/pie-chart";
+@import "components/figure";
 
 
 // =====================================================================
