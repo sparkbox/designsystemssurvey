@@ -20,27 +20,27 @@ class Page2021 extends Component {
         />
         <div className="obj-lines obj-max-width" htmlStyle="padding: 10vh 0;">
           
-          <section>
+          <section className="obj-section">
             <Section1 />
           </section>
 
-          <section>
+          <section className="obj-section">
             <Section2 />
           </section>
 
-          <section>
+          <section className="obj-section">
             <Section3 />
           </section>
 
-          <section>
+          <section className="obj-section">
             <Section4 />
           </section>
 
-          <section>
+          <section className="obj-section">
             <Section5 />
           </section>
 
-          <section>
+          <section className="obj-section">
             <Section6 />
           </section>
         </div>
