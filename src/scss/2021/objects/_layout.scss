@@ -1,10 +1,14 @@
 .obj-max-width {
-  width: calc(100% - 1.5rem);
-  max-width: 90rem;
+  width: calc(100% - 2.5rem);
+  max-width: 100rem;
   margin: 0 auto;
   
-  @media (min-width: mq(lg)) {
+  @media (min-width: mq(md)) {
     width: calc(100% - 4rem);
+  }
+  
+  @media (min-width: mq(lg)) {
+    width: calc(100% - 6rem);
   }
 }
 
