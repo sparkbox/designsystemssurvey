@@ -12,7 +12,7 @@
     --row-gap: 3rem;
   }
   
-  @media (min-width: mq(xl)) {
+  @media (min-width: mq(lg)) {
     --grid-size: 12;
     --row-gap: 5vh;
   }
@@ -28,7 +28,7 @@
       align-self: var(--align-md);
     }
     
-    @media (min-width: mq(xl)) {
+    @media (min-width: mq(lg)) {
       grid-column: var(--start-lg) / span var(--span-lg);
       grid-row: var(--row-start-lg) / span var(--row-span-lg);
       align-self: var(--align-lg);
