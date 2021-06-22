@@ -12,66 +12,22 @@
       bottom: 0;
       left: -1px;
       z-index: z-index(10);
-      background: linear-gradient(90deg,
-        var(--color-line) 1px,
-    
-        transparent 2px,
-        transparent 50%,
-    
-        var(--color-line) calc(50% + 1px),
-    
-        transparent calc(50% + 2px),
-        transparent calc(100% - 2px),
-    
-        var(--color-line) calc(100% - 1px)
-      );
-      
+      box-shadow: inset -1px 0 var(--color-line), inset 1px 0 var(--color-line);
+      background-image: svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" stroke-opacity="0.03" d="M50,0 50,10" /></svg>');
+      background-size: 100% auto;
+
       @media (min-width: mq(md)) {
-        background: linear-gradient(90deg,
-          var(--color-line) 1px,
-          transparent 2px,
-          transparent 50%,
-          var(--color-line) calc(50% + 1px),
-          transparent calc(50% + 2px),
-          transparent calc(100% - 2px),
-          var(--color-line) calc(100% - 1px)
-        ),
-        linear-gradient(90deg,
-          transparent 25%,
-          var(--color-line) calc(25% + 1px),
-          transparent calc(25% + 2px),
-          transparent 75%,
-          var(--color-line) calc(75% + 1px),
-          transparent calc(75% + 2px)
-        );
+        background-image: svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" stroke-opacity="0.03" d="M25,0 25,10M50,0 50,10M75,0 75,10" /></svg>');
       }
-      
+  
       @media (min-width: mq(lg)) {
-        background: linear-gradient(90deg,
-          var(--color-line) 1px,
-          transparent 2px,
-          transparent 50%,
-          var(--color-line) calc(50% + 1px),
-          transparent calc(50% + 2px),
-          transparent calc(100% - 2px),
-          var(--color-line) calc(100% - 1px)
-        ),
-        linear-gradient(90deg,
-          transparent 16.667%,
-          var(--color-line) calc(16.667% + 1px),
-          transparent calc(16.667% + 2px),
-          transparent 33.334%,
-          var(--color-line) calc(33.334% + 1px),
-          transparent calc(33.334% + 2px)
-        ),
-        linear-gradient(90deg,
-          transparent 66.667%,
-          var(--color-line) calc(66.667% + 1px),
-          transparent calc(66.667% + 2px),
-          transparent 83.334%,
-          var(--color-line) calc(83.334% + 1px),
-          transparent calc(83.334% + 2px)
-        );
+        $break: math.div(100, 6);
+        $s1: $break * 1;
+        $s2: $break * 2;
+        $s3: $break * 3;
+        $s4: $break * 4;
+        $s5: $break * 5;
+        background-image: svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" stroke-opacity="0.03" d="M#{$s1},0 #{$s1},10M#{$s2},0 #{$s2},10M#{$s3},0 #{$s3},10M#{$s4},0 #{$s4},10M#{$s5},0 #{$s5},10" /></svg>');
       }
     }
   }
