@@ -18,6 +18,12 @@
 	font-family: var(--font-mono);
 	font-size: var(--type-size-h2);
 	font-weight: weight(semibold);
+	line-height: 1.2;
+
+	strong {
+		font-weight: inherit;
+		color: var(--color-rust);
+	}
 }
 
 @mixin type-h3 {
