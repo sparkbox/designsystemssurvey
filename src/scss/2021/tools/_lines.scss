@@ -1,0 +1,11 @@
+@function line-bg($color:black, $stops:2, $opacity: 0.03) {
+  $value: math.div(100, $stops);
+  $path: '';
+
+  @for $i from 1 to $stops {
+    $point: $value * $i;
+    $path: $path + 'M' + $point + ',0 ' + $point + ',10';
+  }
+
+  @return svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{$color}" stroke-opacity="#{$opacity}" d="#{$path}" /></svg>');
+}
