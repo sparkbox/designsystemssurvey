@@ -13,21 +13,27 @@
       left: 0;
       z-index: z-index(10);
       box-shadow: inset -1px 0 var(--color-line), inset 1px 0 var(--color-line);
-      background-image: svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" stroke-opacity="0.03" d="M50,0 50,10" /></svg>');
+      background-image: line-bg(color(line), 2, 1);
       background-size: 100% auto;
 
+      @media (prefers-color-scheme: dark) {
+        background-image: line-bg(color(dark-line), 2, 1);
+      }
+
       @media (min-width: mq(md)) {
-        background-image: svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" stroke-opacity="0.03" d="M25,0 25,10M50,0 50,10M75,0 75,10" /></svg>');
+        background-image: line-bg(color(dark-line), 4, 1);
+      }
+
+      @media (min-width: mq(md)) and (prefers-color-scheme: dark) {
+        background-image: line-bg(color(dark-line), 4, 1);
       }
   
       @media (min-width: mq(lg)) {
-        $break: math.div(100, 6);
-        $s1: $break * 1;
-        $s2: $break * 2;
-        $s3: $break * 3;
-        $s4: $break * 4;
-        $s5: $break * 5;
-        background-image: svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" stroke-opacity="0.03" d="M#{$s1},0 #{$s1},10M#{$s2},0 #{$s2},10M#{$s3},0 #{$s3},10M#{$s4},0 #{$s4},10M#{$s5},0 #{$s5},10" /></svg>');
+        background-image: line-bg(color(line), 6, 1);
+      }
+
+      @media (min-width: mq(lg)) and (prefers-color-scheme: dark) {
+        background-image: line-bg(color(dark-line), 6, 1);
       }
     }
   }
