@@ -1,8 +1,9 @@
 :root {
-	@each $key, $value in $colors {
-		--color-#{$key}: #{$value};
-	}	
-	--color-line: hsla(47, 13%, 11%, 0.05);
+	--color-rust: #{color(rust)};
+	--color-neutral-1: #{color(neutral-1)};
+	--color-neutral-2: #{color(neutral-2)};
+	--color-neutral-3: #{color(neutral-3)};
+	--color-line: #{color(line)};
 
 	@each $key, $value in $font-families {
 		--font-#{$key}: #{$value};
@@ -19,10 +20,11 @@
 	}
 
 	// Just an idea to provide a dark mode style	
-	// @media (prefers-color-scheme: dark) {
-	// 	--color-rust: hsl(12, 72%, 57%);
-	// 	--color-neutral-1: hsl(47, 13%, 6%);
-	// 	--color-neutral-3: hsl(44, 100%, 99%);
-	// 	--color-line: hsla(44, 100%, 99%, 0.05);
-	// }
+	@media (prefers-color-scheme: dark) {	
+		--color-rust: #{color(dark-rust)};
+		--color-neutral-1: #{color(dark-neutral-1)};
+		--color-neutral-2: #{color(dark-neutral-2)};
+		--color-neutral-3: #{color(dark-neutral-3)};
+		--color-line: #{color(dark-line)};
+	}
 }

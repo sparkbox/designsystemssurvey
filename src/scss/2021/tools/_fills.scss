@@ -1,0 +1,26 @@
+@function fill-diagonal($color: color(neutral-3), $size: 6) {
+  @return svg(
+    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{$color}" stroke-width="1">' +
+      '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" vector-effect="non-scaling-stroke" />' +
+    '</svg>'
+  );
+}
+@function fill-dots($color: color(neutral-3), $size: 8, $dot: 1) {
+  @return svg(
+    '<svg fill="#{$color}" viewBox="0 0 #{$size} #{$size}">' +
+      '<circle cy="0" cx="0" r="#{$dot}" />' +
+      '<circle cy="#{$size}" cx="0" r="#{$dot}" />' +
+      '<circle cy="0" cx="#{$size}" r="#{$dot}" />' +
+      '<circle cy="#{$size}" cx="#{$size}" r="#{$dot}" />' +
+      '<circle cy="#{math.div($size, 2)}" cx="#{math.div($size, 2)}" r="#{$dot}" />' +
+    '</svg>'
+  );
+}
+
+@function fill-hatch($color: color(neutral-3), $size: 8) {
+  @return svg(
+    '<svg viewBox="0 0 #{$size} #{$size}" stroke="#{$color}" stroke-width="1">' +
+      '<path d="M0,0 #{$size},#{$size} M0,#{$size} #{$size},0" vector-effect="non-scaling-stroke" />' +
+    '</svg>'
+  );
+}
