@@ -12,6 +12,7 @@ import BarChart from '../components/2021/bar-chart'
 import StackedChart from '../components/2021/stacked-chart'
 import Figure from "../components/2021/figure"
 import ObservationHeading from "../components/2021/observation-heading"
+import SmallCallout from "../components/2021/small-callout"
 
 class Page2021 extends Component {
   render () {
@@ -34,7 +35,6 @@ class Page2021 extends Component {
           <FixedSides />
  
           <Grid>
-
             <GridCell spanMD="8" spanLG="12">
               <SectionHeader title="The Section Header" number="5" total="6" />
             </GridCell>
@@ -76,7 +76,9 @@ class Page2021 extends Component {
                 />
               </Figure>
             </GridCell>
+          </Grid>
 
+          <Grid>
             <GridCell spanMD="8" spanLG="12">
               <h2 class="cmp-type-section">Stacked Bar Charts</h2>
               <hr />
@@ -129,7 +131,9 @@ class Page2021 extends Component {
                 </StackedChart>
               </Figure>
             </GridCell>
+          </Grid>
 
+          <Grid>
             <GridCell spanMD="8" spanLG="12">
               <h2 class="cmp-type-section">Bar Charts</h2>
               <hr />
@@ -166,7 +170,9 @@ class Page2021 extends Component {
                 </BarChart>
               </Figure>
             </GridCell>
+          </Grid>
 
+          <Grid>
             <GridCell spanMD="8" spanLG="12">
               <h2 class="cmp-type-section">Observation/Paragraph</h2>
               <hr />
@@ -191,11 +197,19 @@ class Page2021 extends Component {
             <GridCell span="3" startMD="5" startLG="7">
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos, vivamus elementum diam felis ridiculus neque aptent, feugiat convallis dictumst habitasse himenaeos commodo et. Mauris volutpat torquent sollicitudin luctus aenean accumsan dapibus dictumst at, a odio auctor magna molestie conubia phasellus ullamcorper suspendisse taciti, habitasse hendrerit sociis semper leo malesuada laoreet ac.</p>
             </GridCell>
+            
+            <GridCell span="2" rowStart="3" align="center">
+              <SmallCallout>
+                <p>This is a small callout for small observations or short pieces of text.</p>
+                <p>Hope you like it.</p>
+              </SmallCallout>
+            </GridCell>
+          </Grid>
 
+          <Grid>
             <GridCell spanMD="8" spanLG="12">
               <hr />
             </GridCell>
-
           </Grid>
 
         </div>
