@@ -10,7 +10,7 @@
       top: 0;
       right: 0;
       bottom: 0;
-      left: -1px;
+      left: 0;
       z-index: z-index(10);
       box-shadow: inset -1px 0 var(--color-line), inset 1px 0 var(--color-line);
       background-image: svg('<svg viewBox="0 0 100 10"><path fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" stroke-opacity="0.03" d="M50,0 50,10" /></svg>');

@@ -1,27 +1,35 @@
 .cmp-pie-chart {
   &__keys-container {
     background-color: var(--color-neutral-1);
-    box-shadow: 0 0 0 1rem var(--color-neutral-1);
-    width: 66.667%;
-    margin-left: 33.333%;
+    width: 100%;
     position: relative;
     z-index: z-index(2);
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--color-neutral-3);
+  }
+  
+  &--large &__keys-container {
+    @media (min-width: mq(md)) {
+      margin-bottom: auto;
+      box-shadow: 0 0 0 1rem var(--color-neutral-1);
+      width: math.div(2, 3) * 100%;
+      margin-left: math.div(1, 3) * 100%;
+    }
+  }
+
+  &__title {
+    margin: 2rem 0;
+    text-align: left;
   }
 
   &__keys {
+    margin-top: 2rem;
     width: 100%;
     border-collapse: collapse;
   }
 
-  &__title {
-    @include type-h3;
-    text-align: left;
-    border-top: 1px solid var(--color-neutral-3);
-    padding: 1.5em 0;
-  }
-
   &__key {
-    vertical-align: middles;
+    vertical-align: middle;
     border-bottom: 1px solid var(--color-line);
   }
 
@@ -46,10 +54,17 @@
   }
 
   &__diagram-container {
-    width: 50%;
-    margin-top: -15%;
     position: relative;
     z-index: z-index(1);
+    margin-bottom: 1.5rem;
+  }
+  
+  &--large &__diagram-container {
+    @media (min-width: mq(md)) {
+      width: 50%;
+      margin-top: -15%;
+      margin-bottom: auto;
+    }
   }
 
   &__diagram {
@@ -58,8 +73,7 @@
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid var(--color-neutral-3);
-    box-shadow: 0 0 0 1px var(--color-neutral-1);
-    
+
     &::after {
       content: '';
       display: block;
@@ -77,15 +91,14 @@
     &::before,
     &::after {
       content: '';
-      width: 0px;
+      width: 1px;
       display: block;
       position: absolute;
       top: 0;
       bottom: 50%;
       left: calc(50% - 1px);
-      border: 1px solid var(--color-neutral-3);
       transform-origin: bottom center;
-      box-shadow: 0 0 0 0.5px var(--color-neutral-3);
+      box-shadow: inset 0 0 0 1px var(--color-neutral-3), 0 0 0 0.5px var(--color-neutral-3);
     }
 
     &--object-1 {

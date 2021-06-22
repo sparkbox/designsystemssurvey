@@ -5,6 +5,7 @@ const PieChart = (props) => {
   let cssProperties = {}
   let key = []
   let slices = []
+  let headingStyle
 
   for (let i = 0; i < props.dataPoints.length; i++) {
     cssProperties[`--object-${i + 1}`] = props.dataPoints[i][1];
@@ -29,12 +30,21 @@ const PieChart = (props) => {
   cssProperties['--turn-3'] = 'calc(((var(--object-3) / var(--total)) * 360deg) + var(--turn-2))'
   cssProperties['--turn-4'] = 'calc(((var(--object-4) / var(--total)) * 360deg) + var(--turn-3))'
   cssProperties['--turn-5'] = 'calc(((var(--object-5) / var(--total)) * 360deg) + var(--turn-4))'
+  
+  if (props.style === 'small') {
+    headingStyle = 'cmp-type-h2';
+  }
+  else if (props.style === 'large') {
+    headingStyle = 'cmp-type-h3';
+  }
 
   return (
-    <div className="cmp-pie-chart">
+    <div className={`cmp-pie-chart cmp-pie-chart--${props.style}`}>
       <div className="cmp-pie-chart__keys-container">
+        <h2 className={`${headingStyle} cmp-pie-chart__title`}>{props.title}</h2>
+        {props.children}
         <table className="cmp-pie-chart__keys">
-          <caption className="cmp-pie-chart__title">{props.title}</caption>
+          <caption className="util-visually-hidden">{props.title}</caption>
           {key}
         </table>
       </div>
@@ -47,7 +57,12 @@ const PieChart = (props) => {
   );
 }
 
+PieChart.defaultProps = {
+  style: 'large'
+}
+
 PieChart.propTypes = {
+  title: PropTypes.string.isRequired,
   dataPoints: PropTypes.array.isRequired
 }
 

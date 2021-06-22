@@ -11,6 +11,7 @@ import PieChart from '../components/2021/pie-chart'
 import BarChart from '../components/2021/bar-chart'
 import StackedChart from '../components/2021/stacked-chart'
 import Figure from "../components/2021/figure"
+import ObservationHeading from "../components/2021/observation-heading"
 
 class Page2021 extends Component {
   render () {
@@ -54,8 +55,9 @@ class Page2021 extends Component {
                     ['Executive', 4],
                     ['Owner', 4],
                     ['Freelancer or independent consultant', 4]
-                  ]}
-                />
+                  ]}>
+                  <p>Random sub-heading text. Lorem ipsum dolor sit amet consectetur adipiscing elit, tincidunt magnis pharetra id montes fames himenaeos, torquent dignissim eros nibh eleifend suspendisse.</p>
+                </PieChart>
               </Figure>
             </GridCell>
 
@@ -83,6 +85,7 @@ class Page2021 extends Component {
             <GridCell start="1" spanMD="6">
               <Figure count="1.2" caption="159 Responses">
                 <StackedChart
+                  style="large"
                   title="How much of your website(s) or application(s) is sourced from your design system?"
                   keyMap={[
                     'Less than 25% is from the design system',
@@ -97,14 +100,16 @@ class Page2021 extends Component {
                     ['Moderately successful', [17, 30, 22, 20, 12]],
                     ['Successful', [10, 24, 36, 28, 2]],
                     ['Very successful', [8, 8, 25, 50, 8]]
-                  ]}
-                />
+                  ]}>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, tincidunt magnis pharetra id montes fames himenaeos, torquent dignissim eros nibh eleifend suspendisse.</p>
+                </StackedChart>
               </Figure>
             </GridCell>
 
             <GridCell start="1" startLG="9">
               <Figure count="1.2" caption="159 Responses">
                 <StackedChart
+                  style="small"
                   title="How much of your website(s) or application(s) is sourced from your design system?"
                   keyMap={[
                     'Less than 25% is from the design system',
@@ -119,8 +124,9 @@ class Page2021 extends Component {
                     ['Moderately successful', [17, 30, 22, 20, 12]],
                     ['Successful', [10, 24, 36, 28, 2]],
                     ['Very successful', [8, 8, 25, 50, 8]]
-                  ]}
-                />
+                  ]}>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, tincidunt magnis pharetra id montes fames himenaeos, torquent dignissim eros nibh eleifend suspendisse.</p>
+                </StackedChart>
               </Figure>
             </GridCell>
 
@@ -132,6 +138,7 @@ class Page2021 extends Component {
             <GridCell start="1" spanLG="6">
               <Figure count="1.4" caption="374 Responses">
                 <BarChart
+                  style="large"
                   title="Organization Size"
                   keyMap={['In-house', 'Agency']}
                   dataPoints={[
@@ -147,6 +154,7 @@ class Page2021 extends Component {
             <GridCell start="1" startMD="5" startLG="9">
               <Figure count="1.4" caption="374 Responses">
                 <BarChart
+                  style="small"
                   title="Organization Size"
                   keyMap={['In-house', 'Agency']}
                   dataPoints={[
@@ -157,6 +165,31 @@ class Page2021 extends Component {
                     <p>In house respondents to to work at larger organizations, while agency respondents work primarily at smaller companies.</p>
                 </BarChart>
               </Figure>
+            </GridCell>
+
+            <GridCell spanMD="8" spanLG="12">
+              <h2 class="cmp-type-section">Observation/Paragraph</h2>
+              <hr />
+            </GridCell>
+            
+            <GridCell>
+              <ObservationHeading size="half" />
+              <h3>Thin observation. Best for short body content</h3>  
+              <Grid>
+                <GridCell span="2" spanMD="4" spanLG="6">
+                  <p>Iaculis et adipiscing lacinia nam massa ipsum nisi id, donec ante neque cras malesuada aliquam litora, auctor dui vehicula convallis gravida ridiculus eget.</p>
+                </GridCell>
+              </Grid>
+            </GridCell>
+            
+            <GridCell startMD="5" startLG="7">
+              <ObservationHeading size="half" />
+              <h3>Wide observation. Best for long body content</h3>  
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit gravida mus vulputate, diam lobortis vivamus hendrerit placerat id leo facilisis iaculis, eleifend risus nunc quam a scelerisque tempus duis justo. Risus molestie duis lacus egestas proin porta habitant vehicula sodales eros mus ornare commodo, suspendisse dignissim nostra accumsan ligula parturient tempor gravida mi in nibh vestibulum. Iaculis et adipiscing lacinia nam massa ipsum nisi id, donec ante neque cras malesuada aliquam litora, auctor dui vehicula convallis gravida ridiculus eget.</p>
+            </GridCell>
+            
+            <GridCell span="3" startMD="5" startLG="7">
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos, vivamus elementum diam felis ridiculus neque aptent, feugiat convallis dictumst habitasse himenaeos commodo et. Mauris volutpat torquent sollicitudin luctus aenean accumsan dapibus dictumst at, a odio auctor magna molestie conubia phasellus ullamcorper suspendisse taciti, habitasse hendrerit sociis semper leo malesuada laoreet ac.</p>
             </GridCell>
 
             <GridCell spanMD="8" spanLG="12">

@@ -4,14 +4,15 @@ import PropTypes from "prop-types"
 const BarChart = (props) => {
   let dataBars = []
   let keysMap = []
-  let style
+  let keyStyle
+  let headingStyle
   
   // Chart Key
   for (let i = 0; i < props.keyMap.length; i++) {
-    style = (i === 0) ? 6 : i
+    keyStyle = (i === 0) ? 6 : i
     keysMap.push(
       <div className="cmp-bar-chart__key">
-        <span className={`cmp-bar-chart__key-marker util-fill-style-${style}`} />
+        <span className={`cmp-bar-chart__key-marker util-fill-style-${keyStyle}`} />
         <span className="cmp-bar-chart__key-name">
           {props.keyMap[i]}
         </span>
@@ -22,16 +23,16 @@ const BarChart = (props) => {
   // Single Bar
   let barIterator = (...value) => {
     let results = []
-    let style
+    let keyStyle
 
     for (let i = 0; i < (value.length + 1); i++) {
-      style = (i === 0) ? 6 : i
+      keyStyle = (i === 0) ? 6 : i
       let result = value[0][i]
       let cssProperties = {}
       cssProperties['--width'] = `${result}%`
 
       results.push (
-        <div className={`util-fill-style-${style} cmp-bar-chart__item`} style={cssProperties}>
+        <div className={`util-fill-style-${keyStyle} cmp-bar-chart__item`} style={cssProperties}>
           <div className="cmp-bar-chart__value">{result}%</div>
         </div>
       );
@@ -51,10 +52,17 @@ const BarChart = (props) => {
       </div>
     );
   }
+  
+  if (props.style === 'small') {
+    headingStyle = 'cmp-type-h3';
+  }
+  else if (props.style === 'large') {
+    headingStyle = 'cmp-type-h2';
+  }
 
   return (
-    <div className="cmp-bar-chart">
-      <h2 className="cmp-type-h3">{props.title}</h2>
+    <div className={`cmp-bar-chart cmp-bar-chart--${props.style}`}>
+      <h2 className={headingStyle}>{props.title}</h2>
       {props.children}
       <div className="cmp-bar-chart__keys">
         {keysMap}
@@ -64,6 +72,10 @@ const BarChart = (props) => {
       </div>
     </div>
   )
+}
+
+BarChart.defaultProps = {
+  style: 'large'
 }
 
 BarChart.propTypes = {
