@@ -1,0 +1,27 @@
+.cmp-small-callout {
+  border: 1px solid var(--color-neutral-3);
+  position: relative;
+  padding: 1rem;
+
+  p:first-child,
+  p:only-child {
+    margin-top: 0;
+  }
+
+  p:last-child,
+  p:only-child {
+    margin-bottom: 0;
+  }
+  
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: -1px;
+    @include type-mono-micro();
+    width: 11ch;
+    height: 0.25rem;
+    background-color: var(--color-neutral-3);
+  }
+}
