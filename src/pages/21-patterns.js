@@ -13,6 +13,7 @@ import StackedChart from '../components/2021/stacked-chart'
 import Figure from "../components/2021/figure"
 import ObservationHeading from "../components/2021/observation-heading"
 import SmallCallout from "../components/2021/small-callout"
+import Quote from "../components/2021/quote"
 
 class Page2021 extends Component {
   render () {
@@ -208,6 +209,30 @@ class Page2021 extends Component {
 
           <Grid>
             <GridCell spanMD="8" spanLG="12">
+              <h2 class="cmp-type-section">Quote</h2>
+              <hr />
+            </GridCell>
+            
+            <GridCell spanLG="6">
+              <Quote
+                style="large"
+                quote="Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum."
+                cite="Person Name"
+              />
+            </GridCell>
+            
+            <GridCell startLG="9">
+              <Quote
+                style="small"
+                quote="Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum."
+                cite="Person Name"
+              />
+            </GridCell>
+          </Grid>
+          
+          <Grid>
+            <GridCell spanMD="8" spanLG="12">
+              <h2 class="cmp-type-section">Stuff</h2>
               <hr />
             </GridCell>
           </Grid>

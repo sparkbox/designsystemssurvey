@@ -1,0 +1,55 @@
+.cmp-quote {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  
+  &--large {
+    padding: 4rem 0 0;
+  }
+  
+  &--small {
+    padding: 2.75rem 0 0;
+  }
+
+  &::before {
+    content: '\201C';
+    font-family: var(--font-mono);
+    color: var(--color-neutral-1);
+    text-shadow: stroke(var(--color-rust));
+    position: absolute;
+    z-index: z-index(1);
+    top: 0;
+    left: 0;
+    line-height: 1;
+  }
+
+  &--large::before {
+    font-size: 14.5rem;
+    left: -2rem;
+  }
+
+  &--small::before {
+    font-size: 8.75rem;
+    left: -1.125rem;
+  }
+
+  &__block {
+    position: relative;
+    z-index: z-index(2);
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__text {
+    text-shadow: stroke(var(--color-neutral-1));
+    margin: 0;
+  }
+  
+  &__footer {
+    margin-top: 1rem;
+  }
+  
+  &__cite {
+    margin: 0;
+  }
+}
