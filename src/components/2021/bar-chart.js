@@ -2,14 +2,19 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const BarChart = (props) => {
+  const Tag = props.headingLevel
   let dataBars = []
   let keysMap = []
   let keyStyle
-  let headingStyle
+  let fillStart = 1
+
+  if (props.startStyle === 'alt') {
+    fillStart = 6
+  }
   
   // Chart Key
   for (let i = 0; i < props.keyMap.length; i++) {
-    keyStyle = (i === 0) ? 6 : i
+    keyStyle = (i === 0) ? fillStart : (i + 1)
     keysMap.push(
       <div className="cmp-bar-chart__key">
         <span className={`cmp-bar-chart__key-marker util-fill-style-${keyStyle}`} />
@@ -26,7 +31,7 @@ const BarChart = (props) => {
     let keyStyle
 
     for (let i = 0; i < (value.length + 1); i++) {
-      keyStyle = (i === 0) ? 6 : i
+      keyStyle = (i === 0) ? fillStart : (i + 1)
       let result = value[0][i]
       let cssProperties = {}
       cssProperties['--width'] = `${result}%`
@@ -52,17 +57,10 @@ const BarChart = (props) => {
       </div>
     );
   }
-  
-  if (props.styleFormat === 'small') {
-    headingStyle = 'cmp-type-h3';
-  }
-  else if (props.styleFormat === 'large') {
-    headingStyle = 'cmp-type-h2';
-  }
 
   return (
     <div className={`cmp-bar-chart cmp-bar-chart--${props.styleFormat}`}>
-      <h2 className={headingStyle}>{props.title}</h2>
+      <Tag className="cmp-type-h3">{props.title}</Tag>
       {props.children}
       <div className="cmp-bar-chart__keys">
         {keysMap}
@@ -75,7 +73,9 @@ const BarChart = (props) => {
 }
 
 BarChart.defaultProps = {
-  styleFormat: 'large'
+  styleFormat: 'large',
+  headingLevel: 'h2',
+  startStyle: 'normal'
 }
 
 BarChart.propTypes = {

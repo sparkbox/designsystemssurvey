@@ -65,6 +65,7 @@ class Page2021 extends Component {
             <GridCell start="1" startLG="9">
               <Figure count="1.1" caption="217 Responses">
                 <PieChart
+                  headingLevel="h3"
                   styleFormat="small"
                   title={<>What most closely describes your role? <em>(In-House)</em></>}
                   dataPoints={[
@@ -112,6 +113,7 @@ class Page2021 extends Component {
             <GridCell start="1" startLG="9">
               <Figure count="1.2" caption="159 Responses">
                 <StackedChart
+                  headingLevel="h3"
                   styleFormat="small"
                   title="How much of your website(s) or application(s) is sourced from your design system?"
                   keyMap={[
@@ -159,6 +161,8 @@ class Page2021 extends Component {
             <GridCell start="1" startMD="5" startLG="9">
               <Figure count="1.4" caption="374 Responses">
                 <BarChart
+                  headingLevel="h3"
+                  startStyle="alt"
                   styleFormat="small"
                   title="Organization Size"
                   keyMap={['In-house', 'Agency']}
