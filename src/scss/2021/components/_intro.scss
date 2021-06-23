@@ -2,7 +2,7 @@
   min-height: 100vh;
   
   &__title-container {
-    --grid-size: 4;
+    --grid-size: 6;
     
     width: 100%;
     display: grid;
@@ -10,7 +10,7 @@
     grid-auto-rows: minmax(1rem, auto);
     
     @media (min-width: mq(md)) {
-      --grid-size: 8;
+      --grid-size: 12;
     }
     
     @media (min-width: mq(lg)) {
@@ -20,9 +20,17 @@
   
   &__text {
     font-family: var(--font-mono);
-    font-size: 9rem;
+    font-size: mq(sm) * 0.1;
     line-height: 0.75;
     font-weight: 200;
+
+    @media(min-width: mq(sm)) {
+      font-size: 10vw;
+    }
+
+    @media(min-width: mq(lg)) {
+      font-size: 9rem;
+    }
 
     &:nth-child(1) {
       grid-column: 1 / span 6;
@@ -45,8 +53,58 @@
       text-shadow: stroke(var(--color-rust));
       color: var(--color-neutral-1);
       font-weight: 900;
-      transform: translateY(-2rem);
+      transform: translateY(-0.2em);
       margin-bottom: 0.5em;
     }
+  }
+  
+  &__arrow-positioner {
+    @media(min-width: mq(md)) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 100vh;
+      pointer-events: none;
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    .obj-grid {
+      flex: 2 0 100%;
+    }
+  }
+  
+  &__arrow-container {
+    width: 125%;
+    position: relative;
+    
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    // @media (min-width: mq(md)) {
+    //   display: block;
+    //   position: absolute;
+    //   height: 100vh;
+    //   top: 0;
+    //   left: math.div(6, 8) * 100%;
+    //   width: math.div(1.5, 12) * 100%;
+    // }
+    // 
+    // @media (min-width: mq(md)) {
+    //   left: math.div(7, 12) * 100%;
+    // }
+  }
+  
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    stroke: var(--color-neutral-3);
+    stroke-width: 3px;
   }
 }

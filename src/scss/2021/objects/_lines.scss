@@ -21,7 +21,7 @@
       }
 
       @media (min-width: mq(md)) {
-        background-image: line-bg(color(dark-line), 4, 1);
+        background-image: line-bg(color(line), 4, 1);
       }
 
       @media (min-width: mq(md)) and (prefers-color-scheme: dark) {
