@@ -49,8 +49,8 @@ class Page2021 extends Component {
           </SiteIntro>
           
           <Grid style={{margin: "10vh 0"}}>
-            <GridCell start="3" span="2" startMD="6" startLG="9" spanLG="3">
-              <p className="cmp-type-body-large">Sparkbox, a web design and development studio, directed this survey. This year’s survey was shared for four weeks across social media platforms, in Slack channels, with visitors on The Foundry, and in emails to web professionals.</p>
+            <GridCell start="3" span="2" startMD="7" startLG="9" spanLG="3">
+              <p className="cmp-type-body-large"><a href="https://sparkbox.com">Sparkbox</a>, a web design and development studio, directed this survey. This year’s survey was shared for four weeks across social media platforms, in Slack channels, with visitors on <a href="https://sparkbox.com/foundry">The Foundry</a>, and in emails to web professionals.</p>
             </GridCell>
           </Grid>
  
