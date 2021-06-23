@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 const Quote = (props) => {
   let quoteType = (props.style === 'small') ?  'cmp-type-body-large' : 'cmp-type-h2';

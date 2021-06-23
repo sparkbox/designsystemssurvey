@@ -53,15 +53,15 @@ const BarChart = (props) => {
     );
   }
   
-  if (props.style === 'small') {
+  if (props.styleFormat === 'small') {
     headingStyle = 'cmp-type-h3';
   }
-  else if (props.style === 'large') {
+  else if (props.styleFormat === 'large') {
     headingStyle = 'cmp-type-h2';
   }
 
   return (
-    <div className={`cmp-bar-chart cmp-bar-chart--${props.style}`}>
+    <div className={`cmp-bar-chart cmp-bar-chart--${props.styleFormat}`}>
       <h2 className={headingStyle}>{props.title}</h2>
       {props.children}
       <div className="cmp-bar-chart__keys">
@@ -75,7 +75,7 @@ const BarChart = (props) => {
 }
 
 BarChart.defaultProps = {
-  style: 'large'
+  styleFormat: 'large'
 }
 
 BarChart.propTypes = {
