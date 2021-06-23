@@ -1,6 +1,6 @@
-.cmp-stacked-chart { 
+.cmp-stacked-chart {
   border-top: 1px solid var(--color-neutral-3);
- 
+
   &--large {
     border-top: 1px solid transparent;
     position: relative;
@@ -14,14 +14,15 @@
       top: 0;
     }
   }
-  
+
   &__keys {
     margin: 2rem 0;
   }
-  
+
   &__key {
-    padding: 0.125rem;
+    padding: 0.5rem 0;
     border-bottom: 1px solid var(--color-line);
+    display: flex;
   }
 
   &__key-name {
@@ -29,6 +30,7 @@
   }
 
   &__key-marker {
+    flex: 0 0 auto;
     margin-right: 1em;
     vertical-align: middle;
     display: inline-block;
@@ -36,23 +38,23 @@
     height: 1em;
     border: 1px solid var(--border);
   }
-  
+
   &__diagram {
     padding: 1rem 0 2rem 1rem;
     border-left: 1px solid var(--color-rust);
   }
-  
+
   &__set {
     & + & {
       margin-top: 1rem;
-    } 
+    }
   }
-  
+
   &__set-name {
     @include type-sans-micro();
     margin-bottom: 0.5em;
   }
-  
+
   &__stack {
     display: flex;
     width: 100%;
@@ -64,18 +66,18 @@
     width: var(--width);
     color: var(--color);
     display: flex;
-    
+
     &:not(:first-child) {
       border-left: none;
     }
   }
-  
+
   &__value {
     display: inline;
     @include type-mono-micro();
     line-height: 1;
-    padding: 0.125rem;
-    margin-bottom: 0.5rem;
+    padding: 0.125rem 0.25rem 0.125rem 0.125rem;
+    margin-bottom: 0.675rem;
     background-color: var(--bgcolor);
   }
 }
