@@ -2,10 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const PieChart = (props) => {
+  const Tag = props.headingLevel
   let cssProperties = {}
   let key = []
   let slices = []
-  let headingStyle
+
 
   for (let i = 0; i < props.dataPoints.length; i++) {
     cssProperties[`--object-${i + 1}`] = props.dataPoints[i][1];
@@ -30,18 +31,11 @@ const PieChart = (props) => {
   cssProperties['--turn-3'] = 'calc(((var(--object-3) / var(--total)) * 360deg) + var(--turn-2))'
   cssProperties['--turn-4'] = 'calc(((var(--object-4) / var(--total)) * 360deg) + var(--turn-3))'
   cssProperties['--turn-5'] = 'calc(((var(--object-5) / var(--total)) * 360deg) + var(--turn-4))'
-  
-  if (props.styleFormat === 'small') {
-    headingStyle = 'cmp-type-h2';
-  }
-  else if (props.styleFormat === 'large') {
-    headingStyle = 'cmp-type-h3';
-  }
 
   return (
     <div className={`cmp-pie-chart cmp-pie-chart--${props.styleFormat}`}>
       <div className="cmp-pie-chart__keys-container">
-        <h2 className={`${headingStyle} cmp-pie-chart__title`}>{props.title}</h2>
+        <Tag className="cmp-type-h3 cmp-pie-chart__title">{props.title}</Tag>
         {props.children}
         <table className="cmp-pie-chart__keys">
           <caption className="util-visually-hidden">{props.title}</caption>
@@ -58,7 +52,8 @@ const PieChart = (props) => {
 }
 
 PieChart.defaultProps = {
-  styleFormat: 'large'
+  styleFormat: 'large',
+  headingLevel: 'h2'
 }
 
 PieChart.propTypes = {

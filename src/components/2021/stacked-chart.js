@@ -2,10 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const StackedChart = (props) => {
+  const Tag = props.headingLevel
   let dataBars = []
   let keysMap = []
   let keyStyle
-  let headingStyle
 
   // Chart Key
   for (let i = 0; i < props.keyMap.length; i++) {
@@ -54,17 +54,10 @@ const StackedChart = (props) => {
       </div>
     );
   }
-  
-  if (props.styleFormat === 'small') {
-    headingStyle = 'cmp-type-h3';
-  }
-  else if (props.styleFormat === 'large') {
-    headingStyle = 'cmp-type-h2';
-  }
 
   return (
     <div className={`cmp-stacked-chart cmp-stacked-chart--${props.styleFormat}`}>
-      <h2 className={headingStyle}>{props.title}</h2>
+      <Tag className="cmp-type-h3">{props.title}</Tag>
       {props.children}
       <div className="cmp-stacked-chart__keys">
         {keysMap}
@@ -77,7 +70,8 @@ const StackedChart = (props) => {
 }
 
 StackedChart.defaultProps = {
-  styleFormat: 'large'
+  styleFormat: 'large',
+  headingLevel: 'h2'
 }
 
 StackedChart.propTypes = {
