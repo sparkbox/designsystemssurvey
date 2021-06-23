@@ -2,8 +2,11 @@ import React, { Component } from "react"
 import Layout from '../components/2021/layout'
 import Helmet from "react-helmet"
 import SEO from '../components/SEO'
-
 import FixedSides from '../components/2021/fixed-sides'
+import Grid from '../components/2021/grid'
+import GridCell from '../components/2021/grid-cell'
+import SiteIntro from '../components/2021/intro'
+
 
 import Section1 from '../sections/2021/section-1'
 import Section2 from '../sections/2021/section-2'
@@ -31,6 +34,19 @@ class Page2021 extends Component {
         <div className="obj-lines obj-max-width">
           
           <FixedSides />
+
+          <SiteIntro>
+            <Grid>
+              <GridCell spanMD="6">
+                <h2 className="cmp-type-h3">
+                  Welcome to the fourth edition of Sparkbox’s Design Systems Survey
+                </h2>
+                <p className="cmp-type-body-large">
+                  This year, we delve into design system priorities and challenges, including adoption, contribution, and debt. And we explore the evolution of design systems, including the experiences of organizations developing new (or additional) design systems.
+                </p>
+              </GridCell>
+            </Grid>
+          </SiteIntro>
  
           <section className="obj-section">
             <Section1 />
