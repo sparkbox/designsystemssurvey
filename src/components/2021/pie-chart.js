@@ -31,15 +31,15 @@ const PieChart = (props) => {
   cssProperties['--turn-4'] = 'calc(((var(--object-4) / var(--total)) * 360deg) + var(--turn-3))'
   cssProperties['--turn-5'] = 'calc(((var(--object-5) / var(--total)) * 360deg) + var(--turn-4))'
   
-  if (props.style === 'small') {
+  if (props.styleFormat === 'small') {
     headingStyle = 'cmp-type-h2';
   }
-  else if (props.style === 'large') {
+  else if (props.styleFormat === 'large') {
     headingStyle = 'cmp-type-h3';
   }
 
   return (
-    <div className={`cmp-pie-chart cmp-pie-chart--${props.style}`}>
+    <div className={`cmp-pie-chart cmp-pie-chart--${props.styleFormat}`}>
       <div className="cmp-pie-chart__keys-container">
         <h2 className={`${headingStyle} cmp-pie-chart__title`}>{props.title}</h2>
         {props.children}
@@ -58,7 +58,7 @@ const PieChart = (props) => {
 }
 
 PieChart.defaultProps = {
-  style: 'large'
+  styleFormat: 'large'
 }
 
 PieChart.propTypes = {

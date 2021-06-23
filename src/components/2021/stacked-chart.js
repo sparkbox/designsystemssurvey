@@ -55,15 +55,15 @@ const StackedChart = (props) => {
     );
   }
   
-  if (props.style === 'small') {
+  if (props.styleFormat === 'small') {
     headingStyle = 'cmp-type-h3';
   }
-  else if (props.style === 'large') {
+  else if (props.styleFormat === 'large') {
     headingStyle = 'cmp-type-h2';
   }
 
   return (
-    <div className={`cmp-stacked-chart cmp-stacked-chart--${props.style}`}>
+    <div className={`cmp-stacked-chart cmp-stacked-chart--${props.styleFormat}`}>
       <h2 className={headingStyle}>{props.title}</h2>
       {props.children}
       <div className="cmp-stacked-chart__keys">
@@ -77,7 +77,7 @@ const StackedChart = (props) => {
 }
 
 StackedChart.defaultProps = {
-  style: 'large'
+  styleFormat: 'large'
 }
 
 StackedChart.propTypes = {

@@ -48,7 +48,7 @@ class Page2021 extends Component {
             <GridCell start="1" spanMD="6">
               <Figure count="1.1" caption="217 Responses">
                 <PieChart
-                  style="large"
+                  styleFormat="large"
                   title={<>What most closely describes your role? <strong>(In-House)</strong></>}
                   dataPoints={[
                     ['Individual contributor (developer, designer, etc.)', 64],
@@ -65,7 +65,7 @@ class Page2021 extends Component {
             <GridCell start="1" startLG="9">
               <Figure count="1.1" caption="217 Responses">
                 <PieChart
-                  style="small"
+                  styleFormat="small"
                   title={<>What most closely describes your role? <strong>(In-House)</strong></>}
                   dataPoints={[
                     ['Individual contributor (developer, designer, etc.)', 64],
@@ -88,7 +88,7 @@ class Page2021 extends Component {
             <GridCell start="1" spanMD="6">
               <Figure count="1.2" caption="159 Responses">
                 <StackedChart
-                  style="large"
+                  styleFormat="large"
                   title="How much of your website(s) or application(s) is sourced from your design system?"
                   keyMap={[
                     'Less than 25% is from the design system',
@@ -112,7 +112,7 @@ class Page2021 extends Component {
             <GridCell start="1" startLG="9">
               <Figure count="1.2" caption="159 Responses">
                 <StackedChart
-                  style="small"
+                  styleFormat="small"
                   title="How much of your website(s) or application(s) is sourced from your design system?"
                   keyMap={[
                     'Less than 25% is from the design system',
@@ -143,7 +143,7 @@ class Page2021 extends Component {
             <GridCell start="1" spanLG="6">
               <Figure count="1.4" caption="374 Responses">
                 <BarChart
-                  style="large"
+                  styleFormat="large"
                   title="Organization Size"
                   keyMap={['In-house', 'Agency']}
                   dataPoints={[
@@ -159,7 +159,7 @@ class Page2021 extends Component {
             <GridCell start="1" startMD="5" startLG="9">
               <Figure count="1.4" caption="374 Responses">
                 <BarChart
-                  style="small"
+                  styleFormat="small"
                   title="Organization Size"
                   keyMap={['In-house', 'Agency']}
                   dataPoints={[
@@ -215,7 +215,7 @@ class Page2021 extends Component {
             
             <GridCell spanLG="6">
               <Quote
-                style="large"
+                styleFormat="large"
                 quote="Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum."
                 cite="Person Name"
               />
@@ -223,7 +223,7 @@ class Page2021 extends Component {
             
             <GridCell startLG="9">
               <Quote
-                style="small"
+                styleFormat="small"
                 quote="Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum."
                 cite="Person Name"
               />
