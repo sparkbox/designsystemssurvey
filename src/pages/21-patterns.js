@@ -49,7 +49,7 @@ class Page2021 extends Component {
               <Figure count="1.1" caption="217 Responses">
                 <PieChart
                   styleFormat="large"
-                  title={<>What most closely describes your role? <strong>(In-House)</strong></>}
+                  title={<>What most closely describes your role? <em>(In-House)</em></>}
                   dataPoints={[
                     ['Individual contributor (developer, designer, etc.)', 64],
                     ['Manager', 24],
@@ -66,7 +66,7 @@ class Page2021 extends Component {
               <Figure count="1.1" caption="217 Responses">
                 <PieChart
                   styleFormat="small"
-                  title={<>What most closely describes your role? <strong>(In-House)</strong></>}
+                  title={<>What most closely describes your role? <em>(In-House)</em></>}
                   dataPoints={[
                     ['Individual contributor (developer, designer, etc.)', 64],
                     ['Manager', 24],
