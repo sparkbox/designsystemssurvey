@@ -1,7 +1,7 @@
 .cmp-fixed-left,
 .cmp-fixed-right {
   display: none;
-  
+
   @media (min-width: mq(md)) {
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
     padding: 1rem 0;
     top: 0;
-    width: 2rem;
+    width: $fixed-columns-sm;
     height: 100vh;
     writing-mode: vertical-rl;
     transform-origin: center center;
@@ -19,10 +19,12 @@
     font-weight: 300;
     font-size: 0.75rem;
   }
-  
+
   @media (min-width: mq(lg)) {
-    width: 3rem;
+    width: $fixed-columns-lg;
     font-size: 0.875rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -42,11 +44,11 @@
   transform-origin: center center;
   transform: rotate(180deg);
   color: inherit;
-  
+
   &__svg {
     width: calc(21px * 0.75);
     height: calc(75px * 0.75);
-    
+
     @media (min-width: mq(lg)) {
       width: 21px;
       height: 75px;

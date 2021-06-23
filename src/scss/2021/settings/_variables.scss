@@ -6,6 +6,9 @@ $media-queries: (
   'xl': 80rem
 );
 
+$fixed-columns-sm: 3rem;
+$fixed-columns-lg: 4rem;
+
 $bp-font-size-shift: 50rem;
 
 // Colors
@@ -33,7 +36,7 @@ $font-families: (
 $font-weight: (
   'thin': 100,
   'exlight': 200,
-  'light': 300,
+  'light': 350,
   'regular': 400,
   'medium': 500,
   'semibold': 600,
@@ -101,4 +104,3 @@ $z-index: (
   9: 900,
   10: 1000
 );
-

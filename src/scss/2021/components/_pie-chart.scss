@@ -7,7 +7,7 @@
     margin-bottom: 2rem;
     border-top: 1px solid var(--color-neutral-3);
   }
-  
+
   &--large &__keys-container {
     @media (min-width: mq(md)) {
       margin-bottom: auto;
@@ -34,23 +34,26 @@
   }
 
   &__key-name {
+    display: flex;
     padding: 0.5rem 0;
     text-align: left;
     @include type-mono-micro;
   }
-  
+
   &__key-marker {
+    flex: 0 0 auto;
     margin-right: 1em;
-    vertical-align: middle;
     display: inline-block;
     width: 2em;
-    height: 1em;
+    height: 1.125em;
     border: 1px solid var(--border);
   }
 
   &__key-value {
     @include type-mono-micro;
+    padding: 0.5rem 0;
     text-align: right;
+    vertical-align: top;
   }
 
   &__diagram-container {
@@ -58,7 +61,7 @@
     z-index: z-index(1);
     margin-bottom: 1.5rem;
   }
-  
+
   &--large &__diagram-container {
     @media (min-width: mq(md)) {
       width: 50%;
