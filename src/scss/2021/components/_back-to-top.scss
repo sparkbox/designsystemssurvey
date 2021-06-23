@@ -1,0 +1,26 @@
+.cmp-back-to-top {
+  --color: var(--color-neutral-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color);
+  text-decoration: none;
+  
+  &:hover {
+    --color: var(--color-rust);
+  }
+
+  &__text {
+    white-space: nowrap;
+    box-shadow: -1px 0 var(--color);
+  }
+
+  &__arrow {
+    height: 1em;
+    width: 1em;
+    stroke: var(--color);
+    stroke-width: 1px;
+    margin-top: 0.5em;
+    transform: rotate(-90deg);
+  }
+}

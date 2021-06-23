@@ -1,5 +1,7 @@
 .cmp-intro {
-  min-height: 100vh;
+  @media (min-width: mq(md)) {
+    min-height: 100vh;
+  }
   
   &__title-container {
     --grid-size: 6;
@@ -21,7 +23,7 @@
   &__text {
     font-family: var(--font-mono);
     font-size: mq(sm) * 0.1;
-    line-height: 0.75;
+    line-height: 0.875;
     font-weight: 200;
 
     @media(min-width: mq(sm)) {
@@ -59,7 +61,10 @@
   }
   
   &__arrow-positioner {
+    margin-top: 4rem;
+
     @media(min-width: mq(md)) {
+      margin-top: auto;
       position: absolute;
       top: 0;
       right: 0;
@@ -76,26 +81,15 @@
   }
   
   &__arrow-container {
-    width: 125%;
+    width: 100%;
+    max-width: 7.5rem;
     position: relative;
-    
+
     &::after {
       content: '';
       display: block;
       padding-top: 100%;
     }
-    // @media (min-width: mq(md)) {
-    //   display: block;
-    //   position: absolute;
-    //   height: 100vh;
-    //   top: 0;
-    //   left: math.div(6, 8) * 100%;
-    //   width: math.div(1.5, 12) * 100%;
-    // }
-    // 
-    // @media (min-width: mq(md)) {
-    //   left: math.div(7, 12) * 100%;
-    // }
   }
   
   &__arrow {
