@@ -14,6 +14,8 @@ import Figure from "../components/2021/figure"
 import SlimHeading from "../components/2021/slim-heading"
 import SmallCallout from "../components/2021/small-callout"
 import Quote from "../components/2021/quote"
+import CallToAction from "../components/2021/call-to-action"
+
 
 class Page2021 extends Component {
   render () {
@@ -249,6 +251,40 @@ class Page2021 extends Component {
             </GridCell>
           </Grid>
 
+          <Grid>
+            <GridCell>
+
+              <CallToAction mark="right">
+                <h3>This is a title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sem tellus pellentesque, maecenas risus felis nullam et augue facilisi leo auctor.</p>
+
+                <a href="https://example.com" className="cmp-button cmp-button--inverse">Button (Default)</a>
+              </CallToAction>
+
+            </GridCell>
+          </Grid>
+          
+          <Grid>
+            <GridCell span="4" spanMD="8" spanLG="12">
+              <CallToAction mark="right">
+                <Grid>
+                  <GridCell span="4" spanMD="3" spanLG="5">
+                    <h3>This is a title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sem tellus pellentesque, maecenas risus felis nullam et augue facilisi leo auctor.</p>
+  
+                    <a href="https://example.com" className="cmp-button cmp-button--inverse">Button (Default)</a>
+                  </GridCell>
+                  
+                  <GridCell span="4" startMD="5" spanMD="3" startLG="7" spanLG="5">
+                    <h3>This is a title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sem tellus pellentesque, maecenas risus felis nullam et augue facilisi leo auctor.</p>
+  
+                    <a href="https://example.com" className="cmp-button cmp-button--inverse">Button (Default)</a>
+                  </GridCell>
+                </Grid>
+              </CallToAction>
+            </GridCell>
+          </Grid>
         </div>
       </Layout>
     )

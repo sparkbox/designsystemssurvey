@@ -1,0 +1,17 @@
+.cmp-cta {
+  padding: 1.5rem;
+  color: var(--color-neutral-1);
+  background-color: var(--color-neutral-3);
+
+  &--mark-right {
+    background-color: transparent;
+    background-image: linear-gradient(to left, transparent 4rem, var(--color-neutral-3) 4rem),
+    linear-gradient(to bottom, transparent 1.5rem, var(--color-neutral-3) 1.5rem);
+  }
+  
+  &--mark-left {
+    background-color: transparent;
+    background-image: linear-gradient(to right, transparent 4rem, var(--color-neutral-3) 4rem),
+    linear-gradient(to bottom, transparent 1.5rem, var(--color-neutral-3) 1.5rem);
+  }
+}
