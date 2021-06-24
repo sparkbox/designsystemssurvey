@@ -51,15 +51,16 @@ class Page2021 extends Component {
               <Figure count="1.1" caption="217 Responses">
                 <PieChart
                   styleFormat="large"
-                  title={<>What most closely describes your role? <em>(In-House)</em></>}
+                  title={<>Almost <em>40%</em> of systems were successful or very successful</>}
                   dataPoints={[
-                    ['Individual contributor (developer, designer, etc.)', 64],
-                    ['Manager', 24],
-                    ['Executive', 4],
-                    ['Owner', 4],
-                    ['Freelancer or independent consultant', 4]
+                    ['Not successful', 4],
+                    ['Slightly successful', 19],
+                    ['Moderately successful', 38],
+                    ['Successful', 31],
+                    ['Very successful', 8]
                   ]}>
-                  <p>Random sub-heading text. Lorem ipsum dolor sit amet consectetur adipiscing elit, tincidunt magnis pharetra id montes fames himenaeos, torquent dignissim eros nibh eleifend suspendisse.</p>
+                  <p>In your opinion, how successful is your organization’s design system?</p>
+                  
                 </PieChart>
               </Figure>
             </GridCell>
@@ -149,7 +150,7 @@ class Page2021 extends Component {
                 <BarChart
                   styleFormat="large"
                   title="Organization Size"
-                  keyMap={['In-house', 'Agency']}
+                  keyMap={[`In-house`, 'Agency']}
                   dataPoints={[
                     ['1-50 Employees', [10, 54]],
                     ['51-2,000 Employees', [43, 33]],
@@ -220,19 +221,16 @@ class Page2021 extends Component {
             </GridCell>
             
             <GridCell spanLG="6">
-              <Quote
-                styleFormat="large"
-                quote="Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum."
-                cite="Person Name"
-              />
+              <Quote styleFormat="large" cite="Person Name">
+                <p>Lorem ipsum dolor sit amet <em>consectetur adipiscing</em> elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum.</p>
+              </Quote>
             </GridCell>
             
             <GridCell startLG="9">
-              <Quote
-                styleFormat="small"
-                quote="Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum."
-                cite="Person Name"
-              />
+              <Quote styleFormat="small"
+                cite="Person Name">
+                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum.</p>
+                </Quote>
             </GridCell>
           </Grid>
           
