@@ -17,4 +17,15 @@
   &--large {
     padding: 0.875rem 1.25rem;
   }
+
+  &--inverse {
+    color: var(--color-neutral-1);
+    border-color: var(--color-neutral-1);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-neutral-1);
+      color: var(--color-neutral-3);
+    }
+  }
 }
