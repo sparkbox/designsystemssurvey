@@ -93,13 +93,14 @@
 //    and our UI components are often composed of Objects and Components
 @import "components/type";
 @import "components/intro";
+@import "components/toc";
 @import "components/section-header";
 @import "components/pie-chart";
 @import "components/bar-chart";
 @import "components/stacked-chart";
 @import "components/figure";
 @import "components/fixed-sides";
-@import "components/observation";
+@import "components/slim-heading";
 @import "components/small-callout";
 @import "components/quote";
 @import "components/back-to-top";

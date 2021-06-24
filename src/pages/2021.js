@@ -7,7 +7,7 @@ import Grid from '../components/2021/grid'
 import GridCell from '../components/2021/grid-cell'
 import SiteIntro from '../components/2021/intro'
 
-
+import TableOfContents from '../components/2021/table-index'
 import Section1 from '../sections/2021/section-1'
 import Section2 from '../sections/2021/section-2'
 import Section3 from '../sections/2021/section-3'
@@ -47,34 +47,36 @@ class Page2021 extends Component {
               </GridCell>
             </Grid>
           </SiteIntro>
-          
+
           <Grid style={{margin: "10vh 0"}}>
             <GridCell start="3" span="2" startMD="7" startLG="9" spanLG="3">
               <p className="cmp-type-body-large"><a href="https://sparkbox.com">Sparkbox</a>, a web design and development studio, directed this survey. This year’s survey was shared for four weeks across social media platforms, in Slack channels, with visitors on <a href="https://sparkbox.com/foundry">The Foundry</a>, and in emails to web professionals.</p>
             </GridCell>
           </Grid>
+
+          <TableOfContents />
  
-          <section className="obj-section">
+          <section className="obj-section" id="section-1">
             <Section1 />
           </section>
 
-          <section className="obj-section">
+          <section className="obj-section" id="section-2">
             <Section2 />
           </section>
 
-          <section className="obj-section">
+          <section className="obj-section" id="section-3">
             <Section3 />
           </section>
 
-          <section className="obj-section">
+          <section className="obj-section" id="section-4">
             <Section4 />
           </section>
 
-          <section className="obj-section">
+          <section className="obj-section" id="section-5">
             <Section5 />
           </section>
 
-          <section className="obj-section">
+          <section className="obj-section" id="section-6">
             <Section6 />
           </section>
         </div>
