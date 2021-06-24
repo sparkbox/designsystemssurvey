@@ -1,0 +1,20 @@
+.cmp-button {
+  display: inline-block;
+  border: 1px var(--color-neutral-3) solid;
+  border-left-width: 0.25rem;
+  color: var(--color-neutral-3);
+  text-decoration: none;
+  @include type-body-large;
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-sans);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-neutral-3);
+    color: var(--color-neutral-1);
+  }
+
+  &--large {
+    padding: 0.875rem 1.25rem;
+  }
+}
