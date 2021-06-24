@@ -11,7 +11,7 @@ import PieChart from '../components/2021/pie-chart'
 import BarChart from '../components/2021/bar-chart'
 import StackedChart from '../components/2021/stacked-chart'
 import Figure from "../components/2021/figure"
-import ObservationHeading from "../components/2021/observation-heading"
+import SlimHeading from "../components/2021/slim-heading"
 import SmallCallout from "../components/2021/small-callout"
 import Quote from "../components/2021/quote"
 
@@ -31,7 +31,7 @@ class Page2021 extends Component {
           <link rel="preload" as="font" href="/fonts/2021/SoleSansItalic.woff2" type="font/woff2" crossorigin="anonymous" />
         </Helmet>
 
-        <div className="obj-lines obj-max-width">
+        <div className="obj-lines obj-max-width" id="top">
 
           <FixedSides />
  
@@ -184,7 +184,7 @@ class Page2021 extends Component {
             </GridCell>
             
             <GridCell>
-              <ObservationHeading size="half" />
+              <SlimHeading size="half">Observation</SlimHeading>
               <h3>Thin observation. Best for short body content</h3>  
               <Grid>
                 <GridCell span="2" spanMD="4" spanLG="6">
@@ -194,7 +194,7 @@ class Page2021 extends Component {
             </GridCell>
             
             <GridCell startMD="5" startLG="7">
-              <ObservationHeading size="half" />
+              <SlimHeading size="half">Observation</SlimHeading>
               <h3>Wide observation. Best for long body content</h3>  
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit gravida mus vulputate, diam lobortis vivamus hendrerit placerat id leo facilisis iaculis, eleifend risus nunc quam a scelerisque tempus duis justo. Risus molestie duis lacus egestas proin porta habitant vehicula sodales eros mus ornare commodo, suspendisse dignissim nostra accumsan ligula parturient tempor gravida mi in nibh vestibulum. Iaculis et adipiscing lacinia nam massa ipsum nisi id, donec ante neque cras malesuada aliquam litora, auctor dui vehicula convallis gravida ridiculus eget.</p>
             </GridCell>

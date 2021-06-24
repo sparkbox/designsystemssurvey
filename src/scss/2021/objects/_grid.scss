@@ -1,6 +1,6 @@
 .obj-grid {
   --grid-size: 4;
-  --row-gap: 2rem;
+  --row-gap: 0;
 
   display: grid;
   grid-template-columns: repeat(var(--grid-size), 1fr);
@@ -9,12 +9,10 @@
   
   @media (min-width: mq(md)) {
     --grid-size: 8;
-    --row-gap: 3rem;
   }
   
   @media (min-width: mq(lg)) {
     --grid-size: 12;
-    --row-gap: 5vh;
   }
   
   &__col {

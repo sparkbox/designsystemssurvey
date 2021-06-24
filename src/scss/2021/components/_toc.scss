@@ -1,0 +1,63 @@
+.cmp-toc {
+  &__link {
+    position: relative;
+    padding: 2rem 0 1rem;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid var(--color-neutral-3);
+    align-items: end;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: math.div(5, 16) * -1rem;
+      content: '';
+      display: block;
+      height: 0.625rem;
+      width: 0.625rem;
+      background-image: svg(
+        '<svg viewBox="0 0 10 10">' +
+          '<path vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(neutral-3)}" d="M5,0 5,10M0,5 10,5" />' +
+        '</svg>'
+      );
+      background-color: var(--color-neutral-1);
+      box-shadow: -0.375rem 0 var(--color-neutral-1);
+      
+      @media (prefers-color-scheme: dark) {
+        
+        background-image: svg(
+          '<svg viewBox="0 0 10 10">' +
+            '<path vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(dark-neutral-3)}" d="M5,0 5,10M0,5 10,5" />' +
+          '</svg>'
+        );
+      }
+    }
+  }
+  
+  &__section-number {
+    display: block;
+    position: relative;
+    z-index: z-index(1);
+    font-family: var(--font-mono);
+    font-weight: weight(medium);
+    color: var(--color-neutral-1);
+    font-size: 6rem;
+    line-height: 0.875;
+    text-shadow: stroke(var(--color-rust));
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  &__section-title {
+    display: block;
+    position: relative;
+    z-index: z-index(2);
+    @include type-h2;
+    margin: 0;
+    text-shadow: stroke(var(--color-neutral-1));
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+}

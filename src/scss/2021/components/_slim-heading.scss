@@ -1,5 +1,11 @@
-.cmp-observation {
+.cmp-slim-heading {
   border-bottom: 1px solid var(--color-neutral-3);
+
+  &--full {
+    @include loop-mq {
+      width: 100%;
+    }
+  }
   
   &--half {
     @include loop-mq {
