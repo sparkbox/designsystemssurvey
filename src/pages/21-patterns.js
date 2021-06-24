@@ -236,8 +236,16 @@ class Page2021 extends Component {
           
           <Grid>
             <GridCell spanMD="8" spanLG="12">
-              <h2 class="cmp-type-section">Stuff</h2>
+              <h2 class="cmp-type-section">Other Elements</h2>
               <hr />
+            </GridCell>
+            
+            <GridCell span="2">
+              <a href="https://example.com" className="cmp-button">Button (Default)</a>
+            </GridCell>
+            
+            <GridCell start="3" span="2">
+              <a href="https://example.com" className="cmp-button cmp-button--large">Button (Large)</a>
             </GridCell>
           </Grid>
 
