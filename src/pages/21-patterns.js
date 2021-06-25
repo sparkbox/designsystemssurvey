@@ -74,9 +74,7 @@ class Page2021 extends Component {
                   dataPoints={[
                     ['Individual contributor (developer, designer, etc.)', 64],
                     ['Manager', 24],
-                    ['Executive', 4],
-                    ['Owner', 4],
-                    ['Freelancer or independent consultant', 4]
+                    ['Executive', 4]
                   ]}
                 />
               </Figure>
