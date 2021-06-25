@@ -1,0 +1,57 @@
+.cmp-scorecard {
+  display: grid;
+  grid-template-columns: repeat(var(--span) ,1fr);
+  grid-template-rows: auto;
+  
+  @media (min-width: mq(md)) {
+    grid-template-columns: repeat(var(--span-md),1fr);
+  }
+  
+  @media (min-width: mq(lg)) {
+    grid-template-columns: repeat(var(--span-lg),1fr);
+  }
+
+  &__item {
+    position: relative;
+    padding: 0.75em 0.5rem 0.75rem 0;
+    
+    &--border {
+      border-top: 1px solid var(--color-line);
+    }
+
+    &--large {
+      grid-column-start: span 2;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      height: 0.625rem;
+      width: 0.625rem;
+      position: absolute;
+      top: -5px;
+      background-image: svg(
+        '<svg viewBox="0 0 10 10" width="10" height="10">' +
+        '<path d="M5,0 5,10M0,5 10,5" stroke="#{color(scorelines)}" stroke-width="1" />' +
+        '</svg>'
+      );
+      
+      @media (prefers-color-scheme: dark) {
+        background-image: svg(
+          '<svg viewBox="0 0 10 10" width="10" height="10">' +
+          '<path d="M5,0 5,10M0,5 10,5" stroke="#{color(dark-scorelines)}" stroke-width="1" />' +
+          '</svg>'
+        );
+      }
+    }
+    
+    &::before {
+      left: -5px;
+    }
+    
+    &::after {
+      right: -5px;
+    }
+  }
+}

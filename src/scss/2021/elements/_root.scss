@@ -4,7 +4,8 @@
 	--color-neutral-2: #{color(neutral-2)};
 	--color-neutral-3: #{color(neutral-3)};
 	--color-line: #{color(line)};
-  --color-divider: #{color(divider)};
+    --color-divider: #{color(divider)};
+    --color-scorelines: #{color(scorelines)};
 
 	@each $key, $value in $font-families {
 		--font-#{$key}: #{$value};
@@ -27,6 +28,7 @@
 		--color-neutral-2: #{color(dark-neutral-2)};
 		--color-neutral-3: #{color(dark-neutral-3)};
 		--color-line: #{color(dark-line)};
-    --color-divider: #{color(dark-divider)};
+        --color-divider: #{color(dark-divider)};
+        --color-scorelines: #{color(dark-scorelines)};
 	}
 }

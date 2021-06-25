@@ -9,6 +9,9 @@ import Figure from "../../components/2021/figure"
 import Quote from "../../components/2021/quote"
 import SmallCallout from "../../components/2021/small-callout"
 import CallToAction from "../../components/2021/call-to-action"
+import  {ScoreCardLarge, ScoreRow} from "../../components/2021/scorecard"
+import Number from "../../components/2021/number"
+
 
 const Section3 = () => (
   <Grid className="util-margin-bottom-20vh">
@@ -76,12 +79,20 @@ const Section3 = () => (
       <Figure count="3.3">
         <h2 class="cmp-type-h3">Top priorities and challenges</h2>
         <p>Across both top priorities and challenges, three areas stood out, which we will explore more deeply in the next sections.</p>
-        <h3>1</h3>
-        <p>Encouraging Adoption</p>
-        <h3>2</h3>
-        <p>Engaging Contributors</p>
-        <h3>3</h3>
-        <p>Overcoming Debt</p>
+        <ScoreRow>
+          <ScoreCardLarge border={false}>
+            <Number bold={true}>1</Number>
+            <p class="cmp-type-h3">Encouraging Adoption</p>
+          </ScoreCardLarge>
+          <ScoreCardLarge border={false}>
+            <Number bold={true}>2</Number>
+            <p class="cmp-type-h3">Engaging Contributors</p>
+          </ScoreCardLarge>
+          <ScoreCardLarge border={false}>
+            <Number bold={true}>3</Number>
+            <p class="cmp-type-h3">Overcoming Debt</p>
+          </ScoreCardLarge>
+        </ScoreRow>
       </Figure>
     </GridCell>
 
@@ -98,11 +109,18 @@ const Section3 = () => (
 
     <GridCell spanMD="6" className="util-margin-bottom-1xl">
       <Figure count="3.4">
-      <h3> Priority #1 </h3>
-      <p>42% of in-house respondents selected increasing adoption as a priority</p>
-
-      <h3>Challenge #3</h3>
-      <p>44% of in-house respondents selected increasing adoption as a challenge</p>
+      <ScoreRow>
+        <ScoreCardLarge border={false}>
+          <h3>Priority</h3>
+          <Number large={true} highlight={true}>#1</Number>
+          <p>42% of in-house respondents selected increasing adoption as a priority</p>
+        </ScoreCardLarge>
+        <ScoreCardLarge border={false}>
+          <h3>Challenge</h3>
+          <Number large={true} highlight={true}>#3</Number>
+          <p>44% of in-house respondents selected increasing adoption as a challenge</p>
+        </ScoreCardLarge>
+      </ScoreRow>
       </Figure>
     </GridCell>
 
@@ -209,11 +227,18 @@ const Section3 = () => (
       <h2>2 - Engaging Contributors</h2>
 
       <Figure count="3.7">
-        <h3> Priority #2 </h3>
-        <p>37% of in-house respondents selected contribution as a priority</p>
-
-        <h3>Challenge #2</h3>
-        <p>45% of in-house respondents selected contribution as a challenge</p>
+        <ScoreRow>
+          <ScoreCardLarge border={false}>
+            <h3>Priority</h3>
+            <Number large={true} highlight={true}>#2</Number>
+            <p>37% of in-house respondents selected contribution as a priority</p>
+          </ScoreCardLarge>
+          <ScoreCardLarge border={false}>
+            <h3>Challenge</h3>
+            <Number large={true} highlight={true}>#2</Number>
+            <p>45% of in-house respondents selected contribution as a challenge</p>
+          </ScoreCardLarge>
+        </ScoreRow>
       </Figure>
     </GridCell>
 
@@ -368,11 +393,18 @@ const Section3 = () => (
       <h2>3 - Overcoming Debt</h2>
 
       <Figure count="3.13">
-        <h3> Priority #4 </h3>
-        <p>35% of in-house respondents selected overcoming debt as a priority</p>
-
-        <h3>Challenge #1</h3>
-        <p>47% of in-house respondents selected overcoming debt as a challenge</p>
+        <ScoreRow>
+          <ScoreCardLarge border={false}>
+            <h3>Priority</h3>
+            <Number large={true} highlight={true}>#4</Number>
+            <p>35% of in-house respondents selected overcoming debt as a priority</p>
+          </ScoreCardLarge>
+          <ScoreCardLarge border={false}>
+            <h3>Challenge</h3>
+            <Number large={true} highlight={true}>#1</Number>
+            <p>47% of in-house respondents selected overcoming debt as a challenge</p>
+          </ScoreCardLarge>
+        </ScoreRow>
       </Figure>
     </GridCell>
 
