@@ -52,7 +52,6 @@ const Section4 = () => (
           headingLevel="h3"
           styleFormat="small"
           title="But many aren’t tracking metrics"
-          keyMap={['In-house']}
           dataPoints={[
             ['Yes, we track metrics', [31]],
             ['No, we do not track metrics', [59]],
@@ -123,7 +122,6 @@ const Section4 = () => (
           headingLevel="h3"
           styleFormat="small"
           title="Teams share metrics in different ways"
-          keyMap={['In-house']}
           dataPoints={[
             ['Regularly held or special meetings', [39]],
             ['Announcements in communication channels', [32]],

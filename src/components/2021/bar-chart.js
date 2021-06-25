@@ -13,16 +13,18 @@ const BarChart = (props) => {
   }
   
   // Chart Key
-  for (let i = 0; i < props.keyMap.length; i++) {
-    keyStyle = (i === 0) ? fillStart : (i + 1)
-    keysMap.push(
-      <div className="cmp-bar-chart__key">
-        <span className={`cmp-bar-chart__key-marker util-fill-style-${keyStyle}`} />
-        <span className="cmp-bar-chart__key-name">
-          {props.keyMap[i]}
-        </span>
-      </div>
-    );
+  if (props.keyMap) {
+    for (let i = 0; i < props.keyMap.length; i++) {
+      keyStyle = (i === 0) ? fillStart : (i + 1)
+      keysMap.push(
+        <div className="cmp-bar-chart__key">
+          <span className={`cmp-bar-chart__key-marker util-fill-style-${keyStyle}`} />
+          <span className="cmp-bar-chart__key-name">
+            {props.keyMap[i]}
+          </span>
+        </div>
+      );
+    }
   }
   
   // Single Bar
@@ -35,18 +37,19 @@ const BarChart = (props) => {
       let result = value[0][i]
       let cssProperties = {}
       cssProperties['--width'] = `${result}%`
-
-      results.push (
-        <div className={`util-fill-style-${keyStyle} cmp-bar-chart__item`} style={cssProperties}>
-          <div className="cmp-bar-chart__value">{result}%</div>
-        </div>
-      );
+      
+      if (result) {
+        results.push (
+          <div className={`util-fill-style-${keyStyle} cmp-bar-chart__item`} style={cssProperties}>
+            <div className="cmp-bar-chart__value">{result}%</div>
+          </div>
+        );
+      }
     }
     return (
       <>{results}</>
     )
   }
-  
   for (let i = 0; i < props.dataPoints.length; i++) {
     dataBars.push(
       <div className="cmp-bar-chart__set">
@@ -81,7 +84,7 @@ BarChart.defaultProps = {
 BarChart.propTypes = {
   title: PropTypes.string.isRequired,
   dataPoints: PropTypes.array.isRequired,
-  keyMap: PropTypes.array.isRequired
+  keyMap: PropTypes.array
 }
 
 export default BarChart
