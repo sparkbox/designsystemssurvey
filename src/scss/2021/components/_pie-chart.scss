@@ -71,6 +71,13 @@
   }
 
   &__diagram {
+    // Default Properties:
+    --object-1: 0;
+    --object-2: 0;
+    --object-3: 0;
+    --object-4: 0;
+    --object-5: 0;
+    
     position: relative;
     width: 100%;
     border-radius: 50%;
@@ -102,6 +109,12 @@
       left: calc(50% - 1px);
       transform-origin: bottom center;
       box-shadow: inset 0 0 0 1px var(--color-neutral-3), 0 0 0 0.5px var(--color-neutral-3);
+    }
+    
+    &.util-fill-style-2::after,
+    &.util-fill-style-3::before {
+      // The diagonal fill needs just a bit more border
+      box-shadow: inset 0 0 0 1px var(--color-neutral-3), 0 0 0 1.5px var(--color-neutral-3);
     }
 
     &--object-1 {
