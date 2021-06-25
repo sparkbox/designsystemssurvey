@@ -20,12 +20,14 @@ $colors: (
   'white': 'white',
   'line': hsla(47, 13%, 11%, 0.03),
   'divider': hsla(47, 13%, 11%, 0.1),
+  'scorelines': color.mix(hsl(44, 100%, 99%), hsl(47, 13%, 11%), 90%),
   'dark-rust':  hsl(7, 75%, 60%),
   'dark-neutral-1': hsl(48, 12%, 8%),
   'dark-neutral-2': hsl(48, 13%, 15%),
   'dark-neutral-3': hsl(44, 59%, 95%),
   'dark-line': hsla(44, 100%, 99%, 0.05),
   'dark-divider': hsla(44, 100%, 99%, 0.1),
+  'dark-scorelines': color.mix(hsl(48, 12%, 8%), hsl(44, 59%, 95%), 90%)
 );
 
 // Font Family

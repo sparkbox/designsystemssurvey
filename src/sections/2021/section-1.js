@@ -1,9 +1,11 @@
 import React from "react"
-import SectionHeader from '../../components/2021/section-header'
-import Grid from '../../components/2021/grid'
-import GridCell from '../../components/2021/grid-cell'
-import BarChart from '../../components/2021/bar-chart'
+import SectionHeader from "../../components/2021/section-header"
+import Grid from "../../components/2021/grid"
+import GridCell from "../../components/2021/grid-cell"
+import BarChart from "../../components/2021/bar-chart"
 import Figure from "../../components/2021/figure"
+import  {ScoreCard, ScoreCardLarge, ScoreRow} from "../../components/2021/scorecard"
+import Number from "../../components/2021/number"
 
 const Section1 = () => (
   <Grid className="util-margin-bottom-20vh">
@@ -17,24 +19,60 @@ const Section1 = () => (
 
     <GridCell spanLG="4" className="util-margin-bottom-1xl">
       <Figure count="1.1" caption="376 Responses">
-        <p>376 Responses</p>
-        <p>217 <em>In-House Respondents with design systems at their organization</em></p>
-        <p>159 Agency Respondents who have worked on a design system within the last year</p>
+        <ScoreRow>
+          <ScoreCardLarge border={false}>
+            <Number large={true} highlight={true}>376</Number>
+            <p class="cmp-type-sans-micro">Responses</p>
+          </ScoreCardLarge>
+        </ScoreRow>
+        <ScoreRow>
+          <ScoreCardLarge>
+            <Number>217</Number>
+            <p class="cmp-type-sans-micro"><em>In-House Respondents with design systems at their organization</em></p>
+          </ScoreCardLarge>
+          <ScoreCardLarge>
+            <Number>159</Number>
+            <p class="cmp-type-sans-micro">Agency Respondents who have worked on a design system within the last year</p>
+          </ScoreCardLarge>
+        </ScoreRow>
       </Figure>
     </GridCell>
 
     <GridCell start="2" startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-top-20vh@md">
       <Figure count="1.2" caption="Responses: In-house: 217; Agency: 159">
         <h2 class="cmp-type-h3">What is your primary discipline?</h2>
+        
         <h3><em>In-House</em></h3>
-        <p>39% <em>Development</em></p>
-        <p>36% <em>Design</em></p>
-        <p>12% <em>User Experience</em></p>
-
+        <ScoreRow>
+          <ScoreCard>
+          <Number bold={true}>39%</Number>
+            <p class="cmp-type-sans-micro"><em>Development</em></p>
+          </ScoreCard>
+          <ScoreCard>
+          <Number>36%</Number>
+            <p class="cmp-type-sans-micro"><em>Design</em></p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>12%</Number>
+            <p class="cmp-type-sans-micro"><em>User Experience</em></p>
+          </ScoreCard>
+        </ScoreRow>
+        
         <h3>Agency</h3>
-        <p>52% Development</p>
-        <p>21% Design</p>
-        <p>12% User Experience</p>
+        <ScoreRow>
+          <ScoreCard>
+            <Number bold={true}>52%</Number>
+            <p class="cmp-type-sans-micro">Development</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>21%</Number>
+            <p class="cmp-type-sans-micro">Design</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>12%</Number>
+            <p class="cmp-type-sans-micro">User Experience</p>
+          </ScoreCard>
+        </ScoreRow>
       </Figure>
       <p>The remainder of the respondents were split between project/product management, management, and other.</p>
     </GridCell>

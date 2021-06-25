@@ -1,12 +1,14 @@
 import React from "react"
-import SectionHeader from '../../components/2021/section-header'
-import Grid from '../../components/2021/grid'
-import GridCell from '../../components/2021/grid-cell'
-import PieChart from '../../components/2021/pie-chart'
-import BarChart from '../../components/2021/bar-chart'
-import Quote from '../../components/2021/quote'
+import SectionHeader from "../../components/2021/section-header"
+import Grid from "../../components/2021/grid"
+import GridCell from "../../components/2021/grid-cell"
+import PieChart from "../../components/2021/pie-chart"
+import BarChart from "../../components/2021/bar-chart"
+import Quote from "../../components/2021/quote"
 import Figure from "../../components/2021/figure"
 import SmallCallout from "../../components/2021/small-callout"
+import  {ScoreCard, ScoreCardLarge, ScoreRow} from "../../components/2021/scorecard"
+import Number from "../../components/2021/number"
 
 const Section2 = () => (
     <Grid className="util-margin-bottom-20vh">
@@ -62,46 +64,90 @@ const Section2 = () => (
 
       <GridCell spanMD="6" spanLG="6" className="util-margin-bottom-1xl">
         <Figure count="2.3" caption="171 Responses | Respondents were asked to select all that apply from a list of 19 items with an option to enter other answers.">
-          <h4>Color system</h4>
-          <p>95%</p>
-          <h4>Typography system</h4>
-          <p>89%</p>
-          <h4>Form components</h4>
-          <p>89%</p>
-          <h4>Navigation components</h4>
-          <p>74%</p>
-          <h4>Usage guidelines</h4>
-          <p>74%</p>
-          <h4>Spacing system</h4>
-          <p>73%</p>
-          <h4>Design files</h4>
-          <p>71%</p>
-          <h4>CSS code</h4>
-          <p>70%</p>
-          <h4>Framework-specific components</h4>
-          <p>69%</p>
-          <h4>Accessibility guidelines</h4>
-          <h4>65%</h4>
-          <h4>Grid system</h4>
-          <p>64%</p>
-          <h4>Layout system</h4>
-          <p>64%</p>
-          <h4>HTML code</h4>
-          <p>61%</p>
-          <h4>Brand guidelines</h4>
-          <p>60%</p>
-          <h4>JavaScript code</h4>
-          <p>57%</p>
-          <h4>Example page templates</h4>
-          <p>50%</p>
-          <h4>Content blocks</h4>
-          <p>46%</p>
-          <h4>Voice & tone guidelines</h4>
-          <p>36%</p>
-          <h4>Animation system</h4>
-          <p>21%</p>
-          <h4>Other (please specify)</h4>
-          <p>	6%</p>
+          <ScoreRow>
+            <ScoreCardLarge border={false}>
+              <h4>Color system</h4>
+              <Number large={true} highlight={true}>95%</Number>
+            </ScoreCardLarge>
+            <ScoreCardLarge border={false}>
+              <h4>Typography system</h4>
+              <Number large={true} highlight={true}>89%</Number>
+            </ScoreCardLarge>
+            <ScoreCardLarge border={false}>
+              <h4>Form components</h4>
+              <Number large={true} highlight={true}>89%</Number>
+            </ScoreCardLarge>
+          </ScoreRow>
+          <ScoreRow>
+            <ScoreCard>
+              <Number>74%</Number>
+              <p class="cmp-type-sans-micro">Navigation components</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>74%</Number>
+              <p class="cmp-type-sans-micro">Usage guidelines</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>73%</Number>
+              <p class="cmp-type-sans-micro">Spacing system</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>71%</Number>
+              <p class="cmp-type-sans-micro">Design files</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>70%</Number>
+              <p class="cmp-type-sans-micro">CSS code</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>69%</Number>
+              <p class="cmp-type-sans-micro">Framework-specific components</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>65%</Number>
+              <p class="cmp-type-sans-micro">Accessibility guidelines</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>64%</Number>
+              <p class="cmp-type-sans-micro">Grid system</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>64%</Number>
+              <p class="cmp-type-sans-micro">Layout system</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>61%</Number>
+              <p class="cmp-type-sans-micro">HTML code</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>60%</Number>
+              <p class="cmp-type-sans-micro">Brand guidelines</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>57%</Number>
+              <p class="cmp-type-sans-micro">JavaScript code</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>50%</Number>
+              <p class="cmp-type-sans-micro">Example page templates</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>46%</Number>
+              <p class="cmp-type-sans-micro">Content blocks</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>36%</Number>
+              <p class="cmp-type-sans-micro">Voice & tone guidelines</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>21%</Number>
+              <p class="cmp-type-sans-micro">Animation system</p>
+            </ScoreCard>
+            <ScoreCard>
+              <Number>6%</Number>
+              <p class="cmp-type-sans-micro">Other (please specify)</p>
+            </ScoreCard>
+          </ScoreRow>
         </Figure>
       </GridCell>
 
@@ -149,17 +195,23 @@ const Section2 = () => (
         <Figure count="2.5" caption="136 Responses">
           <h3>Most respondent organizations have centralized teams</h3>
           <p>&ldquo;How is your design system <em>team structured</em>?&rdquo;</p>
-          <h4>Centralized</h4>
-          <p>46%</p>
-          <p>of in-house respondents have <strong>a team dedicated to the design system</strong>, based outside of the product-and-features team structure.</p>
-
-          <h4>Solitary</h4>
-          <p>26%</p>
-          <p>of in-house respondents have <strong>one internal, pre-existing team</strong> that created a design system and owns it, though other teams also use the design system.</p>
-
-          <h4>Federated</h4>
-          <p>24%</p>
-          <p>of in-house respondents have <strong>individuals from various teams</strong> inside the organization manage the design system, and each of these teams uses the design system.</p>
+          <ScoreRow>
+            <ScoreCardLarge border={false}>
+              <h4>Centralized</h4>
+              <Number large={true} highlight={true}>46%</Number>
+              <p>of in-house respondents have <strong>a team dedicated to the design system</strong>, based outside of the product-and-features team structure.</p>
+            </ScoreCardLarge>
+            <ScoreCardLarge border={false}>
+              <h4>Solitary</h4>
+              <Number large={true} highlight={true}>26%</Number>
+              <p>of in-house respondents have <strong>one internal, pre-existing team</strong> that created a design system and owns it, though other teams also use the design system.</p>
+            </ScoreCardLarge>
+            <ScoreCardLarge border={false}>
+              <h4>Federated</h4>
+              <Number large={true} highlight={true}>24%</Number>
+              <p>of in-house respondents have <strong>individuals from various teams</strong> inside the organization manage the design system, and each of these teams uses the design system.</p>
+            </ScoreCardLarge>
+          </ScoreRow>
         </Figure>
       </GridCell>
     </Grid>
