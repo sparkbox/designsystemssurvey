@@ -22,7 +22,7 @@ const Section5 = () => (
     <GridCell start="1" spanLG="4">
       <Figure count="5.1" caption="136">
         <BarChart
-          styleFormat="small"
+          sizeFormat="small"
           headingLevel="h3"
           title="Some teams are thinking about creating new systems"
           keyMap={['In-house']}
@@ -50,17 +50,19 @@ const Section5 = () => (
 
     <GridCell start="1" spanLG="4">
       <Quote
-        styleFormat="small"
-        cite="-Manager, slightly successful design system">
-        <p className="cmp-type-body-large"><em><strong>Different areas in our org are going in their own directions and believe they need their own design systems.</strong></em> One area in particular is moving to a new backend and was given the mandate from business to create an entirely new visual language. They specifically do not wish to use the existing DS team or system to house and integrate their libraries into <em><strong>(politics, really)</strong></em>.</p>
+        decoStyle="alt"
+        sizeFormat="small"
+        cite="Manager, slightly successful design system">
+        <p><em><strong>Different areas in our org are going in their own directions and believe they need their own design systems.</strong></em> One area in particular is moving to a new backend and was given the mandate from business to create an entirely new visual language. They specifically do not wish to use the existing DS team or system to house and integrate their libraries into <em><strong>(politics, really)</strong></em>.</p>
       </Quote>
     </GridCell>
 
     <GridCell start="1" spanLG="4">
       <Quote
-        styleFormat="small"
-        cite="-Manager, very successful design system">
-        <p className="cmp-type-body-large"><em><strong>Several [lines of business]</strong></em> have spun up new design systems.</p>
+        decoStyle="alt"
+        sizeFormat="small"
+        cite="Manager, very successful design system">
+        <p><em><strong>Several [lines of business]</strong></em> have spun up new design systems.</p>
       </Quote>
     </GridCell>
 
@@ -70,24 +72,24 @@ const Section5 = () => (
 
     <GridCell start="1" spanLG="4">
       <Quote
-        styleFormat="small"
-        cite="-Manager, slightly successful design system">
-        <p className="cmp-type-body-large">To increase adoption as we <em><strong>move towards a common tech stack.</strong></em></p>
+        sizeFormat="small"
+        cite="Manager, slightly successful design system">
+        <p>To increase adoption as we <em><strong>move towards a common tech stack.</strong></em></p>
       </Quote>
     </GridCell>
 
     <GridCell start="1" spanLG="4">
       <Quote
-        styleFormat="small"
-        cite="-Owner, successful design system">
-        <p className="cmp-type-body-large">We've created <em><strong>a lot of technical debt</strong></em> on our way and learned from our mistakes. We're building a new and well documented design system from our existing components... and <em><strong>moving from a very restricted design system to a more flexible system.</strong></em></p>
+        sizeFormat="small"
+        cite="Owner, successful design system">
+        <p>We've created <em><strong>a lot of technical debt</strong></em> on our way and learned from our mistakes. We're building a new and well documented design system from our existing components... and <em><strong>moving from a very restricted design system to a more flexible system.</strong></em></p>
       </Quote>
     </GridCell>
 
     <GridCell start="1" spanLG="4">
       <Figure count="5.2" caption="136">
         <BarChart
-          styleFormat="small"
+          sizeFormat="small"
           headingLevel="h3"
           title="Many teams already have more than one system"
           keyMap={['In-house']}
@@ -108,25 +110,25 @@ const Section5 = () => (
 
     <GridCell start="1" spanLG="4">
       <Quote
-        styleFormat="small"
-        cite="-Manager, successful design system">
-        <p className="cmp-type-body-large">There are different divisions of the company that <em><strong>serve different customers and personas</strong></em>. These teams spun up their own design system.</p>
+        sizeFormat="small"
+        cite="Manager, successful design system">
+        <p>There are different divisions of the company that <em><strong>serve different customers and personas</strong></em>. These teams spun up their own design system.</p>
       </Quote>
     </GridCell>
 
     <GridCell start="1" spanLG="4">
       <Quote
-        styleFormat="small"
-        cite="-Manager, successful design system">
-        <p className="cmp-type-body-large">Our company is large and has multiple group companies that operate almost like their own entities. <em><strong>It's typical for group companies to have one or more systems associated with notably different products</strong></em>.</p>
+        sizeFormat="small"
+        cite="Manager, successful design system">
+        <p>Our company is large and has multiple group companies that operate almost like their own entities. <em><strong>It's typical for group companies to have one or more systems associated with notably different products</strong></em>.</p>
       </Quote>
     </GridCell>
 
     <GridCell start="1" spanLG="4">
       <Quote
-        styleFormat="small"
-        cite="-Individual contributor, slightly successful design system">
-        <p className="cmp-type-body-large">Some brands started mini or micro DSs <em><strong>to bypass central DS police and also have more control</strong></em> over smaller changes or style changes.</p>
+        sizeFormat="small"
+        cite="Individual contributor, slightly successful design system">
+        <p>Some brands started mini or micro DSs <em><strong>to bypass central DS police and also have more control</strong></em> over smaller changes or style changes.</p>
       </Quote>
     </GridCell>
 
