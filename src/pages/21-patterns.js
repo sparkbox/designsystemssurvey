@@ -221,15 +221,18 @@ class Page2021 extends Component {
             </GridCell>
             
             <GridCell spanLG="6">
-              <Quote styleFormat="large" cite="Person Name">
+              <Quote
+                sizeFormat="large"
+                cite="Person Name">
                 <p>Lorem ipsum dolor sit amet <em>consectetur adipiscing</em> elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum.</p>
               </Quote>
             </GridCell>
             
             <GridCell startLG="9">
-              <Quote styleFormat="small"
+              <Quote
+                decoStyle="alt"
                 cite="Person Name">
-                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum.</p>
+                 <p><em>Lorem ipsum dolor sit</em> amet consectetur adipiscing elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum.</p>
                 </Quote>
             </GridCell>
           </Grid>
