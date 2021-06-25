@@ -25,7 +25,6 @@ const Section5 = () => (
           sizeFormat="small"
           headingLevel="h3"
           title="Some teams are thinking about creating new systems"
-          keyMap={['In-house']}
           dataPoints={[
             ['No', [61]],
             ['Yes, we have considered creating a new design system', [9]],
@@ -92,7 +91,6 @@ const Section5 = () => (
           sizeFormat="small"
           headingLevel="h3"
           title="Many teams already have more than one system"
-          keyMap={['In-house']}
           dataPoints={[
             ['No, we only have one design system', [57]],
             ['Yes, we have more than one design system', [39]],

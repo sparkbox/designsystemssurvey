@@ -26,7 +26,6 @@ const Section3 = () => (
         <BarChart
           headingLevel="h3"
           title="Priorities"
-          keyMap={['']}
           dataPoints={[
             ['Adoption (developer, designer, etc.)', [42]],
             ['Contribution', [37]],
@@ -53,7 +52,6 @@ const Section3 = () => (
       <BarChart
         headingLevel="h3"
         title="Challenges"
-        keyMap={['']}
         dataPoints={[
           ['Overcoming technical/creative debt', [47]],
           ['Contribution', [45]],
@@ -129,7 +127,6 @@ const Section3 = () => (
         <BarChart
           headingLevel="h3"
           title="Adoption is linked to success"
-          keyMap={['']}
           dataPoints={[
             ['Very Successful', [9]],
             ['Successful', [22]],
@@ -245,7 +242,6 @@ const Section3 = () => (
         <BarChart
           headingLevel="h3"
           title="But contribution is low"
-          keyMap={['']}
           dataPoints={[
             ['They don’t or rarely contribute to the design system', [17]],
             ['They rarely contribute to the design system', [37]],
@@ -327,7 +323,6 @@ const Section3 = () => (
         <BarChart
           headingLevel="h3"
           title="But most systems don’t have a well-defined process"
-          keyMap={['']}
           dataPoints={[
             ['Not define (1)', [17]],
             ['Somewhat defined (2)', [20]],
