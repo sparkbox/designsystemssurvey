@@ -2,9 +2,7 @@ import React from "react"
 import SectionHeader from '../../components/2021/section-header'
 import Grid from '../../components/2021/grid'
 import GridCell from '../../components/2021/grid-cell'
-import PieChart from '../../components/2021/pie-chart'
 import BarChart from '../../components/2021/bar-chart'
-import StackedChart from '../../components/2021/stacked-chart'
 import Figure from "../../components/2021/figure"
 
 const Section1 = () => (
