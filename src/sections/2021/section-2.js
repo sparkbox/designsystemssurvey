@@ -9,16 +9,16 @@ import Figure from "../../components/2021/figure"
 import SmallCallout from "../../components/2021/small-callout"
 
 const Section2 = () => (
-    <Grid>
+    <Grid className="util-margin-bottom-20vh">
       <GridCell spanMD="8" spanLG="12">
         <SectionHeader title="Characteristics &amp; Teams" number="2" total="6" />
       </GridCell>
 
-      <GridCell>
-        <p>The elements in your design system and the team creating them are foundational to building a quality product. Let’s learn more about the commonalities across our respondents’ design systems.</p>
+      <GridCell spanLG="6" className="util-margin-bottom-1xl">
+        <p class="cmp-type-body-large">The elements in your design system and the team creating them are foundational to building a quality product. Let’s learn more about the commonalities across our respondents’ design systems.</p>
       </GridCell>
 
-      <GridCell>
+      <GridCell span="3" spanLG="6" className="util-margin-bottom-1xl">
         <Figure count="1.1" caption="159 Responses">
           <PieChart
             styleFormat="large"
@@ -35,21 +35,15 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell>
+      <GridCell startMD="6" alignMD="center" startLG="9" spanLG="4" className="util-margin-bottom-1xl">
         <p>Most in-house respondents felt that their design system is either moderately successful (38%) or successful to very successful (39%).</p>
-      </GridCell>
 
-      <GridCell>
         <Quote cite="Executive, successful design system">
           <p>It has not only outperformed in terms of KPIs, but it has also <em><strong>allowed us to scale more work with fewer people</strong></em>.</p>
         </Quote>
       </GridCell>
 
-      <GridCell>
-        <h3>Design system teams</h3>
-      </GridCell>
-
-      <GridCell>
+      <GridCell start="2" span="3" startMD="3" spanMD="6" startLG="6" spanLG="7" className="util-margin-bottom-1xl">
         <Figure count="2.2" caption="171 Responses">
           <PieChart
             title="Individual contributors usually suggest design systems"
@@ -66,7 +60,7 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell>
+      <GridCell spanMD="6" spanLG="6" className="util-margin-bottom-1xl">
         <Figure count="2.3" caption="171 Responses | Respondents were asked to select all that apply from a list of 19 items with an option to enter other answers.">
           <h4>Color system</h4>
           <p>95%</p>
@@ -111,13 +105,19 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell span="2">
+      <GridCell span="2" startMD="7" spanMD="4" alignMD="center" startLG="9" spanLG="2" className="util-margin-bottom-1xl">
         <SmallCallout>
           <p>16 of the 19 elements were all contained in over 50% of the in-house respondents’ design systems.</p>
         </SmallCallout>
       </GridCell>
 
-      <GridCell>
+      <GridCell start="2" startMD="1" spanMD="2" alignMD="center" className="util-margin-bottom-1xl">
+        <SmallCallout>
+          <p>Most in-house design system teams contain design, development, and UX expertise. Many teams reported needing more resources from product/project management, research, and strategy.</p>
+        </SmallCallout>
+      </GridCell>
+
+      <GridCell startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl">
         <Figure count="2.4" caption="374 Responses">
           <BarChart
             styleFormat="large"
@@ -140,20 +140,12 @@ const Section2 = () => (
               <p>In house respondents to to work at larger organizations, while agency respondents work primarily at smaller companies.</p>
           </BarChart>
         </Figure>
-      </GridCell>
 
-      <GridCell>
         <p>&ldquo;Which disciplines do you currently have on your design system team?&rdquo; Responses: 135 | Respondents were asked to select all that apply.</p>
         <p>&ldquo;Which disciplines are you currently missing on your design system team that would be useful right now?&rdquo; Responses: 115 | Respondents were asked to select all that apply.</p>
       </GridCell>
 
-      <GridCell span="2">
-        <SmallCallout>
-          <p>Most in-house design system teams contain design, development, and UX expertise. Many teams reported needing more resources from product/project management, research, and strategy.</p>
-        </SmallCallout>
-      </GridCell>
-
-      <GridCell>
+      <GridCell spanMD="6">
         <Figure count="2.5" caption="136 Responses">
           <h3>Most respondent organizations have centralized teams</h3>
           <p>&ldquo;How is your design system <em>team structured</em>?&rdquo;</p>
