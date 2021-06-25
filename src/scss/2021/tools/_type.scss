@@ -1,6 +1,7 @@
 @mixin type-hero {
 	font-family: var(--font-mono);
 	font-size: var(--type-size-hero);
+	font-stretch: stretch(normal);
 	font-weight: weight(thin);
 	letter-spacing: -0.03em;
 	line-height: 1;
@@ -16,6 +17,7 @@
 
 @mixin type-h2 {
 	font-family: var(--font-mono);
+	font-stretch: stretch(normal);
 	font-size: var(--type-size-h2);
 	font-weight: weight(semibold);
 	line-height: 1.2;
@@ -24,6 +26,7 @@
 @mixin type-h3 {
 	font-family: var(--font-mono);
 	font-size: var(--type-size-h3);
+	font-stretch: stretch(normal);
 	font-weight: weight(medium);
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
@@ -33,6 +36,7 @@
 @mixin type-body-large {
 	font-family: var(--font-mono);
 	font-size: var(--type-size-body-lg);
+	font-stretch: stretch(normal);
 	font-weight: weight(light);
 	line-height: 1.4;
 }
@@ -40,6 +44,7 @@
 @mixin type-body {
 	font-family: var(--font-sans);
 	font-size: var(--type-size-body-sm);
+	font-stretch: stretch(normal);
 	font-stretch: stretch(extended);
 }
 
@@ -53,5 +58,6 @@
 @mixin type-mono-micro {
 	font-family: var(--font-mono);
 	font-size: var(--type-size-mono-micro);
+	font-stretch: stretch(normal);
 	font-weight: weight(exbold);
 }

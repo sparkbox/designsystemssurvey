@@ -15,12 +15,20 @@
     content: '\201C';
     font-family: var(--font-mono);
     color: var(--color-neutral-1);
-    text-shadow: stroke(var(--color-rust));
     position: absolute;
     z-index: z-index(1);
     top: 0;
     left: 0;
     line-height: 1;
+  }
+  
+  &--deco-rust::before {
+    text-shadow: stroke(var(--color-rust));
+  }
+  
+  &--deco-alt::before {
+    text-shadow: stroke(var(--color-neutral-3));
+    opacity: 0.5;
   }
 
   &--large::before {
@@ -38,13 +46,23 @@
     z-index: z-index(2);
     margin: 0;
     padding: 0;
-  }
-  
-  &__text {
     text-shadow: stroke(var(--color-neutral-1));
-    margin: 0;
   }
   
+  // Block quote text assumes paragraph:  
+  p:not([class]) {
+    @include type-body-large;
+    margin: 0;
+    
+    & + p:not([class]) {
+      margin-top: 1em;
+    }
+  }
+  
+  &--large p:not([class]) {
+    @include type-h2;
+  }
+
   &__footer {
     margin-top: 1rem;
   }
