@@ -11,17 +11,16 @@ import SmallCallout from "../../components/2021/small-callout"
 import CallToAction from "../../components/2021/call-to-action"
 
 const Section3 = () => (
-  <Grid>
+  <Grid className="util-margin-bottom-20vh">
     <GridCell spanMD="8" spanLG="12">
       <SectionHeader title="Priorities and Challenges" number="3" total="6" />
     </GridCell>
 
-    <GridCell>
-      <hr />
+    <GridCell spanLG="6" className="util-margin-bottom-1xl">
       <p className="cmp-type-body-large"><a href="/2020/">As noted in 2020</a>, “Due to the nature of a design system requiring buy-in and support from multiple disciplines, a design system project often helps break down organizational silos.” Design system teams focus on common areas—many of which highlight the importance of cross-team support.</p>
     </GridCell>
 
-    <GridCell>
+    <GridCell span="3" spanLG="4" className="util-margin-bottom-1xl">
       <Figure count="3.1" caption="Responses: 154 | Respondents were asked to select all that apply.">
         <BarChart
           headingLevel="h3"
@@ -47,7 +46,7 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell start="2" span="3" startMD="6" startLG="7" spanLG="4" className="util-margin-bottom-1xl">
     <Figure count="3.2" caption="Responses: 158 | Respondents were asked to select all that apply.">
       <BarChart
         headingLevel="h3"
@@ -73,7 +72,7 @@ const Section3 = () => (
     </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell startLG="7" spanLG="6" className="util-margin-bottom-1xl">
       <Figure count="3.3">
         <h2 class="cmp-type-h3">Top priorities and challenges</h2>
         <p>Across both top priorities and challenges, three areas stood out, which we will explore more deeply in the next sections.</p>
@@ -86,11 +85,18 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
-      <h2 class="cmp-type-h3">1 - Encouraging Adoption</h2>
+    <GridCell span="12" className="util-margin-top-1xl@lg util-margin-bottom-1xl util-margin-bottom-2xl@lg">
+      <hr/>
     </GridCell>
 
-    <GridCell>
+
+
+
+    <GridCell spanMD="6" className="util-margin-bottom-1xl">
+      <h2>1 - Encouraging Adoption</h2>
+    </GridCell>
+
+    <GridCell spanMD="6" className="util-margin-bottom-1xl">
       <Figure count="3.4">
       <h3> Priority #1 </h3>
       <p>42% of in-house respondents selected increasing adoption as a priority</p>
@@ -100,12 +106,12 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell className="util-margin-bottom-1xl">
       <h2 class="cmp-type-h3">Adoption continues to be a focus for many teams</h2>
       <p>Adoption difficulties have been high on respondents’ lists of concerns since our <a href="/2018/">2018 Design Systems Survey</a> and remain there in 2021.</p>
     </GridCell>
 
-    <GridCell>
+    <GridCell startMD="6" startLG="7" className="util-margin-bottom-1xl">
       <Quote
         styleFormat="small"
         cite="Individual contributor, moderately successful design system">
@@ -113,7 +119,7 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-bottom-none@lg">
       <Quote
         styleFormat="small"
         decoStyle="alt"
@@ -122,10 +128,11 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell spanMD="6" className="util-margin-bottom-2xl util-margin-bottom-3xl@lg">
       <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for “What are the top challenges your design system team is facing at this moment?">
         <BarChart
           headingLevel="h3"
+          styleFormat="large"
           title="Adoption is linked to success"
           dataPoints={[
             ['Very Successful', [9]],
@@ -140,11 +147,11 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell span="3" start="2" startLG="9" alignMD="center" spanMD="4" className="util-margin-bottom-1xl">
       <p>In-house respondents who perceived their design system as either “very successful” or “successful” were less likely to mention adoption as a challenge than those who reported moderate or little success. And, separately, 52% of agency respondents reported that lack of adoption is one of the most common reasons their clients’ design systems are unsuccessful.</p>
     </GridCell>
 
-    <GridCell>
+    <GridCell spanLG="5" className="util-margin-bottom-1xl util-margin-bottom-md@lg">
       <Figure count="3.6" caption="Responses: 159">
         <StackedChart
           headingLevel="h3"
@@ -169,13 +176,13 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell span="2" startMD="7" startLG="9" spanLG="2" alignLG="top" className="util-margin-bottom-1xl">
       <SmallCallout>
         <p>The more a design system is used in digital products, the higher it’s perceived as successful by in-house respondents.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell>
+    <GridCell spanMD="6" startMD="3" startLG="7" className="util-margin-bottom-1xl">
       <CallToAction mark="right">
       <svg style={{maxWidth: 4 + 'rem'}} viewBox="0 0 64 64">
         <path style={{fill: 'var(--color-neutral-1)'}} d="M62 1c.6 0 1 .4 1 1v26.5L35.5 1H62m0-1H33.1L64 30.9V2c0-1.1-.9-2-2-2zM63 35.5V62c0 .6-.4 1-1 1H35.5L63 35.5m1-2.4L33.1 64H62c1.1 0 2-.9 2-2V33.1zM1 35.5L28.5 63H2c-.6 0-1-.4-1-1V35.5m-1-2.4V62c0 1.1.9 2 2 2h28.9L0 33.1zM28.5 1L1 28.5V2c0-.6.4-1 1-1h26.5m2.4-1H2C.9 0 0 .9 0 2v28.9L30.9 0zM26 24.9h12c.6 0 1.1.5 1.1 1.1v12c0 .6-.5 1.1-1.1 1.1H26c-.6 0-1.1-.5-1.1-1.1V26c0-.6.5-1.1 1.1-1.1z M30 14.8H14.9V30zM14.9 34v15.2H30zM49.1 30V14.8H34zM34 49.2h15.1V34z"/>
@@ -190,8 +197,17 @@ const Section3 = () => (
       </CallToAction>
     </GridCell>
 
-    <GridCell>
-      <h2 class="cmp-type-h3">2 - Engaging Contributors</h2>
+    <GridCell span="12" className="util-margin-top-1xl@lg util-margin-bottom-1xl util-margin-bottom-2xl@lg">
+      <hr/>
+    </GridCell>
+
+
+
+
+    <GridCell spanMD="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+
+      <h2>2 - Engaging Contributors</h2>
+
       <Figure count="3.7">
         <h3> Priority #2 </h3>
         <p>37% of in-house respondents selected contribution as a priority</p>
@@ -201,14 +217,15 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
-      <Quote styleFormat="small"
-      cite="-Individual contributor, slightly successful design system">
+    <GridCell span="3" spanMD="4" startMD="6" alignMD="end" startLG="9" className="util-margin-bottom-1xl">
+      <Quote
+        styleFormat="large"
+        cite="-Individual contributor, slightly successful design system">
         <p>“[Our design system] is quite limited in scope currently, we are concentrating on populating it more than anything else.”</p>
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
       <Figure count="3.8" caption="Responses: 135 | Answers were on a scale of 1 to 5.">
         <StackedChart
           headingLevel="h3"
@@ -231,13 +248,13 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell >
+    <GridCell span="3" start="2" spanMD="4" startMD="7" alignMD="center" startLG="9" className="util-margin-bottom-1xl">
       <SmallCallout>
       <p>The more often users contribute to the design system, the more frequently in-house respondents perceive their design system as moderately successful or higher.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell>
+    <GridCell span="3" spanMD="5" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="3.9" caption="Responses: 136 | Answers were on a scale of 1 to 5.">
         <BarChart
           headingLevel="h3"
@@ -255,70 +272,69 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell span="3" spanMD="4" startMD="7" spanLG="2" startLG="9" alignMD="end" className="util-margin-bottom-1xl">
       <SmallCallout>
         <p>54% of in-house respondents reported that their design system users rarely contribute to the system or don’t contribute at all.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell>
-      <Figure count="3.10" caption="Respondents: 136 | Answers were on a scale of 1 to 5.">
-        <StackedChart
-          headingLevel="h3"
-          title="More defined process is linked to increased contribution"
-          keyMap={[
-            'They don’t or rarely contribute to the design system (1-2)',
-            'They sometimes contribute to the design system (3)',
-            'They often or always contribute to the design system (4-5)',
-          ]}
-          dataPoints={[
-            ['Not Defined to somewhat defined (1-2)', [74, 8, 18]],
-            ['Moderately Defined (3)', [40, 43, 17]],
-            ['Well and very well defined (4-5)', [44, 31, 26]],
-          ]}
-        >
-        <p>"How <em>defined</em> is your process that enables design system users to contribute to the design system?” <strong>based on</strong> “how <em>frequently</em> do design system users contribute to the design system?"</p>
-      </StackedChart>
-      </Figure>
-    </GridCell>
+    <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-right-lg@md util-margin-right-none@lg">
+      <div className="util-margin-bottom-md util-margin-bottom-1xl@md">
+        <Figure count="3.10" caption="Respondents: 136 | Answers were on a scale of 1 to 5.">
+          <StackedChart
+            headingLevel="h3"
+            title="More defined process is linked to increased contribution"
+            keyMap={[
+              'They don’t or rarely contribute to the design system (1-2)',
+              'They sometimes contribute to the design system (3)',
+              'They often or always contribute to the design system (4-5)',
+            ]}
+            dataPoints={[
+              ['Not Defined to somewhat defined (1-2)', [74, 8, 18]],
+              ['Moderately Defined (3)', [40, 43, 17]],
+              ['Well and very well defined (4-5)', [44, 31, 26]],
+            ]}
+          >
+          <p>"How <em>defined</em> is your process that enables design system users to contribute to the design system?” <strong>based on</strong> “how <em>frequently</em> do design system users contribute to the design system?"</p>
+        </StackedChart>
+        </Figure>
+      </div>
 
-    <GridCell >
       <SmallCallout>
         <p>Having a more defined process for contributing to the design system increases the frequency that users contribute to the system.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell>
-      <Figure count="3.11" caption="Respondents: 135 | Answers were on a scale of 1 to 5.">
-        <StackedChart
-          headingLevel="h3"
-          title="More defined process is linked to success"
-          keyMap={[
-            'They don’t or rarely contribute to the design system (1-2)',
-            'They sometimes contribute to the design system (3)',
-            'They often or always contribute to the design system (4-5)',
-          ]}
-          dataPoints={[
-            ['Not Successful', [33, 33, 33]],
-            ['Slightly Successful', [68, 29, 4]],
-            ['Moderately Successful', [30, 34, 36]],
-            ['Successful', [32, 36, 32]],
-            ['Very Successful', [10, 50, 40]]
-          ]}
-        >
-        <p>"In your opinion, how <em>successful</em> is your organization’s design system?” <strong>based on</strong> “how <em>defined</em> is your process that enables design system users to contribute to the design system?"</p>
-      </StackedChart>
-      </Figure>
-    </GridCell>
+    <GridCell startMD="5" startLG="9" className="util-margin-bottom-1xl util-margin-top-3xl@md">
+      <div className="util-margin-bottom-md util-margin-bottom-1xl@md">
+        <Figure count="3.11" caption="Respondents: 135 | Answers were on a scale of 1 to 5.">
+          <StackedChart
+            headingLevel="h3"
+            title="More defined process is linked to success"
+            keyMap={[
+              'They don’t or rarely contribute to the design system (1-2)',
+              'They sometimes contribute to the design system (3)',
+              'They often or always contribute to the design system (4-5)',
+            ]}
+            dataPoints={[
+              ['Not Successful', [33, 33, 33]],
+              ['Slightly Successful', [68, 29, 4]],
+              ['Moderately Successful', [30, 34, 36]],
+              ['Successful', [32, 36, 32]],
+              ['Very Successful', [10, 50, 40]]
+            ]}
+          >
+          <p>"In your opinion, how <em>successful</em> is your organization’s design system?” <strong>based on</strong> “how <em>defined</em> is your process that enables design system users to contribute to the design system?"</p>
+        </StackedChart>
+        </Figure>
+      </div>
 
-
-    <GridCell>
       <SmallCallout>
         <p>And having a more defined contribution model contributes to the design system’s overall perceived success by in-house respondents.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell>
+    <GridCell start="2" startMD="1" spanMD="5" spanLG="6" className="util-margin-bottom-1xl">
       <Figure count="3.12" caption="Respondents: 136 | Answers were on a scale of 1 to 5.">
         <BarChart
           headingLevel="h3"
@@ -336,17 +352,21 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell span="3" start="2" startMD="7" spanMD="2" startLG="9" alignMD="end" className="util-margin-bottom-1xl">
       <SmallCallout>
         <p>Only 29% of respondents rated their contribution process as well defined or very well defined. And, separately, only 27% of agency respondents reported that they recommend a contribution model to their clients.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell>
-      <h2 class="cmp-type-h3">3 - Overcoming Debt</h2>
+    <GridCell span="12" className="util-margin-top-1xl@lg util-margin-bottom-1xl util-margin-bottom-2xl@lg">
+      <hr/>
     </GridCell>
 
-    <GridCell>
+
+
+    <GridCell spanMD="4" className="util-margin-bottom-1xl">
+      <h2>3 - Overcoming Debt</h2>
+
       <Figure count="3.13">
         <h3> Priority #4 </h3>
         <p>35% of in-house respondents selected overcoming debt as a priority</p>
@@ -356,21 +376,19 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell start="2" span="3" spanMD="4" startMD="6" alignMD="end" startLG="8" spanLG="5" className="util-margin-bottom-1xl util-margin-top-3xl@md">
       <Quote styleFormat="small"
       cite="Manager, moderately successful design system">
         <p>“Nothing can account for the impact to various development stacks in the product. <em><strong>A design system will always produce some technical debt</strong></em>.”</p>
       </Quote>
-    </GridCell>
 
-    <GridCell>
       <Quote styleFormat="small"
       cite="Individual contributor, successful design system">
         <p>“All system choices, especially first-iteration ones made because of resource limitations on the design system team's side impose limitations on products. This limits the evolution of products unless they break free of the system. <em><strong>Future iterations of the system need to support both a future vision as well as a current state</strong></em>, causing a constant deprecated vs not-built-yet state. This interaction can cause deadlock between the system, the platform, and the products.”</p>
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell span="3" spanMD="4" startLG="3" className="util-margin-bottom-1xl">
       <Figure count="1.14" caption="Responses: 136">
         <PieChart
           headingLevel="h3"
@@ -387,39 +405,39 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell >
+    <GridCell span="3" spanMD="4" startMD="7" alignMD="end" startLG="9" spanLG="2" className="util-margin-bottom-1xl">
       <SmallCallout>
         <p>53% of in-house respondents reported that their design system creates debt. And, separately, agency respondents agreed, with 47% saying that they believe their clients’ design systems create debt.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell>
+    <GridCell className="util-margin-bottom-1xl">
       <h3>What Causes Debt?</h3>
       <p>When asked about the causes for technical and design debt in an open-ended question, in-house respondents’ top reasons include poor implementation (19 of 42 responses) and updating pre-existing products (11 of 42 responses).</p>
     </GridCell>
 
-    <GridCell>
+    <GridCell start="2" startLG="1" spanLG="3" alignMD="top" className="util-margin-bottom-md">
       <Quote styleFormat="small"
       cite="Individual contributor, moderately successful design system">
         <p>The documentation was incomplete, and thus the proper <em><strong>technical implementation was partial guesswork</strong></em> (guidance not in place)</p>
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell start="2" startMD="4" startLG="5" spanLG="3" alignMD="center" className="util-margin-bottom-md">
       <Quote styleFormat="small"
       cite="Individual contributor, slightly successful design system">
         <p>In an effort to move fast, many projects result in ‘we can incorporate this into the system later’ or <em><strong>‘we can update this after we ship.’</strong></em></p>
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell spanMD="6" startLG="9" spanLG="3" alignLG="end" className="util-margin-bottom-1xl util-margin-top-1xl@lg">
       <Quote styleFormat="small"
       cite="Manager, slightly successful design system">
         <p>... we created the design system based on an existing product, there has been debt because it wasn't built from components to start with. However, all features within the product that have been updated over the years are now debt-free (both design and tech). So it's a tricky one to answer. We have a web product which was built from scratch off DS components and that has no debt. I think <em><strong>debt is created/related to when the DS was implemented along the lifecycle of the product/s it's supporting.</strong></em></p>
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell startLG="3" spanLG="5" className="util-margin-bottom-md util-margin-bottom-3xl@md">
       <Figure count="3.11" caption="Responses: 135">
         <StackedChart
           headingLevel="h3"
@@ -442,20 +460,20 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell>
+    <GridCell startMD="6" alignMD="end" startLG="9" className="util-margin-bottom-1xl util-margin-bottom-none@md">
       <p>Though many respondents thought their design system(s) created debt, this did not correlate to the perception of a less successful design system.</p>
       <p><strong>How is it that respondents could report debt being a major challenge, but it doesn’t impact perceived success?</strong></p>
       <p>One possible explanation could lie in some open-ended answers in which 9 of 42 in-house respondents mentioned that debt seemed unavoidable in an initiative of this size and scope.</p>
     </GridCell>
 
-    <GridCell>
+    <GridCell className="util-margin-bottom-md">
       <Quote styleFormat="small"
       cite="Individual contributor, successful design system">
         <p>Everything causes tech/design debt. It's unavoidable…Honestly, I feel this is just the curse of software development.</p>
       </Quote>
     </GridCell>
 
-    <GridCell>
+    <GridCell startMD="3" spanMD="6" className="util-margin-bottom-1xl">
       <Quote styleFormat="small"
       cite="Manager, moderately successful design system">
         <p>How would it not? Any legacy product would need a facelift. Any new product must adhere to guidelines. Yes, there are ways to streamline this, and in some cases the product development process speeds up... A design system will always produce some technical debt.</p>
