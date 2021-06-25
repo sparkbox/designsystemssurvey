@@ -4,6 +4,7 @@
 	--color-neutral-2: #{color(neutral-2)};
 	--color-neutral-3: #{color(neutral-3)};
 	--color-line: #{color(line)};
+  --color-divider: #{color(divider)};
 
 	@each $key, $value in $font-families {
 		--font-#{$key}: #{$value};
@@ -19,12 +20,13 @@
 		}
 	}
 
-	// Just an idea to provide a dark mode style	
-	@media (prefers-color-scheme: dark) {	
+	// Just an idea to provide a dark mode style
+	@media (prefers-color-scheme: dark) {
 		--color-rust: #{color(dark-rust)};
 		--color-neutral-1: #{color(dark-neutral-1)};
 		--color-neutral-2: #{color(dark-neutral-2)};
 		--color-neutral-3: #{color(dark-neutral-3)};
 		--color-line: #{color(dark-line)};
+    --color-divider: #{color(dark-divider)};
 	}
 }
