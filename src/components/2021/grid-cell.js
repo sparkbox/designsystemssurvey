@@ -2,6 +2,7 @@ import React from "react"
 import {PropTypes} from "prop-types"
 
 const GridCell = (props) => {
+  let customClasses = (props.className != null) ? ` ${props.className}` : ''
   let cssProperties = {}
   cssProperties['--start'] = props.start
   cssProperties['--span'] = props.span
@@ -20,7 +21,7 @@ const GridCell = (props) => {
   cssProperties['--row-start-lg'] = props.rowStartLG
 
   return (
-    <div className="obj-grid__col" style={cssProperties}>
+    <div className={`obj-grid__col${customClasses}`} style={cssProperties}>
       {props.children}
     </div>
   )
