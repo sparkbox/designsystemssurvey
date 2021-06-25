@@ -6,9 +6,9 @@ import SlimHeading from './slim-heading'
 
 const TableOfContents = (props) => {
   return (
-    <div className="cmp-toc">
+    <div className="cmp-toc util-margin-bottom-20vh">
       <Grid>
-        <GridCell>
+        <GridCell className="util-margin-right-lg@md util-margin-right-none@lg">
           <SlimHeading size="full">Jump To</SlimHeading>
           <TableItem number="1">The Respondents</TableItem>
           <TableItem number="2">Characteristics &amp; Team</TableItem>
