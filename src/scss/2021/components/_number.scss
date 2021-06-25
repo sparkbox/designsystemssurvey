@@ -1,0 +1,20 @@
+.cmp-num {
+  box-sizing: border-box;
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: weight(exlight);
+  margin: 0;
+  line-height: 0.75;
+
+  &--large {
+    font-weight: weight(exlight);
+    font-size: 7.5rem;
+  }  
+
+  &--bold {
+    font-weight: weight(medium);
+  }  
+  &--highlight {
+    color: var(--color-rust);
+  }
+}

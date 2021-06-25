@@ -1,12 +1,14 @@
 import React from "react"
 
-import SectionHeader from '../../components/2021/section-header'
-import Grid from '../../components/2021/grid'
-import GridCell from '../../components/2021/grid-cell'
+import SectionHeader from "../../components/2021/section-header"
+import Grid from "../../components/2021/grid"
+import GridCell from "../../components/2021/grid-cell"
 import Figure from "../../components/2021/figure"
-import StackedChart from '../../components/2021/stacked-chart'
+import StackedChart from "../../components/2021/stacked-chart"
 import SmallCallout from "../../components/2021/small-callout"
-import BarChart from '../../components/2021/bar-chart'
+import BarChart from "../../components/2021/bar-chart"
+import  {ScoreCard, ScoreRow} from "../../components/2021/scorecard"
+import Number from "../../components/2021/number"
 
 const Section4 = () => (
   <Grid>
@@ -72,41 +74,36 @@ const Section4 = () => (
       <Figure count="4.3" caption="50 Responses">
         <h3>Design system teams track similar metrics</h3>
         <p>“<em>Which metrics</em> are you tracking?”</p>
-
-        <table>
-          <tr>
-            <th>Metric Area</th>
-            <th>% of respondents</th>
-          </tr>
-          <tr>
-            <td>Usage</td>
-            <td>88%</td>
-          </tr>
-          <tr>
-            <td>Adoption</td>
-            <td>84%</td>
-          </tr>
-          <tr>
-            <td>Accessibillity</td>
-            <td>76%</td>
-          </tr>
-          <tr>
-            <td>Efficiency</td>
-            <td>64%</td>
-          </tr>
-          <tr>
-            <td>Engagement</td>
-            <td>64%</td>
-          </tr>
-          <tr>
-            <td>Usability</td>
-            <td>62%</td>
-          </tr>
-          <tr>
-            <td>Consistency</td>
-            <td>56%</td>
-          </tr>
-        </table>
+        <ScoreRow>
+          <ScoreCard>
+            <Number>88%</Number>
+            <p>Usage</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>84%</Number>
+            <p>Adoption</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>76%</Number>
+            <p>Accessibillity</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>64%</Number>
+            <p>Efficiency</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>64%</Number>
+            <p>Engagement</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>62%</Number>
+            <p>Usability</p>
+          </ScoreCard>
+          <ScoreCard>
+            <Number>56%</Number>
+            <p>Consistency</p>
+          </ScoreCard>
+        </ScoreRow>
       </Figure>
     </GridCell>
 
