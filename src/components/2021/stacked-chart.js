@@ -29,10 +29,12 @@ const StackedChart = (props) => {
         keyStyle = i + 1
         let cssProperties = {}
         cssProperties['--width'] = `${value[i]}%`
-  
+        let inside = (value[i] > 7) ? " cmp-stacked-chart__value--inside" : "";
+
         results.push (
-          <div className={`util-fill-style-${keyStyle} cmp-stacked-chart__item`} style={cssProperties}>
-            <div className="cmp-stacked-chart__value">{value[i]}%</div>
+          <div class="cmp-stacked-chart__item" style={cssProperties}>
+            <div className={`util-fill-style-${keyStyle} cmp-stacked-chart__bar`}/>
+            <div className={`cmp-stacked-chart__value${inside}`}>{value[i]}%</div>
           </div>
         );
       }
