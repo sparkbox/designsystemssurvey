@@ -77,31 +77,31 @@ const Section4 = () => (
         <ScoreRow>
           <ScoreCard>
             <Number>88%</Number>
-            <p>Usage</p>
+            <p className="cmp-type-sans-micro">Usage</p>
           </ScoreCard>
           <ScoreCard>
             <Number>84%</Number>
-            <p>Adoption</p>
+            <p className="cmp-type-sans-micro">Adopt&shy;ion</p>
           </ScoreCard>
           <ScoreCard>
             <Number>76%</Number>
-            <p>Accessibillity</p>
+            <p className="cmp-type-sans-micro">Access&shy;ibillity</p>
           </ScoreCard>
           <ScoreCard>
             <Number>64%</Number>
-            <p>Efficiency</p>
+            <p className="cmp-type-sans-micro">Effic&shy;iency</p>
           </ScoreCard>
           <ScoreCard>
             <Number>64%</Number>
-            <p>Engagement</p>
+            <p className="cmp-type-sans-micro">Engage&shy;ment</p>
           </ScoreCard>
           <ScoreCard>
             <Number>62%</Number>
-            <p>Usability</p>
+            <p className="cmp-type-sans-micro">Usabil&shy;ity</p>
           </ScoreCard>
           <ScoreCard>
             <Number>56%</Number>
-            <p>Consistency</p>
+            <p className="cmp-type-sans-micro">Consi&shy;stency</p>
           </ScoreCard>
         </ScoreRow>
       </Figure>

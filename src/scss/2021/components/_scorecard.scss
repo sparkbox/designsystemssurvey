@@ -1,7 +1,12 @@
 .cmp-scorecard {
+  --half-span: calc(var(--span) / 2);
   display: grid;
-  grid-template-columns: repeat(var(--span) ,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
+  
+  @media (min-width: mq(sm)) {
+    grid-template-columns: repeat(var(--span),1fr);
+  }
   
   @media (min-width: mq(md)) {
     grid-template-columns: repeat(var(--span-md),1fr);
@@ -13,7 +18,11 @@
 
   &__item {
     position: relative;
-    padding: 0.75em 0.5rem 0.75rem 0;
+    padding: 0.75em 0.25rem 0.75rem 0;
+    
+    @media (min-width: mq(md)) {
+      padding-right: 0.5rem;
+    }
     
     &--border {
       border-top: 1px solid var(--color-line);

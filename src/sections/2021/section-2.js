@@ -62,7 +62,7 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell spanMD="6" spanLG="6" className="util-margin-bottom-1xl">
+      <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl">
         <Figure count="2.3" caption="171 Responses | Respondents were asked to select all that apply from a list of 19 items with an option to enter other answers.">
           <ScoreRow>
             <ScoreCardLarge border={false}>
@@ -81,11 +81,11 @@ const Section2 = () => (
           <ScoreRow>
             <ScoreCard>
               <Number>74%</Number>
-              <p class="cmp-type-sans-micro">Navigation components</p>
+              <p class="cmp-type-sans-micro">Navi&shy;gation compon&shy;ents</p>
             </ScoreCard>
             <ScoreCard>
               <Number>74%</Number>
-              <p class="cmp-type-sans-micro">Usage guidelines</p>
+              <p class="cmp-type-sans-micro">Usage guide&shy;lines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>73%</Number>
@@ -101,11 +101,11 @@ const Section2 = () => (
             </ScoreCard>
             <ScoreCard>
               <Number>69%</Number>
-              <p class="cmp-type-sans-micro">Framework-specific components</p>
+              <p class="cmp-type-sans-micro">Frame&shy;work-specific components</p>
             </ScoreCard>
             <ScoreCard>
               <Number>65%</Number>
-              <p class="cmp-type-sans-micro">Accessibility guidelines</p>
+              <p class="cmp-type-sans-micro">Accessi&shy;bility guidelines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>64%</Number>
@@ -121,15 +121,15 @@ const Section2 = () => (
             </ScoreCard>
             <ScoreCard>
               <Number>60%</Number>
-              <p class="cmp-type-sans-micro">Brand guidelines</p>
+              <p class="cmp-type-sans-micro">Brand guide&shy;lines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>57%</Number>
-              <p class="cmp-type-sans-micro">JavaScript code</p>
+              <p class="cmp-type-sans-micro">Java&shy;Script code</p>
             </ScoreCard>
             <ScoreCard>
               <Number>50%</Number>
-              <p class="cmp-type-sans-micro">Example page templates</p>
+              <p class="cmp-type-sans-micro">Example page temp&shy;lates</p>
             </ScoreCard>
             <ScoreCard>
               <Number>46%</Number>
@@ -137,11 +137,11 @@ const Section2 = () => (
             </ScoreCard>
             <ScoreCard>
               <Number>36%</Number>
-              <p class="cmp-type-sans-micro">Voice & tone guidelines</p>
+              <p class="cmp-type-sans-micro">Voice & tone guide&shy;lines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>21%</Number>
-              <p class="cmp-type-sans-micro">Animation system</p>
+              <p class="cmp-type-sans-micro">Anima&shy;tion system</p>
             </ScoreCard>
             <ScoreCard>
               <Number>6%</Number>
