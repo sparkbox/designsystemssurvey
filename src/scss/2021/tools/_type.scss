@@ -58,6 +58,7 @@
 @mixin type-mono-micro {
 	font-family: var(--font-mono);
 	font-size: var(--type-size-mono-micro);
+  line-height: 1.2;
 	font-stretch: stretch(normal);
 	font-weight: weight(exbold);
 }

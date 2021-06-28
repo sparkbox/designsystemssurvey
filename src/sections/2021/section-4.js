@@ -110,7 +110,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell startMD="2" spanMD="6" startLG="3" className="util-margin-bottom-1xl">
-      <Figure count="4.4" caption="38 Responses | Respondents were asked to select all that apply.">
+      <Figure count="4.4" caption="38 Responses | Respondents were asked to select all that&nbsp;apply.">
         <BarChart
           headingLevel="h3"
           styleFormat="small"
