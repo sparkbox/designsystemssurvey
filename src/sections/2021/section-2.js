@@ -64,6 +64,8 @@ const Section2 = () => (
 
       <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl">
         <Figure count="2.3" caption="171 Responses | Respondents were asked to select all that apply from a list of 19 items with an option to enter other answers.">
+          <h2 class="cmp-type-h3">Design systems have similar elements</h2>
+          <p>"What does your design system <em>contain</em>?"</p>
           <ScoreRow>
             <ScoreCardLarge border={false}>
               <h4>Color system</h4>

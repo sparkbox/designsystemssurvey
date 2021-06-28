@@ -46,7 +46,7 @@ const Section4 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell startMD="7" spanLG="4" align="end" className="util-margin-top-3xl@md util-margin-bottom-1xl">
+    <GridCell startMD="7" spanLG="5" align="end" className="util-margin-top-3xl@md util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="4.2" caption="160 Responses" className="util-margin-bottom-1xl">
         <BarChart
           headingLevel="h3"
@@ -66,7 +66,7 @@ const Section4 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
+    <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="4.3" caption="50 Responses">
         <h3>Design system teams track similar metrics</h3>
         <p>“<em>Which metrics</em> are you tracking?”</p>
