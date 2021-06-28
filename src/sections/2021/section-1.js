@@ -38,10 +38,10 @@ const Section1 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell start="2" span="3" startMD="6" spanMD="3" startLG="9" spanLG="4" className="util-margin-bottom-1xl util-margin-top-20vh@md">
+    <GridCell start="2" span="3" startMD="6" spanMD="3" startLG="9" spanLG="4" className="util-margin-bottom-1xl util-margin-bottom-none@md util-margin-top-3xl@md">
       <Figure count="1.2" caption="Responses: In-house: 217; Agency: 159">
         <h2 class="cmp-type-h3">What is your primary discipline?</h2>
-        
+
         <h3><em>In-House</em></h3>
         <ScoreRow>
           <ScoreCard>
@@ -57,7 +57,7 @@ const Section1 = () => (
             <p class="cmp-type-sans-micro"><em>User Experience</em></p>
           </ScoreCard>
         </ScoreRow>
-        
+
         <h3>Agency</h3>
         <ScoreRow>
           <ScoreCard>

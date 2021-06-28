@@ -304,26 +304,28 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-right-lg@md util-margin-right-none@lg">
-      <div className="util-margin-bottom-md util-margin-bottom-1xl@md">
-        <Figure count="3.10" caption="Respondents: 136 | Answers were on a scale of 1 to 5.">
-          <StackedChart
-            headingLevel="h3"
-            title="More defined process is linked to increased contribution"
-            keyMap={[
-              'They don’t or rarely contribute to the design system (1-2)',
-              'They sometimes contribute to the design system (3)',
-              'They often or always contribute to the design system (4-5)',
-            ]}
-            dataPoints={[
-              ['Not Defined to somewhat defined (1-2)', [74, 8, 18]],
-              ['Moderately Defined (3)', [40, 43, 17]],
-              ['Well and very well defined (4-5)', [44, 31, 26]],
-            ]}
-          >
-          <p>"How <em>defined</em> is your process that enables design system users to contribute to the design system?” <strong>based on</strong> “how <em>frequently</em> do design system users contribute to the design system?"</p>
-        </StackedChart>
-        </Figure>
-      </div>
+      <Figure
+        className="util-margin-bottom-md util-margin-bottom-1xl@md"
+        count="3.10"
+        caption="Respondents: 136 | Answers were on a scale of 1 to 5."
+      >
+        <StackedChart
+          headingLevel="h3"
+          title="More defined process is linked to increased contribution"
+          keyMap={[
+            'They don’t or rarely contribute to the design system (1-2)',
+            'They sometimes contribute to the design system (3)',
+            'They often or always contribute to the design system (4-5)',
+          ]}
+          dataPoints={[
+            ['Not Defined to somewhat defined (1-2)', [74, 8, 18]],
+            ['Moderately Defined (3)', [40, 43, 17]],
+            ['Well and very well defined (4-5)', [44, 31, 26]],
+          ]}
+        >
+        <p>"How <em>defined</em> is your process that enables design system users to contribute to the design system?” <strong>based on</strong> “how <em>frequently</em> do design system users contribute to the design system?"</p>
+      </StackedChart>
+      </Figure>
 
       <SmallCallout>
         <p>Having a more defined process for contributing to the design system increases the frequency that users contribute to the system.</p>
@@ -331,28 +333,30 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell startMD="5" startLG="9" className="util-margin-bottom-1xl util-margin-top-3xl@md">
-      <div className="util-margin-bottom-md util-margin-bottom-1xl@md">
-        <Figure count="3.11" caption="Respondents: 135 | Answers were on a scale of 1 to 5.">
-          <StackedChart
-            headingLevel="h3"
-            title="More defined process is linked to success"
-            keyMap={[
-              'They don’t or rarely contribute to the design system (1-2)',
-              'They sometimes contribute to the design system (3)',
-              'They often or always contribute to the design system (4-5)',
-            ]}
-            dataPoints={[
-              ['Not Successful', [33, 33, 33]],
-              ['Slightly Successful', [68, 29, 4]],
-              ['Moderately Successful', [30, 34, 36]],
-              ['Successful', [32, 36, 32]],
-              ['Very Successful', [10, 50, 40]]
-            ]}
-          >
-          <p>"In your opinion, how <em>successful</em> is your organization’s design system?” <strong>based on</strong> “how <em>defined</em> is your process that enables design system users to contribute to the design system?"</p>
-        </StackedChart>
-        </Figure>
-      </div>
+      <Figure
+        className="util-margin-bottom-md util-margin-bottom-1xl@md util-margin-top-2xl@md"
+        count="3.11"
+        caption="Respondents: 135 | Answers were on a scale of 1 to 5."
+      >
+        <StackedChart
+          headingLevel="h3"
+          title="More defined process is linked to success"
+          keyMap={[
+            'They don’t or rarely contribute to the design system (1-2)',
+            'They sometimes contribute to the design system (3)',
+            'They often or always contribute to the design system (4-5)',
+          ]}
+          dataPoints={[
+            ['Not Successful', [33, 33, 33]],
+            ['Slightly Successful', [68, 29, 4]],
+            ['Moderately Successful', [30, 34, 36]],
+            ['Successful', [32, 36, 32]],
+            ['Very Successful', [10, 50, 40]]
+          ]}
+        >
+        <p>"In your opinion, how <em>successful</em> is your organization’s design system?” <strong>based on</strong> “how <em>defined</em> is your process that enables design system users to contribute to the design system?"</p>
+      </StackedChart>
+      </Figure>
 
       <SmallCallout>
         <p>And having a more defined contribution model contributes to the design system’s overall perceived success by in-house respondents.</p>
@@ -443,7 +447,7 @@ const Section3 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell className="util-margin-bottom-1xl">
+    <GridCell className="util-margin-bottom-md">
       <h3>What Causes Debt?</h3>
       <p>When asked about the causes for technical and design debt in an open-ended question, in-house respondents’ top reasons include poor implementation (19 of 42 responses) and updating pre-existing products (11 of 42 responses).</p>
     </GridCell>
