@@ -2,17 +2,20 @@
   margin: 0;
   padding: 0;
   position: relative;
-  
+
   &__caption {
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 0.5rem;
     text-align: right;
-    color: color.mix(color(neutral-3), color(neutral-1), 50%);
+    color: color.mix(color(neutral-3), color(neutral-1), 62%);
     @include type-mono-micro;
+    font-weight: weight(bold);
   }
-  
+
   &__count {
-    margin-left: 2rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
     display: inline-block;
     color: var(--color-neutral-3);
   }

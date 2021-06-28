@@ -38,7 +38,7 @@ const Section1 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell start="2" span="3" startMD="6" spanMD="3" startLG="9" spanLG="4" className="util-margin-bottom-1xl util-margin-bottom-none@md util-margin-top-3xl@md">
+    <GridCell start="2" span="3" startMD="6" spanMD="3" startLG="9" spanLG="4" className="util-margin-bottom-1xl util-margin-top-20vh@md">
       <Figure count="1.2" caption="Responses: In-house: 217; Agency: 159">
         <h2 class="cmp-type-h3">What is your primary discipline?</h2>
 
@@ -78,7 +78,7 @@ const Section1 = () => (
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-1xl@md">
-      <Figure count="1.3" caption="Responses: In-house: 217; Agency: 159">
+      <Figure count="1.3" caption="Responses: In-house: 217; Agency:&nbsp;159">
         <BarChart
           headingLevel="h3"
           startStyle="alt"
@@ -97,7 +97,7 @@ const Section1 = () => (
     </GridCell>
 
     <GridCell start="2" startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-top-20vh@md">
-      <Figure count="1.4" caption="Responses: In-house: 217; Agency: 157">
+      <Figure count="1.4" caption="Responses: In-house: 217; Agency:&nbsp;157">
         <BarChart
           headingLevel="h3"
           startStyle="alt"
