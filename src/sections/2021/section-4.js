@@ -11,17 +11,17 @@ import  {ScoreCard, ScoreRow} from "../../components/2021/scorecard"
 import Number from "../../components/2021/number"
 
 const Section4 = () => (
-  <Grid>
+  <Grid className="util-margin-bottom-20vh">
     <GridCell spanMD="8" spanLG="12">
       <SectionHeader title="Metrics" number="4" total="6" />
     </GridCell>
 
-    <GridCell start="1" spanLG="4">
+    <GridCell spanLG="6" className="util-margin-bottom-1xl">
       <p className="cmp-type-body-large">46% of in-house respondents have dedicated design system teams&mdash;but even non-dedicated teams have to get approval to spend time on the system. While the promise of a design system may be enough to gain support on day one, as systems get older, it’s natural that teams need to prove their value. Enter metrics.</p>
     </GridCell>
 
-    <GridCell start="1" spanLG="4">
-      <Figure count="4.1" caption="159 Responses">
+    <GridCell span="3" spanMD="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+      <Figure count="4.1" caption="159 Responses" className="util-margin-bottom-1xl">
         <StackedChart
           styleFormat="small"
           title="Tracking metrics is linked to success"
@@ -40,16 +40,14 @@ const Section4 = () => (
             <p>"In your opinion, how <em>successful</em> is your organization's design system" <strong>based on</strong> "does your organization <em>track metrics</em> for your design system?"</p>
         </StackedChart>
       </Figure>
-    </GridCell>
 
-    <GridCell start="1" spanLG="2">
       <SmallCallout>
         <p>In-house teams who track design system metrics perceive their systems as more successful.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell start="1" spanLG="4">
-      <Figure count="4.2" caption="160 Responses">
+    <GridCell startMD="7" spanLG="4" align="end" className="util-margin-top-3xl@md util-margin-bottom-1xl">
+      <Figure count="4.2" caption="160 Responses" className="util-margin-bottom-1xl">
         <BarChart
           headingLevel="h3"
           styleFormat="small"
@@ -62,15 +60,13 @@ const Section4 = () => (
             <p>“Does your organization <em>track metrics</em> for your design system?”</p>
         </BarChart>
       </Figure>
-    </GridCell>
 
-    <GridCell start="1" spanLG="2">
       <SmallCallout>
         <p>59% of in-house respondents don’t track design system metrics. And, separately, 45% of agency respondents reported that they don’t actively recommend that their clients track design system metrics.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell start="1" spanLG="4">
+    <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
       <Figure count="4.3" caption="50 Responses">
         <h3>Design system teams track similar metrics</h3>
         <p>“<em>Which metrics</em> are you tracking?”</p>
@@ -107,13 +103,13 @@ const Section4 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell start="1" spanLG="2">
+    <GridCell span="3" spanMD="2" align="center" startMD="7" startLG="9" className="util-margin-bottom-1xl">
       <SmallCallout>
         <p>Among in-house teams who are tracking metrics, the top areas tracked include usage, adoption, and accessibility.</p>
       </SmallCallout>
     </GridCell>
 
-    <GridCell start="1" spanLG="4">
+    <GridCell startMD="2" spanMD="6" startLG="3" className="util-margin-bottom-1xl">
       <Figure count="4.4" caption="38 Responses | Respondents were asked to select all that apply.">
         <BarChart
           headingLevel="h3"
