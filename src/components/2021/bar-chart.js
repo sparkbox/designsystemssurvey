@@ -37,12 +37,17 @@ const BarChart = (props) => {
       let result = value[0][i]
       let cssProperties = {}
       cssProperties['--width'] = `${result}%`
-      
+      let valueAbove = (result < 7) ?  <div className="cmp-bar-chart__value">{result}%</div> : ""
+      let hideValue = (result < 7) ? " cmp-bar-chart__value--hidden" : ""
+
       if (result) {
         results.push (
+          <>
+          {valueAbove}
           <div className={`util-fill-style-${keyStyle} cmp-bar-chart__item`} style={cssProperties}>
-            <div className="cmp-bar-chart__value">{result}%</div>
+            <div className={`cmp-bar-chart__value ${hideValue}`}>{result}%</div>
           </div>
+          </>
         );
       }
     }

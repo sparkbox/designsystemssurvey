@@ -58,18 +58,25 @@
   &__stack {
     display: flex;
     width: 100%;
+    align-items: flex-end;
   }
 
   &__item {
     box-sizing: border-box;
-    border: 1px solid var(--border);
     width: var(--width);
-    color: var(--color);
+    position: relative;
     display: flex;
+    flex-direction: column-reverse;
 
     &:not(:first-child) {
       border-left: none;
     }
+  }
+
+  &__bar {
+    width: 100%;
+    border: 1px solid var(--border);
+    height: $bar-chart-height;
   }
 
   &__value {
@@ -78,6 +85,17 @@
     line-height: 1;
     padding: 0.125rem 0.25rem 0.125rem 0.125rem;
     margin-bottom: 0.675rem;
-    background-color: var(--bgcolor);
+
+    &--inside {
+      background-color: var(--color-neutral-1);
+      position: absolute;
+      top: 1px;
+      left: 1px;
+
+      .util-fill-style-1 + & {
+        background-color: transparent;
+        color: var(--color-neutral-1);
+      }
+    }
   }
 }
