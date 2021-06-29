@@ -6,8 +6,10 @@ import FixedSides from '../components/2021/fixed-sides'
 import Grid from '../components/2021/grid'
 import GridCell from '../components/2021/grid-cell'
 import SiteIntro from '../components/2021/intro'
-
+import ContactForm from '../components/2021/contact-form'
 import TableOfContents from '../components/2021/table-index'
+import CallToAction from '../components/2021/call-to-action'
+
 import Section1 from '../sections/2021/section-1'
 import Section2 from '../sections/2021/section-2'
 import Section3 from '../sections/2021/section-3'
@@ -83,6 +85,20 @@ class Page2021 extends Component {
           <section className="obj-section" id="section-6">
             <Section6 />
           </section>
+          
+
+          <CallToAction mark="left">
+            <Grid>
+              <GridCell spanLG="5">
+                <h2>Would you join us and help us uncover more answers?</h2>
+                <p>Sparkbox conducts this survey annually to give the design system community an opportunity to learn from one another. </p>
+              </GridCell>
+              <GridCell startMD="6" spanMD="3" startLG="7" spanLG="6">
+                <ContactForm />
+              </GridCell>
+            </Grid>
+          </CallToAction>
+          
 
           <section className="obj-section" id="footer">
             <Footer />
