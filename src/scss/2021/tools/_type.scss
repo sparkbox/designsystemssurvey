@@ -44,6 +44,7 @@
 @mixin type-body {
 	font-family: var(--font-sans);
 	font-size: var(--type-size-body-sm);
+  font-weight: weight(light);
 	font-stretch: stretch(normal);
 	font-stretch: stretch(extended);
 }

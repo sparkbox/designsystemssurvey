@@ -7,6 +7,7 @@
   @include type-body-large;
   padding: 0.5rem 1.25rem;
   font-family: var(--font-sans);
+  transition: all var(--time-sm) 50ms var(--timing-snap);
 
   &:hover,
   &:focus {

@@ -24,9 +24,9 @@
       );
       background-color: var(--color-neutral-1);
       box-shadow: -0.375rem 0 var(--color-neutral-1);
-      
+      transition: all var(--time-md) var(--timing-snap);
+
       @media (prefers-color-scheme: dark) {
-        
         background-image: svg(
           '<svg viewBox="0 0 10 10">' +
             '<path vector-effect="non-scaling-stroke" stroke-width="1" stroke="#{color(dark-neutral-3)}" d="M5,0 5,10M0,5 10,5" />' +
@@ -35,7 +35,7 @@
       }
     }
   }
-  
+
   &__section-number {
     display: block;
     position: relative;
@@ -59,5 +59,29 @@
     text-shadow: stroke(var(--color-neutral-1));
     grid-column: 1 / span 2;
     grid-row: 1;
+    padding-right: 3rem;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0;
+    bottom: 1.5rem;
+    width: 2.5rem;
+    stroke: var(--color-neutral-3);
+    stroke-width: 2px;
+
+    transition: all var(--time-md) var(--timing-snap);
+    opacity: 0;
+    transform: translate(0.5rem, -0.5rem);
+  }
+
+  &__link:hover::after {
+    transform: rotate(-90deg);
+  }
+
+  &__link:hover .cmp-toc__arrow {
+    transition: all var(--time-sm) var(--timing-snap);
+    opacity: 1;
+    transform: none;
   }
 }
