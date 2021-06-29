@@ -14,6 +14,7 @@ import Section3 from '../sections/2021/section-3'
 import Section4 from '../sections/2021/section-4'
 import Section5 from '../sections/2021/section-5'
 import Section6 from '../sections/2021/section-6'
+import Footer from '../components/2021/footer'
 
 class Page2021 extends Component {
   render () {
@@ -78,6 +79,10 @@ class Page2021 extends Component {
 
           <section className="obj-section" id="section-6">
             <Section6 />
+          </section>
+
+          <section className="obj-section" id="footer">
+            <Footer />
           </section>
         </div>
       </Layout>
