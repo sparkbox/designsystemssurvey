@@ -111,7 +111,7 @@
 @import "components/footer";
 @import "components/skip-link";
 @import "components/checkbox";
-
+@import "components/page-not-found";
 
 // =====================================================================
 // 7. Vendors
@@ -127,5 +127,6 @@
 //    which goes before in the triangle, eg. hide helper class
 @import "utilities/colors";
 @import "utilities/fills";
+@import "utilities/display";
 @import "sparkle/systems";
 @import "sparkle/utilities";
