@@ -40,7 +40,7 @@ $font-families: (
 $font-weight: (
   'thin': 100,
   'exlight': 200,
-  'light': 350,
+  'light': 300,
   'regular': 400,
   'medium': 500,
   'semibold': 600,
@@ -109,4 +109,17 @@ $z-index: (
   8: 800,
   9: 900,
   10: 1000
+);
+
+// Transition timing functions
+$timing: (
+  'ease': 'ease',
+  'snap': 'cubic-bezier(0, 0.61, 0.54, 1)'
+);
+
+// Timing
+$time: (
+  'sm': 250ms,
+  'md': 500ms,
+  'lg': 800ms
 );

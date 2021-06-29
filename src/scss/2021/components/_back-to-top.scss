@@ -5,14 +5,12 @@
   justify-content: center;
   color: var(--color);
   text-decoration: none;
-  
-  &:hover {
-    --color: var(--color-rust);
-  }
 
   &__text {
     white-space: nowrap;
     box-shadow: -1px 0 var(--color);
+    transition: all var(--time-sm) 50ms var(--timing-snap);
+    padding: 0.125rem 0;
   }
 
   &__arrow {
@@ -22,5 +20,16 @@
     stroke-width: 1px;
     margin-top: 0.5em;
     transform: rotate(-90deg);
+    transition: all var(--time-md) var(--timing-snap);
+  }
+
+  &:hover .cmp-back-to-top__text {
+    text-decoration: none;
+    background-color: var(--color-neutral-3);
+    color: var(--color-neutral-1);
+  }
+
+  &:hover .cmp-back-to-top__arrow {
+    transform: translateY(0.25rem) rotate(-90deg);
   }
 }

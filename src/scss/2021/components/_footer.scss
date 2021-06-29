@@ -17,7 +17,6 @@
       cursor: pointer;
 
       &:hover {
-        color: color(neutral-3);
         box-shadow: none;
         text-decoration: none;
       }
@@ -36,7 +35,7 @@
     margin-right: 1rem;
     box-sizing: border-box;
     background-color: color(neutral-3);
-    color: #ffffff;
+    color: color(neutral-1);
     border-radius: 2px;
     transition: transform 250ms ease-in-out;
     align-items: center;
@@ -46,7 +45,7 @@
     justify-content: center;
 
     &:hover {
-      background-color: #767676;
+      background-color: color(neutral-3);
       transform: translateY(-2px);
     }
   }
@@ -56,7 +55,7 @@
     margin: 0.25rem;
     height: 1rem;
     width: 1rem;
-    fill: #ffffff;
+    fill: color(neutral-1);
     will-change: transform;
 
     &--twitter {
@@ -94,7 +93,6 @@
     font-family: family(sans);
 
     a {
-      color: #333;
       margin: 0;
       padding: 0;
       appearance: none;
@@ -104,8 +102,6 @@
       box-shadow: none;
 
       &:hover {
-        box-shadow: none;
-        color: color(neutral-3);
         text-decoration: none;
       }
     }
@@ -114,14 +110,14 @@
       flex-direction: row;
     }
   }
-  
+
   &__copyright {
     font-family: family(sans);
     font-weight: 300;
-    color: #767676;
+    color: mix(color(neutral-3), color(neutral-1), 62%);
 
     a {
-      color: #767676;
+      color: mix(color(neutral-3), color(neutral-1), 62%);
       background-image: none;
       white-space: nowrap;
       text-decoration: underline;
@@ -129,8 +125,6 @@
       cursor: pointer;
 
       &:hover {
-        box-shadow: none;
-        color: color(neutral-3);
         text-decoration: none;
       }
     }
@@ -146,7 +140,7 @@
 
   &__input {
     border-radius: 2px;
-    border: 1px solid #767676;
+    border: 1px solid color(neutral-3);
     padding: 0.5rem;
     width: 100%;
     box-sizing: border-box;

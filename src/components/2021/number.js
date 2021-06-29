@@ -13,7 +13,7 @@ const textResizer = (text, compressor, min, max) => {
   let large = (!props.large) ? '' : ' cmp-num--large'
   let bold = (!props.bold) ? '' : ' cmp-num--bold'
   let highlight = (!props.highlight) ? '' : ' cmp-num--highlight'
-  let text = (!props.large) ? textResizer(props.children, 1, 28, 48) : textResizer(props.children, 1, 96, 120)
+  let text = (!props.large) ? textResizer(props.children, 1, 32, 48) : textResizer(props.children, 1, 96, 120)
 
   return (
     <div className={`cmp-num${large}${bold}${highlight}`}>
