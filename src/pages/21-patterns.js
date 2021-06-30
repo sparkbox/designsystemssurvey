@@ -36,7 +36,7 @@ class Page2021 extends Component {
         <div className="obj-lines obj-max-width" id="top">
 
           <FixedSides />
- 
+
           <Grid>
             <GridCell spanMD="8" spanLG="12">
               <SectionHeader title="The Section Header" number="5" total="6" />
@@ -183,27 +183,27 @@ class Page2021 extends Component {
               <h2 class="cmp-type-section">Observation/Paragraph</h2>
               <hr />
             </GridCell>
-            
+
             <GridCell>
               <SlimHeading size="half">Observation</SlimHeading>
-              <h3>Thin observation. Best for short body content</h3>  
+              <h3>Thin observation. Best for short body content</h3>
               <Grid>
                 <GridCell span="2" spanMD="4" spanLG="6">
                   <p>Iaculis et adipiscing lacinia nam massa ipsum nisi id, donec ante neque cras malesuada aliquam litora, auctor dui vehicula convallis gravida ridiculus eget.</p>
                 </GridCell>
               </Grid>
             </GridCell>
-            
+
             <GridCell startMD="5" startLG="7">
               <SlimHeading size="half">Observation</SlimHeading>
-              <h3>Wide observation. Best for long body content</h3>  
+              <h3>Wide observation. Best for long body content</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit gravida mus vulputate, diam lobortis vivamus hendrerit placerat id leo facilisis iaculis, eleifend risus nunc quam a scelerisque tempus duis justo. Risus molestie duis lacus egestas proin porta habitant vehicula sodales eros mus ornare commodo, suspendisse dignissim nostra accumsan ligula parturient tempor gravida mi in nibh vestibulum. Iaculis et adipiscing lacinia nam massa ipsum nisi id, donec ante neque cras malesuada aliquam litora, auctor dui vehicula convallis gravida ridiculus eget.</p>
             </GridCell>
-            
+
             <GridCell span="3" startMD="5" startLG="7">
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos, vivamus elementum diam felis ridiculus neque aptent, feugiat convallis dictumst habitasse himenaeos commodo et. Mauris volutpat torquent sollicitudin luctus aenean accumsan dapibus dictumst at, a odio auctor magna molestie conubia phasellus ullamcorper suspendisse taciti, habitasse hendrerit sociis semper leo malesuada laoreet ac.</p>
             </GridCell>
-            
+
             <GridCell span="2" rowStart="3" align="center">
               <SmallCallout>
                 <p>This is a small callout for small observations or short pieces of text.</p>
@@ -217,7 +217,7 @@ class Page2021 extends Component {
               <h2 class="cmp-type-section">Quote</h2>
               <hr />
             </GridCell>
-            
+
             <GridCell spanLG="6">
               <Quote
                 sizeFormat="large"
@@ -225,7 +225,7 @@ class Page2021 extends Component {
                 <p>Lorem ipsum dolor sit amet <em>consectetur adipiscing</em> elit in senectus quis sed cum proin, ac elementum lacus fames fermentum parturient diam curabitur quisque aptent condimentum.</p>
               </Quote>
             </GridCell>
-            
+
             <GridCell startLG="9">
               <Quote
                 decoStyle="alt"
@@ -234,17 +234,17 @@ class Page2021 extends Component {
                 </Quote>
             </GridCell>
           </Grid>
-          
+
           <Grid>
             <GridCell spanMD="8" spanLG="12">
               <h2 class="cmp-type-section">Other Elements</h2>
               <hr />
             </GridCell>
-            
+
             <GridCell span="2">
               <a href="https://example.com" className="cmp-button">Button (Default)</a>
             </GridCell>
-            
+
             <GridCell start="3" span="2">
               <a href="https://example.com" className="cmp-button cmp-button--large">Button (Large)</a>
             </GridCell>
@@ -262,22 +262,22 @@ class Page2021 extends Component {
 
             </GridCell>
           </Grid>
-          
+
           <Grid>
             <GridCell span="4" spanMD="8" spanLG="12">
               <CallToAction mark="right">
                 <Grid>
                   <GridCell span="4" spanMD="3" spanLG="5">
-                    <h3>This is a title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sem tellus pellentesque, maecenas risus felis nullam et augue facilisi leo auctor.</p>
-  
+                    <h2 className="cmp-type-section">Would you join us and help us uncover more answers?</h2>
+                    <p className="cmp-type-body-large">Sparkbox conducts this survey annually to give the design system community an opportunity to learn from one another.</p>
+
                     <a href="https://example.com" className="cmp-button cmp-button--inverse">Button (Default)</a>
                   </GridCell>
-                  
+
                   <GridCell span="4" startMD="5" spanMD="3" startLG="7" spanLG="5">
                     <h3>This is a title</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sem tellus pellentesque, maecenas risus felis nullam et augue facilisi leo auctor.</p>
-  
+
                     <a href="https://example.com" className="cmp-button cmp-button--inverse">Button (Default)</a>
                   </GridCell>
                 </Grid>
@@ -288,6 +288,6 @@ class Page2021 extends Component {
       </Layout>
     )
   }
-} 
+}
 
 export default Page2021

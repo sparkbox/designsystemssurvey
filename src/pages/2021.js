@@ -37,7 +37,7 @@ class Page2021 extends Component {
         <div className="obj-lines obj-max-width">
 
           <FixedSides />
-         
+
           <a class="cmp-skip-link" href="#table-of-contents">Skip to Menu</a>
           <a class="cmp-skip-link" href="#section-1">Skip to Content</a>
 
@@ -85,22 +85,25 @@ class Page2021 extends Component {
           <section className="obj-section" id="section-6">
             <Section6 />
           </section>
-          
 
           <CallToAction mark="left">
             <Grid>
               <GridCell spanLG="5">
-                <h2>Would you join us and help us uncover more answers?</h2>
-                <p>Sparkbox conducts this survey annually to give the design system community an opportunity to learn from one another. </p>
+                <svg style={{maxWidth: 4 + 'rem'}} viewBox="0 0 64 64">
+                  <path style={{stroke: 'var(--color-neutral-1)'}} d="M.5 9.643h63v38.619H.5V9.642z" stroke="#FFFEFA"/>
+                  <path style={{fill: 'var(--color-neutral-1)'}} d="M0 9.143h64L32 26.666 0 9.143z" fill="#FFFEFA"/>
+                </svg>
+
+                <h2 className="cmp-type-section">Would you join us and help us uncover more answers?</h2>
+                <p className="cmp-type-body-large">Sparkbox conducts this survey annually to give the design system community an opportunity to learn from one another. </p>
               </GridCell>
               <GridCell startMD="6" spanMD="3" startLG="7" spanLG="6">
                 <ContactForm />
               </GridCell>
             </Grid>
           </CallToAction>
-          
 
-          <section className="obj-section" id="footer">
+          <section className="obj-section util-margin-top-1xl" id="footer">
             <Footer />
           </section>
         </div>
