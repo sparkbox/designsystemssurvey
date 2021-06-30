@@ -1,0 +1,70 @@
+import React from "react"
+
+const BarChartTable = (props) => {
+  let tableRows = []
+  
+  // Creates single table cell values
+  let cellIterator = (...value) => {
+    let results = []
+    for (let i = 0; i < (value.length + 1); i++) {
+      let result = value[0][i]
+      if (result) {
+        results.push (
+          <td>
+            {result}%
+          </td>
+        );
+      }
+    }
+
+    return (
+      <>{results}</>
+    )
+  }
+
+  // Defines the contents of `<tbody>`
+  for (let i = 0; i < props.dataPoints.length; i++) {
+    tableRows.push(
+      <tr>
+        <th>{props.dataPoints[i][0]}</th>
+        {cellIterator(props.dataPoints[i][1])}
+      </tr>
+    )
+  }
+  
+  // Defines the contents of `<thead>`
+  let tableHead = () => {
+    let results = []
+
+    if (props.keyMap) {
+      for (let i = 0; i < props.keyMap.length; i++) {
+        results.push(
+          <th>
+            {props.keyMap[i]}
+          </th>
+        );
+      }
+
+      return (
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            {results}
+          </tr>
+        </thead>
+      )
+    }
+  }
+
+  return (
+    <table className="util-visually-hidden">
+      <caption>{props.title}</caption>
+      {tableHead()}
+      <tbody>
+        {tableRows}
+      </tbody>
+    </table>
+  )
+}
+
+export default BarChartTable
