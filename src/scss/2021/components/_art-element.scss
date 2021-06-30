@@ -1,0 +1,26 @@
+.cmp-art-element {
+  display: none;
+
+  @media (min-width: mq(md)) {
+    display: block;
+    width: calc(100% + #{$fixed-columns-lg} + 0.25rem);
+    height: auto;
+    overflow: visible;
+  }
+
+  &--hero {
+    position: absolute;
+    right: -$fixed-columns-lg - 0.125rem;
+    bottom: 6rem;
+    width: calc((100% / 3) + #{$fixed-columns-lg});
+  }
+
+  &--bars {
+    
+  }
+
+  & path {
+    fill: none;
+    stroke-width: 1px;
+  }
+}
