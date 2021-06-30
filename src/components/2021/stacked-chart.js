@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import StackedChartTable from "./stacked-chart-table"
 
 const StackedChart = (props) => {
   const Tag = props.headingLevel
@@ -58,16 +59,20 @@ const StackedChart = (props) => {
   }
 
   return (
-    <div className={`cmp-stacked-chart cmp-stacked-chart--${props.styleFormat}`}>
-      <Tag className="cmp-type-h3">{props.title}</Tag>
-      {props.children}
-      <div className="cmp-stacked-chart__keys">
-        {keysMap}
+    <>
+      <div className={`cmp-stacked-chart cmp-stacked-chart--${props.styleFormat}`}>
+        <Tag className="cmp-type-h3">{props.title}</Tag>
+        {props.children}
+        <div aria-hidden="true" className="cmp-stacked-chart__keys">
+          {keysMap}
+        </div>
+        <div aria-hidden="true" className="cmp-stacked-chart__diagram">
+          {dataBars}
+        </div>
       </div>
-      <div className="cmp-stacked-chart__diagram">
-        {dataBars}
-      </div>
-    </div>
+
+      <StackedChartTable { ...props } />
+    </>
   )
 }
 
