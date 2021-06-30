@@ -1,0 +1,25 @@
+.cmp-skip-link {
+    @include visually-hidden;
+  
+    &:focus {
+      visibility: visible;
+      letter-spacing: 1;
+      color: white;
+      background-color: color(neutral-3);
+      padding: space(sm);
+      -webkit-font-smoothing: antialiased;
+  
+      // Box-shadow copies safe-focus styling
+      box-shadow: 0 0 0 2px color(rust), 0 0 0 4px color(neutral-1) !important;
+      position: absolute;
+      z-index: z-index(10); // so it's always on top
+      top: 0.5rem;
+      left: calc(50% - (155px / 2)); // 155px is width of skip link
+      clip: auto;
+      clip-path: none;
+    }
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
