@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import BarChartTable from "./bar-chart-table"
 
 const BarChart = (props) => {
   const Tag = props.headingLevel
@@ -67,16 +68,19 @@ const BarChart = (props) => {
   }
 
   return (
-    <div className={`cmp-bar-chart cmp-bar-chart--${props.styleFormat}`}>
-      <Tag className="cmp-type-h3">{props.title}</Tag>
-      {props.children}
-      <div className="cmp-bar-chart__keys">
-        {keysMap}
+    <>
+      <div aria-hidden="true" className={`cmp-bar-chart cmp-bar-chart--${props.styleFormat}`}>
+        <Tag className="cmp-type-h3">{props.title}</Tag>
+        {props.children}
+        <div className="cmp-bar-chart__keys">
+          {keysMap}
+        </div>
+        <div className="cmp-bar-chart__diagram">
+          {dataBars}
+        </div>
       </div>
-      <div className="cmp-bar-chart__diagram">
-        {dataBars}
-      </div>
-    </div>
+      <BarChartTable { ...props } />
+    </>
   )
 }
 
