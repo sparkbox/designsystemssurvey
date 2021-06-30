@@ -35,6 +35,9 @@ class Page2021 extends Component {
         <div className="obj-lines obj-max-width">
 
           <FixedSides />
+         
+          <a class="cmp-skip-link" href="#table-of-contents">Skip to Menu</a>
+          <a class="cmp-skip-link" href="#section-1">Skip to Content</a>
 
           <SiteIntro>
             <Grid>
