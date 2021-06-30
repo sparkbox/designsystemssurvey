@@ -26,7 +26,9 @@ const BarChartTable = (props) => {
   for (let i = 0; i < props.dataPoints.length; i++) {
     tableRows.push(
       <tr>
-        <th>{props.dataPoints[i][0]}</th>
+        <th>
+          <span dangerouslySetInnerHTML={{__html:props.dataPoints[i][0]}} />
+        </th>
         {cellIterator(props.dataPoints[i][1])}
       </tr>
     )
@@ -40,7 +42,7 @@ const BarChartTable = (props) => {
       for (let i = 0; i < props.keyMap.length; i++) {
         results.push(
           <th>
-            {props.keyMap[i]}
+            <span dangerouslySetInnerHTML={{__html:props.keyMap[i]}} />
           </th>
         );
       }
