@@ -1,7 +1,7 @@
 import React from "react"
 
 const ContactForm = (props) => (
-  <div>
+  <div className="util-margin-top-3xl">
     {/* The form attribute will need updated to work as *
        expected and provide the necessary data to MailChimp */}
     <form action="https://sparkbox.com/php/mailchimp_cta.php" method="post" id="mc-embedded-subscribe-htmlForm" name="mc-embedded-subscribe-form" novalidate>
@@ -15,17 +15,17 @@ const ContactForm = (props) => (
       <div className="util-visually-hidden" aria-hidden="true">
         <input type="text" name="b_c2fcafb7ccc2db34e99075bb1_705050dbb9" tabindex="-1" value=""/>
       </div>
-      
-      <h3>Can we continue to include you?</h3>
-      
-      <div>
-        <input name="CHECK1" id="mce-CHECK1" type="checkbox" />
-        <label htmlFor="mce-CHECK1">Yes! I’d like to share more about my system. Let’s set up a time to chat.</label>
+
+      <h3 className="cmp-type-body cmp-type-bold util-margin-bottom-md">Can we continue to include you?</h3>
+
+      <div className="cmp-checkbox">
+        <input className="cmp-checkbox__input" name="CHECK1" id="mce-CHECK1" type="checkbox" />
+        <label className="cmp-checkbox__label" htmlFor="mce-CHECK1">Yes! I’d like to share more about my system. Let’s set up a time to chat.</label>
       </div>
 
-      <div>
-        <input name="CHECK2" id="mce-CHECK2" type="checkbox" />
-        <label htmlFor="mce-CHECK2">Sure, I’m always curious! Please send me more design system insights when you can.</label>
+      <div className="cmp-checkbox">
+        <input className="cmp-checkbox__input" name="CHECK2" id="mce-CHECK2" type="checkbox" />
+        <label className="cmp-checkbox__label" htmlFor="mce-CHECK2">Sure, I’m always curious! Please send me more design system insights when you can.</label>
       </div>
 
       <label htmlFor="mce-NAME">Name</label>

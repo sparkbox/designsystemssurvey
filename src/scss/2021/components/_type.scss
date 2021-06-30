@@ -36,6 +36,10 @@
 	}
 }
 
+.cmp-type-bold {
+  font-weight: weight(bold);
+}
+
 .cmp-type-sans-micro {
 	@include type-sans-micro;
 	margin: 0;
@@ -53,4 +57,3 @@
 		margin-top: 1em;
 	}
 }
-
