@@ -69,13 +69,13 @@ const BarChart = (props) => {
 
   return (
     <>
-      <div aria-hidden="true" className={`cmp-bar-chart cmp-bar-chart--${props.styleFormat}`}>
+      <div className={`cmp-bar-chart cmp-bar-chart--${props.styleFormat}`}>
         <Tag className="cmp-type-h3">{props.title}</Tag>
         {props.children}
-        <div className="cmp-bar-chart__keys">
+        <div aria-hidden="true" className="cmp-bar-chart__keys">
           {keysMap}
         </div>
-        <div className="cmp-bar-chart__diagram">
+        <div aria-hidden="true" className="cmp-bar-chart__diagram">
           {dataBars}
         </div>
       </div>
