@@ -9,6 +9,7 @@ import Figure from "../../components/2021/figure"
 import SmallCallout from "../../components/2021/small-callout"
 import  {ScoreCard, ScoreCardLarge, ScoreRow} from "../../components/2021/scorecard"
 import Number from "../../components/2021/number"
+import ArtElement from "../../components/2021/art-element"
 
 const Section2 = () => (
     <Grid className="util-margin-bottom-20vh">
@@ -167,7 +168,7 @@ const Section2 = () => (
         </SmallCallout>
       </GridCell>
 
-      <GridCell startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl">
+      <GridCell rowSpanMD="2" startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl">
         <Figure count="2.4" caption="374 Responses">
           <BarChart
             styleFormat="large"
@@ -195,6 +196,10 @@ const Section2 = () => (
         <p>&ldquo;Which disciplines are you currently missing on your design system team that would be useful right now?&rdquo; Responses: 115 | Respondents were asked to select all that apply.</p>
       </GridCell>
 
+      <GridCell startMD="1" span="1">
+        <ArtElement type="chart" />
+      </GridCell>
+
       <GridCell spanMD="6">
         <Figure count="2.5" caption="136 Responses">
           <h3>Most respondent organizations have centralized teams</h3>
@@ -217,6 +222,10 @@ const Section2 = () => (
             </ScoreCardLarge>
           </ScoreRow>
         </Figure>
+      </GridCell>
+
+      <GridCell align="end" startMD="8" startLG="12">
+        <ArtElement type="bars" />
       </GridCell>
     </Grid>
   )

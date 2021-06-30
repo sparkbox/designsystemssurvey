@@ -9,6 +9,7 @@ import SmallCallout from "../../components/2021/small-callout"
 import BarChart from "../../components/2021/bar-chart"
 import  {ScoreCard, ScoreRow} from "../../components/2021/scorecard"
 import Number from "../../components/2021/number"
+import ArtElement from "../../components/2021/art-element"
 
 const Section4 = () => (
   <Grid className="util-margin-bottom-20vh">
@@ -18,6 +19,10 @@ const Section4 = () => (
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl">
       <p className="cmp-type-body-large">46% of in-house respondents have dedicated design system teams&mdash;but even non-dedicated teams have to get approval to spend time on the system. While the promise of a design system may be enough to gain support on day one, as systems get older, it’s natural that teams need to prove their value. Enter metrics.</p>
+    </GridCell>
+
+    <GridCell startMD="7" startLG="11">
+      <ArtElement />
     </GridCell>
 
     <GridCell span="3" spanMD="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
@@ -109,7 +114,7 @@ const Section4 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell startMD="2" spanMD="6" startLG="3" className="util-margin-bottom-1xl">
+    <GridCell startMD="2" spanMD="5" startLG="3" spanLG="6" className="util-margin-bottom-1xl">
       <Figure count="4.4" caption="38 Responses | Respondents were asked to select all that&nbsp;apply.">
         <BarChart
           headingLevel="h3"
@@ -127,6 +132,10 @@ const Section4 = () => (
             <p>“How are you <em>reporting</em> your design system metrics?”</p>
         </BarChart>
       </Figure>
+    </GridCell>
+
+    <GridCell align="center" startMD="8" startLG="12">
+      <ArtElement type="bars" />
     </GridCell>
   </Grid>
 )

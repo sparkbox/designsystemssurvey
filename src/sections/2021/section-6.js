@@ -2,6 +2,7 @@ import React from "react"
 import SectionHeader from '../../components/2021/section-header'
 import Grid from '../../components/2021/grid'
 import GridCell from '../../components/2021/grid-cell'
+import ArtElement from "../../components/2021/art-element"
 
 const Section6 = () => (
   <Grid className="util-margin-bottom-20vh">
@@ -9,8 +10,13 @@ const Section6 = () => (
       <SectionHeader title="Conclusion" number="6" total="6" />
     </GridCell>
 
+
     <GridCell span="6" className="util-margin-bottom-md util-margin-bottom-2xl@md">
       <p className="cmp-type-body-large">Today’s design system teams are focused on encouraging adoption, engaging contributors, and overcoming debt. And the teams that focus on the majority of these items, along with metrics, are reaping the rewards of more successful systems. As we <a href="/2018/">noted in 2018</a>, “a design system is an investment in your future, and one that takes conversation, collaboration, and expectation-setting to succeed.” It’s clear that a design system alone does not ensure success.</p>
+    </GridCell>
+
+    <GridCell startMD="7" rowSpanMD="2" startLG="10">
+      <ArtElement />
     </GridCell>
 
     <GridCell start="2" span="4" startMD="2" startLG="2" spanLG="5" className="util-margin-bottom-md util-margin-bottom-1xl@md">

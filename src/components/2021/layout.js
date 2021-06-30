@@ -13,9 +13,9 @@ import "../../js/safe-focus"
 // siteMetadata comes from gatsby-config.js
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className="obj-page-container">
       {children}
-    </>
+    </div>
   )
 }
 

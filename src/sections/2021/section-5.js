@@ -8,6 +8,7 @@ import Figure from "../../components/2021/figure"
 import SmallCallout from "../../components/2021/small-callout"
 import Quote from "../../components/2021/quote"
 import CallToAction from "../../components/2021/call-to-action"
+import ArtElement from "../../components/2021/art-element"
 
 const Section5 = () => (
   <Grid className="util-margin-bottom-20vh">
@@ -15,11 +16,15 @@ const Section5 = () => (
       <SectionHeader title="Evolution" number="5" total="6" />
     </GridCell>
 
+    <GridCell startMD="7" rowSpanMD="3" startLG="10" className="util-margin-bottom-3xl">
+      <ArtElement />
+    </GridCell>
+
     <GridCell span="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
       <p className="cmp-type-body-large">Since the 2020 Design Systems Survey, we’ve heard from peers and clients that many teams have started over with a new design system. As a result, this year we added questions to better understand how common this may be and to understand why teams are choosing to build additional or new design systems.</p>
     </GridCell>
 
-    <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
+    <GridCell alignMD="end" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl">
       <Figure count="5.1" caption="136 Responses">
         <BarChart
           sizeFormat="small"
@@ -99,6 +104,10 @@ const Section5 = () => (
       </Figure>
     </GridCell>
 
+    <GridCell align="center" startMD="8" startLG="12">
+      <ArtElement type="bars" />
+    </GridCell>
+
     <GridCell startMD="3" startLG="5" spanLG="4" className="util-margin-bottom-1xl">
       <h3>Why do some organizations have multiple systems?</h3>
       Of in-house respondents who reported their organization having more than one design system, the top theme mentioned was that they exist to accommodate different audiences (20 of 29 responses) with many referencing cross-team silos as a challenge.
@@ -128,7 +137,7 @@ const Section5 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell start="1" spanMD="6" className="util-margin-bottom-1xl">
+    <GridCell start="1" spanMD="7" spanLG="6" className="util-margin-bottom-1xl">
       <CallToAction mark="right">
         <svg style={{maxWidth: 4 + 'rem'}} viewBox="0 0 64 64">
           <path style={{fill: 'var(--color-neutral-1)'}} d="M62 1c.6 0 1 .4 1 1v26.5L35.5 1H62m0-1H33.1L64 30.9V2c0-1.1-.9-2-2-2zM63 35.5V62c0 .6-.4 1-1 1H35.5L63 35.5m1-2.4L33.1 64H62c1.1 0 2-.9 2-2V33.1zM1 35.5L28.5 63H2c-.6 0-1-.4-1-1V35.5m-1-2.4V62c0 1.1.9 2 2 2h28.9L0 33.1zM28.5 1L1 28.5V2c0-.6.4-1 1-1h26.5m2.4-1H2C.9 0 0 .9 0 2v28.9L30.9 0zM26 24.9h12c.6 0 1.1.5 1.1 1.1v12c0 .6-.5 1.1-1.1 1.1H26c-.6 0-1.1-.5-1.1-1.1V26c0-.6.5-1.1 1.1-1.1z M30 14.8H14.9V30zM14.9 34v15.2H30zM49.1 30V14.8H34zM34 49.2h15.1V34z"/>
@@ -139,6 +148,10 @@ const Section5 = () => (
         <p>Take the Maturity Model Assessment to get feedback on where you are now, and suggestions that will help you move forward to benefit your whole organization.</p>
         <a href="https://example.com" className="cmp-button cmp-button--inverse">Take the Survey</a>
       </CallToAction>
+    </GridCell>
+
+    <GridCell align="end" startMD="7" startLG="11" className="util-display-none util-display-block@lg">
+      <ArtElement type="chart" />
     </GridCell>
   </Grid>
 )
