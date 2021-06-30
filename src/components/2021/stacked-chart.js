@@ -14,9 +14,7 @@ const StackedChart = (props) => {
     keysMap.push(
       <div className="cmp-stacked-chart__key">
         <span className={`cmp-stacked-chart__key-marker util-fill-style-${keyStyle}`} />
-        <span className="cmp-stacked-chart__key-name">
-          {props.keyMap[i]}
-        </span>
+        <span className="cmp-stacked-chart__key-name"  dangerouslySetInnerHTML={{__html:props.keyMap[i]}} />
       </div>
     );
   }
