@@ -2,6 +2,7 @@ import React from "react"
 import Grid from "./grid"
 import GridCell from "./grid-cell"
 import SVGArrow from "./svg-arrow"
+import ArtElement from "../../components/2021/art-element"
 
 const SiteIntro = (props) => {
   return (
@@ -11,6 +12,7 @@ const SiteIntro = (props) => {
         <div className="cmp-intro__text">Design</div>
         <div className="cmp-intro__text">Systems</div>
         <div className="cmp-intro__text">Survey</div>
+        <ArtElement isHero="true" />
       </div>
       {props.children}
       <div aria-hidden="true" className="cmp-intro__arrow-positioner">

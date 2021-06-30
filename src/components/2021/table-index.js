@@ -3,6 +3,7 @@ import Grid from './grid'
 import GridCell from './grid-cell'
 import TableItem from './table-of-contents'
 import SlimHeading from './slim-heading'
+import ArtElement from "../../components/2021/art-element"
 
 const TableOfContents = (props) => {
   return (
@@ -18,6 +19,9 @@ const TableOfContents = (props) => {
           <TableItem number="4">Metrics</TableItem>
           <TableItem number="5">Evolution</TableItem>
           <TableItem number="6">Conclusion</TableItem>
+        </GridCell>
+        <GridCell startMD="7" rowSpanMD="2" startLG="12" className="util-margin-top-3xl util-display-none util-display-block@lg">
+          <ArtElement type="bars" />
         </GridCell>
       </Grid>
     </div>

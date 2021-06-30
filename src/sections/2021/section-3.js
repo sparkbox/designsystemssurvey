@@ -11,6 +11,7 @@ import SmallCallout from "../../components/2021/small-callout"
 import CallToAction from "../../components/2021/call-to-action"
 import  {ScoreCardLarge, ScoreRow} from "../../components/2021/scorecard"
 import Number from "../../components/2021/number"
+import ArtElement from "../../components/2021/art-element"
 
 
 const Section3 = () => (
@@ -75,6 +76,10 @@ const Section3 = () => (
     </Figure>
     </GridCell>
 
+    <GridCell align="center" span="1" className="util-display-none util-display-block@lg">
+      <ArtElement type="chart" />
+    </GridCell>
+
     <GridCell startLG="7" spanLG="6" className="util-margin-bottom-1xl">
       <Figure count="3.3">
         <h2 class="cmp-type-h3">Top priorities and challenges</h2>
@@ -105,6 +110,10 @@ const Section3 = () => (
 
     <GridCell spanMD="6" className="util-margin-bottom-1xl">
       <h2>1 - Encouraging Adoption</h2>
+    </GridCell>
+
+    <GridCell align="center" rowSpanMD="2" startMD="8" startLG="12">
+      <ArtElement type="bars" />
     </GridCell>
 
     <GridCell spanMD="6" className="util-margin-bottom-1xl">
@@ -165,11 +174,11 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell span="3" start="2" startLG="9" alignMD="center" spanMD="4" className="util-margin-bottom-1xl">
+    <GridCell span="3" start="2" alignMD="center" spanMD="4" startLG="9"  className="util-margin-bottom-1xl">
       <p>In-house respondents who perceived their design system as either “very successful” or “successful” were less likely to mention adoption as a challenge than those who reported moderate or little success. And, separately, 52% of agency respondents reported that lack of adoption is one of the most common reasons their clients’ design systems are unsuccessful.</p>
     </GridCell>
 
-    <GridCell spanLG="5" className="util-margin-bottom-1xl util-margin-bottom-md@lg">
+    <GridCell spanLG="5" rowSpanMD="3" className="util-margin-bottom-1xl util-margin-bottom-md@lg">
       <Figure count="3.6" caption="Responses: 159">
         <StackedChart
           headingLevel="h3"
@@ -194,10 +203,18 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
+    <GridCell align="top" startMD="8" startLG="12">
+      <ArtElement type="bars" />
+    </GridCell>
+
     <GridCell span="2" startMD="7" startLG="9" spanLG="2" alignLG="top" className="util-margin-bottom-1xl">
       <SmallCallout>
         <p>The more a design system is used in digital products, the higher it’s perceived as successful by in-house respondents.</p>
       </SmallCallout>
+    </GridCell>
+
+    <GridCell align="center" startMD="1" span="1" className="util-display-none util-display-block@lg">
+      <ArtElement type="chart" />
     </GridCell>
 
     <GridCell spanMD="6" startMD="3" startLG="7" className="util-margin-bottom-1xl">
@@ -279,7 +296,7 @@ const Section3 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell span="3" spanMD="5" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+    <GridCell span="3" spanMD="5" rowSpanMD="2" alignMD="end" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="3.9" caption="Responses: 136 | Answers were on a scale of 1 to&nbsp;5.">
         <BarChart
           headingLevel="h3"
@@ -295,6 +312,10 @@ const Section3 = () => (
         <p>"How <em>frequently</em> do design system users contribute to the design system?"</p>
       </BarChart>
       </Figure>
+    </GridCell>
+
+    <GridCell align="top" startMD="7" startLG="11">
+      <ArtElement />
     </GridCell>
 
     <GridCell span="3" spanMD="4" startMD="7" spanLG="2" startLG="9" alignMD="end" className="util-margin-bottom-1xl">
@@ -424,7 +445,7 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell span="3" spanMD="4" startLG="3" className="util-margin-bottom-1xl">
+    <GridCell span="3" spanMD="4" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl">
       <Figure count="1.14" caption="Responses: 136">
         <PieChart
           headingLevel="h3"
@@ -439,6 +460,10 @@ const Section3 = () => (
           <p>"Do you feel the way the design system was originally built did or did not <em>create debt</em> for the technical or design departments?"</p>
         </PieChart>
       </Figure>
+    </GridCell>
+
+    <GridCell align="center" startMD="8" startLG="12">
+      <ArtElement type="bars" />
     </GridCell>
 
     <GridCell span="3" spanMD="4" startMD="7" alignMD="end" startLG="9" spanLG="2" className="util-margin-bottom-1xl">
@@ -509,7 +534,7 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell startMD="3" spanMD="6" className="util-margin-bottom-1xl">
+    <GridCell startMD="3" spanMD="6" spanLG="4" className="util-margin-bottom-1xl">
       <Quote styleFormat="small"
       cite="Manager, moderately successful design system">
         <p>How would it not? Any legacy product would need a facelift. Any new product must adhere to guidelines. Yes, there are ways to streamline this, and in some cases the product development process speeds up... A design system will always produce some technical debt.</p>

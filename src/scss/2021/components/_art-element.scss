@@ -15,10 +15,6 @@
     width: calc((100% / 3) + #{$fixed-columns-lg});
   }
 
-  &--bars {
-    
-  }
-
   & path {
     fill: none;
     stroke-width: 1px;
