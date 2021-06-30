@@ -103,9 +103,9 @@ class Page2021 extends Component {
             </Grid>
           </CallToAction>
 
-          <section className="obj-section util-margin-top-1xl" id="footer">
+          <div className="obj-section util-margin-top-1xl" id="footer">
             <Footer />
-          </section>
+          </div>
         </div>
       </Layout>
     )
