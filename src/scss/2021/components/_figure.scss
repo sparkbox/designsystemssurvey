@@ -5,12 +5,19 @@
 
   &__caption {
     display: flex;
-    flex-direction: row-reverse;
     margin-top: 0.5rem;
     text-align: right;
     color: color.mix(color(neutral-3), color(neutral-1), 62%);
     @include type-mono-micro;
     font-weight: weight(bold);
+
+    &--right {
+      flex-direction: row-reverse;
+    }
+
+    &--left {
+      flex-direction: row;
+    }
   }
 
   &__count {
@@ -18,5 +25,10 @@
     margin-left: 1rem;
     display: inline-block;
     color: var(--color-neutral-3);
+  }
+
+  &__caption--left &__count {
+    margin-left: 0;
+    margin-right: 1rem;
   }
 }
