@@ -1,0 +1,15 @@
+.ie11 table.util-visually-hidden {
+  position: static;
+  clip: auto;
+  clip-path: none;
+  border-collapse: collapse;
+  
+  th, td {
+    padding: 0.125rem;
+    border: 1px solid var(--color-neutral-3);
+  }
+
+  th {
+    text-align: left;
+  }
+}
