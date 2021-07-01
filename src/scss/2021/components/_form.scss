@@ -1,0 +1,42 @@
+.cmp-form-field {
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--color-neutral-1);
+    border: 1px solid var(--color-neutral-1);
+    line-height: 1.5;
+    padding: 0.75rem;
+    appearance: none;
+    border-radius: 0;
+    background: var(--color-neutral-3);
+    border-left-width: 0.25rem;
+
+    &:hover, 
+    &:focus {
+      border: 2px solid var(--color-neutral-1);
+      border-left-width: 0.25rem;
+    }
+  }
+
+  &__button {
+    @include unbuttonize;
+    box-sizing: border-box;
+    width: 8rem;
+    padding: 1rem;
+    border: 1px solid var(--color-neutral-1);
+    font-weight: weight('bold');
+    line-height: 1.5;
+    padding: 0.75rem;
+    appearance: none;
+    border-radius: 0;
+    background: var(--color-neutral-3);
+    border-left-width: 0.25rem;
+    transition: all var(--time-sm) 50ms var(--timing-snap);
+
+    &:hover, 
+    &:focus {
+      color: var(--color-neutral-3);
+      background: var(--color-neutral-1);
+    }
+  }
+}
