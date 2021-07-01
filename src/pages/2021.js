@@ -20,6 +20,8 @@ import Footer from '../components/2021/footer'
 
 class Page2021 extends Component {
   render () {
+    let modernCSS = 'all and (-webkit-min-device-pixel-ratio: 0), (-moz-device-pixel-ratio: 0)';
+    let ieCSS = 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)'
     return (
       <Layout>
         <SEO
@@ -29,9 +31,12 @@ class Page2021 extends Component {
         />
 
         <Helmet>
-          <link rel="preload" as="font" href="/fonts/2021/Inconsolata.woff2" type="font/woff2" crossorigin="anonymous" />
-          <link rel="preload" as="font" href="/fonts/2021/SoleSans.woff2" type="font/woff2" crossorigin="anonymous" />
-          <link rel="preload" as="font" href="/fonts/2021/SoleSansItalic.woff2" type="font/woff2" crossorigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap" rel="stylesheet" media={ieCSS} />
+          <link rel="preload" as="font" href="/fonts/2021/Inconsolata.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
+          <link rel="preload" as="font" href="/fonts/2021/SoleSans.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
+          <link rel="preload" as="font" href="/fonts/2021/SoleSansItalic.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
+          <link rel="stylesheet" type="text/css" href="/css/2021.css" media={modernCSS} />
+          <link rel="stylesheet" type="text/css" href="/css/2021-ie.css" media={ieCSS} />
         </Helmet>
 
         <div className="obj-lines obj-max-width">
