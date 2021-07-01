@@ -8,6 +8,7 @@ const SiteIntro = (props) => {
     <div className="cmp-intro" id="top">
       <div className="cmp-intro__text cmp-intro__text--year">2021</div>
       <div className="cmp-intro__title-container">
+        <h1 className="util-visually-hidden">Design Systems Survery 2021</h1>
         <div className="cmp-intro__text">Design</div>
         <div className="cmp-intro__text">Systems</div>
         <div className="cmp-intro__text">Survey</div>
