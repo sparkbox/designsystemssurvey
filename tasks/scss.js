@@ -4,6 +4,7 @@ const fs = require('fs')
 const autoprefixer = require('autoprefixer')
 const postcss = require('postcss')
 const postcssCustomProperties = require('postcss-custom-properties')
+const cssbyebye = require('css-byebye')
 
 const years = ['2019', '2020', '2021']
 const sparkle = path.resolve('node_modules/@sparkbox')
@@ -29,7 +30,7 @@ years.forEach((year) => {
   if (year === '2021') {
     sass.render(
       {
-        file: base,
+        file: path.resolve(`src/scss/${year}/ie.scss`),
         includePaths: [sparkle]
       },
       (err, result) => {
