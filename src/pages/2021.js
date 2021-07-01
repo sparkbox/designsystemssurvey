@@ -17,8 +17,12 @@ import Section4 from '../sections/2021/section-4'
 import Section5 from '../sections/2021/section-5'
 import Section6 from '../sections/2021/section-6'
 import Footer from '../components/2021/footer'
+import colorSwap from '../js/2021/color-swap'
 
 class Page2021 extends Component {
+  componentDidMount() {
+    colorSwap()
+  }
   render () {
     let modernCSS = 'all and (-webkit-min-device-pixel-ratio: 0), (-moz-device-pixel-ratio: 0)';
     let ieCSS = 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)'
@@ -71,7 +75,7 @@ class Page2021 extends Component {
             <Section1 />
           </section>
 
-          <section className="obj-section" id="section-2">
+          <section className="obj-section obj-section--dark" id="section-2">
             <Section2 />
           </section>
 
@@ -79,7 +83,7 @@ class Page2021 extends Component {
             <Section3 />
           </section>
 
-          <section className="obj-section" id="section-4">
+          <section className="obj-section obj-section--dark" id="section-4">
             <Section4 />
           </section>
 
@@ -87,7 +91,7 @@ class Page2021 extends Component {
             <Section5 />
           </section>
 
-          <section className="obj-section" id="section-6">
+          <section className="obj-section obj-section--dark" id="section-6">
             <Section6 />
           </section>
 
