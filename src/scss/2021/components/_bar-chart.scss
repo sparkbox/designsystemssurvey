@@ -62,4 +62,8 @@
       display: none;
     }
   }
+
+  .ie11 & {
+    display: none;
+  }
 }
