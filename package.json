@@ -29,6 +29,7 @@
     "@sparkbox/sparkle": "git+https://github.com/sparkbox/sparkle.git#fix-sass-div",
     "autoprefixer": "^9.8.6",
     "chokidar": "^3.5.1",
+    "css-byebye": "^3.0.0",
     "dotenv": "^8.6.0",
     "gatsby": "^2.32.13",
     "gatsby-cli": "^2.19.3",

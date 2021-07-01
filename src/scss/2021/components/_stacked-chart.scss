@@ -99,7 +99,7 @@
     }
   }
 
-  .ie11 & {
+  @include ie11 {
     display: none;
   }
 }

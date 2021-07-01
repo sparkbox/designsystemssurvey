@@ -11,7 +11,7 @@
     width: calc(100% - (#{$fixed-columns-lg} * 2));
   }
   
-  .ie11 & {
+  @include ie11 {
     max-width: 70rem;
   }
 }

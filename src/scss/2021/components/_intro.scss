@@ -91,7 +91,7 @@
       padding-top: 100%;
     }
     
-    .ie11 & {
+    @include ie11 {
       display: none;
     }
   }
