@@ -28,14 +28,16 @@ const ContactForm = (props) => (
         <label className="cmp-checkbox__label" htmlFor="mce-CHECK2">Sure, I’m always curious! Please send me more design system insights when you can.</label>
       </div>
 
-      <label htmlFor="mce-NAME">Name</label>
-      <input type="text" value="" name="NAME" id="mce-NAME" />
+      <div className="cmp-form-field">
+        <label className="cmp-type-body-large util-weight-bold" htmlFor="mce-NAME">Name</label>
+        <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="text" name="NAME" id="mce-NAME" />
 
-      <label htmlFor="mce-EMAIL">Business Email Address</label>
-      <input type="email" value="" name="EMAIL" id="mce-EMAIL" />
+        <label className="cmp-type-body-large util-weight-bold" htmlFor="mce-EMAIL">Business Email Address</label>
+        <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="email" name="EMAIL" id="mce-EMAIL" />
 
-      <button type="submit" name="subscribe" id="mc-embedded-subscribe">Submit</button>
-
+        <button className="cmp-form-field__button util-margin-top-md" type="submit" name="subscribe" id="mc-embedded-subscribe">Submit</button>
+      </div>
+   
     </form>
   </div>
 )
