@@ -150,7 +150,7 @@ const Section2 = () => (
             </ScoreCard>
             <ScoreCard>
               <Number>6%</Number>
-              <p class="cmp-type-sans-micro">Other (please specify)</p>
+              <p class="cmp-type-sans-micro">Other</p>
             </ScoreCard>
           </ScoreRow>
         </Figure>
@@ -186,9 +186,8 @@ const Section2 = () => (
               ['Research', [25, 44]],
               ['Strategy', [19, 37]],
               ['Marketing', [6, 26]],
-              ['Other (please specify)', [10, 15]]
+              ['Other', [10, 15]]
             ]}>
-              <p>In house respondents to to work at larger organizations, while agency respondents work primarily at smaller companies.</p>
           </BarChart>
         </Figure>
 
