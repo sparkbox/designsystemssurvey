@@ -21,7 +21,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl">
-      <p className="cmp-type-body-large"><a href="/2020/">As noted in 2020</a>, “Due to the nature of a design system requiring buy-in and support from multiple disciplines, a design system project often helps break down organizational silos.” Design system teams focus on common areas—many of which highlight the importance of cross-team support.</p>
+      <p className="cmp-type-body-large">As noted in the <a href="/2020/">2020 Design Systems Survey</a>, “Due to the nature of a design system requiring buy-in and support from multiple disciplines, a design system project often helps break down organizational silos.” Design system teams focus on common areas—many of which highlight the importance of cross-team support.</p>
     </GridCell>
 
     <GridCell span="3" spanLG="4" className="util-margin-bottom-1xl">
@@ -42,7 +42,7 @@ const Section3 = () => (
             ['Funding', [10]],
             ['Finding an executive champion', [7]],
             ['Subscriber engagement', [4]],
-            ['Other (please specify)', [6]]
+            ['Other', [6]]
           ]
         }>
           <p>"What are the <em>top priorities</em> your design system team has at this moment?"</p>
@@ -68,7 +68,7 @@ const Section3 = () => (
           ['Funding', [23]],
           ['Finding an executive champion', [16]],
           ['Subscriber engagement', [6]],
-          ['Other (please specify)', [7]]
+          ['Other', [7]]
         ]
       }>
         <p>"What are the <em>top challenges</em> your design system team is facing at this moment"</p>
@@ -191,7 +191,7 @@ const Section3 = () => (
             'I am not sure'
           ]}
           dataPoints={[
-            ['Not Successful', [33, 33, 17, 17]],
+            ['Not Successful', [33, 33, 17, 0, 17]],
             ['Slightly Successful', [58, 32, 10]],
             ['Moderately Successful', [17, 30, 22, 20, 12]],
             ['Successful', [10, 24, 36, 28, 2]],
@@ -263,12 +263,12 @@ const Section3 = () => (
       <Quote
         styleFormat="large"
         cite="-Individual contributor, slightly successful design system">
-        <p>“[Our design system] is quite limited in scope currently, we are concentrating on populating it more than anything else.”</p>
+        <p>“[Our design system] is quite limited in scope currently, we are <em>concentrating on populating it</em> more than anything else.”</p>
       </Quote>
     </GridCell>
 
     <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
-      <Figure count="3.8" caption="Responses: 135 | Answers were on a scale of 1 to&nbsp;5.">
+      <Figure count="3.8" caption="Responses: 135 | Answers were on a scale of 1 to 5.">
         <StackedChart
           headingLevel="h3"
           title={<>More frequent contribution by users is linked to success</>}
@@ -278,7 +278,7 @@ const Section3 = () => (
             'They often or always contribute to the design system (4-5)',
           ]}
           dataPoints={[
-            ['Not Successful', [83, 17]],
+            ['Not Successful', [83, 0, 17]],
             ['Slightly Successful', [68, 18, 14]],
             ['Moderately Successful', [48, 34, 18]],
             ['Successful', [49, 28, 23]],
@@ -297,7 +297,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell span="3" spanMD="5" rowSpanMD="2" alignMD="end" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="3.9" caption="Responses: 136 | Answers were on a scale of 1 to&nbsp;5.">
+      <Figure count="3.9" caption="Responses: 136 | Answers were on a scale of 1 to 5.">
         <BarChart
           headingLevel="h3"
           title="But contribution is low"
@@ -328,7 +328,7 @@ const Section3 = () => (
       <Figure
         className="util-margin-bottom-md util-margin-bottom-1xl@md"
         count="3.10"
-        caption="Respondents: 136 | Answers were on a scale of 1 to&nbps;5."
+        caption="Respondents: 136 | Answers were on a scale of 1 to 5."
       >
         <StackedChart
           headingLevel="h3"
@@ -357,15 +357,15 @@ const Section3 = () => (
       <Figure
         className="util-margin-bottom-md util-margin-bottom-1xl@md util-margin-top-2xl@md"
         count="3.11"
-        caption="Respondents: 135 | Answers were on a scale of 1 to&nbsp;5."
+        caption="Respondents: 135 | Answers were on a scale of 1 to 5."
       >
         <StackedChart
           headingLevel="h3"
           title="More defined process is linked to success"
           keyMap={[
-            'They don’t or rarely contribute to the design system (1-2)',
-            'They sometimes contribute to the design system (3)',
-            'They often or always contribute to the design system (4-5)',
+            'Not defined to somewhat defined (1–2)',
+            'Moderately defined (3)',
+            'Well and very well defined (4–5)',
           ]}
           dataPoints={[
             ['Not Successful', [33, 33, 33]],
@@ -385,7 +385,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell start="2" startMD="1" spanMD="5" spanLG="6" className="util-margin-bottom-1xl">
-      <Figure count="3.12" caption="Respondents: 136 | Answers were on a scale of 1 to&nbsp;5.">
+      <Figure count="3.12" caption="Respondents: 136 | Answers were on a scale of 1 to 5.">
         <BarChart
           headingLevel="h3"
           title="But most systems don’t have a well-defined process"
@@ -530,14 +530,14 @@ const Section3 = () => (
     <GridCell className="util-margin-bottom-md">
       <Quote styleFormat="small"
       cite="Individual contributor, successful design system">
-        <p>Everything causes tech/design debt. It's unavoidable…Honestly, I feel this is just the curse of software development.</p>
+        <p>Everything causes tech/design debt. <em>It's unavoidable</em>…Honestly, I feel this is just the curse of software development.</p>
       </Quote>
     </GridCell>
 
     <GridCell startMD="3" spanMD="6" spanLG="4" className="util-margin-bottom-1xl">
       <Quote styleFormat="small"
       cite="Manager, moderately successful design system">
-        <p>How would it not? Any legacy product would need a facelift. Any new product must adhere to guidelines. Yes, there are ways to streamline this, and in some cases the product development process speeds up... A design system will always produce some technical debt.</p>
+        <p>How would it not? Any legacy product would need a facelift. Any new product must adhere to guidelines. Yes, there are ways to streamline this, and in some cases the product development process speeds up... <em>A design system will always produce some technical debt</em>.</p>
       </Quote>
     </GridCell>
   </Grid>
