@@ -26,7 +26,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell span="3" spanMD="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="4.1" caption="159 Responses" className="util-margin-bottom-1xl">
+      <Figure count="4.1" caption="Responses: 159" className="util-margin-bottom-1xl">
         <StackedChart
           styleFormat="small"
           title="Tracking metrics is linked to success"
@@ -52,7 +52,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell startMD="7" spanLG="5" align="end" className="util-margin-top-3xl@md util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="4.2" caption="160 Responses" className="util-margin-bottom-1xl">
+      <Figure count="4.2" caption="Responses: 160" className="util-margin-bottom-1xl">
         <BarChart
           headingLevel="h3"
           styleFormat="small"
@@ -72,7 +72,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="4.3" caption="50 Responses">
+      <Figure count="4.3" caption="Responses: 50">
         <h3>Design system teams track similar metrics</h3>
         <p>“<em>Which metrics</em> are you tracking?”</p>
         <ScoreRow>
@@ -115,7 +115,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell startMD="2" spanMD="5" startLG="3" spanLG="6" className="util-margin-bottom-1xl">
-      <Figure count="4.4" caption="38 Responses | Respondents were asked to select all that&nbsp;apply.">
+      <Figure count="4.4" caption="Responses: 38 | Respondents were asked to select all that&nbsp;apply.">
         <BarChart
           headingLevel="h3"
           styleFormat="small"
