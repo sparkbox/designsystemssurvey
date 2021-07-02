@@ -22,7 +22,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell span="3" spanLG="6" className="util-margin-bottom-1xl">
-        <Figure count="1.1" caption="159 Responses">
+        <Figure count="1.1" caption="Responses: 159">
           <PieChart
             styleFormat="large"
             title="Almost 40% of systems were successful or very successful"
@@ -47,7 +47,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell start="2" span="3" startMD="3" spanMD="6" startLG="6" spanLG="7" className="util-margin-bottom-1xl">
-        <Figure count="2.2" caption="171 Responses">
+        <Figure count="2.2" caption="Responses: 171">
           <PieChart
             title="Individual contributors usually suggest design systems"
             dataPoints={[
@@ -64,7 +64,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl">
-        <Figure count="2.3" caption="171 Responses | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
+        <Figure count="2.3" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
 
           <h2 class="cmp-type-h3">Design systems have similar elements</h2>
           <p>"What does your design system <em>contain</em>?"</p>
@@ -169,7 +169,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell rowSpanMD="2" startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl">
-        <Figure count="2.4" caption="374 Responses">
+        <Figure count="2.4" caption="Responses: 374">
           <BarChart
             styleFormat="large"
             title="Teams are lacking certain disciplines"
@@ -201,7 +201,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell spanMD="6">
-        <Figure count="2.5" caption="136 Responses">
+        <Figure count="2.5" caption="Responses: 136">
           <h3>Most respondent organizations have centralized teams</h3>
           <p>&ldquo;How is your design system <em>team structured</em>?&rdquo;</p>
           <ScoreRow>
