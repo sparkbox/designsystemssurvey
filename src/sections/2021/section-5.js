@@ -21,7 +21,7 @@ const Section5 = () => (
     </GridCell>
 
     <GridCell span="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
-      <p className="cmp-type-body-large">Since the 2020 Design Systems Survey, we’ve heard from peers and clients that many teams have started over with a new design system. As a result, this year we added questions to better understand how common this may be and to understand why teams are choosing to build additional or new design systems.</p>
+      <p className="cmp-type-body-large">Since the <a href="/2020/">2020 Design Systems Survey</a>, we’ve heard from peers and clients that many teams have started over with a new design system. As a result, this year we added questions to better understand how common this may be and to understand why teams are choosing to build additional or new design systems.</p>
     </GridCell>
 
     <GridCell alignMD="end" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl">
