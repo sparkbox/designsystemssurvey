@@ -4,17 +4,7 @@ const ContactForm = (props) => (
   <div className="util-margin-top-3xl">
     {/* The form attribute will need updated to work as *
        expected and provide the necessary data to MailChimp */}
-    <form action="https://sparkbox.com/php/mailchimp_cta.php" method="post" id="mc-embedded-subscribe-htmlForm" name="mc-embedded-subscribe-form" novalidate>
-
-      {/* These need updated to include any necessary data */}
-      <input type="hidden" value="{current_url}" name="ARTICLE" class="" id="mce-ARTICLE" />
-      <input type="hidden" value="ADD OFFERING HERE" name="OFFERING" class="" id="mce-OFFERING" />
-      <input type="hidden" value="ADD INTEREST HERE" name="INTEREST" class="" id="mce-INTEREST" />
-      <input type="hidden" value="ADD AUDIENCE HERE" name="AUDIENCE" id="mce-AUDIENCE" />
-
-      <div className="util-visually-hidden" aria-hidden="true">
-        <input type="text" name="b_c2fcafb7ccc2db34e99075bb1_705050dbb9" tabindex="-1" value=""/>
-      </div>
+    <form action="/2021" data-netlfiy="true" method="post" id="mc-embedded-subscribe-htmlForm" name="mc-embedded-subscribe-form" novalidate>
 
       <h3 className="cmp-type-body cmp-type-bold util-margin-bottom-md">Can we continue to include you?</h3>
 
