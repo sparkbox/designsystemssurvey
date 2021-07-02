@@ -36,7 +36,7 @@ const Section4 = () => (
             'I am not sure',
           ]}
           dataPoints={[
-            ['Not successful', [100, 0, 0]],
+            ['Not successful', [0, 100, 0]],
             ['Slightly successful', [16, 74, 10]],
             ['Moderately successful', [23, 67, 10]],
             ['Successful', [48, 42, 10]],
