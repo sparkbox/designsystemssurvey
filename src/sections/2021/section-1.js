@@ -114,7 +114,6 @@ const Section1 = () => (
             ['51-2,000 Employees', [43, 33]],
             ['2,001-10,000+ Employees', [47, 13]]
           ]}>
-          <p>In house respondents to to work at larger organizations, while agency respondents work primarily at smaller companies.</p>
         </BarChart>
       </Figure>
     </GridCell>
