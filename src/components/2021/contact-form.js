@@ -4,7 +4,7 @@ const ContactForm = (props) => (
   <div className="util-margin-top-3xl">
     {/* The form attribute will need updated to work as *
        expected and provide the necessary data to MailChimp */}
-    <form action="/2021" data-netlfiy="true" method="post" id="mc-embedded-subscribe-htmlForm" name="mc-embedded-subscribe-form" novalidate>
+    <form data-netlfiy="true" method="post" id="mc-embedded-subscribe-htmlForm" name="mc-embedded-subscribe-form" novalidate>
 
       <h3 className="cmp-type-body cmp-type-bold util-margin-bottom-md">Can we continue to include you?</h3>
 
