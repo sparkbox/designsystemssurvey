@@ -7,7 +7,9 @@ Setup
 
 2. Install the ([Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start#install-the-gatsby-cli)) globally `npm install -g gatsby-cli`
 
-3. Run `gatsby develop`. This will start a hot-reloading development environment at `localhost:8000`.
+3. Run `npm install` to install all packages and dependencies
+
+4. Run `npm start`. This will start a hot-reloading development environment at `localhost:8000`.
 
 Run 2018 site locally
 -----------------------------
@@ -18,8 +20,8 @@ Run 2018 site locally
    4. Build the 2018 survey site
    5. Copy that build into `static` directory
 
-2. Run `gatsby build`. This will:
-   1. Build the 2019 site in the root
+2. Run `npm run build`. This will:
+   1. Build the 2019-21 site in the root
    2. Build the 2018 site at `/2018` from the static folder
 
 3. Run a local server.
