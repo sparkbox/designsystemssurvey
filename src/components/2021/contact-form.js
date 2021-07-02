@@ -2,7 +2,8 @@ import React from "react"
 
 const ContactForm = (props) => (
   <div className="util-margin-top-3xl">
-   <form name="contact" method="POST" data-netlify="true">
+  
+   <form name="contact" method="POST" data-netlify="true" action="/success">
      <p>
        <label>Your Name: <input type="text" name="name" /></label>   
      </p>
