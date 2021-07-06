@@ -169,7 +169,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell rowSpanMD="2" startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl">
-        <Figure count="2.4" caption="Responses: 374">
+        <Figure count="2.4" caption="Responses: 374" direction="left">
           <BarChart
             styleFormat="large"
             title="Teams are lacking certain disciplines"

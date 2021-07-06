@@ -83,7 +83,7 @@ const Section1 = () => (
     </GridCell>
 
     <GridCell spanLG="6" rowSpanMD="2" className="util-margin-bottom-1xl util-margin-bottom-1xl@md">
-      <Figure count="1.3" caption="Responses: In-house: 217; Agency:&nbsp;159">
+      <Figure count="1.3" caption="Responses: In-house: 217; Agency:&nbsp;159" direction="left">
         <BarChart
           headingLevel="h3"
           startStyle="alt"
@@ -102,7 +102,7 @@ const Section1 = () => (
     </GridCell>
 
     <GridCell start="2" startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-top-20vh@md">
-      <Figure count="1.4" caption="Responses: In-house: 217; Agency:&nbsp;157">
+      <Figure count="1.4" caption="Responses: In-house: 217; Agency:&nbsp;157" direction="left">
         <BarChart
           headingLevel="h3"
           startStyle="alt"

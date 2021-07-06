@@ -25,7 +25,7 @@ const Section5 = () => (
     </GridCell>
 
     <GridCell alignMD="end" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl">
-      <Figure count="5.1" caption="Responses: 136">
+      <Figure count="5.1" caption="Responses: 136" direction="left">
         <BarChart
           sizeFormat="small"
           headingLevel="h3"
@@ -89,7 +89,7 @@ const Section5 = () => (
     </GridCell>
 
     <GridCell startMD="2" startLG="3" className="util-margin-bottom-1xl">
-      <Figure count="5.2" caption="Responses: 136">
+      <Figure count="5.2" caption="Responses: 136" direction="left">
         <BarChart
           sizeFormat="small"
           headingLevel="h3"
