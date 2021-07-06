@@ -94,7 +94,7 @@ class Page2021 extends Component {
             <Grid>
               <GridCell spanLG="5">
                 <svg style={{maxWidth: 4 + 'rem'}} viewBox="0 0 64 64">
-                  <path style={{stroke: 'var(--color-neutral-1)'}} d="M.5 9.643h63v38.619H.5V9.642z" stroke="#FFFEFA"/>
+                  <path style={{stroke: 'var(--color-neutral-1)', fill: 'var(--color-neutral-3)'}} d="M.5 9.643h63v38.619H.5V9.642z" stroke="#FFFEFA"/>
                   <path style={{fill: 'var(--color-neutral-1)'}} d="M0 9.143h64L32 26.666 0 9.143z" fill="#FFFEFA"/>
                 </svg>
 
