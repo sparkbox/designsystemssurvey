@@ -23,12 +23,16 @@
 
   &__text {
     font-family: var(--font-mono);
-    font-size: mq(sm) * 0.1;
+    font-size: mq(sm) * 0.15;
     line-height: 0.875;
     font-weight: 200;
 
     @media(min-width: mq(sm)) {
-      font-size: 10vw;
+      font-size: 15vw;
+    }
+
+    @media(min-width: mq(md)) {
+      font-size: 12vw;
     }
 
     @media(min-width: mq(lg)) {
@@ -91,7 +95,7 @@
       display: block;
       padding-top: 100%;
     }
-    
+
     @include ie11 {
       display: none;
     }
