@@ -192,7 +192,7 @@ const Section3 = () => (
           ]}
           dataPoints={[
             ['Not Successful', [33, 33, 17, 0, 17]],
-            ['Slightly Successful', [58, 32, 10]],
+            ['Slightly Successful', [58, 32, 10, 0, 0]],
             ['Moderately Successful', [17, 30, 22, 20, 12]],
             ['Successful', [10, 24, 36, 28, 2]],
             ['Very Successful', [8, 8, 25, 50, 8]]
@@ -278,7 +278,7 @@ const Section3 = () => (
             'They often or always contribute to the design system (4-5)',
           ]}
           dataPoints={[
-            ['Not Successful', [83, 0, 17]],
+            ['Not Successful', [83, 17, 0]],
             ['Slightly Successful', [68, 18, 14]],
             ['Moderately Successful', [48, 34, 18]],
             ['Successful', [49, 28, 23]],
@@ -509,7 +509,7 @@ const Section3 = () => (
             `I don't know`
           ]}
           dataPoints={[
-            ['Not Successful', [83, 17]],
+            ['Not Successful', [83, 17, 0]],
             ['Slightly Successful', [50, 32, 18]],
             ['Moderately Successful', [50, 34, 16]],
             ['Successful', [53, 32, 15]],
