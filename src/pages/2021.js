@@ -18,7 +18,13 @@ import Section5 from '../sections/2021/section-5'
 import Section6 from '../sections/2021/section-6'
 import Footer from '../components/2021/footer'
 
+import sendFormData from '../js/2021/form-submit'
+
 class Page2021 extends Component {
+  componentDidMount() {
+    sendFormData()
+  }
+
   render () {
     let modernCSS = 'all and (-webkit-min-device-pixel-ratio: 0), (-moz-device-pixel-ratio: 0)';
     let ieCSS = 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)'
