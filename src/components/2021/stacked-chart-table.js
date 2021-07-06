@@ -7,9 +7,9 @@ const StackedChartTable = (props) => {
   let cellIterator = (value) => {
     let results = []
     for (let i = 0; i < value.length; i++) {
-      if (value[i] > 0) {
+      if (value[i] >= 0) {
         let result = value[i]
-        if (result) {
+        if (Number.isFinite(result)) {
           results.push (
             <td>
               {result}%
