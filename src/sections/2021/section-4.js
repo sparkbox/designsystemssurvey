@@ -52,7 +52,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell startMD="7" spanLG="5" align="end" className="util-margin-top-3xl@md util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="4.2" caption="Responses: 160" className="util-margin-bottom-1xl">
+      <Figure count="4.2" caption="Responses: 160" className="util-margin-bottom-1xl" direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="small"
@@ -115,7 +115,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell startMD="2" spanMD="5" startLG="3" spanLG="6" className="util-margin-bottom-1xl">
-      <Figure count="4.4" caption="Responses: 38 | Respondents were asked to select all that&nbsp;apply.">
+      <Figure count="4.4" caption="Responses: 38 | Respondents were asked to select all that&nbsp;apply." direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="small"

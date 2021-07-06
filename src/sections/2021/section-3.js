@@ -25,7 +25,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell span="3" spanLG="4" className="util-margin-bottom-1xl">
-      <Figure count="3.1" caption="Responses: 154 | Respondents were asked to select all that&nbsp;apply.">
+      <Figure count="3.1" caption="Responses: 154 | Respondents were asked to select all that&nbsp;apply." direction="left">
         <BarChart
           headingLevel="h3"
           title="Priorities"
@@ -51,7 +51,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell start="2" span="3" startMD="6" startLG="7" spanLG="4" className="util-margin-bottom-1xl">
-    <Figure count="3.2" caption="Responses: 158 | Respondents were asked to select all that&nbsp;apply.">
+    <Figure count="3.2" caption="Responses: 158 | Respondents were asked to select all that&nbsp;apply." direction="left">
       <BarChart
         headingLevel="h3"
         title="Challenges"
@@ -156,7 +156,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanMD="6" className="util-margin-bottom-2xl util-margin-bottom-3xl@lg">
-      <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for “What are the top challenges your design system team is facing at this moment?">
+      <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for “What are the top challenges your design system team is facing at this moment?" direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="large"
@@ -297,7 +297,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell span="3" spanMD="5" rowSpanMD="2" alignMD="end" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="3.9" caption="Responses: 136 | Answers were on a scale of 1 to&nbsp;5.">
+      <Figure count="3.9" caption="Responses: 136 | Answers were on a scale of 1 to&nbsp;5." direction="left">
         <BarChart
           headingLevel="h3"
           title="But contribution is low"
@@ -385,7 +385,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell start="2" startMD="1" spanMD="5" spanLG="6" className="util-margin-bottom-1xl">
-      <Figure count="3.12" caption="Respondents: 136 | Answers were on a scale of 1 to&nbsp;5.">
+      <Figure count="3.12" caption="Respondents: 136 | Answers were on a scale of 1 to&nbsp;5." direction="left">
         <BarChart
           headingLevel="h3"
           title="But most systems don’t have a well-defined process"
