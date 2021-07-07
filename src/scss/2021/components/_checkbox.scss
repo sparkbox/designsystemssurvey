@@ -56,30 +56,10 @@
     }
   }
   
-  &__label-container {
-    margin-left: space(md);
-    position: relative;
-  }
-  
   &__label {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-    z-index: z-index(2);
-  }
-  
-  &__label-hidden {
-    display: none;
-  }
-
-  &__faux-label {
     @include type-body();
     display: block;
-    position: relative;
-    z-index: z-index(1);
+    margin-left: space(md);
+    cursor: pointer;
   }
 }
