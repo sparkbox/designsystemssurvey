@@ -18,7 +18,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <p className="cmp-type-body-large">46% of in-house respondents have dedicated design system teams&mdash;but even non-dedicated teams have to get approval to spend time on the system. While the promise of a design system may be enough to gain support on day one, as systems get older, it’s natural that teams need to prove their value. Enter metrics.</p>
+      <p className="cmp-type-body-large">46% of in-house respondents have dedicated design system teams&#8202;&mdash;&#8202;but even non-dedicated teams have to get approval to spend time on the system. While the promise of a design system may be enough to gain support on day one, as systems get older, it’s natural that teams need to prove their value. Enter metrics.</p>
     </GridCell>
 
     <GridCell startMD="7" startLG="11">
