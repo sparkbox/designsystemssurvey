@@ -17,7 +17,7 @@ import ArtElement from "../../components/2021/art-element"
 const Section3 = () => (
   <Grid className="util-margin-bottom-20vh">
     <GridCell spanMD="8" spanLG="12">
-      <SectionHeader title="Priorities and Challenges" number="3" total="6" />
+      <SectionHeader title="Priorities &amp; Challenges" number="3" total="6" />
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
@@ -156,7 +156,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanMD="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@lg">
-      <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for “What are the top challenges your design system team is facing at this&nbsp;moment?" direction="left">
+      <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for &ldquo;What are the top challenges your design system team is facing at this&nbsp;moment?&rdquo;" direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="large"
@@ -226,9 +226,9 @@ const Section3 = () => (
       <h3>Reaching adoption goals is a common sign of maturity for design system teams. </h3>
 
       <p>Has your design system met its adoption goals?</p>
-      <p>Answer a few questions to find out where you fall within the Design System Maturity Model and get insights and ideas about how you can take your system to the next level. Take Assessment</p>
+      <p>Answer a few questions to find out where you fall within the Design System Maturity Model and get insights and ideas about how you can take your system to the next level.</p>
 
-      <a href="https://example.com" className="cmp-button cmp-button--inverse">Take the Survey</a>
+      <a href="https://example.com" className="cmp-button cmp-button--inverse">Take the <strong>Assessment</strong></a>
       </CallToAction>
     </GridCell>
 
@@ -262,7 +262,7 @@ const Section3 = () => (
     <GridCell span="3" spanMD="4" startMD="6" alignMD="end" startLG="9" className="util-margin-bottom-1xl">
       <Quote
         styleFormat="large"
-        cite="-Individual contributor, slightly successful design system">
+        cite="Individual contributor, slightly successful design system">
         <p>“[Our design system] is quite limited in scope currently, we are <em>concentrating on populating it</em> more than anything else.”</p>
       </Quote>
     </GridCell>
@@ -278,7 +278,7 @@ const Section3 = () => (
             'They often or always contribute to the design system (4-5)',
           ]}
           dataPoints={[
-            ['Not Successful', [83, 17, 0]],
+            ['Not Successful', [83, 0, 17]],
             ['Slightly Successful', [68, 18, 14]],
             ['Moderately Successful', [48, 34, 18]],
             ['Successful', [49, 28, 23]],
@@ -448,7 +448,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell span="3" spanMD="4" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="1.14" caption="Responses: 136">
+      <Figure count="3.14" caption="Responses: 136">
         <PieChart
           headingLevel="h3"
           styleFormat="small"
@@ -501,7 +501,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell startLG="3" spanLG="5" className="util-margin-bottom-md util-margin-bottom-3xl@md">
-      <Figure count="3.11" caption="Responses: 135">
+      <Figure count="3.15" caption="Responses: 135">
         <StackedChart
           headingLevel="h3"
           title={<>Debt didn’t impact perceived success </>}
