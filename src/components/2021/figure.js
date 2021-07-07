@@ -12,7 +12,7 @@ const Figure = (props) => {
         <span className="cmp-figure__count">
           <abbr title="Figure">Fig</abbr>&nbsp;{props.count}
         </span>
-        <span>{props.caption}</span>
+        <span dangerouslySetInnerHTML={{__html:props.caption}} />
       </figcaption>
     </figure>
   )
