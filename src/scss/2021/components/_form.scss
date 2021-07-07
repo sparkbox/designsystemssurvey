@@ -29,4 +29,10 @@
   .form-success &__fieldset {
     display: none;
   }
+  
+  &__message {
+    @include type-body-large();
+    color: var(--color-dark-rust);
+    margin: space(md) 0 0;
+  }
 }
