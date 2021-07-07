@@ -107,7 +107,7 @@ const Section1 = () => (
           headingLevel="h3"
           startStyle="alt"
           styleFormat="small"
-          title="How many people are employed by your organization?"
+          title={<>How many people are <em>employed</em> by your organization?</>}
           keyMap={['In-house', 'Agency']}
           dataPoints={[
             ['1-50 Employees', [10, 54]],
