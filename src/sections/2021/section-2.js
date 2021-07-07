@@ -18,11 +18,11 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-        <p class="cmp-type-body-large">The elements in your design system and the team creating them are foundational to building a quality product. Let’s learn more about the commonalities across our respondents’ design systems.</p>
+        <p class="cmp-type-body-large">The elements in your design system and the team creating them are foundational to building a quality product. Let’s learn more about the commonalities across our <strong>in-house</strong> respondents’ design systems.</p>
       </GridCell>
 
       <GridCell span="3" spanMD="4" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-md@md">
-        <Figure count="1.1" caption="Responses: 159" direction="left">
+        <Figure count="2.1" caption="Responses: 159" direction="left">
           <PieChart
             styleFormat="large"
             title="Almost 40% of systems were successful or very successful"
@@ -49,9 +49,9 @@ const Section2 = () => (
       <GridCell start="2" span="3" startMD="3" spanMD="6" startLG="6" spanLG="7" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
         <Figure count="2.2" caption="Responses: 171">
           <PieChart
-            title="Individual contributors usually suggest design systems"
+            title="Individual contributor(s) suggested starting a design system"
             dataPoints={[
-              ['An individual contributor(s) suggested starting a design system', 57],
+              ['Individual contributor(s) suggested starting a design system', 57],
               ['Leadership suggested starting a design system', 22],
               ['A third party suggested starting a design system', 3],
               ['A combination of one or more of the above', 2],
@@ -190,9 +190,8 @@ const Section2 = () => (
             ]}>
           </BarChart>
         </Figure>
-
-        <p>&ldquo;Which disciplines do you currently have on your design system team?&rdquo; Responses: 135 | Respondents were asked to select all that apply.</p>
-        <p>&ldquo;Which disciplines are you currently missing on your design system team that would be useful right now?&rdquo; Responses: 115 | Respondents were asked to select all that apply.</p>
+        <p class="cmp-figure__caption cmp-figure__caption--left">&ldquo;Which disciplines do you currently have on your design system team?&rdquo; Responses: 135 | Respondents were asked to select all that apply.</p>
+        <p class="cmp-figure__caption cmp-figure__caption--left">&ldquo;Which disciplines are you currently missing on your design system team that would be useful right now?&rdquo; Responses: 115 | Respondents were asked to select all that apply.</p>
       </GridCell>
 
       <GridCell startMD="1" span="1">
