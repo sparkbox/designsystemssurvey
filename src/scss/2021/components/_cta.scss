@@ -1,4 +1,8 @@
 .cmp-cta {
+  --color-divider: #{color(dark-divider)};
+  @media (prefers-color-scheme: dark) {
+    --color-divider: #{color(divider)};
+  }
   padding: 3rem 2rem;
   color: var(--color-neutral-1);
   background-color: var(--color-neutral-3);
