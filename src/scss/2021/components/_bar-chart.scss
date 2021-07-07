@@ -12,7 +12,7 @@
   }
 
   &__key-name {
-    @include type-mono-micro;
+    @include type-body-mono();
   }
 
   &__key-marker {
@@ -32,13 +32,14 @@
 
   &__set {
     & + & {
-      margin-top: 1rem;
+      margin-top: 0.875rem;
     }
   }
 
   &__set-name {
-    @include type-sans-micro();
-    margin-bottom: 0.5em;
+    @include type-body();
+    font-weight: weight(semibold);
+    margin-bottom: 0.25rem;
   }
 
   &__item {
@@ -52,10 +53,10 @@
 
   &__value {
     display: inline;
-    @include type-mono-micro();
+    @include type-body-mono-large();
     line-height: 1;
     padding: 0.125rem 0.25rem 0.125rem 0.125rem;
-    margin-bottom: 0.675rem;
+    margin-bottom: 0.5rem;
     background-color: var(--bgcolor);
 
     &--hidden {

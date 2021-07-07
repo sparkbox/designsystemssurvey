@@ -2,18 +2,22 @@
   box-sizing: border-box;
   font-family: var(--font-mono);
   font-size: 3rem;
-  font-weight: weight(exlight);
+  font-weight: weight(light);
   margin: 0 0 0.125em;
   line-height: 0.75;
+
+  @media (min-width: mq(md)) {
+    font-weight: weight(exlight);
+  }
 
   &--large {
     font-weight: weight(exlight);
     font-size: 7.5rem;
-  }  
+  }
 
   &--bold {
     font-weight: weight(medium);
-  }  
+  }
   &--highlight {
     color: var(--color-rust);
   }

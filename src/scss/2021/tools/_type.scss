@@ -41,6 +41,14 @@
 	line-height: 1.4;
 }
 
+@mixin type-body-mono-large {
+	font-family: var(--font-mono);
+	font-size: var(--type-size-mono-body-large);
+  line-height: 1.4;
+	font-stretch: stretch(normal);
+	font-weight: weight(semibold);
+}
+
 @mixin type-body {
 	font-family: var(--font-sans);
 	font-size: var(--type-size-body-sm);
@@ -49,11 +57,19 @@
 	font-stretch: stretch(extended);
 }
 
+@mixin type-body-mono {
+	font-family: var(--font-mono);
+	font-size: var(--type-size-mono-body);
+  line-height: 1.3;
+	font-stretch: stretch(normal);
+	font-weight: weight(semibold);
+}
+
 @mixin type-sans-micro {
 	font-family: var(--font-sans);
 	font-size: var(--type-size-sans-micro);
 	font-stretch: stretch(extended);
-	font-weight: weight(bold);
+	font-weight: weight(semibold);
 }
 
 @mixin type-mono-micro {
