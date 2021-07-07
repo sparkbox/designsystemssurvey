@@ -21,7 +21,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <p className="cmp-type-body-large">As noted in the <a href="/2020/">2020 Design Systems Survey</a>, “Due to the nature of a design system requiring buy-in and support from multiple disciplines, a design system project often helps break down organizational silos.” Design system teams focus on common areas—many of which highlight the importance of cross-team support.</p>
+      <p className="cmp-type-body-large">As noted in the <a href="/2020/">2020 Design Systems Survey</a>, “Due to the nature of a design system requiring buy-in and support from multiple disciplines, a design system project often helps break down organizational silos.” Design system teams focus on common areas&#8202;&mdash;&#8202;many of which highlight the importance of cross-team support.</p>
     </GridCell>
 
     <GridCell span="3" spanLG="4" className="util-margin-bottom-1xl">
