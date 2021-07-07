@@ -14,7 +14,7 @@ const Section1 = () => (
       <SectionHeader title="The Respondents" number="1" total="6" />
     </GridCell>
 
-    <GridCell spanLG="6" className="util-margin-bottom-1xl">
+    <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <p class="cmp-type-body-large">In-house and agency respondents were asked a different set of questions with overlapping topics. In-house respondents offered insight based on their direct perspectives with design systems at their organizations while agency respondents offered insight into their client’s experiences.</p>
     </GridCell>
 
@@ -101,7 +101,7 @@ const Section1 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell start="2" startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-top-20vh@md">
+    <GridCell start="2" startMD="6" startLG="8" spanLG="5" className="util-margin-bottom-1xl util-margin-top-20vh@md">
       <Figure count="1.4" caption="Responses: In-house: 217; Agency:&nbsp;157" direction="left">
         <BarChart
           headingLevel="h3"

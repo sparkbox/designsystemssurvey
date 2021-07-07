@@ -17,12 +17,12 @@ const Section2 = () => (
         <SectionHeader title="Characteristics &amp; Teams" number="2" total="6" />
       </GridCell>
 
-      <GridCell spanLG="6" className="util-margin-bottom-1xl">
+      <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
         <p class="cmp-type-body-large">The elements in your design system and the team creating them are foundational to building a quality product. Let’s learn more about the commonalities across our respondents’ design systems.</p>
       </GridCell>
 
-      <GridCell span="3" spanLG="6" className="util-margin-bottom-1xl">
-        <Figure count="1.1" caption="Responses: 159">
+      <GridCell span="3" spanMD="4" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-md@md">
+        <Figure count="1.1" caption="Responses: 159" direction="left">
           <PieChart
             styleFormat="large"
             title="Almost 40% of systems were successful or very successful"
@@ -46,7 +46,7 @@ const Section2 = () => (
         </Quote>
       </GridCell>
 
-      <GridCell start="2" span="3" startMD="3" spanMD="6" startLG="6" spanLG="7" className="util-margin-bottom-1xl">
+      <GridCell start="2" span="3" startMD="3" spanMD="6" startLG="6" spanLG="7" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
         <Figure count="2.2" caption="Responses: 171">
           <PieChart
             title="Individual contributors usually suggest design systems"
@@ -63,8 +63,8 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl">
-        <Figure count="2.3" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
+      <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+        <Figure count="2.3" direction="left" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
 
           <h2 class="cmp-type-h3">Design systems have similar elements</h2>
           <p>"What does your design system <em>contain</em>?"</p>
@@ -156,7 +156,7 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell span="2" startMD="7" spanMD="4" alignMD="center" startLG="9" spanLG="2" className="util-margin-bottom-1xl">
+      <GridCell span="2" startMD="8" spanMD="2" alignMD="center" startLG="9" className="util-margin-bottom-1xl">
         <SmallCallout>
           <p>16 of the 19 elements were all contained in over 50% of the in-house respondents’ design systems.</p>
         </SmallCallout>
@@ -168,7 +168,7 @@ const Section2 = () => (
         </SmallCallout>
       </GridCell>
 
-      <GridCell rowSpanMD="2" startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl">
+      <GridCell rowSpanMD="2" startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@lg">
         <Figure count="2.4" caption="Responses: 374" direction="left">
           <BarChart
             styleFormat="large"

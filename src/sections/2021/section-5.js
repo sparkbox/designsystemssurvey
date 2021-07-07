@@ -16,15 +16,15 @@ const Section5 = () => (
       <SectionHeader title="Evolution" number="5" total="6" />
     </GridCell>
 
-    <GridCell startMD="7" rowSpanMD="3" startLG="10" className="util-margin-bottom-3xl">
+    <GridCell startMD="7" rowSpanMD="3" startLG="10" className="util-display-none util-display-block@md util-margin-bottom-3xl">
       <ArtElement />
     </GridCell>
 
-    <GridCell span="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
+    <GridCell span="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <p className="cmp-type-body-large">Since the <a href="/2020/">2020 Design Systems Survey</a>, we’ve heard from peers and clients that many teams have started over with a new design system. As a result, this year we added questions to better understand how common this may be and to understand why teams are choosing to build additional or new design systems.</p>
     </GridCell>
 
-    <GridCell alignMD="end" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl">
+    <GridCell alignMD="end" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="5.1" caption="Responses: 136" direction="left">
         <BarChart
           sizeFormat="small"
@@ -68,7 +68,7 @@ const Section5 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell start="1" spanLG="4" className="util-margin-bottom-1xl">
+    <GridCell start="1" startLG="3" spanLG="4" className="util-margin-bottom-1xl">
       <p>Other common responses included overcoming technical debt or technical evolution (8 of 25), evolving designs or brands (4 of 25), and issues caused by changing contribution models or system inflexibility (4 of 25) as influencing factors.</p>
     </GridCell>
 
@@ -80,7 +80,7 @@ const Section5 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell startMD="6" startLG="8" spanLG="4" className="util-margin-bottom-1xl util-margin-bottom-2xl">
+    <GridCell startMD="6" startLG="8" spanLG="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Quote
         sizeFormat="small"
         cite="Owner, successful design system">
@@ -88,7 +88,7 @@ const Section5 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell startMD="2" startLG="3" className="util-margin-bottom-1xl">
+    <GridCell span="3" startMD="2" spanMD="4" startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="5.2" caption="Responses: 136" direction="left">
         <BarChart
           sizeFormat="small"
@@ -129,7 +129,7 @@ const Section5 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell startMD="6" startLG="9" className="util-margin-bottom-2xl util-margin-bottom-none@lg">
+    <GridCell startMD="6" startLG="9" className="util-margin-top-lg@md util-margin-bottom-2xl util-margin-bottom-none@lg">
       <Quote
         sizeFormat="small"
         cite="Individual contributor, slightly successful design system">

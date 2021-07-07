@@ -17,6 +17,12 @@
 
     &--left {
       flex-direction: row;
+      text-align: left;
+      margin-top: 1rem;
+
+      @media (min-width: mq(md)) {
+        margin-top: 2rem;
+      }
     }
   }
 
