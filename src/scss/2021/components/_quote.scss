@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   position: relative;
-  
+
   &--large {
     padding: 4rem 0 0;
   }
-  
+
   &--small {
     padding: 2.75rem 0 0;
   }
@@ -21,11 +21,11 @@
     left: 0;
     line-height: 1;
   }
-  
+
   &--deco-rust::before {
     text-shadow: stroke(var(--color-rust));
   }
-  
+
   &--deco-alt::before {
     text-shadow: stroke(var(--color-neutral-3));
     opacity: 0.5;
@@ -48,17 +48,17 @@
     padding: 0;
     text-shadow: stroke(var(--color-neutral-1));
   }
-  
-  // Block quote text assumes paragraph:  
+
+  // Block quote text assumes paragraph:
   p:not([class]) {
     @include type-body-large;
     margin: 0;
-    
+
     & + p:not([class]) {
       margin-top: 1em;
     }
   }
-  
+
   &--large p:not([class]) {
     @include type-h2;
   }
@@ -66,7 +66,7 @@
   &__footer {
     margin-top: 1rem;
   }
-  
+
   &__cite {
     margin: 0;
   }

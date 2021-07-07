@@ -17,7 +17,7 @@ const Section4 = () => (
       <SectionHeader title="Metrics" number="4" total="6" />
     </GridCell>
 
-    <GridCell spanLG="6" className="util-margin-bottom-1xl">
+    <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <p className="cmp-type-body-large">46% of in-house respondents have dedicated design system teams&mdash;but even non-dedicated teams have to get approval to spend time on the system. While the promise of a design system may be enough to gain support on day one, as systems get older, it’s natural that teams need to prove their value. Enter metrics.</p>
     </GridCell>
 
@@ -51,7 +51,7 @@ const Section4 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell startMD="7" spanLG="5" align="end" className="util-margin-top-3xl@md util-margin-bottom-1xl util-margin-bottom-3xl@md">
+    <GridCell startMD="6" startLG="7" spanLG="5" align="end" className="util-margin-bottom-1xl util-margin-top-3xl@md util-margin-bottom-3xl@md">
       <Figure count="4.2" caption="Responses: 160" className="util-margin-bottom-1xl" direction="left">
         <BarChart
           headingLevel="h3"

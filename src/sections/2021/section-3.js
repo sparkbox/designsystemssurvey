@@ -20,7 +20,7 @@ const Section3 = () => (
       <SectionHeader title="Priorities and Challenges" number="3" total="6" />
     </GridCell>
 
-    <GridCell spanLG="6" className="util-margin-bottom-1xl">
+    <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <p className="cmp-type-body-large">As noted in the <a href="/2020/">2020 Design Systems Survey</a>, “Due to the nature of a design system requiring buy-in and support from multiple disciplines, a design system project often helps break down organizational silos.” Design system teams focus on common areas—many of which highlight the importance of cross-team support.</p>
     </GridCell>
 
@@ -50,7 +50,7 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell start="2" span="3" startMD="6" startLG="7" spanLG="4" className="util-margin-bottom-1xl">
+    <GridCell start="2" span="3" startMD="5" startLG="7" spanLG="4" className="util-margin-bottom-1xl">
     <Figure count="3.2" caption="Responses: 158 | Respondents were asked to select all that&nbsp;apply." direction="left">
       <BarChart
         headingLevel="h3"
@@ -117,7 +117,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanMD="6" className="util-margin-bottom-1xl">
-      <Figure count="3.4">
+      <Figure count="3.4" direction="left">
       <ScoreRow>
         <ScoreCardLarge border={false}>
           <h3>Priority</h3>
@@ -146,7 +146,7 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-bottom-none@lg">
+    <GridCell startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-bottom-3xl@md util-margin-bottom-none@lg">
       <Quote
         styleFormat="small"
         decoStyle="alt"
@@ -155,8 +155,8 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell spanMD="6" className="util-margin-bottom-2xl util-margin-bottom-3xl@lg">
-      <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for “What are the top challenges your design system team is facing at this moment?" direction="left">
+    <GridCell spanMD="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@lg">
+      <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for “What are the top challenges your design system team is facing at this&nbsp;moment?" direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="large"
@@ -178,7 +178,7 @@ const Section3 = () => (
       <p>In-house respondents who perceived their design system as either “very successful” or “successful” were less likely to mention adoption as a challenge than those who reported moderate or little success. And, separately, 52% of agency respondents reported that lack of adoption is one of the most common reasons their clients’ design systems are unsuccessful.</p>
     </GridCell>
 
-    <GridCell spanLG="5" rowSpanMD="3" className="util-margin-bottom-1xl util-margin-bottom-md@lg">
+    <GridCell spanLG="5" rowSpanMD="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="3.6" caption="Responses: 159">
         <StackedChart
           headingLevel="h3"
@@ -207,7 +207,7 @@ const Section3 = () => (
       <ArtElement type="bars" />
     </GridCell>
 
-    <GridCell span="2" startMD="7" startLG="9" spanLG="2" alignLG="top" className="util-margin-bottom-1xl">
+    <GridCell span="3" startMD="7" startLG="9" alignLG="top" className="util-margin-bottom-1xl">
       <SmallCallout>
         <p>The more a design system is used in digital products, the higher it’s perceived as successful by in-house respondents.</p>
       </SmallCallout>
@@ -243,7 +243,7 @@ const Section3 = () => (
 
       <h2>2 - Engaging Contributors</h2>
 
-      <Figure count="3.7">
+      <Figure count="3.7" direction="left">
         <ScoreRow>
           <ScoreCardLarge border={false}>
             <h3>Priority</h3>
@@ -267,8 +267,8 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
-      <Figure count="3.8" caption="Responses: 135 | Answers were on a scale of 1 to&nbsp;5.">
+    <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+      <Figure count="3.8" direction="left" caption="Responses: 135 | Answers were on a scale of 1 to&nbsp;5.">
         <StackedChart
           headingLevel="h3"
           title={<>More frequent contribution by users is linked to success</>}
@@ -324,10 +324,11 @@ const Section3 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-right-lg@md util-margin-right-none@lg">
+    <GridCell startLG="3" className="util-margin-bottom-1xl">
       <Figure
         className="util-margin-bottom-md util-margin-bottom-1xl@md"
         count="3.10"
+        direction="left"
         caption="Respondents: 136 | Answers were on a scale of 1 to&nbsp;5."
       >
         <StackedChart
@@ -353,10 +354,11 @@ const Section3 = () => (
       </SmallCallout>
     </GridCell>
 
-    <GridCell startMD="5" startLG="9" className="util-margin-bottom-1xl util-margin-top-3xl@md">
+    <GridCell startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-top-3xl@md util-margin-bottom-3xl@md">
       <Figure
         className="util-margin-bottom-md util-margin-bottom-1xl@md util-margin-top-2xl@md"
         count="3.11"
+        direction="left"
         caption="Respondents: 135 | Answers were on a scale of 1 to&nbsp;5."
       >
         <StackedChart
@@ -417,7 +419,7 @@ const Section3 = () => (
     <GridCell spanMD="4" className="util-margin-bottom-1xl">
       <h2>3 - Overcoming Debt</h2>
 
-      <Figure count="3.13">
+      <Figure count="3.13" direction="left">
         <ScoreRow>
           <ScoreCardLarge border={false}>
             <h3>Priority</h3>
@@ -433,7 +435,7 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell start="2" span="3" spanMD="4" startMD="6" alignMD="end" startLG="8" spanLG="5" className="util-margin-bottom-1xl util-margin-top-3xl@md">
+    <GridCell start="2" span="3" spanMD="4" startMD="6" alignMD="end" startLG="8" spanLG="5" className="util-margin-bottom-1xl util-margin-top-3xl@md util-margin-bottom-3xl@md">
       <Quote styleFormat="small"
       cite="Manager, moderately successful design system">
         <p>“Nothing can account for the impact to various development stacks in the product. <em><strong>A design system will always produce some technical debt</strong></em>.”</p>
@@ -445,7 +447,7 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell span="3" spanMD="4" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl">
+    <GridCell span="3" spanMD="4" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="1.14" caption="Responses: 136">
         <PieChart
           headingLevel="h3"
@@ -466,7 +468,7 @@ const Section3 = () => (
       <ArtElement type="bars" />
     </GridCell>
 
-    <GridCell span="3" spanMD="4" startMD="7" alignMD="end" startLG="9" spanLG="2" className="util-margin-bottom-1xl">
+    <GridCell span="3" spanMD="4" startMD="7" alignMD="end" startLG="9" spanLG="2" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <SmallCallout>
         <p>53% of in-house respondents reported that their design system creates debt. And, separately, agency respondents agreed, with 47% saying that they believe their clients’ design systems create debt.</p>
       </SmallCallout>
@@ -477,21 +479,21 @@ const Section3 = () => (
       <p>When asked about the causes for technical and design debt in an open-ended question, in-house respondents’ top reasons include poor implementation (19 of 42 responses) and updating pre-existing products (11 of 42 responses).</p>
     </GridCell>
 
-    <GridCell start="2" startLG="1" spanLG="3" alignMD="top" className="util-margin-bottom-md">
+    <GridCell start="2" startLG="1" spanLG="3" alignMD="top" className="util-margin-bottom-lg@md util-margin-bottom-3xl@lg">
       <Quote styleFormat="small"
       cite="Individual contributor, moderately successful design system">
         <p>The documentation was incomplete, and thus the proper <em><strong>technical implementation was partial guesswork</strong></em> (guidance not in place)</p>
       </Quote>
     </GridCell>
 
-    <GridCell start="2" startMD="4" startLG="5" spanLG="3" alignMD="center" className="util-margin-bottom-md">
+    <GridCell start="2" startMD="4" startLG="5" spanLG="3" alignMD="center" className="util-margin-bottom-lg@md util-margin-bottom-3xl@lg">
       <Quote styleFormat="small"
       cite="Individual contributor, slightly successful design system">
         <p>In an effort to move fast, many projects result in ‘we can incorporate this into the system later’ or <em><strong>‘we can update this after we ship.’</strong></em></p>
       </Quote>
     </GridCell>
 
-    <GridCell spanMD="6" startLG="9" spanLG="3" alignLG="end" className="util-margin-bottom-1xl util-margin-top-1xl@lg">
+    <GridCell spanMD="6" startLG="9" spanLG="3" alignLG="end" className="util-margin-bottom-2xl util-margin-top-1xl@lg util-margin-bottom-3xl@md">
       <Quote styleFormat="small"
       cite="Manager, slightly successful design system">
         <p>... we created the design system based on an existing product, there has been debt because it wasn't built from components to start with. However, all features within the product that have been updated over the years are now debt-free (both design and tech). So it's a tricky one to answer. We have a web product which was built from scratch off DS components and that has no debt. I think <em><strong>debt is created/related to when the DS was implemented along the lifecycle of the product/s it's supporting.</strong></em></p>
