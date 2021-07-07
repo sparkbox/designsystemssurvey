@@ -16,27 +16,27 @@ const Footer = () => (
           </a>
         </li>
         <li className="cmp-footer__social-icon">
-          <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-link cmp-footer__social-link--github">
+          <a href="https://github.com/sparkbox" className="cmp-footer__social-link cmp-footer__social-link--github">
             <span className="util-visually-hidden">Github</span>
           </a>
         </li>
         <li className="cmp-footer__social-icon">
-          <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-link cmp-footer__social-link--dribbble">
+          <a href="https://dribbble.com/sparkbox" className="cmp-footer__social-link cmp-footer__social-link--dribbble">
             <span className="util-visually-hidden">Dribbble</span>
           </a>
         </li>
         <li className="cmp-footer__social-icon">
-          <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-link cmp-footer__social-link--facebook">
+          <a href="https://www.facebook.com/seesparkbox" className="cmp-footer__social-link cmp-footer__social-link--facebook">
             <span className="util-visually-hidden">Facebook</span>
           </a>
         </li>
         <li className="cmp-footer__social-icon">
-          <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-link cmp-footer__social-link--youtube">
+          <a href="https://www.youtube.com/channel/UCfsWcRy7Yh1WWDrrZS0Q7xw" className="cmp-footer__social-link cmp-footer__social-link--youtube">
             <span className="util-visually-hidden">Youtube</span>
           </a>
         </li>
         <li className="cmp-footer__social-icon">
-          <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-link cmp-footer__social-link--linkedin">
+          <a href="https://www.linkedin.com/company/sparkbox/mycompany/" className="cmp-footer__social-link cmp-footer__social-link--linkedin">
             <span className="util-visually-hidden">LinkedIn</span>
           </a>
         </li>
@@ -45,16 +45,16 @@ const Footer = () => (
 
     <div className="cmp-footer__links util-margin-vertical-lg">
         <div className="util-display-inline-block@md util-margin-all-md util-margin-vertical-none@md">
-          <a href="/contact">Drop us a line</a>
+          <a href="https://sparkbox.com/contact">Drop us a line</a>
         </div>
         <div className="util-display-inline-block@md util-margin-all-md util-margin-vertical-none@md">
-          <a href="/contact#careers">Careers</a>
+          <a href="https://sparkbox.com/contact#careers">Careers</a>
         </div>
         <div className="util-display-inline-block@md util-margin-all-md util-margin-vertical-none@md">
           <a href="https://apprentices.seesparkbox.com">Apprenticeship</a>
         </div>
     </div>
-    <p className="cmp-footer__copyright util-text-center">&copy;2021 Sparkbox. All rights reserved. <a href="/privacypolicy">Privacy Policy</a> and <a href="/terms">Terms of Use</a></p>
+    <p className="cmp-footer__copyright util-text-center">&copy;2021 Sparkbox. All rights reserved. <a href="https://sparkbox.com/privacypolicy">Privacy Policy</a> and <a href="https://sparkbox.com/terms">Terms of Use</a></p>
   </footer>
   </>
 )
