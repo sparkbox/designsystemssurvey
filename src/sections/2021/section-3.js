@@ -91,7 +91,7 @@ const Section3 = () => (
           </ScoreCardLarge>
           <ScoreCardLarge border={false}>
             <Number bold={true}>2</Number>
-            <p class="cmp-type-h3">Engaging Contributors</p>
+            <p class="cmp-type-h3">Engaging<br />Contri&shy;butors</p>
           </ScoreCardLarge>
           <ScoreCardLarge border={false}>
             <Number bold={true}>3</Number>
