@@ -8,7 +8,7 @@ const ContactFormSent = (props) => {
       <hr className="util-hr-solid util-margin-vertical-lg" />
       <h2 class="cmp-type-section util-margin-all-none">Want to keep exploring right now?</h2>
       <p class="cmp-type-body-large util-margin-vertical-lg">Answer a few questions to find out where you fall within the Design System Maturity Model and get insights and ideas about how you can take your system to the next level.</p>
-      <a href="/" className="cmp-button cmp-button--inverse">Take Assessment</a>
+      <a href="/" className="cmp-button cmp-button--inverse">Take the Assessment</a>
     </div>
   )
 }
