@@ -8,6 +8,7 @@ const FixedSides = () => {
     <>
       <div className="cmp-fixed-left">
         <div>Design Systems Survey</div>
+        <div class="js-section-display" />
         <a className="cmp-fixed-logo" href="https://sparkbox.com">
           <Logo />
         </a>
