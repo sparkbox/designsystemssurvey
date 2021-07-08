@@ -524,8 +524,11 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell startMD="6" alignMD="end" startLG="9" className="util-margin-bottom-1xl util-margin-bottom-none@md">
-      <p>Though many respondents thought their design system(s) created debt, this did not correlate to the perception of a less successful design system.</p>
-      <p><strong>How is it that respondents could report debt being a major challenge, but it doesn’t impact perceived success?</strong></p>
+      <SmallCallout>
+        <p>Though many respondents thought their design system(s) created debt, this did not correlate to the perception of a less successful design system.</p>
+      </SmallCallout>
+
+      <h3><strong>How is it that respondents could report debt being a major challenge, but it doesn’t impact perceived success?</strong></h3>
       <p>One possible explanation could lie in some open-ended answers in which 9 of 42 in-house respondents mentioned that debt seemed unavoidable in an initiative of this size and scope.</p>
     </GridCell>
 
