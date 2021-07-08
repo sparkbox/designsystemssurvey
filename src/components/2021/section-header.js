@@ -18,7 +18,8 @@ const SectionHeader = ({title, number, total}) => {
 
   return (
     <header className="cmp-section-header" data-number={number}>
-      <h2 className="cmp-section-header__title">{title}</h2>
+      <div aria-hidden="true" className="cmp-section-header__number">0{number}</div>
+      <h2 aria-label={`Section ${number}: ${title}`} className="cmp-section-header__title">{title}</h2>
       <div className="cmp-section-header__marker" aria-hidden="true">
         <svg width="104" height="24" viewBox="0 0 104 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           { markers }
@@ -34,12 +35,12 @@ SectionHeader.defaultProps = {
   number: 1,
   total: 6
 }
-  
+
 SectionHeader.propTypes = {
   title: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
 }
-  
-  
+
+
   export default SectionHeader
