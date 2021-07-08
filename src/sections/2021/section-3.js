@@ -116,7 +116,7 @@ const Section3 = () => (
       <ArtElement type="bars" />
     </GridCell>
 
-    <GridCell spanMD="6" className="util-margin-bottom-1xl">
+    <GridCell className="util-margin-bottom-1xl">
       <Figure count="3.4" direction="left">
       <ScoreRow>
         <ScoreCardLarge border={false}>
