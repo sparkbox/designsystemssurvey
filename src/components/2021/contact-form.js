@@ -40,7 +40,7 @@ const ContactForm = (props) => {
           <label className="cmp-type-body-large util-weight-bold" htmlFor="mce-EMAIL">Business Email Address</label>
           <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="email" name="EMAIL" id="mce-EMAIL" required />
   
-          <button className="cmp-form-field__button util-margin-top-md" type="submit" name="subscribe" id="mc-embedded-subscribe" formnovalidate="true">Submit</button>
+          <button className="cmp-form-field__button util-margin-top-md" type="submit" name="subscribe" id="mc-embedded-subscribe" formnovalidate="">Submit</button>
         </div>
      
       </form>
