@@ -82,7 +82,7 @@ const Section3 = () => (
 
     <GridCell startLG="7" spanLG="6" className="util-margin-bottom-1xl">
       <Figure count="3.3">
-        <h2 class="cmp-type-h3">Top priorities and challenges</h2>
+        <h3>Top priorities and challenges</h3>
         <p>Across both top priorities and challenges, three areas stood out, which we will explore more deeply in the next sections.</p>
         <ScoreRow>
           <ScoreCardLarge border={false}>
@@ -134,7 +134,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell className="util-margin-bottom-1xl">
-      <h2 class="cmp-type-h3">Adoption continues to be a focus for many teams</h2>
+      <h3>Adoption continues to be a focus for many teams</h3>
       <p>Adoption difficulties have been high on respondents’ lists of concerns since our <a href="/2018/">2018 Design Systems Survey</a> and remain there in 2021.</p>
     </GridCell>
 

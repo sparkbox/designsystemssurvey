@@ -45,7 +45,7 @@ const Section1 = () => (
 
     <GridCell start="2" span="3" rowSpanMD="2" startMD="6" spanMD="3" startLG="9" spanLG="4" className="util-margin-bottom-1xl util-margin-top-20vh@md">
       <Figure count="1.2" caption="Responses: In-house: 217; Agency: 159">
-        <h2 class="cmp-type-h3">What is your primary discipline?</h2>
+        <h3>What is your primary discipline?</h3>
 
         <h3><em>In-House</em></h3>
         <ScoreRow>

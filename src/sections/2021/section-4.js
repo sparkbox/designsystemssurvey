@@ -28,6 +28,7 @@ const Section4 = () => (
     <GridCell span="3" spanMD="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="4.1" caption="Responses: 159" className="util-margin-bottom-1xl">
         <StackedChart
+          headingLevel="h3"
           styleFormat="small"
           title="Tracking metrics is linked to success"
           keyMap={[

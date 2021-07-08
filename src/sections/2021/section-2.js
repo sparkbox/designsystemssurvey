@@ -24,6 +24,7 @@ const Section2 = () => (
       <GridCell span="3" spanMD="4" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-md@md">
         <Figure count="2.1" caption="Responses: 159" direction="left">
           <PieChart
+            headingLevel="h3"
             styleFormat="large"
             title="Almost 40% of systems were successful or very successful"
             dataPoints={[
@@ -49,6 +50,7 @@ const Section2 = () => (
       <GridCell start="2" span="3" startMD="3" spanMD="6" startLG="6" spanLG="7" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
         <Figure count="2.2" caption="Responses: 171">
           <PieChart
+            headingLevel="h3"
             title="Individual contributor(s) suggested starting a design system"
             dataPoints={[
               ['Individual contributor(s) suggested starting a design system', 57],
@@ -66,7 +68,7 @@ const Section2 = () => (
       <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@lg">
         <Figure count="2.3" direction="left" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
 
-          <h2 class="cmp-type-h3">Design systems have similar elements</h2>
+          <h3>Design systems have similar elements</h3>
           <p>"What does your design system <em>contain</em>?"</p>
 
           <ScoreRow>
@@ -171,6 +173,7 @@ const Section2 = () => (
       <GridCell rowSpanMD="2" startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@lg">
         <Figure count="2.4" caption="Responses: 374" direction="left">
           <BarChart
+            headingLevel="h3"
             styleFormat="large"
             title="Teams are lacking certain disciplines"
             keyMap={[
