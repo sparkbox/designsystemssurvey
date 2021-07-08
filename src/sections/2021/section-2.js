@@ -63,7 +63,7 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+      <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@lg">
         <Figure count="2.3" direction="left" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
 
           <h2 class="cmp-type-h3">Design systems have similar elements</h2>
@@ -156,7 +156,7 @@ const Section2 = () => (
         </Figure>
       </GridCell>
 
-      <GridCell span="2" startMD="8" spanMD="2" alignMD="center" startLG="9" className="util-margin-bottom-1xl">
+      <GridCell span="2" startMD="3" spanMD="2" alignMD="center" startLG="9" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
         <SmallCallout>
           <p>16 of the 19 elements were all contained in over 50% of the in-house respondents’ design systems.</p>
         </SmallCallout>
