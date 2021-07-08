@@ -25,7 +25,7 @@ const Section4 = () => (
       <ArtElement />
     </GridCell>
 
-    <GridCell span="3" spanMD="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+    <GridCell className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <Figure count="4.1" caption="Responses: 159" className="util-margin-bottom-1xl">
         <StackedChart
           headingLevel="h3"
