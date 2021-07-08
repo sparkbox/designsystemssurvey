@@ -12,7 +12,7 @@ const BarChart = (props) => {
   if (props.startStyle === 'alt') {
     fillStart = 6
   }
-  
+
   // Chart Key
   if (props.keyMap) {
     for (let i = 0; i < props.keyMap.length; i++) {
@@ -25,7 +25,7 @@ const BarChart = (props) => {
       );
     }
   }
-  
+
   // Single Bar
   let barIterator = (...value) => {
     let results = []
@@ -68,7 +68,7 @@ const BarChart = (props) => {
   return (
     <>
       <div className={`cmp-bar-chart cmp-bar-chart--${props.styleFormat}`}>
-        <Tag className="cmp-type-h3">{props.title}</Tag>
+        <Tag aria-hidden="true" className="cmp-type-h3">{props.title}</Tag>
         {props.children}
         <div aria-hidden="true" className="cmp-bar-chart__keys">
           {keysMap}

@@ -42,7 +42,7 @@ const StackedChart = (props) => {
       <>{results}</>
     )
   }
-  
+
   for (let i = 0; i < props.dataPoints.length; i++) {
     dataBars.push(
       <div className="cmp-stacked-chart__set">
@@ -59,7 +59,7 @@ const StackedChart = (props) => {
   return (
     <>
       <div className={`cmp-stacked-chart cmp-stacked-chart--${props.styleFormat}`}>
-        <Tag className="cmp-type-h3">{props.title}</Tag>
+        <Tag aria-hidden="true" className="cmp-type-h3">{props.title}</Tag>
         {props.children}
         <div aria-hidden="true" className="cmp-stacked-chart__keys">
           {keysMap}
