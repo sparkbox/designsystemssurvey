@@ -24,7 +24,7 @@ const PieChart = (props) => {
       <div className={`cmp-pie-chart__slice cmp-pie-chart__slice--object-${i + 1} util-fill-style-${i + 1}`} />
     );
   }
-  
+
   cssProperties['--total'] = 'calc(var(--object-1) + var(--object-2) + var(--object-3) + var(--object-4) + var(--object-5))'
   cssProperties['--turn-1'] = 'calc((var(--object-1) / var(--total)) * 360deg)'
   cssProperties['--turn-2'] = 'calc(((var(--object-2) / var(--total)) * 360deg) + var(--turn-1))'
@@ -35,7 +35,7 @@ const PieChart = (props) => {
   return (
     <div className={`cmp-pie-chart cmp-pie-chart--${props.styleFormat}`}>
       <div className="cmp-pie-chart__keys-container">
-        <Tag className="cmp-type-h3 cmp-pie-chart__title">{props.title}</Tag>
+        <Tag aria-hidden="true" className="cmp-type-h3 cmp-pie-chart__title">{props.title}</Tag>
         {props.children}
         <table className="cmp-pie-chart__keys">
           <caption className="util-visually-hidden">{props.title}</caption>
