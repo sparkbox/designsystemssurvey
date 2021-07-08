@@ -4,7 +4,7 @@
   position: relative;
   margin-bottom: 3rem;
 
-  &::before {
+  &__number {
     position: absolute;
     z-index: -1;
     content: "0" attr(data-number);
