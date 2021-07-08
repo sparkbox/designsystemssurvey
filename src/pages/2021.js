@@ -19,9 +19,11 @@ import Section6 from '../sections/2021/section-6'
 import Footer from '../components/2021/footer'
 
 import sendFormData from '../js/2021/form-submit'
+import sectionObserver from '../js/2021/section-observer'
 
 class Page2021 extends Component {
   componentDidMount() {
+    sectionObserver()
     sendFormData()
   }
 
@@ -51,48 +53,52 @@ class Page2021 extends Component {
           <a className="cmp-skip-link" href="#table-of-contents">Skip to Menu</a>
           <a className="cmp-skip-link" href="#section-1">Skip to Content</a>
 
-          <SiteIntro>
-            <Grid>
-              <GridCell spanMD="5" spanLG="6">
-                <h2 className="cmp-type-h3">
-                  Welcome to the fourth edition of Sparkbox’s Design Systems Survey
-                </h2>
-                <p className="cmp-type-body-large">
-                  This year, we delve into design system priorities and challenges, including adoption, contribution, and debt. And we explore the evolution of design systems, including the experiences of organizations developing new (or additional) design systems.
-                </p>
+          <div className="js-section" data-name="Introduction">
+            <SiteIntro>
+              <Grid>
+                <GridCell spanMD="5" spanLG="6">
+                  <h2 className="cmp-type-h3">
+                    Welcome to the fourth edition of Sparkbox’s Design Systems Survey
+                  </h2>
+                  <p className="cmp-type-body-large">
+                    This year, we delve into design system priorities and challenges, including adoption, contribution, and debt. And we explore the evolution of design systems, including the experiences of organizations developing new (or additional) design systems.
+                  </p>
+                </GridCell>
+              </Grid>
+            </SiteIntro>
+          </div>
+
+          <div className="js-section" data-name="Table of Contents">
+            <Grid style={{margin: "10vh 0"}} className="util-margin-top-md util-margin-bottom-10vh">
+              <GridCell start="3" span="2" startMD="7" startLG="9" spanLG="3">
+                <p className="cmp-type-body-large"><a href="https://sparkbox.com">Sparkbox</a>, a web design and development studio, directed this survey. This year’s survey was shared for four weeks across social media platforms, in Slack channels, with visitors on <a href="https://sparkbox.com/foundry">The Foundry</a>, and in emails to web professionals.</p>
               </GridCell>
             </Grid>
-          </SiteIntro>
 
-          <Grid style={{margin: "10vh 0"}} className="util-margin-top-md util-margin-bottom-10vh">
-            <GridCell start="3" span="2" startMD="7" startLG="9" spanLG="3">
-              <p className="cmp-type-body-large"><a href="https://sparkbox.com">Sparkbox</a>, a web design and development studio, directed this survey. This year’s survey was shared for four weeks across social media platforms, in Slack channels, with visitors on <a href="https://sparkbox.com/foundry">The Foundry</a>, and in emails to web professionals.</p>
-            </GridCell>
-          </Grid>
+            <TableOfContents />
+          </div>
 
-          <TableOfContents />
-
-          <section className="obj-section" id="section-1">
+          <section className="obj-section js-section" id="section-1" data-name="<em>01</em> The Respondents">
             <Section1 />
           </section>
 
-          <section className="obj-section" id="section-2">
+          <section className="obj-section js-section" id="section-2" data-name="<em>02</em> Characteristics &amp; Team">
             <Section2 />
           </section>
 
-          <section className="obj-section" id="section-3">
+          <section className="obj-section js-section" id="section-3" data-name="<em>03</em> Priorities &amp; Challenges">
             <Section3 />
           </section>
 
-          <section className="obj-section" id="section-4">
+          <section className="obj-section js-section" id="section-4" data-name="<em>04</em> Metrics">
             <Section4 />
           </section>
 
-          <section className="obj-section" id="section-5">
+          <section className="obj-section js-section" id="section-5" data-name="<em>05</em> Evolution">
             <Section5 />
           </section>
 
-          <section className="obj-section" id="section-6">
+          <section className="obj-section js-section" id="section-6" data-name="<em>06</em> Conclusion">
             <Section6 />
           </section>
 
