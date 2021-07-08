@@ -493,14 +493,14 @@ const Section3 = () => (
       </Quote>
     </GridCell>
 
-    <GridCell spanMD="6" startLG="9" spanLG="3" alignLG="end" className="util-margin-bottom-2xl util-margin-top-1xl@lg util-margin-bottom-3xl@md">
+    <GridCell spanMD="6" startLG="9" spanLG="4" alignLG="end" className="util-margin-bottom-2xl util-margin-top-1xl@lg util-margin-bottom-3xl@md">
       <Quote styleFormat="small"
       cite="Manager, slightly successful design system">
         <p>... we created the design system based on an existing product, there has been debt because it wasn't built from components to start with. However, all features within the product that have been updated over the years are now debt-free (both design and tech). So it's a tricky one to answer. We have a web product which was built from scratch off DS components and that has no debt. I think <em><strong>debt is created/related to when the DS was implemented along the lifecycle of the product/s it's supporting.</strong></em></p>
       </Quote>
     </GridCell>
 
-    <GridCell startLG="3" spanLG="5" className="util-margin-bottom-md util-margin-bottom-3xl@md">
+    <GridCell spanMD="5" startLG="3" spanLG="6" className="util-margin-bottom-md util-margin-bottom-3xl@md">
       <Figure count="3.15" caption="Responses: 135">
         <StackedChart
           headingLevel="h3"
@@ -523,23 +523,25 @@ const Section3 = () => (
       </Figure>
     </GridCell>
 
-    <GridCell startMD="6" alignMD="end" startLG="9" className="util-margin-bottom-1xl util-margin-bottom-none@md">
+    <GridCell startMD="7" alignMD="end" startLG="10" spanLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
       <SmallCallout>
         <p>Though many respondents thought their design system(s) created debt, this did not correlate to the perception of a less successful design system.</p>
       </SmallCallout>
+    </GridCell>
 
-      <h3><strong>How is it that respondents could report debt being a major challenge, but it doesn’t impact perceived success?</strong></h3>
+    <GridCell spanLG="5">
+      <h3>How is it that respondents could report debt being a major challenge, but it doesn’t impact perceived success?</h3>
       <p>One possible explanation could lie in some open-ended answers in which 9 of 42 in-house respondents mentioned that debt seemed unavoidable in an initiative of this size and scope.</p>
     </GridCell>
 
-    <GridCell className="util-margin-bottom-md">
+    <GridCell start="2" startMD="7" startLG="7" className="util-margin-top-1xl@md util-margin-bottom-md">
       <Quote styleFormat="small"
       cite="Individual contributor, successful design system">
         <p>Everything causes tech/design debt. <em>It's unavoidable</em>…Honestly, I feel this is just the curse of software development.</p>
       </Quote>
     </GridCell>
 
-    <GridCell startMD="3" spanMD="6" spanLG="4" className="util-margin-bottom-1xl">
+    <GridCell start="2" startMD="6" startLG="8" spanMD="5" className="util-margin-bottom-1xl">
       <Quote styleFormat="small"
       cite="Manager, moderately successful design system">
         <p>How would it not? Any legacy product would need a facelift. Any new product must adhere to guidelines. Yes, there are ways to streamline this, and in some cases the product development process speeds up... <em>A design system will always produce some technical debt</em>.</p>
