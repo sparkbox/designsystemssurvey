@@ -34,13 +34,13 @@ const ContactForm = (props) => {
         <div className="cmp-form-field">
           <div className="js-name-message cmp-form__message" aria-live="polite" />
           <label className="cmp-type-body-large util-weight-bold" htmlFor="mce-NAME">Name</label>
-          <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="text" name="NAME" id="mce-NAME" required />
+          <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="text" name="NAME" id="mce-NAME" required placeholder="e.g. Some Person" />
   
           <div className="js-email-message cmp-form__message" aria-live="polite" />
           <label className="cmp-type-body-large util-weight-bold" htmlFor="mce-EMAIL">Business Email Address</label>
-          <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="email" name="EMAIL" id="mce-EMAIL" required />
+          <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="email" name="EMAIL" id="mce-EMAIL" required placeholder="e.g. you@example.com" />
   
-          <button className="cmp-form-field__button util-margin-top-md" type="submit" name="subscribe" id="mc-embedded-subscribe" formNoValidate="">Submit</button>
+          <button className="cmp-form-field__button util-margin-top-md" type="submit" name="subscribe" id="mc-embedded-subscribe" formNoValidate={true}>Submit</button>
         </div>
      
       </form>
