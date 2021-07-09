@@ -108,7 +108,7 @@ const Section3 = () => (
 
 
 
-    <GridCell spanMD="6" className="util-margin-bottom-1xl">
+    <GridCell spanMD="6" className="util-margin-bottom-xl">
       <h2>1 - Encouraging Adoption</h2>
     </GridCell>
 
