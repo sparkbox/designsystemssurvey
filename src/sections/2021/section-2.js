@@ -14,15 +14,15 @@ import ArtElement from "../../components/2021/art-element"
 const Section2 = () => (
     <Grid className="util-margin-bottom-20vh">
       <GridCell spanMD="8" spanLG="12">
-        <SectionHeader title="Characteristics &amp; Teams" number="2" total="6" />
+        <SectionHeader title="Characteristics &amp; Teams" number={2} total={6} />
       </GridCell>
 
       <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-        <p class="cmp-type-body-large">The elements in your design system and the team creating them are foundational to building a quality product. Let’s learn more about the commonalities across our <strong>in-house</strong> respondents’ design systems.</p>
+        <p className="cmp-type-body-large">The elements in your design system and the team creating them are foundational to building a quality product. Let’s learn more about the commonalities across our <strong>in-house</strong> respondents’ design systems.</p>
       </GridCell>
 
       <GridCell span="3" spanMD="4" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-md@md">
-        <Figure count="2.1" caption="Responses: 159" direction="left">
+        <Figure count={2.1} caption="Responses: 159" direction="left">
           <PieChart
             headingLevel="h3"
             styleFormat="large"
@@ -48,7 +48,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell start="2" span="3" startMD="3" spanMD="6" startLG="6" spanLG="7" className="util-margin-bottom-1xl util-margin-bottom-2xl@md">
-        <Figure count="2.2" caption="Responses: 171">
+        <Figure count={2.2} caption="Responses: 171">
           <PieChart
             headingLevel="h3"
             title="Individual contributor(s) suggested starting a design system"
@@ -66,7 +66,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@lg">
-        <Figure count="2.3" direction="left" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
+        <Figure count={2.3} direction="left" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
 
           <h3>Design systems have similar elements</h3>
           <p>"What does your design system <em>contain</em>?"</p>
@@ -88,71 +88,71 @@ const Section2 = () => (
           <ScoreRow>
             <ScoreCard>
               <Number>74%</Number>
-              <p class="cmp-type-sans-micro">Navi&shy;gation compon&shy;ents</p>
+              <p className="cmp-type-sans-micro">Navi&shy;gation compon&shy;ents</p>
             </ScoreCard>
             <ScoreCard>
               <Number>74%</Number>
-              <p class="cmp-type-sans-micro">Usage guide&shy;lines</p>
+              <p className="cmp-type-sans-micro">Usage guide&shy;lines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>73%</Number>
-              <p class="cmp-type-sans-micro">Spacing system</p>
+              <p className="cmp-type-sans-micro">Spacing system</p>
             </ScoreCard>
             <ScoreCard>
               <Number>71%</Number>
-              <p class="cmp-type-sans-micro">Design files</p>
+              <p className="cmp-type-sans-micro">Design files</p>
             </ScoreCard>
             <ScoreCard>
               <Number>70%</Number>
-              <p class="cmp-type-sans-micro">CSS code</p>
+              <p className="cmp-type-sans-micro">CSS code</p>
             </ScoreCard>
             <ScoreCard>
               <Number>69%</Number>
-              <p class="cmp-type-sans-micro">Frame&shy;work-specific components</p>
+              <p className="cmp-type-sans-micro">Frame&shy;work-specific components</p>
             </ScoreCard>
             <ScoreCard>
               <Number>65%</Number>
-              <p class="cmp-type-sans-micro">Accessi&shy;bility guidelines</p>
+              <p className="cmp-type-sans-micro">Accessi&shy;bility guidelines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>64%</Number>
-              <p class="cmp-type-sans-micro">Grid system</p>
+              <p className="cmp-type-sans-micro">Grid system</p>
             </ScoreCard>
             <ScoreCard>
               <Number>64%</Number>
-              <p class="cmp-type-sans-micro">Layout system</p>
+              <p className="cmp-type-sans-micro">Layout system</p>
             </ScoreCard>
             <ScoreCard>
               <Number>61%</Number>
-              <p class="cmp-type-sans-micro">HTML code</p>
+              <p className="cmp-type-sans-micro">HTML code</p>
             </ScoreCard>
             <ScoreCard>
               <Number>60%</Number>
-              <p class="cmp-type-sans-micro">Brand guide&shy;lines</p>
+              <p className="cmp-type-sans-micro">Brand guide&shy;lines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>57%</Number>
-              <p class="cmp-type-sans-micro">Java&shy;Script code</p>
+              <p className="cmp-type-sans-micro">Java&shy;Script code</p>
             </ScoreCard>
             <ScoreCard>
               <Number>50%</Number>
-              <p class="cmp-type-sans-micro">Example page temp&shy;lates</p>
+              <p className="cmp-type-sans-micro">Example page temp&shy;lates</p>
             </ScoreCard>
             <ScoreCard>
               <Number>46%</Number>
-              <p class="cmp-type-sans-micro">Content blocks</p>
+              <p className="cmp-type-sans-micro">Content blocks</p>
             </ScoreCard>
             <ScoreCard>
               <Number>36%</Number>
-              <p class="cmp-type-sans-micro">Voice & tone guide&shy;lines</p>
+              <p className="cmp-type-sans-micro">Voice & tone guide&shy;lines</p>
             </ScoreCard>
             <ScoreCard>
               <Number>21%</Number>
-              <p class="cmp-type-sans-micro">Anima&shy;tion system</p>
+              <p className="cmp-type-sans-micro">Anima&shy;tion system</p>
             </ScoreCard>
             <ScoreCard>
               <Number>6%</Number>
-              <p class="cmp-type-sans-micro">Other</p>
+              <p className="cmp-type-sans-micro">Other</p>
             </ScoreCard>
           </ScoreRow>
         </Figure>
@@ -171,7 +171,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell rowSpanMD="2" startMD="4" spanMD="6" startLG="7" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-2xl@lg">
-        <Figure count="2.4" caption="Responses: 374" direction="left">
+        <Figure count={2.4} caption="Responses: 374" direction="left">
           <BarChart
             headingLevel="h3"
             styleFormat="large"
@@ -193,8 +193,8 @@ const Section2 = () => (
             ]}>
           </BarChart>
         </Figure>
-        <p class="cmp-figure__caption cmp-figure__caption--left">&ldquo;Which disciplines do you currently have on your design system team?&rdquo; Responses: 135 | Respondents were asked to select all that apply.</p>
-        <p class="cmp-figure__caption cmp-figure__caption--left">&ldquo;Which disciplines are you currently missing on your design system team that would be useful right now?&rdquo; Responses: 115 | Respondents were asked to select all that apply.</p>
+        <p className="cmp-figure__caption cmp-figure__caption--left">&ldquo;Which disciplines do you currently have on your design system team?&rdquo; Responses: 135 | Respondents were asked to select all that apply.</p>
+        <p className="cmp-figure__caption cmp-figure__caption--left">&ldquo;Which disciplines are you currently missing on your design system team that would be useful right now?&rdquo; Responses: 115 | Respondents were asked to select all that apply.</p>
       </GridCell>
 
       <GridCell startMD="1" span="1">
@@ -202,7 +202,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell spanMD="6">
-        <Figure count="2.5" caption="Responses: 136">
+        <Figure count={2.5} caption="Responses: 136">
           <h3>Most respondent organizations have centralized teams</h3>
           <p>&ldquo;How is your design system <em>team structured</em>?&rdquo;</p>
           <ScoreRow>

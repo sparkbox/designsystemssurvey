@@ -43,12 +43,12 @@ class Page2021 extends Component {
             </GridCell>
 
             <GridCell spanMD="8" spanLG="12">
-              <h2 class="cmp-type-section">Pie Charts</h2>
+              <h2 className="cmp-type-section">Pie Charts</h2>
               <hr />
             </GridCell>
 
             <GridCell start="1" spanMD="6">
-              <Figure count="1.1" caption="217 Responses">
+              <Figure count={1.1} caption="217 Responses">
                 <PieChart
                   styleFormat="large"
                   title={<>Almost <em>40%</em> of systems were successful or very successful</>}
@@ -66,7 +66,7 @@ class Page2021 extends Component {
             </GridCell>
 
             <GridCell start="1" startLG="9">
-              <Figure count="1.1" caption="217 Responses">
+              <Figure count={1.1} caption="217 Responses">
                 <PieChart
                   headingLevel="h3"
                   styleFormat="small"
@@ -83,12 +83,12 @@ class Page2021 extends Component {
 
           <Grid>
             <GridCell spanMD="8" spanLG="12">
-              <h2 class="cmp-type-section">Stacked Bar Charts</h2>
+              <h2 className="cmp-type-section">Stacked Bar Charts</h2>
               <hr />
             </GridCell>
 
             <GridCell start="1" spanMD="6">
-              <Figure count="1.2" caption="159 Responses">
+              <Figure count={1.2} caption="159 Responses">
                 <StackedChart
                   styleFormat="large"
                   title="How much of your website(s) or application(s) is sourced from your design system?"
@@ -112,7 +112,7 @@ class Page2021 extends Component {
             </GridCell>
 
             <GridCell start="1" startLG="9">
-              <Figure count="1.2" caption="159 Responses">
+              <Figure count={1.2} caption="159 Responses">
                 <StackedChart
                   headingLevel="h3"
                   styleFormat="small"
@@ -139,12 +139,12 @@ class Page2021 extends Component {
 
           <Grid>
             <GridCell spanMD="8" spanLG="12">
-              <h2 class="cmp-type-section">Bar Charts</h2>
+              <h2 className="cmp-type-section">Bar Charts</h2>
               <hr />
             </GridCell>
 
             <GridCell start="1" spanLG="6">
-              <Figure count="1.4" caption="374 Responses">
+              <Figure count={1.4} caption="374 Responses">
                 <BarChart
                   styleFormat="large"
                   title="Organization Size"
@@ -160,7 +160,7 @@ class Page2021 extends Component {
             </GridCell>
 
             <GridCell start="1" startMD="5" startLG="9">
-              <Figure count="1.4" caption="374 Responses">
+              <Figure count={1.4} caption="374 Responses">
                 <BarChart
                   headingLevel="h3"
                   startStyle="alt"
@@ -180,7 +180,7 @@ class Page2021 extends Component {
 
           <Grid>
             <GridCell spanMD="8" spanLG="12">
-              <h2 class="cmp-type-section">Observation/Paragraph</h2>
+              <h2 className="cmp-type-section">Observation/Paragraph</h2>
               <hr />
             </GridCell>
 
@@ -214,7 +214,7 @@ class Page2021 extends Component {
 
           <Grid>
             <GridCell spanMD="8" spanLG="12">
-              <h2 class="cmp-type-section">Quote</h2>
+              <h2 className="cmp-type-section">Quote</h2>
               <hr />
             </GridCell>
 
@@ -237,7 +237,7 @@ class Page2021 extends Component {
 
           <Grid>
             <GridCell spanMD="8" spanLG="12">
-              <h2 class="cmp-type-section">Other Elements</h2>
+              <h2 className="cmp-type-section">Other Elements</h2>
               <hr />
             </GridCell>
 

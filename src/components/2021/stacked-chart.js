@@ -12,7 +12,7 @@ const StackedChart = (props) => {
   for (let i = 0; i < props.keyMap.length; i++) {
     keyStyle = i + 1
     keysMap.push(
-      <div className="cmp-stacked-chart__key">
+      <div className="cmp-stacked-chart__key" key={i}>
         <span className={`cmp-stacked-chart__key-marker util-fill-style-${keyStyle}`} />
         <span className="cmp-stacked-chart__key-name"  dangerouslySetInnerHTML={{__html:props.keyMap[i]}} />
       </div>
@@ -31,7 +31,7 @@ const StackedChart = (props) => {
         let inside = (value[i] > 7) ? " cmp-stacked-chart__value--inside" : "";
 
         results.push (
-          <div class="cmp-stacked-chart__item" style={cssProperties}>
+          <div className="cmp-stacked-chart__item" style={cssProperties} key={i}>
             <div className={`util-fill-style-${keyStyle} cmp-stacked-chart__bar`}/>
             <div className={`cmp-stacked-chart__value${inside}`}>{value[i]}%</div>
           </div>
@@ -45,7 +45,7 @@ const StackedChart = (props) => {
 
   for (let i = 0; i < props.dataPoints.length; i++) {
     dataBars.push(
-      <div className="cmp-stacked-chart__set">
+      <div className="cmp-stacked-chart__set" key={i}>
         <div className="cmp-stacked-chart__set-name">
           {props.dataPoints[i][0]}
         </div>
@@ -80,7 +80,7 @@ StackedChart.defaultProps = {
 }
 
 StackedChart.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
   dataPoints: PropTypes.array.isRequired,
   keyMap: PropTypes.array.isRequired
 }

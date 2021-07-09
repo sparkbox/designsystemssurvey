@@ -5,7 +5,7 @@ import ContactFormError from './contact-form-error'
 const ContactForm = (props) => {  
   return (
     <div className="cmp-form">
-      <div class="js-form-aria util-visually-hidden" aria-live="polite" />
+      <div className="js-form-aria util-visually-hidden" aria-live="polite" />
       <ContactFormSent />
       <ContactFormError />
       {/* The form attribute will need updated to work as *
@@ -40,7 +40,7 @@ const ContactForm = (props) => {
           <label className="cmp-type-body-large util-weight-bold" htmlFor="mce-EMAIL">Business Email Address</label>
           <input className="cmp-form-field__input util-margin-top-sm util-margin-bottom-md" type="email" name="EMAIL" id="mce-EMAIL" required />
   
-          <button className="cmp-form-field__button util-margin-top-md" type="submit" name="subscribe" id="mc-embedded-subscribe" formnovalidate="">Submit</button>
+          <button className="cmp-form-field__button util-margin-top-md" type="submit" name="subscribe" id="mc-embedded-subscribe" formNoValidate="">Submit</button>
         </div>
      
       </form>

@@ -22,10 +22,10 @@ const ArtElement = (props) => {
   }
   return (
     <svg className={`cmp-art-element ${props.isHero ? "cmp-art-element--hero" : ""}`} width="285" height="237" viewBox="0 0 285 237" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path style={{stroke: 'var(--color-rust)'}} vector-effect="non-scaling-stroke" d="M1.21728 236.5L181.159 58.6754V236.5H1.21728Z" />
-      <path style={{stroke: 'var(--color-rust)'}} vector-effect="non-scaling-stroke" d="M181.002 219.903H215.854V38.2439L181.002 73.096" />
-      <path style={{stroke: 'var(--color-rust)'}} vector-effect="non-scaling-stroke" d="M215.413 202.805H249.805V21.1462L215.809 55.4675" />
-      <path style={{stroke: 'var(--color-rust)'}} vector-effect="non-scaling-stroke" d="M249.907 183.571H284V1.91193L249.926 36.0288" />
+      <path style={{stroke: 'var(--color-rust)'}} vectorEffect="non-scaling-stroke" d="M1.21728 236.5L181.159 58.6754V236.5H1.21728Z" />
+      <path style={{stroke: 'var(--color-rust)'}} vectorEffect="non-scaling-stroke" d="M181.002 219.903H215.854V38.2439L181.002 73.096" />
+      <path style={{stroke: 'var(--color-rust)'}} vectorEffect="non-scaling-stroke" d="M215.413 202.805H249.805V21.1462L215.809 55.4675" />
+      <path style={{stroke: 'var(--color-rust)'}} vectorEffect="non-scaling-stroke" d="M249.907 183.571H284V1.91193L249.926 36.0288" />
     </svg>
   )
 }

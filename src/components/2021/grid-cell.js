@@ -46,7 +46,7 @@ GridCell.defaultProps = {
 }
 
 GridCell.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default GridCell

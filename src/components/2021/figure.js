@@ -19,9 +19,9 @@ const Figure = (props) => {
 }
 
 Figure.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   count: PropTypes.number.isRequired,
-  caption: PropTypes.string
+  caption: PropTypes.node
 }
 
 Figure.defaultProps = {

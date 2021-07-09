@@ -18,7 +18,7 @@ const BarChart = (props) => {
     for (let i = 0; i < props.keyMap.length; i++) {
       keyStyle = (i === 0) ? fillStart : (i + 1)
       keysMap.push(
-        <div className="cmp-bar-chart__key">
+        <div className="cmp-bar-chart__key" key={i}>
           <span className={`cmp-bar-chart__key-marker util-fill-style-${keyStyle}`} />
           <span className="cmp-bar-chart__key-name"  dangerouslySetInnerHTML={{__html:props.keyMap[i]}} />
         </div>
@@ -41,12 +41,12 @@ const BarChart = (props) => {
 
       if (result) {
         results.push (
-          <>
-          {valueAbove}
-          <div className={`util-fill-style-${keyStyle} cmp-bar-chart__item`} style={cssProperties}>
-            <div className={`cmp-bar-chart__value ${hideValue}`}>{result}%</div>
+          <div key={i}>
+            {valueAbove}
+            <div className={`util-fill-style-${keyStyle} cmp-bar-chart__item`} style={cssProperties}>
+              <div className={`cmp-bar-chart__value ${hideValue}`}>{result}%</div>
+            </div>
           </div>
-          </>
         );
       }
     }
@@ -56,7 +56,7 @@ const BarChart = (props) => {
   }
   for (let i = 0; i < props.dataPoints.length; i++) {
     dataBars.push(
-      <div className="cmp-bar-chart__set">
+      <div className="cmp-bar-chart__set" key={i}>
         <div className="cmp-bar-chart__set-name">
           {props.dataPoints[i][0]}
         </div>
@@ -89,7 +89,7 @@ BarChart.defaultProps = {
 }
 
 BarChart.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
   dataPoints: PropTypes.array.isRequired,
   keyMap: PropTypes.array
 }

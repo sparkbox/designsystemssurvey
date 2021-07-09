@@ -7,7 +7,7 @@ import ArtElement from "../../components/2021/art-element"
 const Section6 = () => (
   <Grid className="util-margin-bottom-20vh">
     <GridCell spanMD="8" spanLG="12">
-      <SectionHeader title="Conclusion" number="6" total="6" />
+      <SectionHeader title="Conclusion" number={6} total={6} />
     </GridCell>
 
 

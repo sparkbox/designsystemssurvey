@@ -12,7 +12,7 @@ const PieChart = (props) => {
     cssProperties[`--object-${i + 1}`] = props.dataPoints[i][1];
 
     key.push(
-      <tr className="cmp-pie-chart__key">
+      <tr className="cmp-pie-chart__key" key={i}>
         <th className="cmp-pie-chart__key-name">
           <span className={`cmp-pie-chart__key-marker util-fill-style-${i + 1}`} />
           {props.dataPoints[i][0]}
@@ -21,7 +21,7 @@ const PieChart = (props) => {
       </tr>
     );
     slices.push(
-      <div className={`cmp-pie-chart__slice cmp-pie-chart__slice--object-${i + 1} util-fill-style-${i + 1}`} />
+      <div className={`cmp-pie-chart__slice cmp-pie-chart__slice--object-${i + 1} util-fill-style-${i + 1}`} key={i} />
     );
   }
 
@@ -39,7 +39,9 @@ const PieChart = (props) => {
         {props.children}
         <table className="cmp-pie-chart__keys">
           <caption className="util-visually-hidden">{props.title}</caption>
-          {key}
+          <tbody>
+            {key}
+          </tbody>
         </table>
       </div>
       <div className="cmp-pie-chart__diagram-container">
@@ -57,7 +59,7 @@ PieChart.defaultProps = {
 }
 
 PieChart.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
   dataPoints: PropTypes.array.isRequired
 }
 

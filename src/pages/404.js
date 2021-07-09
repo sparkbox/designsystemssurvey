@@ -13,9 +13,9 @@ class NotFoundPage extends Component {
         />
 
         <div className="obj-lines util-height-full">
-          <div class="cmp-error">
+          <div className="cmp-error">
             <h1 className="util-visually-hidden">404 Error. Page not found.</h1>
-            <h2 class="cmp-error__title">Page Not Found</h2>
+            <h2 className="cmp-error__title">Page Not Found</h2>
        
             <div className="util-pad-horizontal-lg util-pad-vertical-lg util-pad-vertical-h2@md util-pad-vertical-h3@lg">
               <h2 className="cmp-type-h3">We can't seem to find the page you're looking&nbsp;for.</h2>

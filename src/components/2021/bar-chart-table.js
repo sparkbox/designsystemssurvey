@@ -10,7 +10,7 @@ const BarChartTable = (props) => {
       let result = value[0][i]
       if (result) {
         results.push (
-          <td>
+          <td  key={i}>
             {result}%
           </td>
         );
@@ -25,7 +25,7 @@ const BarChartTable = (props) => {
   // Defines the contents of `<tbody>`
   for (let i = 0; i < props.dataPoints.length; i++) {
     tableRows.push(
-      <tr>
+      <tr key={i}>
         <th>
           <span dangerouslySetInnerHTML={{__html:props.dataPoints[i][0]}} />
         </th>
@@ -41,7 +41,7 @@ const BarChartTable = (props) => {
     if (props.keyMap) {
       for (let i = 0; i < props.keyMap.length; i++) {
         results.push(
-          <th>
+          <th key={i}>
             <span dangerouslySetInnerHTML={{__html:props.keyMap[i]}} />
           </th>
         );

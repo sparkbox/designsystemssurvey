@@ -14,7 +14,7 @@ import ArtElement from "../../components/2021/art-element"
 const Section4 = () => (
   <Grid className="util-margin-bottom-20vh">
     <GridCell spanMD="8" spanLG="12">
-      <SectionHeader title="Metrics" number="4" total="6" />
+      <SectionHeader title="Metrics" number={4} total={6} />
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
@@ -26,7 +26,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="4.1" caption="Responses: 159" className="util-margin-bottom-1xl">
+      <Figure count={4.1} caption="Responses: 159" className="util-margin-bottom-1xl">
         <StackedChart
           headingLevel="h3"
           styleFormat="small"
@@ -53,7 +53,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell startMD="6" startLG="7" spanLG="5" align="end" className="util-margin-bottom-1xl util-margin-top-3xl@md util-margin-bottom-3xl@md">
-      <Figure count="4.2" caption="Responses: 160" className="util-margin-bottom-1xl" direction="left">
+      <Figure count={4.2} caption="Responses: 160" className="util-margin-bottom-1xl" direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="small"
@@ -73,7 +73,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="4.3" caption="Responses: 50">
+      <Figure count={4.3} caption="Responses: 50">
         <h3>Design system teams track similar metrics</h3>
         <p>“<em>Which metrics</em> are you tracking?”</p>
         <ScoreRow>
@@ -116,7 +116,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell startMD="2" spanMD="5" startLG="3" spanLG="6" className="util-margin-bottom-1xl">
-      <Figure count="4.4" caption="Responses: 38 | Respondents were asked to select all that&nbsp;apply." direction="left">
+      <Figure count={4.4} caption="Responses: 38 | Respondents were asked to select all that&nbsp;apply." direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="small"

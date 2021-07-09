@@ -25,7 +25,7 @@ Grid.defaultProps = {
 }
 
 Grid.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default Grid
