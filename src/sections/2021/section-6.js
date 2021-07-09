@@ -24,8 +24,8 @@ const Section6 = () => (
     </GridCell>
 
     <GridCell start="2" span="4" startMD="3" startLG="3" spanLG="6">
-      <p className="cmp-type-body-large">What else sets the most successful systems apart from those who have trouble gaining cross-functional buy-in and support?</p>
-      <p className="cmp-type-body-large">We’ll be exploring these questions and more as we continue interviewing design system team members throughout the year and digging even deeper into survey data.</p>
+      <p className="cmp-type-body-large">If you're having trouble gaining cross-functional buy-in and support, your design system’s success might be in jeopardy.</p>
+      <p className="cmp-type-body-large">We’ll be exploring this design system issue and more as we continue interviewing design system team members throughout the year and digging even deeper into this survey’s data.</p>
     </GridCell>
   </Grid>
 )
