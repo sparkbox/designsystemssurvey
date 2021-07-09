@@ -14,7 +14,7 @@ const SiteIntro = (props) => {
           <div className="cmp-intro__text">Design</div>
           <div className="cmp-intro__text">Systems</div>
           <div className="cmp-intro__text">Survey</div>
-          <ArtElement isHero="true" />
+          <ArtElement isHero={true} />
         </div>
       </div>
       {props.children}

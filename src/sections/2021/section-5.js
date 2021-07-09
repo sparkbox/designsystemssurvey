@@ -13,7 +13,7 @@ import ArtElement from "../../components/2021/art-element"
 const Section5 = () => (
   <Grid className="util-margin-bottom-20vh">
     <GridCell spanMD="8" spanLG="12">
-      <SectionHeader title="Evolution" number="5" total="6" />
+      <SectionHeader title="Evolution" number={5} total={6} />
     </GridCell>
 
     <GridCell startMD="7" rowSpanMD="3" startLG="10" className="util-display-none util-display-block@md util-margin-bottom-3xl">
@@ -25,7 +25,7 @@ const Section5 = () => (
     </GridCell>
 
     <GridCell alignMD="end" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="5.1" caption="Responses: 136" direction="left">
+      <Figure count={5.1} caption="Responses: 136" direction="left">
         <BarChart
           sizeFormat="small"
           headingLevel="h3"
@@ -89,7 +89,7 @@ const Section5 = () => (
     </GridCell>
 
     <GridCell span="3" startMD="2" spanMD="4" startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="5.2" caption="Responses: 136" direction="left">
+      <Figure count={5.2} caption="Responses: 136" direction="left">
         <BarChart
           sizeFormat="small"
           headingLevel="h3"

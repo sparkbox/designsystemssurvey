@@ -48,8 +48,8 @@ class Page2021 extends Component {
 
           <FixedSides />
 
-          <a class="cmp-skip-link" href="#table-of-contents">Skip to Menu</a>
-          <a class="cmp-skip-link" href="#section-1">Skip to Content</a>
+          <a className="cmp-skip-link" href="#table-of-contents">Skip to Menu</a>
+          <a className="cmp-skip-link" href="#section-1">Skip to Content</a>
 
           <SiteIntro>
             <Grid>

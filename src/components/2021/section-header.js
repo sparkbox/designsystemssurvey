@@ -12,7 +12,7 @@ const SectionHeader = ({title, number, total}) => {
     pos2 = (i * 16) + 23;
 
     markers.push(
-      <path d={`M${pos1} 23 L${pos2} 1 V23 H${pos1} Z`} className={`cmp-section-header__mark cmp-section-header__mark--${i+1}-${number}`} />
+      <path d={`M${pos1} 23 L${pos2} 1 V23 H${pos1} Z`} className={`cmp-section-header__mark cmp-section-header__mark--${i+1}-${number}`} key={i} />
     );
   }
 
@@ -24,7 +24,7 @@ const SectionHeader = ({title, number, total}) => {
         <svg width="104" height="24" viewBox="0 0 104 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           { markers }
         </svg>
-        <div class="cmp-section-header__progress">{progress}</div>
+        <div className="cmp-section-header__progress">{progress}</div>
       </div>
     </header>
   )

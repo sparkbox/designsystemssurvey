@@ -17,7 +17,7 @@ import ArtElement from "../../components/2021/art-element"
 const Section3 = () => (
   <Grid className="util-margin-bottom-20vh">
     <GridCell spanMD="8" spanLG="12">
-      <SectionHeader title="Priorities &amp; Challenges" number="3" total="6" />
+      <SectionHeader title="Priorities &amp; Challenges" number={3} total={6} />
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
@@ -25,7 +25,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell span="3" spanLG="4" className="util-margin-bottom-1xl">
-      <Figure count="3.1" caption="Responses: 154 | Respondents were asked to select all that&nbsp;apply." direction="left">
+      <Figure count={3.1} caption="Responses: 154 | Respondents were asked to select all that&nbsp;apply." direction="left">
         <BarChart
           headingLevel="h3"
           title="Priorities"
@@ -51,7 +51,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell start="2" span="3" startMD="5" startLG="7" spanLG="4" className="util-margin-bottom-1xl">
-    <Figure count="3.2" caption="Responses: 158 | Respondents were asked to select all that&nbsp;apply." direction="left">
+    <Figure count={3.2} caption="Responses: 158 | Respondents were asked to select all that&nbsp;apply." direction="left">
       <BarChart
         headingLevel="h3"
         title="Challenges"
@@ -81,21 +81,21 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell startLG="7" spanLG="6" className="util-margin-bottom-1xl">
-      <Figure count="3.3">
+      <Figure count={3.3}>
         <h3>Top priorities and challenges</h3>
         <p>Across both top priorities and challenges, three areas stood out, which we will explore more deeply in the next sections.</p>
         <ScoreRow>
           <ScoreCardLarge border={false}>
             <Number bold={true}>1</Number>
-            <p class="cmp-type-h3">Encouraging Adoption</p>
+            <p className="cmp-type-h3">Encouraging Adoption</p>
           </ScoreCardLarge>
           <ScoreCardLarge border={false}>
             <Number bold={true}>2</Number>
-            <p class="cmp-type-h3">Engaging<br />Contri&shy;butors</p>
+            <p className="cmp-type-h3">Engaging<br />Contri&shy;butors</p>
           </ScoreCardLarge>
           <ScoreCardLarge border={false}>
             <Number bold={true}>3</Number>
-            <p class="cmp-type-h3">Overcoming Debt</p>
+            <p className="cmp-type-h3">Overcoming Debt</p>
           </ScoreCardLarge>
         </ScoreRow>
       </Figure>
@@ -117,7 +117,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell className="util-margin-bottom-1xl">
-      <Figure count="3.4" direction="left">
+      <Figure count={3.4} direction="left">
       <ScoreRow>
         <ScoreCardLarge border={false}>
           <h3>Priority</h3>
@@ -156,7 +156,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanMD="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@lg">
-      <Figure count="3.5" caption="Responses: 157 | Respondents were asked to select all that apply for &ldquo;What are the top challenges your design system team is facing at this&nbsp;moment?&rdquo;" direction="left">
+      <Figure count={3.5} caption="Responses: 157 | Respondents were asked to select all that apply for &ldquo;What are the top challenges your design system team is facing at this&nbsp;moment?&rdquo;" direction="left">
         <BarChart
           headingLevel="h3"
           styleFormat="large"
@@ -179,7 +179,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanLG="5" rowSpanMD="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="3.6" caption="Responses: 159">
+      <Figure count={3.6} caption="Responses: 159">
         <StackedChart
           headingLevel="h3"
           title="Higher use of the design system is linked to success"
@@ -243,7 +243,7 @@ const Section3 = () => (
 
       <h2>2 - Engaging Contributors</h2>
 
-      <Figure count="3.7" direction="left">
+      <Figure count={3.7} direction="left">
         <ScoreRow>
           <ScoreCardLarge border={false}>
             <h3>Priority</h3>
@@ -268,7 +268,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="3.8" direction="left" caption="Responses: 135 | Answers were on a scale of 1 to&nbsp;5.">
+      <Figure count={3.8} direction="left" caption="Responses: 135 | Answers were on a scale of 1 to&nbsp;5.">
         <StackedChart
           headingLevel="h3"
           title={<>More frequent contribution by users is linked to success</>}
@@ -297,7 +297,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell span="3" spanMD="5" rowSpanMD="2" alignMD="end" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="3.9" caption="Responses: 136 | Answers were on a scale of 1 to&nbsp;5." direction="left">
+      <Figure count={3.9} caption="Responses: 136 | Answers were on a scale of 1 to&nbsp;5." direction="left">
         <BarChart
           headingLevel="h3"
           title="But contribution is low"
@@ -327,7 +327,7 @@ const Section3 = () => (
     <GridCell startLG="3" className="util-margin-bottom-1xl">
       <Figure
         className="util-margin-bottom-md util-margin-bottom-1xl@md"
-        count="3.10"
+        count={3.10}
         direction="left"
         caption="Respondents: 136 | Answers were on a scale of 1 to&nbsp;5."
       >
@@ -357,7 +357,7 @@ const Section3 = () => (
     <GridCell startMD="6" startLG="9" className="util-margin-bottom-1xl util-margin-top-3xl@md util-margin-bottom-3xl@md">
       <Figure
         className="util-margin-bottom-md util-margin-bottom-1xl@md util-margin-top-2xl@md"
-        count="3.11"
+        count={3.11}
         direction="left"
         caption="Respondents: 135 | Answers were on a scale of 1 to&nbsp;5."
       >
@@ -387,7 +387,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell start="2" startMD="1" spanMD="5" spanLG="6" className="util-margin-bottom-1xl">
-      <Figure count="3.12" caption="Respondents: 136 | Answers were on a scale of 1 to&nbsp;5." direction="left">
+      <Figure count={3.12} caption="Respondents: 136 | Answers were on a scale of 1 to&nbsp;5." direction="left">
         <BarChart
           headingLevel="h3"
           title="But most systems don’t have a well-defined process"
@@ -419,7 +419,7 @@ const Section3 = () => (
     <GridCell spanMD="4" className="util-margin-bottom-1xl">
       <h2>3 - Overcoming Debt</h2>
 
-      <Figure count="3.13" direction="left">
+      <Figure count={3.13} direction="left">
         <ScoreRow>
           <ScoreCardLarge border={false}>
             <h3>Priority</h3>
@@ -448,7 +448,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell span="3" spanMD="4" rowSpanMD="2" startLG="3" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <Figure count="3.14" caption="Responses: 136">
+      <Figure count={3.14} caption="Responses: 136">
         <PieChart
           headingLevel="h3"
           styleFormat="small"
@@ -501,7 +501,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanMD="5" startLG="3" spanLG="6" className="util-margin-bottom-md util-margin-bottom-3xl@md">
-      <Figure count="3.15" caption="Responses: 135">
+      <Figure count={3.15} caption="Responses: 135">
         <StackedChart
           headingLevel="h3"
           title={<>Debt didn’t impact perceived success </>}
