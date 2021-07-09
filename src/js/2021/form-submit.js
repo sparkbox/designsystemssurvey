@@ -18,7 +18,7 @@ function sendFormData() {
     formRequest.open('POST', '#')
     formRequest.send(formsData)
   }
-  
+
   // Validates the Form Data
   function validateForm() {
     let check1 = document.getElementById('checkbox-1');
@@ -29,19 +29,43 @@ function sendFormData() {
     let checkMessage = document.querySelector('.js-check-message');
     let nameMessage = document.querySelector('.js-name-message');
     let emailMessage = document.querySelector('.js-email-message');
-    
+    // The browser validation allows both x@y.z and x@y, because of 
+    // the second format considered valid, we need our own check 
+    // that a top level domain is present as MailChimp requires
+    let emailRegex = new RegExp (/(.*\@.*\..*)/);
+
+    // Reset the error messages
+    checkMessage.innerText = "";
+    nameMessage.innerText = "";
+    emailMessage.innerText = "";
+    name.classList.remove('cmp-form-field__input--error');
+    email.classList.remove('cmp-form-field__input--error');
+
+    // Make sure one of the checkboxes is selected
     if (!check1.checked && !check2.checked) {
-      checkMessage.innerText = 'One of the contact options must be selected to send the form';
+      checkMessage.innerText = 'One of the contact options must be selected to send the form.';
     }
+
+    // Make sure the name value isn’t blank
     if (name.value === "") {
       name.classList.add('cmp-form-field__input--error');
-      nameMessage.innerText = 'Your name is required to send the form';
+      nameMessage.innerText = 'Your name is required.';
     }
+
+    // Make sure the email value isn’t blank
     if (email.value === "") {
       email.classList.add('cmp-form-field__input--error');
-      emailMessage.innerText = 'Your email is required to send the form';
+      emailMessage.innerText = 'Your email is required.';
     }
-    if ((check1.checked || check2.checked) && name.value !== "" && email.value !== "") {
+
+    // Make sure the email address is formatted correctly
+    if (!emailRegex.test(email.value)) {
+      email.classList.add('cmp-form-field__input--error');
+      emailMessage.innerText = 'Your email format is incorrect.';
+    }
+
+    // Double check everything is right before sending.
+    if ((check1.checked || check2.checked) && name.value !== "" && email.value !== "" && emailRegex.test(email.value)) {
       sendData()
     }
   }
