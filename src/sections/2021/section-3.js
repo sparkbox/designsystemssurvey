@@ -228,7 +228,7 @@ const Section3 = () => (
       <p>Has your design system met its adoption goals?</p>
       <p>Answer a few questions to find out where you fall within the Design System Maturity Model and get insights and ideas about how you can take your system to the next level.</p>
 
-      <a href="https://example.com" className="cmp-button cmp-button--inverse">Take the <strong>Assessment</strong></a>
+      <a href="https://1o5dmry8dy0.typeform.com/to/m1PuXyVL?utm_campaign=dssurvey" className="cmp-button cmp-button--inverse">Take the <strong>Assessment</strong></a>
       </CallToAction>
     </GridCell>
 
