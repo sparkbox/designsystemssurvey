@@ -1,3 +1,6 @@
+$animation-delay-base: 500ms;
+$animation-delay-factor: 250ms;
+
 .cmp-intro {
   @media (min-width: mq(md)) {
     min-height: 100vh;
@@ -42,11 +45,13 @@
     &:nth-child(1) {
       grid-column: 1 / span 6;
       grid-row-start: 1;
+      animation-delay: calc(#{$animation-delay-base} + (1 * #{$animation-delay-factor}));
     }
 
     &:nth-child(2) {
       grid-column: 2 / span 5;
       grid-row-start: 2;
+      animation-delay: calc(#{$animation-delay-base} + (2 * #{$animation-delay-factor}));
     }
 
     &:nth-child(3) {
@@ -54,6 +59,7 @@
       grid-row-start: 3;
       font-weight: 900;
       margin-bottom: 1em;
+      animation-delay: calc(#{$animation-delay-base} + (3 * #{$animation-delay-factor}));
     }
 
     &--year {
@@ -120,5 +126,65 @@
     left: 0;
     stroke: var(--color-neutral-3);
     stroke-width: 3px;
+  }
+
+  // Transition styles
+
+  .js &__text--transition,
+  .js &__art-element--transition {
+    // Hide elements that will animate if JS is active
+    opacity: 0;
+  }
+
+  .js &__text--transition.appear-done,
+  .js &__art-element--transition.appear,
+  .js &__art-element--transition.appear-done {
+    // Show elements after animation has run
+    opacity: 1;
+  }
+
+  .js &__text--transition.appear-active {
+    animation-name: enter;
+    animation-duration: var(--time-xl);
+    animation-timing-function: var(--timing-smooth);
+    animation-fill-mode: both;
+  }
+
+  @for $i from 1 through 4 {
+    &__art-element--transition.appear-active path:nth-child(#{$i}) {
+      // Stagger in animation for the art element in the intro component
+      animation-name: enterMove;
+      animation-duration: var(--time-xl);
+
+      // This delay calculation adds the time for the text animation plus a new delay
+      // factor for this art element animation. This factor is subtracted because
+      // the layers are in reverse order in order to ensure they overlap correctly.
+      animation-delay: calc(#{$animation-delay-base} + var(--time-xl) + (3 * #{$animation-delay-factor}) - (#{$i} * #{$animation-delay-factor}));
+      animation-timing-function: var(--timing-smooth);
+      animation-fill-mode: both;
+      transform-origin: bottom left;
+    }
+  }
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes enterMove {
+  0% {
+    stroke: var(--color-neutral-1);
+    transform: translate(-2rem, 0);
+  }
+  100% {
+    stroke: var(--color-rust);
+    transform: none;
   }
 }

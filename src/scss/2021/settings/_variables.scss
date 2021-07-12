@@ -119,12 +119,14 @@ $bar-chart-height: 2rem;
 // Transition timing functions
 $timing: (
   'ease': 'ease',
-  'snap': 'cubic-bezier(0, 0.61, 0.54, 1)'
+  'snap': 'cubic-bezier(0, 0.61, 0.54, 1)',
+  'smooth': 'cubic-bezier(0,.72,.47,.92)'
 );
 
 // Timing
 $time: (
   'sm': 250ms,
   'md': 500ms,
-  'lg': 800ms
+  'lg': 800ms,
+  'xl': 1500ms
 );
