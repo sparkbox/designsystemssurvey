@@ -57,11 +57,22 @@
     }
 
     &--year {
-      text-shadow: stroke(var(--color-rust));
-      color: var(--color-neutral-1);
-      font-weight: 900;
-      transform: translateY(-0.2em);
+      font-weight: 700;
       margin-bottom: 0.5em;
+      margin-top: 5.5rem;
+      font-size: 1rem;
+      font-family: var(--font-sans);
+
+      @media(min-width: mq(md)) {
+        margin-top: 0; 
+        font-size: 12vw;
+        font-family: var(--font-mono);
+        text-shadow: stroke(var(--color-rust));
+        color: var(--color-neutral-1);
+        font-weight: 900;
+        transform: translateY(-0.2em);
+        margin-bottom: 0.5em;
+      }
     }
   }
 

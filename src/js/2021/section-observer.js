@@ -1,6 +1,7 @@
 export default function sectionObserver(platform, animateClass) {
   if ('IntersectionObserver' in window) {
-    const sectionDisplay = document.querySelector('.js-section-display');
+    const sectionDisplays = document.querySelectorAll('.js-section-display');
+
     let sectionElement
     let sectionName
 
@@ -13,13 +14,15 @@ export default function sectionObserver(platform, animateClass) {
             if (!sectionName) {
               return
             }
-            sectionDisplay.innerHTML = sectionName
+            sectionDisplays.forEach((section) => {
+              section.innerHTML = sectionName
+            })
           }
         })
       },
       {
         rootMargin: '0px 0px 0px 0px',
-        threshold: 0.05
+        threshold: 0.02
       }
     )
 
