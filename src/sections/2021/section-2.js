@@ -66,8 +66,9 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell span="4" spanMD="6" spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@lg">
+        <hr className="util-hr-solid util-margin-vertical-lg" />
+        
         <Figure count={2.3} direction="left" caption="Responses: 171 | Respondents were asked to select all that apply from a list of 19 items with an option to enter other&nbsp;answers.">
-
           <h3>Design systems have similar elements</h3>
           <p>"What does your design system <em>contain</em>?"</p>
 
@@ -202,6 +203,7 @@ const Section2 = () => (
       </GridCell>
 
       <GridCell spanMD="6">
+        <hr className="util-hr-solid util-margin-vertical-lg" />
         <Figure count={2.5} caption="Responses: 136">
           <h3>Most respondent organizations have centralized teams</h3>
           <p>&ldquo;How is your design system <em>team structured</em>?&rdquo;</p>
