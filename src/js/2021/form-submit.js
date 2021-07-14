@@ -32,7 +32,7 @@ function sendFormData() {
     // The browser validation allows both x@y.z and x@y, because of 
     // the second format considered valid, we need our own check 
     // that a top level domain is present as MailChimp requires
-    let emailRegex = new RegExp (/(.*\@.*\..*)/);
+    let emailRegex = new RegExp (/(.*@.*\..*)/);
 
     // Reset the error messages
     checkMessage.innerText = "";
