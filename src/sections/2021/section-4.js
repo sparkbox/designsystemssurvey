@@ -73,6 +73,7 @@ const Section4 = () => (
     </GridCell>
 
     <GridCell spanLG="6" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
+      <hr className="util-hr-solid util-margin-vertical-lg" />
       <Figure count={4.3} caption="Responses: 50">
         <h3>Design system teams track similar metrics</h3>
         <p>“<em>Which metrics</em> are you tracking?”</p>
