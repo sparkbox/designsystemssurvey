@@ -83,4 +83,9 @@
       transform: translate(-10vw, -10vh);
     }
   }
+
+  &__link {
+    --link: #{color(blue)};
+    --link-hover: #{lighten(color(blue), 5%)};
+  }
 }
