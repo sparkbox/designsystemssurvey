@@ -1,9 +1,13 @@
 import React, { Component } from "react"
 import Layout from '../components/2021/layout'
 import SEO from '../components/SEO'
+import Helmet from "react-helmet"
 
 class NotFoundPage extends Component {
   render () {
+    let modernCSS = 'all and (-webkit-min-device-pixel-ratio: 0), (-moz-device-pixel-ratio: 0)';
+    let ieCSS = 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)';
+
     return (
       <Layout>
         <SEO
@@ -11,6 +15,14 @@ class NotFoundPage extends Component {
           image="ogimage-2021.png"
           year="2021"
         />
+        
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap" rel="stylesheet" media={ieCSS} />
+        <link rel="preload" as="font" href="/fonts/2021/Inconsolata.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
+        <link rel="preload" as="font" href="/fonts/2021/SoleSans.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
+        <link rel="stylesheet" type="text/css" href="/css/2021.css" media={modernCSS} />
+        <link rel="stylesheet" type="text/css" href="/css/2021-ie.css" media={ieCSS} />
+      </Helmet>
 
         <div className="obj-lines util-height-full">
           <div className="cmp-error">
