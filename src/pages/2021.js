@@ -33,7 +33,7 @@ class Page2021 extends Component {
     return (
       <Layout>
         <SEO
-          pageDescription="These survey results explore the challenges of a design system, from planning and managing changes to organizational adoption. They examine what makes a mature design system that positively impacts the team."
+          pageDescription="This year, we delve into design system priorities and challenges, including adoption, contribution, and debt."
           image="ogimage-2021.jpg"
           year="2021"
         />
