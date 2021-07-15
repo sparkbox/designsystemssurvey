@@ -3,6 +3,11 @@
   line-height: 0.75;
   position: relative;
   margin-bottom: 3rem;
+  margin-top: $fixed-columns-sm;
+  
+  @media (min-width: mq(md)) {
+    margin-top: 0;
+  }
 
   &__number {
     position: absolute;
