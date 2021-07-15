@@ -53,16 +53,21 @@
   }
 
   &__link {
-    color: color(neutral-3);
-    box-shadow: none;
-    text-decoration: underline;
-    cursor: pointer;
+    &,
+    &:link,
+    &:visited {
+      color: var(--color-neutral-3);
+      box-shadow: none;
+      text-decoration: underline;
+      cursor: pointer;
+    }
   
     &:hover {
-      background-color: color(neutral-3);
-      color: color(neutral-1);
+      background-color: var(--color-neutral-3);
+      color: var(--color-neutral-1);
       box-shadow: none;
       text-decoration: none;
+      text-shadow: none;
     }
   } 
 }
