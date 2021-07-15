@@ -1,4 +1,5 @@
 import React from "react"
+import AssessmentLink from "./assessment-link"
 
 const ContactFormSent = (props) => {  
   return (
@@ -8,7 +9,8 @@ const ContactFormSent = (props) => {
       <hr className="util-hr-solid util-margin-vertical-lg" />
       <h2 className="cmp-type-section util-margin-all-none">Want to keep exploring right now?</h2>
       <p className="cmp-type-body-large util-margin-vertical-lg">Answer a few questions to find out where you fall within the Design System Maturity Model and get insights and ideas about how you can take your system to the next level.</p>
-      <a href="https://1o5dmry8dy0.typeform.com/to/m1PuXyVL?utm_campaign=dssurvey" className="cmp-button cmp-button--inverse">Take the Assessment</a>
+
+      <AssessmentLink />
     </div>
   )
 }
