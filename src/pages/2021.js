@@ -29,7 +29,8 @@ class Page2021 extends Component {
 
   render () {
     let modernCSS = 'all and (-webkit-min-device-pixel-ratio: 0), (-moz-device-pixel-ratio: 0)';
-    let ieCSS = 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)'
+    let ieCSS = 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)';
+
     return (
       <Layout>
         <SEO
