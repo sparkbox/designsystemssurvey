@@ -1,20 +1,6 @@
 .cmp-stacked-chart {
   border-top: 1px solid var(--color-neutral-3);
 
-  &--large {
-    border-top: 1px solid transparent;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-      display: block;
-      width: math.div(2, 3) * 100%;
-      border-top: 1px solid var(--color-neutral-3);
-      top: 0;
-    }
-  }
-
   &__keys {
     margin: 2rem 0;
   }
