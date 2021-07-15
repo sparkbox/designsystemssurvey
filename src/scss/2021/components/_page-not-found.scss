@@ -47,6 +47,10 @@
       padding-top: 15rem;
     }
   }
+  
+  &__content {
+    text-shadow: stroke(#{var(--color-neutral-1)});
+  }
 
   &__link {
     color: color(neutral-3);
