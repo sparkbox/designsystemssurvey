@@ -12,6 +12,7 @@ import CallToAction from "../../components/2021/call-to-action"
 import  {ScoreCardLarge, ScoreRow} from "../../components/2021/scorecard"
 import Number from "../../components/2021/number"
 import ArtElement from "../../components/2021/art-element"
+import AssessmentLink from "../../components/2021/assessment-link"
 
 
 const Section3 = () => (
@@ -231,7 +232,7 @@ const Section3 = () => (
       <p>Has your design system met its adoption goals?</p>
       <p>Answer a few questions to find out where you fall within the Design System Maturity Model and get insights and ideas about how you can take your system to the next level.</p>
 
-      <a href="https://1o5dmry8dy0.typeform.com/to/m1PuXyVL?utm_campaign=dssurvey" className="cmp-button cmp-button--inverse">Take the <strong>Assessment</strong></a>
+      <AssessmentLink />
       </CallToAction>
     </GridCell>
 

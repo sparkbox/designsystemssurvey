@@ -9,6 +9,7 @@ import SmallCallout from "../../components/2021/small-callout"
 import Quote from "../../components/2021/quote"
 import CallToAction from "../../components/2021/call-to-action"
 import ArtElement from "../../components/2021/art-element"
+import AssessmentLink from "../../components/2021/assessment-link"
 
 const Section5 = () => (
   <Grid className="util-margin-bottom-20vh">
@@ -146,7 +147,8 @@ const Section5 = () => (
         <h3>Design systems are intended to cross complex boundaries, but realizing the full value of your investment is tricky work.</h3>
         <p>What do you need to support your design system?</p>
         <p>Take the Maturity Model Assessment to get feedback on where you are now, and suggestions that will help you move forward to benefit your whole organization.</p>
-        <a href="https://1o5dmry8dy0.typeform.com/to/m1PuXyVL?utm_campaign=dssurvey" className="cmp-button cmp-button--inverse">Take the Assessment</a>
+        
+        <AssessmentLink />
       </CallToAction>
     </GridCell>
 
