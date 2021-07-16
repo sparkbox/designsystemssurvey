@@ -108,12 +108,12 @@ const Section3 = () => (
     </GridCell>
 
 
-    <GridCell span="3" spanMD="6">
+    <GridCell>
       <hr className="util-hr-solid util-margin-vertical-lg" />
     </GridCell>
 
-    <GridCell spanMD="6" className="util-margin-bottom-xl">
-      <h2>1 - Encouraging Adoption</h2>
+    <GridCell className="util-margin-bottom-xl">
+      <h2 className="cmp-type-h2 util-display-flex" aria-label="1 - Encouraging Adoption"><div>1&nbsp;-&nbsp;</div><div>Encouraging Adoption</div></h2>
     </GridCell>
 
     <GridCell align="center" rowSpanMD="2" startMD="8" startLG="12">
@@ -246,7 +246,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanMD="4" className="util-margin-bottom-1xl util-margin-bottom-3xl@md">
-      <h2>2 - Engaging Contributors</h2>
+      <h2 className="cmp-type-h2 util-display-flex" aria-label="2 - Engaging Contributors"><div>2&nbsp;-&nbsp;</div><div>Engaging Contributors</div></h2>
 
       <Figure count={3.7} direction="left">
         <ScoreRow>
@@ -425,7 +425,7 @@ const Section3 = () => (
     </GridCell>
 
     <GridCell spanMD="4" className="util-margin-bottom-1xl">
-      <h2>3 - Overcoming Debt</h2>
+      <h2 className="cmp-type-h2 util-display-flex" aria-label="3 - Overcoming Debt"><div>3&nbsp;-&nbsp;</div><div>Overcoming Debt</div></h2>
 
       <Figure count={3.13} direction="left">
         <ScoreRow>
