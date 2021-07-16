@@ -130,31 +130,33 @@ $animation-delay-factor: 250ms;
 
   // Transition styles
 
-  .js &__text--transition,
-  .js &__art-element--transition {
+  &__text--transition,
+  &__art-element--transition {
     // Hide elements that will animate if JS is active
     opacity: 0;
   }
 
-  .js &__text--transition.appear-done,
-  .js &__art-element--transition.appear,
-  .js &__art-element--transition.appear-done {
+  &__text--transition,
+  &__art-element--transition,
+  &__art-element--transition {
     // Show elements after animation has run
     opacity: 1;
   }
 
-  .js &__text--transition.appear-active {
+  &__text--transition {
     animation-name: enter;
+    animation-fill-mode: forwards;
     animation-duration: var(--time-xl);
     animation-timing-function: var(--timing-smooth);
     animation-fill-mode: both;
   }
 
   @for $i from 1 through 4 {
-    &__art-element--transition.appear-active path:nth-child(#{$i}) {
+    &__art-element--transition path:nth-child(#{$i}) {
       // Stagger in animation for the art element in the intro component
       animation-name: enterMove;
       animation-duration: var(--time-xl);
+      animation-fill-mode: forwards;
 
       // This delay calculation adds the time for the text animation plus a new delay
       // factor for this art element animation. This factor is subtracted because
