@@ -26,6 +26,7 @@ const Section6 = () => (
     <GridCell start="2" span="4" startMD="3" startLG="3" spanLG="6">
       <p className="cmp-type-body-large">If you're having trouble gaining cross-functional buy-in and support, your design system’s success might be in jeopardy.</p>
       <p className="cmp-type-body-large">We’ll be exploring this design system issue and more as we continue interviewing design system team members throughout the year and digging even deeper into this survey’s data.</p>
+      <p className="cmp-type-body-large">Are you interested in the full data set of this survey? <a href="https://www.dropbox.com/s/awi5isve9tp1ks4/Sparkbox%27s%202021%20Design%20Systems%20Survey%20Shared%20Results.xlsx?dl=0">Download the file on Dropbox</a>.</p>
     </GridCell>
   </Grid>
 )
