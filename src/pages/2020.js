@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Layout from '../components/2020/layout'
 import SEO from '../components/SEO'
+import Helmet from 'react-helmet'
 import SiteFooter from '../components/2020/footer'
 import IntroSection from '../sections/2020/intro'
 import TableOfContents from '../sections/2020/table-of-contents'
@@ -25,6 +26,11 @@ class Page2020 extends Component {
           image="ogimage-2020.png"
           year="2020"
         />
+        <Helmet>
+          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-sans-vf-regular-extra-condensed/font.woff2" type="font/woff2" crossorigin="anonymous" />
+          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/solesole-serif-headline-extrabold/font.woff2" type="font/woff2" crossorigin="anonymous" />
+          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/solesole-serif-text-light/font.woff2" type="font/woff2" crossorigin="anonymous" />
+        </Helmet>
         <IntroSection />
         <main>
           <TableOfContents />

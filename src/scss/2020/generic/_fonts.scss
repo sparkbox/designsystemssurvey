@@ -1,55 +1,24 @@
 @font-face {
   font-family: "Sole Sans";
-    src: url('/fonts/2020/sole-sans-book.woff2') format('woff2'),
-         url('/fonts/2020/sole-sans-book.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-font-family: "Sole Sans";
-  src: url('/fonts/2020/sole-sans.woff2') format('woff2'),
-       url('/fonts/2020/sole-sans.woff') format('woff');
-  font-weight: 400;
+  src: url('https://assets.sparkbox.com/fonts/sole/sole-sans-vf-regular-extra-condensed/font.woff2') format('woff2-variations'),
+  url('https://assets.sparkbox.com/fonts/sole/sole-sans-vf-regular-extra-condensed/font.woff') format('woff-variations');
+  font-weight: 300 900;
   font-style: normal;
-}
-
-@font-face {
-font-family: "Sole Sans";
-  src: url('/fonts/2020/sole-sans-semibold.woff2') format('woff2'),
-       url('/fonts/2020/sole-sans-semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: "Sole Sans";
-    src: url('/fonts/2020/sole-sans-bold.woff2') format('woff2'),
-         url('/fonts/2020/sole-sans-bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-font-family: "Sole Sans";
-  src: url('/fonts/2020/sole-sans-extrabold.woff2') format('woff2'),
-       url('/fonts/2020/sole-sans-extrabold.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
+  font-stretch: 100%;
 }
 
 @font-face {
   font-family: "Sole Sans Serif";
-  src: url('/fonts/2020/sole-serif-headline-extrabold.woff2') format('woff2'),
-       url('/fonts/2020/sole-serif-headline-extrabold.woff') format('woff');
+  src: url('https://assets.sparkbox.com/fonts/solesole-serif-headline-extrabold/font.woff2') format('woff2'),
+       url('https://assets.sparkbox.com/fonts/solesole-serif-headline-extrabold/font.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Sole Sans Serif";
-  src: url('/fonts/2020/sole-serif-text-light.woff2') format('woff2'),
-       url('/fonts/2020/sole-serif-text-light.woff') format('woff');
+  src: url('https://assets.sparkbox.com/fonts/solesole-serif-text-light/font.woff2') format('woff2'),
+       url('https://assets.sparkbox.com/fonts/solesole-serif-text-light/font.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
