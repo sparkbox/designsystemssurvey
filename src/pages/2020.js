@@ -28,8 +28,8 @@ class Page2020 extends Component {
         />
         <Helmet>
           <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-sans-vf-regular-extra-condensed/font.woff2" type="font/woff2" crossorigin="anonymous" />
-          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/solesole-serif-headline-extrabold/font.woff2" type="font/woff2" crossorigin="anonymous" />
-          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/solesole-serif-text-light/font.woff2" type="font/woff2" crossorigin="anonymous" />
+          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-serif-headline-extrabold/font.woff2" type="font/woff2" crossorigin="anonymous" />
+          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-serif-text-light/font.woff2" type="font/woff2" crossorigin="anonymous" />
         </Helmet>
         <IntroSection />
         <main>

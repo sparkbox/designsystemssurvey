@@ -42,7 +42,7 @@ class Page2021 extends Component {
         <Helmet>
           <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap" rel="stylesheet" media={ieCSS} />
           <link rel="preload" as="font" href="/fonts/2021/Inconsolata.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
-          <link rel="preload" as="font" href="/fonts/2021/SoleSans.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
+          <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-sans-vf-regular-extra-condensed/font.woff2" type="font/woff2" crossorigin="anonymous" media={modernCSS} />
           <link rel="stylesheet" type="text/css" href="/css/2021.css" media={modernCSS} />
           <link rel="stylesheet" type="text/css" href="/css/2021-ie.css" media={ieCSS} />
         </Helmet>
