@@ -6,7 +6,7 @@ const postcss = require('postcss')
 const postcssCustomProperties = require('postcss-custom-properties')
 const cssbyebye = require('css-byebye')
 
-const years = ['2019', '2020', '2021']
+const years = ['2019', '2020', '2021', '2022']
 const sparkle = path.resolve('node_modules/@sparkbox')
 
 years.forEach((year) => {
