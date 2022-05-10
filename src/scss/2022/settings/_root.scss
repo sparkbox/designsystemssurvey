@@ -1,0 +1,10 @@
+@use "./colors" as *;
+
+:root {
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
+  @each $key, $value in $colors {
+    --color-#{$key}-hsl: hsl(--#{$key});
+  }
+}
