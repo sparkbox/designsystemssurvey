@@ -29,7 +29,9 @@
 //    to write comments describing the colors and font stacks as a guide.
 //    If using features such as custom properties, those that are global
 //    custom properties should be described in this section.
-//
+
+@use "settings/root";
+
 // =====================================================================
 // 2. Tools
 //    This section is specifically for preprocessor global mixins and
