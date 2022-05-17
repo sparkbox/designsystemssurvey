@@ -9,9 +9,9 @@ html {
 
 body {
   margin: 0;
-  font: 100% / 1.5 "Sole Sans", system-ui, sans-serif;
-  color: var(--color-white-hsl);
-  background-color: var(--color-black-hsl);
+  font: 100% / 1.5 var(--font-text);
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 b,

@@ -1,0 +1,5 @@
+@use "../tools/typography";
+
+p:not([class]) {
+  @include typography.style('body-default');
+}

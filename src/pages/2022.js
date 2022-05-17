@@ -1,10 +1,11 @@
 import React from "react"
 import Helmet from "react-helmet"
 import SEO from "../components/SEO"
+import Demo from "../sections/2022/demo"
 
 const Page2022 = () => {
   return (
-    <div>
+    <>
       <SEO
         pageDescription="2022 Description"
         image="ogimage-2022.jpg"
@@ -20,8 +21,10 @@ const Page2022 = () => {
         />
       </Helmet>
 
-      <h1>Future home of the 2022 Design Systems Survey</h1>
-    </div>
+      <div className="obj-width-limiter">
+        <Demo />
+      </div>
+    </>
   )
 }
 
