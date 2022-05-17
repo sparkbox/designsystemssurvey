@@ -53,21 +53,23 @@
 // 4. Elements
 //    Styling for bare HTML elements (like h1, a, etc.). These come with
 //    default styling from the browser so we can redefine them here.
-
+@use "elements/headings";
+@use "elements/p";
+@use "elements/a";
 
 
 // =====================================================================
 // 5. Objects
 //    Class-based selectors which define undercoated design patterns,
 //    for example media object known from OOCSS.
-
+@use "objects/limiters";
 
 
 // =====================================================================
 // 6. Components
 //    Specific UI components. This is where majority of our work takes place
 //    and our UI components are often composed of Objects and Components
-
+@use "components/typography";
 
 
 // =====================================================================

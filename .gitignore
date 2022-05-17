@@ -59,7 +59,7 @@ typings/
 /public
 
 # Compiled CSS
-/static/css/*.css
+/static/css/*.css*
 
 # Mac files
 .DS_Store

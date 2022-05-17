@@ -1,10 +1,19 @@
-@use "./colors" as *;
+@use "colors";
+@use "font-size";
 
 :root {
-  @each $key, $value in $colors {
-    --color-#{$key}: #{$value};
+  --font-display: "Sole Sans Hairline", serif;
+  --font-text: "Sole Sans", sans-serif;
+
+  @each $key, $value in font-size.$sizes {
+    --size-#{$key}: #{$value};
   }
-  @each $key, $value in $colors {
-    --color-#{$key}-hsl: hsl(--#{$key});
+
+  @each $key, $value in colors.$colors {
+    --color-#{$key}-val: #{$value};
+  }
+
+  @each $key, $value in colors.$colors {
+    --color-#{$key}: hsl(var(--color-#{$key}-val));
   }
 }

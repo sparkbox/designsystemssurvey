@@ -1,0 +1,14 @@
+@use "../settings/font-size" as *;
+@use "../tools/typography";
+
+@each $size, $value in $sizes {
+  .cmp-type-#{$size} {
+    @include typography.style($size);
+  }
+  @if $size == 'body-large' {
+    .cmp-type-#{$size} strong,
+    .cmp-type-#{$size}-regular {
+      @include typography.style($size, 400);
+    }
+  }
+}
