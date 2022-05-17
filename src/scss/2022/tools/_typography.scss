@@ -1,0 +1,12 @@
+@mixin style($size, $weight: 200) {
+  @if $size == 'heading-1'
+   or $size == 'heading-2'
+   or $size == 'heading-3'
+   or $size == 'heading-4'
+   or $size == 'section-description' {
+    font-family: var(--font-display);
+  }
+  font-size: var(--size-#{$size});
+  font-weight: $weight;
+  margin: 1em 0;
+}

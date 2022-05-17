@@ -1,0 +1,22 @@
+@use "../tools/typography";
+
+h2:not([class]) {
+  @include typography.style('heading-1');
+}
+
+h3:not([class]) {
+  @include typography.style('heading-2');
+}
+
+h4:not([class]) {
+  @include typography.style('heading-3');
+}
+
+h5:not([class]) {
+  @include typography.style('heading-4');
+}
+
+h6:not([class]) {
+  @include typography.style('section-description');
+}
+
