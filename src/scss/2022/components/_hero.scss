@@ -1,0 +1,47 @@
+.cmp-hero {
+  margin: 0 auto;
+  max-width: 80rem;
+  position: relative;
+
+  &__intro {
+    font-weight: 200;
+    line-height: 0.875;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: ". a"
+                         "b ."
+                         "c d";
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    grid-area: b;
+    outline: 1px solid deeppink;
+  }
+  
+  &__title-line {
+    font-size: min(14vw, 11.2rem);
+  }
+
+  &__year {
+    display: block;
+    font-weight: 100;
+    font-stretch: 80%;
+    font-size: min(24vw, 19.2rem);
+    text-align: right;
+    grid-area: d;
+    outline: 1px solid cyan;
+    align-self: end;
+  }
+
+  &__edition {
+    font-weight: 200;
+    font-size: (5vw, 1.5rem);
+    grid-area: c;
+  }
+  
+  &__logo {
+    justify-self: end;
+    grid-area: a;
+  }
+}

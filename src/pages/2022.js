@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import SEO from "../components/SEO"
-import Demo from "../sections/2022/demo"
+import Hero from "../components/2022/hero"
 
 const Page2022 = () => {
   return (
@@ -13,6 +13,8 @@ const Page2022 = () => {
       />
 
       <Helmet>
+        <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-sans-vf-regular-extra-condensed/font.woff2" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-serif-hairline/font.woff2" type="font/woff2" crossorigin="anonymous" />
         <link
           rel="stylesheet"
           type="text/css"
@@ -21,9 +23,7 @@ const Page2022 = () => {
         />
       </Helmet>
 
-      <div className="obj-width-limiter">
-        <Demo />
-      </div>
+      <Hero />
     </>
   )
 }

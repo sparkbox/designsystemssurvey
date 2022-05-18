@@ -1,5 +1,8 @@
-a:not([class]) {
+a {
   color: inherit;
+}
+
+a:not([class]) {
   text-decoration-color: hsla(var(--color-white-val), 0.75);
   transition: text-decoration-color 150ms ease-in-out;
 
