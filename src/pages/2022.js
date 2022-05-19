@@ -2,6 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import SEO from "../components/SEO"
 import Hero from "../components/2022/hero"
+import Circle from "../components/2022/circle"
 
 const Page2022 = () => {
   return (
@@ -22,7 +23,7 @@ const Page2022 = () => {
           media="all and (-webkit-min-device-pixel-ratio: 0), (-moz-device-pixel-ratio: 0)"
         />
       </Helmet>
-
+      <Circle />
       <Hero />
     </>
   )

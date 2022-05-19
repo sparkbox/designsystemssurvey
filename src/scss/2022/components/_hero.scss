@@ -1,11 +1,20 @@
+@use "../tools/svg" as *;
+@use "../tools/color" as *;
+
 .cmp-hero {
   margin: 0 auto;
-  max-width: 80rem;
+  width: calc(100% - 3rem);
+  max-width: var(--hero-max-width);
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__intro {
     font-weight: 200;
     line-height: 0.875;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: ". a"
@@ -16,28 +25,45 @@
   &__title {
     font-family: var(--font-display);
     grid-area: b;
-    outline: 1px solid deeppink;
+    font-size: min(14vw, calc(var(--hero-max-width) * 0.14));
+
+    &::after {
+      z-index: 300;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      bottom: - 0.25em;
+      right: calc(50% - 0.5em);
+      height: 2.75em;
+      width: 1.875em;
+      background: svg('<svg width="290" height="439"><path d="m287 2.327-284 435" stroke="#{color(gray)}" stroke-width="5"/></svg>') no-repeat center / contain;
+    }
   }
   
   &__title-line {
-    font-size: min(14vw, 11.2rem);
+    position: relative;
+    z-index: 200;
   }
 
   &__year {
     display: block;
     font-weight: 100;
     font-stretch: 80%;
-    font-size: min(24vw, 19.2rem);
+    font-size: min(24vw, calc(var(--hero-max-width) * 0.24));
     text-align: right;
     grid-area: d;
-    outline: 1px solid cyan;
     align-self: end;
+    color: var(--color-gray);
+    position: relative;
+    z-index: 200;
   }
 
   &__edition {
     font-weight: 200;
-    font-size: (5vw, 1.5rem);
+    font-size: min(25vw, calc(var(--hero-max-width) * 0.025));
     grid-area: c;
+    align-self: center;
+    color: var(--color-gray);
   }
   
   &__logo {

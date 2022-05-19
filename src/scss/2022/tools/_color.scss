@@ -1,0 +1,7 @@
+@use "../settings/colors" as *;
+
+@function color($name) {
+  $name: $name + '';
+  $color: map-get($colors, $name);
+  @return 'hsl(#{$color})';
+}

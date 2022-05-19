@@ -1,0 +1,50 @@
+.cmp-circle {
+  position: fixed;
+  --distance: 2rem;
+  top: var(--distance);
+  left: var(--distance);
+  right: var(--distance);
+  bottom: var(--distance);
+  z-index: 100;
+  clip-path: circle();
+  
+  @supports (mix-blend-mode: hard-light) {
+    z-index: 1000;
+    pointer-events: none;
+    mix-blend-mode: hard-light;
+  }
+
+  &__hero-1 {
+    outline: 1px solid cyan;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 102;
+    background: linear-gradient(145deg, hsla(var(--color-blue-1-val), 0.15) 15%,
+                                          hsla(var(--color-blue-2-val), 0.15) 25%,
+                                          hsla(var(--color-black-val), 0) 65%);
+    mask-image: linear-gradient(180deg, #000f 20%, #0000 80%);
+  }
+
+  &__hero-2 {
+    position: absolute;
+    transform-origin: center;
+    --distance: -20vmax;
+    top:  calc(3 * var(--distance));
+    left: var(--distance);
+    right: var(--distance);
+    bottom: calc(3 * var(--distance));
+    z-index: 101;
+    transform: rotate(-45deg) translate(20vw, 30vw);
+    background: radial-gradient(ellipse, hsl(var(--color-pink-1-val)) 0%,
+                                         hsl(var(--color-pink-2-val)) 50%,
+                                         hsl(var(--color-black-val)) 100%) center no-repeat;
+                                         
+    mask-image: radial-gradient(circle, #0002 0%,
+                                        #0002 50%,
+                                        #0000 120%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+}

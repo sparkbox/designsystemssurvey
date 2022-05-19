@@ -4,6 +4,8 @@
 :root {
   --font-display: "Sole Sans Hairline", serif;
   --font-text: "Sole Sans", sans-serif;
+  
+  --hero-max-width: 80rem;
 
   @each $key, $value in font-size.$sizes {
     --size-#{$key}: #{$value};
