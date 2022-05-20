@@ -7,7 +7,7 @@ Setup
 
 2. Install the ([Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start#install-the-gatsby-cli)) globally `npm install -g gatsby-cli`
 
-3. Run `npm install` to install all packages and dependencies
+3. Run `npm install` to install all packages and dependencies. (If you have a M1 Mac, you may need to run `brew reinstall vips` before installing the site packages and dependencies.)
 
 4. Run `npm start`. This will start a hot-reloading development environment at `localhost:8000`.
 
