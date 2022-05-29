@@ -25,6 +25,7 @@
   &__title {
     font-family: var(--font-display);
     grid-area: b;
+    // Allows the font to be fluid in relation to the hero size
     font-size: min(14vw, calc(var(--hero-max-width) * 0.14));
 
     &::after {
@@ -49,6 +50,7 @@
     display: block;
     font-weight: 100;
     font-stretch: 80%;
+    // Allows the font to be fluid in relation to the hero size
     font-size: min(24vw, calc(var(--hero-max-width) * 0.24));
     text-align: right;
     grid-area: d;
@@ -60,6 +62,7 @@
 
   &__edition {
     font-weight: 200;
+    // Allows the font to be fluid in relation to the hero size
     font-size: min(25vw, calc(var(--hero-max-width) * 0.025));
     grid-area: c;
     align-self: center;
