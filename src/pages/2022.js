@@ -1,8 +1,17 @@
 import React from "react"
 import Helmet from "react-helmet"
 import SEO from "../components/SEO"
+import Layout from '../components/2022/layout'
 import Hero from "../components/2022/hero"
 import Circle from "../components/2022/circle"
+import Intro from "../sections/2022/intro"
+import TableOfContents from "../sections/2022/table-of-contents"
+import Section1 from "../sections/2022/section-1"
+import Section2 from "../sections/2022/section-2"
+import Section3 from "../sections/2022/section-3"
+import Section4 from "../sections/2022/section-4"
+import Section5 from "../sections/2022/section-5"
+import Section6 from "../sections/2022/section-6"
 
 const Page2022 = () => {
   return (
@@ -23,8 +32,18 @@ const Page2022 = () => {
           media="all and (-webkit-min-device-pixel-ratio: 0), (-moz-device-pixel-ratio: 0)"
         />
       </Helmet>
-      <Circle />
-      <Hero />
+      <Layout>
+        <Circle />
+        <Hero />
+        <Intro />
+        <TableOfContents id="toc" />
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+      </Layout>
     </>
   )
 }
