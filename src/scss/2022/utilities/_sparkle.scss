@@ -1,0 +1,52 @@
+
+@import "sparkle/settings";
+
+// Sparkle User Settings
+$settings: (
+  'prefix': 'util',
+  'loop-mq': true,
+  'print-classes': false,
+  'system-color': false,
+  'system-color-states': false,
+  'system-grid': false,
+  'system-spacing': true,
+  'system-font-family': false,
+  'system-font-size': false,
+  'system-font-weight': false,
+  'utility-margin': true,
+  'utility-padding': true,
+  'utility-position-spacing': false,
+  'utility-background-color': false,
+  'utility-border-color': false,
+  'utility-border-style': false,
+  'utility-border-width': false,
+  'utility-border-position': false,
+  'utility-foreground-color': false,
+  'utility-outline-color': false,
+  'utility-text-decoration-color': false,
+  'utility-z-index': false,
+  'utility-display': false,
+  'utility-position': false,
+  'utility-text-align': false,
+  'utility-text-decoration': false,
+  'utility-text-transform': false,
+  'utility-visually-hidden': true,
+  'utility-justify-content': false,
+  'utility-align-items': false,
+  'utility-align-self': false,
+  'utility-order': false,
+  'utility-flex-direction': false,
+  'utility-flex-grow': false,
+  'utility-flex-shrink': false,
+  'utility-flex-wrap': false
+);
+
+
+@import "../settings/media-queries";
+@import "../settings/spacer";
+
+@import "sparkle/tools";
+
+/* Start Sparkle System Classes */
+@import "sparkle/systems";
+@import "sparkle/utilities";

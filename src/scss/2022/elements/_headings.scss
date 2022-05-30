@@ -2,21 +2,26 @@
 
 h2:not([class]) {
   @include typography.style('heading-1');
+  margin: 1em 0;
 }
 
 h3:not([class]) {
   @include typography.style('heading-2');
+  margin: 1em 0;
 }
 
 h4:not([class]) {
   @include typography.style('heading-3');
+  margin: 1em 0;
 }
 
 h5:not([class]) {
   @include typography.style('heading-4');
+  margin: 1em 0;
 }
 
 h6:not([class]) {
   @include typography.style('section-description');
+  margin: 1em 0;
 }
 

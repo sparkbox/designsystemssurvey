@@ -8,5 +8,9 @@
   }
   font-size: var(--size-#{$size});
   font-weight: $weight;
-  margin: 1em 0;
+}
+
+@mixin number($size, $weight: 200) {
+  font-size: var(--number-#{$size});
+  font-weight: $weight;
 }

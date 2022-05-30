@@ -1,0 +1,18 @@
+@use "../tools/typography";
+
+.cmp-toc-link {
+  display: block;
+  line-height: 1;
+  text-decoration: none;
+  
+  &__number {
+    display: block;
+    @include typography.number('large');
+  }
+  
+  &__text {
+    text-decoration: underline;
+    text-decoration-thickness: 1px; 
+    @include typography.style('heading-3');
+  }
+}

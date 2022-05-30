@@ -29,8 +29,8 @@
 //    to write comments describing the colors and font stacks as a guide.
 //    If using features such as custom properties, those that are global
 //    custom properties should be described in this section.
-
 @use "settings/root";
+
 
 // =====================================================================
 // 2. Tools
@@ -63,6 +63,7 @@
 //    Class-based selectors which define undercoated design patterns,
 //    for example media object known from OOCSS.
 @use "objects/limiters";
+@use "objects/grid";
 
 
 // =====================================================================
@@ -72,6 +73,7 @@
 @use "components/typography";
 @use "components/hero";
 @use "components/circle";
+@use "components/toc-link";
 
 
 // =====================================================================
@@ -86,4 +88,5 @@
 // 8. Utilities
 //    Utilities and helper classes with ability to override anything
 //    which goes before in the triangle, eg. hide helper class
+@use "utilities/sparkle";
 @use "utilities/visually-hidden";

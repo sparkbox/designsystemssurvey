@@ -1,14 +1,20 @@
 @use "colors";
 @use "font-size";
+@use "spacer";
 
 :root {
   --font-display: "Sole Sans Hairline", serif;
   --font-text: "Sole Sans", sans-serif;
   
-  --hero-max-width: 80rem;
+  --max-width: 80rem;
+  --hero-max-width: var(--max-width);
 
   @each $key, $value in font-size.$sizes {
     --size-#{$key}: #{$value};
+  }
+  
+  @each $key, $value in font-size.$numbers {
+    --number-#{$key}: #{$value};
   }
 
   @each $key, $value in colors.$colors {
@@ -17,5 +23,9 @@
 
   @each $key, $value in colors.$colors {
     --color-#{$key}: hsl(var(--color-#{$key}-val));
+  }
+  
+  @each $key, $value in spacer.$spacer {
+    --space-#{$key}: #{$value};
   }
 }
