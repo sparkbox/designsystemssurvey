@@ -8,6 +8,31 @@ body {
   color: var(--color-white);
   background-color: var(--color-black);
   position: relative;
+
+  @supports (mix-blend-mode: overlay) {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 2000;
+      pointer-events: none;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      mix-blend-mode: overlay;
+    }
+
+    &::before {
+      background: url('/images/noise-white.png') center / 150px auto;
+      opacity: 0.25;
+    }
+
+    &::after {
+      background: url('/images/halftone.png') center / 320px auto fixed;
+      opacity: 0.2;
+    }
+  }
 }
 
 b,
