@@ -5,7 +5,9 @@ const autoprefixer = require('autoprefixer')
 const postcss = require('postcss')
 const postcssCustomProperties = require('postcss-custom-properties')
 
+// Comment out the next and uncomment the following to build only the current year
 const years = ['2019', '2020', '2021', '2022']
+// const years = ['2022']
 const sparkle = path.resolve('node_modules/@sparkbox')
 
 years.forEach((year) => {
