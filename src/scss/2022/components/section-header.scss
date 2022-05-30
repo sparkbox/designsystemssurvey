@@ -1,0 +1,56 @@
+@use "../tools/typography";
+@use "../tools/svg" as *;
+@use "../tools/color" as *;
+@use "../tools/space" as *;
+
+.section-header {
+  padding-top: space('10vh');
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: block;
+    height: min(40vmin, 26rem);
+    width: min(40vmin, 26rem);
+    background: radial-gradient(circle at 200% 50%,
+                                hsla(var(--color-pink-1-val), 1) 0%,
+                                hsla(var(--color-pink-2-val), 1) 60%,
+                                hsla(var(--color-black-val), 0) 95%)
+                                no-repeat;
+    position: absolute;
+    top: calc(10vh + 8rem);
+    left: calc(50% + 6rem);
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    pointer-events: none;
+    mix-blend-mode: hard-light;
+  }
+
+  &__title {
+    @include typography.style('heading-1');
+    line-height: 1;
+    position: relative;
+    padding-top: 3.5rem;
+    padding-left: 5rem;
+
+    &::before {
+      pointer-events: none;
+      font-family: var(--font-text);
+      @include typography.number('small');
+      content: '0' attr(data-number);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-flex;
+      place-items: start;
+      height: 8rem;
+      width: 6rem;
+      color: var(--color-gray);
+      background: svg('<svg width="290" height="439"><path d="m287 2.327-284 435" stroke="#{color(dark)}" stroke-width="5"/></svg>') no-repeat center / contain;
+    }
+  }
+  
+  p {
+    @include typography.style('section-description');
+  }
+}

@@ -1,0 +1,6 @@
+@use "../settings/spacer" as *;
+
+@function space($key) {
+  $key: $key + '';
+  @return map-get($spacer, $key);
+}
