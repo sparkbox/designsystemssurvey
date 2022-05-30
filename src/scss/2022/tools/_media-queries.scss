@@ -1,0 +1,5 @@
+@use "../settings/media-queries" as *;
+
+@function mq($key) {
+  @return map-get($media-queries, stringify($key));
+}

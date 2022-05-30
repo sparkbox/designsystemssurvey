@@ -1,0 +1,74 @@
+@use "../tools/media-queries" as *;
+
+.obj-grid {
+  --grid-size: 4;
+  --gap: initial;
+  --gap-row: initial;
+  --gap-col: initial;
+  --gap-md: var(--gap);
+  --gap-row-md: var(--gap-row);
+  --gap-col-md: var(--gap-col);
+  --gap-lg: var(--gap-md);
+  --gap-row-lg: var(--gap-row-md);
+  --gap-col-lg: var(--gap-col-md);
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-auto-rows: minmax(1rem, auto);
+  row-gap: var(--gap-row, var(--gap));
+  column-gap: var(--gap-col, var(--gap));
+  
+  @media (min-width: 50rem) {
+    --grid-size: 8;
+    row-gap: var(--gap-row-md, var(--gap-md));
+    column-gap: var(--gap-col-md, var(--gap-md));
+  }
+  
+  @media (min-width: 70rem) {
+    --grid-size: 12;
+    row-gap: var(--gap-row-lg, var(--gap-lg));
+    column-gap: var(--gap-col-lg, var(--gap-lg));
+  }
+
+
+
+  &__col {
+    --start: 1;
+    --span: 4;
+    --align: 'top';
+    --row-span: 1;
+    --row-start: auto;
+    --order: auto;
+    --start-md: var(--start);
+    --span-md: var(--span);
+    --align-md: var(--align);
+    --row-span-md: var(--row-span);
+    --row-start-md: var(--row-start);
+    --order-md: var(--order);
+    --start-lg: var(--start-md);
+    --span-lg: var(--span-md);
+    --align-lg: var(--align-md);
+    --row-span-lg: var(--row-span-md);
+    --row-start-lg: var(--row-start-md);
+    --order-lg: var(--order-md);
+
+    grid-column: var(--start) / span var(--span);
+    grid-row: var(--row-start) / span var(--row-span);
+    align-self: var(--align);
+    order: var(--order);
+    
+    @media (min-width: 50rem) {
+      grid-column: var(--start-md) / span var(--span-md);
+      grid-row: var(--row-start-md) / span var(--row-span-md);
+      align-self: var(--align-md);
+      order: var(--order-md);
+    }
+    
+    @media (min-width: 70rem) {
+      grid-column: var(--start-lg) / span var(--span-lg);
+      grid-row: var(--row-start-lg) / span var(--row-span-lg);
+      align-self: var(--align-lg);
+      order: var(--order-lg);
+    }
+  }
+}

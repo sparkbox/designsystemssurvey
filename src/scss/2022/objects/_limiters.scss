@@ -1,4 +1,10 @@
 .obj-width-limiter {
-  width: min(90%, 80rem);
+  width: min(calc(100% - 3rem), var(--max-width));
   margin: 0 auto;
+}
+
+.obj-screen-block {
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
 }
