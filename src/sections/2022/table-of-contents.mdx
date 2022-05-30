@@ -1,27 +1,30 @@
 import Grid from "../../components/2022/grid"
 import GridCell from "../../components/2022/grid-cell"
 import TOCLink from "../../components/2022/toc-link"
+import ScreenBlock from "../../components/2022/screen-block"
 
-<>
-  <h2 class="cmp-type-body-large">Concepts</h2>
-  <Grid gap="md" gapMD="lg" gapLG="1xl" className="util-space-10vh">
-    <GridCell spanLG="4" >
-      <TOCLink to={1} text="The Respondents" />
-    </ GridCell>
-    <GridCell spanLG="4" startLG="6">
-      <TOCLink to={2} text="What’s in a Design&nbsp;System" />
-    </ GridCell>
-    <GridCell spanLG="4">
-      <TOCLink to={3} text="Subscribers’ Needs" />
-    </ GridCell>
-    <GridCell spanLG="4" startLG="6">
-      <TOCLink to={4} text="Maintainers’ Challenges" />
-    </ GridCell>
-    <GridCell spanLG="4">
-      <TOCLink to={5} text="Accepting Contributions" />
-    </ GridCell>
-    <GridCell spanLG="4" startLG="6">
-      <TOCLink to={6} text="Looking Ahead" />
-    </GridCell>
-  </Grid>
-</>
+<nav id="toc">
+  <ScreenBlock>
+    <h2 class="cmp-type-body-large util-pad-top-lg util-color-gray">Concepts</h2>
+    <Grid gap="md" gapMD="lg" gapLG="1xl" className="util-margin-vrt-10vh">
+      <GridCell spanLG="4" >
+        <TOCLink to={1} text="The Respondents" />
+      </ GridCell>
+      <GridCell spanLG="4" startLG="6">
+        <TOCLink to={2} text="What’s in a Design&nbsp;System" />
+      </ GridCell>
+      <GridCell spanLG="4">
+        <TOCLink to={3} text="Subscribers’ Needs" />
+      </ GridCell>
+      <GridCell spanLG="4" startLG="6">
+        <TOCLink to={4} text="Maintainers’ Challenges" />
+      </ GridCell>
+      <GridCell spanLG="4">
+        <TOCLink to={5} text="Accepting Contributions" />
+      </ GridCell>
+      <GridCell spanLG="4" startLG="6">
+        <TOCLink to={6} text="Looking Ahead" />
+      </GridCell>
+    </Grid>
+  </ScreenBlock>
+</nav>

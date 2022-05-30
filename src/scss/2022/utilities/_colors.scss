@@ -1,0 +1,7 @@
+@use "../settings/colors";
+
+@each $key, $value in colors.$colors {
+  .util-color-#{$key} {
+    color: var(--color-#{$key});
+  }
+}

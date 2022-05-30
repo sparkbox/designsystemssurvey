@@ -6,5 +6,6 @@
 .obj-screen-block {
   min-height: 100vh;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  place-items: start center;
 }

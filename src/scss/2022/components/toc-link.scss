@@ -1,18 +1,31 @@
 @use "../tools/typography";
 
 .cmp-toc-link {
+  --default-color: var(--color-gray);
   display: block;
-  line-height: 1;
+  line-height: 1.25;
   text-decoration: none;
+  color: var(--default-color);
+  transition: color 150ms ease-in-out;
   
+  &:hover {
+    --default-color: hsla(var(--color-white-val), 1);
+  }
+
   &__number {
     display: block;
+    line-height: 1;
     @include typography.number('large');
   }
   
   &__text {
-    text-decoration: underline;
-    text-decoration-thickness: 1px; 
     @include typography.style('heading-3');
+    border-bottom: 1px solid var(--default-color);
+    color: var(--color-white);
+    transition: border-bottom-color 150ms ease-in-out;
+  }
+
+  &__arrow {
+    transform: translate(0.25rem, 0.125rem);
   }
 }
