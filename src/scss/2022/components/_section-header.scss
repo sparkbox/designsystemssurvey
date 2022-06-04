@@ -4,7 +4,7 @@
 @use "../tools/space" as *;
 
 .section-header {
-  padding-top: space('10vh');
+  padding: space('10vh') 0;
   position: relative;
   
   &::after {
@@ -12,13 +12,18 @@
     display: block;
     height: min(40vmin, 26rem);
     width: min(40vmin, 26rem);
+    border: 1px solid hsla(var(--color-pink-1-val), 0.3);
     background: radial-gradient(circle at 200% 50%,
-                                hsla(var(--color-pink-1-val), 1) 0%,
-                                hsla(var(--color-pink-2-val), 1) 60%,
+                                hsla(var(--color-pink-1-val), 0.5) 0%, 40%,
+                                hsla(var(--color-pink-2-val), 0.5) 60%,
                                 hsla(var(--color-black-val), 0) 95%)
                                 no-repeat;
+    mask-image: radial-gradient(circle at 200% 50%,
+                                #000f 0%,
+                                #000f 60%,
+                                #0000 95%);
     position: absolute;
-    top: calc(10vh + 8rem);
+    top: calc(10vh + 12rem);
     left: calc(50% + 6rem);
     transform: rotate(-45deg);
     transform-origin: top left;

@@ -8,6 +8,9 @@
   }
   font-size: var(--size-#{$size});
   font-weight: $weight;
+  @if $size == 'caption' {
+    font-style: italic;
+  }
 }
 
 @mixin number($size, $weight: 200) {

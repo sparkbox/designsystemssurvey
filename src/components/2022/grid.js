@@ -7,9 +7,15 @@ const Grid = (props) => {
   cssProperties['--gap'] = (props.gap) ? `var(--space-${props.gap})` : null
    cssProperties['--gap-row'] = (props.gapRow) ? `var(--space-${props.gapRow})`:  null
   cssProperties['--gap-col'] = (props.gapCol) ? `var(--space-${props.gapCol})`:  null
+  
+  cssProperties['--gap-sm'] = (props.gapSM) ? `var(--space-${props.gapSM})`: null
+  cssProperties['--gap-row-sm'] = (props.gapRowSM) ? `var(--space-${props.gapRowSM})`: null
+  cssProperties['--gap-col-sm'] = (props.gapColSM) ? `var(--space-${props.gapColSM})`: null
+
   cssProperties['--gap-md'] = (props.gapMD) ? `var(--space-${props.gapMD})`: null
   cssProperties['--gap-row-md'] = (props.gapRowMD) ? `var(--space-${props.gapRowMD})`: null
   cssProperties['--gap-col-md'] = (props.gapColMD) ? `var(--space-${props.gapColMD})`: null
+
   cssProperties['--gap-lg'] = (props.gapLG) ? `var(--space-${props.gapLG})`: null
   cssProperties['--gap-row-lg'] = (props.gapRowLG) ? `var(--space-${props.gapRowLG})`: null
   cssProperties['--gap-col-lg'] = (props.gapColLG) ? `var(--space-${props.gapColLG})`: null

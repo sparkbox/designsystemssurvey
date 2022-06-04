@@ -10,6 +10,13 @@ const GridCell = (props) => {
   cssProperties['--row-span'] = (props.rowSpan) ? props.rowSpan : null
   cssProperties['--row-start'] = (props.rowStart) ? props.rowStart : null
   cssProperties['--order'] = (props.order) ? props.order : null
+  
+  cssProperties['--start-sm'] = (props.startSM) ? props.startSM : null
+  cssProperties['--span-sm'] = (props.spanSM) ? props.spanSM : null
+  cssProperties['--align-sm'] = (props.alignSM) ? props.alignSM : null
+  cssProperties['--row-span-sm'] = (props.rowSpanSM) ? props.rowSpanSM : null
+  cssProperties['--row-start-sm'] = (props.rowStartSM) ? props.rowStartSM : null
+  cssProperties['--order-sm'] = (props.orderSM) ? props.orderSM : null
 
   cssProperties['--start-md'] = (props.startMD) ? props.startMD : null
   cssProperties['--span-md'] = (props.spanMD) ? props.spanMD : null

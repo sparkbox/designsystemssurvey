@@ -2,12 +2,23 @@
 
 .obj-grid {
   --grid-size: 4;
+
+  // Default
   --gap: initial;
   --gap-row: initial;
   --gap-col: initial;
-  --gap-md: var(--gap);
-  --gap-row-md: var(--gap-row);
-  --gap-col-md: var(--gap-col);
+
+  // Default @SM
+  --gap-sm: var(--gap);
+  --gap-row-sm: var(--gap-row);
+  --gap-col-sm: var(--gap-col);
+
+  // Default @MD
+  --gap-md: var(--gap-sm);
+  --gap-row-md: var(--gap-row-sm);
+  --gap-col-md: var(--gap-col-sm);
+
+  // Default @LG
   --gap-lg: var(--gap-md);
   --gap-row-lg: var(--gap-row-md);
   --gap-col-lg: var(--gap-col-md);
@@ -18,33 +29,50 @@
   row-gap: var(--gap-row, var(--gap));
   column-gap: var(--gap-col, var(--gap));
   
-  @media (min-width: 50rem) {
+  @media (min-width: mq('sm')) {
+    --grid-size: 4;
+    row-gap: var(--gap-row-sm, var(--gap-sm));
+    column-gap: var(--gap-col-sm, var(--gap-sm));
+  }
+
+  @media (min-width: mq('md')) {
     --grid-size: 8;
     row-gap: var(--gap-row-md, var(--gap-md));
     column-gap: var(--gap-col-md, var(--gap-md));
   }
   
-  @media (min-width: 70rem) {
+  @media (min-width: mq('lg')) {
     --grid-size: 12;
     row-gap: var(--gap-row-lg, var(--gap-lg));
     column-gap: var(--gap-col-lg, var(--gap-lg));
   }
 
-
-
   &__col {
+    // Default
     --start: 1;
     --span: 4;
     --align: 'top';
     --row-span: 1;
     --row-start: auto;
     --order: auto;
-    --start-md: var(--start);
-    --span-md: var(--span);
-    --align-md: var(--align);
-    --row-span-md: var(--row-span);
-    --row-start-md: var(--row-start);
-    --order-md: var(--order);
+
+    // Default @SM
+    --start-sm: var(--start);
+    --span-sm: var(--span);
+    --align-sm: var(--align);
+    --row-span-sm: var(--row-span);
+    --row-start-sm: var(--row-start);
+    --order-sm: var(--order);
+
+    // Default @MD
+    --start-md: var(--start-sm);
+    --span-md: var(--span-sm);
+    --align-md: var(--align-sm);
+    --row-span-md: var(--row-span-sm);
+    --row-start-md: var(--row-start-sm);
+    --order-md: var(--order-sm);
+
+    // Default @LG
     --start-lg: var(--start-md);
     --span-lg: var(--span-md);
     --align-lg: var(--align-md);
@@ -57,14 +85,21 @@
     align-self: var(--align);
     order: var(--order);
     
-    @media (min-width: 50rem) {
+    @media (min-width: mq('sm')) {
+      grid-column: var(--start-sm) / span var(--span-sm);
+      grid-row: var(--row-start-sm) / span var(--row-span-sm);
+      align-self: var(--align-sm);
+      order: var(--order-sm);
+    }
+
+    @media (min-width: mq('md')) {
       grid-column: var(--start-md) / span var(--span-md);
       grid-row: var(--row-start-md) / span var(--row-span-md);
       align-self: var(--align-md);
       order: var(--order-md);
     }
     
-    @media (min-width: 70rem) {
+    @media (min-width: mq('lg')) {
       grid-column: var(--start-lg) / span var(--span-lg);
       grid-row: var(--row-start-lg) / span var(--row-span-lg);
       align-self: var(--align-lg);

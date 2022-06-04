@@ -1,0 +1,39 @@
+@use "../tools/typography";
+
+.cmp-number {
+  border-top: 1px solid currentcolor;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+
+  &--small {
+    padding: 1rem 0;
+  }
+  
+  &--large {
+    padding: 1.75rem 0;
+  }
+
+  &__value {
+    text-align: left;
+    line-height: 0.75;
+    &--small {
+      @include typography.number('medium');
+    }
+
+    &--large {
+      @include typography.number('xlarge');
+    }
+  }
+  
+  &__title {
+    text-align: right;
+    &--small {
+      @include typography.style('body-default');
+    }
+    
+    &--large {
+      @include typography.style('body-xlarge');
+    }
+  }
+}

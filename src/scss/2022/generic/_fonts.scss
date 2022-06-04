@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: "Sole Sans";
+  src: url('https://assets.sparkbox.com/fonts/sole/sole-sans-vf-regular-extra-condensed-italic/font.woff2') format('woff2-variations');
+  font-weight: 100 800;
+  font-style: italic;
+  font-stretch: 80% 130%;
+}
+
+@font-face {
   font-family: "Sole Sans Hairline";
   src: url('https://assets.sparkbox.com/fonts/sole/sole-serif-hairline/font.woff2') format('woff2'),
        url('https://assets.sparkbox.com/fonts/sole/sole-serif-hairline/font.woff') format('woff');

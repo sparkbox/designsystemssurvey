@@ -1,10 +1,48 @@
 import SectionHeader from "../../components/2022/section-header"
 import ScreenBlock from "../../components/2022/screen-block"
+import Grid from "../../components/2022/grid"
+import GridCell from "../../components/2022/grid-cell"
+import Number from "../../components/2022/number"
 
 <ScreenBlock>
 <div id="section-2">
-  <SectionHeader number={2} title="What’s in a Design&nbsp;System">
+  <SectionHeader number={2} title="What’s in a Design System">
     <p>When asked about what their design systems contain, most respondents reported that their design systems included the usual suspects—fonts and colors, components and documentation, grids and layouts, etc.</p>
   </SectionHeader>
+  
+  <Grid gap="lg" gapColMD="1xl" gapColLG="none">
+    <GridCell spanSM={2} spanMD={4} spanLG={3}>
+      <Number title="Typefaces, colors, and&nbsp;styles" number="98%" />
+    </GridCell>
+    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={5}>
+      <Number title="Components" number="95%" />
+    </GridCell>
+    <GridCell spanSM={2} spanMD={4} spanLG={3} startLG={9}>
+      <Number title="Component Documentation" number="85%" />
+    </GridCell>
+    
+    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={1}>
+      <Number title="Designer-ready assets" number="75%" />
+    </GridCell>
+    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={1} startMD={1} startLG={5}>
+      <Number title="Grid/layout systems" number="71%" />
+    </GridCell>
+    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={9}>
+      <Number title="Design tokens" number="69%" />
+    </GridCell>
+    
+    <GridCell spanSM={2} spanMD={4} spanLG={3} startMD={1} startLG={1}>
+      <Number title="Developer-ready code" number="65%" />
+    </GridCell>
+    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={5}>
+      <Number title="Accessibility Guidelines" number="57%" />
+    </GridCell>
+  </Grid>
+  
+  <Grid className="util-margin-top-1xl">
+    <GridCell spanLG={9}>
+      <h3>What's more interesting is what they &ldquo;didn&rsquo;t&rdquo; have in their design systems.</h3>
+    </GridCell>
+  </Grid>
 </div>
 </ScreenBlock>

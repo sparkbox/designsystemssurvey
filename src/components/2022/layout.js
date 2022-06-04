@@ -13,7 +13,7 @@ import "../../js/safe-focus"
 // siteMetadata comes from gatsby-config.js
 const Layout = ({ children }) => {
   return (
-    <div class="obj-frame">
+    <div className="obj-page-wrapper">
       <div className="obj-width-limiter">
         {children}
       </div>
