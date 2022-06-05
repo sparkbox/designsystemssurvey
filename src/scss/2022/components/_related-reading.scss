@@ -13,7 +13,7 @@
   
   &__image {
     box-shadow: 0 0 0 0.125rem var(--color-black),0 0 0 0 var(--color-white);
-    transition: box-shadow 150ms ease-in-out;
+    transition: box-shadow var(--default-duration) var(--default-timing);
   }
   
   &__link:hover &__image {
@@ -24,5 +24,14 @@
     @include type.style('body-xlarge');
     font-weight: 400;
     margin: 0;
+  }
+  
+  &__arrow {
+    margin-left: space('sm');
+    transition: margin-left var(--default-duration) var(--default-timing);
+  }
+  
+  &__link:hover &__arrow {
+    margin-left: space('md');
   }
 }

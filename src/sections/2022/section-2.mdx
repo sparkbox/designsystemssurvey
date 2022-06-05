@@ -50,7 +50,7 @@ import RelatedReading from "../../components/2022/related-reading"
     <GridCell spanLG={3}>
       <p>Fewer than 50% of respondents reported having content guidelines, experience design principles, or release information.</p>
       <p>And fewer than 35% have playgrounds to experiment with code or animation guidance.</p>
-      <p>Respondents: 219 Respondents were asked to select all that applied.</p>
+      <p class="cmp-type-caption">Respondents: 219 Respondents were asked to select all that applied.</p>
     </GridCell>
     <GridCell span={2} startLG={5}>
       <Gauge title="Content Guidelines" number={45} />
@@ -74,6 +74,21 @@ import RelatedReading from "../../components/2022/related-reading"
   <Grid>
     <GridCell spanLG={9}>
       <p class="cmp-type-heading-4">We were also curious about what established processes and practices were in place for our respondent’s design systems. We found that 61% of respondents had processes for subscribers to contribute to the design system. Just 44% had governance models or shared the product roadmap for the design system. And only 16% tracked metrics&mdash;which is consistent with last year’s survey results.</p>
+    </GridCell>
+  </Grid>
+  
+  <Grid gap="lg" gapColMD="1xl" gapColLG="none">
+    <GridCell span={2}>
+      <Gauge title="Onboarding new subscribers and/or contributors" number={84} />
+    </GridCell>
+    <GridCell span={2} startLG={4}>
+      <Gauge title="Determining what to add, update, or remove" number={78} />
+    </GridCell>
+    <GridCell span={2} startLG={7}>
+      <Gauge title="Contributing" number={76} />
+    </GridCell>
+    <GridCell span={2}  startLG={10}>
+      <Gauge title="Training and Support" number={76} />
     </GridCell>
   </Grid>
 </div>

@@ -28,4 +28,7 @@
   @each $key, $value in spacer.$spacer {
     --space-#{$key}: #{$value};
   }
+  
+  --default-duration: 150ms;
+  --default-timing: ease-in-out;
 }

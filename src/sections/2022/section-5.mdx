@@ -1,10 +1,35 @@
 import SectionHeader from "../../components/2022/section-header"
 import ScreenBlock from "../../components/2022/screen-block"
+import Grid from "../../components/2022/grid"
+import GridCell from "../../components/2022/grid-cell"
+import RelatedReading from "../../components/2022/related-reading"
+import Gauge from "../../components/2022/gauge"
 
 <ScreenBlock>
 <div id="section-5">
   <SectionHeader number={5} title="Accepting Contributions">
     <p>The most frequent approach to contribution reported by our maintainer respondents (at 57%) is to have subscribers submit feature requests and bug reports. But 36% of respondents said their design system lacks a defined process for accepting contributions and 4% said they don’t accept contributions at all.</p>
   </SectionHeader>
+  
+  <Grid gap="lg" gapColMD="1xl" gapColLG="none">
+    <GridCell span={3}>
+      <Gauge title="Subscribers submitting coded features, updates, and/or bug fixes" number={92} size="large" />
+    </GridCell>
+    <GridCell span={3} startLG={5}>
+      <Gauge title="Subscribers submitting designs" number={83} size="large" />
+    </GridCell>
+    <GridCell span={3} startLG={9}>
+      <Gauge title="Subscribers submitting feature requests and/or bug reports" number={76} size="large" />
+    </GridCell>
+  </Grid>
+  
+  <RelatedReading
+    title="Design System Maturity Model Assessment"
+    description="Focusing on a contribution model is a sign of a mature design system. Get feedback on the evolution of your system by taking this assessment."
+    image="https://sparkbox.com/uploads/featured_images/b-callahan_21-03.png"
+    href="https://sparkbox.com/foundry/design_system_maturity_model"
+  />
+  
+  
 </div>
 </ScreenBlock>

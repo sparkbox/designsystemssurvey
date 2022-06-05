@@ -6,7 +6,7 @@
   line-height: 1.25;
   text-decoration: none;
   color: var(--default-color);
-  transition: color 150ms ease-in-out;
+  transition: color var(--default-duration) var(--default-timing);
   
   &:hover {
     --default-color: hsla(var(--color-white-val), 1);
@@ -22,7 +22,7 @@
     @include typography.style('heading-3');
     border-bottom: 1px solid var(--default-color);
     color: var(--color-white);
-    transition: border-bottom-color 150ms ease-in-out;
+    transition: border-bottom-color var(--default-duration) var(--default-timing);
   }
 
   &__arrow {

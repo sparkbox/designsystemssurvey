@@ -27,12 +27,12 @@
     width: 100%;
     height: 100%;
     background:
-      fills.dots(white, 6, 0.5) repeat fixed,
       conic-gradient(
-        currentcolor 0deg,
-        currentcolor var(--deg),
-        transparent var(--deg)) no-repeat;
-    mask-image: img.svg('<svg height="10" width="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" stroke="#000" stroke-width="0.75" r="4.5" /></svg>');
+        var(--color-gray) 0deg,
+        var(--color-gray) var(--deg),
+        transparent var(--deg)) no-repeat,
+      fills.dots(white, 6, 0.5) repeat fixed;
+    mask-image: img.svg('<svg height="10" width="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" stroke="#000" vector-effect="non-scaling-stroke" stroke-width="16" r="4.5" /></svg>');
     mask-size: contain;
   }
   
@@ -43,6 +43,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    &--large {
+      font-size: var(--number-large);
+    }
   }
   
   &__title {
