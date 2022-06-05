@@ -12,7 +12,7 @@ $settings: (
   'system-spacing': true,
   'system-font-family': false,
   'system-font-size': false,
-  'system-font-weight': false,
+  'system-font-weight': true,
   'utility-margin': true,
   'utility-padding': true,
   'utility-position-spacing': false,
@@ -44,6 +44,11 @@ $settings: (
 
 @import "../settings/media-queries";
 @import "../settings/spacer";
+
+$font-weight: (
+  'base': 200,
+  'regular': 400
+);
 
 @import "sparkle/tools";
 

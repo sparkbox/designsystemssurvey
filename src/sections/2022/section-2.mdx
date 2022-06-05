@@ -3,6 +3,8 @@ import ScreenBlock from "../../components/2022/screen-block"
 import Grid from "../../components/2022/grid"
 import GridCell from "../../components/2022/grid-cell"
 import Number from "../../components/2022/number"
+import Gauge from "../../components/2022/gauge"
+import RelatedReading from "../../components/2022/related-reading"
 
 <ScreenBlock>
 <div id="section-2">
@@ -41,7 +43,37 @@ import Number from "../../components/2022/number"
   
   <Grid className="util-margin-top-1xl">
     <GridCell spanLG={9}>
-      <h3>What's more interesting is what they &ldquo;didn&rsquo;t&rdquo; have in their design systems.</h3>
+      <h3>What’s more interesting is what they “didn’t” have in their design systems.</h3>
+    </GridCell>
+  </Grid>
+  <Grid className="util-margin-top-1xl" gapRow="2xl">
+    <GridCell spanLG={3}>
+      <p>Fewer than 50% of respondents reported having content guidelines, experience design principles, or release information.</p>
+      <p>And fewer than 35% have playgrounds to experiment with code or animation guidance.</p>
+      <p>Respondents: 219 Respondents were asked to select all that applied.</p>
+    </GridCell>
+    <GridCell span={2} startLG={5}>
+      <Gauge title="Content Guidelines" number={45} />
+    </GridCell>
+    <GridCell span={2}  startLG={8}>
+      <Gauge title="Experience Design Principles" number={42} />
+    </GridCell>
+    <GridCell span={2}  startLG={11}>
+      <Gauge title="Release Information" number={41} />
+    </GridCell>
+    <GridCell span={2} startLG={5}>
+      <Gauge title="Playground to Experiment&nbsp;with&nbsp;Code" number={34} />
+    </GridCell>
+    <GridCell span={2} startLG={8}>
+      <Gauge title="Animation Guidelines" number={19} />
+    </GridCell>
+  </Grid>
+  
+  <RelatedReading title="The Anatomy of a Design System" description="A design system should have certain fundamental pieces in order to be successful. But what are those pieces?" image="https://sparkbox.com/uploads/featured_images/b-callahan_22-04.png" href="https://sparkbox.com/foundry/design_system_makeup_design_system_layers_parts_of_a_design_system" />
+    
+  <Grid>
+    <GridCell spanLG={9}>
+      <p class="cmp-type-heading-4">We were also curious about what established processes and practices were in place for our respondent’s design systems. We found that 61% of respondents had processes for subscribers to contribute to the design system. Just 44% had governance models or shared the product roadmap for the design system. And only 16% tracked metrics&mdash;which is consistent with last year’s survey results.</p>
     </GridCell>
   </Grid>
 </div>
