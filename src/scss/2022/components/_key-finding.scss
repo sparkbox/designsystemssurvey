@@ -1,6 +1,7 @@
 @use "../tools/typography";
 @use "../tools/fills";
 @use "../tools/space" as *;
+@use "../tools/color";
 
 .cmp-key-finding {
   background-color: var(--color-black);
@@ -16,7 +17,7 @@
   
   &::before {
     inset: #{space('lg') * -1};
-    background: fills.dots(white, 6, 0.5) repeat fixed;
+    background: fills.dots(color.alpha('gray', 0.8), 6, 0.5) repeat fixed;
     z-index: var(--z1);
   }
   

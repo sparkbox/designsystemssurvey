@@ -10,8 +10,8 @@ const KeyFinding = ({ children }) => {
       <div className="cmp-key-finding__content">
         <Grid>
           <GridCell spanLG={10} startLG={2}>
-            <h4 class="cmp-key-finding__title">Key Finding</h4>
-            <p class="cmp-key-finding__text">{ children }</p>
+            <h4 className="cmp-key-finding__title">Key Finding</h4>
+            <p className="cmp-key-finding__text">{ children }</p>
           </GridCell>
         </Grid>
       </div>

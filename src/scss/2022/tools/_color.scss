@@ -5,3 +5,9 @@
   $color: map-get($colors, $name);
   @return 'hsl(#{$color})';
 }
+
+@function alpha($name, $alpha) {
+  $name: $name + '';
+  $color: map-get($colors, $name);
+  @return 'hsla(#{$color}, #{$alpha})';
+}

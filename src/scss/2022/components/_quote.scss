@@ -1,0 +1,28 @@
+@use "../tools/space" as *;
+@use "../tools/typography";
+@use "../tools/fills";
+@use "../tools/color";
+
+.cmp-quote {
+  margin: 20vh 0;
+  padding: space('1xl') 0 space('2xl');
+  background: fills.diagonal(color.alpha('dark', 0.2), 8) repeat fixed;
+
+  &__text {
+    @include typography.style('heading-3');
+    margin: 0 0 space('lg');
+    
+    &::before {
+      font-family: var(--font-display);
+      font-size: 8rem;
+      content: '\201C';
+      display: block;
+      line-height: 0.75;
+    }
+  }
+
+  &__source {
+    @include typography.style('body-default');
+    margin: 0;
+  }
+}

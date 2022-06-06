@@ -5,6 +5,7 @@ import GridCell from "../../components/2022/grid-cell"
 import RelatedReading from "../../components/2022/related-reading"
 import Gauge from "../../components/2022/gauge"
 import KeyFinding from "../../components/2022/key-finding"
+import Quote from "../../components/2022/quote"
 
 <ScreenBlock>
 <div id="section-5">
@@ -14,14 +15,10 @@ import KeyFinding from "../../components/2022/key-finding"
   
   <p>BAR CHART</p>
   
-  <blockquote>
-    <p>Good contributions are SO important. They are the crucial feedback required to tell you what's working and what's not.</p>
-    <p>Design System Maintainer</p>
-  </blockquote>
-  
+  <Quote source="Design System Maintainer">Good contributions are <span aria-label="so">SO</span> important. They are the crucial feedback required to tell you what's working and what's not.</Quote>
   
   <Grid gap="lg" gapColMD="1xl" gapColLG="none">
-    <GridCell>
+    <GridCell spanLG={9}>
       <p className="cmp-type-heading-3">Maintainers who viewed their design system as successful were very likely to have a contribution process for their design system.</p>
     </GridCell>
     <GridCell span={3}>
@@ -37,14 +34,7 @@ import KeyFinding from "../../components/2022/key-finding"
   
   <KeyFinding>Only 33% of maintainers are satisfied with their design system's current stance on accepting contributions.</KeyFinding>
   
-  <blockquote>
-    <p>When starting the system, we focused on
-      contributions as actively helping to build patterns for
-      teams to leverage. It helped designers onboard into
-      the system and tools while creating evangelists for
-      the system.</p>
-    <p>Individual contributor, slightly successful design system</p>
-  </blockquote>
+  <Quote source="Individual contributor, slightly successful design system">When starting the system, we focused on contributions as actively helping to build patterns for teams to leverage. It helped designers onboard into the system and tools while creating evangelists for the system.</Quote>
   
   <RelatedReading
     title="Design System Maturity Model Assessment"
