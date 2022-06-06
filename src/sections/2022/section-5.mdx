@@ -11,7 +11,18 @@ import Gauge from "../../components/2022/gauge"
     <p>The most frequent approach to contribution reported by our maintainer respondents (at 57%) is to have subscribers submit feature requests and bug reports. But 36% of respondents said their design system lacks a defined process for accepting contributions and 4% said they don’t accept contributions at all.</p>
   </SectionHeader>
   
+  <p>BAR CHART</p>
+  
+  <blockquote>
+    <p>Good contributions are SO important. They are the crucial feedback required to tell you what's working and what's not.</p>
+    <p>Design System Maintainer</p>
+  </blockquote>
+  
+  
   <Grid gap="lg" gapColMD="1xl" gapColLG="none">
+    <GridCell>
+      <p className="cmp-type-heading-3">Maintainers who viewed their design system as successful were very likely to have a contribution process for their design system.</p>
+    </GridCell>
     <GridCell span={3}>
       <Gauge title="Subscribers submitting coded features, updates, and/or bug fixes" number={92} size="large" />
     </GridCell>
@@ -22,6 +33,20 @@ import Gauge from "../../components/2022/gauge"
       <Gauge title="Subscribers submitting feature requests and/or bug reports" number={76} size="large" />
     </GridCell>
   </Grid>
+  
+  <div>
+    <h4 className="cmp-type-body-default">Key Finding</h4>
+    <p className="cmp-type-heading-3">Only 33% of maintainers are satisfied with their design system's current stance on accepting contributions.</p>
+  </div>
+  
+  <blockquote>
+    <p>When starting the system, we focused on
+      contributions as actively helping to build patterns for
+      teams to leverage. It helped designers onboard into
+      the system and tools while creating evangelists for
+      the system.</p>
+    <p>Individual contributor, slightly successful design system</p>
+  </blockquote>
   
   <RelatedReading
     title="Design System Maturity Model Assessment"
