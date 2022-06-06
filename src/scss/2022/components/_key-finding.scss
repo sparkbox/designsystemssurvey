@@ -1,0 +1,46 @@
+@use "../tools/typography";
+@use "../tools/fills";
+@use "../tools/space" as *;
+
+.cmp-key-finding {
+  background-color: var(--color-black);
+  position: relative;
+  margin: calc(20vh + #{space('lg')}) 0 space('3xl');
+  
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+  
+  &::before {
+    inset: #{space('lg') * -1};
+    background: fills.dots(white, 6, 0.5) repeat fixed;
+    z-index: var(--z1);
+  }
+  
+  &::after {
+    inset: 0;
+    background-color: var(--color-black);
+    z-index: calc(var(--z1) + 1);
+  }
+  
+  &__content {
+    position: relative;
+    z-index: calc(var(--z1) + 2);
+    padding: space('1xl') 0 space('2xl');
+  }
+  
+  &__title {
+    @include typography.style('body-default');
+    border-top: 1px solid currentcolor;
+    padding-top: space('sm');
+  }
+  
+  &__text {
+    @include typography.style('heading-2');
+    line-height: 1.25;
+    margin: space('lg') 0 0;
+  }
+}
