@@ -24,6 +24,11 @@
     color: var(--color-white);
     transition: border-bottom-color var(--default-duration) var(--default-timing);
   }
+  
+  &__last {
+    display: inline-block;
+    white-space: nowrap;
+  }
 
   &__arrow {
     transform: translate(0.25rem, 0.125rem);
