@@ -16,7 +16,7 @@
   }
   
   &::before {
-    inset: #{space('lg') * -1};
+    inset: -1.5rem;
     background: fills.dots(color.alpha('gray', 0.8), 6, 0.5) repeat fixed;
     z-index: var(--z1);
   }

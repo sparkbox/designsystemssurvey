@@ -8,8 +8,8 @@ const KeyFinding = ({ children }) => {
   return (
     <div className="cmp-key-finding">
       <div className="cmp-key-finding__content">
-        <Grid>
-          <GridCell spanLG={10} startLG={2}>
+        <Grid className="util-margin-hrz-md util-margin-hrz-lg@md util-margin-hrz-none@lg">
+          <GridCell spanMD={8} spanLG={10} startLG={2}>
             <h4 className="cmp-key-finding__title">Key Finding</h4>
             <p className="cmp-key-finding__text">{ children }</p>
           </GridCell>

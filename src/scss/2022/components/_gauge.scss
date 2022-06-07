@@ -1,3 +1,4 @@
+@use "../tools/media-queries" as *;
 @use "../tools/typography";
 @use "../tools/fills";
 @use "../tools/color";
@@ -33,8 +34,12 @@
         var(--color-gray) var(--deg),
         transparent var(--deg)) no-repeat,
       fills.dots(color.alpha('gray', 0.8), 6, 0.5) repeat fixed;
-    mask-image: img.svg('<svg height="10" width="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" stroke="#000" vector-effect="non-scaling-stroke" stroke-width="16" r="4.5" /></svg>');
+    mask-image: img.svg('<svg height="10" width="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" stroke="#000" vector-effect="non-scaling-stroke" stroke-width="10" r="4.5" /></svg>');
     mask-size: contain;
+    
+    @media(min-width: mq(sm)) {
+      mask-image: img.svg('<svg height="10" width="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" stroke="#000" vector-effect="non-scaling-stroke" stroke-width="16" r="4.5" /></svg>');
+    }
   }
   
   &__percent {
