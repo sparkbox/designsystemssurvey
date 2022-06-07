@@ -18,7 +18,7 @@ The build system for this website uses Node and Gatsby, with each survey being a
 3. Open [localhost:8000/2022](http://localhost:8000/2022) in your browser to view the site
 
 ## Run all years (except 2018)
-1. In your shell run `npm run start:all`
+1. In your shell run `npm run start`
 2. A hot-reloading development environment of the all Gatsby versions will start at `http://localhost:8000`.
 3. Open [localhost:8000](http://localhost:8000) in your browser and select the desired year to view
 
