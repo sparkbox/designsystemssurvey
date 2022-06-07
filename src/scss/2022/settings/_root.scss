@@ -29,6 +29,8 @@
     --space-#{$key}: #{$value};
   }
   
+  --space-limiter-margin: 1.5rem;
+  
   --default-duration: 150ms;
   --default-timing: ease-in-out;
   

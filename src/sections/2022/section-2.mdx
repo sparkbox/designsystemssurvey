@@ -15,58 +15,58 @@ import Quote from "../../components/2022/quote"
   </SectionHeader>
   
   <Grid gap="lg" gapColMD="1xl" gapColLG="none">
-    <GridCell spanSM={2} spanMD={4} spanLG={3}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3}>
       <Number title="Typefaces, colors, and&nbsp;styles" number="98%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={5}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={5}>
       <Number title="Components" number="95%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startLG={9}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startLG={9}>
       <Number title="Component Documentation" number="85%" />
     </GridCell>
     
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={1}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={1}>
       <Number title="Designer-ready assets" number="75%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={1} startMD={1} startLG={5}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={1} startMD={1} startLG={5}>
       <Number title="Grid/layout systems" number="71%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={9}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={9}>
       <Number title="Design tokens" number="69%" />
     </GridCell>
     
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startMD={1} startLG={1}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startMD={1} startLG={1}>
       <Number title="Developer-ready code" number="65%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={5}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={5}>
       <Number title="Accessibility Guidelines" number="57%" />
     </GridCell>
   </Grid>
   
   <Grid className="util-margin-top-1xl">
-    <GridCell spanLG={9}>
+    <GridCell spanMD={7} spanLG={9}>
       <h3>What’s more interesting is what they “didn’t” have in their design systems.</h3>
     </GridCell>
   </Grid>
-  <Grid className="util-margin-top-1xl" gapRow="2xl">
-    <GridCell spanLG={3}>
+  <Grid className="util-margin-top-1xl" gapRowMD="2xl" gap="lg">
+    <GridCell spanSM={3} spanMD={2} spanLG={3} rowSpanMD={2} positionMD="sticky" topMD="10vh">
       <p>Fewer than 50% of respondents reported having content guidelines, experience design principles, or release information.</p>
       <p>And fewer than 35% have playgrounds to experiment with code or animation guidance.</p>
       <p class="cmp-type-caption">Respondents: 219 Respondents were asked to select all that applied.</p>
     </GridCell>
-    <GridCell span={2} startLG={5}>
+    <GridCell span={4} start={2} spanSM={3} startSM={4} spanMD={2} startMD={3} startLG={5}>
       <Gauge title="Content Guidelines" number={45} />
     </GridCell>
-    <GridCell span={2}  startLG={8}>
+    <GridCell span={4} start={2} spanSM={3} startSM={1} spanMD={2} startMD={5} startLG={8}>
       <Gauge title="Experience Design Principles" number={42} />
     </GridCell>
-    <GridCell span={2}  startLG={11}>
+    <GridCell span={4} start={2} spanSM={3} startSM={4} spanMD={2} startMD={7} startLG={11}>
       <Gauge title="Release Information" number={41} />
     </GridCell>
-    <GridCell span={2} startLG={5}>
-      <Gauge title="Playground to Experiment&nbsp;with&nbsp;Code" number={34} />
+    <GridCell span={4} start={2} spanSM={3} startSM={1} spanMD={2} startMD={3} startLG={5}>
+      <Gauge title="Playground to Experiment with&nbsp;Code" number={34} />
     </GridCell>
-    <GridCell span={2} startLG={8}>
+    <GridCell span={4} start={2} spanSM={3} startSM={4} startMD={5} spanMD={2} startLG={8}>
       <Gauge title="Animation Guidelines" number={19} />
     </GridCell>
   </Grid>
@@ -74,7 +74,7 @@ import Quote from "../../components/2022/quote"
   <RelatedReading title="The Anatomy of a Design System" description="A design system should have certain fundamental pieces in order to be successful. But what are those pieces?" image="https://sparkbox.com/uploads/featured_images/b-callahan_22-04.png" href="https://sparkbox.com/foundry/design_system_makeup_design_system_layers_parts_of_a_design_system" />
     
   <Grid>
-    <GridCell spanLG={9}>
+    <GridCell spanMD={7} spanLG={9}>
       <p class="cmp-type-heading-4">We were also curious about what established processes and practices were in place for our respondent’s design systems. We found that 61% of respondents had processes for subscribers to contribute to the design system. Just 44% had governance models or shared the product roadmap for the design system. And only 16% tracked metrics&mdash;which is consistent with last year’s survey results.</p>
     </GridCell>
   </Grid>
@@ -84,19 +84,19 @@ import Quote from "../../components/2022/quote"
   <Quote source="Design System Maintainer">[Our design system] has completely revolutionized how we collaborate with other teams and document and present our brand. Now, we can't imagine operating any other way.</Quote>
 
   <Grid gap="lg" gapColMD="1xl" gapColLG="none">
-    <GridCell spanLG={9}>
+    <GridCell spanMD={7} spanLG={9}>
       <h3>Respondents who felt their design system was successful had established processes and practices in place.</h3>
     </GridCell>
-    <GridCell span={2}>
+    <GridCell span={4} start={2} spanSM={3} startSM={1} startMD={2} startLG={1} spanLG={2}>
       <Gauge title="Onboarding new subscribers and/or contributors" number={84} />
     </GridCell>
-    <GridCell span={2} startLG={4}>
+    <GridCell span={4} start={2} spanSM={3} startSM={4} startMD={5} startLG={4} spanLG={2}>
       <Gauge title="Determining what to add, update, or remove" number={78} />
     </GridCell>
-    <GridCell span={2} startLG={7}>
+    <GridCell span={4} start={2} spanSM={3} startSM={1} startMD={2} startLG={7} spanLG={2}>
       <Gauge title="Contributing" number={76} />
     </GridCell>
-    <GridCell span={2}  startLG={10}>
+    <GridCell span={4} start={2} spanSM={3} startSM={4} startMD={5} startLG={10} spanLG={2}>
       <Gauge title="Training and Support" number={76} />
     </GridCell>
   </Grid>

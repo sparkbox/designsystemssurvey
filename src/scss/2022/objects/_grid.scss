@@ -1,7 +1,7 @@
 @use "../tools/media-queries" as *;
 
 .obj-grid {
-  --grid-size: 4;
+  --grid-size: 6;
 
   // Default
   --gap: initial;
@@ -30,7 +30,7 @@
   column-gap: var(--gap-col, var(--gap));
   
   @media (min-width: mq('sm')) {
-    --grid-size: 4;
+    --grid-size: 6;
     row-gap: var(--gap-row-sm, var(--gap-sm));
     column-gap: var(--gap-col-sm, var(--gap-sm));
   }
@@ -50,11 +50,13 @@
   &__col {
     // Default
     --start: 1;
-    --span: 4;
-    --align: 'top';
+    --span: 6;
+    --align: start;
     --row-span: 1;
     --row-start: auto;
     --order: auto;
+    --position: unset;
+    --top: 0;
 
     // Default @SM
     --start-sm: var(--start);
@@ -63,6 +65,8 @@
     --row-span-sm: var(--row-span);
     --row-start-sm: var(--row-start);
     --order-sm: var(--order);
+    --position-sm: var(--position);
+    --top-sm: var(--top);
 
     // Default @MD
     --start-md: var(--start-sm);
@@ -71,6 +75,8 @@
     --row-span-md: var(--row-span-sm);
     --row-start-md: var(--row-start-sm);
     --order-md: var(--order-sm);
+    --position-md: var(--position-sm);
+    --top-md: var(--top-sm);
 
     // Default @LG
     --start-lg: var(--start-md);
@@ -79,17 +85,23 @@
     --row-span-lg: var(--row-span-md);
     --row-start-lg: var(--row-start-md);
     --order-lg: var(--order-md);
+    --position-lg: var(--position-md);
+    --top-lg: var(--top-md);
 
     grid-column: var(--start) / span var(--span);
     grid-row: var(--row-start) / span var(--row-span);
     align-self: var(--align);
     order: var(--order);
+    position: var(--position);
+    top: var(--top);
     
     @media (min-width: mq('sm')) {
       grid-column: var(--start-sm) / span var(--span-sm);
       grid-row: var(--row-start-sm) / span var(--row-span-sm);
       align-self: var(--align-sm);
       order: var(--order-sm);
+      position: var(--position-sm);
+      top: var(--top-sm);
     }
 
     @media (min-width: mq('md')) {
@@ -97,6 +109,8 @@
       grid-row: var(--row-start-md) / span var(--row-span-md);
       align-self: var(--align-md);
       order: var(--order-md);
+      position: var(--position-md);
+      top: var(--top-md);
     }
     
     @media (min-width: mq('lg')) {
@@ -104,6 +118,8 @@
       grid-row: var(--row-start-lg) / span var(--row-span-lg);
       align-self: var(--align-lg);
       order: var(--order-lg);
+      position: var(--position-lg);
+      top: var(--top-lg);
     }
   }
 }

@@ -1,9 +1,5 @@
-.obj-page-wrapper {
-  overflow: hidden;
-}
-
 .obj-width-limiter {
-  width: min(calc(100% - 3rem), var(--max-width));
+  width: min(calc(100% - (var(--space-limiter-margin) * 2)), var(--max-width));
   margin: 0 auto;
 }
 

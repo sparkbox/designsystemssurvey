@@ -17,25 +17,25 @@ import Quote from "../../components/2022/quote"
   <div>PIE CHART</div>
 
   <Grid className="util-margin-top-1xl">
-    <GridCell spanLG={9}>
+    <GridCell spanMD={7} spanLG={9}>
       <h3>The subscribers who felt their needs are met also reported their design systems have established:</h3>
     </GridCell>
   </Grid>
 
-  <Grid className="util-margin-top-1xl" gapRow="md">
-    <GridCell span={2}>
+  <Grid className="util-margin-top-1xl" gap="lg" gapColMD="1xl" gapColLG="none">
+    <GridCell span={4} start={2} spanSM={3} spanLG={2} startSM={1} startMD={2} startLG={1}>
       <Gauge title="Processes for determining what to add, update, or remove" number={86} />
     </GridCell>
-    <GridCell span={2} startLG={4}>
+    <GridCell span={4} start={2} spanSM={3} spanLG={2} startSM={4} startMD={5} startLG={4}>
       <Gauge title="Onboarding new subscribers and/or contributors" number={83} />
     </GridCell>
-    <GridCell span={2} startLG={7}>
+    <GridCell span={4} start={2} spanSM={3} spanLG={2} startSM={1} startMD={2} startLG={7}>
       <Gauge title="Support and training" number={75} />
     </GridCell>
-    <GridCell span={2} startLG={10}>
+    <GridCell span={6} start={1} spanSM={3} spanLG={3} startSM={4} startMD={5} startLG={10} align="center" alignLG="start">
       <p>In addition, 67% of these satisfied subscribers reported that their design system was the source of truth for how things should be done and 85% felt supported by the design system maintainers.</p>
     </GridCell>
-    <GridCell>
+    <GridCell startMD={2} startLG={1}>
       <p class="cmp-type-caption">Responses: 29</p>
     </GridCell>
   </Grid>
@@ -43,52 +43,52 @@ import Quote from "../../components/2022/quote"
   <KeyFinding>84% of all subscriber respondents said they are required to use the design system for their work.</KeyFinding>
 
  <Grid className="util-margin-top-1xl">
-    <GridCell spanLG={9}>
+    <GridCell spanMD={7} spanLG={9}>
       <h3>What challenges do you face when you use the design system?</h3>
     </GridCell>
   </Grid>
   
-  <Grid className="util-margin-top-1xl" gapRow="md">
-    <GridCell span={3}>
+  <Grid className="util-margin-top-1xl" gapRow="lg" gapColMD="1xl" gapColLG="none">
+    <GridCell span={6} spanMD={4} spanLG={3} rowSpanMD={2} rowSpanLG={1} topMD="20vh" positionMD="sticky" positionLG="unset">
       <p>The top challenges subscribers reported were poor documentation and not being able to tell what Is old, broken, or coming soon.</p>
       <p>Respondents also reported other challenges like poor organization and the system not having what they need. There's an opportunity to invest in a better user experience for design system subscribers.</p>
     </GridCell>
-    <GridCell span={3} startLG={5}>
+    <GridCell span={4} start={2} startMD={5} startLG={5} spanLG={3}>
       <Gauge title="It's Documented Poorly" number={39} size="large" />
     </GridCell>
-    <GridCell span={3} startLG={9}>
+    <GridCell span={4} start={2} startMD={5} startLG={9} spanLG={3}>
       <Gauge title="It's unclear what is old, broken, or&nbsp;coming&nbsp;soon" number={35} size="large" />
     </GridCell>
   </Grid>
   
   <Grid gap="lg" gapColMD="1xl" gapColLG="none" className="util-margin-top-10vh">
-    <GridCell spanSM={2} spanMD={4} spanLG={3}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3}>
       <Number title="It doesn’t have what I need" number="26%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={5}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={5}>
       <Number title="Components" number="26%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startLG={9}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startLG={9}>
       <Number title="Component Documentation" number="19%" />
     </GridCell>
     
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={1}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={1}>
       <Number title="Designer-ready assets" number="19%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={1} startMD={1} startLG={5}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={1} startMD={1} startLG={5}>
       <Number title="Grid/layout systems" number="16%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={9}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={9}>
       <Number title="Design tokens" number="13%" />
     </GridCell>
     
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startMD={1} startLG={1}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startMD={1} startLG={1}>
       <Number title="Developer-ready code" number="13%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={5}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={5} startLG={5}>
       <Number title="Accessibility Guidelines" number="13%" />
     </GridCell>
-    <GridCell spanSM={2} spanMD={4} spanLG={3} startSM={3} startMD={5} startLG={9}>
+    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={1} startLG={9}>
       <Number title="Design tokens" number="3%" />
     </GridCell>
     <GridCell>
