@@ -1,5 +1,6 @@
 @use "../tools/svg" as *;
 @use "../tools/color" as *;
+@use "../tools/media-queries" as *;
 
 .cmp-hero {
   margin: 0 auto;
@@ -24,7 +25,11 @@
     font-family: var(--font-display);
     grid-area: b;
     // Allows the font to be fluid in relation to the hero size
-    font-size: min(14vw, calc(var(--hero-max-width) * 0.14));
+    font-size: min(12vw, calc(var(--hero-max-width) * 0.12));
+    
+    @media (min-width: mq(sm)) {
+      font-size: min(14vw, calc(var(--hero-max-width) * 0.14));
+    }
 
     &::after {
       z-index: 300;
@@ -49,25 +54,32 @@
     font-weight: 100;
     font-stretch: 80%;
     // Allows the font to be fluid in relation to the hero size
-    font-size: min(24vw, calc(var(--hero-max-width) * 0.24));
     text-align: right;
     grid-area: d;
     align-self: end;
     color: var(--color-gray);
     position: relative;
     z-index: 200;
+    
+    font-size: min(20vw, calc(var(--hero-max-width) * 0.2));
+    
+    @media (min-width: mq(sm)) {
+      font-size: min(24vw, calc(var(--hero-max-width) * 0.24));
+    }
   }
 
   &__edition {
     font-weight: 200;
     // Allows the font to be fluid in relation to the hero size
-    font-size: min(25vw, calc(var(--hero-max-width) * 0.025));
+    font-size: min(5vw, calc(var(--hero-max-width) * 0.025));
     grid-area: c;
     align-self: center;
     color: var(--color-gray);
   }
   
   &__logo {
+    width: 40vw;
+    max-width: 11.875rem;
     justify-self: end;
     grid-area: a;
   }

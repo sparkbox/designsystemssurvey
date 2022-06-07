@@ -1,18 +1,18 @@
 $sizes: (
-  'heading-1': 4.5rem,
-  'heading-2': 3.5rem,
-  'heading-3': 2.5rem,
-  'heading-4': 2rem,
-  'section-description': 1.75rem,
-  'body-xlarge': 1.5rem,
-  'body-large': 1.25rem,
+  'heading-1': clamp( 2rem, 5vw, 4.5rem),
+  'heading-2': clamp( 1.75rem, 5vw, 3.5rem),
+  'heading-3': clamp( 1.625rem, 5vw, 2.5rem),
+  'heading-4': clamp( 1.5rem, 5vw, 2rem),
+  'section-description': clamp( 1.375rem, 5vw, 1.75rem),
+  'body-xlarge': clamp( 1.25rem, 5vw, 1.5rem),
+  'body-large': clamp( 1.125rem, 5vw, 1.25rem),
   'body-default': 1.0625rem,
   'caption': 0.875rem
 );
 
 $numbers: (
-  'small': 1.875rem,
-  'medium': 2.625rem,
-  'large': 5rem,
-  'xlarge': 10.625rem
+  'small': clamp(1.25rem, 5vw, 1.875rem),
+  'medium': clamp(1.5rem, 5vw, 2.625rem),
+  'large': clamp(1.75rem, 5vw, 5rem),
+  'xlarge': min(20vw, 10.625rem)
 );
