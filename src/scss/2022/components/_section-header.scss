@@ -2,6 +2,7 @@
 @use "../tools/svg" as *;
 @use "../tools/color" as *;
 @use "../tools/space" as *;
+@use "../tools/media-queries" as *;
 
 .section-header {
   padding: space('10vh') var(--space-limiter-margin);
@@ -10,10 +11,11 @@
   overflow: hidden;
   
   &::after {
+    --max-size: 26rem;
     content: '';
     display: block;
-    height: min(40vmin, 26rem);
-    width: min(40vmin, 26rem);
+    height: min(40vmin, var(--max-size));
+    width: min(40vmin, var(--max-size));
     border: 1px solid hsla(var(--color-pink-1-val), 0.3);
     background: radial-gradient(circle at 200% 50%,
                                 hsla(var(--color-pink-1-val), 0.5) 0%, 40%,
@@ -25,8 +27,8 @@
                                 #000f 60%,
                                 #0000 95%);
     position: absolute;
-    top: calc(10vh + 12rem);
-    left: calc(50% + 6rem);
+    top: calc(10vh + (var(--max-size) / 2));
+    left: calc(50% + (var(--max-size) / 5));
     transform: rotate(-45deg);
     transform-origin: top left;
     pointer-events: none;
@@ -37,23 +39,24 @@
     @include typography.style('heading-1');
     line-height: 1;
     position: relative;
-    padding-top: 3.5rem;
-    padding-left: 5rem;
+    padding-top: var(--space-1xp);
+    min-height: var(--space-2xl);
+    display: grid;
+    grid-template-columns: minmax(3rem, max-content) auto;
+    align-items: end;
+    gap: var(--space-sm);
 
     &::before {
       pointer-events: none;
       font-family: var(--font-text);
       @include typography.number('small');
       content: '0' attr(data-number);
-      position: absolute;
-      top: 0;
-      left: 0;
+      align-self: stretch; // stretches item within the parent grid
       display: inline-flex;
       place-items: start;
-      height: 8rem;
-      width: 6rem;
+      padding-right: 2em; // scales the padding the fluid font size
       color: var(--color-gray);
-      background: svg('<svg width="290" height="439"><path d="m287 2.327-284 435" stroke="#{color(dark)}" stroke-width="5"/></svg>') no-repeat center / contain;
+      background: svg('<svg width="290" height="439"><path d="m287 2.327-284 435" stroke="#{color(dark)}" stroke-width="5"/></svg>') no-repeat top right / contain;
     }
   }
   
