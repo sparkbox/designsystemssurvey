@@ -2,9 +2,9 @@
 
 .cmp-number {
   border-top: 1px solid currentcolor;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-lg);
 
   &--small {
     padding: 1rem 0;
