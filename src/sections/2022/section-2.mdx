@@ -7,6 +7,7 @@ import Gauge from "../../components/2022/gauge"
 import RelatedReading from "../../components/2022/related-reading"
 import KeyFinding from "../../components/2022/key-finding"
 import Quote from "../../components/2022/quote"
+import BarChart from "../../components/2022/bar-chart"
 
 <ScreenBlock>
 <div id="section-2">
@@ -81,6 +82,22 @@ import Quote from "../../components/2022/quote"
   
   <div>CHART HERE</div>
   
+  <BarChart
+    headingLevel="h3"
+    title="Which of the following are established for the design system you use?"
+    dataPoints={[
+      ["Process for contributing", 61],
+      ["Process for determining which features or functionality will be added, updated, or removed", 44],
+      ["Roadmap of upcoming features", 44],
+      ["Support and training for current subscribers/contributors", 37],
+      ["New subscriber/contributor onboarding", 30],
+      ["Metrics tracking/reporting (usage, satisfaction, etc.)", 16],
+      ["I don't know/prefer not to say", 11],
+      ["Other", 4]
+    ]}
+   />
+  <p class="cmp-type-caption util-margin-top-lg">Respondents: 134 | Respondents were asked to select all that applied.</p>
+
   <Quote source="Design System Maintainer">[Our design system] has completely revolutionized how we collaborate with other teams and document and present our brand. Now, we can't imagine operating any other way.</Quote>
 
   <Grid gap="lg" gapColMD="1xl" gapColLG="none">

@@ -6,6 +6,7 @@ import RelatedReading from "../../components/2022/related-reading"
 import Gauge from "../../components/2022/gauge"
 import KeyFinding from "../../components/2022/key-finding"
 import Quote from "../../components/2022/quote"
+import BarChart from "../../components/2022/bar-chart"
 
 <ScreenBlock>
 <div id="section-5">
@@ -13,8 +14,19 @@ import Quote from "../../components/2022/quote"
     <p>The most frequent approach to contribution reported by our maintainer respondents (at 57%) is to have subscribers submit feature requests and bug reports. But 36% of respondents said their design system lacks a defined process for accepting contributions and 4% said they don’t accept contributions at all.</p>
   </SectionHeader>
   
-  <p>BAR CHART</p>
-  
+  <BarChart
+    headingLevel="h3"
+    title="How do you accept contributions to the design system?"
+    dataPoints={[
+      ["Subscribers submit feature requests and/or bug reports", 57],
+      ["Subscribers submit designs", 37],
+      ["Subscribers submit coded features, updates, and/or bug fixes", 33],
+      ["We don't have a defined process for accepting contributions", 36],
+      ["We don't accept subscriber contributions", 4],
+      ["Other", 2]
+    ]} />
+  <p class="cmp-type-caption util-margin-top-lg">Responses: 162 | Respondents were asked to select all that applied.</p>
+
   <Quote source="Design System Maintainer">Good contributions are <span aria-label="so">SO</span> important. They are the crucial feedback required to tell you what's working and what's not.</Quote>
   
   <Grid gap="lg" gapColMD="1xl" gapColLG="2xl">

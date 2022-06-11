@@ -1,0 +1,31 @@
+@use "../tools/typography";
+@use "../tools/svg" as *;
+
+.cmp-bar-chart {
+  & + & {
+    margin-top: var(--space-lg);
+  }
+
+  &__title {
+    @include typography.style("body-default");
+    margin-bottom: var(--space-sm);
+  }
+
+  &__value {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include typography.number("small");
+    line-height: 1;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1em;
+      width: var(--width);
+      margin-right: var(--space-md);
+      $width: 6;
+      background: svg('<svg height="#{$width}" width="#{$width}" viewBox="0 0 #{$width} #{$width}"><path d="M1,0 1,#{$width}" fill="none" stroke-width="0.5" stroke="white" /></svg>');
+    }
+  }
+}
