@@ -2,6 +2,7 @@ import SectionHeader from "../../components/2022/section-header"
 import ScreenBlock from "../../components/2022/screen-block"
 import Grid from "../../components/2022/grid"
 import GridCell from "../../components/2022/grid-cell"
+import PieChart from "../../components/2022/pie-chart"
 import RelatedReading from "../../components/2022/related-reading"
 import Gauge from "../../components/2022/gauge"
 import Number from "../../components/2022/number"
@@ -14,7 +15,22 @@ import Quote from "../../components/2022/quote"
     <p>We asked subscribers about their experiences using design systems. We especially wanted to know if their needs were met and what challenges they faced.</p>
   </SectionHeader>
   
-  <div>PIE CHART</div>
+  <Grid className="util-margin-top-1xl">
+    <GridCell spanMD={7} spanLG={9}>
+      <h3>The design system meets my needs.</h3>
+    </GridCell>
+    <GridCell spanMD={3}>
+      <div class="cmp-pie-chart-caption">
+        <div class="cmp-pie-chart-caption__content">
+          <p class="cmp-type-body-default">Of design system subscriber respondents, 65% said their design system met their&nbsp;needs.</p>
+          <p class="cmp-type-caption">Responses: 34</p>
+        </div>
+      </div>
+    </GridCell>
+    <GridCell startMD={2} spanMD={6} startLG={3} spanLG={8}>
+      <PieChart />
+    </GridCell>
+  </Grid>
 
   <Grid className="util-margin-top-1xl">
     <GridCell spanMD={7} spanLG={9}>

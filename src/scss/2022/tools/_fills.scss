@@ -13,9 +13,9 @@
   );
 }
 
-@function diagonal($color: white, $size: 6) {
+@function diagonal($color: white, $size: 6, $width: 1) {
   @return svg(
-    '<svg height="#{$size}" width="#{$size}" viewBox="0 0 #{$size} #{$size}" stroke="#{$color}" stroke-width="1">' +
+    '<svg height="#{$size}" width="#{$size}" viewBox="0 0 #{$size} #{$size}" stroke="#{$color}" stroke-width="#{$width}">' +
       '<path d="M-1,#{$size * 2} #{$size * 2},-1 M-1,#{$size} #{$size},-1" vector-effect="non-scaling-stroke" />' +
     '</svg>'
   );
@@ -26,6 +26,12 @@
     '<svg height="#{$size}" width="#{$size}" viewBox="0 0 #{$size} #{$size}" stroke="#{$color}" stroke-width="1">' +
       '<path d="M0,0 #{$size},#{$size} M0,#{$size} #{$size},0" vector-effect="non-scaling-stroke" />' +
     '</svg>'
+  );
+}
+
+@function vertical($color: white, $width: 6, $stroke: 1) {
+  @return svg(
+    '<svg height="#{$width}" width="#{$width}" viewBox="0 0 #{$width} #{$width}"><path d="M1,0 1,#{$width}" fill="none" stroke-width="#{$stroke}" stroke="#{$color}" vector-effect="non-scaling-stroke" /></svg>'
   );
 }
 

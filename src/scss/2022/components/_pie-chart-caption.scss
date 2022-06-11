@@ -1,0 +1,12 @@
+@use "../tools/media-queries" as *;
+
+@media (min-width: mq(lg)) {
+  .cmp-pie-chart-caption {
+    position: relative;
+    
+    &__content {
+      position: absolute;
+      top: 0;
+    }
+  }
+}

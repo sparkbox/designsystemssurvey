@@ -1,0 +1,276 @@
+@use "../tools/fills";
+@use "../tools/color";
+@use "../tools/typography";
+@use "../tools/media-queries" as *;
+
+.cmp-pie-chart {
+  --object-1: 0;
+  --object-2: 0;
+  --object-3: 0;
+  --total: calc(var(--object-1) + var(--object-2) + var(--object-3));
+  
+  --turn-1: calc((var(--object-1) / var(--total)) * 360deg);
+  --turn-2: calc(((var(--object-2) / var(--total)) * 360deg) + var(--turn-1));
+  --turn-3: calc(((var(--object-3) / var(--total)) * 360deg) + var(--turn-2));
+
+  position: relative;
+
+  &__diagram {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--color-white);
+  
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 0.5px);
+    width: 1px;
+    height: 50%;
+    background-color: white;
+    z-index: 200;
+    transform-origin: 50% 100%;
+    
+    &--object-1 {
+      transform: rotate(var(--turn-1));
+    }
+    &--object-2 {
+      transform: rotate(var(--turn-2));
+    }
+    &--object-3 {
+      transform: rotate(var(--turn-3));
+    }
+  }
+
+  &__piece {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &--object-1 {
+      background-color: var(--color-black);
+      mask-image: conic-gradient(
+        #000 0deg,
+        #000 var(--turn-1),
+        transparent var(--turn-1)
+      );
+    }
+    
+    &--object-2 {
+      $size: 6;
+      background: fills.diagonal(color.alpha('gray', 0.8), 6, 0.5) fixed;
+      mask-image: conic-gradient(
+        transparent 0deg,
+        transparent var(--turn-1),
+        #000 var(--turn-1),
+        #000 var(--turn-2),
+        transparent var(--turn-2)
+      );
+    }
+    
+    &--object-3 {
+      background: fills.dots(color.alpha('gray', 0.8), 12, 1) center / 6px 6px fixed;
+      mask-image: conic-gradient(
+        transparent 0deg,
+        transparent var(--turn-2),
+        #000 var(--turn-2),
+        #000 var(--turn-3),
+        transparent var(--turn-3)
+      );
+    }
+  }
+  
+  &__keys {
+    margin-top: var(--space-lg);
+    border: 1px solid var(--color-gray);
+    transform: translateX(0.5rem);
+    
+    @media (min-width: mq(sm)) {
+      border: none;
+      margin: auto;
+      transform: unset;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 300;
+    }
+  }
+  
+  &__key {
+    @include typography.style("body-default");
+    display: flex;
+  
+    & + & {
+      border-top: 1px solid var(--color-gray);
+    }
+  
+    @media (min-width: mq(sm)) {
+      display: inline-block;
+      background-color: var(--color-black);
+      border: 1px solid var(--color-gray);
+      position: absolute;
+      padding: var(--space-xs) var(--space-sm);
+
+      &::before,
+      &::after {
+        content: '';
+        background-color: var(--color-gray);
+        position: absolute;
+        
+      }
+      
+      &::before {
+        height: 2rem;
+        width: 1px;
+        top: 100%;
+        left: 50%;
+      }
+
+      &::after {
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        top: calc(100% + 2rem);
+        left: calc(50% - 2px);
+      }
+    }
+    
+    @media (min-width: mq(md)) {
+      padding: var(--space-sm) var(--space-md);
+    }
+
+    @media (min-width: mq(lg)) {
+      white-space: nowrap;
+      
+      &::before {
+        height: 1px;
+        width: 2rem;
+        left: 100%;
+        top: calc(50% - 0.5px);
+      }
+
+      &::after {
+        top: calc(50% - 2px);
+        left: calc(100% + 2rem);
+      }
+    }
+
+    &--item-1 {
+      @media (min-width: mq(sm)) {
+        top: 50%;
+        left: 53%;
+      }
+
+      @media (min-width: mq(lg)) {
+        top: 30%;
+        left: 80%;
+        
+        &::before {
+          left: auto;
+          right: 100%;
+        }
+        
+        &::after {
+          left: auto;
+          right: calc(100% + 2rem)
+        }
+      }
+    }
+    
+    &--item-2 {
+      @media (min-width: mq(sm)) {
+        top: 40%;
+        left: 2%;
+      }
+
+      @media (min-width: mq(lg)) {
+        left: auto;
+        top: 50%;
+        right: 85%;
+      }
+    }
+    
+    &--item-3 {
+      @media (min-width: mq(sm)) {
+        top: 3%;
+        left: 10%;
+      }
+      
+      @media (min-width: mq(lg)) {
+        left: auto;
+        top: 10%;
+        right: 60%;
+      }
+    }
+  }
+  
+  &__key-title {
+    display: flex;
+    padding: 0.25em;
+    flex: 3 0 auto;
+    position: relative;
+    
+    @media (min-width: mq(sm)) {
+      display: inline;
+      padding: unset;
+      position: unset;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: 100%;
+      height: 100%;
+      width: 1rem;
+      border: 1px solid var(--color-gray);
+      border-right: 0;
+      
+      @media (min-width: mq(sm)) { 
+        content: none;
+      }
+    }
+  }
+
+  &__key--item-2 &__key-title::before {
+    background: fills.diagonal(color.alpha('gray', 0.8), 6, 0.5) fixed;
+  }
+
+  &__key--item-3 &__key-title::before {
+    background: fills.dots(color.alpha('gray', 0.8), 12, 1) center / 6px 6px fixed;
+  }
+
+  &__key-value {
+    display: inline-block;
+    padding: 0.25em;
+    border-left: 1px solid var(--color-gray);
+    flex: 0 1 2.5em;
+    text-align: right;
+    
+    @media (min-width: mq(sm)) {
+      display: inline;
+      border-left: none;
+      text-align: inherit;
+      padding: unset;
+    }
+    
+    @media (min-width: mq(lg)) {
+      &::before {
+        content: '\0020';
+      }
+    }
+  }
+}
