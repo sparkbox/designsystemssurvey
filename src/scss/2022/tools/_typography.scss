@@ -7,7 +7,11 @@
     font-family: var(--font-display);
   }
   font-size: var(--size-#{$size});
-  font-weight: $weight;
+  @if $size =='body-details' {
+    font-weight: 400;
+  } @else {
+    font-weight: $weight;
+  }
   @if $size == 'caption' {
     font-style: italic;
   }

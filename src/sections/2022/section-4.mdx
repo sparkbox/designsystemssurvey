@@ -5,14 +5,19 @@ import GridCell from "../../components/2022/grid-cell"
 import RelatedReading from "../../components/2022/related-reading"
 import Number from "../../components/2022/number"
 import Quote from "../../components/2022/quote"
+import ComarisonChart from "../../components/2022/comparison-chart"
+import ComarisonTable from "../../components/2022/comparison-table"
 
 <ScreenBlock>
 <div id="section-4">
   <SectionHeader number={4} title="Maintainers’ Challenges">
-    <p>We heard from 162 respondents who said they maintained design systems. We wanted to learn what their top challenges and priorities were this year.</p>
+    <p>We heard from 183 respondents who said they maintained design systems. We wanted to learn what their top challenges and priorities were this year.</p>
   </SectionHeader>
   
-  <Grid className="util-margin-top-1xl" gap="lg" gapColLG="none">
+  <ComarisonChart />
+  <ComarisonTable />
+  
+  {/* <Grid className="util-margin-top-1xl" gap="lg" gapColLG="none">
     <GridCell span={6} spanMD={2} rowSpanMD={3} spanLG={3}>
       <p className="cmp-type-body-default util-margin-top-none">As reported by respondents who create or maintain design systems, the top five challenges facing design systems are:</p>
     </GridCell>
@@ -31,7 +36,7 @@ import Quote from "../../components/2022/quote"
     <GridCell span={6} spanSM={3} startMD={3} startLG={5}>
       <Number title="Expanding the design system" number={5} />
     </GridCell>
-  </Grid>
+  </Grid> */}
   
   <Quote source="Design System Maintainer">We believe in our design system. It is not perfect and not perfectly used, but we all want to make it better and can all contribute.</Quote>
 
