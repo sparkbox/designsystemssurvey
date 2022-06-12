@@ -14,8 +14,12 @@ import ComarisonTable from "../../components/2022/comparison-table"
     <p>We heard from 183 respondents who said they maintained design systems. We wanted to learn what their top challenges and priorities were this year.</p>
   </SectionHeader>
   
-  <ComarisonChart />
-  <ComarisonTable />
+  <Grid>
+    <GridCell span={6} spanSM={6} spanMD={8} spanLG={12}>
+      <ComarisonChart />
+      <ComarisonTable />
+    </GridCell>
+  </Grid>
   
   {/* <Grid className="util-margin-top-1xl" gap="lg" gapColLG="none">
     <GridCell span={6} spanMD={2} rowSpanMD={3} spanLG={3}>
