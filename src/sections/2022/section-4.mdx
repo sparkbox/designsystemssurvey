@@ -15,48 +15,35 @@ import ComarisonTable from "../../components/2022/comparison-table"
   </SectionHeader>
   
   <Grid>
+    <GridCell spanMD={7} spanLG={9}>
+      <h3>What are the top two challenges for the design system at this moment?</h3>
+    </GridCell>
+  </Grid>
+  
+  <Grid>
     <GridCell span={6} spanSM={6} spanMD={8} spanLG={12}>
       <ComarisonChart />
       <ComarisonTable />
     </GridCell>
   </Grid>
-  
-  {/* <Grid className="util-margin-top-1xl" gap="lg" gapColLG="none">
-    <GridCell span={6} spanMD={2} rowSpanMD={3} spanLG={3}>
-      <p className="cmp-type-body-default util-margin-top-none">As reported by respondents who create or maintain design systems, the top five challenges facing design systems are:</p>
-    </GridCell>
-    <GridCell span={6} spanSM={3} startMD={4} startMD={3} startLG={5}>
-      <Number title="Overcoming technical / creative&nbsp;debt" number={1} />
-    </GridCell>
-    <GridCell span={6} spanSM={3} startSM={4} startMD={6} startLG={9}>
-      <Number title="Parity between design and code" number={2} />
-    </GridCell>
-    <GridCell span={6} spanSM={3} startMD={3} startLG={5}>
-      <Number title="Adoption" number={3} />
-    </GridCell>
-    <GridCell span={6} spanSM={3} startSM={4} startMD={6} startLG={9}>
-      <Number title="Staffing" number={4} />
-    </GridCell>
-    <GridCell span={6} spanSM={3} startMD={3} startLG={5}>
-      <Number title="Expanding the design system" number={5} />
-    </GridCell>
-  </Grid> */}
-  
-  <Quote source="Design System Maintainer">We believe in our design system. It is not perfect and not perfectly used, but we all want to make it better and can all contribute.</Quote>
 
-  <Grid>
-    <GridCell spanMD={7} spanLG={9}>
-      <h3>What are the top two challenges for the design system at this moment?</h3>
+  <Grid gapMD="lg" gapLG="none">
+    <GridCell spanMD={6} spanLG={9}>
+      <p className="cmp-type-heading-4">With the exception of staffing, these top five challenges were the same as their top five priorities. But how can teams overcome these challenges without adequate staffing? When we looked at maintainers who said their design systems were successful, they were more likely to have staffing as one of their top priorities.</p>
+    </GridCell>
+    <GridCell spanMD={2} startMD={7} startLG={11}>
+      <p className="cmp-type-caption">Respondents were asked to select their top two challenges and priorities but were not restricted to&nbsp;two.</p>
+      <h4 className="cmp-type-caption">Responses:</h4>
+      <p className="cmp-type-caption">Top Priorities:&nbsp;164<br />
+      6&nbsp;selected “I’m&nbsp;not&nbsp;sure” and
+      6&nbsp;selected&nbsp;“Other.”</p>
+      <p className="cmp-type-caption">Top Challenges:&nbsp;162<br />
+      5&nbsp;selected “I’m not sure” and
+      4&nbsp;selected&nbsp;“Other.”</p>
     </GridCell>
   </Grid>
-
-  <p>COMPARISON CHART</p>
-
-  <Grid>
-    <GridCell spanMD={7} spanLG={9}>
-      <p className="cmp-type-heading-3">With the exception of staffing, these top challenges were the same as their top priorities. But how can teams overcome these challenges without adequate staffing? When we looked at maintainers who said their design systems were successful, they were more likely to have staffing as one of their top priorities.</p>
-    </GridCell>
-  </Grid>
+  
+  <Quote source="Design System Maintainer">We are growing and just built our design system two years ago. But since there is not a dedicated person(s)/ team to manage and maintain, I see a lot of inconsistencies in the files and documentation.</Quote>
 
   <RelatedReading
     title="Why Your Design System Needs a Documentation Site"
@@ -64,8 +51,6 @@ import ComarisonTable from "../../components/2022/comparison-table"
     image="https://sparkbox.com/uploads/featured_images/c-meade_22-05.png"
     href="https://sparkbox.com/foundry/how_a_documentation_site_can_increase_your_design_system_subscribers"
   />
-  
-  <Quote source="Design System Maintainer">We are growing and just built our design system two years ago. But since there is not a dedicated person(s)/ team to manage and maintain, I see a lot of inconsistencies in the files and documentation.</Quote>
   
   <RelatedReading
     title="A New Design System to Meet Changing Needs"
