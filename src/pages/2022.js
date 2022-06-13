@@ -12,8 +12,8 @@ import Section3 from "../sections/2022/section-3"
 import Section4 from "../sections/2022/section-4"
 import Section5 from "../sections/2022/section-5"
 import Section6 from "../sections/2022/section-6"
-import BenCTA from "../sections/2022/ben-cta"
-import ContactForm from "../components/2022/contact-form"
+import ContactFormBen from "../components/2022/contact-form-ben"
+import ContactFormNewsletter from "../components/2022/contact-form-newsletter"
 
 import sendFormData from '../js/2022/form-submit'
 
@@ -49,11 +49,11 @@ class Page2022 extends Component {
           <Section1 />
           <Section2 />
           <Section3 />
-          <BenCTA />
+          <ContactFormBen />
           <Section4 />
           <Section5 />
           <Section6 />
-          <ContactForm />
+          <ContactFormNewsletter />
         </Layout>
       </>
     )

@@ -1,8 +1,14 @@
 function sendFormData() {
   // Sends the Form Data
-  function sendData() {
+  function sendData(form) {
+    let formContainer = form.parentElement;
+    let ariaMessage = formContainer.querySelector('.js-form-aria')
+    let errorMessage = formContainer.querySelector('.js-form-error')
+    let successMessage = formContainer.querySelector('.js-form-success')
+
     let formRequest = new XMLHttpRequest()
     let formsData = new FormData(form)
+
     formRequest.addEventListener('load', function(event) {
       form.parentElement.classList.add('form-success')
       form.setAttribute('aria-hidden', true);
@@ -20,12 +26,9 @@ function sendFormData() {
   }
 
   // Validates the Form Data
-  function validateForm() {
-    let name = document.getElementById('mce-NAME');
-    let email = document.getElementById('mce-EMAIL');
-
-    let nameMessage = document.querySelector('.js-name-message');
-    let emailMessage = document.querySelector('.js-email-message');
+  function validateForm(form, name, email) {
+    let nameMessage = form.querySelector('.js-name-message');
+    let emailMessage = form.querySelector('.js-email-message');
     // The browser validation allows both x@y.z and x@y, because of 
     // the second format considered valid, we need our own check 
     // that a top level domain is present as MailChimp requires
@@ -57,18 +60,27 @@ function sendFormData() {
 
     // Double check everything is right before sending.
     if (name.value !== "" && email.value !== "" && emailRegex.test(email.value)) {
-      sendData()
+      sendData(form)
     }
   }
 
-  let form = document.querySelector('form')
-  let ariaMessage = document.querySelector('.js-form-aria')
-  let errorMessage = document.querySelector('.js-form-error')
-  let successMessage = document.querySelector('.js-form-success')
-  form.addEventListener('submit', function (e) {
+  const contactForm = document.getElementById('form-dss-2022');
+  const contactName = document.getElementById('form-dss-2022-NAME');
+  const contactEmail = document.getElementById('form-dss-2022-EMAIL');
+
+  contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    validateForm();
-  })
+    validateForm(contactForm, contactName, contactEmail);
+  });
+  
+  const newsletterForm = document.getElementById('newsletter-dss-2022');
+  const newsletterName = document.getElementById('newsletter-dss-2022-NAME');
+  const newsletterEmail = document.getElementById('newsletter-dss-2022-EMAIL');
+
+  newsletterForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    validateForm(newsletterForm, newsletterName, newsletterEmail);
+  });
 }
 
 export default sendFormData
