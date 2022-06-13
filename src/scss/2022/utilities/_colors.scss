@@ -5,3 +5,10 @@
     color: var(--color-#{$key});
   }
 }
+
+@each $key, $value in colors.$colors {
+  .util-border-top-#{$key} {
+    border-top: 1px solid var(--color-#{$key});
+  }
+}
+

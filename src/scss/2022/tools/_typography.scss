@@ -5,6 +5,10 @@
    or $size == 'heading-4'
    or $size == 'section-description' {
     font-family: var(--font-display);
+    
+    @if $size != 'section-description' {
+      line-height: 1.1;
+    }
   }
   font-size: var(--size-#{$size});
   @if $size =='body-details' {

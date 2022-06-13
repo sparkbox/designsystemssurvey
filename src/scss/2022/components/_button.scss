@@ -1,0 +1,21 @@
+@use "../tools/unbuttonize" as *;
+@use "../tools/delink" as *;
+
+.cmp-button {
+  @include unbuttonize;
+  @include delink;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 2px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  position: relative;
+  box-shadow: 0 0 0 0 var(--color-black), 0 0 0 0 var(--color-dark);
+  transition: box-shadow 150ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 0 2px var(--color-black), 0 0 0 6px var(--color-dark);
+  }
+}

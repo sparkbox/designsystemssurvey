@@ -12,6 +12,7 @@ import Section3 from "../sections/2022/section-3"
 import Section4 from "../sections/2022/section-4"
 import Section5 from "../sections/2022/section-5"
 import Section6 from "../sections/2022/section-6"
+import BenCTA from "../sections/2022/ben-cta"
 
 const Page2022 = () => {
   return (
@@ -40,6 +41,7 @@ const Page2022 = () => {
         <Section1 />
         <Section2 />
         <Section3 />
+        <BenCTA />
         <Section4 />
         <Section5 />
         <Section6 />
