@@ -14,6 +14,7 @@ import Section5 from "../sections/2022/section-5"
 import Section6 from "../sections/2022/section-6"
 import ContactFormBen from "../components/2022/contact-form-ben"
 import ContactFormNewsletter from "../components/2022/contact-form-newsletter"
+import Footer from "../components/2022/footer"
 
 import sendFormData from '../js/2022/form-submit'
 

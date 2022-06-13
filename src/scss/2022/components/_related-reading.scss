@@ -1,23 +1,27 @@
-@use "../tools/space" as *;
 @use "../tools/typography" as type;
 
 .cmp-related-reading {
   border-top: 1px solid var(--color-gray);
-  padding-top: space('sm');
-  margin-top: space('10vh');
-  margin-bottom: space('20vh');
+  padding-top: var(--space-sm);
+  margin-top: var(--space-10vh);
+  margin-bottom: var(--space-20vh);
   
   &__link {
     text-decoration: none;
+    display: block;
+    
+    & + & {
+      margin-top: var(--space-1xl);
+    }
   }
   
   &__image {
-    box-shadow: 0 0 0 0.125rem var(--color-black),0 0 0 0 var(--color-white);
+    box-shadow: 0 0 0 0 var(--color-black), 0 0 0 0 var(--color-dark);
     transition: box-shadow var(--default-duration) var(--default-timing);
   }
   
   &__link:hover &__image {
-    box-shadow: 0 0 0 0.25rem var(--color-black),0 0 0 0.375rem var(--color-white);
+    box-shadow: 0 0 0 2px var(--color-black), 0 0 0 6px var(--color-dark);
   }
   
   &__title {
@@ -27,11 +31,11 @@
   }
   
   &__arrow {
-    margin-left: space('sm');
+    margin-left: var(--space-sm);
     transition: margin-left var(--default-duration) var(--default-timing);
   }
   
   &__link:hover &__arrow {
-    margin-left: space('md');
+    margin-left: var(--space-md);
   }
 }

@@ -3,6 +3,7 @@ import ScreenBlock from "../../components/2022/screen-block"
 import Grid from "../../components/2022/grid"
 import GridCell from "../../components/2022/grid-cell"
 import RelatedReading from "../../components/2022/related-reading"
+import RelatedArticle from "../../components/2022/related-article"
 import Number from "../../components/2022/number"
 import Quote from "../../components/2022/quote"
 import ComarisonChart from "../../components/2022/comparison-chart"
@@ -45,19 +46,18 @@ import ComarisonTable from "../../components/2022/comparison-table"
   
   <Quote source="Design System Maintainer">We are growing and just built our design system two years ago. But since there is not a dedicated person(s)/ team to manage and maintain, I see a lot of inconsistencies in the files and documentation.</Quote>
 
-  <RelatedReading
-    title="Why Your Design System Needs a Documentation Site"
-    description="Adoption has been a top challenge for many design systems over the past five years. If your team is struggling with adoption, one way to address it is to make your documentation more user-friendly."
-    image="https://sparkbox.com/uploads/featured_images/c-meade_22-05.png"
-    href="https://sparkbox.com/foundry/how_a_documentation_site_can_increase_your_design_system_subscribers"
-  />
-  
-  <RelatedReading
-    title="A New Design System to Meet Changing Needs"
-    description="Many teams face staffing struggles to support an entire organization’s design system. Learn how Sparkbox worked with a client recently to plan for this."
-    image="https://sparkbox.com/uploads/featured_images/case-study_t-barney_22-03.png"
-    href="https://sparkbox.com/foundry/design_system_action_plan_case_study_building_a_design_system_foundation"
-  />
-  
+  <RelatedReading>
+    <RelatedArticle
+      title="Why Your Design System Needs a Documentation Site"
+      description="Adoption has been a top challenge for many design systems over the past five years. If your team is struggling with adoption, one way to address it is to make your documentation more user-friendly."
+      image="/images/2022/accelerate-adoption.svg"
+      href="https://sparkbox.com/foundry/how_a_documentation_site_can_increase_your_design_system_subscribers" />
+    <RelatedArticle
+      title="A New Design System to Meet Changing Needs"
+      description="Many teams face staffing struggles to support an entire organization’s design system. Learn how Sparkbox worked with a client recently to plan for this."
+      image="/images/2022/starting-over.svg"
+      href="https://sparkbox.com/foundry/design_system_action_plan_case_study_building_a_design_system_foundation"
+    />
+  </RelatedReading>
 </div>
 </ScreenBlock>
