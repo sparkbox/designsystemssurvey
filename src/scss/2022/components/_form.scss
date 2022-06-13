@@ -1,0 +1,66 @@
+@use "../tools/typography";
+
+@keyframes form-message-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cmp-form {
+  margin: var(--space-3xl) 0 var(--space-lg);
+  padding: var(--space-1xl) 0 var(--space-2xl);
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+
+  &__error-message,
+  &__success-message {
+    display: none;
+  }
+
+  .form-error &__error-message {
+    display: block;
+    animation: form-message-fade-in 500ms ease-in forwards;
+  }
+
+  .form-success &__success-message {
+    display: block;
+    animation: form-message-fade-in 500ms ease-in forwards;
+  }
+  
+  .form-error &__fieldset,
+  .form-success &__fieldset {
+    display: none;
+  }
+  
+  &__message {
+    margin: var(--space-md) 0 0;
+  }
+  
+  &__field {
+    margin-bottom: var(--space-lg);
+  }
+  
+  &__label {
+    @include typography.style('body-large');
+    font-weight: 400;
+    display: block;
+    cursor: pointer;
+    margin-bottom: var(--space-sm);
+  }
+  
+  &__input,
+  &__input:autofill {
+    appearance: none;
+    border-radius: unset;
+    background-color: var(--color-black);
+    border: 2px solid var(--color-white);
+    color: var(--color-whiet);
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--space-sm);
+    @include typography.style('body-xlarge');
+  }
+}

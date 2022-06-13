@@ -4,6 +4,7 @@
 .cmp-button {
   @include unbuttonize;
   @include delink;
+  cursor: pointer;
   font-size: 1.25rem;
   font-weight: 400;
   display: inline-block;
