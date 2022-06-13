@@ -1,0 +1,45 @@
+@use "../tools/typography";
+
+.cmp-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: var(--space-md);
+  
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+  
+  &__social-link {
+    border-radius: 2px;
+    display: block; 
+    padding: 0.25rem;
+    line-height: 0.75;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 0 var(--color-black), 0 0 0 0 var(--color-dark);
+    transition: box-shadow 150ms ease-in-out;
+    
+    &:hover {
+      box-shadow: 0 0 0 2px var(--color-black), 0 0 0 6px var(--color-dark);
+    }
+  }
+  
+  &__links-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: var(--space-lg) 0;
+    gap: var(--space-md) var(--space-lg);
+    @include typography.style('body-large');
+  }
+  
+  &__copyright {
+    @include typography.style('body-default');
+  }
+}

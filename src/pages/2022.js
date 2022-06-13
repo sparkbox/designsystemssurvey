@@ -54,6 +54,7 @@ class Page2022 extends Component {
           <Section5 />
           <Section6 />
           <ContactFormNewsletter />
+          <Footer />
         </Layout>
       </>
     )
