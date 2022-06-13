@@ -1,0 +1,22 @@
+@use "../tools/typography";
+@use "../tools/media-queries" as *;
+
+.cmp-comparison-key {
+  display: flex;
+  gap: var(--space-lg);
+  margin: 0 0 var(--space-lg) var(--space-lg);
+  
+  @media (min-width: mq(lg)) {
+    margin-left: var(--space-1xl);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  &__title {
+    @include typography.style('body-default');
+  }
+}

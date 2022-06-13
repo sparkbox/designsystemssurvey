@@ -99,36 +99,52 @@ const ComparisonChartSVG = () => {
 
 const ComparisonChart = () => {
   return (
-    <div className="cmp-comparison-chart" aria-hidden={true}>
-      <div>
-        <div className="cmp-comparison-chart__wrapper">
-          <div className="cmp-comparison-chart__y-axis">
-            <div className="cmp-comparison-chart__y-axis-label">Responses</div>
-            <div className="cmp-comparison-chart__y-axis-item">50%</div>
-            <div className="cmp-comparison-chart__y-axis-item">40%</div>
-            <div className="cmp-comparison-chart__y-axis-item">30%</div>
-            <div className="cmp-comparison-chart__y-axis-item">20%</div>
-            <div className="cmp-comparison-chart__y-axis-item">10%</div>
-            <div className="cmp-comparison-chart__y-axis-item">0%</div>
-          </div>
-          <div className="cmp-comparison-chart__container">
-            <ComparisonChartSVG />
-          </div>
-          <div className="cmp-comparison-chart__x-axis">
-            <div className="cmp-comparison-chart__x-axis-item">Expanding the design system</div>
-            <div className="cmp-comparison-chart__x-axis-item">Adoption</div>
-            <div className="cmp-comparison-chart__x-axis-item">Parity between design & code</div>
-            <div className="cmp-comparison-chart__x-axis-item">Overcoming technical creative debt</div>
-            <div className="cmp-comparison-chart__x-axis-item">Internal education</div>
-            <div className="cmp-comparison-chart__x-axis-item">Governance</div>
-            <div className="cmp-comparison-chart__x-axis-item">Staffing</div>
-            <div className="cmp-comparison-chart__x-axis-item">Contribution</div>
-            <div className="cmp-comparison-chart__x-axis-item">Leadership buy-in</div>
-            <div className="cmp-comparison-chart__x-axis-item">Transparency about changes</div>
+    <>
+      <div className="cmp-comparison-key" aria-hidden={true}>
+        <div className="cmp-comparison-key__item">
+          <svg height="16" width="20">
+            <path d="M0,8 20,8" stroke="currentColor" stroke-width="1" />
+          </svg>
+          <div className="cmp-comparison-key__title">Top Priorities</div>
+        </div>
+        <div className="cmp-comparison-key__item">
+          <svg height="16" width="20">
+            <path d="M0,8 20,8" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" />
+          </svg>
+          <div className="cmp-comparison-key__title">Top Challenges</div>
+        </div>
+      </div>
+      <div className="cmp-comparison-chart" aria-hidden={true}>
+        <div>
+          <div className="cmp-comparison-chart__wrapper">
+            <div className="cmp-comparison-chart__y-axis">
+              <div className="cmp-comparison-chart__y-axis-label">Responses</div>
+              <div className="cmp-comparison-chart__y-axis-item">50%</div>
+              <div className="cmp-comparison-chart__y-axis-item">40%</div>
+              <div className="cmp-comparison-chart__y-axis-item">30%</div>
+              <div className="cmp-comparison-chart__y-axis-item">20%</div>
+              <div className="cmp-comparison-chart__y-axis-item">10%</div>
+              <div className="cmp-comparison-chart__y-axis-item">0%</div>
+            </div>
+            <div className="cmp-comparison-chart__container">
+              <ComparisonChartSVG />
+            </div>
+            <div className="cmp-comparison-chart__x-axis">
+              <div className="cmp-comparison-chart__x-axis-item">Expanding the design system</div>
+              <div className="cmp-comparison-chart__x-axis-item">Adoption</div>
+              <div className="cmp-comparison-chart__x-axis-item">Parity between design & code</div>
+              <div className="cmp-comparison-chart__x-axis-item">Overcoming technical creative debt</div>
+              <div className="cmp-comparison-chart__x-axis-item">Internal education</div>
+              <div className="cmp-comparison-chart__x-axis-item">Governance</div>
+              <div className="cmp-comparison-chart__x-axis-item">Staffing</div>
+              <div className="cmp-comparison-chart__x-axis-item">Contribution</div>
+              <div className="cmp-comparison-chart__x-axis-item">Leadership buy-in</div>
+              <div className="cmp-comparison-chart__x-axis-item">Transparency about changes</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
