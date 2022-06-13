@@ -12,8 +12,8 @@ const ContactForm = (props) => {
       <ContactFormSent />
       <ContactFormError />
 
-      <form className="cmp-form__fieldset" method="post" data-netlify="true" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
-        <input type="hidden" name="form-name" value="mc-embedded-subscribe-form" />
+      <form className="cmp-form__fieldset" method="post" data-netlify="true" id="form-dss-2022" name="form-dss-2022">
+        <input type="hidden" name="form-name" value="form-dss-2022" />
 
         <Grid gapMD="lg" gapLG="none">
           <GridCell spanMD={3} spanLG={4}>
