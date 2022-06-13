@@ -1,0 +1,50 @@
+The Humans involved in the Design Systems Survey
+================================================
+
+Since 2018, a group of Sparkboxers has spent time
+creating a survey and studying the results of how
+companies and teams use and make design systems.
+Then those Sparkboxers write down the information 
+and package it up into a website.
+
+2022
+----
+Leah Henderson
+Jeremy Loyd
+Kaitlyn Nielsen
+Julie Young
+Philip Zastrow
+
+2021
+----
+Colby Allen
+Emily Gray
+Kaitlyn Nielsen
+Andrew Spencer
+Julie Young
+Philip Zastrow
+
+2020
+----
+John Buedel
+Emily Gray
+Kaitlyn Nielsen
+Adam Simpson
+Philip Zastrow
+
+2019
+----
+Emily Gray
+Kaitlyn Nielsen
+Heather Taylor
+Melissa Thompson
+Philip Zastrow
+
+
+2018
+----
+Ryan Cromwell
+Emily Gray
+Ethan Muller
+July Young
+Philip Zastrow
