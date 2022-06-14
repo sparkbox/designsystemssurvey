@@ -32,7 +32,7 @@
     }
 
     &::after {
-      z-index: 300;
+      z-index: var(--z3);
       content: '';
       pointer-events: none;
       position: absolute;
@@ -46,7 +46,7 @@
   
   &__title-line {
     position: relative;
-    z-index: 200;
+    z-index: var(--z2);
   }
 
   &__year {
@@ -59,7 +59,7 @@
     align-self: end;
     color: var(--color-gray);
     position: relative;
-    z-index: 200;
+    z-index: var(--z2);
     
     font-size: min(20vw, calc(var(--hero-max-width) * 0.2));
     

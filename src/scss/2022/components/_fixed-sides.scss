@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    z-index: 1000;
+    z-index: calc(var(--z10) + 2);
     gap: var(--space-md);
 
     &__dot {

@@ -14,7 +14,7 @@ body {
     &::after {
       content: '';
       position: absolute;
-      z-index: 2000;
+      z-index: calc(var(--z10) + 1);
       pointer-events: none;
       top: 0;
       bottom: 0;

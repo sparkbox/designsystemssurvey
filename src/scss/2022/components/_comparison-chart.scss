@@ -5,12 +5,13 @@
   --chart-spacing: 1.5rem;
   overflow-x: scroll;
   overflow-y: hidden;
+  box-sizing: border-box;
   margin-left: calc(var(--chart-spacing) * -1);
   margin-right: calc(var(--chart-spacing) * -1);
   padding-bottom: 6rem;
   padding-left: var(--chart-spacing);
   position: relative;
-  width: calc(100vw - var(--chart-spacing));
+  width: calc(100vw - (var(--space-limiter-margin) - var(--chart-spacing)));
 
   @media (min-width: mq(lg)) {
     overflow: unset;
@@ -30,7 +31,7 @@
 
   &__y-axis {
     background-color: var(--color-black);
-    z-index: 300;
+    z-index: var(--z3);
     position: sticky;
     top: 0;
     padding-bottom: 2%;
@@ -106,7 +107,7 @@
       content: '';
       display: block;
       position: absolute;
-      z-index: 300;
+      z-index: var(--z3);
       width: 5rem;
       height: 100%;
       right: calc(33.333% - 2.5rem);

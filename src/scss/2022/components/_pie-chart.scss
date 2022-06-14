@@ -36,7 +36,7 @@
     width: 1px;
     height: 50%;
     background-color: white;
-    z-index: 200;
+    z-index: var(--z2);
     transform-origin: 50% 100%;
     
     &--object-1 {
@@ -104,7 +104,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 300;
+      z-index: var(--z3);
     }
   }
   

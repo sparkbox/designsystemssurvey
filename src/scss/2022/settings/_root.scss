@@ -1,6 +1,7 @@
 @use "colors";
 @use "font-size";
 @use "spacer";
+@use "../tools/media-queries" as *;
 
 :root {
   --font-display: "Sole Sans Hairline", serif;
@@ -28,13 +29,21 @@
   @each $key, $value in spacer.$spacer {
     --space-#{$key}: #{$value};
   }
+
+  --space-limiter-margin: 1rem;
+
+  @media (min-width: mq(sm)) {
+    --space-limiter-margin: 1.5rem;
+  }
   
-  --space-limiter-margin: 1.5rem;
-  
+  @media (min-width: mq(md)) {
+    --space-limiter-margin: 4rem;
+  }
+
   --default-duration: 150ms;
   --long-duration: 500ms;
   --default-timing: cubic-bezier(0,0.6,0.35,1);
-  
+
   --z1: 100;
   --z2: 200;
   --z3: 300;

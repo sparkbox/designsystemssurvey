@@ -5,11 +5,11 @@
   left: var(--distance);
   right: var(--distance);
   bottom: var(--distance);
-  z-index: 100;
+  z-index: var(--z1);
   clip-path: circle();
   
   @supports (mix-blend-mode: hard-light) {
-    z-index: 1000;
+    z-index: var(--z10);
     pointer-events: none;
     mix-blend-mode: hard-light;
   }
@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 102;
+    z-index: calc(var(--z1) + 2);
     background: linear-gradient(145deg, hsla(var(--color-blue-1-val), 0.15) 15%,
                                           hsla(var(--color-blue-2-val), 0.15) 25%,
                                           hsla(var(--color-black-val), 0) 65%);
@@ -34,7 +34,7 @@
     left: var(--distance);
     right: var(--distance);
     bottom: calc(3 * var(--distance));
-    z-index: 101;
+    z-index: calc(var(--z1) + 1);
     transform: rotate(-45deg) translate(20vw, 30vw);
     background: radial-gradient(ellipse, hsl(var(--color-pink-1-val)) 0%,
                                          hsl(var(--color-pink-2-val)) 50%,
