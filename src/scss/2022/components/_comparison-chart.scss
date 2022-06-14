@@ -2,17 +2,20 @@
 @use "../tools/media-queries" as *;
 
 .cmp-comparison-chart {
+  --chart-spacing: 1.5rem;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: calc(var(--chart-spacing) * -1);
+  margin-right: calc(var(--chart-spacing) * -1);
   padding-bottom: 6rem;
-  padding-left: 1.5rem;
+  padding-left: var(--chart-spacing);
   position: relative;
+  width: calc(100vw - var(--chart-spacing));
 
   @media (min-width: mq(lg)) {
     overflow: unset;
     margin: 0;
+    width: unset;
   }
   
   &__wrapper {
@@ -65,15 +68,17 @@
     right: 4.1875rem;
     display: inline-flex;
     justify-content: space-between;
+
     @media (min-width: mq(lg)) {
       display: flex;
+      gap: var(--space-md);
     }
   }
 
   &__x-axis-item {
     @include typography.style("body-small");
     text-align: center;
-    flex: 0 0 6rem;
+    flex: 2 2 6rem;
     width: 6rem;
     position: relative;
 
@@ -102,18 +107,24 @@
       display: block;
       position: absolute;
       z-index: 300;
-      inset: 0;
+      width: 5rem;
+      height: 100%;
+      right: calc(33.333% - 2.5rem);
       mix-blend-mode: hard-light;
-      background: radial-gradient(10% 180% at 66.6% 50%, 
-                                  hsla(var(--color-pink-1-val), 0.4) 5%, 10%,
-                                  hsla(var(--color-pink-2-val), 0.3) 20%,
-                                  hsla(var(--color-black-val), 0) 30%);
+      background-size: 100% 150%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: radial-gradient(100% 100%,
+                                        hsla(var(--color-pink-1-val), 0.4) 5%, 10%,
+                                        hsla(var(--color-pink-2-val), 0.3) 20%,
+                                        hsla(var(--color-black-val), 0) 30%);
     }
   }
   
   &__svg {
     max-width: unset;
     min-height: 25rem;
+    width: 100%;
     position: absolute;
     inset: 0 1.5rem 0 0;
   }

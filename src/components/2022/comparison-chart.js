@@ -6,7 +6,7 @@ const PlotPoint = ( percent ) => {
 
 const ComparisonChartSVG = () => {
   return (
-    <svg viewBox="-2 0 904 422" className="cmp-comparison-chart__svg">
+    <svg viewBox="-2 0 904 422" className="cmp-comparison-chart__svg"  xmlns="http://www.w3.org/2000/svg">
       <path d="M1,0 1,420
                M100,0 100,420
                M200,0 200,420
@@ -60,7 +60,7 @@ const ComparisonChartSVG = () => {
       <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.08)} cx="900" vector-effect="non-scaling-size" />
       <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.1)}cx="900" vector-effect="non-scaling-size" />
       <circle r="2" fill="var(--color-gray-30)" cy="420" cx="900" vector-effect="non-scaling-size" />
-    
+
       <path d={`M
               1, ${PlotPoint(0.41)}
               100, ${PlotPoint(0.34)}
@@ -133,12 +133,12 @@ const ComparisonChart = () => {
               <div className="cmp-comparison-chart__x-axis-item">Expanding the design system</div>
               <div className="cmp-comparison-chart__x-axis-item">Adoption</div>
               <div className="cmp-comparison-chart__x-axis-item">Parity between design & code</div>
-              <div className="cmp-comparison-chart__x-axis-item">Overcoming technical/creative debt</div>
+              <div className="cmp-comparison-chart__x-axis-item">Overcoming technical/<wbr />creative debt</div>
               <div className="cmp-comparison-chart__x-axis-item">Internal education</div>
               <div className="cmp-comparison-chart__x-axis-item">Governance</div>
               <div className="cmp-comparison-chart__x-axis-item">Staffing</div>
               <div className="cmp-comparison-chart__x-axis-item">Contribution</div>
-              <div className="cmp-comparison-chart__x-axis-item">Leadership buy-in</div>
+              <div className="cmp-comparison-chart__x-axis-item">Leadership buy&#8209;in</div>
               <div className="cmp-comparison-chart__x-axis-item">Transparency about changes</div>
             </div>
           </div>
