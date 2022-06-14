@@ -4,36 +4,33 @@
 @use "../tools/space" as *;
 @use "../tools/media-queries" as *;
 
-.section-header {
+.cmp-section-header {
   padding: space('10vh') var(--space-limiter-margin);
   margin: 0 calc(var(--space-limiter-margin) * -1);
   position: relative;
   overflow: hidden;
   
   &::after {
-    --max-size: 26rem;
+    --max-size: 40rem;
     content: '';
     display: block;
-    height: min(40vmin, var(--max-size));
-    width: min(40vmin, var(--max-size));
-    border: 1px solid hsla(var(--color-pink-1-val), 0.3);
-    background: radial-gradient(circle at 200% 50%,
-                                hsla(var(--color-pink-1-val), 0.5) 0%, 40%,
-                                hsla(var(--color-pink-2-val), 0.5) 60%,
-                                hsla(var(--color-black-val), 0) 95%)
-                                no-repeat;
-    mask-image: radial-gradient(circle at 200% 50%,
-                                #000f 0%,
-                                #000f 60%,
-                                #0000 95%);
+    height: min(50vmin, var(--max-size));
+    width: min(50vmin, var(--max-size));
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
-    top: calc(10vh + (var(--max-size) / 2));
-    left: calc(50% + (var(--max-size) / 5));
-    transform: rotate(-45deg);
-    transform-origin: top left;
+    top: 0;
+    right: 0;
     pointer-events: none;
     mix-blend-mode: hard-light;
   }
+  
+  @for $i from 1 through 6 {
+    &--item-#{$i}::after {
+      background-image: url('/images/2022/section-#{$i}.svg');
+    }
+  }
+  
 
   &__title {
     @include typography.style('heading-1');

@@ -32,7 +32,8 @@
   --space-limiter-margin: 1.5rem;
   
   --default-duration: 150ms;
-  --default-timing: ease-in-out;
+  --long-duration: 500ms;
+  --default-timing: cubic-bezier(0,0.6,0.35,1);
   
   --z1: 100;
   --z2: 200;

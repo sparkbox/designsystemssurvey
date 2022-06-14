@@ -19,7 +19,7 @@ const TOCLink = ({ to, text }) => {
   const last = words[count - 1];
   const content = text.replace(last, '');
   return (
-    <AnchorLink className="cmp-toc-link" href={`#section-${to}`}>
+    <AnchorLink className={`cmp-toc-link cmp-toc-link--${to}`} href={`#section-${to}`}>
       <span className="cmp-toc-link__number" aria-label={`Section ${to}`}>0{to}</span>
       <span className="cmp-toc-link__text">{content}</span>
       <span className="cmp-toc-link__last"><span className="cmp-toc-link__text">{last}</span><DownArrow /></span>

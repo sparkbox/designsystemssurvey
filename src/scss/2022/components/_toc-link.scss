@@ -7,9 +7,40 @@
   text-decoration: none;
   color: var(--default-color);
   transition: color var(--default-duration) var(--default-timing);
+  position: relative;
   
   &:hover {
-    --default-color: hsla(var(--color-white-val), 1);
+    --default-color: var(--color-white);
+  }
+
+
+  &::after {
+    --max-size: 20rem;
+    content: '';
+    display: block;
+    height: min(30vmin, var(--max-size));
+    width: min(30vmin, var(--max-size));
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    mix-blend-mode: hard-light;
+    opacity: 0;
+    transition: opacity var(--long-duration) var(--default-timing),
+                transform var(--long-duration) var(--default-timing);
+  }
+
+  @for $i from 1 through 6 {
+    &--#{$i}::after {
+      background-image: url('/images/2022/section-#{$i}.svg');
+    }
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translate(1.5rem, -3rem);
   }
 
   &__number {

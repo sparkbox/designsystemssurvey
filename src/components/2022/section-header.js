@@ -6,10 +6,10 @@ import GridCell from "../../components/2022/grid-cell"
 const SectionHeader = ({ title, number, children }) => {
   let content = (children) ? <GridCell spanMD={7} spanLG={9}>{children}</GridCell> : null
   return (
-    <header className="section-header">
+    <header className={`cmp-section-header cmp-section-header--item-${number}`}>
       <Grid>
         <GridCell spanMD={7}>
-          <h2 className="section-header__title" data-number={number}>{title}</h2>
+          <h2 className="cmp-section-header__title" data-number={number}>{title}</h2>
         </GridCell>
         {content}
       </Grid>
