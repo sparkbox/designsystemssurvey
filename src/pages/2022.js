@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Helmet from "react-helmet"
 import SEO from "../components/SEO"
 import Layout from '../components/2022/layout'
+import FixedSides from "../components/2022/fixed-sides"
 import Hero from "../components/2022/hero"
 import Circle from "../components/2022/circle"
 import Intro from "../sections/2022/intro"
@@ -16,10 +17,12 @@ import ContactFormBen from "../components/2022/contact-form-ben"
 import ContactFormNewsletter from "../components/2022/contact-form-newsletter"
 import Footer from "../components/2022/footer"
 
-import sendFormData from '../js/2022/form-submit'
+import sendFormData from "../js/2022/form-submit"
+import sectionObserver from "../js/2022/section-observer"
 
 class Page2022 extends Component {
   componentDidMount() {
+    sectionObserver()
     sendFormData()
   }
 
@@ -43,9 +46,12 @@ class Page2022 extends Component {
           />
         </Helmet>
         <Layout>
+          <FixedSides />
           <Circle />
-          <Hero />
-          <Intro />
+          <div data-observer="top">
+            <Hero />
+            <Intro />
+          </div>
           <TableOfContents id="toc" />
           <Section1 />
           <Section2 />

@@ -3,7 +3,7 @@ import SparkboxLogo from "./logo"
 
 const Hero = () => {
   return (
-    <header className="cmp-hero">
+    <header className="cmp-hero" id="top">
       <h1 className="util-visually-hidden">2022 Sparkbox Design Systems Survey</h1>
       <div className="cmp-hero__intro">
         <div className="cmp-hero__logo">

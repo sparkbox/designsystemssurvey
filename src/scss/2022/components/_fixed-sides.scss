@@ -1,0 +1,40 @@
+@use "../tools/media-queries" as *;
+
+@media (hover: hover) and (min-width: mq(md)) {
+  .cmp-fixed-sides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    gap: var(--space-md);
+
+    &__dot {
+      display: block;
+      border: 1px solid var(--color-white);
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 50%;
+      position: relative;
+      
+      &--active {
+        background-color: var(--color-white);
+      }
+
+      &:not(#{&}--active):hover {
+        background-color: hsla(var(--color-white-val), 0.4);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: calc(var(--space-md) * -1);
+      }
+    }
+  }
+}
