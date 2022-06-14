@@ -58,6 +58,7 @@ class Page2021 extends Component {
             <SiteIntro>
               <Grid>
                 <GridCell spanMD="5" spanLG="6">
+                  <h2 className="cmp-type-body-large"><a href="/">Check out the results from the latest Design Systems Survey</a></h2>
                   <h2 className="cmp-type-h3">
                     Welcome to the fourth edition of Sparkbox’s Design Systems Survey
                   </h2>
