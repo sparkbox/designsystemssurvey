@@ -27,7 +27,7 @@
     // Allows the font to be fluid in relation to the hero size
     font-size: min(12vw, calc(var(--hero-max-width) * 0.12));
     
-    @media (min-width: mq(sm)) {
+    @media (min-width: mq(lg)) {
       font-size: min(14vw, calc(var(--hero-max-width) * 0.14));
     }
 
@@ -63,7 +63,7 @@
     
     font-size: min(20vw, calc(var(--hero-max-width) * 0.2));
     
-    @media (min-width: mq(sm)) {
+    @media (min-width: mq(lg)) {
       font-size: min(24vw, calc(var(--hero-max-width) * 0.24));
     }
   }
