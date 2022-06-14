@@ -133,7 +133,7 @@ const ComparisonChart = () => {
               <div className="cmp-comparison-chart__x-axis-item">Expanding the design system</div>
               <div className="cmp-comparison-chart__x-axis-item">Adoption</div>
               <div className="cmp-comparison-chart__x-axis-item">Parity between design & code</div>
-              <div className="cmp-comparison-chart__x-axis-item">Overcoming technical creative debt</div>
+              <div className="cmp-comparison-chart__x-axis-item">Overcoming technical/creative debt</div>
               <div className="cmp-comparison-chart__x-axis-item">Internal education</div>
               <div className="cmp-comparison-chart__x-axis-item">Governance</div>
               <div className="cmp-comparison-chart__x-axis-item">Staffing</div>

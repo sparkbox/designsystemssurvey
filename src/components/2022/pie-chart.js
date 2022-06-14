@@ -21,7 +21,7 @@ const PieChart = () => {
           <span className="cmp-pie-chart__key-value">65%</span>
         </div>
         <div className="cmp-pie-chart__key cmp-pie-chart__key--item-2">
-          <span className="cmp-pie-chart__key-title">Neither Agree or Disagree</span>
+          <span className="cmp-pie-chart__key-title">Neither Agree nor Disagree</span>
           <span className="cmp-pie-chart__key-value">24%</span>
         </div>
         <div className="cmp-pie-chart__key cmp-pie-chart__key--item-3">
@@ -36,7 +36,7 @@ const PieChart = () => {
             <td>65%</td>
           </tr>
           <tr>
-            <th>Neither Agree or Disagree</th>
+            <th>Neither Agree nor Disagree</th>
             <td>24%</td>
           </tr>
           <tr>

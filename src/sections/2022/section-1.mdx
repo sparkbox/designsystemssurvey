@@ -5,40 +5,35 @@ import GridCell from "../../components/2022/grid-cell"
 import Number from "../../components/2022/number"
 
 <ScreenBlock>
-<article id="section-1" className="util-margin-btm-20vh" data-observer="section-1">
-  <SectionHeader number={1} title="The Respondents">
-    <p>Our survey respondents represented more than 20 industry categories, including financial services, telecommunications, IT hardware and software, healthcare and pharmaceuticals, government, manufacturing, education, and retail.</p>
-   </SectionHeader>
-   
-  <Grid className="util-margin-btm-lg util-margin-btm-1xl@md util-margin-btm-2xl@lg">
-    <GridCell spanMD={8} spanLG={7}>
-      <Number size="large" title="Total Responses" number={219} />
-    </GridCell>
-  </Grid>
-  <Grid gap="lg" gapColMD="none">
-    <GridCell spanSM={3} spanMD={4} spanLG={3}>
-      <Number title="Design / User Experience" number="58%" />
-    </GridCell>
-    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={1} startLG={5}>
-      <Number title="Development" number="19%" />
-    </GridCell>
-    <GridCell spanSM={3} spanMD={4} spanLG={3}>
-      <Number title="Management / Leadership" number="15%" />
-    </GridCell>
-    <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={1} startLG={5}>
-      <Number title="Project / Product Management" number="5%" />
-    </GridCell>
-    <GridCell spanSM={3} spanMD={4} spanLG={3}>
-      <Number title="Other" number="3%" />
-    </GridCell>
-    <GridCell spanMD={3} startMD={6} startLG={9} rowStartMD={-1} rowSpanMD={6} rowSpanLG={5} positionMD="sticky" topMD="10vh" positionLG="unset">
-      <p class="util-margin-all-none cmp-type-body-default">Our survey respondents represented more than 20 industry categories, including financial services, telecommunications, IT hardware and software, healthcare and pharmaceuticals, government, manufacturing, education, and retail.</p>
-    </GridCell>
-  </Grid>
-  <Grid>
-    <GridCell spanLG="6">
-      <p class="cmp-type-caption">We shared this survey for 4 weeks across our social media network, in Slack channels, with visitors to the Sparkbox website, and in emails to web professionals.</p>
-    </GridCell>
-  </Grid>
-</article>
+  <article id="section-1" className="util-margin-btm-20vh" data-observer="section-1">
+    <SectionHeader number={1} title="Respondents">
+      <p>Of the 219 responses, 183 spent most of their time as a creator or maintainer of a design system while 37 spent most of their time as a user or subscriber. We will refer to these respondents as maintainers and subscribers from here out.</p>
+     </SectionHeader>
+     
+    <Grid className="util-margin-btm-lg util-margin-btm-1xl@md util-margin-btm-2xl@lg">
+      <GridCell spanMD={8} spanLG={7}>
+        <Number size="large" title="Total Responses" number={219} />
+      </GridCell>
+    </Grid>
+    <Grid gap="lg" gapColMD="none">
+      <GridCell spanSM={3} spanMD={4} spanLG={3}>
+        <Number title="Design / User Experience" number="58%" />
+      </GridCell>
+      <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={1} startLG={5}>
+        <Number title="Development" number="19%" />
+      </GridCell>
+      <GridCell spanSM={3} spanMD={4} spanLG={3}>
+        <Number title="Management / Leadership" number="15%" />
+      </GridCell>
+      <GridCell spanSM={3} spanMD={4} spanLG={3} startSM={4} startMD={1} startLG={5}>
+        <Number title="Project / Product Management" number="5%" />
+      </GridCell>
+      <GridCell spanSM={3} spanMD={4} spanLG={3}>
+        <Number title="Other" number="3%" />
+      </GridCell>
+      <GridCell spanMD={3} startMD={6} startLG={9} rowStartMD={-1} rowSpanMD={6} rowSpanLG={5} positionMD="sticky" topMD="10vh" positionLG="unset">
+        <p class="util-margin-all-none cmp-type-body-default">Our survey respondents represented more than 20 industry categories, including financial services, telecommunications, IT hardware and software, healthcare and pharmaceuticals, government, manufacturing, education, and retail.</p>
+      </GridCell>
+    </Grid>
+  </article>
 </ScreenBlock>

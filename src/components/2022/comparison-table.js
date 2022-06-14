@@ -28,7 +28,7 @@ const ComparisonTable = () => {
           <td>37%</td>
         </tr>
         <tr>
-          <th>Overcoming technical creative debt</th>
+          <th>Overcoming technical/creative debt</th>
           <td>31%</td>
           <td>43%</td>
         </tr>

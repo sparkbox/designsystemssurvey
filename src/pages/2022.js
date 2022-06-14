@@ -30,7 +30,7 @@ class Page2022 extends Component {
     return (
       <>
         <SEO
-          pageDescription="2022 Description"
+          pageDescription="Why are design systems useful? Designers and developers from more than 20 industries tell us about their design systems and their uses."
           image="ogimage-2022.jpg"
           year="2022"
         />
