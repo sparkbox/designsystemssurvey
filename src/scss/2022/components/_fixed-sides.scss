@@ -1,7 +1,9 @@
 @use "../tools/media-queries" as *;
 
-@media (hover: hover) and (min-width: mq(md)) {
-  .cmp-fixed-sides {
+.cmp-fixed-sides {
+  display: none;
+
+  @media (hover: hover) and (min-width: mq(md)) {
     display: flex;
     flex-direction: column;
     justify-content: center;

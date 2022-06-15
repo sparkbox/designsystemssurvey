@@ -4,6 +4,7 @@
 @use "../tools/media-queries" as *;
 
 :root {
+  --scrollbar-width: 0;
   --font-display: "Sole Sans Hairline", serif;
   --font-text: "Sole Sans", sans-serif;
   

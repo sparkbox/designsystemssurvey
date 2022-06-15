@@ -1,3 +1,5 @@
+@use "../tools/media-queries" as *;
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -8,6 +10,11 @@ body {
   color: var(--color-white);
   background-color: var(--color-black);
   position: relative;
+  overflow-x: hidden;
+
+  @media (min-width: mq(xl)) {
+    overflow-x: unset;
+  }
 
   @supports (mix-blend-mode: overlay) {
     &::before,
