@@ -16,14 +16,31 @@
     z-index: calc(var(--z10) + 2);
     gap: var(--space-md);
 
+    &__arrow {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__top,
     &__dot {
       display: block;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    &__top {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &__dot {
       border: 1px solid var(--color-white);
       height: 0.5rem;
       width: 0.5rem;
-      border-radius: 50%;
-      position: relative;
-      
+
       &--active {
         background-color: var(--color-white);
       }
@@ -32,11 +49,40 @@
         background-color: hsla(var(--color-white-val), 0.4);
       }
 
+      // Adds Extra Hover and Press Space
       &::before {
         content: '';
         position: absolute;
         inset: calc(var(--space-md) * -1);
       }
+    }
+    
+    &__top::after,
+    &__dot::after {
+      content: attr(data-label);
+      position: absolute;
+      left: calc(100% + var(--space-md));
+      align-items: center;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      padding: var(--space-xs) var(--space-sm);
+      border: 2px solid var(--color-dark);
+      color: var(--color-white);
+      background-color: var(--color-black);
+      border-radius: 1rem;
+      transform: translateX(-1rem);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity var(--default-duration) var(--default-timing),
+                  transform var(--default-duration) var(--default-timing);
+    }
+    
+    &__top:focus::after,
+    &__top:hover::after,
+    &__dot:focus::after,
+    &__dot:hover::after {
+      transform: translateX(0);
+      opacity: 1;
     }
   }
 }
