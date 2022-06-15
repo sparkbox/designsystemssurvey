@@ -26,8 +26,9 @@
   
   &__title {
     @include type.style('body-xlarge');
+    line-height: 1.1;
     font-weight: 400;
-    margin: 0;
+    margin: 0 0 var(--space-sm);
   }
   
   &__arrow {

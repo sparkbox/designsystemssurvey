@@ -30,6 +30,7 @@
     text-align: right;
     &--small {
       @include typography.style('body-default');
+      line-height: 1.2;
     }
     
     &--large {

@@ -15,12 +15,21 @@
       line-height: 1.4;
     }
   }
+
+  // Outputs the custom property font size
   font-size: var(--size-#{$size});
+
   @if $size =='body-details' {
     font-weight: 400;
   } @else {
     font-weight: $weight;
   }
+  
+  @if $size == 'body-details' or
+      $size == 'caption' {
+    line-height: 1.2;
+  }
+
   @if $size == 'caption' {
     font-style: italic;
   }

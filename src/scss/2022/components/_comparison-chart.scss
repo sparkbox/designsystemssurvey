@@ -80,6 +80,7 @@
 
   &__x-axis-item {
     @include typography.style("body-small");
+    line-height: 1.2;
     text-align: center;
     flex: 2 2 6rem;
     width: 6rem;
