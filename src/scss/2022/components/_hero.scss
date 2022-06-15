@@ -3,6 +3,8 @@
 @use "../tools/media-queries" as *;
 
 .cmp-hero {
+  padding: var(--space-1xl) 0;
+  box-sizing: border-box;
   margin: 0 auto;
   position: relative;
   min-height: 100vh;
@@ -82,5 +84,14 @@
     max-width: 11.875rem;
     justify-self: end;
     grid-area: a;
+  }
+  
+  &__sparkbox-link {
+    display: block;
+    transition: opacity var(--default-duration) var(--default-timing);
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

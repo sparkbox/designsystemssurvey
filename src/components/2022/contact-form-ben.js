@@ -17,8 +17,8 @@ const ContactFormBen = (props) => {
 
         <Grid gapMD="lg" gapLG="none">
           <GridCell spanMD={3} spanLG={4}>
-            <h2 className="cmp-type-heading-3">Share your experience</h2>
-            <p>Chat with <a href="https://www.linkedin.com/in/bencallahan">Ben Callahan</a>, the president of Sparkbox, about your design system experiences and contribute to our growing body of research.</p>
+            <h2 className="cmp-type-heading-3" aria-label="Form: Share your experience">Share your experience</h2>
+            <p>Chat with <a href="https://www.linkedin.com/in/bencallahan" aria-label="Sparkbox President, Ben Callahan on Twitter">Ben Callahan</a>, the president of Sparkbox, about your design system experiences and contribute to our growing body of research.</p>
           </GridCell>
 
           <GridCell spanMD={5} startMD={4} spanLG={6} startLG={6}>

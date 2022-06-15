@@ -17,10 +17,10 @@ const BarChart = (props) => {
     dataBars.push(
       <div className="cmp-bar-chart" key={i} style={cssProperties}>
         <Animate type="slide-right">
-          <div className="cmp-bar-chart__title">
+          <div className="cmp-bar-chart__title" aria-hidden="true">
             {title}
           </div>
-          <div className="cmp-bar-chart__value">
+          <div className="cmp-bar-chart__value" aria-hidden="true">
             {value}%
           </div>
         </Animate>

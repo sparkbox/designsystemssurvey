@@ -17,7 +17,7 @@ const ContactFormNewsletter = (props) => {
 
         <Grid gapMD="lg" gapLG="none">
           <GridCell spanMD={3} spanLG={4}>
-            <h2 className="cmp-type-heading-3">Stay in the know</h2>
+            <h2 className="cmp-type-heading-3" aria-label="Form: Stay in the know">Stay in the know</h2>
             <p>Sign up for a monthly roundup of Sparkbox’s latest articles, research, and upcoming events.</p>
           </GridCell>
 

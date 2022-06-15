@@ -28,40 +28,43 @@ const LinkedinIcon = () => (
 const Footer = () => (
   <footer className="cmp-footer util-pad-vrt-lg">
     <p className="cmp-type-body-large">Assembled by your friends at <a href="https://sparkbox.com/">Sparkbox</a></p>  
-    <nav className="cmp-footer__social" title="Sparkbox social media (external)">
+    
+    <h2 id="social-links" className="util-visually-hidden">Sparkbox social media links</h2>
+    <nav className="cmp-footer__social" aria-labelledby="social-links">
       <a href="https://twitter.com/hearsparkbox" className="cmp-footer__social-link cmp-footer__social-link--twitter">
-        <span className="util-visually-hidden">Twitter</span>
+        <span className="util-visually-hidden" aria-label="External: Sparkbox on Twitter">Twitter</span>
         <TwitterIcon />
       </a>
       <a href="https://github.com/sparkbox" className="cmp-footer__social-link cmp-footer__social-link--github">
-        <span className="util-visually-hidden">Github</span>
+        <span className="util-visually-hidden" aria-label="External: Sparkbox on  Github">Github</span>
         <GithubIcon />
       </a>
       <a href="https://dribbble.com/sparkbox" className="cmp-footer__social-link cmp-footer__social-link--dribbble">
-        <span className="util-visually-hidden">Dribbble</span>
+        <span className="util-visually-hidden" aria-label="External: Sparkbox on  Dribbble">Dribbble</span>
         <DribbbleIcon />
       </a>
       <a href="https://www.facebook.com/seesparkbox" className="cmp-footer__social-link cmp-footer__social-link--facebook">
-        <span className="util-visually-hidden">Facebook</span>
+        <span className="util-visually-hidden" aria-label="External: Sparkbox on  Facebook">Facebook</span>
         <FacebookIcon />
       </a>
       <a href="https://www.youtube.com/channel/UCfsWcRy7Yh1WWDrrZS0Q7xw" className="cmp-footer__social-link cmp-footer__social-link--youtube">
-        <span className="util-visually-hidden">Youtube</span>
+        <span className="util-visually-hidden" aria-label="External: Sparkbox on  Youtube">Youtube</span>
         <YoutubeIcon />
       </a>
       <a href="https://www.linkedin.com/company/sparkbox/mycompany/" className="cmp-footer__social-link cmp-footer__social-link--linkedin">
-        <span className="util-visually-hidden">LinkedIn</span>
+        <span className="util-visually-hidden" aria-label="External: Sparkbox on  LinkedIn">LinkedIn</span>
         <LinkedinIcon />
       </a>
     </nav>
 
-    <nav className="cmp-footer__links-list">
-      <a href="https://sparkbox.com/contact">Drop us a line</a>
-      <a href="https://sparkbox.com/careers">Careers</a>
-      <a href="https://apprentices.sparkbox.com/">Apprenticeship</a>
+    <h2 id="more-links" className="util-visually-hidden">More information about Sparkbox</h2>
+    <nav className="cmp-footer__links-list" aria-labelledby="more-links">
+      <a href="https://sparkbox.com/contact" aria-label="External: Contact Sparkbox">Drop us a line</a>
+      <a href="https://sparkbox.com/careers" aria-label="External: Careers at Sparkbox">Careers</a>
+      <a href="https://apprentices.sparkbox.com/" aria-label="External: Apprenticeships at Sparkbox">Apprenticeship</a>
     </nav>
 
-    <p className="cmp-footer__copyright">&copy;2022 Sparkbox. All rights reserved. <a href="https://sparkbox.com/privacypolicy">Privacy Policy</a> and <a href="https://sparkbox.com/terms">Terms of Use</a></p>
+    <p className="cmp-footer__copyright">&copy;2022 Sparkbox. All rights reserved. <a href="https://sparkbox.com/privacypolicy" aria-label="External: Sparkbox’s Privacy Policy">Privacy Policy</a> and <a href="https://sparkbox.com/terms" aria-label="External: Sparkbox’s Terms of Use">Terms of Use</a></p>
   </footer>
 )
 

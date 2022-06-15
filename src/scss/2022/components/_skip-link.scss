@@ -1,0 +1,39 @@
+.cmp-skip-link {
+  // The position, bottom, and right properties
+  // ensure that the element is completely off
+  // screen without the use of arbitrary numbers
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+  // The clip paths properties ensure that any
+  // box shadows, filters, or other visual effects
+  // ouside the box model to not leak on to the page.
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+
+    &:focus {
+      display: block;
+      visibility: visible;
+      letter-spacing: 1;
+      color: var(--color-white);
+      background-color: var(--color-black);
+      padding: var(--space-md);
+      -webkit-font-smoothing: antialiased;
+  
+      // Box-shadow copies safe-focus styling
+      box-shadow: 0 0 0 2px var(--color-dark), 0 0 0 4px var(--color-black) !important;
+      position: absolute;
+      z-index: calc(var(--z10) + 10); // so it's always on top
+      top: 0.5rem;
+      left: 50%;
+      right: unset;
+      bottom: unset;
+      transform: translateX(-50%);
+      clip: unset;
+      clip-path: unset;
+    }
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }

@@ -48,13 +48,16 @@ class Page2022 extends Component {
           />
         </Helmet>
         <Layout>
-          <FixedSides />
+          <a className="cmp-skip-link" href="#toc">Skip to Menu</a>
+          <a className="cmp-skip-link" href="#section-1">Skip to Content</a>
+
           <Circle />
           <div data-observer="top">
             <Hero />
             <Intro />
           </div>
           <TableOfContents id="toc" />
+          <FixedSides />
           <Section1 />
           <Section2 />
           <Section3 />

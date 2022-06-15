@@ -8,7 +8,7 @@ const NumberBlock = ({ number, title, size }) => {
   const valueMod = sizeSet ? ` cmp-number__value--${sizeSet}` : '';
   const titleMod = sizeSet ? ` cmp-number__title--${sizeSet}` : '';
   return (
-    <div className={`cmp-number${cmpMod}`}>
+    <div className={`cmp-number${cmpMod}`} aria-label={`${title} ${number}`}>
       <Animate type="slide-right">
         <div className={`cmp-number__value${valueMod}`}>
           {number}

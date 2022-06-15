@@ -38,6 +38,7 @@
     }
   }
 
+  &:focus::after,
   &:hover::after {
     opacity: 1;
     transform: translate(1.5rem, -3rem);

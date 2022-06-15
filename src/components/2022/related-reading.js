@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 const RelatedReading = ({ children }) => {
   return (
-    <aside className="cmp-related-reading">
+    <aside className="cmp-related-reading" aria-label="Related Reading">
       <h3 className="cmp-type-body-default util-margin-btm-lg">Related Reading</h3>
       { children }
     </aside>

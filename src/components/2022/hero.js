@@ -7,7 +7,7 @@ const Hero = () => {
       <h1 className="util-visually-hidden">2022 Sparkbox Design Systems Survey</h1>
       <div className="cmp-hero__intro">
         <div className="cmp-hero__logo">
-          <a href="https://sparkbox.com" title="Sparkbox Website">
+          <a className="cmp-hero__sparkbox-link" href="https://sparkbox.com" title="Sparkbox Website">
             <SparkboxLogo />
           </a>
         </div>
