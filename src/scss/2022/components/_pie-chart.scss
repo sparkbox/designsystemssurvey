@@ -21,6 +21,7 @@
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid var(--color-white);
+    transform: scale(0.99); // Fixes a glitch on Chrome adding a pixel in the middle of conic-gradients
   
     &::after {
       content: '';
