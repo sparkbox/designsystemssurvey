@@ -19,10 +19,12 @@ import Footer from "../components/2022/footer"
 
 import sendFormData from "../js/2022/form-submit"
 import sectionObserver from "../js/2022/section-observer"
+import animationObserver from "../js/2022/animation-observer"
 
 class Page2022 extends Component {
   componentDidMount() {
     sectionObserver()
+    animationObserver()
     sendFormData()
   }
 

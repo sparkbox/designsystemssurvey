@@ -1,0 +1,49 @@
+@keyframes slide {
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+[data-animation] {
+  opacity: 0;
+}
+
+[data-animation]:not(.animation-ready) {
+  animation: slide var(--default-duration) 300ms var(--default-timing) forwards;
+}
+
+[data-animation="slide-right"].animation-ready {
+  opacity: 0;
+  transform: translateX(-2rem);
+  
+  &.slide-right {
+    animation: slide 1s var(--default-timing) forwards;
+  }
+}
+
+[data-animation="slide-left"].animation-ready {
+  opacity: 0;
+  transform: translateX(2rem);
+  
+  &.slide-left {
+    animation: slide 1s var(--default-timing) forwards;
+  }
+}
+
+[data-animation="grow"].animation-ready {
+  opacity: 0;
+  transform: scale(0.75);
+  
+  &.grow {
+    animation: grow 1s var(--default-timing) forwards;
+  }
+}

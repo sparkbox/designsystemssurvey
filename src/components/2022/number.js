@@ -1,6 +1,6 @@
 import React from "react"
-
 import PropTypes from "prop-types"
+import Animate from "./animate"
 
 const NumberBlock = ({ number, title, size }) => {
   const sizeSet = size ? size : 'small';
@@ -9,12 +9,16 @@ const NumberBlock = ({ number, title, size }) => {
   const titleMod = sizeSet ? ` cmp-number__title--${sizeSet}` : '';
   return (
     <div className={`cmp-number${cmpMod}`}>
-      <div className={`cmp-number__value${valueMod}`}>
-        {number}
-      </div>
+      <Animate type="slide-right">
+        <div className={`cmp-number__value${valueMod}`}>
+          {number}
+        </div>
+      </Animate>
+      <Animate type="slide-left">
       <div className={`cmp-number__title${titleMod}`}>
         {title}
       </div>
+      </Animate>
     </div>
   )
 }
