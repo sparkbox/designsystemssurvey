@@ -52,28 +52,31 @@ import BarChart from "../../components/2022/bar-chart"
       <h3>What’s more interesting is what they <em>didn’t</em> have in their design systems.</h3>
     </GridCell>
   </Grid>
-  <Grid className="util-margin-top-1xl" gapRowMD="2xl" gap="lg">
-    <GridCell spanSM={3} spanMD={2} spanLG={3} rowSpanMD={2} positionMD="sticky" topMD="10vh">
+  <Grid className="util-margin-top-1xl" gap="lg" gapRowMD="2xl" gapColLG="none">
+    <GridCell spanSM={3} spanMD={2} spanLG={3}>
       <p>Fewer than 50% of respondents reported having content guidelines, experience design principles, or release information.</p>
-      <p>And fewer than 35% have playgrounds to experiment with code or animation guidance.</p>
-      <p class="cmp-type-caption">Responses: 219 | Respondents were asked to select all that applied.</p>
     </GridCell>
-    <GridCell span={4} start={2} spanSM={3} startSM={4} spanMD={2} startMD={3} startLG={5}>
+    <GridCell span={4} start={2} spanSM={2} startSM={1} spanMD={2} startMD={3} startLG={5}>
       <Gauge title="Content guidelines" number={45} />
     </GridCell>
-    <GridCell span={4} start={2} spanSM={3} startSM={1} spanMD={2} startMD={5} startLG={8}>
+    <GridCell span={4} start={2} spanSM={2} startSM={3} spanMD={2} startMD={5} startLG={8}>
       <Gauge title="Experience design principles" number={42} />
     </GridCell>
-    <GridCell span={4} start={2} spanSM={3} startSM={4} spanMD={2} startMD={7} startLG={11}>
+    <GridCell span={4} start={2} spanSM={2} startSM={5} spanMD={2} startMD={7} startLG={11}>
       <Gauge title="Release information" number={41} />
     </GridCell>
-    <GridCell span={4} start={2} spanSM={3} startSM={1} spanMD={2} startMD={3} startLG={5}>
+    <GridCell spanSM={3} spanMD={2} spanLG={3}>
+      <p>And fewer than 35% have playgrounds to experiment with code or animation guidance.</p>
+    </GridCell>
+    <GridCell span={4} start={2} spanSM={2} startSM={1} spanMD={2} startMD={3} startLG={5}>
       <Gauge title="Playground to experiment with&nbsp;code" number={34} />
     </GridCell>
-    <GridCell span={4} start={2} spanSM={3} startSM={4} startMD={5} spanMD={2} startLG={8}>
+    <GridCell span={4} start={2} spanSM={2} startSM={3} startMD={5} spanMD={2} startLG={8}>
       <Gauge title="Animation guidelines" number={19} />
     </GridCell>
   </Grid>
+  
+  <p class="cmp-type-caption util-margin-top-lg">Responses: 219 | Respondents were asked to select all that applied.</p>
   
   <RelatedReading>
     <RelatedArticle title="The Anatomy of a Design System" description="A design system should have certain fundamental pieces in order to be successful. But what are those pieces?" image="/images/2022/anatomy-of-design-system.svg" href="https://sparkbox.com/foundry/design_system_makeup_design_system_layers_parts_of_a_design_system" />
