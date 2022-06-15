@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const DownArrow = () => {
   return (
@@ -19,11 +18,11 @@ const TOCLink = ({ to, text }) => {
   const last = words[count - 1];
   const content = text.replace(last, '');
   return (
-    <AnchorLink className={`cmp-toc-link cmp-toc-link--${to}`} href={`#section-${to}`} id={`section-link-${to}`}>
+    <a className={`cmp-toc-link cmp-toc-link--${to}`} href={`#section-${to}`} id={`section-link-${to}`}>
       <span className="cmp-toc-link__number" aria-label={`Section ${to}`}>0{to}</span>
       <span className="cmp-toc-link__text">{content}</span>
       <span className="cmp-toc-link__last"><span className="cmp-toc-link__text">{last}</span><DownArrow /></span>
-    </AnchorLink>
+    </a>
   )
 }
 

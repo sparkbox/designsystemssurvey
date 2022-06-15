@@ -2,9 +2,8 @@
   // The position, bottom, and right properties
   // ensure that the element is completely off
   // screen without the use of arbitrary numbers
-  position: fixed;
+  position: absolute;
   right: 100%;
-  bottom: 100%;
   // The clip paths properties ensure that any
   // box shadows, filters, or other visual effects
   // ouside the box model to not leak on to the page.
