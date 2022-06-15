@@ -3,10 +3,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const FixedSides = () => {
   return (
-    <div class="cmp-fixed-sides js-section-indicators">
+    <div className="cmp-fixed-sides js-section-indicators">
       <AnchorLink className="cmp-fixed-sides__top" href="#top">
         <span className="util-visually-hidden">Back To Top</span>
-        <svg width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 18V2M1 8l7-7 7 7" stroke="currentColor" stroke-width="1"/></svg>
+        <svg width="16" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 18V2M1 8l7-7 7 7" stroke="currentColor" strokeWidth="1"/></svg>
       </AnchorLink>
       <AnchorLink className="cmp-fixed-sides__dot" href="#section-1" data-indicator="section-1">
         <span className="util-visually-hidden">Section 1</span>

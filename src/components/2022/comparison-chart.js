@@ -18,48 +18,48 @@ const ComparisonChartSVG = () => {
                M800,0 800,420
                M900,0 900,420"
             stroke="var(--color-gray-30)"
-            stroke-width="1"
-            vector-effect="non-scaling-stroke" />
+            strokeWidth="1"
+            vectorEffect="non-scaling-stroke" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.41)}cx="1" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.34)}cx="1" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="1" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.41)}cx="1" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.34)}cx="1" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="1" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.34)}cx="100" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.36)}cx="100" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="100" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.34)}cx="100" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.36)}cx="100" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="100" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.33)}cx="200" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.37)}cx="200" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="200" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.33)}cx="200" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.37)}cx="200" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="200" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.31)}cx="300" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.43)}cx="300" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="300" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.31)}cx="300" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.43)}cx="300" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="300" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.21)}cx="400" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.32)}cx="400" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="400" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.21)}cx="400" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.32)}cx="400" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="400" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.16)}cx="500" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.33)}cx="500" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="500" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.16)}cx="500" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.33)}cx="500" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="500" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.13)}cx="600" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.35)}cx="600" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="600" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.13)}cx="600" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.35)}cx="600" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="600" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.12)}cx="700" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.23)}cx="700" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="700" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.12)}cx="700" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.23)}cx="700" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="700" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.12)}cx="800" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.16)}cx="800" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="800" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.12)}cx="800" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.16)}cx="800" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="800" vectorEffect="non-scaling-size" />
     
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.08)} cx="900" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.1)}cx="900" vector-effect="non-scaling-size" />
-      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="900" vector-effect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.08)} cx="900" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray)" cy={PlotPoint(0.1)}cx="900" vectorEffect="non-scaling-size" />
+      <circle r="2" fill="var(--color-gray-30)" cy="420" cx="900" vectorEffect="non-scaling-size" />
 
       <path d={`M
               1, ${PlotPoint(0.41)}
@@ -75,7 +75,7 @@ const ComparisonChartSVG = () => {
             `}
             fill="none"
             stroke="var(--color-gray)"
-            stroke-width="1" vector-effect="non-scaling-stroke" />
+            strokeWidth="1" vectorEffect="non-scaling-stroke" />
       <path d={`M
               1, ${PlotPoint(0.34)}
               100, ${PlotPoint(0.36)}
@@ -90,9 +90,9 @@ const ComparisonChartSVG = () => {
             `}
             fill="none"
             stroke="var(--color-gray)"
-            stroke-width="1"
-            stroke-dasharray="2 3" vector-effect="non-scaling-stroke" />
-      <path d="M1,400 900,400" stroke="var(--color-white)" stroke-width="1" />
+            strokeWidth="1"
+            strokeDasharray="2 3" vectorEffect="non-scaling-stroke" />
+      <path d="M1,400 900,400" stroke="var(--color-white)" strokeWidth="1" />
     </svg>
   )
 }
@@ -103,13 +103,13 @@ const ComparisonChart = () => {
       <div className="cmp-comparison-key" aria-hidden={true}>
         <div className="cmp-comparison-key__item">
           <svg height="16" width="20">
-            <path d="M0,8 20,8" stroke="currentColor" stroke-width="1" />
+            <path d="M0,8 20,8" stroke="currentColor" strokeWidth="1" />
           </svg>
           <div className="cmp-comparison-key__title">Top Priorities</div>
         </div>
         <div className="cmp-comparison-key__item">
           <svg height="16" width="20">
-            <path d="M0,8 20,8" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" />
+            <path d="M0,8 20,8" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
           </svg>
           <div className="cmp-comparison-key__title">Top Challenges</div>
         </div>
