@@ -15,9 +15,7 @@ const NumberBlock = ({ number, title, size }) => {
         </div>
       </Animate>
       <Animate type="slide-left">
-      <div className={`cmp-number__title${titleMod}`}>
-        {title}
-      </div>
+        <div className={`cmp-number__title${titleMod}`} dangerouslySetInnerHTML={{__html:title}} />
       </Animate>
     </div>
   )

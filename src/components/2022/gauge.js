@@ -12,9 +12,7 @@ const Gauge = ({ number, title, size }) => {
         <div className="cmp-gauge__value" style={customProp}>
           <div className={percentClass}>{number}%</div>
         </div>
-        <div className="cmp-gauge__title">
-          {title}
-        </div>
+        <div className="cmp-gauge__title" dangerouslySetInnerHTML={{__html:title}} />
       </div>
     </Animate>
   )
