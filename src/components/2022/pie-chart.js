@@ -4,7 +4,7 @@ import Animate from "./animate"
 const PieChart = () => {
   let cssProperties = {}
   cssProperties['--object-1'] = 65
-  cssProperties['--object-2'] = 24
+  cssProperties['--object-2'] = 23
   cssProperties['--object-3'] = 12
   return (
     <>
@@ -25,7 +25,7 @@ const PieChart = () => {
             </div>
             <div className="cmp-pie-chart__key cmp-pie-chart__key--item-2">
               <span className="cmp-pie-chart__key-title">Neither Agree nor Disagree</span>
-              <span className="cmp-pie-chart__key-value">24%</span>
+              <span className="cmp-pie-chart__key-value">23%</span>
             </div>
             <div className="cmp-pie-chart__key cmp-pie-chart__key--item-3">
               <span className="cmp-pie-chart__key-title">Disagree or Strongly Disagree</span>
@@ -42,7 +42,7 @@ const PieChart = () => {
           </tr>
           <tr>
             <th>Neither Agree nor Disagree</th>
-            <td>24%</td>
+            <td>23%</td>
           </tr>
           <tr>
             <th>Disagree or Strongly Disagree</th>
