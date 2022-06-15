@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import BarChartTable from "./bar-chart-table"
-import Grid from "../../components/2022/grid"
-import GridCell from "../../components/2022/grid-cell"
+import Grid from "./grid"
+import GridCell from "./grid-cell"
+import Animate from "./animate"
 
 const BarChart = (props) => {
   let dataBars = []
@@ -15,12 +16,14 @@ const BarChart = (props) => {
 
     dataBars.push(
       <div className="cmp-bar-chart" key={i} style={cssProperties}>
-        <div className="cmp-bar-chart__title">
-          {title}
-        </div>
-        <div className="cmp-bar-chart__value">
-          {value}%
-        </div>
+        <Animate type="slide-right">
+          <div className="cmp-bar-chart__title">
+            {title}
+          </div>
+          <div className="cmp-bar-chart__value">
+            {value}%
+          </div>
+        </Animate>
       </div>
     );
   }
