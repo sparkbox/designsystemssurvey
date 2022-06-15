@@ -21,3 +21,11 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Sole Sans Hairline";
+  src: url('https://assets.sparkbox.com/fonts/sole/sole-serif-hairline-italic/font.woff2') format('woff2'),
+       url('https://assets.sparkbox.com/fonts/sole/sole-serif-hairline-italic/font.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
