@@ -51,8 +51,7 @@
     margin-bottom: var(--space-sm);
   }
   
-  &__input,
-  &__input:autofill {
+  &__input {
     appearance: none;
     border-radius: unset;
     background-color: var(--color-black);
@@ -62,5 +61,12 @@
     width: 100%;
     padding: var(--space-sm);
     @include typography.style('body-xlarge');
+    box-shadow: 0 0 0 0 var(--color-black), 0 0 0 0 var(--color-dark);
+    transition: box-shadow var(--default-duration) var(--default-timing);
+    
+    .safe-focus &:focus,
+    &:focus {
+      box-shadow: 0 0 0 2px var(--color-black), 0 0 0 6px var(--color-dark);
+    }
   }
 }

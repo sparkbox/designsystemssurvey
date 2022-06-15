@@ -7,8 +7,6 @@
     // it's visible on all backgrounds. It's marked as !important so this focus
     // state takes effect even when used on elements with higher-specificity
     // box-shadows applied to them. And because focus states are important. :)
-    box-shadow:
-      0 0 0 2px black,
-      0 0 0 4px white !important;
+    box-shadow: 0 0 0 2px var(--color-black), 0 0 0 6px var(--color-dark);
   }
 }
