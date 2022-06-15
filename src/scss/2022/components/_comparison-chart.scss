@@ -66,14 +66,15 @@
   &__x-axis {
     position: absolute;
     top: 100%;
-    left: 2.4375rem;
-    right: 4.1875rem;
+    left: 2.4375rem; // 39px
+    right: 4.1875rem; // 67px
     display: inline-flex;
     justify-content: space-between;
 
     @media (min-width: mq(lg)) {
       display: flex;
       gap: var(--space-md);
+      right: 0;
     }
   }
 
