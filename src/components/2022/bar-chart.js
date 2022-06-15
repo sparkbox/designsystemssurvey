@@ -29,8 +29,8 @@ const BarChart = (props) => {
     <>
       <div aria-hidden="true">
         <Grid>
-          <GridCell spanMD={7} spanLG={9}>
-            <h3>{props.title}</h3>
+          <GridCell spanMD={7} spanLG={8}>
+            <h3 class="cmp-type-heading-3 util-margin-top-none util-margin-btm-1xl">{props.title}</h3>
           </GridCell>
         </Grid>
         {dataBars}

@@ -1,7 +1,7 @@
 @use "../tools/typography";
 
 .cmp-number {
-  border-top: 1px solid currentcolor;
+  border-top: 1px solid var(--color-dark);
   display: flex;
   justify-content: space-between;
   gap: var(--space-lg);

@@ -1,12 +1,11 @@
 @use "../tools/typography";
 @use "../tools/fills";
-@use "../tools/space" as *;
 @use "../tools/color";
 
 .cmp-key-finding {
   background-color: var(--color-black);
   position: relative;
-  margin: calc(20vh + #{space('lg')}) 0 space('3xl');
+  margin: var(--space-20vh) 0;
   
   &::before,
   &::after {
@@ -30,18 +29,18 @@
   &__content {
     position: relative;
     z-index: calc(var(--z1) + 2);
-    padding: space('1xl') 0 space('2xl');
+    padding: var(--space-1xl) 0 var(--space-2xl);
   }
   
   &__title {
     @include typography.style('body-default');
-    border-top: 1px solid currentcolor;
-    padding-top: space('sm');
+    border-top: 1px solid var(--color-dark);
+    padding-top: var(--space-sm);
   }
   
   &__text {
     @include typography.style('heading-2');
     line-height: 1.25;
-    margin: space('lg') 0 0;
+    margin: var(--space-lg) 0 0;
   }
 }

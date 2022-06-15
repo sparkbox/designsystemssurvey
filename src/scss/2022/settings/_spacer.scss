@@ -7,6 +7,6 @@ $spacer: (
   '1xl': 4rem,
   '2xl': 6rem,
   '3xl': 8rem,
-  '10vh': 10vh,
-  '20vh': 20vh
+  '10vh': max(10vh, 12rem),
+  '20vh': max(20vh, 18rem),
 );

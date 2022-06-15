@@ -92,7 +92,7 @@
   
   &__keys {
     margin-top: var(--space-lg);
-    border: 1px solid var(--color-gray);
+    border: 1px solid var(--color-dark);
     transform: translateX(0.5rem);
     
     @media (min-width: mq(sm)) {
@@ -113,13 +113,13 @@
     display: flex;
   
     & + & {
-      border-top: 1px solid var(--color-gray);
+      border-top: 1px solid var(--color-dark);
     }
   
     @media (min-width: mq(sm)) {
       display: inline-block;
       background-color: var(--color-black);
-      border: 1px solid var(--color-gray);
+      border: 1px solid var(--color-dark);
       position: absolute;
       padding: var(--space-xs) var(--space-sm);
 
@@ -236,7 +236,7 @@
       right: 100%;
       height: 100%;
       width: 1rem;
-      border: 1px solid var(--color-gray);
+      border: 1px solid var(--color-dark);
       border-right: 0;
       
       @media (min-width: mq(sm)) { 
@@ -256,7 +256,7 @@
   &__key-value {
     display: inline-block;
     padding: 0.25em;
-    border-left: 1px solid var(--color-gray);
+    border-left: 1px solid var(--color-dark);
     flex: 0 1 2.5em;
     text-align: right;
     

@@ -2,10 +2,3 @@
   width: min(calc(100% - (var(--space-limiter-margin) * 2)), var(--max-width));
   margin: 0 auto;
 }
-
-.obj-screen-block {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  place-items: start center;
-}

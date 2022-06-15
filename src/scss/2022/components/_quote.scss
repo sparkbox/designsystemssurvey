@@ -1,16 +1,15 @@
-@use "../tools/space" as *;
 @use "../tools/typography";
 @use "../tools/fills";
 @use "../tools/color";
 
 .cmp-quote {
-  margin: 20vh 0;
-  padding: space('1xl') 0 space('2xl');
+  margin: var(--space-20vh) 0;
+  padding: var(--space-1xl) 0 var(--space-2xl);
   background: fills.diagonal(color.alpha('dark', 0.2), 8) repeat fixed;
 
   &__text {
     @include typography.style('heading-3');
-    margin: 0 0 space('lg');
+    margin: 0 0 var(--space-lg);
     
     &::before {
       font-family: var(--font-display);

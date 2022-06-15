@@ -1,13 +1,12 @@
 @use "../tools/typography";
 @use "../tools/svg" as *;
 @use "../tools/color" as *;
-@use "../tools/space" as *;
 @use "../tools/media-queries" as *;
 
 .cmp-section-header {
   box-sizing: border-box;
-  padding: space('10vh') var(--space-limiter-margin);
-  margin: 0 calc(var(--space-limiter-margin) * -1);
+  padding: var(--space-10vh) var(--space-limiter-margin) 0;
+  margin: 0 calc(var(--space-limiter-margin) * -1) var(--space-10vh);
   position: relative;
   overflow: hidden;
   

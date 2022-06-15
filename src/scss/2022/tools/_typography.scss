@@ -5,9 +5,14 @@
    or $size == 'heading-4'
    or $size == 'section-description' {
     font-family: var(--font-display);
-    
-    @if $size != 'section-description' {
-      line-height: 1.1;
+
+    @if $size == 'heading-1'
+     or $size == 'heading-2'
+     or $size == 'heading-3' {
+      line-height: 1.2;
+    }
+    @else {
+      line-height: 1.4;
     }
   }
   font-size: var(--size-#{$size});

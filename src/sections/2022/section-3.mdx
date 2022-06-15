@@ -1,5 +1,4 @@
 import SectionHeader from "../../components/2022/section-header"
-import ScreenBlock from "../../components/2022/screen-block"
 import Grid from "../../components/2022/grid"
 import GridCell from "../../components/2022/grid-cell"
 import PieChart from "../../components/2022/pie-chart"
@@ -10,15 +9,14 @@ import Number from "../../components/2022/number"
 import KeyFinding from "../../components/2022/key-finding"
 import Quote from "../../components/2022/quote"
 
-<ScreenBlock>
-<div id="section-3" data-observer="section-3">
+<article id="section-3" className="util-margin-btm-20vh" data-observer="section-3">
   <SectionHeader number={3} title="Subscribers’ Needs">
     <p>We asked subscribers about their experiences using design systems. We especially wanted to know if their needs were met and what challenges they faced.</p>
   </SectionHeader>
   
-  <Grid className="util-margin-top-1xl">
+  <Grid>
     <GridCell spanMD={7} spanLG={9}>
-      <h3>The design system meets my needs.</h3>
+      <h3 class="cmp-type-heading-2 util-margin-top-none util-margin-btm-1xl">The design system meets my needs.</h3>
     </GridCell>
     <GridCell spanMD={3}>
       <div class="cmp-pie-chart-caption">
@@ -33,9 +31,9 @@ import Quote from "../../components/2022/quote"
     </GridCell>
   </Grid>
 
-  <Grid className="util-margin-top-1xl">
+  <Grid className="util-margin-top-20vh">
     <GridCell spanMD={7} spanLG={9}>
-      <h3>The subscribers who felt their needs were met also reported their design systems have established processes and&nbsp;practices in place.</h3>
+      <h3 class="cmp-type-heading-3 util-margin-top-none util-margin-btm-1xl">The subscribers who felt their needs were met also reported their design systems have established processes and&nbsp;practices in place.</h3>
     </GridCell>
   </Grid>
 
@@ -53,7 +51,7 @@ import Quote from "../../components/2022/quote"
       <p>In addition, 67% of these satisfied subscribers reported that their design system was the source of truth for how things should be done and 85% felt supported by the design system maintainers.</p>
     </GridCell>
     <GridCell startMD={2} startLG={1}>
-      <p class="cmp-type-caption">Responses: 29</p>
+      <p class="cmp-type-caption util-margin-top-1xl">Responses: 29</p>
     </GridCell>
   </Grid>
 
@@ -61,7 +59,7 @@ import Quote from "../../components/2022/quote"
 
  <Grid className="util-margin-top-1xl">
     <GridCell spanMD={7} spanLG={9}>
-      <h3>What challenges do you face when you use the design system?</h3>
+      <h3 class="cmp-type-heading-2 util-margin-top-none util-margin-btm-1xl">What challenges do you face when you use the design system?</h3>
     </GridCell>
   </Grid>
   
@@ -78,7 +76,7 @@ import Quote from "../../components/2022/quote"
     </GridCell>
   </Grid>
   
-  <Grid gap="lg" gapColMD="1xl" gapColLG="none" className="util-margin-top-10vh">
+  <Grid gap="lg" gapColMD="1xl" gapColLG="none" className="util-margin-top-1xl">
     <GridCell spanSM={3} spanMD={4} spanLG={3}>
       <Number title="It doesn’t have what I need" number="26%" />
     </GridCell>
@@ -109,7 +107,7 @@ import Quote from "../../components/2022/quote"
       <Number title="Other" number="3%" />
     </GridCell>
     <GridCell>
-      <p className="cmp-type-caption">Responses: 31 | Respondents were asked to select all that applied.</p>
+      <p className="cmp-type-caption util-margin-top-1xl">Responses: 31 | Respondents were asked to select all that applied.</p>
     </GridCell>
   </Grid>
   
@@ -122,5 +120,4 @@ import Quote from "../../components/2022/quote"
     href="https://sparkbox.com/foundry/do_i_need_a_whole_design_system_building_a_starter_design_system"
   />
   </RelatedReading>
-</div>
-</ScreenBlock>
+</article>
