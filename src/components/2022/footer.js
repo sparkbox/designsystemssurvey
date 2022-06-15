@@ -57,8 +57,8 @@ const Footer = () => (
 
     <nav className="cmp-footer__links-list">
       <a href="https://sparkbox.com/contact">Drop us a line</a>
-      <a href="https://sparkbox.com/contact#careers">Careers</a>
-      <a href="https://apprentices.seesparkbox.com">Apprenticeship</a>
+      <a href="https://sparkbox.com/careers">Careers</a>
+      <a href="https://apprentices.sparkbox.com/">Apprenticeship</a>
     </nav>
 
     <p className="cmp-footer__copyright">&copy;2022 Sparkbox. All rights reserved. <a href="https://sparkbox.com/privacypolicy">Privacy Policy</a> and <a href="https://sparkbox.com/terms">Terms of Use</a></p>
