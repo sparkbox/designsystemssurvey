@@ -36,7 +36,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     &.animation-ready::after {
-      will-change: transform;
+      // will-change: transform;
       opacity: 0;
       transform: translate(-15rem, 5rem);
       transition: transform var(--animation-duration) 250ms var(--default-timing),
@@ -62,7 +62,7 @@
 
     @media (prefers-reduced-motion: no-preference) {
       .animation-ready & {
-        will-change: transform;
+        // will-change: transform;
         opacity: 0;
         filter: blur(0.75rem);
         transition: filter 1800ms 250ms var(--default-timing),
