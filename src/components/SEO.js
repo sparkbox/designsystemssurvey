@@ -61,7 +61,7 @@ class SEO extends Component {
             <meta property="og:type" content="website" />
             <meta property="og:url" content={`${data.site.siteMetadata.baseUrl}/${this.props.year}`} />
 
-            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content={data.site.siteMetadata.author} />
 
             <link rel="canonical" href={`${data.site.siteMetadata.baseUrl}/${this.props.year}`} />
