@@ -36,6 +36,7 @@
     transition: margin-left var(--default-duration) var(--default-timing);
   }
   
+  &__link:focus &__arrow,
   &__link:hover &__arrow {
     margin-left: var(--space-md);
   }

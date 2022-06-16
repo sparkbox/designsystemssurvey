@@ -64,5 +64,11 @@
 
   &__arrow {
     transform: translate(0.25rem, 0.125rem);
+    transition: margin-left var(--default-duration) var(--default-timing);
+  }
+  
+  &:focus &__arrow,
+  &:hover &__arrow {
+    margin-left: var(--space-md);
   }
 }
