@@ -1,3 +1,5 @@
+@use "../tools/media-queries" as *;
+
 .cmp-circle {
   position: fixed;
   --distance: 2rem;
@@ -7,11 +9,17 @@
   bottom: var(--distance);
   z-index: var(--z1);
   clip-path: circle();
-  
+  will-change: transform;
+  transform: translate3d(0,0,0);
+
   @supports (mix-blend-mode: hard-light) {
     z-index: var(--z10);
     pointer-events: none;
     mix-blend-mode: hard-light;
+  }
+  
+  @media (min-width: mq(lg)) {
+    transform: var(--circle-rotate, unset);
   }
 
   &__hero-1 {
