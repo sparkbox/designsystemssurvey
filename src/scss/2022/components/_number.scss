@@ -17,14 +17,16 @@
   &__value {
     text-align: left;
     line-height: 0.75;
-    
-    .animation-ready & {
-      transform: translateX(-2rem);
-      transition: transform var(--animation-duration) var(--default-timing);
-    }
 
-    .animation-ready.fade & {
-      transform: translateX(0);
+    @media (prefers-reduced-motion: no-preference) {
+      .animation-ready & {
+        transform: translateX(-2rem);
+        transition: transform var(--animation-duration) var(--default-timing);
+      }
+  
+      .animation-ready.fade & {
+        transform: translateX(0);
+      }
     }
 
     &--small {
@@ -39,13 +41,15 @@
   &__title {
     text-align: right;
 
-    .animation-ready & {
-      transform: translateX(2rem);
-      transition: transform var(--animation-duration) var(--default-timing);
-    }
+    @media (prefers-reduced-motion: no-preference) {
+      .animation-ready & {
+        transform: translateX(2rem);
+        transition: transform var(--animation-duration) var(--default-timing);
+      }
 
-    .animation-ready.fade & {
-      transform: translateX(0);
+      .animation-ready.fade & {
+        transform: translateX(0);
+      }
     }
 
     &--small {

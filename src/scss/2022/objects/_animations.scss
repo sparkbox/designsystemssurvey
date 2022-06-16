@@ -18,74 +18,89 @@
   }
 }
 
-
-[data-animation]:not(.cmp-hero) {
-  opacity: 0;
-}
-
-[data-animation]:not(.animation-ready) {
-  animation: fade var(--default-duration) 500ms var(--default-timing) forwards;
-}
-
-
-// Fade In Animation
-[data-animation="fade"].animation-ready {
-  opacity: 0;
-
-  &.fade {
-    animation: fade 1s var(--default-timing) forwards;
+@keyframes toc-link {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  [data-animation]:not(.cmp-hero) {
+    opacity: 0;
+  }
 
-// Slide Toward The Right Animation
-[data-animation="slide-right"].animation-ready {
-  opacity: 0;
-  transform: translateX(-2rem);
+  [data-animation]:not(.animation-ready) {
+    animation: fade var(--default-duration) 500ms var(--default-timing) forwards;
+  }
+
+  // Fade In Animation
+  [data-animation="fade"].animation-ready {
+    opacity: 0;
+
+    &.fade {
+      animation: fade 1s var(--default-timing) forwards;
+    }
+  }
+
+  // Slide Toward The Right Animation
+  [data-animation="slide-right"].animation-ready {
+    opacity: 0;
+    transform: translateX(-2rem);
+
+    &.slide-right {
+      animation: slide 1s var(--default-timing) forwards;
+    }
+  }
+
+  // Slide Toward The Left Animation
+  [data-animation="slide-left"].animation-ready {
+    opacity: 0;
+    transform: translateX(2rem);
+
+    &.slide-left {
+      animation: slide 1s var(--default-timing) forwards;
+    }
+  }
+
+  // Grow From Center Animation
+  [data-animation="grow"].animation-ready {
+    opacity: 0;
+    transform: scale(0.75);
   
-  &.slide-right {
-    animation: slide 1s var(--default-timing) forwards;
+    &.grow {
+      animation: grow 1s var(--default-timing) forwards;
+    }
   }
-}
 
-// Slide Toward The Left Animation
-[data-animation="slide-left"].animation-ready {
-  opacity: 0;
-  transform: translateX(2rem);
+  // Grow From Center Animation
+  [data-animation="grow-large"].animation-ready {
+    opacity: 0;
+    transform: scale(0.5);
+
+    &.grow-large {
+      animation: grow 1s var(--default-timing) forwards;
+    }
+  }
+
+  // Grow From Center Animation
+  [data-animation="height"].animation-ready {
+    opacity: 0;
+    transform: scaleY(0.5);
+
+    &.height {
+      animation: grow 1s var(--default-timing) forwards;
+    }
+  }
   
-  &.slide-left {
-    animation: slide 1s var(--default-timing) forwards;
-  }
-}
+  [data-animation="toc-link"].animation-ready {
+    opacity: 0;
+    filter: blur(0.75rem);
+    transform: scale(0.75);
 
-// Grow From Center Animation
-[data-animation="grow"].animation-ready {
-  opacity: 0;
-  transform: scale(0.75);
-
-  &.grow {
-    animation: grow 1s var(--default-timing) forwards;
-  }
-}
-
-
-
-// Grow From Center Animation
-[data-animation="grow-large"].animation-ready {
-  opacity: 0;
-  transform: scale(0.5);
-
-  &.grow-large {
-    animation: grow 1s var(--default-timing) forwards;
-  }
-}
-
-// Grow From Center Animation
-[data-animation="height"].animation-ready {
-  opacity: 0;
-  transform: scaleY(0.5);
-
-  &.height {
-    animation: grow 1s var(--default-timing) forwards;
+    &.toc-link {
+      animation: toc-link 1500ms 350ms var(--default-timing) forwards;
+    }
   }
 }

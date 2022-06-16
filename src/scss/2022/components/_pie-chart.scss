@@ -150,6 +150,19 @@
     
     @media (min-width: mq(md)) {
       padding: var(--space-sm) var(--space-md);
+      
+      @media (prefers-reduced-motion: no-preference) {
+        .animation-ready & {
+          opacity: 0;
+          transform: scale(0.75);
+          transition: transform var(--animation-duration) 300ms var(--default-timing),
+                      opacity var(--animation-duration) 300ms var(--default-timing);
+        }
+        .animation-ready.grow & {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
     }
 
     @media (min-width: mq(lg)) {

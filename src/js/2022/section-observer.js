@@ -28,7 +28,7 @@ export default function sectionObserver(platform, animateClass) {
         })
       },
       {
-        rootMargin: '0px 0px 0px 0px',
+        rootMargin: '0 0 0 0',
         threshold: 0.02
       }
     )

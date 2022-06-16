@@ -11,10 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  &.animation-ready {
-    opacity: 1;
-  }
 
   &__intro {
     font-weight: 200;
@@ -53,10 +49,13 @@
       right: calc(50% - 0.5em);
       height: 2.75em;
       width: 1.875em;
-      opacity: 0;
-      transform: translate(1.875em, -2.75em);
-      animation: hero-line-grow 1000ms var(--default-timing) forwards;
       background: svg('<svg width="290" height="439"><path d="m287 2.327-284 435" stroke="#{color(gray)}" stroke-width="5"/></svg>') no-repeat center / contain;
+
+      @media (prefers-reduced-motion: no-preference) {
+        opacity: 0;
+        transform: translate(1.875em, -2.75em);
+        animation: hero-line-grow 1000ms var(--default-timing) forwards;
+      }
     }
   }
 
@@ -75,21 +74,24 @@
   &__title-line {
     position: relative;
     z-index: var(--z2);
-    opacity: 0;
-    filter: blur(0.75rem);
-    transform: translateX(-10rem);
-    animation: hero-move-in 1500ms var(--default-timing) forwards;
 
-    &--1 {
-      animation-delay: 150ms;
-    }
-    
-    &--2 {
-      animation-delay: 300ms;
-    }
-
-    &--3 {
-      animation-delay: 450ms;
+    @media (prefers-reduced-motion: no-preference) {
+      opacity: 0;
+      filter: blur(0.75rem);
+      transform: translateX(-10rem);
+      animation: hero-move-in 1500ms var(--default-timing) forwards;
+  
+      &--1 {
+        animation-delay: 150ms;
+      }
+      
+      &--2 {
+        animation-delay: 300ms;
+      }
+  
+      &--3 {
+        animation-delay: 450ms;
+      }
     }
   }
 
@@ -107,12 +109,12 @@
     white-space: nowrap;
 
     font-size: min(20vw, calc(var(--hero-max-width) * 0.2));
-    
+
     @media (min-width: mq(xl)) {
       font-size: min(24vw, calc(var(--hero-max-width) * 0.24));
     }
   }
-  
+
   @keyframes hero-year {
     to {
       filter: blur(0);
@@ -121,37 +123,39 @@
     }
   }
 
-  &__year-number {
-    display: inline-block;
-    animation: hero-year 1500ms var(--default-timing) forwards;
-    
-    &--1 {
-      animation-delay: 150ms;
-      opacity: 0;
-      filter: blur(0.75rem);
-      transform: translateY(-0.75em);
-    }
-
-    &--2 {
-      animation-delay: 350ms;
-      opacity: 0;
-      filter: blur(0.75rem);
-      transform: translateY(0.5em);
-    }
-
-    &--3 {
-      animation-delay: 200ms;
-      opacity: 0;
-      filter: blur(0.75rem);
-      transform: translateY(-0.75em);
-    }
-
-    &--4 {
-      animation-delay: 150ms;
-      animation-duration: 1800ms;
-      opacity: 0;
-      filter: blur(0.75rem);
-      transform: translateY(0.25em);
+  @media (prefers-reduced-motion: no-preference) {
+    &__year-number {
+      display: inline-block;
+      animation: hero-year 1500ms var(--default-timing) forwards;
+      
+      &--1 {
+        animation-delay: 150ms;
+        opacity: 0;
+        filter: blur(0.75rem);
+        transform: translateY(-0.75em);
+      }
+  
+      &--2 {
+        animation-delay: 350ms;
+        opacity: 0;
+        filter: blur(0.75rem);
+        transform: translateY(0.5em);
+      }
+  
+      &--3 {
+        animation-delay: 200ms;
+        opacity: 0;
+        filter: blur(0.75rem);
+        transform: translateY(-0.75em);
+      }
+  
+      &--4 {
+        animation-delay: 150ms;
+        animation-duration: 1800ms;
+        opacity: 0;
+        filter: blur(0.75rem);
+        transform: translateY(0.25em);
+      }
     }
   }
 
@@ -175,11 +179,13 @@
     align-self: center;
     color: var(--color-gray);
 
-    transform-origin: 0 0;
-    filter: blur(0.75rem);
-    opacity: 0;
-    transform: scale(0.5);
-    animation: edition-pop 1000ms 500ms var(--default-timing) forwards;
+    @media (prefers-reduced-motion: no-preference) {
+      transform-origin: 0 0;
+      filter: blur(0.75rem);
+      opacity: 0;
+      transform: scale(0.5);
+      animation: edition-pop 1000ms 500ms var(--default-timing) forwards;
+    }
   }
   
   &__logo {
@@ -187,10 +193,13 @@
     max-width: 11.875rem;
     justify-self: end;
     grid-area: a;
-    opacity: 0;
-    filter: blur(0.75rem);
-    transform: translateX(4rem);
-    animation: hero-move-in 2000ms var(--default-timing) forwards;
+
+    @media (prefers-reduced-motion: no-preference) {
+      opacity: 0;
+      filter: blur(0.75rem);
+      transform: translateX(4rem);
+      animation: hero-move-in 2000ms var(--default-timing) forwards;
+    }
   }
   
   &__sparkbox-link {

@@ -8,7 +8,11 @@
   padding: var(--space-10vh) var(--space-limiter-margin) 0;
   margin: 0 calc(var(--space-limiter-margin) * -1) var(--space-10vh);
   position: relative;
-  
+
+  &.animation-ready {
+    opacity: 1;
+  }
+
   &::after {
     --max-size: 40rem;
     content: '';
@@ -23,13 +27,27 @@
     pointer-events: none;
     mix-blend-mode: hard-light;
   }
-  
+
   @for $i from 1 through 6 {
     &--item-#{$i}::after {
       background-image: url('/images/2022/section-#{$i}.svg');
     }
   }
-  
+
+  @media (prefers-reduced-motion: no-preference) {
+    &.animation-ready::after {
+      will-change: transform;
+      opacity: 0;
+      transform: translate(-15rem, 5rem);
+      transition: transform var(--animation-duration) 250ms var(--default-timing),
+                  opacity var(--animation-duration) 250ms var(--default-timing);
+    }
+    
+    &.animation-ready.ani-section-header::after {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
 
   &__title {
     @include typography.style('heading-1');
@@ -41,6 +59,21 @@
     grid-template-columns: minmax(3rem, max-content) auto;
     align-items: end;
     gap: var(--space-sm);
+
+    @media (prefers-reduced-motion: no-preference) {
+      .animation-ready & {
+        will-change: transform;
+        opacity: 0;
+        filter: blur(0.75rem);
+        transition: filter 1800ms 250ms var(--default-timing),
+                    opacity 1800ms 250ms var(--default-timing);
+      }
+      
+      .animation-ready.ani-section-header & {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
 
     &::before {
       pointer-events: none;
@@ -58,5 +91,6 @@
   
   p {
     @include typography.style('section-description');
+
   }
 }

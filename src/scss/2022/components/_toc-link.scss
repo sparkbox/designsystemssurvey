@@ -8,11 +8,11 @@
   color: var(--default-color);
   transition: color var(--default-duration) var(--default-timing);
   position: relative;
-  
+  will-change: transform;
+
   &:hover {
     --default-color: var(--color-white);
   }
-
 
   &::after {
     --max-size: 20rem;
