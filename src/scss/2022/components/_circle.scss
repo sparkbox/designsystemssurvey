@@ -7,6 +7,7 @@
   bottom: var(--distance);
   z-index: var(--z1);
   clip-path: circle();
+  will-change: transform;
   
   @supports (mix-blend-mode: hard-light) {
     z-index: var(--z10);
@@ -15,6 +16,7 @@
   }
 
   &__hero-1 {
+    will-change: transform;
     display: block;
     position: absolute;
     width: 100%;
@@ -45,5 +47,6 @@
                                         #0000 120%);
     mask-repeat: no-repeat;
     mask-position: center;
+    will-change: transform;
   }
 }

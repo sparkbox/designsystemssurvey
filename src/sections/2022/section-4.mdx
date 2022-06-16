@@ -7,6 +7,7 @@ import Number from "../../components/2022/number"
 import Quote from "../../components/2022/quote"
 import ComarisonChart from "../../components/2022/comparison-chart"
 import ComarisonTable from "../../components/2022/comparison-table"
+import Animate from "../../components/2022/animate"
 
 <article className="util-margin-btm-20vh" data-observer="section-4">
   <a className="cmp-back-link" id="section-4" href="#section-link-4" tabindex="-1">Back To Top</a>
@@ -22,7 +23,9 @@ import ComarisonTable from "../../components/2022/comparison-table"
   
   <Grid>
     <GridCell span={6} spanSM={6} spanMD={8} spanLG={12}>
-      <ComarisonChart />
+      <Animate type="grow">
+        <ComarisonChart />
+      </Animate>
       <ComarisonTable />
     </GridCell>
   </Grid>

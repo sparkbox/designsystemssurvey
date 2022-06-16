@@ -20,9 +20,11 @@ import Footer from "../components/2022/footer"
 import sendFormData from "../js/2022/form-submit"
 import sectionObserver from "../js/2022/section-observer"
 import animationObserver from "../js/2022/animation-observer"
+import circleOverlay from "../js/2022/circle"
 
 class Page2022 extends Component {
   componentDidMount() {
+    circleOverlay()
     sectionObserver()
     animationObserver()
     sendFormData()
