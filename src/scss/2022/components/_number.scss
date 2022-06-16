@@ -20,8 +20,8 @@
 
     @media (prefers-reduced-motion: no-preference) {
       .animation-ready & {
-        transform: translateX(-2rem);
-        transition: transform 1500ms var(--default-timing);
+        transform: translateX(-0.75rem);
+        transition: transform 1200ms var(--default-timing);
       }
   
       .animation-ready.fade & {
@@ -43,8 +43,8 @@
 
     @media (prefers-reduced-motion: no-preference) {
       .animation-ready & {
-        transform: translateX(2rem);
-        transition: transform 1500ms var(--default-timing);
+        transform: translateX(0.75rem);
+        transition: transform 1200ms var(--default-timing);
       }
 
       .animation-ready.fade & {

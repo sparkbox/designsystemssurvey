@@ -1,6 +1,7 @@
 @use "../tools/typography";
 @use "../tools/fills";
 @use "../tools/color";
+@use "../tools/media-queries" as *;
 
 .cmp-key-finding {
   background-color: var(--color-black);
@@ -15,9 +16,13 @@
   }
   
   &::before {
-    inset: -1.5rem;
+    inset: -0.75rem;
     background: fills.dots(color.alpha('gray', 0.8), 6, 0.5) repeat fixed;
     z-index: var(--z1);
+
+    @media (min-width: mq(sm)) {
+      inset: -1.5rem;
+    }
   }
   
   &::after {
