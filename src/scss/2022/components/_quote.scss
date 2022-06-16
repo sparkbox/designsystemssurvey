@@ -18,10 +18,28 @@
       display: block;
       line-height: 0.75;
     }
+    
+    .animation-ready & {
+      transform: scale(0.9);
+      transition: transform var(--animation-duration) var(--default-timing);
+    }
+    
+    .animation-ready.grow-large & {
+      transform: scale(1);
+    }
   }
 
   &__source {
     @include typography.style('body-default');
     margin: 0;
+    
+    .animation-ready & {
+      transform: scale(0.9);
+      transition: transform var(--animation-duration) var(--default-timing);
+    }
+    
+    .animation-ready.grow-large & {
+      transform: scale(1);
+    }
   }
 }

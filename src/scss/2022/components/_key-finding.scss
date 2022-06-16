@@ -41,11 +41,29 @@
     @include typography.style('body-default');
     border-top: 1px solid var(--color-dark);
     padding-top: var(--space-sm);
+    
+    .animation-ready & {
+      transform: translateY(1rem);
+      transition: transform var(--animation-duration) var(--default-timing);
+    }
+    
+    .animation-ready.grow-large & {
+      transform: translateY(0);
+    }
   }
   
   &__text {
     @include typography.style('heading-2');
     line-height: 1.25;
     margin: var(--space-lg) 0 0;
+    
+    .animation-ready & {
+      transform: scale(0.9);
+      transition: transform var(--animation-duration) var(--default-timing);
+    }
+    
+    .animation-ready.grow-large & {
+      transform: scale(1);
+    }
   }
 }

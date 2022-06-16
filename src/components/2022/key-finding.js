@@ -7,7 +7,7 @@ import Animate from "./animate"
 
 const KeyFinding = ({ children }) => {
   return (
-    <Animate type="height">
+    <Animate type="grow-large">
       <div className="cmp-key-finding">
         <div className="cmp-key-finding__content">
           <Grid className="util-margin-hrz-md util-margin-hrz-lg@md util-margin-hrz-none@lg">
