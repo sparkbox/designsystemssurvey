@@ -21,7 +21,7 @@ export default function animationObserver(platform, animateClass) {
         })
       },
       {
-        rootMargin: '0px 0px -200px 0px',
+        rootMargin: '10% 0 -10% 0',
         threshold: 0
       }
     )

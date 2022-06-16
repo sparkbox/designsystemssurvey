@@ -12,11 +12,16 @@ const Hero = () => {
           </a>
         </div>
         <div className="cmp-hero__title" aria-hidden={true}>
-          <div className="cmp-hero__title-line">Design</div> 
-          <div className="cmp-hero__title-line">Systems</div> 
-          <div className="cmp-hero__title-line">Survey</div> 
+          <div className="cmp-hero__title-line cmp-hero__title-line--1">Design</div> 
+          <div className="cmp-hero__title-line cmp-hero__title-line--2">Systems</div> 
+          <div className="cmp-hero__title-line  cmp-hero__title-line--3">Survey</div> 
         </div>
-        <div className="cmp-hero__year" aria-hidden={true}>2022</div>
+        <div className="cmp-hero__year" aria-hidden={true}>
+          <span className="cmp-hero__year-number cmp-hero__year-number--1">2</span>
+          <span className="cmp-hero__year-number cmp-hero__year-number--2">0</span>
+          <span className="cmp-hero__year-number cmp-hero__year-number--3">2</span>
+          <span className="cmp-hero__year-number cmp-hero__year-number--4">2</span>
+        </div>
         <div className="cmp-hero__edition" aria-hidden={true}>
           Fifth Edition
         </div>

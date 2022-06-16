@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Animate from "./animate"
 
 const NumberBlock = ({ number, title, size }) => {
   const sizeSet = size ? size : 'small';
@@ -8,15 +7,11 @@ const NumberBlock = ({ number, title, size }) => {
   const valueMod = sizeSet ? ` cmp-number__value--${sizeSet}` : '';
   const titleMod = sizeSet ? ` cmp-number__title--${sizeSet}` : '';
   return (
-    <div className={`cmp-number${cmpMod}`} aria-label={`${title} ${number}`}>
-      <Animate type="slide-right">
-        <div className={`cmp-number__value${valueMod}`}>
-          {number}
-        </div>
-      </Animate>
-      <Animate type="slide-left">
-        <div className={`cmp-number__title${titleMod}`} dangerouslySetInnerHTML={{__html:title}} />
-      </Animate>
+    <div data-animation="fade" className={`cmp-number${cmpMod}`} aria-label={`${title} ${number}`}>
+      <div className={`cmp-number__value${valueMod}`}>
+        {number}
+      </div>
+      <div className={`cmp-number__title${titleMod}`} dangerouslySetInnerHTML={{__html:title}} />
     </div>
   )
 }

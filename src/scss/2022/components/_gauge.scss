@@ -51,6 +51,15 @@
     align-items: center;
     justify-content: center;
     
+    .animation-ready & {
+      transform: scale(0.5);
+      transition: transform var(--animation-duration) var(--default-timing);
+    }
+    
+    .animation-ready.grow & {
+      transform: scale(1);
+    }
+    
     &--large {
       font-size: var(--number-large);
     }

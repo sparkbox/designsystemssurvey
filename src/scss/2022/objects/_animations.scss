@@ -1,3 +1,9 @@
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes slide {
   to {
     transform: translate(0);
@@ -13,14 +19,26 @@
 }
 
 
-[data-animation] {
+[data-animation]:not(.cmp-hero) {
   opacity: 0;
 }
 
 [data-animation]:not(.animation-ready) {
-  animation: slide var(--default-duration) 300ms var(--default-timing) forwards;
+  animation: fade var(--default-duration) 500ms var(--default-timing) forwards;
 }
 
+
+// Fade In Animation
+[data-animation="fade"].animation-ready {
+  opacity: 0;
+
+  &.fade {
+    animation: fade 1s var(--default-timing) forwards;
+  }
+}
+
+
+// Slide Toward The Right Animation
 [data-animation="slide-right"].animation-ready {
   opacity: 0;
   transform: translateX(-2rem);
@@ -30,6 +48,7 @@
   }
 }
 
+// Slide Toward The Left Animation
 [data-animation="slide-left"].animation-ready {
   opacity: 0;
   transform: translateX(2rem);
@@ -39,11 +58,34 @@
   }
 }
 
+// Grow From Center Animation
 [data-animation="grow"].animation-ready {
   opacity: 0;
   transform: scale(0.75);
-  
+
   &.grow {
+    animation: grow 1s var(--default-timing) forwards;
+  }
+}
+
+
+
+// Grow From Center Animation
+[data-animation="grow-large"].animation-ready {
+  opacity: 0;
+  transform: scale(0.5);
+
+  &.grow-large {
+    animation: grow 1s var(--default-timing) forwards;
+  }
+}
+
+// Grow From Center Animation
+[data-animation="height"].animation-ready {
+  opacity: 0;
+  transform: scaleY(0.5);
+
+  &.height {
     animation: grow 1s var(--default-timing) forwards;
   }
 }
