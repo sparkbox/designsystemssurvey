@@ -128,7 +128,7 @@ const ComparisonChart = () => {
             </div>
             <div className="cmp-comparison-chart__container">
               <div className="cmp-comparison-chart__explanation">
-                This is some text to explain why there is a glowy thing
+                Staffing had the largest difference between priorities and challenges.
               </div>
               <ComparisonChartSVG />
             </div>
