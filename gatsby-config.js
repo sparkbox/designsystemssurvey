@@ -5,7 +5,7 @@ module.exports = {
     title: '',
     titleTemplate: 'Design Systems Survey by Sparkbox',
     name: 'Design Systems Survey',
-    baseUrl: 'https://designsystemsurvey.seesparkbox.com',
+    baseUrl: 'https://designsystemsurvey.sparkbox.com',
     author: '@hearsparkbox',
     description:
       'How are design systems for websites and apps changing the way the industry works? Sparkbox conducted a survey and is excited to share findings on the benefits and challenges of this impactful, systemic work.',

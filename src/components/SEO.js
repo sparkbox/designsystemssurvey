@@ -63,6 +63,7 @@ class SEO extends Component {
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content={data.site.siteMetadata.author} />
+            <meta name="twitter:image" content={`${data.site.siteMetadata.baseUrl}/images/${this.props.image}`} />
 
             <link rel="canonical" href={`${data.site.siteMetadata.baseUrl}/${this.props.year}`} />
             {this.props.fontCSS && <link rel="stylesheet" type="text/css" href={this.props.fontCSS} />}
