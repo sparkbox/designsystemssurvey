@@ -144,6 +144,19 @@
     }
   }
   
+  &__explanation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(33.333% + 1.5rem);
+    width: 8rem;
+    @include typography.style('body-small');
+    z-index: var(--z4);
+    text-align: right;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  
   &__svg {
     max-width: unset;
     min-height: 25rem;

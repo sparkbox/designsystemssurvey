@@ -127,6 +127,9 @@ const ComparisonChart = () => {
               <div className="cmp-comparison-chart__y-axis-item">0%</div>
             </div>
             <div className="cmp-comparison-chart__container">
+              <div className="cmp-comparison-chart__explanation">
+                This is some text to explain why there is a glowy thing
+              </div>
               <ComparisonChartSVG />
             </div>
             <div className="cmp-comparison-chart__x-axis">
