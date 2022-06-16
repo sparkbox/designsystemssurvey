@@ -9,10 +9,10 @@ const Gauge = ({ number, title, size }) => {
   return (
     <Animate type="grow">
       <div className="cmp-gauge" aria-label={`${title} ${number} percent`}>
-        <div className="cmp-gauge__value" style={customProp}>
+        <div className="cmp-gauge__value" style={customProp} aria-hidden={true}>
           <div className={percentClass}>{number}%</div>
         </div>
-        <div className="cmp-gauge__title" dangerouslySetInnerHTML={{__html:title}} />
+        <div className="cmp-gauge__title" aria-hidden={true} dangerouslySetInnerHTML={{__html:title}} />
       </div>
     </Animate>
   )

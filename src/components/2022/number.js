@@ -8,10 +8,10 @@ const NumberBlock = ({ number, title, size }) => {
   const titleMod = sizeSet ? ` cmp-number__title--${sizeSet}` : '';
   return (
     <div data-animation="fade" className={`cmp-number${cmpMod}`} aria-label={`${title} ${number}`}>
-      <div className={`cmp-number__value${valueMod}`}>
+      <div className={`cmp-number__value${valueMod}`} aria-hidden={true}>
         {number}
       </div>
-      <div className={`cmp-number__title${titleMod}`} dangerouslySetInnerHTML={{__html:title}} />
+      <div className={`cmp-number__title${titleMod}`} aria-hidden={true} dangerouslySetInnerHTML={{__html:title}} />
     </div>
   )
 }

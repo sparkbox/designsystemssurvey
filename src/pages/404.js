@@ -12,8 +12,8 @@ class NotFoundPage extends Component {
       <Layout>
         <SEO
           pageDescription="Page Not Found"
-          image="ogimage-2021.png"
-          year="2021"
+          image="ogimage-2022.png"
+          year="2022"
         />
         
       <Helmet>

@@ -21,12 +21,12 @@ const ContactFormNewsletter = (props) => {
             <input type="hidden" name="form-name" value="newsletter-dss-2022" />
             <div className="cmp-form__field">
               <div className="js-name-message cmp-form__message" aria-live="polite" />
-              <label className="cmp-form__label" htmlFor="newsletter-dss-2022-NAME">Name*</label>
+              <label className="cmp-form__label" htmlFor="newsletter-dss-2022-NAME">Name<span aria-hidden={true}>*</span></label>
               <input className="cmp-form__input" type="text" name="newsletter-dss-2022-NAME" id="newsletter-dss-2022-NAME" required />
             </div>
             <div className="cmp-form__field">
               <div className="js-email-message cmp-form__message" aria-live="polite" />
-              <label className="cmp-form__label" htmlFor="newsletter-dss-2022-EMAIL">Business Email*</label>
+              <label className="cmp-form__label" htmlFor="newsletter-dss-2022-EMAIL">Business Email<span aria-hidden={true}>*</span></label>
               <input className="cmp-form__input" type="email" name="newsletter-dss-2022-EMAIL" id="newsletter-dss-2022-EMAIL" required />
             </div>
             <button className="cmp-button util-margin-top-md" type="submit" name="newsletter-dss-2022-SUBMIT" id="newsletter-dss-2022-SUBMIT" formNoValidate={true}>Submit</button>
