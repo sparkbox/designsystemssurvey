@@ -31,6 +31,13 @@ class Page2020 extends Component {
           <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-serif-headline-extrabold/font.woff2" type="font/woff2" crossorigin="anonymous" />
           <link rel="preload" as="font" href="https://assets.sparkbox.com/fonts/sole/sole-serif-text-light/font.woff2" type="font/woff2" crossorigin="anonymous" />
         </Helmet>
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ53HCR" height="0" width="0"
+              style="display:none;visibility:hidden"></iframe>
+            `,
+        }} />
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         <IntroSection />
         <main>
           <TableOfContents />

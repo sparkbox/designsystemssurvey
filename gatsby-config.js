@@ -34,9 +34,15 @@ module.exports = {
     },
     `gatsby-plugin-mdx`,
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingIds: ['GTM-WHPGCMR', 'AW-611206884'],
+        trackingIds: ['GTM-KQ53HCR'],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {

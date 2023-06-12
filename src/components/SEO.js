@@ -16,7 +16,7 @@ class SEO extends Component {
   }
 
   componentDidMount() {
-    this.setState({ 
+    this.setState({
       htmlClass : this.htmlClassCheck(),
     })
   }
@@ -49,6 +49,20 @@ class SEO extends Component {
           `}
         render = { data => (
           <Helmet title={`The ${this.props.year} ${data.site.siteMetadata.titleTemplate}`}>
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=GTM-KQ53HCR"
+            ></script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+                  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                  j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                  f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQ53HCR');
+                `,
+              }}
+            />
             <html className={this.state.htmlClass} lang="en"/>
             <meta name="application-name" content={`${this.props.year} Design Systems Survey`} />
             <meta name="author" content={data.site.siteMetadata.author} />

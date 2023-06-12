@@ -22,6 +22,11 @@ const Page2019 = () => (
       fontCSS="https://cloud.typography.com/655912/7241412/css/fonts.css"
       year="2019"
     />
+    {/* <!-- Google Tag Manager (noscript) --> */}
+    <noscript dangerouslySetInnerHTML={{
+      __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ53HCR" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+    }} />
+    {/* <!-- End Google Tag Manager (noscript) --> */}
     <svg width="0" height="0" className="util-visually-hidden">
       <defs>
         <linearGradient id="pinkyellow" x1="50%" x2="50%" y1="0%" y2="100%">

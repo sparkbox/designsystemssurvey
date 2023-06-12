@@ -47,6 +47,14 @@ class Page2021 extends Component {
           <link rel="stylesheet" type="text/css" href="/css/2021-ie.css" media={ieCSS} />
         </Helmet>
 
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ53HCR" height="0" width="0"
+              style="display:none;visibility:hidden"></iframe>
+            `,
+        }} />
+        {/* <!-- End Google Tag Manager (noscript) --> */}
+
         <div className="obj-lines obj-max-width">
 
           <FixedSides />

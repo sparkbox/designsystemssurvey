@@ -50,6 +50,13 @@ class Page2022 extends Component {
           />
         </Helmet>
         <Layout>
+          {/* <!-- Google Tag Manager (noscript) --> */}
+          <noscript dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ53HCR" height="0" width="0"
+              style="display:none;visibility:hidden"></iframe>
+            `,
+          }} />
+          {/* <!-- End Google Tag Manager (noscript) --> */}
           <a className="cmp-skip-link" href="#toc">Skip to Menu</a>
           <a className="cmp-skip-link" href="#section-1">Skip to Content</a>
 
